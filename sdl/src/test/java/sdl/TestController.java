@@ -1,14 +1,14 @@
 package sdl;
 
-import org.junit.jupiter.api.Test;
+import sdl.gamecontroller.GameController;
+import sdl.gamecontroller.SensorType;
 
 import java.lang.foreign.Arena;
 import java.lang.foreign.MemorySegment;
-import java.lang.foreign.SegmentAllocator;
 import java.util.ArrayList;
 import java.util.List;
 
-import static sdl.SDL_subset_h.*;
+import static sdl.jextract.SDL_subset_h.*;
 
 public class TestController {
 
