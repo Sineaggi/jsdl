@@ -4,11 +4,16 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
-import static sdl.jextract.SDL_subset_h.SDL_CONTROLLER_AXIS_INVALID;
-import static sdl.jextract.SDL_subset_h.SDL_CONTROLLER_AXIS_MAX;
+import static sdl.jextract.SDL_subset_h.*;
 
 public enum GameControllerAxis {
     Invalid(SDL_CONTROLLER_AXIS_INVALID()),
+    LeftX(SDL_CONTROLLER_AXIS_LEFTX()),
+    LeftY(SDL_CONTROLLER_AXIS_LEFTY()),
+    RightX(SDL_CONTROLLER_AXIS_RIGHTX()),
+    RightY(SDL_CONTROLLER_AXIS_RIGHTY()),
+    TriggerLeft(SDL_CONTROLLER_AXIS_TRIGGERLEFT()),
+    TriggerRight(SDL_CONTROLLER_AXIS_TRIGGERRIGHT()),
     Max(SDL_CONTROLLER_AXIS_MAX()),
     ;
 

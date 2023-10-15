@@ -4,10 +4,32 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
-import static sdl.jextract.SDL_subset_h.SDL_CONTROLLER_BUTTON_INVALID;
+import static sdl.jextract.SDL_subset_h.*;
 
 public enum GameControllerButton {
     Invalid(SDL_CONTROLLER_BUTTON_INVALID()),
+    A(SDL_CONTROLLER_BUTTON_A()),
+    B(SDL_CONTROLLER_BUTTON_B()),
+    X(SDL_CONTROLLER_BUTTON_X()),
+    Y(SDL_CONTROLLER_BUTTON_Y()),
+    Back(SDL_CONTROLLER_BUTTON_BACK()),
+    Guide(SDL_CONTROLLER_BUTTON_GUIDE()),
+    Start(SDL_CONTROLLER_BUTTON_START()),
+    LeftStick(SDL_CONTROLLER_BUTTON_RIGHTSTICK()),
+    RightStick(SDL_CONTROLLER_BUTTON_RIGHTSTICK()),
+    LeftShoulder(SDL_CONTROLLER_BUTTON_LEFTSHOULDER()),
+    RightShoulder(SDL_CONTROLLER_BUTTON_RIGHTSHOULDER()),
+    DPadUp(SDL_CONTROLLER_BUTTON_DPAD_UP()),
+    DPadDown(SDL_CONTROLLER_BUTTON_DPAD_DOWN()),
+    DPadLeft(SDL_CONTROLLER_BUTTON_DPAD_LEFT()),
+    DPadRight(SDL_CONTROLLER_BUTTON_DPAD_RIGHT()),
+    Misc1(SDL_CONTROLLER_BUTTON_MISC1()),
+    Paddle1(SDL_CONTROLLER_BUTTON_PADDLE1()),
+    Paddle2(SDL_CONTROLLER_BUTTON_PADDLE2()),
+    Paddle3(SDL_CONTROLLER_BUTTON_PADDLE3()),
+    Paddle4(SDL_CONTROLLER_BUTTON_PADDLE4()),
+    Touchpad(SDL_CONTROLLER_BUTTON_TOUCHPAD()),
+    Max(SDL_CONTROLLER_BUTTON_MAX()),
     ;
 
     private final int value;

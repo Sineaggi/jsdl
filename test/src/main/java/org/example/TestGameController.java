@@ -1,5 +1,6 @@
-package sdl;
+package org.example;
 
+import sdl.*;
 import sdl.events.GeneralInputStateDefinitions;
 import sdl.events.controllerdevice.ControllerDeviceAdded;
 import sdl.events.controllerdevice.ControllerDeviceRemoved;
@@ -8,17 +9,24 @@ import sdl.events.controllersensor.ControllerSensorUpdate;
 import sdl.events.controllertouchpad.ControllerTouchpadDown;
 import sdl.events.controllertouchpad.ControllerTouchpadMotion;
 import sdl.events.controllertouchpad.ControllerTouchpadUp;
+import sdl.events.key.KeyDown;
+import sdl.events.motion.MouseMotion;
+import sdl.events.quit.Quit;
 import sdl.gamecontroller.GameController;
+import sdl.gamecontroller.GameControllerType;
 import sdl.gamecontroller.JoystickId;
 import sdl.gamecontroller.SensorType;
-import sdl.jextract.DS5EffectsState_t;
 import sdl.joystick.Joystick;
 import sdl.render.Renderer;
 import sdl.video.Window;
 
+import java.lang.foreign.Arena;
+import java.lang.foreign.MemoryLayout;
+import java.lang.foreign.StructLayout;
+import java.lang.invoke.VarHandle;
 import java.util.Set;
 
-import static sdl.jextract.SDL_subset_h.SDL_ALPHA_OPAQUE;
+import static java.lang.foreign.ValueLayout.JAVA_BYTE;
 
 /*
   Copyright (C) 1997-2023 Sam Lantinga <slouken@libsdl.org>
@@ -80,7 +88,7 @@ public static class TestGameController {
         int x;
         int y;
         double angle;
-    } axis_positions[] = {
+    } axisPositions[] = {
         { 74, 153, 270.0 },  /* LEFTX */
         { 74, 153, 0.0 },    /* LEFTY */
         { 306, 231, 270.0 }, /* RIGHTX */
@@ -88,7 +96,7 @@ public static class TestGameController {
         { 91, -20, 0.0 },    /* TRIGGERLEFT */
         { 375, -20, 0.0 },   /* TRIGGERRIGHT */
     };
-    SDL_COMPILE_TIME_ASSERT(axis_positions, SDL_arraysize(axis_positions) == SDL_CONTROLLER_AXIS_MAX);
+    SDL_COMPILE_TIME_ASSERT(axisPositions, SDL_arraysize(axisPositions) == SDL_CONTROLLER_AXIS_MAX);
 
     /* This is indexed by SDL_JoystickPowerLevel + 1. */
     static const char *power_level_strings[] = {
@@ -106,12 +114,12 @@ public static class TestGameController {
     private boolean retval = false;
     private boolean done = false;
     private boolean set_LED = false;
-    static int trigger_effect = 0;
+    static int triggerEffect = 0;
     static Texture background_front, background_back, button_texture, axis_texture;
     private GameController gameController;
     private GameController[] gameControllers;
     private int numControllers = 0;
-    private Joystick virtualJoystick = NULL;
+    private Joystick virtualJoystick = null;
     static GameControllerAxis virtualAxisActive = GameControllerAxis.Invalid;
     private int virtualAxisStartX;
     private int virtualAxisStartY;
@@ -215,7 +223,7 @@ public static class TestGameController {
         controllers[numControllers++] = controller;
         gameControllers = controllers;
         gameController = controller;
-        trigger_effect = 0;
+        triggerEffect = 0;
 
         if (verbose) {
             String name = gameController.name();
@@ -301,52 +309,63 @@ public static class TestGameController {
     /* PS5 trigger effect documentation:
        https://controllers.fandom.com/wiki/Sony_DualSense#FFB_Trigger_Modes
     */
-    typedef struct
-    {
-        Uint8 ucEnableBits1;              /* 0 */
-        Uint8 ucEnableBits2;              /* 1 */
-        Uint8 ucRumbleRight;              /* 2 */
-        Uint8 ucRumbleLeft;               /* 3 */
-        Uint8 ucHeadphoneVolume;          /* 4 */
-        Uint8 ucSpeakerVolume;            /* 5 */
-        Uint8 ucMicrophoneVolume;         /* 6 */
-        Uint8 ucAudioEnableBits;          /* 7 */
-        Uint8 ucMicLightMode;             /* 8 */
-        Uint8 ucAudioMuteBits;            /* 9 */
-        Uint8 rgucRightTriggerEffect[11]; /* 10 */
-        Uint8 rgucLeftTriggerEffect[11];  /* 21 */
-        Uint8 rgucUnknown1[6];            /* 32 */
-        Uint8 ucLedFlags;                 /* 38 */
-        Uint8 rgucUnknown2[2];            /* 39 */
-        Uint8 ucLedAnim;                  /* 41 */
-        Uint8 ucLedBrightness;            /* 42 */
-        Uint8 ucPadLights;                /* 43 */
-        Uint8 ucLedRed;                   /* 44 */
-        Uint8 ucLedGreen;                 /* 45 */
-        Uint8 ucLedBlue;                  /* 46 */
-    } DS5EffectsState_t;
+    static final StructLayout ds5EffectsState = MemoryLayout.structLayout(
+            JAVA_BYTE.withName("ucEnableBits1"),
+            JAVA_BYTE.withName("ucEnableBits2"),
+            JAVA_BYTE.withName("ucRumbleRight"),
+            JAVA_BYTE.withName("ucRumbleLeft"),
+            JAVA_BYTE.withName("ucHeadphoneVolume"),
+            JAVA_BYTE.withName("ucSpeakerVolume"),
+            JAVA_BYTE.withName("ucMicrophoneVolume"),
+            JAVA_BYTE.withName("ucAudioEnableBits"),
+            JAVA_BYTE.withName("ucMicLightMode"),
+            JAVA_BYTE.withName("ucAudioMuteBits"),
+            MemoryLayout.sequenceLayout(11, JAVA_BYTE).withName("rgucRightTriggerEffect"),
+            MemoryLayout.sequenceLayout(11, JAVA_BYTE).withName("rgucLeftTriggerEffect"),
+            MemoryLayout.sequenceLayout(6, JAVA_BYTE).withName("rgucUnknown1"),
+            JAVA_BYTE.withName("ucLedFlags"),
+            MemoryLayout.sequenceLayout(2, JAVA_BYTE).withName("rgucUnknown2"),
+            JAVA_BYTE.withName("ucLedAnim"),
+            JAVA_BYTE.withName("ucLedBrightness"),
+            JAVA_BYTE.withName("ucPadLights"),
+            JAVA_BYTE.withName("ucLedRed"),
+            JAVA_BYTE.withName("ucLedGreen"),
+            JAVA_BYTE.withName("ucLedBlue")
+    ).withName("DS5EffectsState");
 
     void cyclePS5TriggerEffect()
     {
-        DS5EffectsState_t state;
+        try (var arena = Arena.ofConfined()) {
+            var state = arena.allocate(ds5EffectsState);
+            // DS5EffectsState_t state;
 
-        Uint8 effects[3][11] = {
-        /* Clear trigger effect */
-        { 0x05, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-        /* Constant resistance across entire trigger pull */
-        { 0x01, 0, 110, 0, 0, 0, 0, 0, 0, 0, 0 },
-        /* Resistance and vibration when trigger is pulled */
-        { 0x06, 15, 63, 128, 0, 0, 0, 0, 0, 0, 0 },
-    };
+            Uint8 effects[ 3][11] ={
+                /* Clear trigger effect */
+                {
+                    0x05, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+                },
+                /* Constant resistance across entire trigger pull */
+                {
+                    0x01, 0, 110, 0, 0, 0, 0, 0, 0, 0, 0
+                },
+                /* Resistance and vibration when trigger is pulled */
+                {
+                    0x06, 15, 63, 128, 0, 0, 0, 0, 0, 0, 0
+                },
+            } ;
 
-        trigger_effect = (trigger_effect + 1) % SDL_arraysize(effects);
+            triggerEffect = (triggerEffect + 1) % SDL_arraysize(effects);
 
-        SDL_zero(state);
-        state.ucEnableBits1 |= (0x04 | 0x08); /* Modify right and left trigger effect respectively */
-        SDL_memcpy(state.rgucRightTriggerEffect, effects[trigger_effect], sizeof(effects[trigger_effect]));
-        SDL_memcpy(state.rgucLeftTriggerEffect, effects[trigger_effect], sizeof(effects[trigger_effect]));
-        SDL_GameControllerSendEffect(gameController, &state, sizeof(state));
-        gameController.sendEffect();
+            VarHandle ucEnableBits1 = ds5EffectsState.varHandle(MemoryLayout.PathElement.groupElement("ucEnableBits1"));
+            VarHandle rgucRightTriggerEffect = ds5EffectsState.varHandle(MemoryLayout.PathElement.groupElement("rgucRightTriggerEffect"));
+            VarHandle rgucLeftTriggerEffect = ds5EffectsState.varHandle(MemoryLayout.PathElement.groupElement("rgucLeftTriggerEffect"));
+
+            ucEnableBits1.set((byte) (((byte)ucEnableBits1.get(state)) | (byte)(0x04 | 0x08))); /* Modify right and left trigger effect respectively */
+            // state.ucEnableBits1 |= (0x04 | 0x08); /* Modify right and left trigger effect respectively */
+            // SDL_memcpy(state.rgucRightTriggerEffect, effects[triggerEffect], sizeof(effects[triggerEffect]));
+            // SDL_memcpy(state.rgucLeftTriggerEffect, effects[triggerEffect], sizeof(effects[triggerEffect]));
+            gameController.sendEffect(state);
+        }
     }
 
     boolean showingFront()
@@ -427,7 +446,7 @@ public static class TestGameController {
     {
         int i;
 
-        for (i = SDL_NumJoysticks(); i--;) {
+        for (i = Joystick.numJoysticks(); i--;) {
             if (SDL_JoystickIsVirtual(i)) {
                 SDL_JoystickDetachVirtual(i);
             }
@@ -447,17 +466,16 @@ public static class TestGameController {
 
         point.x = x;
         point.y = y;
-        for (i = 0; i < SDL_CONTROLLER_BUTTON_TOUCHPAD; ++i) {
-            boolean onFront = (i < SDL_CONTROLLER_BUTTON_PADDLE1 || i > SDL_CONTROLLER_BUTTON_PADDLE4);
+        for (i = 0; i < GameControllerButton.Touchpad.value(); ++i) {
+            boolean onFront = (i < GameControllerButton.Paddle1.value() || i > GameControllerButton.Paddle4.value());
             if (onFront == showingFront) {
-                Rect rect = new Rect(button_positions[i].x, button_positions[i].y, BUTTON_SIZE, BUTTON_SIZE);
+                Rect rect = new Rect(buttonPositions[i].x, buttonPositions[i].y, BUTTON_SIZE, BUTTON_SIZE);
                 if (SDL_PointInRect(&point, &rect)) {
-                    return (SDL_GameControllerButton)i;
                     return GameControllerButton.valueOf(i);
                 }
             }
         }
-        return SDL_CONTROLLER_BUTTON_INVALID;
+        return GameControllerButton.Invalid;
     }
 
     GameControllerAxis findAxisAtPosition(int x, int y)
@@ -471,8 +489,8 @@ public static class TestGameController {
         for (i = 0; i < GameControllerAxis.Max.value(); ++i) {
             if (showing_front) {
                 SDL_Rect rect;
-                rect.x = axis_positions[i].x;
-                rect.y = axis_positions[i].y;
+                rect.x = axisPositions[i].x;
+                rect.y = axisPositions[i].y;
                 rect.w = AXIS_SIZE;
                 rect.h = AXIS_SIZE;
                 if (SDL_PointInRect(&point, &rect)) {
@@ -497,66 +515,66 @@ public static class TestGameController {
         }
 
         if (virtualAxisActive != GameControllerAxis.Invalid) {
-            if (virtualAxisActive == SDL_CONTROLLER_AXIS_TRIGGERLEFT ||
-                virtualAxisActive == SDL_CONTROLLER_AXIS_TRIGGERRIGHT) {
-                int range = (SDL_JOYSTICK_AXIS_MAX - SDL_JOYSTICK_AXIS_MIN);
-                float distance = SDL_clamp(((float)y - virtualAxisStartY) / AXIS_SIZE, 0.0f, 1.0f);
-                short value = (short)(SDL_JOYSTICK_AXIS_MIN + (distance * range));
+            if (virtualAxisActive == GameControllerAxis.TriggerLeft ||
+                virtualAxisActive == GameControllerAxis.TriggerRight) {
+                int range = (Joystick.AXIS_MAX - Joystick.AXIS_MIN);
+                float distance = Math.clamp(((float)y - virtualAxisStartY) / AXIS_SIZE, 0.0f, 1.0f);
+                short value = (short)(Joystick.AXIS_MIN + (distance * range));
                 virtualJoystick.setVirtualAxis(virtualAxisActive, value);
             } else {
-                float distanceX = SDL_clamp(((float)x - virtualAxisStartX) / AXIS_SIZE, -1.0f, 1.0f);
-                float distanceY = SDL_clamp(((float)y - virtualAxisStartY) / AXIS_SIZE, -1.0f, 1.0f);
+                float distanceX = Math.clamp(((float)x - virtualAxisStartX) / AXIS_SIZE, -1.0f, 1.0f);
+                float distanceY = Math.clamp(((float)y - virtualAxisStartY) / AXIS_SIZE, -1.0f, 1.0f);
                 short valueX, valueY;
 
                 if (distanceX >= 0) {
-                    valueX = (short)(distanceX * SDL_JOYSTICK_AXIS_MAX);
+                    valueX = (short)(distanceX * Joystick.AXIS_MAX);
                 } else {
-                    valueX = (short)(distanceX * -SDL_JOYSTICK_AXIS_MIN);
+                    valueX = (short)(distanceX * -Joystick.AXIS_MIN);
                 }
                 if (distanceY >= 0) {
-                    valueY = (short)(distanceY * SDL_JOYSTICK_AXIS_MAX);
+                    valueY = (short)(distanceY * Joystick.AXIS_MAX);
                 } else {
-                    valueY = (short)(distanceY * -SDL_JOYSTICK_AXIS_MIN);
+                    valueY = (short)(distanceY * -Joystick.AXIS_MIN);
                 }
-                SDL_JoystickSetVirtualAxis(virtualJoystick, virtualAxisActive, valueX);
-                SDL_JoystickSetVirtualAxis(virtualJoystick, virtualAxisActive + 1, valueY);
+                virtualJoystick.setVirtualAxis(virtualAxisActive, valueX);
+                virtualJoystick.setVirtualAxis(GameControllerAxis.valueOf(virtualAxisActive.value() + 1), valueX);
             }
         }
     }
 
-    static void VirtualControllerMouseDown(int x, int y)
+    void virtualControllerMouseDown(int x, int y)
     {
-        SDL_GameControllerButton button;
-        SDL_GameControllerAxis axis;
+        GameControllerButton button;
+        GameControllerAxis axis;
 
         button = findButtonAtPosition(x, y);
-        if (button != SDL_CONTROLLER_BUTTON_INVALID) {
+        if (button != GameControllerButton.Invalid) {
             virtualButtonActive = button;
-            SDL_JoystickSetVirtualButton(virtualJoystick, virtualButtonActive, SDL_PRESSED);
+            virtualJoystick.setVirtualButton(virtualButtonActive, GeneralInputStateDefinitions.Pressed)
         }
 
         axis = findAxisAtPosition(x, y);
-        if (axis != SDL_CONTROLLER_AXIS_INVALID) {
+        if (axis != GameControllerAxis.Invalid) {
             virtualAxisActive = axis;
             virtualAxisStartX = x;
             virtualAxisStartY = y;
         }
     }
 
-    static void VirtualControllerMouseUp(int x, int y)
+    void virtualControllerMouseUp(int x, int y)
     {
-        if (virtualButtonActive != SDL_CONTROLLER_BUTTON_INVALID) {
-            SDL_JoystickSetVirtualButton(virtualJoystick, virtualButtonActive, SDL_RELEASED);
-            virtualButtonActive = SDL_CONTROLLER_BUTTON_INVALID;
+        if (virtualButtonActive != GameControllerButton.Invalid) {
+            virtualJoystick.setVirtualButton(virtualButtonActive, GeneralInputStateDefinitions.Released);
+            virtualButtonActive = GameControllerButton.Invalid;
         }
 
-        if (virtualAxisActive != SDL_CONTROLLER_AXIS_INVALID) {
-            if (virtualAxisActive == SDL_CONTROLLER_AXIS_TRIGGERLEFT ||
-                virtualAxisActive == SDL_CONTROLLER_AXIS_TRIGGERRIGHT) {
+        if (virtualAxisActive != GameControllerAxis.Invalid) {
+            if (virtualAxisActive == GameControllerAxis.TriggerLeft ||
+                virtualAxisActive == GameControllerAxis.TriggerRight) {
                 virtualJoystick.setVirtualAxis(virtualAxisActive, Joystick.AXIS_MIN);
             } else {
-                virtualJoystick.setVirtualAxis(virtualAxisActive, 0);
-                virtualJoystick.setVirtualAxis(GameControllerAxis.valueOf(virtualAxisActive.value() + 1), 0);
+                virtualJoystick.setVirtualAxis(virtualAxisActive, (short) 0);
+                virtualJoystick.setVirtualAxis(GameControllerAxis.valueOf(virtualAxisActive.value() + 1), (short) 0);
             }
             virtualAxisActive = GameControllerAxis.Invalid;
         }
@@ -653,24 +671,24 @@ public static class TestGameController {
                 break;
 
             case SDL_MOUSEBUTTONDOWN:
-                if (virtualJoystick) {
-                    VirtualControllerMouseDown(event.button.x, event.button.y);
+                if (virtualJoystick != null) {
+                    virtualControllerMouseDown(event.button.x, event.button.y);
                 }
                 break;
 
             case SDL_MOUSEBUTTONUP:
-                if (virtualJoystick) {
-                    VirtualControllerMouseUp(event.button.x, event.button.y);
+                if (virtualJoystick != null) {
+                    virtualControllerMouseUp(event.button.x, event.button.y);
                 }
                 break;
 
-            case SDL_MOUSEMOTION:
-                if (virtualJoystick) {
-                    virtualControllerMouseMotion(event.motion.x, event.motion.y);
+            case MouseMotion mouseMotion:
+                if (virtualJoystick != null) {
+                    virtualControllerMouseMotion(mouseMotion.x(), mouseMotion.y());
                 }
                 break;
 
-            case SDL_KEYDOWN:
+            case KeyDown keyDown:
                 if (event.key.keysym.sym >= SDLK_0 && event.key.keysym.sym <= SDLK_9) {
                     if (gameController) {
                         int player_index = (event.key.keysym.sym - SDLK_0);
@@ -691,7 +709,7 @@ public static class TestGameController {
                     break;
                 }
                 SDL_FALLTHROUGH;
-            case SDL_QUIT:
+            case Quit:
                 done = SDL_TRUE;
                 break;
             default:
@@ -727,18 +745,18 @@ public static class TestGameController {
                 const short deadzone = 8000; /* !!! FIXME: real deadzone */
                 const short value = SDL_GameControllerGetAxis(gameController, (SDL_GameControllerAxis)(i));
                     if (value < -deadzone) {
-                    const double angle = axis_positions[i].angle;
+                    const double angle = axisPositions[i].angle;
                         SDL_Rect dst;
-                        dst.x = axis_positions[i].x;
-                        dst.y = axis_positions[i].y;
+                        dst.x = axisPositions[i].x;
+                        dst.y = axisPositions[i].y;
                         dst.w = AXIS_SIZE;
                         dst.h = AXIS_SIZE;
                         SDL_RenderCopyEx(screen, axis_texture, NULL, &dst, angle, NULL, SDL_FLIP_NONE);
                     } else if (value > deadzone) {
-                    const double angle = axis_positions[i].angle + 180.0;
+                    const double angle = axisPositions[i].angle + 180.0;
                         SDL_Rect dst;
-                        dst.x = axis_positions[i].x;
-                        dst.y = axis_positions[i].y;
+                        dst.x = axisPositions[i].x;
+                        dst.y = axisPositions[i].y;
                         dst.w = AXIS_SIZE;
                         dst.h = AXIS_SIZE;
                         SDL_RenderCopyEx(screen, axis_texture, NULL, &dst, angle, NULL, SDL_FLIP_NONE);
@@ -774,7 +792,7 @@ public static class TestGameController {
                 }
             }
 
-            if (trigger_effect == 0) {
+            if (triggerEffect == 0) {
                 /* Update rumble based on trigger state */
                 {
                     short left = SDL_GameControllerGetAxis(gameController, SDL_CONTROLLER_AXIS_TRIGGERLEFT);
@@ -859,17 +877,17 @@ public static class TestGameController {
                 name = GameController.nameForIndex(i);
                 path = GameController.pathForIndex(i);
                 description = switch (GameController.typeForIndex(i)) {
-                    case AmazonLuna -> "Amazon Luna Controller";
-                    case GoogleStadia -> "Google Stadia Controller";
-                    case NintendoSwitchJoyconLeft, NintendoSwitchJoyconRight, NintendoSwitchJoyconPair ->
+                    case GameControllerType.AmazonLuna -> "Amazon Luna Controller";
+                    case GameControllerType.GoogleStadia -> "Google Stadia Controller";
+                    case GameControllerType.NintendoSwitchJoyconLeft, GameControllerType.NintendoSwitchJoyconRight, GameControllerType.NintendoSwitchJoyconPair ->
                             "Nintendo Switch Joy-Con";
-                    case NintendoSwitchPro -> "Nintendo Switch Pro Controller";
-                    case PS3 -> "PS3 Controller";
-                    case PS4 -> "PS4 Controller";
-                    case PS5 -> "PS5 Controller";
-                    case XBox360 -> "XBox 360 Controller";
-                    case XBoxOne -> "XBox One Controller";
-                    case Virtual -> "Virtual Game Controller";
+                    case GameControllerType.NintendoSwitchPro -> "Nintendo Switch Pro Controller";
+                    case GameControllerType.PS3 -> "PS3 Controller";
+                    case GameControllerType.PS4 -> "PS4 Controller";
+                    case GameControllerType.PS5 -> "PS5 Controller";
+                    case GameControllerType.XBox360 -> "XBox 360 Controller";
+                    case GameControllerType.XBoxOne -> "XBox One Controller";
+                    case GameControllerType.Virtual -> "Virtual Game Controller";
                     default -> "Game Controller";
                 };
                 addController(i, false);
@@ -901,7 +919,7 @@ public static class TestGameController {
         }
 
         SDL_SetRenderDrawColor(screen, 0x00, 0x00, 0x00, SDL_ALPHA_OPAQUE);
-        screen.setDrawColor(0x00, 0x00, 0x00, SDL_ALPHA_OPAQUE());
+        screen.setDrawColor(0x00, 0x00, 0x00, SDL_subset_h.SDL_ALPHA_OPAQUE());
         screen.clear();
         screen.present();
         SDL_RenderClear(screen);

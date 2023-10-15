@@ -97,9 +97,12 @@ public class GameController implements AutoCloseable {
 
     public int sendEffect(byte[] data) {
         try (var arena = Arena.ofConfined()) {
-            var nativeData = arena.allocateArray(ValueLayout.JAVA_BYTE, data);
-            return SDL_GameControllerSendEffect(gameController, nativeData, (int) nativeData.byteSize());
+            return sendEffect(arena.allocateArray(ValueLayout.JAVA_BYTE, data));
         }
+    }
+
+    public int sendEffect(MemorySegment data) {
+        return SDL_GameControllerSendEffect(gameController, data, (int) data.byteSize());
     }
 
     public GeneralInputStateDefinitions getButton(int button) {
