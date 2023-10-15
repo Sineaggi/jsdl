@@ -48,11 +48,11 @@ tasks.register<JavaExec>("generate") {
     // standardOutput = System.err
     args(
         // "--help",
-        "C:\\vcpkg\\installed\\x64-windows\\include\\SDL2\\SDL.h",
+        "C:\\vcpkg\\installed\\x64-windows\\include\\SDL2\\SDL_gamecontroller.h",
         "--source",
         "--target-package", "sdl",
-        "--dump-includes", "${layout.projectDirectory.file("sdl.full.symbols")}",
-        //"@${layout.projectDirectory.file("sdl.symbols")}",
+        // "--dump-includes", "${layout.projectDirectory.file("sdl.full.symbols")}",
+        "@${layout.projectDirectory.file("sdl.symbols")}",
         "-I", "C:\\vcpkg\\installed\\x64-windows\\include",
         "--output", layout.projectDirectory.dir("src/main/java/").toString(),
         "-l", "sdl",
