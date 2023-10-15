@@ -45,22 +45,6 @@
 
 #### Extracted from: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
 
---include-typedef __crt_bool                                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
---include-typedef __time32_t                                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
---include-typedef __time64_t                                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
---include-typedef _locale_t                                       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
---include-typedef errno_t                                         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
---include-typedef mbstate_t                                       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
---include-typedef rsize_t                                         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
---include-typedef time_t                                          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
---include-typedef wctype_t                                        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
---include-typedef wint_t                                          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
---include-function _invalid_parameter_noinfo                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
---include-function _invalid_parameter_noinfo_noreturn             # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
---include-function _invoke_watson                                 # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
---include-struct _Mbstatet                                        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
---include-struct __crt_locale_data_public                         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
---include-struct __crt_locale_pointers                            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
 --include-constant _ARGMAX                                        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
 --include-constant _ARM_WINAPI_PARTITION_DESKTOP_SDK_AVAILABLE    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
 --include-constant _CRT_BUILD_DESKTOP_APP                         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
@@ -82,6 +66,22 @@
 --include-constant __GOT_SECURE_LIB__                             # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
 --include-constant __STDC_SECURE_LIB__                            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
 --include-constant __STDC_WANT_SECURE_LIB__                       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
+--include-typedef __crt_bool                                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
+--include-typedef __time32_t                                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
+--include-typedef __time64_t                                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
+--include-typedef _locale_t                                       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
+--include-typedef errno_t                                         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
+--include-typedef mbstate_t                                       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
+--include-typedef rsize_t                                         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
+--include-typedef time_t                                          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
+--include-typedef wctype_t                                        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
+--include-typedef wint_t                                          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
+--include-function _invalid_parameter_noinfo                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
+--include-function _invalid_parameter_noinfo_noreturn             # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
+--include-function _invoke_watson                                 # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
+--include-struct _Mbstatet                                        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
+--include-struct __crt_locale_data_public                         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
+--include-struct __crt_locale_pointers                            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt.h
 
 #### Extracted from: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_malloc.h
 
@@ -110,8 +110,10 @@
 
 #### Extracted from: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 
---include-typedef double_t          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-typedef float_t           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-union _double_val         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-union _float_const        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-union _float_val          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-union _ldouble_val        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 --include-var HUGE                  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 --include-var _Denorm_C             # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 --include-var _Eps_C                # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
@@ -139,6 +141,81 @@
 --include-var _Snan_C               # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 --include-var _Xbig_C               # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 --include-var _Zero_C               # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant DOMAIN           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant FP_ILOGB0        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant FP_ILOGBNAN      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant FP_INFINITE      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant FP_NAN           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant FP_NORMAL        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant FP_SUBNORMAL     # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant FP_ZERO          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant HUGE_VAL         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant HUGE_VALF        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant HUGE_VALL        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant INFINITY         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant MATH_ERREXCEPT   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant MATH_ERRNO       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant NAN              # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant OVERFLOW         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant PLOSS            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant SING             # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant TLOSS            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant UNDERFLOW        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _C2              # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _D0_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _D1_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _D2_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _D3_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _DBIAS           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _DENORM          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _DFRAC           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _DHUGE_EXP       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _DMASK           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _DMAX            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _DOFF            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _DOMAIN          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _DSIGN           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _F0_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _F1_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _FBIAS           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _FE_DIVBYZERO    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _FE_INEXACT      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _FE_INVALID      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _FE_OVERFLOW     # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _FE_UNDERFLOW    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _FFRAC           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _FHUGE_EXP       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _FINITE          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _FMASK           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _FMAX            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _FOFF            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _FP_EQ           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _FP_GT           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _FP_LT           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _FRND            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _FSIGN           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _HUGE_ENUF       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _INFCODE         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _L0_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _L1_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _L2_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _L3_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _LBIAS           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _LFRAC           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _LHUGE_EXP       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _LMASK           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _LMAX            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _LOFF            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _LSIGN           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _NANCODE         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _OVERFLOW        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _PLOSS           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _SING            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _TLOSS           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant _UNDERFLOW       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-constant math_errhandling # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-typedef double_t          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
+--include-typedef float_t           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 --include-function _cabs            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 --include-function _chgsign         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 --include-function _chgsignf        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
@@ -346,85 +423,8 @@
 --include-function y0               # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 --include-function y1               # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 --include-function yn               # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-union _double_val         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-union _float_const        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-union _float_val          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-union _ldouble_val        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 --include-struct _complex           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 --include-struct _exception         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant DOMAIN           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant FP_ILOGB0        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant FP_ILOGBNAN      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant FP_INFINITE      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant FP_NAN           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant FP_NORMAL        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant FP_SUBNORMAL     # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant FP_ZERO          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant HUGE_VAL         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant HUGE_VALF        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant HUGE_VALL        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant INFINITY         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant MATH_ERREXCEPT   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant MATH_ERRNO       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant NAN              # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant OVERFLOW         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant PLOSS            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant SING             # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant TLOSS            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant UNDERFLOW        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _C2              # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _D0_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _D1_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _D2_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _D3_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _DBIAS           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _DENORM          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _DFRAC           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _DHUGE_EXP       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _DMASK           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _DMAX            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _DOFF            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _DOMAIN          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _DSIGN           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _F0_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _F1_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _FBIAS           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _FE_DIVBYZERO    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _FE_INEXACT      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _FE_INVALID      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _FE_OVERFLOW     # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _FE_UNDERFLOW    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _FFRAC           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _FHUGE_EXP       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _FINITE          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _FMASK           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _FMAX            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _FOFF            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _FP_EQ           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _FP_GT           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _FP_LT           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _FRND            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _FSIGN           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _HUGE_ENUF       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _INFCODE         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _L0_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _L1_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _L2_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _L3_C            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _LBIAS           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _LFRAC           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _LHUGE_EXP       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _LMASK           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _LMAX            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _LOFF            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _LSIGN           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _NANCODE         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _OVERFLOW        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _PLOSS           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _SING            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _TLOSS           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant _UNDERFLOW       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
---include-constant math_errhandling # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math.h
 
 #### Extracted from: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_math_defines.h
 
@@ -508,6 +508,17 @@
 
 #### Extracted from: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
 
+--include-constant WEOF           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
+--include-constant _ALPHA         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
+--include-constant _BLANK         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
+--include-constant _CONTROL       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
+--include-constant _DIGIT         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
+--include-constant _HEX           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
+--include-constant _LEADBYTE      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
+--include-constant _LOWER         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
+--include-constant _PUNCT         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
+--include-constant _SPACE         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
+--include-constant _UPPER         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
 --include-function __iswcsym      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
 --include-function __iswcsymf     # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
 --include-function __pctype_func  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
@@ -548,17 +559,6 @@
 --include-function iswxdigit      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
 --include-function towlower       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
 --include-function towupper       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
---include-constant WEOF           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
---include-constant _ALPHA         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
---include-constant _BLANK         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
---include-constant _CONTROL       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
---include-constant _DIGIT         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
---include-constant _HEX           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
---include-constant _LEADBYTE      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
---include-constant _LOWER         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
---include-constant _PUNCT         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
---include-constant _SPACE         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
---include-constant _UPPER         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wctype.h
 
 #### Extracted from: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wdirect.h
 
@@ -662,6 +662,26 @@
 
 #### Extracted from: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
 
+--include-constant _MAX_I64TOSTR_BASE10_COUNT # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+--include-constant _MAX_I64TOSTR_BASE16_COUNT # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+--include-constant _MAX_I64TOSTR_BASE2_COUNT  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+--include-constant _MAX_I64TOSTR_BASE8_COUNT  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+--include-constant _MAX_ITOSTR_BASE10_COUNT   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+--include-constant _MAX_ITOSTR_BASE16_COUNT   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+--include-constant _MAX_ITOSTR_BASE2_COUNT    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+--include-constant _MAX_ITOSTR_BASE8_COUNT    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+--include-constant _MAX_LTOSTR_BASE10_COUNT   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+--include-constant _MAX_LTOSTR_BASE16_COUNT   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+--include-constant _MAX_LTOSTR_BASE2_COUNT    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+--include-constant _MAX_LTOSTR_BASE8_COUNT    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+--include-constant _MAX_U64TOSTR_BASE10_COUNT # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+--include-constant _MAX_U64TOSTR_BASE16_COUNT # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+--include-constant _MAX_U64TOSTR_BASE2_COUNT  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+--include-constant _MAX_U64TOSTR_BASE8_COUNT  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+--include-constant _MAX_ULTOSTR_BASE10_COUNT  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+--include-constant _MAX_ULTOSTR_BASE16_COUNT  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+--include-constant _MAX_ULTOSTR_BASE2_COUNT   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
+--include-constant _MAX_ULTOSTR_BASE8_COUNT   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
 --include-function _i64tow                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
 --include-function _i64tow_s                  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
 --include-function _itow                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
@@ -713,26 +733,6 @@
 --include-function wcstoll                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
 --include-function wcstoul                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
 --include-function wcstoull                   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_I64TOSTR_BASE10_COUNT # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_I64TOSTR_BASE16_COUNT # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_I64TOSTR_BASE2_COUNT  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_I64TOSTR_BASE8_COUNT  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_ITOSTR_BASE10_COUNT   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_ITOSTR_BASE16_COUNT   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_ITOSTR_BASE2_COUNT    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_ITOSTR_BASE8_COUNT    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_LTOSTR_BASE10_COUNT   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_LTOSTR_BASE16_COUNT   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_LTOSTR_BASE2_COUNT    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_LTOSTR_BASE8_COUNT    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_U64TOSTR_BASE10_COUNT # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_U64TOSTR_BASE16_COUNT # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_U64TOSTR_BASE2_COUNT  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_U64TOSTR_BASE8_COUNT  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_ULTOSTR_BASE10_COUNT  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_ULTOSTR_BASE16_COUNT  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_ULTOSTR_BASE2_COUNT   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
---include-constant _MAX_ULTOSTR_BASE8_COUNT   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstdlib.h
 
 #### Extracted from: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\corecrt_wstring.h
 
@@ -936,14 +936,6 @@
 
 #### Extracted from: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
 
---include-typedef _HEAPINFO               # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
---include-function _alloca                # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
---include-function _get_heap_handle       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
---include-function _heapchk               # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
---include-function _heapmin               # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
---include-function _heapwalk              # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
---include-function _resetstkoflw          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
---include-struct _heapinfo                # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
 --include-constant _ALLOCA_S_HEAP_MARKER  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
 --include-constant _ALLOCA_S_MARKER_SIZE  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
 --include-constant _ALLOCA_S_STACK_MARKER # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
@@ -957,9 +949,37 @@
 --include-constant _HEAPOK                # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
 --include-constant _HEAP_MAXREQ           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
 --include-constant _USEDENTRY             # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
+--include-typedef _HEAPINFO               # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
+--include-function _alloca                # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
+--include-function _get_heap_handle       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
+--include-function _heapchk               # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
+--include-function _heapmin               # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
+--include-function _heapwalk              # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
+--include-function _resetstkoflw          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
+--include-struct _heapinfo                # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\malloc.h
 
 #### Extracted from: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
 
+--include-constant BUFSIZ                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+--include-constant EOF                         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+--include-constant FILENAME_MAX                # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+--include-constant FOPEN_MAX                   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+--include-constant L_tmpnam                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+--include-constant L_tmpnam_s                  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+--include-constant SEEK_CUR                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+--include-constant SEEK_END                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+--include-constant SEEK_SET                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+--include-constant SYS_OPEN                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+--include-constant TMP_MAX                     # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+--include-constant TMP_MAX_S                   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+--include-constant _IOB_ENTRIES                # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+--include-constant _IOFBF                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+--include-constant _IOLBF                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+--include-constant _IONBF                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+--include-constant _NFILE                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+--include-constant _NSTREAM_                   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+--include-constant _SYS_OPEN                   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
+--include-constant _TMP_MAX_S                  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
 --include-typedef fpos_t                       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
 --include-function __p__commode                # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
 --include-function __stdio_common_vfprintf     # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
@@ -1057,29 +1077,25 @@
 --include-function tmpnam_s                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
 --include-function ungetc                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
 --include-function unlink                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant BUFSIZ                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant EOF                         # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant FILENAME_MAX                # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant FOPEN_MAX                   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant L_tmpnam                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant L_tmpnam_s                  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant SEEK_CUR                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant SEEK_END                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant SEEK_SET                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant SYS_OPEN                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant TMP_MAX                     # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant TMP_MAX_S                   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant _IOB_ENTRIES                # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant _IOFBF                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant _IOLBF                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant _IONBF                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant _NFILE                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant _NSTREAM_                   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant _SYS_OPEN                   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
---include-constant _TMP_MAX_S                  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdio.h
 
 #### Extracted from: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
 
+--include-constant EXIT_FAILURE                                # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
+--include-constant EXIT_SUCCESS                                # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
+--include-constant RAND_MAX                                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
+--include-constant _CALL_REPORTFAULT                           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
+--include-constant _CVTBUFSIZE                                 # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
+--include-constant _MAX_DIR                                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
+--include-constant _MAX_DRIVE                                  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
+--include-constant _MAX_ENV                                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
+--include-constant _MAX_EXT                                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
+--include-constant _MAX_FNAME                                  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
+--include-constant _MAX_PATH                                   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
+--include-constant _OUT_TO_DEFAULT                             # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
+--include-constant _OUT_TO_MSGBOX                              # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
+--include-constant _OUT_TO_STDERR                              # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
+--include-constant _REPORT_ERRMODE                             # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
+--include-constant _WRITE_ABORT_MSG                            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
 --include-typedef _invalid_parameter_handler                   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
 --include-typedef _onexit_t                                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
 --include-typedef _purecall_handler                            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
@@ -1246,25 +1262,10 @@
 --include-struct _div_t                                        # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
 --include-struct _ldiv_t                                       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
 --include-struct _lldiv_t                                      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
---include-constant EXIT_FAILURE                                # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
---include-constant EXIT_SUCCESS                                # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
---include-constant RAND_MAX                                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
---include-constant _CALL_REPORTFAULT                           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
---include-constant _CVTBUFSIZE                                 # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
---include-constant _MAX_DIR                                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
---include-constant _MAX_DRIVE                                  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
---include-constant _MAX_ENV                                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
---include-constant _MAX_EXT                                    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
---include-constant _MAX_FNAME                                  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
---include-constant _MAX_PATH                                   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
---include-constant _OUT_TO_DEFAULT                             # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
---include-constant _OUT_TO_MSGBOX                              # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
---include-constant _OUT_TO_STDERR                              # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
---include-constant _REPORT_ERRMODE                             # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
---include-constant _WRITE_ABORT_MSG                            # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\stdlib.h
 
 #### Extracted from: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\string.h
 
+--include-constant _NLSCMPERROR # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\string.h
 --include-function __strncnt    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\string.h
 --include-function _memccpy     # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\string.h
 --include-function _strcmpi     # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\string.h
@@ -1326,23 +1327,9 @@
 --include-function strtok_s     # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\string.h
 --include-function strupr       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\string.h
 --include-function strxfrm      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\string.h
---include-constant _NLSCMPERROR # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\string.h
 
 #### Extracted from: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
 
---include-function _fstat32    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
---include-function _fstat32i64 # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
---include-function _fstat64    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
---include-function _fstat64i32 # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
---include-function _stat32i64  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
---include-function _stat64     # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
---include-function _stat64i32  # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
---include-function _wstat32    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
---include-function _wstat32i64 # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
---include-function _wstat64    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
---include-function _wstat64i32 # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
---include-struct _stat32       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
---include-struct stat          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
 --include-constant S_IEXEC     # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
 --include-constant S_IFCHR     # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
 --include-constant S_IFDIR     # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
@@ -1358,6 +1345,19 @@
 --include-constant _S_IFREG    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
 --include-constant _S_IREAD    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
 --include-constant _S_IWRITE   # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
+--include-function _fstat32    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
+--include-function _fstat32i64 # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
+--include-function _fstat64    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
+--include-function _fstat64i32 # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
+--include-function _stat32     # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
+--include-function _stat64     # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
+--include-function _wstat32    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
+--include-function _wstat32i64 # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
+--include-function _wstat64    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
+--include-function _wstat64i32 # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
+--include-struct _stat32i64    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
+--include-struct _stat64i32    # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
+--include-struct stat          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\stat.h
 
 #### Extracted from: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\sys\types.h
 
@@ -1370,6 +1370,8 @@
 
 #### Extracted from: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\wchar.h
 
+--include-constant WCHAR_MAX       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\wchar.h
+--include-constant WCHAR_MIN       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\wchar.h
 --include-typedef _Wint_t          # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\wchar.h
 --include-function _wcreate_locale # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\wchar.h
 --include-function _wsetlocale     # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\wchar.h
@@ -1385,8 +1387,6 @@
 --include-function wctob           # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\wchar.h
 --include-function wmemcpy_s       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\wchar.h
 --include-function wmemmove_s      # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\wchar.h
---include-constant WCHAR_MAX       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\wchar.h
---include-constant WCHAR_MIN       # header: C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\wchar.h
 
 #### Extracted from: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\limits.h
 
@@ -1421,32 +1421,6 @@
 
 #### Extracted from: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
 
---include-typedef int16_t           # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef int32_t           # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef int64_t           # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef int8_t            # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef int_fast16_t      # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef int_fast32_t      # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef int_fast64_t      # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef int_fast8_t       # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef int_least16_t     # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef int_least32_t     # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef int_least64_t     # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef int_least8_t      # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef intmax_t          # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef uint16_t          # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef uint32_t          # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef uint64_t          # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef uint8_t           # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef uint_fast16_t     # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef uint_fast32_t     # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef uint_fast64_t     # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef uint_fast8_t      # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef uint_least16_t    # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef uint_least32_t    # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef uint_least64_t    # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef uint_least8_t     # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
---include-typedef uintmax_t         # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
 --include-constant INT16_MAX        # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
 --include-constant INT16_MIN        # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
 --include-constant INT32_MAX        # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
@@ -1495,32 +1469,58 @@
 --include-constant UINT_LEAST8_MAX  # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
 --include-constant WINT_MAX         # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
 --include-constant WINT_MIN         # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef int16_t           # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef int32_t           # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef int64_t           # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef int8_t            # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef int_fast16_t      # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef int_fast32_t      # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef int_fast64_t      # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef int_fast8_t       # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef int_least16_t     # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef int_least32_t     # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef int_least64_t     # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef int_least8_t      # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef intmax_t          # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef uint16_t          # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef uint32_t          # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef uint64_t          # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef uint8_t           # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef uint_fast16_t     # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef uint_fast32_t     # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef uint_fast64_t     # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef uint_fast8_t      # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef uint_least16_t    # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef uint_least32_t    # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef uint_least64_t    # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef uint_least8_t     # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
+--include-typedef uintmax_t         # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\stdint.h
 
 #### Extracted from: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vadefs.h
 
+--include-constant _CRT_PACKING                 # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vadefs.h
+--include-constant _VCRUNTIME_DISABLED_WARNINGS # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vadefs.h
 --include-typedef uintptr_t                     # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vadefs.h
 --include-typedef va_list                       # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vadefs.h
 --include-function __va_start                   # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vadefs.h
---include-constant _CRT_PACKING                 # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vadefs.h
---include-constant _VCRUNTIME_DISABLED_WARNINGS # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vadefs.h
 
 #### Extracted from: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
 
---include-typedef __vcrt_bool                  # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
---include-typedef intptr_t                     # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
---include-typedef ptrdiff_t                    # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
---include-typedef size_t                       # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
---include-typedef wchar_t                      # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
 --include-var __security_cookie                # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
---include-function __report_gsfailure          # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
---include-function __security_check_cookie     # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
---include-function __security_init_cookie      # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
 --include-constant _HAS_CXX17                  # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
 --include-constant _HAS_CXX20                  # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
 --include-constant _HAS_CXX23                  # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
 --include-constant _HAS_EXCEPTIONS             # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
 --include-constant _HAS_NODISCARD              # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
 --include-constant _VCRT_COMPILER_PREPROCESSOR # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
+--include-typedef __vcrt_bool                  # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
+--include-typedef intptr_t                     # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
+--include-typedef ptrdiff_t                    # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
+--include-typedef size_t                       # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
+--include-typedef wchar_t                      # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
+--include-function __report_gsfailure          # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
+--include-function __security_check_cookie     # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
+--include-function __security_init_cookie      # header: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime.h
 
 #### Extracted from: C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vcruntime_string.h
 
@@ -1565,6 +1565,31 @@
 #### Extracted from: C:\Users\Clayton\Source\jextract\build\jextract\conf\jextract\__stddef_max_align_t.h
 
 --include-typedef max_align_t  # header: C:\Users\Clayton\Source\jextract\build\jextract\conf\jextract\__stddef_max_align_t.h
+
+#### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+
+--include-constant SDL_BLENDFACTOR_DST_ALPHA           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDFACTOR_DST_COLOR           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDFACTOR_ONE                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDFACTOR_ONE_MINUS_DST_ALPHA # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDFACTOR_ONE_MINUS_DST_COLOR # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDFACTOR_ONE_MINUS_SRC_ALPHA # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDFACTOR_ONE_MINUS_SRC_COLOR # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDFACTOR_SRC_ALPHA           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDFACTOR_SRC_COLOR           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDFACTOR_ZERO                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDMODE_ADD                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDMODE_BLEND                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDMODE_INVALID               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDMODE_MOD                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDMODE_MUL                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDMODE_NONE                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDOPERATION_ADD              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDOPERATION_MAXIMUM          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDOPERATION_MINIMUM          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDOPERATION_REV_SUBTRACT     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-constant SDL_BLENDOPERATION_SUBTRACT         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
+--include-function SDL_ComposeCustomBlendMode          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_blendmode.h
 
 #### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_config.h
 
@@ -1711,22 +1736,78 @@
 --include-constant SIZEOF_VOIDP                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_config.h
 --include-constant STDC_HEADERS                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_config.h
 
+#### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_endian.h
+
+--include-constant SDL_BIG_ENDIAN     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_endian.h
+--include-constant SDL_BYTEORDER      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_endian.h
+--include-constant SDL_FLOATWORDORDER # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_endian.h
+--include-constant SDL_LIL_ENDIAN     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_endian.h
+
 #### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_error.h
 
---include-function SDL_ClearError  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_error.h
---include-function SDL_Error       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_error.h
---include-function SDL_GetError    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_error.h
---include-function SDL_GetErrorMsg # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_error.h
---include-function SDL_SetError    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_error.h
 --include-constant SDL_EFREAD      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_error.h
 --include-constant SDL_EFSEEK      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_error.h
 --include-constant SDL_EFWRITE     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_error.h
 --include-constant SDL_ENOMEM      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_error.h
 --include-constant SDL_LASTERROR   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_error.h
 --include-constant SDL_UNSUPPORTED # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_error.h
+--include-function SDL_ClearError  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_error.h
+--include-function SDL_Error       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_error.h
+--include-function SDL_GetError    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_error.h
+--include-function SDL_GetErrorMsg # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_error.h
+--include-function SDL_SetError    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_error.h
 
 #### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
 
+--include-constant SDL_CONTROLLER_AXIS_INVALID                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_AXIS_LEFTX                        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_AXIS_LEFTY                        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_AXIS_MAX                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_AXIS_RIGHTX                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_AXIS_RIGHTY                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_AXIS_TRIGGERLEFT                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_AXIS_TRIGGERRIGHT                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BINDTYPE_AXIS                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BINDTYPE_BUTTON                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BINDTYPE_HAT                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BINDTYPE_NONE                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_A                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_B                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_BACK                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_DPAD_DOWN                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_DPAD_LEFT                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_DPAD_RIGHT                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_DPAD_UP                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_GUIDE                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_INVALID                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_LEFTSHOULDER               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_LEFTSTICK                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_MAX                        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_MISC1                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_PADDLE1                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_PADDLE2                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_PADDLE3                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_PADDLE4                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_RIGHTSHOULDER              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_RIGHTSTICK                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_START                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_TOUCHPAD                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_X                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_BUTTON_Y                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_TYPE_AMAZON_LUNA                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_TYPE_GOOGLE_STADIA                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_LEFT  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_PAIR  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_RIGHT # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_PRO          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_TYPE_NVIDIA_SHIELD                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_TYPE_PS3                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_TYPE_PS4                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_TYPE_PS5                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_TYPE_UNKNOWN                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_TYPE_VIRTUAL                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_TYPE_XBOX360                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
+--include-constant SDL_CONTROLLER_TYPE_XBOXONE                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
 --include-typedef SDL_GameController                                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
 --include-function SDL_GameControllerAddMapping                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
 --include-function SDL_GameControllerAddMappingsFromRW              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
@@ -1787,55 +1868,6 @@
 --include-function SDL_IsGameController                             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
 --include-struct SDL_GameControllerButtonBind                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
 --include-struct _SDL_GameController                                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_AXIS_INVALID                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_AXIS_LEFTX                        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_AXIS_LEFTY                        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_AXIS_MAX                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_AXIS_RIGHTX                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_AXIS_RIGHTY                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_AXIS_TRIGGERLEFT                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_AXIS_TRIGGERRIGHT                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BINDTYPE_AXIS                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BINDTYPE_BUTTON                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BINDTYPE_HAT                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BINDTYPE_NONE                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_A                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_B                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_BACK                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_DPAD_DOWN                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_DPAD_LEFT                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_DPAD_RIGHT                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_DPAD_UP                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_GUIDE                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_INVALID                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_LEFTSHOULDER               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_LEFTSTICK                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_MAX                        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_MISC1                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_PADDLE1                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_PADDLE2                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_PADDLE3                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_PADDLE4                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_RIGHTSHOULDER              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_RIGHTSTICK                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_START                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_TOUCHPAD                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_X                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_BUTTON_Y                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_TYPE_AMAZON_LUNA                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_TYPE_GOOGLE_STADIA                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_LEFT  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_PAIR  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_RIGHT # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_PRO          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_TYPE_NVIDIA_SHIELD                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_TYPE_PS3                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_TYPE_PS4                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_TYPE_PS5                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_TYPE_UNKNOWN                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_TYPE_VIRTUAL                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_TYPE_XBOX360                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
---include-constant SDL_CONTROLLER_TYPE_XBOXONE                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_gamecontroller.h
 
 #### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_guid.h
 
@@ -1845,6 +1877,36 @@
 
 #### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
 
+--include-constant SDL_HAT_CENTERED                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_HAT_DOWN                        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_HAT_LEFT                        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_HAT_LEFTDOWN                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_HAT_LEFTUP                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_HAT_RIGHT                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_HAT_RIGHTDOWN                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_HAT_RIGHTUP                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_HAT_UP                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_IPHONE_MAX_GFORCE               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_JOYSTICK_AXIS_MAX               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_JOYSTICK_AXIS_MIN               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_JOYSTICK_POWER_EMPTY            # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_JOYSTICK_POWER_FULL             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_JOYSTICK_POWER_LOW              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_JOYSTICK_POWER_MAX              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_JOYSTICK_POWER_MEDIUM           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_JOYSTICK_POWER_UNKNOWN          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_JOYSTICK_POWER_WIRED            # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_JOYSTICK_TYPE_ARCADE_PAD        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_JOYSTICK_TYPE_ARCADE_STICK      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_JOYSTICK_TYPE_DANCE_PAD         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_JOYSTICK_TYPE_DRUM_KIT          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_JOYSTICK_TYPE_FLIGHT_STICK      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_JOYSTICK_TYPE_GAMECONTROLLER    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_JOYSTICK_TYPE_GUITAR            # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_JOYSTICK_TYPE_THROTTLE          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_JOYSTICK_TYPE_UNKNOWN           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_JOYSTICK_TYPE_WHEEL             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
+--include-constant SDL_VIRTUAL_JOYSTICK_DESC_VERSION   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
 --include-typedef SDL_Joystick                         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
 --include-typedef SDL_JoystickGUID                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
 --include-typedef SDL_JoystickID                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
@@ -1908,39 +1970,11 @@
 --include-function SDL_UnlockJoysticks                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
 --include-struct SDL_VirtualJoystickDesc               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
 --include-struct _SDL_Joystick                         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_HAT_CENTERED                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_HAT_DOWN                        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_HAT_LEFT                        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_HAT_LEFTDOWN                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_HAT_LEFTUP                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_HAT_RIGHT                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_HAT_RIGHTDOWN                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_HAT_RIGHTUP                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_HAT_UP                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_IPHONE_MAX_GFORCE               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_JOYSTICK_AXIS_MAX               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_JOYSTICK_AXIS_MIN               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_JOYSTICK_POWER_EMPTY            # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_JOYSTICK_POWER_FULL             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_JOYSTICK_POWER_LOW              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_JOYSTICK_POWER_MAX              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_JOYSTICK_POWER_MEDIUM           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_JOYSTICK_POWER_UNKNOWN          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_JOYSTICK_POWER_WIRED            # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_JOYSTICK_TYPE_ARCADE_PAD        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_JOYSTICK_TYPE_ARCADE_STICK      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_JOYSTICK_TYPE_DANCE_PAD         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_JOYSTICK_TYPE_DRUM_KIT          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_JOYSTICK_TYPE_FLIGHT_STICK      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_JOYSTICK_TYPE_GAMECONTROLLER    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_JOYSTICK_TYPE_GUITAR            # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_JOYSTICK_TYPE_THROTTLE          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_JOYSTICK_TYPE_UNKNOWN           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_JOYSTICK_TYPE_WHEEL             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
---include-constant SDL_VIRTUAL_JOYSTICK_DESC_VERSION   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_joystick.h
 
 #### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mutex.h
 
+--include-constant SDL_MUTEX_MAXWAIT    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mutex.h
+--include-constant SDL_MUTEX_TIMEDOUT   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mutex.h
 --include-typedef SDL_sem               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mutex.h
 --include-function SDL_CondBroadcast    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mutex.h
 --include-function SDL_CondSignal       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mutex.h
@@ -1963,19 +1997,155 @@
 --include-struct SDL_cond               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mutex.h
 --include-struct SDL_mutex              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mutex.h
 --include-struct SDL_semaphore          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mutex.h
---include-constant SDL_MUTEX_MAXWAIT    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mutex.h
---include-constant SDL_MUTEX_TIMEDOUT   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mutex.h
+
+#### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+
+--include-constant SDL_ALPHA_OPAQUE             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_ALPHA_TRANSPARENT        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_ARRAYORDER_ABGR          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_ARRAYORDER_ARGB          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_ARRAYORDER_BGR           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_ARRAYORDER_BGRA          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_ARRAYORDER_NONE          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_ARRAYORDER_RGB           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_ARRAYORDER_RGBA          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_BITMAPORDER_1234         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_BITMAPORDER_4321         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_BITMAPORDER_NONE         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PACKEDLAYOUT_1010102     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PACKEDLAYOUT_1555        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PACKEDLAYOUT_2101010     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PACKEDLAYOUT_332         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PACKEDLAYOUT_4444        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PACKEDLAYOUT_5551        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PACKEDLAYOUT_565         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PACKEDLAYOUT_8888        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PACKEDLAYOUT_NONE        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PACKEDORDER_ABGR         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PACKEDORDER_ARGB         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PACKEDORDER_BGRA         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PACKEDORDER_BGRX         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PACKEDORDER_NONE         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PACKEDORDER_RGBA         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PACKEDORDER_RGBX         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PACKEDORDER_XBGR         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PACKEDORDER_XRGB         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_ABGR1555     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_ABGR32       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_ABGR4444     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_ABGR8888     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_ARGB1555     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_ARGB2101010  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_ARGB32       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_ARGB4444     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_ARGB8888     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_BGR24        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_BGR444       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_BGR555       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_BGR565       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_BGR888       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_BGRA32       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_BGRA4444     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_BGRA5551     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_BGRA8888     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_BGRX8888     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_EXTERNAL_OES # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_INDEX1LSB    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_INDEX1MSB    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_INDEX4LSB    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_INDEX4MSB    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_INDEX8       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_IYUV         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_NV12         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_NV21         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_RGB24        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_RGB332       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_RGB444       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_RGB555       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_RGB565       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_RGB888       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_RGBA32       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_RGBA4444     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_RGBA5551     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_RGBA8888     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_RGBX8888     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_UNKNOWN      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_UYVY         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_XBGR1555     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_XBGR4444     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_XBGR8888     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_XRGB1555     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_XRGB4444     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_XRGB8888     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_YUY2         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_YV12         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELFORMAT_YVYU         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELTYPE_ARRAYF16       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELTYPE_ARRAYF32       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELTYPE_ARRAYU16       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELTYPE_ARRAYU32       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELTYPE_ARRAYU8        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELTYPE_INDEX1         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELTYPE_INDEX4         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELTYPE_INDEX8         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELTYPE_PACKED16       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELTYPE_PACKED32       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELTYPE_PACKED8        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-constant SDL_PIXELTYPE_UNKNOWN        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-function SDL_AllocFormat              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-function SDL_AllocPalette             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-function SDL_CalculateGammaRamp       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-function SDL_FreeFormat               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-function SDL_FreePalette              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-function SDL_GetPixelFormatName       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-function SDL_GetRGB                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-function SDL_GetRGBA                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-function SDL_MapRGB                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-function SDL_MapRGBA                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-function SDL_MasksToPixelFormatEnum   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-function SDL_PixelFormatEnumToMasks   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-function SDL_SetPaletteColors         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-function SDL_SetPixelFormatPalette    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-struct SDL_Color                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-struct SDL_Palette                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
+--include-struct SDL_PixelFormat                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_pixels.h
 
 #### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_platform.h
 
---include-function SDL_GetPlatform     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_platform.h
 --include-constant HAVE_WINAPIFAMILY_H # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_platform.h
 --include-constant WINAPI_FAMILY_WINRT # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_platform.h
 --include-constant __WIN32__           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_platform.h
 --include-constant __WINDOWS__         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_platform.h
+--include-function SDL_GetPlatform     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_platform.h
+
+#### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rect.h
+
+--include-function SDL_EncloseFPoints        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rect.h
+--include-function SDL_EnclosePoints         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rect.h
+--include-function SDL_HasIntersection       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rect.h
+--include-function SDL_HasIntersectionF      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rect.h
+--include-function SDL_IntersectFRect        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rect.h
+--include-function SDL_IntersectFRectAndLine # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rect.h
+--include-function SDL_IntersectRect         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rect.h
+--include-function SDL_IntersectRectAndLine  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rect.h
+--include-function SDL_UnionFRect            # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rect.h
+--include-function SDL_UnionRect             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rect.h
+--include-struct SDL_FPoint                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rect.h
+--include-struct SDL_FRect                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rect.h
+--include-struct SDL_Point                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rect.h
+--include-struct SDL_Rect                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rect.h
 
 #### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
 
+--include-constant RW_SEEK_CUR         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
+--include-constant RW_SEEK_END         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
+--include-constant RW_SEEK_SET         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
+--include-constant SDL_RWOPS_JNIFILE   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
+--include-constant SDL_RWOPS_MEMORY    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
+--include-constant SDL_RWOPS_MEMORY_RO # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
+--include-constant SDL_RWOPS_STDFILE   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
+--include-constant SDL_RWOPS_UNKNOWN   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
+--include-constant SDL_RWOPS_WINFILE   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
 --include-function SDL_AllocRW         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
 --include-function SDL_FreeRW          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
 --include-function SDL_LoadFile        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
@@ -2005,18 +2175,18 @@
 --include-function SDL_WriteLE64       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
 --include-function SDL_WriteU8         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
 --include-struct SDL_RWops             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
---include-constant RW_SEEK_CUR         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
---include-constant RW_SEEK_END         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
---include-constant RW_SEEK_SET         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
---include-constant SDL_RWOPS_JNIFILE   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
---include-constant SDL_RWOPS_MEMORY    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
---include-constant SDL_RWOPS_MEMORY_RO # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
---include-constant SDL_RWOPS_STDFILE   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
---include-constant SDL_RWOPS_UNKNOWN   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
---include-constant SDL_RWOPS_WINFILE   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
 
 #### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
 
+--include-constant SDL_SENSOR_ACCEL                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
+--include-constant SDL_SENSOR_ACCEL_L                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
+--include-constant SDL_SENSOR_ACCEL_R                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
+--include-constant SDL_SENSOR_GYRO                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
+--include-constant SDL_SENSOR_GYRO_L                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
+--include-constant SDL_SENSOR_GYRO_R                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
+--include-constant SDL_SENSOR_INVALID                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
+--include-constant SDL_SENSOR_UNKNOWN                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
+--include-constant SDL_STANDARD_GRAVITY               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
 --include-typedef SDL_Sensor                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
 --include-typedef SDL_SensorID                        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
 --include-function SDL_LockSensors                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
@@ -2037,18 +2207,42 @@
 --include-function SDL_SensorUpdate                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
 --include-function SDL_UnlockSensors                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
 --include-struct _SDL_Sensor                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
---include-constant SDL_SENSOR_ACCEL                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
---include-constant SDL_SENSOR_ACCEL_L                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
---include-constant SDL_SENSOR_ACCEL_R                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
---include-constant SDL_SENSOR_GYRO                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
---include-constant SDL_SENSOR_GYRO_L                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
---include-constant SDL_SENSOR_GYRO_R                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
---include-constant SDL_SENSOR_INVALID                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
---include-constant SDL_SENSOR_UNKNOWN                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
---include-constant SDL_STANDARD_GRAVITY               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
 
 #### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 
+--include-constant DUMMY_ENUM_VALUE               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_FALSE                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_FLT_EPSILON                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_ICONV_E2BIG                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_ICONV_EILSEQ               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_ICONV_EINVAL               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_ICONV_ERROR                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_MAX_SINT16                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_MAX_SINT32                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_MAX_SINT64                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_MAX_SINT8                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_MAX_UINT16                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_MAX_UINT32                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_MAX_UINT64                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_MAX_UINT8                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_MIN_SINT16                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_MIN_SINT32                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_MIN_SINT64                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_MIN_SINT8                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_MIN_UINT16                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_MIN_UINT32                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_MIN_UINT64                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_MIN_UINT8                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_PRIX32                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_PRIX64                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_PRIs32                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_PRIs64                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_PRIu32                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_PRIu64                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_PRIx32                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_PRIx64                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_SIZE_MAX                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+--include-constant SDL_TRUE                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-typedef SDL_calloc_func                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-typedef SDL_free_func                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-typedef SDL_iconv_t                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
@@ -2189,36 +2383,274 @@
 --include-function SDL_wcsncmp                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-function SDL_wcsstr                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-struct _SDL_iconv_t                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant DUMMY_ENUM_VALUE               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_FALSE                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_FLT_EPSILON                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_ICONV_E2BIG                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_ICONV_EILSEQ               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_ICONV_EINVAL               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_ICONV_ERROR                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_MAX_SINT16                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_MAX_SINT32                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_MAX_SINT64                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_MAX_SINT8                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_MAX_UINT16                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_MAX_UINT32                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_MAX_UINT64                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_MAX_UINT8                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_MIN_SINT16                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_MIN_SINT32                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_MIN_SINT64                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_MIN_SINT8                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_MIN_UINT16                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_MIN_UINT32                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_MIN_UINT64                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_MIN_UINT8                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_PRIX32                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_PRIX64                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_PRIs32                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_PRIs64                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_PRIu32                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_PRIu64                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_PRIx32                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_PRIx64                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_SIZE_MAX                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-constant SDL_TRUE                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
+
+#### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+
+--include-constant SDL_DONTFREE                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-constant SDL_PREALLOC                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-constant SDL_RLEACCEL                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-constant SDL_SIMD_ALIGNED                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-constant SDL_SWSURFACE                         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-constant SDL_YUV_CONVERSION_AUTOMATIC          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-constant SDL_YUV_CONVERSION_BT601              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-constant SDL_YUV_CONVERSION_BT709              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-constant SDL_YUV_CONVERSION_JPEG               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-typedef SDL_blit                               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_ConvertPixels                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_ConvertSurface                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_ConvertSurfaceFormat              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_CreateRGBSurface                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_CreateRGBSurfaceFrom              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_CreateRGBSurfaceWithFormat        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_CreateRGBSurfaceWithFormatFrom    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_DuplicateSurface                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_FillRect                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_FillRects                         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_FreeSurface                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_GetClipRect                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_GetColorKey                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_GetSurfaceAlphaMod                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_GetSurfaceBlendMode               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_GetSurfaceColorMod                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_GetYUVConversionMode              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_GetYUVConversionModeForResolution # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_HasColorKey                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_HasSurfaceRLE                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_LoadBMP_RW                        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_LockSurface                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_LowerBlit                         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_LowerBlitScaled                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_PremultiplyAlpha                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_SaveBMP_RW                        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_SetClipRect                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_SetColorKey                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_SetSurfaceAlphaMod                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_SetSurfaceBlendMode               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_SetSurfaceColorMod                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_SetSurfacePalette                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_SetSurfaceRLE                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_SetYUVConversionMode              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_SoftStretch                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_SoftStretchLinear                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_UnlockSurface                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_UpperBlit                         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-function SDL_UpperBlitScaled                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-struct SDL_BlitMap                             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+--include-struct SDL_Surface                             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
+
+#### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+
+--include-constant SDL_DISPLAYEVENT_CONNECTED             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_DISPLAYEVENT_DISCONNECTED          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_DISPLAYEVENT_MOVED                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_DISPLAYEVENT_NONE                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_DISPLAYEVENT_ORIENTATION           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_FLASH_BRIEFLY                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_FLASH_CANCEL                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_FLASH_UNTIL_FOCUSED                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_ACCELERATED_VISUAL              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_ACCUM_ALPHA_SIZE                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_ACCUM_BLUE_SIZE                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_ACCUM_GREEN_SIZE                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_ACCUM_RED_SIZE                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_ALPHA_SIZE                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_BLUE_SIZE                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_BUFFER_SIZE                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_CONTEXT_DEBUG_FLAG              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_CONTEXT_EGL                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_CONTEXT_FLAGS                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_CONTEXT_FORWARD_COMPATIBLE_FLAG # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_CONTEXT_MAJOR_VERSION           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_CONTEXT_MINOR_VERSION           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_CONTEXT_NO_ERROR                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_CONTEXT_PROFILE_COMPATIBILITY   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_CONTEXT_PROFILE_CORE            # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_CONTEXT_PROFILE_ES              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_CONTEXT_PROFILE_MASK            # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_CONTEXT_RELEASE_BEHAVIOR        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_CONTEXT_RELEASE_BEHAVIOR_FLUSH  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_CONTEXT_RELEASE_BEHAVIOR_NONE   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_CONTEXT_RESET_ISOLATION_FLAG    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_CONTEXT_RESET_LOSE_CONTEXT      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_CONTEXT_RESET_NOTIFICATION      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_CONTEXT_RESET_NO_NOTIFICATION   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_CONTEXT_ROBUST_ACCESS_FLAG      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_DEPTH_SIZE                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_DOUBLEBUFFER                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_FLOATBUFFERS                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_FRAMEBUFFER_SRGB_CAPABLE        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_GREEN_SIZE                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_MULTISAMPLEBUFFERS              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_MULTISAMPLESAMPLES              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_RED_SIZE                        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_RETAINED_BACKING                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_SHARE_WITH_CURRENT_CONTEXT      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_STENCIL_SIZE                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_GL_STEREO                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_HITTEST_DRAGGABLE                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_HITTEST_NORMAL                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_HITTEST_RESIZE_BOTTOM              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_HITTEST_RESIZE_BOTTOMLEFT          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_HITTEST_RESIZE_BOTTOMRIGHT         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_HITTEST_RESIZE_LEFT                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_HITTEST_RESIZE_RIGHT               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_HITTEST_RESIZE_TOP                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_HITTEST_RESIZE_TOPLEFT             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_HITTEST_RESIZE_TOPRIGHT            # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_ORIENTATION_LANDSCAPE              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_ORIENTATION_LANDSCAPE_FLIPPED      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_ORIENTATION_PORTRAIT               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_ORIENTATION_PORTRAIT_FLIPPED       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_ORIENTATION_UNKNOWN                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWEVENT_CLOSE                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWEVENT_DISPLAY_CHANGED        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWEVENT_ENTER                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWEVENT_EXPOSED                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWEVENT_FOCUS_GAINED           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWEVENT_FOCUS_LOST             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWEVENT_HIDDEN                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWEVENT_HIT_TEST               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWEVENT_ICCPROF_CHANGED        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWEVENT_LEAVE                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWEVENT_MAXIMIZED              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWEVENT_MINIMIZED              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWEVENT_MOVED                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWEVENT_NONE                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWEVENT_RESIZED                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWEVENT_RESTORED               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWEVENT_SHOWN                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWEVENT_SIZE_CHANGED           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWEVENT_TAKE_FOCUS             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWPOS_CENTERED                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWPOS_CENTERED_MASK            # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWPOS_UNDEFINED                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOWPOS_UNDEFINED_MASK           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_ALLOW_HIGHDPI               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_ALWAYS_ON_TOP               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_BORDERLESS                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_FOREIGN                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_FULLSCREEN                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_FULLSCREEN_DESKTOP          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_HIDDEN                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_INPUT_FOCUS                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_INPUT_GRABBED               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_KEYBOARD_GRABBED            # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_MAXIMIZED                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_METAL                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_MINIMIZED                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_MOUSE_CAPTURE               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_MOUSE_FOCUS                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_MOUSE_GRABBED               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_OPENGL                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_POPUP_MENU                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_RESIZABLE                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_SHOWN                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_SKIP_TASKBAR                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_TOOLTIP                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_UTILITY                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-constant SDL_WINDOW_VULKAN                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-typedef SDL_GLContext                           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-typedef SDL_HitTest                             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_CreateWindow                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_CreateWindowFrom                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_DestroyWindow                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_DestroyWindowSurface               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_DisableScreenSaver                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_EnableScreenSaver                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_FlashWindow                        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GL_CreateContext                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GL_DeleteContext                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GL_ExtensionSupported              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GL_GetAttribute                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GL_GetCurrentContext               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GL_GetCurrentWindow                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GL_GetDrawableSize                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GL_GetProcAddress                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GL_GetSwapInterval                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GL_LoadLibrary                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GL_MakeCurrent                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GL_ResetAttributes                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GL_SetAttribute                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GL_SetSwapInterval                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GL_SwapWindow                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GL_UnloadLibrary                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetClosestDisplayMode              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetCurrentDisplayMode              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetCurrentVideoDriver              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetDesktopDisplayMode              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetDisplayBounds                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetDisplayDPI                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetDisplayMode                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetDisplayName                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetDisplayOrientation              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetDisplayUsableBounds             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetGrabbedWindow                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetNumDisplayModes                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetNumVideoDisplays                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetNumVideoDrivers                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetPointDisplayIndex               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetRectDisplayIndex                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetVideoDriver                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowBordersSize               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowBrightness                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowData                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowDisplayIndex              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowDisplayMode               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowFlags                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowFromID                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowGammaRamp                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowGrab                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowICCProfile                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowID                        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowKeyboardGrab              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowMaximumSize               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowMinimumSize               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowMouseGrab                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowMouseRect                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowOpacity                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowPixelFormat               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowPosition                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowSize                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowSizeInPixels              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowSurface                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_GetWindowTitle                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_HasWindowSurface                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_HideWindow                         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_IsScreenSaverEnabled               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_MaximizeWindow                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_MinimizeWindow                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_RaiseWindow                        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_RestoreWindow                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowAlwaysOnTop               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowBordered                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowBrightness                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowData                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowDisplayMode               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowFullscreen                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowGammaRamp                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowGrab                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowHitTest                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowIcon                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowInputFocus                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowKeyboardGrab              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowMaximumSize               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowMinimumSize               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowModalFor                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowMouseGrab                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowMouseRect                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowOpacity                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowPosition                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowResizable                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowSize                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_SetWindowTitle                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_ShowWindow                         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_UpdateWindowSurface                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_UpdateWindowSurfaceRects           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_VideoInit                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-function SDL_VideoQuit                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-struct SDL_DisplayMode                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+--include-struct SDL_Window                               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
+
+#### Extracted from: SDL_subset.h
+
+--include-struct DS5EffectsState_t   # header: SDL_subset.h

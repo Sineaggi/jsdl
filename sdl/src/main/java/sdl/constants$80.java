@@ -11,12 +11,18 @@ final class constants$80 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$80() {}
-    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("I64x");
-    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("I64X");
-    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("d");
-    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("u");
-    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("x");
-    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("X");
+    static final VarHandle const$0 = constants$79.const$4.varHandle(MemoryLayout.PathElement.groupElement("g"));
+    static final VarHandle const$1 = constants$79.const$4.varHandle(MemoryLayout.PathElement.groupElement("b"));
+    static final VarHandle const$2 = constants$79.const$4.varHandle(MemoryLayout.PathElement.groupElement("a"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        JAVA_INT.withName("ncolors"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("colors"),
+        JAVA_INT.withName("version"),
+        JAVA_INT.withName("refcount")
+    ).withName("SDL_Palette");
+    static final VarHandle const$4 = constants$80.const$3.varHandle(MemoryLayout.PathElement.groupElement("ncolors"));
+    static final VarHandle const$5 = constants$80.const$3.varHandle(MemoryLayout.PathElement.groupElement("colors"));
 }
 
 

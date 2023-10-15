@@ -27,8 +27,13 @@ final class constants$79 {
         "SDL_GameControllerGetAppleSFSymbolsNameForAxis",
         constants$15.const$4
     );
-    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("I64d");
-    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("I64u");
+    static final StructLayout const$4 = MemoryLayout.structLayout(
+        JAVA_BYTE.withName("r"),
+        JAVA_BYTE.withName("g"),
+        JAVA_BYTE.withName("b"),
+        JAVA_BYTE.withName("a")
+    ).withName("SDL_Color");
+    static final VarHandle const$5 = constants$79.const$4.varHandle(MemoryLayout.PathElement.groupElement("r"));
 }
 
 

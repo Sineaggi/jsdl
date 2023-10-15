@@ -7,7 +7,7 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-public class SDL_gamecontroller_h  {
+public class SDL_subset_h  {
 
     public static final OfByte C_CHAR = JAVA_BYTE;
     public static final OfShort C_SHORT = JAVA_SHORT;
@@ -1263,6 +1263,62 @@ public class SDL_gamecontroller_h  {
      * }
      */
     public static int SDL_HAT_LEFT() {
+        return (int)8L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_ALPHA_OPAQUE 255
+     * }
+     */
+    public static int SDL_ALPHA_OPAQUE() {
+        return (int)255L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_ALPHA_TRANSPARENT 0
+     * }
+     */
+    public static int SDL_ALPHA_TRANSPARENT() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_SWSURFACE 0
+     * }
+     */
+    public static int SDL_SWSURFACE() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_PREALLOC 1
+     * }
+     */
+    public static int SDL_PREALLOC() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_RLEACCEL 2
+     * }
+     */
+    public static int SDL_RLEACCEL() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_DONTFREE 4
+     * }
+     */
+    public static int SDL_DONTFREE() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_SIMD_ALIGNED 8
+     * }
+     */
+    public static int SDL_SIMD_ALIGNED() {
         return (int)8L;
     }
     public static MethodHandle SDL_GetPlatform$MH() {
@@ -6989,6 +7045,4164 @@ public class SDL_gamecontroller_h  {
     }
     /**
      * {@snippet :
+     * enum SDL_PixelType.SDL_PIXELTYPE_UNKNOWN = 0;
+     * }
+     */
+    public static int SDL_PIXELTYPE_UNKNOWN() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelType.SDL_PIXELTYPE_INDEX1 = 1;
+     * }
+     */
+    public static int SDL_PIXELTYPE_INDEX1() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelType.SDL_PIXELTYPE_INDEX4 = 2;
+     * }
+     */
+    public static int SDL_PIXELTYPE_INDEX4() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelType.SDL_PIXELTYPE_INDEX8 = 3;
+     * }
+     */
+    public static int SDL_PIXELTYPE_INDEX8() {
+        return (int)3L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelType.SDL_PIXELTYPE_PACKED8 = 4;
+     * }
+     */
+    public static int SDL_PIXELTYPE_PACKED8() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelType.SDL_PIXELTYPE_PACKED16 = 5;
+     * }
+     */
+    public static int SDL_PIXELTYPE_PACKED16() {
+        return (int)5L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelType.SDL_PIXELTYPE_PACKED32 = 6;
+     * }
+     */
+    public static int SDL_PIXELTYPE_PACKED32() {
+        return (int)6L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelType.SDL_PIXELTYPE_ARRAYU8 = 7;
+     * }
+     */
+    public static int SDL_PIXELTYPE_ARRAYU8() {
+        return (int)7L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelType.SDL_PIXELTYPE_ARRAYU16 = 8;
+     * }
+     */
+    public static int SDL_PIXELTYPE_ARRAYU16() {
+        return (int)8L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelType.SDL_PIXELTYPE_ARRAYU32 = 9;
+     * }
+     */
+    public static int SDL_PIXELTYPE_ARRAYU32() {
+        return (int)9L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelType.SDL_PIXELTYPE_ARRAYF16 = 10;
+     * }
+     */
+    public static int SDL_PIXELTYPE_ARRAYF16() {
+        return (int)10L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelType.SDL_PIXELTYPE_ARRAYF32 = 11;
+     * }
+     */
+    public static int SDL_PIXELTYPE_ARRAYF32() {
+        return (int)11L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_BitmapOrder.SDL_BITMAPORDER_NONE = 0;
+     * }
+     */
+    public static int SDL_BITMAPORDER_NONE() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_BitmapOrder.SDL_BITMAPORDER_4321 = 1;
+     * }
+     */
+    public static int SDL_BITMAPORDER_4321() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_BitmapOrder.SDL_BITMAPORDER_1234 = 2;
+     * }
+     */
+    public static int SDL_BITMAPORDER_1234() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PackedOrder.SDL_PACKEDORDER_NONE = 0;
+     * }
+     */
+    public static int SDL_PACKEDORDER_NONE() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PackedOrder.SDL_PACKEDORDER_XRGB = 1;
+     * }
+     */
+    public static int SDL_PACKEDORDER_XRGB() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PackedOrder.SDL_PACKEDORDER_RGBX = 2;
+     * }
+     */
+    public static int SDL_PACKEDORDER_RGBX() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PackedOrder.SDL_PACKEDORDER_ARGB = 3;
+     * }
+     */
+    public static int SDL_PACKEDORDER_ARGB() {
+        return (int)3L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PackedOrder.SDL_PACKEDORDER_RGBA = 4;
+     * }
+     */
+    public static int SDL_PACKEDORDER_RGBA() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PackedOrder.SDL_PACKEDORDER_XBGR = 5;
+     * }
+     */
+    public static int SDL_PACKEDORDER_XBGR() {
+        return (int)5L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PackedOrder.SDL_PACKEDORDER_BGRX = 6;
+     * }
+     */
+    public static int SDL_PACKEDORDER_BGRX() {
+        return (int)6L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PackedOrder.SDL_PACKEDORDER_ABGR = 7;
+     * }
+     */
+    public static int SDL_PACKEDORDER_ABGR() {
+        return (int)7L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PackedOrder.SDL_PACKEDORDER_BGRA = 8;
+     * }
+     */
+    public static int SDL_PACKEDORDER_BGRA() {
+        return (int)8L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_ArrayOrder.SDL_ARRAYORDER_NONE = 0;
+     * }
+     */
+    public static int SDL_ARRAYORDER_NONE() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_ArrayOrder.SDL_ARRAYORDER_RGB = 1;
+     * }
+     */
+    public static int SDL_ARRAYORDER_RGB() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_ArrayOrder.SDL_ARRAYORDER_RGBA = 2;
+     * }
+     */
+    public static int SDL_ARRAYORDER_RGBA() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_ArrayOrder.SDL_ARRAYORDER_ARGB = 3;
+     * }
+     */
+    public static int SDL_ARRAYORDER_ARGB() {
+        return (int)3L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_ArrayOrder.SDL_ARRAYORDER_BGR = 4;
+     * }
+     */
+    public static int SDL_ARRAYORDER_BGR() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_ArrayOrder.SDL_ARRAYORDER_BGRA = 5;
+     * }
+     */
+    public static int SDL_ARRAYORDER_BGRA() {
+        return (int)5L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_ArrayOrder.SDL_ARRAYORDER_ABGR = 6;
+     * }
+     */
+    public static int SDL_ARRAYORDER_ABGR() {
+        return (int)6L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PackedLayout.SDL_PACKEDLAYOUT_NONE = 0;
+     * }
+     */
+    public static int SDL_PACKEDLAYOUT_NONE() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PackedLayout.SDL_PACKEDLAYOUT_332 = 1;
+     * }
+     */
+    public static int SDL_PACKEDLAYOUT_332() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PackedLayout.SDL_PACKEDLAYOUT_4444 = 2;
+     * }
+     */
+    public static int SDL_PACKEDLAYOUT_4444() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PackedLayout.SDL_PACKEDLAYOUT_1555 = 3;
+     * }
+     */
+    public static int SDL_PACKEDLAYOUT_1555() {
+        return (int)3L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PackedLayout.SDL_PACKEDLAYOUT_5551 = 4;
+     * }
+     */
+    public static int SDL_PACKEDLAYOUT_5551() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PackedLayout.SDL_PACKEDLAYOUT_565 = 5;
+     * }
+     */
+    public static int SDL_PACKEDLAYOUT_565() {
+        return (int)5L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PackedLayout.SDL_PACKEDLAYOUT_8888 = 6;
+     * }
+     */
+    public static int SDL_PACKEDLAYOUT_8888() {
+        return (int)6L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PackedLayout.SDL_PACKEDLAYOUT_2101010 = 7;
+     * }
+     */
+    public static int SDL_PACKEDLAYOUT_2101010() {
+        return (int)7L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PackedLayout.SDL_PACKEDLAYOUT_1010102 = 8;
+     * }
+     */
+    public static int SDL_PACKEDLAYOUT_1010102() {
+        return (int)8L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_UNKNOWN = 0;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_UNKNOWN() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_INDEX1LSB = 286261504;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_INDEX1LSB() {
+        return (int)286261504L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_INDEX1MSB = 287310080;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_INDEX1MSB() {
+        return (int)287310080L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_INDEX4LSB = 303039488;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_INDEX4LSB() {
+        return (int)303039488L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_INDEX4MSB = 304088064;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_INDEX4MSB() {
+        return (int)304088064L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_INDEX8 = 318769153;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_INDEX8() {
+        return (int)318769153L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_RGB332 = 336660481;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_RGB332() {
+        return (int)336660481L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_XRGB4444 = 353504258;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_XRGB4444() {
+        return (int)353504258L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_RGB444 = 353504258;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_RGB444() {
+        return (int)353504258L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_XBGR4444 = 357698562;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_XBGR4444() {
+        return (int)357698562L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_BGR444 = 357698562;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_BGR444() {
+        return (int)357698562L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_XRGB1555 = 353570562;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_XRGB1555() {
+        return (int)353570562L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_RGB555 = 353570562;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_RGB555() {
+        return (int)353570562L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_XBGR1555 = 357764866;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_XBGR1555() {
+        return (int)357764866L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_BGR555 = 357764866;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_BGR555() {
+        return (int)357764866L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_ARGB4444 = 355602434;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_ARGB4444() {
+        return (int)355602434L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_RGBA4444 = 356651010;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_RGBA4444() {
+        return (int)356651010L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_ABGR4444 = 359796738;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_ABGR4444() {
+        return (int)359796738L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_BGRA4444 = 360845314;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_BGRA4444() {
+        return (int)360845314L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_ARGB1555 = 355667970;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_ARGB1555() {
+        return (int)355667970L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_RGBA5551 = 356782082;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_RGBA5551() {
+        return (int)356782082L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_ABGR1555 = 359862274;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_ABGR1555() {
+        return (int)359862274L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_BGRA5551 = 360976386;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_BGRA5551() {
+        return (int)360976386L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_RGB565 = 353701890;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_RGB565() {
+        return (int)353701890L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_BGR565 = 357896194;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_BGR565() {
+        return (int)357896194L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_RGB24 = 386930691;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_RGB24() {
+        return (int)386930691L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_BGR24 = 390076419;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_BGR24() {
+        return (int)390076419L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_XRGB8888 = 370546692;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_XRGB8888() {
+        return (int)370546692L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_RGB888 = 370546692;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_RGB888() {
+        return (int)370546692L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_RGBX8888 = 371595268;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_RGBX8888() {
+        return (int)371595268L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_XBGR8888 = 374740996;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_XBGR8888() {
+        return (int)374740996L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_BGR888 = 374740996;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_BGR888() {
+        return (int)374740996L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_BGRX8888 = 375789572;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_BGRX8888() {
+        return (int)375789572L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_ARGB8888 = 372645892;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_ARGB8888() {
+        return (int)372645892L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_RGBA8888 = 373694468;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_RGBA8888() {
+        return (int)373694468L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_ABGR8888 = 376840196;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_ABGR8888() {
+        return (int)376840196L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_BGRA8888 = 377888772;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_BGRA8888() {
+        return (int)377888772L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_ARGB2101010 = 372711428;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_ARGB2101010() {
+        return (int)372711428L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_RGBA32 = 376840196;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_RGBA32() {
+        return (int)376840196L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_ARGB32 = 377888772;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_ARGB32() {
+        return (int)377888772L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_BGRA32 = 372645892;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_BGRA32() {
+        return (int)372645892L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_ABGR32 = 373694468;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_ABGR32() {
+        return (int)373694468L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_YV12 = 842094169;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_YV12() {
+        return (int)842094169L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_IYUV = 1448433993;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_IYUV() {
+        return (int)1448433993L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_YUY2 = 844715353;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_YUY2() {
+        return (int)844715353L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_UYVY = 1498831189;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_UYVY() {
+        return (int)1498831189L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_YVYU = 1431918169;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_YVYU() {
+        return (int)1431918169L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_NV12 = 842094158;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_NV12() {
+        return (int)842094158L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_NV21 = 825382478;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_NV21() {
+        return (int)825382478L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_PixelFormatEnum.SDL_PIXELFORMAT_EXTERNAL_OES = 542328143;
+     * }
+     */
+    public static int SDL_PIXELFORMAT_EXTERNAL_OES() {
+        return (int)542328143L;
+    }
+    public static MethodHandle SDL_GetPixelFormatName$MH() {
+        return RuntimeHelper.requireNonNull(constants$84.const$3,"SDL_GetPixelFormatName");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GetPixelFormatName(unsigned int format);
+     * }
+     */
+    public static MemorySegment SDL_GetPixelFormatName(int format) {
+        var mh$ = SDL_GetPixelFormatName$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(format);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_PixelFormatEnumToMasks$MH() {
+        return RuntimeHelper.requireNonNull(constants$84.const$5,"SDL_PixelFormatEnumToMasks");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_PixelFormatEnumToMasks(unsigned int format, int* bpp, unsigned int* Rmask, unsigned int* Gmask, unsigned int* Bmask, unsigned int* Amask);
+     * }
+     */
+    public static int SDL_PixelFormatEnumToMasks(int format, MemorySegment bpp, MemorySegment Rmask, MemorySegment Gmask, MemorySegment Bmask, MemorySegment Amask) {
+        var mh$ = SDL_PixelFormatEnumToMasks$MH();
+        try {
+            return (int)mh$.invokeExact(format, bpp, Rmask, Gmask, Bmask, Amask);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_MasksToPixelFormatEnum$MH() {
+        return RuntimeHelper.requireNonNull(constants$85.const$1,"SDL_MasksToPixelFormatEnum");
+    }
+    /**
+     * {@snippet :
+     * unsigned int SDL_MasksToPixelFormatEnum(int bpp, unsigned int Rmask, unsigned int Gmask, unsigned int Bmask, unsigned int Amask);
+     * }
+     */
+    public static int SDL_MasksToPixelFormatEnum(int bpp, int Rmask, int Gmask, int Bmask, int Amask) {
+        var mh$ = SDL_MasksToPixelFormatEnum$MH();
+        try {
+            return (int)mh$.invokeExact(bpp, Rmask, Gmask, Bmask, Amask);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_AllocFormat$MH() {
+        return RuntimeHelper.requireNonNull(constants$85.const$2,"SDL_AllocFormat");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_PixelFormat* SDL_AllocFormat(unsigned int pixel_format);
+     * }
+     */
+    public static MemorySegment SDL_AllocFormat(int pixel_format) {
+        var mh$ = SDL_AllocFormat$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(pixel_format);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_FreeFormat$MH() {
+        return RuntimeHelper.requireNonNull(constants$85.const$3,"SDL_FreeFormat");
+    }
+    /**
+     * {@snippet :
+     * void SDL_FreeFormat(struct SDL_PixelFormat* format);
+     * }
+     */
+    public static void SDL_FreeFormat(MemorySegment format) {
+        var mh$ = SDL_FreeFormat$MH();
+        try {
+            mh$.invokeExact(format);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_AllocPalette$MH() {
+        return RuntimeHelper.requireNonNull(constants$85.const$4,"SDL_AllocPalette");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_Palette* SDL_AllocPalette(int ncolors);
+     * }
+     */
+    public static MemorySegment SDL_AllocPalette(int ncolors) {
+        var mh$ = SDL_AllocPalette$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(ncolors);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetPixelFormatPalette$MH() {
+        return RuntimeHelper.requireNonNull(constants$85.const$5,"SDL_SetPixelFormatPalette");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SetPixelFormatPalette(struct SDL_PixelFormat* format, struct SDL_Palette* palette);
+     * }
+     */
+    public static int SDL_SetPixelFormatPalette(MemorySegment format, MemorySegment palette) {
+        var mh$ = SDL_SetPixelFormatPalette$MH();
+        try {
+            return (int)mh$.invokeExact(format, palette);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetPaletteColors$MH() {
+        return RuntimeHelper.requireNonNull(constants$86.const$1,"SDL_SetPaletteColors");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SetPaletteColors(struct SDL_Palette* palette, struct SDL_Color* colors, int firstcolor, int ncolors);
+     * }
+     */
+    public static int SDL_SetPaletteColors(MemorySegment palette, MemorySegment colors, int firstcolor, int ncolors) {
+        var mh$ = SDL_SetPaletteColors$MH();
+        try {
+            return (int)mh$.invokeExact(palette, colors, firstcolor, ncolors);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_FreePalette$MH() {
+        return RuntimeHelper.requireNonNull(constants$86.const$2,"SDL_FreePalette");
+    }
+    /**
+     * {@snippet :
+     * void SDL_FreePalette(struct SDL_Palette* palette);
+     * }
+     */
+    public static void SDL_FreePalette(MemorySegment palette) {
+        var mh$ = SDL_FreePalette$MH();
+        try {
+            mh$.invokeExact(palette);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_MapRGB$MH() {
+        return RuntimeHelper.requireNonNull(constants$86.const$3,"SDL_MapRGB");
+    }
+    /**
+     * {@snippet :
+     * unsigned int SDL_MapRGB(struct SDL_PixelFormat* format, unsigned char r, unsigned char g, unsigned char b);
+     * }
+     */
+    public static int SDL_MapRGB(MemorySegment format, byte r, byte g, byte b) {
+        var mh$ = SDL_MapRGB$MH();
+        try {
+            return (int)mh$.invokeExact(format, r, g, b);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_MapRGBA$MH() {
+        return RuntimeHelper.requireNonNull(constants$86.const$5,"SDL_MapRGBA");
+    }
+    /**
+     * {@snippet :
+     * unsigned int SDL_MapRGBA(struct SDL_PixelFormat* format, unsigned char r, unsigned char g, unsigned char b, unsigned char a);
+     * }
+     */
+    public static int SDL_MapRGBA(MemorySegment format, byte r, byte g, byte b, byte a) {
+        var mh$ = SDL_MapRGBA$MH();
+        try {
+            return (int)mh$.invokeExact(format, r, g, b, a);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetRGB$MH() {
+        return RuntimeHelper.requireNonNull(constants$87.const$1,"SDL_GetRGB");
+    }
+    /**
+     * {@snippet :
+     * void SDL_GetRGB(unsigned int pixel, struct SDL_PixelFormat* format, unsigned char* r, unsigned char* g, unsigned char* b);
+     * }
+     */
+    public static void SDL_GetRGB(int pixel, MemorySegment format, MemorySegment r, MemorySegment g, MemorySegment b) {
+        var mh$ = SDL_GetRGB$MH();
+        try {
+            mh$.invokeExact(pixel, format, r, g, b);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetRGBA$MH() {
+        return RuntimeHelper.requireNonNull(constants$87.const$3,"SDL_GetRGBA");
+    }
+    /**
+     * {@snippet :
+     * void SDL_GetRGBA(unsigned int pixel, struct SDL_PixelFormat* format, unsigned char* r, unsigned char* g, unsigned char* b, unsigned char* a);
+     * }
+     */
+    public static void SDL_GetRGBA(int pixel, MemorySegment format, MemorySegment r, MemorySegment g, MemorySegment b, MemorySegment a) {
+        var mh$ = SDL_GetRGBA$MH();
+        try {
+            mh$.invokeExact(pixel, format, r, g, b, a);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_CalculateGammaRamp$MH() {
+        return RuntimeHelper.requireNonNull(constants$87.const$5,"SDL_CalculateGammaRamp");
+    }
+    /**
+     * {@snippet :
+     * void SDL_CalculateGammaRamp(float gamma, unsigned short* ramp);
+     * }
+     */
+    public static void SDL_CalculateGammaRamp(float gamma, MemorySegment ramp) {
+        var mh$ = SDL_CalculateGammaRamp$MH();
+        try {
+            mh$.invokeExact(gamma, ramp);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_HasIntersection$MH() {
+        return RuntimeHelper.requireNonNull(constants$90.const$4,"SDL_HasIntersection");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_HasIntersection(struct SDL_Rect* A, struct SDL_Rect* B);
+     * }
+     */
+    public static int SDL_HasIntersection(MemorySegment A, MemorySegment B) {
+        var mh$ = SDL_HasIntersection$MH();
+        try {
+            return (int)mh$.invokeExact(A, B);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_IntersectRect$MH() {
+        return RuntimeHelper.requireNonNull(constants$90.const$5,"SDL_IntersectRect");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_IntersectRect(struct SDL_Rect* A, struct SDL_Rect* B, struct SDL_Rect* result);
+     * }
+     */
+    public static int SDL_IntersectRect(MemorySegment A, MemorySegment B, MemorySegment result) {
+        var mh$ = SDL_IntersectRect$MH();
+        try {
+            return (int)mh$.invokeExact(A, B, result);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_UnionRect$MH() {
+        return RuntimeHelper.requireNonNull(constants$91.const$1,"SDL_UnionRect");
+    }
+    /**
+     * {@snippet :
+     * void SDL_UnionRect(struct SDL_Rect* A, struct SDL_Rect* B, struct SDL_Rect* result);
+     * }
+     */
+    public static void SDL_UnionRect(MemorySegment A, MemorySegment B, MemorySegment result) {
+        var mh$ = SDL_UnionRect$MH();
+        try {
+            mh$.invokeExact(A, B, result);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_EnclosePoints$MH() {
+        return RuntimeHelper.requireNonNull(constants$91.const$2,"SDL_EnclosePoints");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_EnclosePoints(struct SDL_Point* points, int count, struct SDL_Rect* clip, struct SDL_Rect* result);
+     * }
+     */
+    public static int SDL_EnclosePoints(MemorySegment points, int count, MemorySegment clip, MemorySegment result) {
+        var mh$ = SDL_EnclosePoints$MH();
+        try {
+            return (int)mh$.invokeExact(points, count, clip, result);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_IntersectRectAndLine$MH() {
+        return RuntimeHelper.requireNonNull(constants$91.const$4,"SDL_IntersectRectAndLine");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_IntersectRectAndLine(struct SDL_Rect* rect, int* X1, int* Y1, int* X2, int* Y2);
+     * }
+     */
+    public static int SDL_IntersectRectAndLine(MemorySegment rect, MemorySegment X1, MemorySegment Y1, MemorySegment X2, MemorySegment Y2) {
+        var mh$ = SDL_IntersectRectAndLine$MH();
+        try {
+            return (int)mh$.invokeExact(rect, X1, Y1, X2, Y2);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_HasIntersectionF$MH() {
+        return RuntimeHelper.requireNonNull(constants$91.const$5,"SDL_HasIntersectionF");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_HasIntersectionF(struct SDL_FRect* A, struct SDL_FRect* B);
+     * }
+     */
+    public static int SDL_HasIntersectionF(MemorySegment A, MemorySegment B) {
+        var mh$ = SDL_HasIntersectionF$MH();
+        try {
+            return (int)mh$.invokeExact(A, B);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_IntersectFRect$MH() {
+        return RuntimeHelper.requireNonNull(constants$92.const$0,"SDL_IntersectFRect");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_IntersectFRect(struct SDL_FRect* A, struct SDL_FRect* B, struct SDL_FRect* result);
+     * }
+     */
+    public static int SDL_IntersectFRect(MemorySegment A, MemorySegment B, MemorySegment result) {
+        var mh$ = SDL_IntersectFRect$MH();
+        try {
+            return (int)mh$.invokeExact(A, B, result);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_UnionFRect$MH() {
+        return RuntimeHelper.requireNonNull(constants$92.const$1,"SDL_UnionFRect");
+    }
+    /**
+     * {@snippet :
+     * void SDL_UnionFRect(struct SDL_FRect* A, struct SDL_FRect* B, struct SDL_FRect* result);
+     * }
+     */
+    public static void SDL_UnionFRect(MemorySegment A, MemorySegment B, MemorySegment result) {
+        var mh$ = SDL_UnionFRect$MH();
+        try {
+            mh$.invokeExact(A, B, result);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_EncloseFPoints$MH() {
+        return RuntimeHelper.requireNonNull(constants$92.const$2,"SDL_EncloseFPoints");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_EncloseFPoints(struct SDL_FPoint* points, int count, struct SDL_FRect* clip, struct SDL_FRect* result);
+     * }
+     */
+    public static int SDL_EncloseFPoints(MemorySegment points, int count, MemorySegment clip, MemorySegment result) {
+        var mh$ = SDL_EncloseFPoints$MH();
+        try {
+            return (int)mh$.invokeExact(points, count, clip, result);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_IntersectFRectAndLine$MH() {
+        return RuntimeHelper.requireNonNull(constants$92.const$3,"SDL_IntersectFRectAndLine");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_IntersectFRectAndLine(struct SDL_FRect* rect, float* X1, float* Y1, float* X2, float* Y2);
+     * }
+     */
+    public static int SDL_IntersectFRectAndLine(MemorySegment rect, MemorySegment X1, MemorySegment Y1, MemorySegment X2, MemorySegment Y2) {
+        var mh$ = SDL_IntersectFRectAndLine$MH();
+        try {
+            return (int)mh$.invokeExact(rect, X1, Y1, X2, Y2);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    /**
+     * {@snippet :
+     * enum SDL_YUV_CONVERSION_MODE.SDL_YUV_CONVERSION_JPEG = 0;
+     * }
+     */
+    public static int SDL_YUV_CONVERSION_JPEG() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_YUV_CONVERSION_MODE.SDL_YUV_CONVERSION_BT601 = 1;
+     * }
+     */
+    public static int SDL_YUV_CONVERSION_BT601() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_YUV_CONVERSION_MODE.SDL_YUV_CONVERSION_BT709 = 2;
+     * }
+     */
+    public static int SDL_YUV_CONVERSION_BT709() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_YUV_CONVERSION_MODE.SDL_YUV_CONVERSION_AUTOMATIC = 3;
+     * }
+     */
+    public static int SDL_YUV_CONVERSION_AUTOMATIC() {
+        return (int)3L;
+    }
+    public static MethodHandle SDL_CreateRGBSurface$MH() {
+        return RuntimeHelper.requireNonNull(constants$95.const$1,"SDL_CreateRGBSurface");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_Surface* SDL_CreateRGBSurface(unsigned int flags, int width, int height, int depth, unsigned int Rmask, unsigned int Gmask, unsigned int Bmask, unsigned int Amask);
+     * }
+     */
+    public static MemorySegment SDL_CreateRGBSurface(int flags, int width, int height, int depth, int Rmask, int Gmask, int Bmask, int Amask) {
+        var mh$ = SDL_CreateRGBSurface$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(flags, width, height, depth, Rmask, Gmask, Bmask, Amask);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_CreateRGBSurfaceWithFormat$MH() {
+        return RuntimeHelper.requireNonNull(constants$95.const$3,"SDL_CreateRGBSurfaceWithFormat");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_Surface* SDL_CreateRGBSurfaceWithFormat(unsigned int flags, int width, int height, int depth, unsigned int format);
+     * }
+     */
+    public static MemorySegment SDL_CreateRGBSurfaceWithFormat(int flags, int width, int height, int depth, int format) {
+        var mh$ = SDL_CreateRGBSurfaceWithFormat$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(flags, width, height, depth, format);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_CreateRGBSurfaceFrom$MH() {
+        return RuntimeHelper.requireNonNull(constants$95.const$5,"SDL_CreateRGBSurfaceFrom");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_Surface* SDL_CreateRGBSurfaceFrom(void* pixels, int width, int height, int depth, int pitch, unsigned int Rmask, unsigned int Gmask, unsigned int Bmask, unsigned int Amask);
+     * }
+     */
+    public static MemorySegment SDL_CreateRGBSurfaceFrom(MemorySegment pixels, int width, int height, int depth, int pitch, int Rmask, int Gmask, int Bmask, int Amask) {
+        var mh$ = SDL_CreateRGBSurfaceFrom$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(pixels, width, height, depth, pitch, Rmask, Gmask, Bmask, Amask);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_CreateRGBSurfaceWithFormatFrom$MH() {
+        return RuntimeHelper.requireNonNull(constants$96.const$1,"SDL_CreateRGBSurfaceWithFormatFrom");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_Surface* SDL_CreateRGBSurfaceWithFormatFrom(void* pixels, int width, int height, int depth, int pitch, unsigned int format);
+     * }
+     */
+    public static MemorySegment SDL_CreateRGBSurfaceWithFormatFrom(MemorySegment pixels, int width, int height, int depth, int pitch, int format) {
+        var mh$ = SDL_CreateRGBSurfaceWithFormatFrom$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(pixels, width, height, depth, pitch, format);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_FreeSurface$MH() {
+        return RuntimeHelper.requireNonNull(constants$96.const$2,"SDL_FreeSurface");
+    }
+    /**
+     * {@snippet :
+     * void SDL_FreeSurface(struct SDL_Surface* surface);
+     * }
+     */
+    public static void SDL_FreeSurface(MemorySegment surface) {
+        var mh$ = SDL_FreeSurface$MH();
+        try {
+            mh$.invokeExact(surface);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetSurfacePalette$MH() {
+        return RuntimeHelper.requireNonNull(constants$96.const$3,"SDL_SetSurfacePalette");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SetSurfacePalette(struct SDL_Surface* surface, struct SDL_Palette* palette);
+     * }
+     */
+    public static int SDL_SetSurfacePalette(MemorySegment surface, MemorySegment palette) {
+        var mh$ = SDL_SetSurfacePalette$MH();
+        try {
+            return (int)mh$.invokeExact(surface, palette);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_LockSurface$MH() {
+        return RuntimeHelper.requireNonNull(constants$96.const$4,"SDL_LockSurface");
+    }
+    /**
+     * {@snippet :
+     * int SDL_LockSurface(struct SDL_Surface* surface);
+     * }
+     */
+    public static int SDL_LockSurface(MemorySegment surface) {
+        var mh$ = SDL_LockSurface$MH();
+        try {
+            return (int)mh$.invokeExact(surface);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_UnlockSurface$MH() {
+        return RuntimeHelper.requireNonNull(constants$96.const$5,"SDL_UnlockSurface");
+    }
+    /**
+     * {@snippet :
+     * void SDL_UnlockSurface(struct SDL_Surface* surface);
+     * }
+     */
+    public static void SDL_UnlockSurface(MemorySegment surface) {
+        var mh$ = SDL_UnlockSurface$MH();
+        try {
+            mh$.invokeExact(surface);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_LoadBMP_RW$MH() {
+        return RuntimeHelper.requireNonNull(constants$97.const$0,"SDL_LoadBMP_RW");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_Surface* SDL_LoadBMP_RW(struct SDL_RWops* src, int freesrc);
+     * }
+     */
+    public static MemorySegment SDL_LoadBMP_RW(MemorySegment src, int freesrc) {
+        var mh$ = SDL_LoadBMP_RW$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(src, freesrc);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SaveBMP_RW$MH() {
+        return RuntimeHelper.requireNonNull(constants$97.const$1,"SDL_SaveBMP_RW");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SaveBMP_RW(struct SDL_Surface* surface, struct SDL_RWops* dst, int freedst);
+     * }
+     */
+    public static int SDL_SaveBMP_RW(MemorySegment surface, MemorySegment dst, int freedst) {
+        var mh$ = SDL_SaveBMP_RW$MH();
+        try {
+            return (int)mh$.invokeExact(surface, dst, freedst);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetSurfaceRLE$MH() {
+        return RuntimeHelper.requireNonNull(constants$97.const$2,"SDL_SetSurfaceRLE");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SetSurfaceRLE(struct SDL_Surface* surface, int flag);
+     * }
+     */
+    public static int SDL_SetSurfaceRLE(MemorySegment surface, int flag) {
+        var mh$ = SDL_SetSurfaceRLE$MH();
+        try {
+            return (int)mh$.invokeExact(surface, flag);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_HasSurfaceRLE$MH() {
+        return RuntimeHelper.requireNonNull(constants$97.const$3,"SDL_HasSurfaceRLE");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_HasSurfaceRLE(struct SDL_Surface* surface);
+     * }
+     */
+    public static int SDL_HasSurfaceRLE(MemorySegment surface) {
+        var mh$ = SDL_HasSurfaceRLE$MH();
+        try {
+            return (int)mh$.invokeExact(surface);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetColorKey$MH() {
+        return RuntimeHelper.requireNonNull(constants$97.const$4,"SDL_SetColorKey");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SetColorKey(struct SDL_Surface* surface, int flag, unsigned int key);
+     * }
+     */
+    public static int SDL_SetColorKey(MemorySegment surface, int flag, int key) {
+        var mh$ = SDL_SetColorKey$MH();
+        try {
+            return (int)mh$.invokeExact(surface, flag, key);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_HasColorKey$MH() {
+        return RuntimeHelper.requireNonNull(constants$97.const$5,"SDL_HasColorKey");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_HasColorKey(struct SDL_Surface* surface);
+     * }
+     */
+    public static int SDL_HasColorKey(MemorySegment surface) {
+        var mh$ = SDL_HasColorKey$MH();
+        try {
+            return (int)mh$.invokeExact(surface);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetColorKey$MH() {
+        return RuntimeHelper.requireNonNull(constants$98.const$0,"SDL_GetColorKey");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetColorKey(struct SDL_Surface* surface, unsigned int* key);
+     * }
+     */
+    public static int SDL_GetColorKey(MemorySegment surface, MemorySegment key) {
+        var mh$ = SDL_GetColorKey$MH();
+        try {
+            return (int)mh$.invokeExact(surface, key);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetSurfaceColorMod$MH() {
+        return RuntimeHelper.requireNonNull(constants$98.const$1,"SDL_SetSurfaceColorMod");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SetSurfaceColorMod(struct SDL_Surface* surface, unsigned char r, unsigned char g, unsigned char b);
+     * }
+     */
+    public static int SDL_SetSurfaceColorMod(MemorySegment surface, byte r, byte g, byte b) {
+        var mh$ = SDL_SetSurfaceColorMod$MH();
+        try {
+            return (int)mh$.invokeExact(surface, r, g, b);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetSurfaceColorMod$MH() {
+        return RuntimeHelper.requireNonNull(constants$98.const$2,"SDL_GetSurfaceColorMod");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetSurfaceColorMod(struct SDL_Surface* surface, unsigned char* r, unsigned char* g, unsigned char* b);
+     * }
+     */
+    public static int SDL_GetSurfaceColorMod(MemorySegment surface, MemorySegment r, MemorySegment g, MemorySegment b) {
+        var mh$ = SDL_GetSurfaceColorMod$MH();
+        try {
+            return (int)mh$.invokeExact(surface, r, g, b);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetSurfaceAlphaMod$MH() {
+        return RuntimeHelper.requireNonNull(constants$98.const$4,"SDL_SetSurfaceAlphaMod");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SetSurfaceAlphaMod(struct SDL_Surface* surface, unsigned char alpha);
+     * }
+     */
+    public static int SDL_SetSurfaceAlphaMod(MemorySegment surface, byte alpha) {
+        var mh$ = SDL_SetSurfaceAlphaMod$MH();
+        try {
+            return (int)mh$.invokeExact(surface, alpha);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetSurfaceAlphaMod$MH() {
+        return RuntimeHelper.requireNonNull(constants$98.const$5,"SDL_GetSurfaceAlphaMod");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetSurfaceAlphaMod(struct SDL_Surface* surface, unsigned char* alpha);
+     * }
+     */
+    public static int SDL_GetSurfaceAlphaMod(MemorySegment surface, MemorySegment alpha) {
+        var mh$ = SDL_GetSurfaceAlphaMod$MH();
+        try {
+            return (int)mh$.invokeExact(surface, alpha);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetSurfaceBlendMode$MH() {
+        return RuntimeHelper.requireNonNull(constants$99.const$0,"SDL_SetSurfaceBlendMode");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SetSurfaceBlendMode(struct SDL_Surface* surface, enum SDL_BlendMode blendMode);
+     * }
+     */
+    public static int SDL_SetSurfaceBlendMode(MemorySegment surface, int blendMode) {
+        var mh$ = SDL_SetSurfaceBlendMode$MH();
+        try {
+            return (int)mh$.invokeExact(surface, blendMode);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetSurfaceBlendMode$MH() {
+        return RuntimeHelper.requireNonNull(constants$99.const$1,"SDL_GetSurfaceBlendMode");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetSurfaceBlendMode(struct SDL_Surface* surface, enum SDL_BlendMode* blendMode);
+     * }
+     */
+    public static int SDL_GetSurfaceBlendMode(MemorySegment surface, MemorySegment blendMode) {
+        var mh$ = SDL_GetSurfaceBlendMode$MH();
+        try {
+            return (int)mh$.invokeExact(surface, blendMode);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetClipRect$MH() {
+        return RuntimeHelper.requireNonNull(constants$99.const$2,"SDL_SetClipRect");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_SetClipRect(struct SDL_Surface* surface, struct SDL_Rect* rect);
+     * }
+     */
+    public static int SDL_SetClipRect(MemorySegment surface, MemorySegment rect) {
+        var mh$ = SDL_SetClipRect$MH();
+        try {
+            return (int)mh$.invokeExact(surface, rect);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetClipRect$MH() {
+        return RuntimeHelper.requireNonNull(constants$99.const$4,"SDL_GetClipRect");
+    }
+    /**
+     * {@snippet :
+     * void SDL_GetClipRect(struct SDL_Surface* surface, struct SDL_Rect* rect);
+     * }
+     */
+    public static void SDL_GetClipRect(MemorySegment surface, MemorySegment rect) {
+        var mh$ = SDL_GetClipRect$MH();
+        try {
+            mh$.invokeExact(surface, rect);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_DuplicateSurface$MH() {
+        return RuntimeHelper.requireNonNull(constants$99.const$5,"SDL_DuplicateSurface");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_Surface* SDL_DuplicateSurface(struct SDL_Surface* surface);
+     * }
+     */
+    public static MemorySegment SDL_DuplicateSurface(MemorySegment surface) {
+        var mh$ = SDL_DuplicateSurface$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(surface);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_ConvertSurface$MH() {
+        return RuntimeHelper.requireNonNull(constants$100.const$0,"SDL_ConvertSurface");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_Surface* SDL_ConvertSurface(struct SDL_Surface* src, struct SDL_PixelFormat* fmt, unsigned int flags);
+     * }
+     */
+    public static MemorySegment SDL_ConvertSurface(MemorySegment src, MemorySegment fmt, int flags) {
+        var mh$ = SDL_ConvertSurface$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(src, fmt, flags);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_ConvertSurfaceFormat$MH() {
+        return RuntimeHelper.requireNonNull(constants$100.const$2,"SDL_ConvertSurfaceFormat");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_Surface* SDL_ConvertSurfaceFormat(struct SDL_Surface* src, unsigned int pixel_format, unsigned int flags);
+     * }
+     */
+    public static MemorySegment SDL_ConvertSurfaceFormat(MemorySegment src, int pixel_format, int flags) {
+        var mh$ = SDL_ConvertSurfaceFormat$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(src, pixel_format, flags);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_ConvertPixels$MH() {
+        return RuntimeHelper.requireNonNull(constants$100.const$4,"SDL_ConvertPixels");
+    }
+    /**
+     * {@snippet :
+     * int SDL_ConvertPixels(int width, int height, unsigned int src_format, void* src, int src_pitch, unsigned int dst_format, void* dst, int dst_pitch);
+     * }
+     */
+    public static int SDL_ConvertPixels(int width, int height, int src_format, MemorySegment src, int src_pitch, int dst_format, MemorySegment dst, int dst_pitch) {
+        var mh$ = SDL_ConvertPixels$MH();
+        try {
+            return (int)mh$.invokeExact(width, height, src_format, src, src_pitch, dst_format, dst, dst_pitch);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_PremultiplyAlpha$MH() {
+        return RuntimeHelper.requireNonNull(constants$100.const$5,"SDL_PremultiplyAlpha");
+    }
+    /**
+     * {@snippet :
+     * int SDL_PremultiplyAlpha(int width, int height, unsigned int src_format, void* src, int src_pitch, unsigned int dst_format, void* dst, int dst_pitch);
+     * }
+     */
+    public static int SDL_PremultiplyAlpha(int width, int height, int src_format, MemorySegment src, int src_pitch, int dst_format, MemorySegment dst, int dst_pitch) {
+        var mh$ = SDL_PremultiplyAlpha$MH();
+        try {
+            return (int)mh$.invokeExact(width, height, src_format, src, src_pitch, dst_format, dst, dst_pitch);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_FillRect$MH() {
+        return RuntimeHelper.requireNonNull(constants$101.const$0,"SDL_FillRect");
+    }
+    /**
+     * {@snippet :
+     * int SDL_FillRect(struct SDL_Surface* dst, struct SDL_Rect* rect, unsigned int color);
+     * }
+     */
+    public static int SDL_FillRect(MemorySegment dst, MemorySegment rect, int color) {
+        var mh$ = SDL_FillRect$MH();
+        try {
+            return (int)mh$.invokeExact(dst, rect, color);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_FillRects$MH() {
+        return RuntimeHelper.requireNonNull(constants$101.const$1,"SDL_FillRects");
+    }
+    /**
+     * {@snippet :
+     * int SDL_FillRects(struct SDL_Surface* dst, struct SDL_Rect* rects, int count, unsigned int color);
+     * }
+     */
+    public static int SDL_FillRects(MemorySegment dst, MemorySegment rects, int count, int color) {
+        var mh$ = SDL_FillRects$MH();
+        try {
+            return (int)mh$.invokeExact(dst, rects, count, color);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_UpperBlit$MH() {
+        return RuntimeHelper.requireNonNull(constants$101.const$2,"SDL_UpperBlit");
+    }
+    /**
+     * {@snippet :
+     * int SDL_UpperBlit(struct SDL_Surface* src, struct SDL_Rect* srcrect, struct SDL_Surface* dst, struct SDL_Rect* dstrect);
+     * }
+     */
+    public static int SDL_UpperBlit(MemorySegment src, MemorySegment srcrect, MemorySegment dst, MemorySegment dstrect) {
+        var mh$ = SDL_UpperBlit$MH();
+        try {
+            return (int)mh$.invokeExact(src, srcrect, dst, dstrect);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_LowerBlit$MH() {
+        return RuntimeHelper.requireNonNull(constants$101.const$3,"SDL_LowerBlit");
+    }
+    /**
+     * {@snippet :
+     * int SDL_LowerBlit(struct SDL_Surface* src, struct SDL_Rect* srcrect, struct SDL_Surface* dst, struct SDL_Rect* dstrect);
+     * }
+     */
+    public static int SDL_LowerBlit(MemorySegment src, MemorySegment srcrect, MemorySegment dst, MemorySegment dstrect) {
+        var mh$ = SDL_LowerBlit$MH();
+        try {
+            return (int)mh$.invokeExact(src, srcrect, dst, dstrect);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SoftStretch$MH() {
+        return RuntimeHelper.requireNonNull(constants$101.const$4,"SDL_SoftStretch");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SoftStretch(struct SDL_Surface* src, struct SDL_Rect* srcrect, struct SDL_Surface* dst, struct SDL_Rect* dstrect);
+     * }
+     */
+    public static int SDL_SoftStretch(MemorySegment src, MemorySegment srcrect, MemorySegment dst, MemorySegment dstrect) {
+        var mh$ = SDL_SoftStretch$MH();
+        try {
+            return (int)mh$.invokeExact(src, srcrect, dst, dstrect);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SoftStretchLinear$MH() {
+        return RuntimeHelper.requireNonNull(constants$101.const$5,"SDL_SoftStretchLinear");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SoftStretchLinear(struct SDL_Surface* src, struct SDL_Rect* srcrect, struct SDL_Surface* dst, struct SDL_Rect* dstrect);
+     * }
+     */
+    public static int SDL_SoftStretchLinear(MemorySegment src, MemorySegment srcrect, MemorySegment dst, MemorySegment dstrect) {
+        var mh$ = SDL_SoftStretchLinear$MH();
+        try {
+            return (int)mh$.invokeExact(src, srcrect, dst, dstrect);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_UpperBlitScaled$MH() {
+        return RuntimeHelper.requireNonNull(constants$102.const$0,"SDL_UpperBlitScaled");
+    }
+    /**
+     * {@snippet :
+     * int SDL_UpperBlitScaled(struct SDL_Surface* src, struct SDL_Rect* srcrect, struct SDL_Surface* dst, struct SDL_Rect* dstrect);
+     * }
+     */
+    public static int SDL_UpperBlitScaled(MemorySegment src, MemorySegment srcrect, MemorySegment dst, MemorySegment dstrect) {
+        var mh$ = SDL_UpperBlitScaled$MH();
+        try {
+            return (int)mh$.invokeExact(src, srcrect, dst, dstrect);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_LowerBlitScaled$MH() {
+        return RuntimeHelper.requireNonNull(constants$102.const$1,"SDL_LowerBlitScaled");
+    }
+    /**
+     * {@snippet :
+     * int SDL_LowerBlitScaled(struct SDL_Surface* src, struct SDL_Rect* srcrect, struct SDL_Surface* dst, struct SDL_Rect* dstrect);
+     * }
+     */
+    public static int SDL_LowerBlitScaled(MemorySegment src, MemorySegment srcrect, MemorySegment dst, MemorySegment dstrect) {
+        var mh$ = SDL_LowerBlitScaled$MH();
+        try {
+            return (int)mh$.invokeExact(src, srcrect, dst, dstrect);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetYUVConversionMode$MH() {
+        return RuntimeHelper.requireNonNull(constants$102.const$3,"SDL_SetYUVConversionMode");
+    }
+    /**
+     * {@snippet :
+     * void SDL_SetYUVConversionMode(enum SDL_YUV_CONVERSION_MODE mode);
+     * }
+     */
+    public static void SDL_SetYUVConversionMode(int mode) {
+        var mh$ = SDL_SetYUVConversionMode$MH();
+        try {
+            mh$.invokeExact(mode);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetYUVConversionMode$MH() {
+        return RuntimeHelper.requireNonNull(constants$102.const$4,"SDL_GetYUVConversionMode");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_YUV_CONVERSION_MODE SDL_GetYUVConversionMode();
+     * }
+     */
+    public static int SDL_GetYUVConversionMode() {
+        var mh$ = SDL_GetYUVConversionMode$MH();
+        try {
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetYUVConversionModeForResolution$MH() {
+        return RuntimeHelper.requireNonNull(constants$102.const$6,"SDL_GetYUVConversionModeForResolution");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_YUV_CONVERSION_MODE SDL_GetYUVConversionModeForResolution(int width, int height);
+     * }
+     */
+    public static int SDL_GetYUVConversionModeForResolution(int width, int height) {
+        var mh$ = SDL_GetYUVConversionModeForResolution$MH();
+        try {
+            return (int)mh$.invokeExact(width, height);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_FULLSCREEN = 1;
+     * }
+     */
+    public static int SDL_WINDOW_FULLSCREEN() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_OPENGL = 2;
+     * }
+     */
+    public static int SDL_WINDOW_OPENGL() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_SHOWN = 4;
+     * }
+     */
+    public static int SDL_WINDOW_SHOWN() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_HIDDEN = 8;
+     * }
+     */
+    public static int SDL_WINDOW_HIDDEN() {
+        return (int)8L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_BORDERLESS = 16;
+     * }
+     */
+    public static int SDL_WINDOW_BORDERLESS() {
+        return (int)16L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_RESIZABLE = 32;
+     * }
+     */
+    public static int SDL_WINDOW_RESIZABLE() {
+        return (int)32L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_MINIMIZED = 64;
+     * }
+     */
+    public static int SDL_WINDOW_MINIMIZED() {
+        return (int)64L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_MAXIMIZED = 128;
+     * }
+     */
+    public static int SDL_WINDOW_MAXIMIZED() {
+        return (int)128L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_MOUSE_GRABBED = 256;
+     * }
+     */
+    public static int SDL_WINDOW_MOUSE_GRABBED() {
+        return (int)256L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_INPUT_FOCUS = 512;
+     * }
+     */
+    public static int SDL_WINDOW_INPUT_FOCUS() {
+        return (int)512L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_MOUSE_FOCUS = 1024;
+     * }
+     */
+    public static int SDL_WINDOW_MOUSE_FOCUS() {
+        return (int)1024L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_FULLSCREEN_DESKTOP = 4097;
+     * }
+     */
+    public static int SDL_WINDOW_FULLSCREEN_DESKTOP() {
+        return (int)4097L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_FOREIGN = 2048;
+     * }
+     */
+    public static int SDL_WINDOW_FOREIGN() {
+        return (int)2048L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_ALLOW_HIGHDPI = 8192;
+     * }
+     */
+    public static int SDL_WINDOW_ALLOW_HIGHDPI() {
+        return (int)8192L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_MOUSE_CAPTURE = 16384;
+     * }
+     */
+    public static int SDL_WINDOW_MOUSE_CAPTURE() {
+        return (int)16384L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_ALWAYS_ON_TOP = 32768;
+     * }
+     */
+    public static int SDL_WINDOW_ALWAYS_ON_TOP() {
+        return (int)32768L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_SKIP_TASKBAR = 65536;
+     * }
+     */
+    public static int SDL_WINDOW_SKIP_TASKBAR() {
+        return (int)65536L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_UTILITY = 131072;
+     * }
+     */
+    public static int SDL_WINDOW_UTILITY() {
+        return (int)131072L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_TOOLTIP = 262144;
+     * }
+     */
+    public static int SDL_WINDOW_TOOLTIP() {
+        return (int)262144L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_POPUP_MENU = 524288;
+     * }
+     */
+    public static int SDL_WINDOW_POPUP_MENU() {
+        return (int)524288L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_KEYBOARD_GRABBED = 1048576;
+     * }
+     */
+    public static int SDL_WINDOW_KEYBOARD_GRABBED() {
+        return (int)1048576L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_VULKAN = 268435456;
+     * }
+     */
+    public static int SDL_WINDOW_VULKAN() {
+        return (int)268435456L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_METAL = 536870912;
+     * }
+     */
+    public static int SDL_WINDOW_METAL() {
+        return (int)536870912L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowFlags.SDL_WINDOW_INPUT_GRABBED = 256;
+     * }
+     */
+    public static int SDL_WINDOW_INPUT_GRABBED() {
+        return (int)256L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowEventID.SDL_WINDOWEVENT_NONE = 0;
+     * }
+     */
+    public static int SDL_WINDOWEVENT_NONE() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowEventID.SDL_WINDOWEVENT_SHOWN = 1;
+     * }
+     */
+    public static int SDL_WINDOWEVENT_SHOWN() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowEventID.SDL_WINDOWEVENT_HIDDEN = 2;
+     * }
+     */
+    public static int SDL_WINDOWEVENT_HIDDEN() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowEventID.SDL_WINDOWEVENT_EXPOSED = 3;
+     * }
+     */
+    public static int SDL_WINDOWEVENT_EXPOSED() {
+        return (int)3L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowEventID.SDL_WINDOWEVENT_MOVED = 4;
+     * }
+     */
+    public static int SDL_WINDOWEVENT_MOVED() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowEventID.SDL_WINDOWEVENT_RESIZED = 5;
+     * }
+     */
+    public static int SDL_WINDOWEVENT_RESIZED() {
+        return (int)5L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowEventID.SDL_WINDOWEVENT_SIZE_CHANGED = 6;
+     * }
+     */
+    public static int SDL_WINDOWEVENT_SIZE_CHANGED() {
+        return (int)6L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowEventID.SDL_WINDOWEVENT_MINIMIZED = 7;
+     * }
+     */
+    public static int SDL_WINDOWEVENT_MINIMIZED() {
+        return (int)7L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowEventID.SDL_WINDOWEVENT_MAXIMIZED = 8;
+     * }
+     */
+    public static int SDL_WINDOWEVENT_MAXIMIZED() {
+        return (int)8L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowEventID.SDL_WINDOWEVENT_RESTORED = 9;
+     * }
+     */
+    public static int SDL_WINDOWEVENT_RESTORED() {
+        return (int)9L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowEventID.SDL_WINDOWEVENT_ENTER = 10;
+     * }
+     */
+    public static int SDL_WINDOWEVENT_ENTER() {
+        return (int)10L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowEventID.SDL_WINDOWEVENT_LEAVE = 11;
+     * }
+     */
+    public static int SDL_WINDOWEVENT_LEAVE() {
+        return (int)11L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowEventID.SDL_WINDOWEVENT_FOCUS_GAINED = 12;
+     * }
+     */
+    public static int SDL_WINDOWEVENT_FOCUS_GAINED() {
+        return (int)12L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowEventID.SDL_WINDOWEVENT_FOCUS_LOST = 13;
+     * }
+     */
+    public static int SDL_WINDOWEVENT_FOCUS_LOST() {
+        return (int)13L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowEventID.SDL_WINDOWEVENT_CLOSE = 14;
+     * }
+     */
+    public static int SDL_WINDOWEVENT_CLOSE() {
+        return (int)14L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowEventID.SDL_WINDOWEVENT_TAKE_FOCUS = 15;
+     * }
+     */
+    public static int SDL_WINDOWEVENT_TAKE_FOCUS() {
+        return (int)15L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowEventID.SDL_WINDOWEVENT_HIT_TEST = 16;
+     * }
+     */
+    public static int SDL_WINDOWEVENT_HIT_TEST() {
+        return (int)16L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowEventID.SDL_WINDOWEVENT_ICCPROF_CHANGED = 17;
+     * }
+     */
+    public static int SDL_WINDOWEVENT_ICCPROF_CHANGED() {
+        return (int)17L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_WindowEventID.SDL_WINDOWEVENT_DISPLAY_CHANGED = 18;
+     * }
+     */
+    public static int SDL_WINDOWEVENT_DISPLAY_CHANGED() {
+        return (int)18L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_DisplayEventID.SDL_DISPLAYEVENT_NONE = 0;
+     * }
+     */
+    public static int SDL_DISPLAYEVENT_NONE() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_DisplayEventID.SDL_DISPLAYEVENT_ORIENTATION = 1;
+     * }
+     */
+    public static int SDL_DISPLAYEVENT_ORIENTATION() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_DisplayEventID.SDL_DISPLAYEVENT_CONNECTED = 2;
+     * }
+     */
+    public static int SDL_DISPLAYEVENT_CONNECTED() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_DisplayEventID.SDL_DISPLAYEVENT_DISCONNECTED = 3;
+     * }
+     */
+    public static int SDL_DISPLAYEVENT_DISCONNECTED() {
+        return (int)3L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_DisplayEventID.SDL_DISPLAYEVENT_MOVED = 4;
+     * }
+     */
+    public static int SDL_DISPLAYEVENT_MOVED() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_DisplayOrientation.SDL_ORIENTATION_UNKNOWN = 0;
+     * }
+     */
+    public static int SDL_ORIENTATION_UNKNOWN() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_DisplayOrientation.SDL_ORIENTATION_LANDSCAPE = 1;
+     * }
+     */
+    public static int SDL_ORIENTATION_LANDSCAPE() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_DisplayOrientation.SDL_ORIENTATION_LANDSCAPE_FLIPPED = 2;
+     * }
+     */
+    public static int SDL_ORIENTATION_LANDSCAPE_FLIPPED() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_DisplayOrientation.SDL_ORIENTATION_PORTRAIT = 3;
+     * }
+     */
+    public static int SDL_ORIENTATION_PORTRAIT() {
+        return (int)3L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_DisplayOrientation.SDL_ORIENTATION_PORTRAIT_FLIPPED = 4;
+     * }
+     */
+    public static int SDL_ORIENTATION_PORTRAIT_FLIPPED() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_FlashOperation.SDL_FLASH_CANCEL = 0;
+     * }
+     */
+    public static int SDL_FLASH_CANCEL() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_FlashOperation.SDL_FLASH_BRIEFLY = 1;
+     * }
+     */
+    public static int SDL_FLASH_BRIEFLY() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_FlashOperation.SDL_FLASH_UNTIL_FOCUSED = 2;
+     * }
+     */
+    public static int SDL_FLASH_UNTIL_FOCUSED() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * typedef void* SDL_GLContext;
+     * }
+     */
+    public static final AddressLayout SDL_GLContext = RuntimeHelper.POINTER;
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_RED_SIZE = 0;
+     * }
+     */
+    public static int SDL_GL_RED_SIZE() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_GREEN_SIZE = 1;
+     * }
+     */
+    public static int SDL_GL_GREEN_SIZE() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_BLUE_SIZE = 2;
+     * }
+     */
+    public static int SDL_GL_BLUE_SIZE() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_ALPHA_SIZE = 3;
+     * }
+     */
+    public static int SDL_GL_ALPHA_SIZE() {
+        return (int)3L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_BUFFER_SIZE = 4;
+     * }
+     */
+    public static int SDL_GL_BUFFER_SIZE() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_DOUBLEBUFFER = 5;
+     * }
+     */
+    public static int SDL_GL_DOUBLEBUFFER() {
+        return (int)5L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_DEPTH_SIZE = 6;
+     * }
+     */
+    public static int SDL_GL_DEPTH_SIZE() {
+        return (int)6L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_STENCIL_SIZE = 7;
+     * }
+     */
+    public static int SDL_GL_STENCIL_SIZE() {
+        return (int)7L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_ACCUM_RED_SIZE = 8;
+     * }
+     */
+    public static int SDL_GL_ACCUM_RED_SIZE() {
+        return (int)8L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_ACCUM_GREEN_SIZE = 9;
+     * }
+     */
+    public static int SDL_GL_ACCUM_GREEN_SIZE() {
+        return (int)9L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_ACCUM_BLUE_SIZE = 10;
+     * }
+     */
+    public static int SDL_GL_ACCUM_BLUE_SIZE() {
+        return (int)10L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_ACCUM_ALPHA_SIZE = 11;
+     * }
+     */
+    public static int SDL_GL_ACCUM_ALPHA_SIZE() {
+        return (int)11L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_STEREO = 12;
+     * }
+     */
+    public static int SDL_GL_STEREO() {
+        return (int)12L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_MULTISAMPLEBUFFERS = 13;
+     * }
+     */
+    public static int SDL_GL_MULTISAMPLEBUFFERS() {
+        return (int)13L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_MULTISAMPLESAMPLES = 14;
+     * }
+     */
+    public static int SDL_GL_MULTISAMPLESAMPLES() {
+        return (int)14L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_ACCELERATED_VISUAL = 15;
+     * }
+     */
+    public static int SDL_GL_ACCELERATED_VISUAL() {
+        return (int)15L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_RETAINED_BACKING = 16;
+     * }
+     */
+    public static int SDL_GL_RETAINED_BACKING() {
+        return (int)16L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_CONTEXT_MAJOR_VERSION = 17;
+     * }
+     */
+    public static int SDL_GL_CONTEXT_MAJOR_VERSION() {
+        return (int)17L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_CONTEXT_MINOR_VERSION = 18;
+     * }
+     */
+    public static int SDL_GL_CONTEXT_MINOR_VERSION() {
+        return (int)18L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_CONTEXT_EGL = 19;
+     * }
+     */
+    public static int SDL_GL_CONTEXT_EGL() {
+        return (int)19L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_CONTEXT_FLAGS = 20;
+     * }
+     */
+    public static int SDL_GL_CONTEXT_FLAGS() {
+        return (int)20L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_CONTEXT_PROFILE_MASK = 21;
+     * }
+     */
+    public static int SDL_GL_CONTEXT_PROFILE_MASK() {
+        return (int)21L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_SHARE_WITH_CURRENT_CONTEXT = 22;
+     * }
+     */
+    public static int SDL_GL_SHARE_WITH_CURRENT_CONTEXT() {
+        return (int)22L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_FRAMEBUFFER_SRGB_CAPABLE = 23;
+     * }
+     */
+    public static int SDL_GL_FRAMEBUFFER_SRGB_CAPABLE() {
+        return (int)23L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_CONTEXT_RELEASE_BEHAVIOR = 24;
+     * }
+     */
+    public static int SDL_GL_CONTEXT_RELEASE_BEHAVIOR() {
+        return (int)24L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_CONTEXT_RESET_NOTIFICATION = 25;
+     * }
+     */
+    public static int SDL_GL_CONTEXT_RESET_NOTIFICATION() {
+        return (int)25L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_CONTEXT_NO_ERROR = 26;
+     * }
+     */
+    public static int SDL_GL_CONTEXT_NO_ERROR() {
+        return (int)26L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLattr.SDL_GL_FLOATBUFFERS = 27;
+     * }
+     */
+    public static int SDL_GL_FLOATBUFFERS() {
+        return (int)27L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLprofile.SDL_GL_CONTEXT_PROFILE_CORE = 1;
+     * }
+     */
+    public static int SDL_GL_CONTEXT_PROFILE_CORE() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLprofile.SDL_GL_CONTEXT_PROFILE_COMPATIBILITY = 2;
+     * }
+     */
+    public static int SDL_GL_CONTEXT_PROFILE_COMPATIBILITY() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLprofile.SDL_GL_CONTEXT_PROFILE_ES = 4;
+     * }
+     */
+    public static int SDL_GL_CONTEXT_PROFILE_ES() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLcontextFlag.SDL_GL_CONTEXT_DEBUG_FLAG = 1;
+     * }
+     */
+    public static int SDL_GL_CONTEXT_DEBUG_FLAG() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLcontextFlag.SDL_GL_CONTEXT_FORWARD_COMPATIBLE_FLAG = 2;
+     * }
+     */
+    public static int SDL_GL_CONTEXT_FORWARD_COMPATIBLE_FLAG() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLcontextFlag.SDL_GL_CONTEXT_ROBUST_ACCESS_FLAG = 4;
+     * }
+     */
+    public static int SDL_GL_CONTEXT_ROBUST_ACCESS_FLAG() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLcontextFlag.SDL_GL_CONTEXT_RESET_ISOLATION_FLAG = 8;
+     * }
+     */
+    public static int SDL_GL_CONTEXT_RESET_ISOLATION_FLAG() {
+        return (int)8L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLcontextReleaseFlag.SDL_GL_CONTEXT_RELEASE_BEHAVIOR_NONE = 0;
+     * }
+     */
+    public static int SDL_GL_CONTEXT_RELEASE_BEHAVIOR_NONE() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLcontextReleaseFlag.SDL_GL_CONTEXT_RELEASE_BEHAVIOR_FLUSH = 1;
+     * }
+     */
+    public static int SDL_GL_CONTEXT_RELEASE_BEHAVIOR_FLUSH() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLContextResetNotification.SDL_GL_CONTEXT_RESET_NO_NOTIFICATION = 0;
+     * }
+     */
+    public static int SDL_GL_CONTEXT_RESET_NO_NOTIFICATION() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GLContextResetNotification.SDL_GL_CONTEXT_RESET_LOSE_CONTEXT = 1;
+     * }
+     */
+    public static int SDL_GL_CONTEXT_RESET_LOSE_CONTEXT() {
+        return (int)1L;
+    }
+    public static MethodHandle SDL_GetNumVideoDrivers$MH() {
+        return RuntimeHelper.requireNonNull(constants$104.const$0,"SDL_GetNumVideoDrivers");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetNumVideoDrivers();
+     * }
+     */
+    public static int SDL_GetNumVideoDrivers() {
+        var mh$ = SDL_GetNumVideoDrivers$MH();
+        try {
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetVideoDriver$MH() {
+        return RuntimeHelper.requireNonNull(constants$104.const$1,"SDL_GetVideoDriver");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GetVideoDriver(int index);
+     * }
+     */
+    public static MemorySegment SDL_GetVideoDriver(int index) {
+        var mh$ = SDL_GetVideoDriver$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_VideoInit$MH() {
+        return RuntimeHelper.requireNonNull(constants$104.const$2,"SDL_VideoInit");
+    }
+    /**
+     * {@snippet :
+     * int SDL_VideoInit(char* driver_name);
+     * }
+     */
+    public static int SDL_VideoInit(MemorySegment driver_name) {
+        var mh$ = SDL_VideoInit$MH();
+        try {
+            return (int)mh$.invokeExact(driver_name);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_VideoQuit$MH() {
+        return RuntimeHelper.requireNonNull(constants$104.const$3,"SDL_VideoQuit");
+    }
+    /**
+     * {@snippet :
+     * void SDL_VideoQuit();
+     * }
+     */
+    public static void SDL_VideoQuit() {
+        var mh$ = SDL_VideoQuit$MH();
+        try {
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetCurrentVideoDriver$MH() {
+        return RuntimeHelper.requireNonNull(constants$104.const$4,"SDL_GetCurrentVideoDriver");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GetCurrentVideoDriver();
+     * }
+     */
+    public static MemorySegment SDL_GetCurrentVideoDriver() {
+        var mh$ = SDL_GetCurrentVideoDriver$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetNumVideoDisplays$MH() {
+        return RuntimeHelper.requireNonNull(constants$104.const$5,"SDL_GetNumVideoDisplays");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetNumVideoDisplays();
+     * }
+     */
+    public static int SDL_GetNumVideoDisplays() {
+        var mh$ = SDL_GetNumVideoDisplays$MH();
+        try {
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetDisplayName$MH() {
+        return RuntimeHelper.requireNonNull(constants$105.const$0,"SDL_GetDisplayName");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GetDisplayName(int displayIndex);
+     * }
+     */
+    public static MemorySegment SDL_GetDisplayName(int displayIndex) {
+        var mh$ = SDL_GetDisplayName$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(displayIndex);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetDisplayBounds$MH() {
+        return RuntimeHelper.requireNonNull(constants$105.const$2,"SDL_GetDisplayBounds");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetDisplayBounds(int displayIndex, struct SDL_Rect* rect);
+     * }
+     */
+    public static int SDL_GetDisplayBounds(int displayIndex, MemorySegment rect) {
+        var mh$ = SDL_GetDisplayBounds$MH();
+        try {
+            return (int)mh$.invokeExact(displayIndex, rect);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetDisplayUsableBounds$MH() {
+        return RuntimeHelper.requireNonNull(constants$105.const$3,"SDL_GetDisplayUsableBounds");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetDisplayUsableBounds(int displayIndex, struct SDL_Rect* rect);
+     * }
+     */
+    public static int SDL_GetDisplayUsableBounds(int displayIndex, MemorySegment rect) {
+        var mh$ = SDL_GetDisplayUsableBounds$MH();
+        try {
+            return (int)mh$.invokeExact(displayIndex, rect);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetDisplayDPI$MH() {
+        return RuntimeHelper.requireNonNull(constants$105.const$5,"SDL_GetDisplayDPI");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetDisplayDPI(int displayIndex, float* ddpi, float* hdpi, float* vdpi);
+     * }
+     */
+    public static int SDL_GetDisplayDPI(int displayIndex, MemorySegment ddpi, MemorySegment hdpi, MemorySegment vdpi) {
+        var mh$ = SDL_GetDisplayDPI$MH();
+        try {
+            return (int)mh$.invokeExact(displayIndex, ddpi, hdpi, vdpi);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetDisplayOrientation$MH() {
+        return RuntimeHelper.requireNonNull(constants$106.const$0,"SDL_GetDisplayOrientation");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_DisplayOrientation SDL_GetDisplayOrientation(int displayIndex);
+     * }
+     */
+    public static int SDL_GetDisplayOrientation(int displayIndex) {
+        var mh$ = SDL_GetDisplayOrientation$MH();
+        try {
+            return (int)mh$.invokeExact(displayIndex);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetNumDisplayModes$MH() {
+        return RuntimeHelper.requireNonNull(constants$106.const$1,"SDL_GetNumDisplayModes");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetNumDisplayModes(int displayIndex);
+     * }
+     */
+    public static int SDL_GetNumDisplayModes(int displayIndex) {
+        var mh$ = SDL_GetNumDisplayModes$MH();
+        try {
+            return (int)mh$.invokeExact(displayIndex);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetDisplayMode$MH() {
+        return RuntimeHelper.requireNonNull(constants$106.const$3,"SDL_GetDisplayMode");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetDisplayMode(int displayIndex, int modeIndex, struct SDL_DisplayMode* mode);
+     * }
+     */
+    public static int SDL_GetDisplayMode(int displayIndex, int modeIndex, MemorySegment mode) {
+        var mh$ = SDL_GetDisplayMode$MH();
+        try {
+            return (int)mh$.invokeExact(displayIndex, modeIndex, mode);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetDesktopDisplayMode$MH() {
+        return RuntimeHelper.requireNonNull(constants$106.const$4,"SDL_GetDesktopDisplayMode");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetDesktopDisplayMode(int displayIndex, struct SDL_DisplayMode* mode);
+     * }
+     */
+    public static int SDL_GetDesktopDisplayMode(int displayIndex, MemorySegment mode) {
+        var mh$ = SDL_GetDesktopDisplayMode$MH();
+        try {
+            return (int)mh$.invokeExact(displayIndex, mode);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetCurrentDisplayMode$MH() {
+        return RuntimeHelper.requireNonNull(constants$106.const$5,"SDL_GetCurrentDisplayMode");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetCurrentDisplayMode(int displayIndex, struct SDL_DisplayMode* mode);
+     * }
+     */
+    public static int SDL_GetCurrentDisplayMode(int displayIndex, MemorySegment mode) {
+        var mh$ = SDL_GetCurrentDisplayMode$MH();
+        try {
+            return (int)mh$.invokeExact(displayIndex, mode);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetClosestDisplayMode$MH() {
+        return RuntimeHelper.requireNonNull(constants$107.const$1,"SDL_GetClosestDisplayMode");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_DisplayMode* SDL_GetClosestDisplayMode(int displayIndex, struct SDL_DisplayMode* mode, struct SDL_DisplayMode* closest);
+     * }
+     */
+    public static MemorySegment SDL_GetClosestDisplayMode(int displayIndex, MemorySegment mode, MemorySegment closest) {
+        var mh$ = SDL_GetClosestDisplayMode$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(displayIndex, mode, closest);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetPointDisplayIndex$MH() {
+        return RuntimeHelper.requireNonNull(constants$107.const$2,"SDL_GetPointDisplayIndex");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetPointDisplayIndex(struct SDL_Point* point);
+     * }
+     */
+    public static int SDL_GetPointDisplayIndex(MemorySegment point) {
+        var mh$ = SDL_GetPointDisplayIndex$MH();
+        try {
+            return (int)mh$.invokeExact(point);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetRectDisplayIndex$MH() {
+        return RuntimeHelper.requireNonNull(constants$107.const$3,"SDL_GetRectDisplayIndex");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetRectDisplayIndex(struct SDL_Rect* rect);
+     * }
+     */
+    public static int SDL_GetRectDisplayIndex(MemorySegment rect) {
+        var mh$ = SDL_GetRectDisplayIndex$MH();
+        try {
+            return (int)mh$.invokeExact(rect);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowDisplayIndex$MH() {
+        return RuntimeHelper.requireNonNull(constants$107.const$4,"SDL_GetWindowDisplayIndex");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetWindowDisplayIndex(struct SDL_Window* window);
+     * }
+     */
+    public static int SDL_GetWindowDisplayIndex(MemorySegment window) {
+        var mh$ = SDL_GetWindowDisplayIndex$MH();
+        try {
+            return (int)mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowDisplayMode$MH() {
+        return RuntimeHelper.requireNonNull(constants$107.const$5,"SDL_SetWindowDisplayMode");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SetWindowDisplayMode(struct SDL_Window* window, struct SDL_DisplayMode* mode);
+     * }
+     */
+    public static int SDL_SetWindowDisplayMode(MemorySegment window, MemorySegment mode) {
+        var mh$ = SDL_SetWindowDisplayMode$MH();
+        try {
+            return (int)mh$.invokeExact(window, mode);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowDisplayMode$MH() {
+        return RuntimeHelper.requireNonNull(constants$108.const$0,"SDL_GetWindowDisplayMode");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetWindowDisplayMode(struct SDL_Window* window, struct SDL_DisplayMode* mode);
+     * }
+     */
+    public static int SDL_GetWindowDisplayMode(MemorySegment window, MemorySegment mode) {
+        var mh$ = SDL_GetWindowDisplayMode$MH();
+        try {
+            return (int)mh$.invokeExact(window, mode);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowICCProfile$MH() {
+        return RuntimeHelper.requireNonNull(constants$108.const$1,"SDL_GetWindowICCProfile");
+    }
+    /**
+     * {@snippet :
+     * void* SDL_GetWindowICCProfile(struct SDL_Window* window, unsigned long long* size);
+     * }
+     */
+    public static MemorySegment SDL_GetWindowICCProfile(MemorySegment window, MemorySegment size) {
+        var mh$ = SDL_GetWindowICCProfile$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(window, size);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowPixelFormat$MH() {
+        return RuntimeHelper.requireNonNull(constants$108.const$2,"SDL_GetWindowPixelFormat");
+    }
+    /**
+     * {@snippet :
+     * unsigned int SDL_GetWindowPixelFormat(struct SDL_Window* window);
+     * }
+     */
+    public static int SDL_GetWindowPixelFormat(MemorySegment window) {
+        var mh$ = SDL_GetWindowPixelFormat$MH();
+        try {
+            return (int)mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_CreateWindow$MH() {
+        return RuntimeHelper.requireNonNull(constants$108.const$3,"SDL_CreateWindow");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_Window* SDL_CreateWindow(char* title, int x, int y, int w, int h, unsigned int flags);
+     * }
+     */
+    public static MemorySegment SDL_CreateWindow(MemorySegment title, int x, int y, int w, int h, int flags) {
+        var mh$ = SDL_CreateWindow$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(title, x, y, w, h, flags);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_CreateWindowFrom$MH() {
+        return RuntimeHelper.requireNonNull(constants$108.const$4,"SDL_CreateWindowFrom");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_Window* SDL_CreateWindowFrom(void* data);
+     * }
+     */
+    public static MemorySegment SDL_CreateWindowFrom(MemorySegment data) {
+        var mh$ = SDL_CreateWindowFrom$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(data);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowID$MH() {
+        return RuntimeHelper.requireNonNull(constants$108.const$5,"SDL_GetWindowID");
+    }
+    /**
+     * {@snippet :
+     * unsigned int SDL_GetWindowID(struct SDL_Window* window);
+     * }
+     */
+    public static int SDL_GetWindowID(MemorySegment window) {
+        var mh$ = SDL_GetWindowID$MH();
+        try {
+            return (int)mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowFromID$MH() {
+        return RuntimeHelper.requireNonNull(constants$109.const$0,"SDL_GetWindowFromID");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_Window* SDL_GetWindowFromID(unsigned int id);
+     * }
+     */
+    public static MemorySegment SDL_GetWindowFromID(int id) {
+        var mh$ = SDL_GetWindowFromID$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(id);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowFlags$MH() {
+        return RuntimeHelper.requireNonNull(constants$109.const$1,"SDL_GetWindowFlags");
+    }
+    /**
+     * {@snippet :
+     * unsigned int SDL_GetWindowFlags(struct SDL_Window* window);
+     * }
+     */
+    public static int SDL_GetWindowFlags(MemorySegment window) {
+        var mh$ = SDL_GetWindowFlags$MH();
+        try {
+            return (int)mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowTitle$MH() {
+        return RuntimeHelper.requireNonNull(constants$109.const$2,"SDL_SetWindowTitle");
+    }
+    /**
+     * {@snippet :
+     * void SDL_SetWindowTitle(struct SDL_Window* window, char* title);
+     * }
+     */
+    public static void SDL_SetWindowTitle(MemorySegment window, MemorySegment title) {
+        var mh$ = SDL_SetWindowTitle$MH();
+        try {
+            mh$.invokeExact(window, title);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowTitle$MH() {
+        return RuntimeHelper.requireNonNull(constants$109.const$3,"SDL_GetWindowTitle");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GetWindowTitle(struct SDL_Window* window);
+     * }
+     */
+    public static MemorySegment SDL_GetWindowTitle(MemorySegment window) {
+        var mh$ = SDL_GetWindowTitle$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowIcon$MH() {
+        return RuntimeHelper.requireNonNull(constants$109.const$4,"SDL_SetWindowIcon");
+    }
+    /**
+     * {@snippet :
+     * void SDL_SetWindowIcon(struct SDL_Window* window, struct SDL_Surface* icon);
+     * }
+     */
+    public static void SDL_SetWindowIcon(MemorySegment window, MemorySegment icon) {
+        var mh$ = SDL_SetWindowIcon$MH();
+        try {
+            mh$.invokeExact(window, icon);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowData$MH() {
+        return RuntimeHelper.requireNonNull(constants$109.const$5,"SDL_SetWindowData");
+    }
+    /**
+     * {@snippet :
+     * void* SDL_SetWindowData(struct SDL_Window* window, char* name, void* userdata);
+     * }
+     */
+    public static MemorySegment SDL_SetWindowData(MemorySegment window, MemorySegment name, MemorySegment userdata) {
+        var mh$ = SDL_SetWindowData$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(window, name, userdata);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowData$MH() {
+        return RuntimeHelper.requireNonNull(constants$110.const$0,"SDL_GetWindowData");
+    }
+    /**
+     * {@snippet :
+     * void* SDL_GetWindowData(struct SDL_Window* window, char* name);
+     * }
+     */
+    public static MemorySegment SDL_GetWindowData(MemorySegment window, MemorySegment name) {
+        var mh$ = SDL_GetWindowData$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(window, name);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowPosition$MH() {
+        return RuntimeHelper.requireNonNull(constants$110.const$2,"SDL_SetWindowPosition");
+    }
+    /**
+     * {@snippet :
+     * void SDL_SetWindowPosition(struct SDL_Window* window, int x, int y);
+     * }
+     */
+    public static void SDL_SetWindowPosition(MemorySegment window, int x, int y) {
+        var mh$ = SDL_SetWindowPosition$MH();
+        try {
+            mh$.invokeExact(window, x, y);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowPosition$MH() {
+        return RuntimeHelper.requireNonNull(constants$110.const$3,"SDL_GetWindowPosition");
+    }
+    /**
+     * {@snippet :
+     * void SDL_GetWindowPosition(struct SDL_Window* window, int* x, int* y);
+     * }
+     */
+    public static void SDL_GetWindowPosition(MemorySegment window, MemorySegment x, MemorySegment y) {
+        var mh$ = SDL_GetWindowPosition$MH();
+        try {
+            mh$.invokeExact(window, x, y);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowSize$MH() {
+        return RuntimeHelper.requireNonNull(constants$110.const$4,"SDL_SetWindowSize");
+    }
+    /**
+     * {@snippet :
+     * void SDL_SetWindowSize(struct SDL_Window* window, int w, int h);
+     * }
+     */
+    public static void SDL_SetWindowSize(MemorySegment window, int w, int h) {
+        var mh$ = SDL_SetWindowSize$MH();
+        try {
+            mh$.invokeExact(window, w, h);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowSize$MH() {
+        return RuntimeHelper.requireNonNull(constants$110.const$5,"SDL_GetWindowSize");
+    }
+    /**
+     * {@snippet :
+     * void SDL_GetWindowSize(struct SDL_Window* window, int* w, int* h);
+     * }
+     */
+    public static void SDL_GetWindowSize(MemorySegment window, MemorySegment w, MemorySegment h) {
+        var mh$ = SDL_GetWindowSize$MH();
+        try {
+            mh$.invokeExact(window, w, h);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowBordersSize$MH() {
+        return RuntimeHelper.requireNonNull(constants$111.const$0,"SDL_GetWindowBordersSize");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetWindowBordersSize(struct SDL_Window* window, int* top, int* left, int* bottom, int* right);
+     * }
+     */
+    public static int SDL_GetWindowBordersSize(MemorySegment window, MemorySegment top, MemorySegment left, MemorySegment bottom, MemorySegment right) {
+        var mh$ = SDL_GetWindowBordersSize$MH();
+        try {
+            return (int)mh$.invokeExact(window, top, left, bottom, right);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowSizeInPixels$MH() {
+        return RuntimeHelper.requireNonNull(constants$111.const$1,"SDL_GetWindowSizeInPixels");
+    }
+    /**
+     * {@snippet :
+     * void SDL_GetWindowSizeInPixels(struct SDL_Window* window, int* w, int* h);
+     * }
+     */
+    public static void SDL_GetWindowSizeInPixels(MemorySegment window, MemorySegment w, MemorySegment h) {
+        var mh$ = SDL_GetWindowSizeInPixels$MH();
+        try {
+            mh$.invokeExact(window, w, h);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowMinimumSize$MH() {
+        return RuntimeHelper.requireNonNull(constants$111.const$2,"SDL_SetWindowMinimumSize");
+    }
+    /**
+     * {@snippet :
+     * void SDL_SetWindowMinimumSize(struct SDL_Window* window, int min_w, int min_h);
+     * }
+     */
+    public static void SDL_SetWindowMinimumSize(MemorySegment window, int min_w, int min_h) {
+        var mh$ = SDL_SetWindowMinimumSize$MH();
+        try {
+            mh$.invokeExact(window, min_w, min_h);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowMinimumSize$MH() {
+        return RuntimeHelper.requireNonNull(constants$111.const$3,"SDL_GetWindowMinimumSize");
+    }
+    /**
+     * {@snippet :
+     * void SDL_GetWindowMinimumSize(struct SDL_Window* window, int* w, int* h);
+     * }
+     */
+    public static void SDL_GetWindowMinimumSize(MemorySegment window, MemorySegment w, MemorySegment h) {
+        var mh$ = SDL_GetWindowMinimumSize$MH();
+        try {
+            mh$.invokeExact(window, w, h);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowMaximumSize$MH() {
+        return RuntimeHelper.requireNonNull(constants$111.const$4,"SDL_SetWindowMaximumSize");
+    }
+    /**
+     * {@snippet :
+     * void SDL_SetWindowMaximumSize(struct SDL_Window* window, int max_w, int max_h);
+     * }
+     */
+    public static void SDL_SetWindowMaximumSize(MemorySegment window, int max_w, int max_h) {
+        var mh$ = SDL_SetWindowMaximumSize$MH();
+        try {
+            mh$.invokeExact(window, max_w, max_h);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowMaximumSize$MH() {
+        return RuntimeHelper.requireNonNull(constants$111.const$5,"SDL_GetWindowMaximumSize");
+    }
+    /**
+     * {@snippet :
+     * void SDL_GetWindowMaximumSize(struct SDL_Window* window, int* w, int* h);
+     * }
+     */
+    public static void SDL_GetWindowMaximumSize(MemorySegment window, MemorySegment w, MemorySegment h) {
+        var mh$ = SDL_GetWindowMaximumSize$MH();
+        try {
+            mh$.invokeExact(window, w, h);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowBordered$MH() {
+        return RuntimeHelper.requireNonNull(constants$112.const$0,"SDL_SetWindowBordered");
+    }
+    /**
+     * {@snippet :
+     * void SDL_SetWindowBordered(struct SDL_Window* window, enum SDL_bool bordered);
+     * }
+     */
+    public static void SDL_SetWindowBordered(MemorySegment window, int bordered) {
+        var mh$ = SDL_SetWindowBordered$MH();
+        try {
+            mh$.invokeExact(window, bordered);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowResizable$MH() {
+        return RuntimeHelper.requireNonNull(constants$112.const$1,"SDL_SetWindowResizable");
+    }
+    /**
+     * {@snippet :
+     * void SDL_SetWindowResizable(struct SDL_Window* window, enum SDL_bool resizable);
+     * }
+     */
+    public static void SDL_SetWindowResizable(MemorySegment window, int resizable) {
+        var mh$ = SDL_SetWindowResizable$MH();
+        try {
+            mh$.invokeExact(window, resizable);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowAlwaysOnTop$MH() {
+        return RuntimeHelper.requireNonNull(constants$112.const$2,"SDL_SetWindowAlwaysOnTop");
+    }
+    /**
+     * {@snippet :
+     * void SDL_SetWindowAlwaysOnTop(struct SDL_Window* window, enum SDL_bool on_top);
+     * }
+     */
+    public static void SDL_SetWindowAlwaysOnTop(MemorySegment window, int on_top) {
+        var mh$ = SDL_SetWindowAlwaysOnTop$MH();
+        try {
+            mh$.invokeExact(window, on_top);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_ShowWindow$MH() {
+        return RuntimeHelper.requireNonNull(constants$112.const$3,"SDL_ShowWindow");
+    }
+    /**
+     * {@snippet :
+     * void SDL_ShowWindow(struct SDL_Window* window);
+     * }
+     */
+    public static void SDL_ShowWindow(MemorySegment window) {
+        var mh$ = SDL_ShowWindow$MH();
+        try {
+            mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_HideWindow$MH() {
+        return RuntimeHelper.requireNonNull(constants$112.const$4,"SDL_HideWindow");
+    }
+    /**
+     * {@snippet :
+     * void SDL_HideWindow(struct SDL_Window* window);
+     * }
+     */
+    public static void SDL_HideWindow(MemorySegment window) {
+        var mh$ = SDL_HideWindow$MH();
+        try {
+            mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_RaiseWindow$MH() {
+        return RuntimeHelper.requireNonNull(constants$112.const$5,"SDL_RaiseWindow");
+    }
+    /**
+     * {@snippet :
+     * void SDL_RaiseWindow(struct SDL_Window* window);
+     * }
+     */
+    public static void SDL_RaiseWindow(MemorySegment window) {
+        var mh$ = SDL_RaiseWindow$MH();
+        try {
+            mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_MaximizeWindow$MH() {
+        return RuntimeHelper.requireNonNull(constants$113.const$0,"SDL_MaximizeWindow");
+    }
+    /**
+     * {@snippet :
+     * void SDL_MaximizeWindow(struct SDL_Window* window);
+     * }
+     */
+    public static void SDL_MaximizeWindow(MemorySegment window) {
+        var mh$ = SDL_MaximizeWindow$MH();
+        try {
+            mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_MinimizeWindow$MH() {
+        return RuntimeHelper.requireNonNull(constants$113.const$1,"SDL_MinimizeWindow");
+    }
+    /**
+     * {@snippet :
+     * void SDL_MinimizeWindow(struct SDL_Window* window);
+     * }
+     */
+    public static void SDL_MinimizeWindow(MemorySegment window) {
+        var mh$ = SDL_MinimizeWindow$MH();
+        try {
+            mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_RestoreWindow$MH() {
+        return RuntimeHelper.requireNonNull(constants$113.const$2,"SDL_RestoreWindow");
+    }
+    /**
+     * {@snippet :
+     * void SDL_RestoreWindow(struct SDL_Window* window);
+     * }
+     */
+    public static void SDL_RestoreWindow(MemorySegment window) {
+        var mh$ = SDL_RestoreWindow$MH();
+        try {
+            mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowFullscreen$MH() {
+        return RuntimeHelper.requireNonNull(constants$113.const$3,"SDL_SetWindowFullscreen");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SetWindowFullscreen(struct SDL_Window* window, unsigned int flags);
+     * }
+     */
+    public static int SDL_SetWindowFullscreen(MemorySegment window, int flags) {
+        var mh$ = SDL_SetWindowFullscreen$MH();
+        try {
+            return (int)mh$.invokeExact(window, flags);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_HasWindowSurface$MH() {
+        return RuntimeHelper.requireNonNull(constants$113.const$4,"SDL_HasWindowSurface");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_HasWindowSurface(struct SDL_Window* window);
+     * }
+     */
+    public static int SDL_HasWindowSurface(MemorySegment window) {
+        var mh$ = SDL_HasWindowSurface$MH();
+        try {
+            return (int)mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowSurface$MH() {
+        return RuntimeHelper.requireNonNull(constants$113.const$5,"SDL_GetWindowSurface");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_Surface* SDL_GetWindowSurface(struct SDL_Window* window);
+     * }
+     */
+    public static MemorySegment SDL_GetWindowSurface(MemorySegment window) {
+        var mh$ = SDL_GetWindowSurface$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_UpdateWindowSurface$MH() {
+        return RuntimeHelper.requireNonNull(constants$114.const$0,"SDL_UpdateWindowSurface");
+    }
+    /**
+     * {@snippet :
+     * int SDL_UpdateWindowSurface(struct SDL_Window* window);
+     * }
+     */
+    public static int SDL_UpdateWindowSurface(MemorySegment window) {
+        var mh$ = SDL_UpdateWindowSurface$MH();
+        try {
+            return (int)mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_UpdateWindowSurfaceRects$MH() {
+        return RuntimeHelper.requireNonNull(constants$114.const$1,"SDL_UpdateWindowSurfaceRects");
+    }
+    /**
+     * {@snippet :
+     * int SDL_UpdateWindowSurfaceRects(struct SDL_Window* window, struct SDL_Rect* rects, int numrects);
+     * }
+     */
+    public static int SDL_UpdateWindowSurfaceRects(MemorySegment window, MemorySegment rects, int numrects) {
+        var mh$ = SDL_UpdateWindowSurfaceRects$MH();
+        try {
+            return (int)mh$.invokeExact(window, rects, numrects);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_DestroyWindowSurface$MH() {
+        return RuntimeHelper.requireNonNull(constants$114.const$2,"SDL_DestroyWindowSurface");
+    }
+    /**
+     * {@snippet :
+     * int SDL_DestroyWindowSurface(struct SDL_Window* window);
+     * }
+     */
+    public static int SDL_DestroyWindowSurface(MemorySegment window) {
+        var mh$ = SDL_DestroyWindowSurface$MH();
+        try {
+            return (int)mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowGrab$MH() {
+        return RuntimeHelper.requireNonNull(constants$114.const$3,"SDL_SetWindowGrab");
+    }
+    /**
+     * {@snippet :
+     * void SDL_SetWindowGrab(struct SDL_Window* window, enum SDL_bool grabbed);
+     * }
+     */
+    public static void SDL_SetWindowGrab(MemorySegment window, int grabbed) {
+        var mh$ = SDL_SetWindowGrab$MH();
+        try {
+            mh$.invokeExact(window, grabbed);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowKeyboardGrab$MH() {
+        return RuntimeHelper.requireNonNull(constants$114.const$4,"SDL_SetWindowKeyboardGrab");
+    }
+    /**
+     * {@snippet :
+     * void SDL_SetWindowKeyboardGrab(struct SDL_Window* window, enum SDL_bool grabbed);
+     * }
+     */
+    public static void SDL_SetWindowKeyboardGrab(MemorySegment window, int grabbed) {
+        var mh$ = SDL_SetWindowKeyboardGrab$MH();
+        try {
+            mh$.invokeExact(window, grabbed);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowMouseGrab$MH() {
+        return RuntimeHelper.requireNonNull(constants$114.const$5,"SDL_SetWindowMouseGrab");
+    }
+    /**
+     * {@snippet :
+     * void SDL_SetWindowMouseGrab(struct SDL_Window* window, enum SDL_bool grabbed);
+     * }
+     */
+    public static void SDL_SetWindowMouseGrab(MemorySegment window, int grabbed) {
+        var mh$ = SDL_SetWindowMouseGrab$MH();
+        try {
+            mh$.invokeExact(window, grabbed);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowGrab$MH() {
+        return RuntimeHelper.requireNonNull(constants$115.const$0,"SDL_GetWindowGrab");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_GetWindowGrab(struct SDL_Window* window);
+     * }
+     */
+    public static int SDL_GetWindowGrab(MemorySegment window) {
+        var mh$ = SDL_GetWindowGrab$MH();
+        try {
+            return (int)mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowKeyboardGrab$MH() {
+        return RuntimeHelper.requireNonNull(constants$115.const$1,"SDL_GetWindowKeyboardGrab");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_GetWindowKeyboardGrab(struct SDL_Window* window);
+     * }
+     */
+    public static int SDL_GetWindowKeyboardGrab(MemorySegment window) {
+        var mh$ = SDL_GetWindowKeyboardGrab$MH();
+        try {
+            return (int)mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowMouseGrab$MH() {
+        return RuntimeHelper.requireNonNull(constants$115.const$2,"SDL_GetWindowMouseGrab");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_GetWindowMouseGrab(struct SDL_Window* window);
+     * }
+     */
+    public static int SDL_GetWindowMouseGrab(MemorySegment window) {
+        var mh$ = SDL_GetWindowMouseGrab$MH();
+        try {
+            return (int)mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetGrabbedWindow$MH() {
+        return RuntimeHelper.requireNonNull(constants$115.const$3,"SDL_GetGrabbedWindow");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_Window* SDL_GetGrabbedWindow();
+     * }
+     */
+    public static MemorySegment SDL_GetGrabbedWindow() {
+        var mh$ = SDL_GetGrabbedWindow$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowMouseRect$MH() {
+        return RuntimeHelper.requireNonNull(constants$115.const$4,"SDL_SetWindowMouseRect");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SetWindowMouseRect(struct SDL_Window* window, struct SDL_Rect* rect);
+     * }
+     */
+    public static int SDL_SetWindowMouseRect(MemorySegment window, MemorySegment rect) {
+        var mh$ = SDL_SetWindowMouseRect$MH();
+        try {
+            return (int)mh$.invokeExact(window, rect);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowMouseRect$MH() {
+        return RuntimeHelper.requireNonNull(constants$115.const$5,"SDL_GetWindowMouseRect");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_Rect* SDL_GetWindowMouseRect(struct SDL_Window* window);
+     * }
+     */
+    public static MemorySegment SDL_GetWindowMouseRect(MemorySegment window) {
+        var mh$ = SDL_GetWindowMouseRect$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowBrightness$MH() {
+        return RuntimeHelper.requireNonNull(constants$116.const$1,"SDL_SetWindowBrightness");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SetWindowBrightness(struct SDL_Window* window, float brightness);
+     * }
+     */
+    public static int SDL_SetWindowBrightness(MemorySegment window, float brightness) {
+        var mh$ = SDL_SetWindowBrightness$MH();
+        try {
+            return (int)mh$.invokeExact(window, brightness);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowBrightness$MH() {
+        return RuntimeHelper.requireNonNull(constants$116.const$3,"SDL_GetWindowBrightness");
+    }
+    /**
+     * {@snippet :
+     * float SDL_GetWindowBrightness(struct SDL_Window* window);
+     * }
+     */
+    public static float SDL_GetWindowBrightness(MemorySegment window) {
+        var mh$ = SDL_GetWindowBrightness$MH();
+        try {
+            return (float)mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowOpacity$MH() {
+        return RuntimeHelper.requireNonNull(constants$116.const$4,"SDL_SetWindowOpacity");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SetWindowOpacity(struct SDL_Window* window, float opacity);
+     * }
+     */
+    public static int SDL_SetWindowOpacity(MemorySegment window, float opacity) {
+        var mh$ = SDL_SetWindowOpacity$MH();
+        try {
+            return (int)mh$.invokeExact(window, opacity);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowOpacity$MH() {
+        return RuntimeHelper.requireNonNull(constants$116.const$5,"SDL_GetWindowOpacity");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetWindowOpacity(struct SDL_Window* window, float* out_opacity);
+     * }
+     */
+    public static int SDL_GetWindowOpacity(MemorySegment window, MemorySegment out_opacity) {
+        var mh$ = SDL_GetWindowOpacity$MH();
+        try {
+            return (int)mh$.invokeExact(window, out_opacity);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowModalFor$MH() {
+        return RuntimeHelper.requireNonNull(constants$117.const$0,"SDL_SetWindowModalFor");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SetWindowModalFor(struct SDL_Window* modal_window, struct SDL_Window* parent_window);
+     * }
+     */
+    public static int SDL_SetWindowModalFor(MemorySegment modal_window, MemorySegment parent_window) {
+        var mh$ = SDL_SetWindowModalFor$MH();
+        try {
+            return (int)mh$.invokeExact(modal_window, parent_window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowInputFocus$MH() {
+        return RuntimeHelper.requireNonNull(constants$117.const$1,"SDL_SetWindowInputFocus");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SetWindowInputFocus(struct SDL_Window* window);
+     * }
+     */
+    public static int SDL_SetWindowInputFocus(MemorySegment window) {
+        var mh$ = SDL_SetWindowInputFocus$MH();
+        try {
+            return (int)mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetWindowGammaRamp$MH() {
+        return RuntimeHelper.requireNonNull(constants$117.const$2,"SDL_SetWindowGammaRamp");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SetWindowGammaRamp(struct SDL_Window* window, unsigned short* red, unsigned short* green, unsigned short* blue);
+     * }
+     */
+    public static int SDL_SetWindowGammaRamp(MemorySegment window, MemorySegment red, MemorySegment green, MemorySegment blue) {
+        var mh$ = SDL_SetWindowGammaRamp$MH();
+        try {
+            return (int)mh$.invokeExact(window, red, green, blue);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetWindowGammaRamp$MH() {
+        return RuntimeHelper.requireNonNull(constants$117.const$3,"SDL_GetWindowGammaRamp");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetWindowGammaRamp(struct SDL_Window* window, unsigned short* red, unsigned short* green, unsigned short* blue);
+     * }
+     */
+    public static int SDL_GetWindowGammaRamp(MemorySegment window, MemorySegment red, MemorySegment green, MemorySegment blue) {
+        var mh$ = SDL_GetWindowGammaRamp$MH();
+        try {
+            return (int)mh$.invokeExact(window, red, green, blue);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    /**
+     * {@snippet :
+     * enum SDL_HitTestResult.SDL_HITTEST_NORMAL = 0;
+     * }
+     */
+    public static int SDL_HITTEST_NORMAL() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_HitTestResult.SDL_HITTEST_DRAGGABLE = 1;
+     * }
+     */
+    public static int SDL_HITTEST_DRAGGABLE() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_HitTestResult.SDL_HITTEST_RESIZE_TOPLEFT = 2;
+     * }
+     */
+    public static int SDL_HITTEST_RESIZE_TOPLEFT() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_HitTestResult.SDL_HITTEST_RESIZE_TOP = 3;
+     * }
+     */
+    public static int SDL_HITTEST_RESIZE_TOP() {
+        return (int)3L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_HitTestResult.SDL_HITTEST_RESIZE_TOPRIGHT = 4;
+     * }
+     */
+    public static int SDL_HITTEST_RESIZE_TOPRIGHT() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_HitTestResult.SDL_HITTEST_RESIZE_RIGHT = 5;
+     * }
+     */
+    public static int SDL_HITTEST_RESIZE_RIGHT() {
+        return (int)5L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_HitTestResult.SDL_HITTEST_RESIZE_BOTTOMRIGHT = 6;
+     * }
+     */
+    public static int SDL_HITTEST_RESIZE_BOTTOMRIGHT() {
+        return (int)6L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_HitTestResult.SDL_HITTEST_RESIZE_BOTTOM = 7;
+     * }
+     */
+    public static int SDL_HITTEST_RESIZE_BOTTOM() {
+        return (int)7L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_HitTestResult.SDL_HITTEST_RESIZE_BOTTOMLEFT = 8;
+     * }
+     */
+    public static int SDL_HITTEST_RESIZE_BOTTOMLEFT() {
+        return (int)8L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_HitTestResult.SDL_HITTEST_RESIZE_LEFT = 9;
+     * }
+     */
+    public static int SDL_HITTEST_RESIZE_LEFT() {
+        return (int)9L;
+    }
+    public static MethodHandle SDL_SetWindowHitTest$MH() {
+        return RuntimeHelper.requireNonNull(constants$118.const$1,"SDL_SetWindowHitTest");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SetWindowHitTest(struct SDL_Window* window, enum SDL_HitTestResult (*callback)(struct SDL_Window*,struct SDL_Point*,void*), void* callback_data);
+     * }
+     */
+    public static int SDL_SetWindowHitTest(MemorySegment window, MemorySegment callback, MemorySegment callback_data) {
+        var mh$ = SDL_SetWindowHitTest$MH();
+        try {
+            return (int)mh$.invokeExact(window, callback, callback_data);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_FlashWindow$MH() {
+        return RuntimeHelper.requireNonNull(constants$118.const$2,"SDL_FlashWindow");
+    }
+    /**
+     * {@snippet :
+     * int SDL_FlashWindow(struct SDL_Window* window, enum SDL_FlashOperation operation);
+     * }
+     */
+    public static int SDL_FlashWindow(MemorySegment window, int operation) {
+        var mh$ = SDL_FlashWindow$MH();
+        try {
+            return (int)mh$.invokeExact(window, operation);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_DestroyWindow$MH() {
+        return RuntimeHelper.requireNonNull(constants$118.const$3,"SDL_DestroyWindow");
+    }
+    /**
+     * {@snippet :
+     * void SDL_DestroyWindow(struct SDL_Window* window);
+     * }
+     */
+    public static void SDL_DestroyWindow(MemorySegment window) {
+        var mh$ = SDL_DestroyWindow$MH();
+        try {
+            mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_IsScreenSaverEnabled$MH() {
+        return RuntimeHelper.requireNonNull(constants$118.const$4,"SDL_IsScreenSaverEnabled");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_IsScreenSaverEnabled();
+     * }
+     */
+    public static int SDL_IsScreenSaverEnabled() {
+        var mh$ = SDL_IsScreenSaverEnabled$MH();
+        try {
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_EnableScreenSaver$MH() {
+        return RuntimeHelper.requireNonNull(constants$118.const$5,"SDL_EnableScreenSaver");
+    }
+    /**
+     * {@snippet :
+     * void SDL_EnableScreenSaver();
+     * }
+     */
+    public static void SDL_EnableScreenSaver() {
+        var mh$ = SDL_EnableScreenSaver$MH();
+        try {
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_DisableScreenSaver$MH() {
+        return RuntimeHelper.requireNonNull(constants$119.const$0,"SDL_DisableScreenSaver");
+    }
+    /**
+     * {@snippet :
+     * void SDL_DisableScreenSaver();
+     * }
+     */
+    public static void SDL_DisableScreenSaver() {
+        var mh$ = SDL_DisableScreenSaver$MH();
+        try {
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GL_LoadLibrary$MH() {
+        return RuntimeHelper.requireNonNull(constants$119.const$1,"SDL_GL_LoadLibrary");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GL_LoadLibrary(char* path);
+     * }
+     */
+    public static int SDL_GL_LoadLibrary(MemorySegment path) {
+        var mh$ = SDL_GL_LoadLibrary$MH();
+        try {
+            return (int)mh$.invokeExact(path);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GL_GetProcAddress$MH() {
+        return RuntimeHelper.requireNonNull(constants$119.const$2,"SDL_GL_GetProcAddress");
+    }
+    /**
+     * {@snippet :
+     * void* SDL_GL_GetProcAddress(char* proc);
+     * }
+     */
+    public static MemorySegment SDL_GL_GetProcAddress(MemorySegment proc) {
+        var mh$ = SDL_GL_GetProcAddress$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(proc);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GL_UnloadLibrary$MH() {
+        return RuntimeHelper.requireNonNull(constants$119.const$3,"SDL_GL_UnloadLibrary");
+    }
+    /**
+     * {@snippet :
+     * void SDL_GL_UnloadLibrary();
+     * }
+     */
+    public static void SDL_GL_UnloadLibrary() {
+        var mh$ = SDL_GL_UnloadLibrary$MH();
+        try {
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GL_ExtensionSupported$MH() {
+        return RuntimeHelper.requireNonNull(constants$119.const$4,"SDL_GL_ExtensionSupported");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_GL_ExtensionSupported(char* extension);
+     * }
+     */
+    public static int SDL_GL_ExtensionSupported(MemorySegment extension) {
+        var mh$ = SDL_GL_ExtensionSupported$MH();
+        try {
+            return (int)mh$.invokeExact(extension);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GL_ResetAttributes$MH() {
+        return RuntimeHelper.requireNonNull(constants$119.const$5,"SDL_GL_ResetAttributes");
+    }
+    /**
+     * {@snippet :
+     * void SDL_GL_ResetAttributes();
+     * }
+     */
+    public static void SDL_GL_ResetAttributes() {
+        var mh$ = SDL_GL_ResetAttributes$MH();
+        try {
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GL_SetAttribute$MH() {
+        return RuntimeHelper.requireNonNull(constants$120.const$0,"SDL_GL_SetAttribute");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GL_SetAttribute(enum SDL_GLattr attr, int value);
+     * }
+     */
+    public static int SDL_GL_SetAttribute(int attr, int value) {
+        var mh$ = SDL_GL_SetAttribute$MH();
+        try {
+            return (int)mh$.invokeExact(attr, value);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GL_GetAttribute$MH() {
+        return RuntimeHelper.requireNonNull(constants$120.const$1,"SDL_GL_GetAttribute");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GL_GetAttribute(enum SDL_GLattr attr, int* value);
+     * }
+     */
+    public static int SDL_GL_GetAttribute(int attr, MemorySegment value) {
+        var mh$ = SDL_GL_GetAttribute$MH();
+        try {
+            return (int)mh$.invokeExact(attr, value);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GL_CreateContext$MH() {
+        return RuntimeHelper.requireNonNull(constants$120.const$2,"SDL_GL_CreateContext");
+    }
+    /**
+     * {@snippet :
+     * void* SDL_GL_CreateContext(struct SDL_Window* window);
+     * }
+     */
+    public static MemorySegment SDL_GL_CreateContext(MemorySegment window) {
+        var mh$ = SDL_GL_CreateContext$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GL_MakeCurrent$MH() {
+        return RuntimeHelper.requireNonNull(constants$120.const$3,"SDL_GL_MakeCurrent");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GL_MakeCurrent(struct SDL_Window* window, void* context);
+     * }
+     */
+    public static int SDL_GL_MakeCurrent(MemorySegment window, MemorySegment context) {
+        var mh$ = SDL_GL_MakeCurrent$MH();
+        try {
+            return (int)mh$.invokeExact(window, context);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GL_GetCurrentWindow$MH() {
+        return RuntimeHelper.requireNonNull(constants$120.const$4,"SDL_GL_GetCurrentWindow");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_Window* SDL_GL_GetCurrentWindow();
+     * }
+     */
+    public static MemorySegment SDL_GL_GetCurrentWindow() {
+        var mh$ = SDL_GL_GetCurrentWindow$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GL_GetCurrentContext$MH() {
+        return RuntimeHelper.requireNonNull(constants$120.const$5,"SDL_GL_GetCurrentContext");
+    }
+    /**
+     * {@snippet :
+     * void* SDL_GL_GetCurrentContext();
+     * }
+     */
+    public static MemorySegment SDL_GL_GetCurrentContext() {
+        var mh$ = SDL_GL_GetCurrentContext$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GL_GetDrawableSize$MH() {
+        return RuntimeHelper.requireNonNull(constants$121.const$0,"SDL_GL_GetDrawableSize");
+    }
+    /**
+     * {@snippet :
+     * void SDL_GL_GetDrawableSize(struct SDL_Window* window, int* w, int* h);
+     * }
+     */
+    public static void SDL_GL_GetDrawableSize(MemorySegment window, MemorySegment w, MemorySegment h) {
+        var mh$ = SDL_GL_GetDrawableSize$MH();
+        try {
+            mh$.invokeExact(window, w, h);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GL_SetSwapInterval$MH() {
+        return RuntimeHelper.requireNonNull(constants$121.const$1,"SDL_GL_SetSwapInterval");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GL_SetSwapInterval(int interval);
+     * }
+     */
+    public static int SDL_GL_SetSwapInterval(int interval) {
+        var mh$ = SDL_GL_SetSwapInterval$MH();
+        try {
+            return (int)mh$.invokeExact(interval);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GL_GetSwapInterval$MH() {
+        return RuntimeHelper.requireNonNull(constants$121.const$2,"SDL_GL_GetSwapInterval");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GL_GetSwapInterval();
+     * }
+     */
+    public static int SDL_GL_GetSwapInterval() {
+        var mh$ = SDL_GL_GetSwapInterval$MH();
+        try {
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GL_SwapWindow$MH() {
+        return RuntimeHelper.requireNonNull(constants$121.const$3,"SDL_GL_SwapWindow");
+    }
+    /**
+     * {@snippet :
+     * void SDL_GL_SwapWindow(struct SDL_Window* window);
+     * }
+     */
+    public static void SDL_GL_SwapWindow(MemorySegment window) {
+        var mh$ = SDL_GL_SwapWindow$MH();
+        try {
+            mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GL_DeleteContext$MH() {
+        return RuntimeHelper.requireNonNull(constants$121.const$4,"SDL_GL_DeleteContext");
+    }
+    /**
+     * {@snippet :
+     * void SDL_GL_DeleteContext(void* context);
+     * }
+     */
+    public static void SDL_GL_DeleteContext(MemorySegment context) {
+        var mh$ = SDL_GL_DeleteContext$MH();
+        try {
+            mh$.invokeExact(context);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    /**
+     * {@snippet :
      * #define WINAPI_FAMILY_WINRT 0
      * }
      */
@@ -7145,7 +11359,7 @@ public class SDL_gamecontroller_h  {
      * }
      */
     public static MemorySegment SDL_PRIs64() {
-        return constants$79.const$4;
+        return constants$124.const$5;
     }
     /**
      * {@snippet :
@@ -7153,7 +11367,7 @@ public class SDL_gamecontroller_h  {
      * }
      */
     public static MemorySegment SDL_PRIu64() {
-        return constants$79.const$5;
+        return constants$125.const$0;
     }
     /**
      * {@snippet :
@@ -7161,7 +11375,7 @@ public class SDL_gamecontroller_h  {
      * }
      */
     public static MemorySegment SDL_PRIx64() {
-        return constants$80.const$0;
+        return constants$125.const$1;
     }
     /**
      * {@snippet :
@@ -7169,7 +11383,7 @@ public class SDL_gamecontroller_h  {
      * }
      */
     public static MemorySegment SDL_PRIX64() {
-        return constants$80.const$1;
+        return constants$125.const$2;
     }
     /**
      * {@snippet :
@@ -7177,7 +11391,7 @@ public class SDL_gamecontroller_h  {
      * }
      */
     public static MemorySegment SDL_PRIs32() {
-        return constants$80.const$2;
+        return constants$125.const$3;
     }
     /**
      * {@snippet :
@@ -7185,7 +11399,7 @@ public class SDL_gamecontroller_h  {
      * }
      */
     public static MemorySegment SDL_PRIu32() {
-        return constants$80.const$3;
+        return constants$125.const$4;
     }
     /**
      * {@snippet :
@@ -7193,7 +11407,7 @@ public class SDL_gamecontroller_h  {
      * }
      */
     public static MemorySegment SDL_PRIx32() {
-        return constants$80.const$4;
+        return constants$125.const$5;
     }
     /**
      * {@snippet :
@@ -7201,7 +11415,7 @@ public class SDL_gamecontroller_h  {
      * }
      */
     public static MemorySegment SDL_PRIX32() {
-        return constants$80.const$5;
+        return constants$126.const$0;
     }
     /**
      * {@snippet :
@@ -7346,6 +11560,38 @@ public class SDL_gamecontroller_h  {
      */
     public static int SDL_HAT_LEFTDOWN() {
         return (int)12L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_WINDOWPOS_UNDEFINED_MASK 536805376
+     * }
+     */
+    public static int SDL_WINDOWPOS_UNDEFINED_MASK() {
+        return (int)536805376L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_WINDOWPOS_UNDEFINED 536805376
+     * }
+     */
+    public static int SDL_WINDOWPOS_UNDEFINED() {
+        return (int)536805376L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_WINDOWPOS_CENTERED_MASK 805240832
+     * }
+     */
+    public static int SDL_WINDOWPOS_CENTERED_MASK() {
+        return (int)805240832L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_WINDOWPOS_CENTERED 805240832
+     * }
+     */
+    public static int SDL_WINDOWPOS_CENTERED() {
+        return (int)805240832L;
     }
 }
 
