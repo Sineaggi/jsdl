@@ -1,13 +1,13 @@
 package sdl.render;
 
-import sdl.SdlException;
+import sdl.*;
 import sdl.video.Window;
 
+import java.lang.foreign.Arena;
 import java.lang.foreign.MemorySegment;
 
-import static sdl.Cause.CreateRenderer;
-import static sdl.jextract.SDL_subset_h_1.SDL_CreateRenderer;
-import static sdl.jextract.SDL_subset_h_1.SDL_RenderSetLogicalSize;
+import static sdl.Cause.*;
+import static sdl.jextract.SDL_subset_h_1.*;
 
 public class Renderer {
     private final MemorySegment renderer;
@@ -26,5 +26,46 @@ public class Renderer {
     public void setLogicalSize(int w, int h) {
         // todo: handle response code
         SDL_RenderSetLogicalSize(renderer, w, h);
+    }
+
+    public void setDrawColor(byte r, byte g, byte b, byte a) {
+        if (SDL_SetRenderDrawColor(renderer, r, g, b, a) != 0) {
+            throw new SdlException(SetRenderDrawColor);
+        }
+    }
+
+    public void clear() {
+        if (SDL_RenderClear(renderer) != 0) {
+            throw new SdlException(RenderClear);
+        }
+    }
+
+    public void present() {
+        SDL_RenderPresent(renderer);
+    }
+
+    public void copy(Texture texture, Rect srcRect, Rect dstRect, double angle, Point center, RendererFlip flip) {
+        try (var arena = Arena.ofConfined()) {
+            SDL_RenderCopyEx(
+                    renderer,
+                    texture.texture(),
+                    srcRect == null ? MemorySegment.NULL : srcRect.allocateAndFill(arena),
+                    dstRect == null ? MemorySegment.NULL : dstRect.allocateAndFill(arena),
+                    angle,
+                    center == null ? MemorySegment.NULL : center.allocateAndFill(arena),
+                    flip.value()
+            );
+        }
+    }
+
+    public void copy(Texture texture, Rect srcRect, Rect dstRect) {
+        try (var arena = Arena.ofConfined()) {
+            SDL_RenderCopy(
+                    renderer,
+                    texture.texture(),
+                    srcRect == null ? MemorySegment.NULL : srcRect.allocateAndFill(arena),
+                    dstRect == null ? MemorySegment.NULL : dstRect.allocateAndFill(arena)
+            );
+        }
     }
 }

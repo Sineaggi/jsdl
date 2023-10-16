@@ -1,6 +1,8 @@
 package sdl.gamecontroller;
 
 import sdl.Cause;
+import sdl.GameControllerAxis;
+import sdl.GameControllerButton;
 import sdl.SdlException;
 import sdl.events.GeneralInputStateDefinitions;
 import sdl.joystick.Joystick;
@@ -8,6 +10,7 @@ import sdl.joystick.Joystick;
 import java.lang.foreign.Arena;
 import java.lang.foreign.MemorySegment;
 import java.lang.foreign.ValueLayout;
+import java.time.Duration;
 
 import static sdl.internal.Util.stringOrNull;
 import static sdl.jextract.SDL_subset_h.*;
@@ -105,7 +108,31 @@ public class GameController implements AutoCloseable {
         return SDL_GameControllerSendEffect(gameController, data, (int) data.byteSize());
     }
 
-    public GeneralInputStateDefinitions getButton(int button) {
-        return GeneralInputStateDefinitions.valueOf(SDL_GameControllerGetButton(gameController, button));
+    public GeneralInputStateDefinitions getButton(GameControllerButton button) {
+        return GeneralInputStateDefinitions.valueOf(SDL_GameControllerGetButton(gameController, button.value()));
+    }
+
+    public short getAxis(GameControllerAxis axis) {
+        return SDL_GameControllerGetAxis(gameController, axis.value());
+    }
+
+    public int setLed(byte r, byte g, byte b) {
+        return SDL_GameControllerSetLED(gameController, r, g, b);
+    }
+
+    public int rumbleTriggers(short leftRumble, short rightRumble, int durationMs) {
+        return SDL_GameControllerRumbleTriggers(gameController, leftRumble, rightRumble, durationMs);
+    }
+
+    public int rumbleTriggers(short leftRumble, short rightRumble, Duration duration) {
+        return SDL_GameControllerRumbleTriggers(gameController, leftRumble, rightRumble, (int) duration.toMillis());
+    }
+
+    public int rumble(short lowFrequencyRumble, short highFrequencyRumble, int durationMs) {
+        return SDL_GameControllerRumble(gameController, lowFrequencyRumble, highFrequencyRumble, durationMs);
+    }
+
+    public int rumble(short lowFrequencyRumble, short highFrequencyRumble, Duration duration) {
+        return SDL_GameControllerRumble(gameController, lowFrequencyRumble, highFrequencyRumble, (int) duration.toMillis());
     }
 }

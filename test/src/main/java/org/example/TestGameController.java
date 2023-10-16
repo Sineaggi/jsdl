@@ -2,6 +2,8 @@ package org.example;
 
 import sdl.*;
 import sdl.events.GeneralInputStateDefinitions;
+import sdl.events.button.MouseButtonDown;
+import sdl.events.button.MouseButtonUp;
 import sdl.events.controllerdevice.ControllerDeviceAdded;
 import sdl.events.controllerdevice.ControllerDeviceRemoved;
 import sdl.events.Event;
@@ -24,9 +26,13 @@ import java.lang.foreign.Arena;
 import java.lang.foreign.MemoryLayout;
 import java.lang.foreign.StructLayout;
 import java.lang.invoke.VarHandle;
+import java.time.Duration;
+import java.util.List;
 import java.util.Set;
 
 import static java.lang.foreign.ValueLayout.JAVA_BYTE;
+import static java.util.FormatProcessor.FMT;
+import static sdl.jextract.SDL_subset_h.*;
 
 /*
   Copyright (C) 1997-2023 Sam Lantinga <slouken@libsdl.org>
@@ -41,10 +47,10 @@ import static java.lang.foreign.ValueLayout.JAVA_BYTE;
 */
 
 /* Simple program to test the SDL game controller routines */
-public static class TestGameController {
+public class TestGameController {
 
-    private static final boolean VERBOSE_SENSORS = false;
-    private static final boolean VERBOSE_AXES = false;
+    private static boolean VERBOSE_SENSORS = false;
+    private static boolean VERBOSE_AXES = false;
 
     private static final int SCREEN_WIDTH = 512;
     private static final int SCREEN_HEIGHT = 320;
@@ -53,61 +59,60 @@ public static class TestGameController {
     private static final int AXIS_SIZE = 50;
 
     /* This is indexed by SDL_GameControllerButton. */
-    static const struct
-    {
-        int x;
-        int y;
-    } button_positions[] = {
-        { 387, 167 }, /* SDL_CONTROLLER_BUTTON_A */
-        { 431, 132 }, /* SDL_CONTROLLER_BUTTON_B */
-        { 342, 132 }, /* SDL_CONTROLLER_BUTTON_X */
-        { 389, 101 }, /* SDL_CONTROLLER_BUTTON_Y */
-        { 174, 132 }, /* SDL_CONTROLLER_BUTTON_BACK */
-        { 232, 128 }, /* SDL_CONTROLLER_BUTTON_GUIDE */
-        { 289, 132 }, /* SDL_CONTROLLER_BUTTON_START */
-        { 75, 154 },  /* SDL_CONTROLLER_BUTTON_LEFTSTICK */
-        { 305, 230 }, /* SDL_CONTROLLER_BUTTON_RIGHTSTICK */
-        { 77, 40 },   /* SDL_CONTROLLER_BUTTON_LEFTSHOULDER */
-        { 396, 36 },  /* SDL_CONTROLLER_BUTTON_RIGHTSHOULDER */
-        { 154, 188 }, /* SDL_CONTROLLER_BUTTON_DPAD_UP */
-        { 154, 249 }, /* SDL_CONTROLLER_BUTTON_DPAD_DOWN */
-        { 116, 217 }, /* SDL_CONTROLLER_BUTTON_DPAD_LEFT */
-        { 186, 217 }, /* SDL_CONTROLLER_BUTTON_DPAD_RIGHT */
-        { 232, 174 }, /* SDL_CONTROLLER_BUTTON_MISC1 */
-        { 132, 135 }, /* SDL_CONTROLLER_BUTTON_PADDLE1 */
-        { 330, 135 }, /* SDL_CONTROLLER_BUTTON_PADDLE2 */
-        { 132, 175 }, /* SDL_CONTROLLER_BUTTON_PADDLE3 */
-        { 330, 175 }, /* SDL_CONTROLLER_BUTTON_PADDLE4 */
-        { 0, 0 },     /* SDL_CONTROLLER_BUTTON_TOUCHPAD */
+    record ButtonPosition(int x, int y) {}
+    final static ButtonPosition[] BUTTON_POSITIONS = {
+            new ButtonPosition(387, 167), /* SDL_CONTROLLER_BUTTON_A */
+            new ButtonPosition(431, 132), /* SDL_CONTROLLER_BUTTON_B */
+            new ButtonPosition(342, 132), /* SDL_CONTROLLER_BUTTON_X */
+            new ButtonPosition(389, 101), /* SDL_CONTROLLER_BUTTON_Y */
+            new ButtonPosition(174, 132), /* SDL_CONTROLLER_BUTTON_BACK */
+            new ButtonPosition(232, 128), /* SDL_CONTROLLER_BUTTON_GUIDE */
+            new ButtonPosition(289, 132), /* SDL_CONTROLLER_BUTTON_START */
+            new ButtonPosition(75, 154),  /* SDL_CONTROLLER_BUTTON_LEFTSTICK */
+            new ButtonPosition(305, 230), /* SDL_CONTROLLER_BUTTON_RIGHTSTICK */
+            new ButtonPosition(77, 40),   /* SDL_CONTROLLER_BUTTON_LEFTSHOULDER */
+            new ButtonPosition(396, 36),  /* SDL_CONTROLLER_BUTTON_RIGHTSHOULDER */
+            new ButtonPosition(154, 188), /* SDL_CONTROLLER_BUTTON_DPAD_UP */
+            new ButtonPosition(154, 249), /* SDL_CONTROLLER_BUTTON_DPAD_DOWN */
+            new ButtonPosition(116, 217), /* SDL_CONTROLLER_BUTTON_DPAD_LEFT */
+            new ButtonPosition(186, 217), /* SDL_CONTROLLER_BUTTON_DPAD_RIGHT */
+            new ButtonPosition(232, 174), /* SDL_CONTROLLER_BUTTON_MISC1 */
+            new ButtonPosition(132, 135), /* SDL_CONTROLLER_BUTTON_PADDLE1 */
+            new ButtonPosition(330, 135), /* SDL_CONTROLLER_BUTTON_PADDLE2 */
+            new ButtonPosition(132, 175), /* SDL_CONTROLLER_BUTTON_PADDLE3 */
+            new ButtonPosition(330, 175), /* SDL_CONTROLLER_BUTTON_PADDLE4 */
+            new ButtonPosition(0, 0),     /* SDL_CONTROLLER_BUTTON_TOUCHPAD */
     };
-    SDL_COMPILE_TIME_ASSERT(button_positions, SDL_arraysize(button_positions) == SDL_CONTROLLER_BUTTON_MAX);
+    static {
+        assert(BUTTON_POSITIONS.length == GameControllerButton.Max.value());
+    }
 
     /* This is indexed by SDL_GameControllerAxis. */
-    static const struct
-    {
-        int x;
-        int y;
-        double angle;
-    } axisPositions[] = {
-        { 74, 153, 270.0 },  /* LEFTX */
-        { 74, 153, 0.0 },    /* LEFTY */
-        { 306, 231, 270.0 }, /* RIGHTX */
-        { 306, 231, 0.0 },   /* RIGHTY */
-        { 91, -20, 0.0 },    /* TRIGGERLEFT */
-        { 375, -20, 0.0 },   /* TRIGGERRIGHT */
+    record AxisPosition(int x, int y, double angle) {}
+    final static AxisPosition[] AXIS_POSITIONS = {
+            new AxisPosition(74, 153, 270.0), /* LEFTX */
+            new AxisPosition( 74, 153, 0.0 ),   /* LEFTY */
+            new AxisPosition( 306, 231, 270.0 ),/* RIGHTX */
+            new AxisPosition( 306, 231, 0.0 ),  /* RIGHTY */
+            new AxisPosition( 91, -20, 0.0),    /* TRIGGERLEFT */
+            new AxisPosition( 375, -20, 0.0)   /* TRIGGERRIGHT */
     };
-    SDL_COMPILE_TIME_ASSERT(axisPositions, SDL_arraysize(axisPositions) == SDL_CONTROLLER_AXIS_MAX);
+    static {
+        assert(AXIS_POSITIONS.length == GameControllerAxis.Max.value());
+    }
 
     /* This is indexed by SDL_JoystickPowerLevel + 1. */
-    static const char *power_level_strings[] = {
+    final static String[] POWER_LEVEL_STRINGS = {
         "unknown", /* SDL_JOYSTICK_POWER_UNKNOWN */
                 "empty",   /* SDL_JOYSTICK_POWER_EMPTY */
                 "low",     /* SDL_JOYSTICK_POWER_LOW */
                 "medium",  /* SDL_JOYSTICK_POWER_MEDIUM */
                 "full",    /* SDL_JOYSTICK_POWER_FULL */
-                "wired",   /* SDL_JOYSTICK_POWER_WIRED */
+                "wired"   /* SDL_JOYSTICK_POWER_WIRED */
     };
-    SDL_COMPILE_TIME_ASSERT(power_level_strings, SDL_arraysize(power_level_strings) == SDL_JOYSTICK_POWER_MAX + 1);
+    static {
+        // todo: SDL_COMPILE_TIME_ASSERT(POWER_LEVEL_STRINGS, SDL_arraysize(POWER_LEVEL_STRINGS) == SDL_JOYSTICK_POWER_MAX + 1);
+    }
 
     private Window window = null;
     private Renderer screen = null;
@@ -115,7 +120,7 @@ public static class TestGameController {
     private boolean done = false;
     private boolean set_LED = false;
     static int triggerEffect = 0;
-    static Texture background_front, background_back, button_texture, axis_texture;
+    static Texture background_front, background_back, buttonTexture, axisTexture;
     private GameController gameController;
     private GameController[] gameControllers;
     private int numControllers = 0;
@@ -135,28 +140,21 @@ public static class TestGameController {
             String name = gameController.name();
             String serial = gameController.getSerial();
             String baseTitle = "Game Controller Test: ";
-        // const char *name = SDL_GameControllerName(gameController);
-        // const char *serial = SDL_GameControllerGetSerial(gameController);
-        // const char *basetitle = "Game Controller Test: ";
-        const size_t titlelen = SDL_strlen(basetitle) + (name ? SDL_strlen(name) : 0) + (serial ? 3 + SDL_strlen(serial) : 0) + 1;
-            char *title = (char *)SDL_malloc(titlelen);
-
+            String title;
             retval = false;
             done = false;
 
-            if (title) {
-                SDL_strlcpy(title, basetitle, titlelen);
-                if (name) {
-                    SDL_strlcat(title, name, titlelen);
-                }
-                if (serial) {
-                    SDL_strlcat(title, " (", titlelen);
-                    SDL_strlcat(title, serial, titlelen);
-                    SDL_strlcat(title, ")", titlelen);
-                }
-                SDL_SetWindowTitle(window, title);
-                SDL_free(title);
+            title = baseTitle;
+            if (name != null) {
+                title += name;
             }
+            if (serial != null) {
+                title += " (";
+                title += serial;
+                title += ")";
+            }
+
+            window.setWindowTitle(title);
         } else {
             window.setWindowTitle("Waiting for controller...");
         }
@@ -191,7 +189,6 @@ public static class TestGameController {
     void addController(int deviceIndex, boolean verbose)
     {
         JoystickId controllerId = Joystick.getDeviceInstanceId(deviceIndex);
-        //SDL_JoystickID controller_id = SDL_JoystickGetDeviceInstanceID(device_index);
         GameController controller;
         GameController[] controllers;
         short firmware_version;
@@ -298,9 +295,9 @@ public static class TestGameController {
     short convertAxisToRumble(short axisval)
     {
         /* Only start rumbling if the axis is past the halfway point */
-    const short half_axis = (short)SDL_ceil(SDL_JOYSTICK_AXIS_MAX / 2.0f);
+        short half_axis = (short) Math.ceil(Joystick.AXIS_MAX / 2.0f);
         if (axisval > half_axis) {
-            return (Uint16)(axisval - half_axis) * 4;
+            return (short) ((axisval - half_axis) * 4);
         } else {
             return 0;
         }
@@ -339,7 +336,7 @@ public static class TestGameController {
             var state = arena.allocate(ds5EffectsState);
             // DS5EffectsState_t state;
 
-            Uint8 effects[ 3][11] ={
+            byte effects[ 3][11] ={
                 /* Clear trigger effect */
                 {
                     0x05, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
@@ -375,11 +372,7 @@ public static class TestGameController {
 
         if (gameController != null) {
             /* Show the back of the controller if the paddles are being held */
-            for (i = SDL_CONTROLLER_BUTTON_PADDLE1; i <= SDL_CONTROLLER_BUTTON_PADDLE4; ++i) {
-                // if (SDL_GameControllerGetButton(gameController, (SDL_GameControllerButton)i) == SDL_PRESSED) {
-                //     showingFront = false;
-                //     break;
-                // }
+            for (i = GameControllerButton.Paddle1.value(); i <= GameControllerButton.Paddle4.value(); ++i) {
                 if (gameController.getButton(i) == GeneralInputStateDefinitions.Pressed) {
                     showingFront = false;
                     break;
@@ -452,9 +445,9 @@ public static class TestGameController {
             }
         }
 
-        if (virtualJoystick) {
-            SDL_JoystickClose(virtualJoystick);
-            virtualJoystick = NULL;
+        if (virtualJoystick != null) {
+            virtualJoystick.close();
+            virtualJoystick = null;
         }
     }
 
@@ -464,13 +457,12 @@ public static class TestGameController {
         int i;
         boolean showingFront = showingFront();
 
-        point.x = x;
-        point.y = y;
+        point = new Point(x, y);
         for (i = 0; i < GameControllerButton.Touchpad.value(); ++i) {
             boolean onFront = (i < GameControllerButton.Paddle1.value() || i > GameControllerButton.Paddle4.value());
             if (onFront == showingFront) {
-                Rect rect = new Rect(buttonPositions[i].x, buttonPositions[i].y, BUTTON_SIZE, BUTTON_SIZE);
-                if (SDL_PointInRect(&point, &rect)) {
+                Rect rect = new Rect(BUTTON_POSITIONS[i].x, BUTTON_POSITIONS[i].y, BUTTON_SIZE, BUTTON_SIZE);
+                if (point.in(rect)) {
                     return GameControllerButton.valueOf(i);
                 }
             }
@@ -484,16 +476,11 @@ public static class TestGameController {
         int i;
         boolean showing_front = showingFront();
 
-        point.x = x;
-        point.y = y;
+        point = new Point(x, y);
         for (i = 0; i < GameControllerAxis.Max.value(); ++i) {
             if (showing_front) {
-                SDL_Rect rect;
-                rect.x = axisPositions[i].x;
-                rect.y = axisPositions[i].y;
-                rect.w = AXIS_SIZE;
-                rect.h = AXIS_SIZE;
-                if (SDL_PointInRect(&point, &rect)) {
+                Rect rect = new Rect(AXIS_POSITIONS[i].x, AXIS_POSITIONS[i].y, AXIS_SIZE, AXIS_SIZE);
+                if (point.in(rect)) {
                     return GameControllerAxis.valueOf(i);
                 }
             }
@@ -537,7 +524,7 @@ public static class TestGameController {
                     valueY = (short)(distanceY * -Joystick.AXIS_MIN);
                 }
                 virtualJoystick.setVirtualAxis(virtualAxisActive, valueX);
-                virtualJoystick.setVirtualAxis(GameControllerAxis.valueOf(virtualAxisActive.value() + 1), valueX);
+                virtualJoystick.setVirtualAxis(GameControllerAxis.valueOf(virtualAxisActive.value() + 1), valueY);
             }
         }
     }
@@ -580,8 +567,7 @@ public static class TestGameController {
         }
     }
 
-    void loop()
-    {
+    void loop() throws InterruptedException {
         Event event;
         int i;
         boolean showingFront;
@@ -589,55 +575,30 @@ public static class TestGameController {
         /* Update to get the current event state */
         Event.pumpEvents();
 
+        List<Event> events;
         /* Process all currently pending events */
-        while (SDL_PeepEvents(&event, 1, SDL_GETEVENT, SDL_FIRSTEVENT, SDL_LASTEVENT) == 1) {
-            switch(event) {
-                case ControllerDeviceAdded controllerDeviceAdded -> {
-                    System.out.printf("Game controller device %s added.\n", Joystick.getDeviceInstanceId(controllerDeviceAdded.which()).toString());
-                    addController(controllerDeviceAdded.which(), true);
+        while ((events = Event.peepEvents(1, SDL_GETEVENT(), SDL_FIRSTEVENT(), SDL_LASTEVENT())).size() == 1) {
+            event = events.getFirst();
+            switch (event) {
+                case ControllerDeviceAdded(int which) -> {
+                    System.out.println(STR."Game controller device \{Joystick.getDeviceInstanceId(which)} added.");
+                    addController(which, true);
                 }
-                case ControllerDeviceRemoved controllerDeviceRemoved -> {
-                    System.out.printf("Game controller device %s removed.\n", controllerDeviceRemoved.which());
-                    delController(controllerDeviceRemoved.which());
+                case ControllerDeviceRemoved(JoystickId which) -> {
+                    System.out.println(STR."Game controller device \{which} removed.");
+                    delController(which);
                 }
-                case ControllerTouchpadDown controllerTouchpadDown -> {
-                    System.out.printf("Controller %" SDL_PRIs32 " touchpad %" SDL_PRIs32 " finger %" SDL_PRIs32 " %s %.2f, %.2f, %.2f\n",
-                            controllerTouchpadDown.which(),
-                            controllerTouchpadDown.touchpad(),
-                            controllerTouchpadDown.finger(),
-                            "pressed at",
-                            controllerTouchpadDown.x(),
-                            controllerTouchpadDown.y(),
-                            controllerTouchpadDown.pressure());
+                case ControllerTouchpadDown(int which, int touchpad, int finger, float x, float y, float pressure) -> {
+                    System.out.println(STR."Controller \{which} touchpad \{touchpad} finger \{finger} pressed at \{x}, \{y}, \{pressure}");
                 }
-                case ControllerTouchpadMotion controllerTouchpadMotion -> {
-                    System.out.printf("Controller %" SDL_PRIs32 " touchpad %" SDL_PRIs32 " finger %" SDL_PRIs32 " %s %.2f, %.2f, %.2f\n",
-                            controllerTouchpadMotion.which(),
-                            controllerTouchpadMotion.touchpad(),
-                            controllerTouchpadMotion.finger(),
-                            "moved to",
-                            controllerTouchpadMotion.x(),
-                            controllerTouchpadMotion.y(),
-                            controllerTouchpadMotion.pressure());
+                case ControllerTouchpadMotion(int which, int touchpad, int finger, float x, float y, float pressure) -> {
+                    System.out.println(STR."Controller \{which} touchpad \{touchpad} finger \{finger} moved to \{x}, \{y}, \{pressure}");
                 }
-                case ControllerTouchpadUp controllerTouchpadUp -> {
-                    System.out.printf("Controller %" SDL_PRIs32 " touchpad %" SDL_PRIs32 " finger %" SDL_PRIs32 " %s %.2f, %.2f, %.2f\n",
-                            controllerTouchpadUp.which(),
-                            controllerTouchpadUp.touchpad(),
-                            controllerTouchpadUp.finger(),
-                            "released at",
-                            controllerTouchpadUp.x(),
-                            controllerTouchpadUp.y(),
-                            controllerTouchpadUp.pressure());
+                case ControllerTouchpadUp(int which, int touchpad, int finger, float x, float y, float pressure) -> {
+                    System.out.println(STR."Controller \{which} touchpad \{touchpad} finger \{finger} released at \{x}, \{y}, \{pressure}");
                 }
-                case ControllerSensorUpdate controllerSensorUpdate when VERBOSE_SENSORS -> {
-                    System.out.printf("Controller %"SDL_PRIs32" sensor %s: %.2f, %.2f, %.2f (%"SDL_PRIu64")\n",
-                            controllerSensorUpdate.which(),
-                            GetSensorName((SDL_SensorType) event.csensor.sensor),
-                            controllerSensorUpdate.data()[0],
-                            controllerSensorUpdate.data()[1],
-                            controllerSensorUpdate.data()[2],
-                            controllerSensorUpdate.timestampUs());
+                case ControllerSensorUpdate(int which, SensorType sensor, float[] data, long timestampUs) when VERBOSE_SENSORS -> {
+                    System.out.println(FMT."Controller \{which} sensor \{getSensorName(sensor)}: %.2\{data[0]}, %.2\{data[1]}, %.2\{data[2]} (\"\{timestampUs}\")");
                 }
                 case ControllerAxisMotion controllerAxisMotion when VERBOSE_AXES -> {
                     if (event.caxis.value <= (-SDL_JOYSTICK_AXIS_MAX / 2) || event.caxis.value >= (SDL_JOYSTICK_AXIS_MAX / 2)) {
@@ -667,18 +628,18 @@ public static class TestGameController {
                 break;
 
             case SDL_JOYBATTERYUPDATED:
-                SDL_Log("Controller %" SDL_PRIs32 " battery state changed to %s\n", event.jbattery.which, power_level_strings[event.jbattery.level + 1]);
+                SDL_Log("Controller %" SDL_PRIs32 " battery state changed to %s\n", event.jbattery.which, POWER_LEVEL_STRINGS[event.jbattery.level + 1]);
                 break;
 
-            case SDL_MOUSEBUTTONDOWN:
+            case MouseButtonDown mouseButtonDown:
                 if (virtualJoystick != null) {
-                    virtualControllerMouseDown(event.button.x, event.button.y);
+                    virtualControllerMouseDown(mouseButtonDown.x(), mouseButtonDown.y());
                 }
                 break;
 
-            case SDL_MOUSEBUTTONUP:
+            case MouseButtonUp mouseButtonUp:
                 if (virtualJoystick != null) {
-                    virtualControllerMouseUp(event.button.x, event.button.y);
+                    virtualControllerMouseUp(mouseButtonUp.x(), mouseButtonUp.y());
                 }
                 break;
 
@@ -709,118 +670,101 @@ public static class TestGameController {
                     break;
                 }
                 SDL_FALLTHROUGH;
-            case Quit:
-                done = SDL_TRUE;
+            case Quit quit:
+                done = true;
                 break;
             default:
                 break;
         }
-    }
 
         showingFront = showingFront();
 
         /* blank screen, set up for drawing this frame. */
-        SDL_SetRenderDrawColor(screen, 0xFF, 0xFF, 0xFF, SDL_ALPHA_OPAQUE);
-        SDL_RenderClear(screen);
-        SDL_RenderCopy(screen, showingFront ? background_front : background_back, NULL, NULL);
+        screen.setDrawColor((byte) 0xFF, (byte) 0xFF, (byte) 0xFF, (byte) SDL_ALPHA_OPAQUE());
+        screen.clear();
+        screen.copy(showingFront ? background_front : background_back, null, null);
 
-        if (gameController) {
+        if (gameController != null) {
             /* Update visual controller state */
-            for (i = 0; i < SDL_CONTROLLER_BUTTON_TOUCHPAD; ++i) {
-                if (SDL_GameControllerGetButton(gameController, (SDL_GameControllerButton)i) == SDL_PRESSED) {
-                    SDL_bool on_front = (i < SDL_CONTROLLER_BUTTON_PADDLE1 || i > SDL_CONTROLLER_BUTTON_PADDLE4);
-                    if (on_front == showingFront) {
-                        SDL_Rect dst;
-                        dst.x = button_positions[i].x;
-                        dst.y = button_positions[i].y;
-                        dst.w = BUTTON_SIZE;
-                        dst.h = BUTTON_SIZE;
-                        SDL_RenderCopyEx(screen, button_texture, NULL, &dst, 0, NULL, SDL_FLIP_NONE);
+            for (i = 0; i < GameControllerButton.Touchpad.value(); ++i) {
+                if (gameController.getButton(GameControllerButton.valueOf(i)) == GeneralInputStateDefinitions.Pressed) {
+                    boolean onFront = (i < GameControllerButton.Paddle1.value() || i > GameControllerButton.Paddle4.value());
+                    if (onFront == showingFront) {
+                        Rect dst = new Rect(BUTTON_POSITIONS[i].x, BUTTON_POSITIONS[i].y, BUTTON_SIZE, BUTTON_SIZE);
+                        screen.copy(buttonTexture, null, dst, 0, null, RendererFlip.FlipNone);
                     }
                 }
             }
 
             if (showingFront) {
-                for (i = 0; i < SDL_CONTROLLER_AXIS_MAX; ++i) {
-                const short deadzone = 8000; /* !!! FIXME: real deadzone */
-                const short value = SDL_GameControllerGetAxis(gameController, (SDL_GameControllerAxis)(i));
+                for (i = 0; i < GameControllerAxis.Max.value(); ++i) {
+                    short deadzone = 8000; /* !!! FIXME: real deadzone */
+                    short value = gameController.getAxis(GameControllerAxis.valueOf(i));
                     if (value < -deadzone) {
-                    const double angle = axisPositions[i].angle;
-                        SDL_Rect dst;
-                        dst.x = axisPositions[i].x;
-                        dst.y = axisPositions[i].y;
-                        dst.w = AXIS_SIZE;
-                        dst.h = AXIS_SIZE;
-                        SDL_RenderCopyEx(screen, axis_texture, NULL, &dst, angle, NULL, SDL_FLIP_NONE);
+                        double angle = AXIS_POSITIONS[i].angle;
+                        Rect dst = new Rect(AXIS_POSITIONS[i].x, AXIS_POSITIONS[i].y, AXIS_SIZE, AXIS_SIZE);
+                        screen.copy(axisTexture, null, dst, angle, null, RendererFlip.FlipNone);
                     } else if (value > deadzone) {
-                    const double angle = axisPositions[i].angle + 180.0;
-                        SDL_Rect dst;
-                        dst.x = axisPositions[i].x;
-                        dst.y = axisPositions[i].y;
-                        dst.w = AXIS_SIZE;
-                        dst.h = AXIS_SIZE;
-                        SDL_RenderCopyEx(screen, axis_texture, NULL, &dst, angle, NULL, SDL_FLIP_NONE);
+                        double angle = AXIS_POSITIONS[i].angle + 180.0;
+                        Rect dst = new Rect(AXIS_POSITIONS[i].x, AXIS_POSITIONS[i].y, AXIS_SIZE, AXIS_SIZE);
+                        screen.copy(axisTexture, null, dst, angle, null, RendererFlip.FlipNone);
                     }
                 }
             }
 
             /* Update LED based on left thumbstick position */
             {
-                short x = SDL_GameControllerGetAxis(gameController, SDL_CONTROLLER_AXIS_LEFTX);
-                short y = SDL_GameControllerGetAxis(gameController, SDL_CONTROLLER_AXIS_LEFTY);
+                short x = gameController.getAxis(GameControllerAxis.LeftX);
+                short y = gameController.getAxis(GameControllerAxis.LeftY);
 
                 if (!set_LED) {
                     set_LED = (x < -8000 || x > 8000 || y > 8000);
                 }
                 if (set_LED) {
-                    Uint8 r, g, b;
+                    byte r, g, b;
 
                     if (x < 0) {
-                        r = (Uint8)(((~x) * 255) / 32767);
+                        r = (byte)(((~x) * 255) / 32767);
                         b = 0;
                     } else {
                         r = 0;
-                        b = (Uint8)(((int)(x)*255) / 32767);
+                        b = (byte)(((int)(x)*255) / 32767);
                     }
                     if (y > 0) {
-                        g = (Uint8)(((int)(y)*255) / 32767);
+                        g = (byte)(((int)(y)*255) / 32767);
                     } else {
                         g = 0;
                     }
 
-                    SDL_GameControllerSetLED(gameController, r, g, b);
+                    gameController.setLed(r, g, b);
                 }
             }
 
             if (triggerEffect == 0) {
                 /* Update rumble based on trigger state */
                 {
-                    short left = SDL_GameControllerGetAxis(gameController, SDL_CONTROLLER_AXIS_TRIGGERLEFT);
-                    short right = SDL_GameControllerGetAxis(gameController, SDL_CONTROLLER_AXIS_TRIGGERRIGHT);
-                    Uint16 low_frequency_rumble = convertAxisToRumble(left);
-                    Uint16 high_frequency_rumble = convertAxisToRumble(right);
-                    SDL_GameControllerRumble(gameController, low_frequency_rumble, high_frequency_rumble, 250);
+                    short left = gameController.getAxis(GameControllerAxis.TriggerLeft);
+                    short right = gameController.getAxis(GameControllerAxis.TriggerRight);
+                    short lowFrequencyRumble = convertAxisToRumble(left);
+                    short highFrequencyRumble = convertAxisToRumble(right);
+                    gameController.rumble(lowFrequencyRumble, highFrequencyRumble, Duration.ofMillis(250));
                 }
 
                 /* Update trigger rumble based on thumbstick state */
                 {
-                    short left = SDL_GameControllerGetAxis(gameController, SDL_CONTROLLER_AXIS_LEFTY);
-                    short right = SDL_GameControllerGetAxis(gameController, SDL_CONTROLLER_AXIS_RIGHTY);
-                    Uint16 left_rumble = convertAxisToRumble(~left);
-                    Uint16 right_rumble = convertAxisToRumble(~right);
+                    short left = gameController.getAxis(GameControllerAxis.LeftY);
+                    short right = gameController.getAxis(GameControllerAxis.RightY);
+                    short leftRumble = convertAxisToRumble((short) ~left);
+                    short rightRumble = convertAxisToRumble((short) ~right);
 
-                    SDL_GameControllerRumbleTriggers(gameController, left_rumble, right_rumble, 250);
+                    gameController.rumbleTriggers(leftRumble, rightRumble, Duration.ofMillis(250));
                 }
             }
         }
-        SDL_Delay(16);
-        SDL_RenderPresent(screen);
-
-#ifdef __EMSCRIPTEN__
-        if (done) {
-            emscripten_cancel_main_loop();
-        }
-#endif
+        Thread.sleep(Duration.ofMillis(16));
+        // SDL_Delay(16);
+        // SDL_RenderPresent(screen);
+        screen.present();
     }
 
     public static void main(String[] args) {
@@ -930,16 +874,16 @@ public static class TestGameController {
 
         background_front = LoadTexture(screen, "controllermap.bmp", SDL_FALSE, NULL, NULL);
         background_back = LoadTexture(screen, "controllermap_back.bmp", SDL_FALSE, NULL, NULL);
-        button_texture = LoadTexture(screen, "button.bmp", SDL_TRUE, NULL, NULL);
-        axis_texture = LoadTexture(screen, "axis.bmp", SDL_TRUE, NULL, NULL);
+        buttonTexture = LoadTexture(screen, "button.bmp", SDL_TRUE, NULL, NULL);
+        axisTexture = LoadTexture(screen, "axis.bmp", SDL_TRUE, NULL, NULL);
 
-        if (background_front == NULL || background_back == NULL || button_texture == NULL || axis_texture == NULL) {
+        if (background_front == NULL || background_back == NULL || buttonTexture == NULL || axisTexture == NULL) {
             SDL_DestroyRenderer(screen);
             SDL_DestroyWindow(window);
             return 2;
         }
-        SDL_SetTextureColorMod(button_texture, 10, 255, 21);
-        SDL_SetTextureColorMod(axis_texture, 10, 255, 21);
+        SDL_SetTextureColorMod(buttonTexture, 10, 255, 21);
+        SDL_SetTextureColorMod(axisTexture, 10, 255, 21);
 
         /* !!! FIXME: */
         /*SDL_RenderSetLogicalSize(screen, background->w, background->h);*/

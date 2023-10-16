@@ -13,6 +13,7 @@ import java.lang.foreign.MemorySegment;
 import static sdl.Cause.JoystickGetDeviceInstanceID;
 import static sdl.SDL_subset_h.*;
 import static sdl.jextract.SDL_subset_h.*;
+import static sdl.jextract.SDL_subset_h.SDL_JoystickClose;
 
 public class Joystick {
     public static final short AXIS_MIN = (short)SDL_JOYSTICK_AXIS_MIN();
@@ -69,5 +70,9 @@ public class Joystick {
 
     public int setVirtualAxis(GameControllerAxis axis, short value) {
         return SDL_JoystickSetVirtualAxis(joystick, axis.value(), value);
+    }
+
+    public void close() {
+        SDL_JoystickClose(joystick);
     }
 }
