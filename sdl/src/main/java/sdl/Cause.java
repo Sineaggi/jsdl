@@ -14,6 +14,7 @@ public enum Cause {
     LoadBMP_RW("Couldn't load BMP"),
     CreateTextureFromSurface("Couldn't create texture from surface"),
     GameControllerAddMappingsFromRW("Couldn't add game controller mappings"),
+    SetColorKey("Couldn't set color key"),
     ;
 
     private final String cause;

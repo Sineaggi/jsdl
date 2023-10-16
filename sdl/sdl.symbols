@@ -1488,7 +1488,3 @@
 --include-function SDL_VideoQuit                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
 --include-struct SDL_DisplayMode                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
 --include-struct SDL_Window                               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
-
-#### Extracted from: SDL_subset.h
-
---include-struct DS5EffectsState_t   # header: SDL_subset.h
