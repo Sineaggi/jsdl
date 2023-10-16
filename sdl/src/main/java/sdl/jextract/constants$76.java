@@ -11,35 +11,29 @@ final class constants$76 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$76() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_GetWindowDisplayIndex",
+        constants$18.const$4
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetTouchpadFinger",
-        constants$76.const$0
+        "SDL_SetWindowDisplayMode",
+        constants$6.const$4
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerHasSensor",
-        constants$49.const$3
+        "SDL_GetWindowDisplayMode",
+        constants$6.const$4
     );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_INT
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GetWindowICCProfile",
+        constants$13.const$2
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerSetSensorEnabled",
-        constants$76.const$3
+        "SDL_GetWindowPixelFormat",
+        constants$18.const$4
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerIsSensorEnabled",
-        constants$49.const$3
+        "SDL_CreateWindow",
+        constants$64.const$0
     );
 }
 

@@ -1,6 +1,6 @@
 package sdl;
 
-import static sdl.jextract.SDL_subset_h.*;
+import static sdl.jextract.sdl_h.*;
 
 public class SdlException extends RuntimeException {
     private SdlException(String message) {

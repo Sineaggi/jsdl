@@ -11,46 +11,30 @@ final class constants$92 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$92() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_IntersectFRect",
-        constants$21.const$2
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(MemoryLayout.structLayout(
+        MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
+    ).withName("SDL_GUID"),
+        JAVA_INT
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_UnionFRect",
-        constants$91.const$0
+        "SDL_JoystickGetDeviceGUID",
+        constants$92.const$0
     );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_EncloseFPoints",
-        constants$65.const$4
+    static final FunctionDescriptor const$2 = FunctionDescriptor.of(JAVA_SHORT,
+        JAVA_INT
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_IntersectFRectAndLine",
-        constants$91.const$3
+        "SDL_JoystickGetDeviceVendor",
+        constants$92.const$2
     );
-    static final StructLayout const$4 = MemoryLayout.structLayout(
-        JAVA_INT.withName("flags"),
-        MemoryLayout.paddingLayout(4),
-        RuntimeHelper.POINTER.withName("format"),
-        JAVA_INT.withName("w"),
-        JAVA_INT.withName("h"),
-        JAVA_INT.withName("pitch"),
-        MemoryLayout.paddingLayout(4),
-        RuntimeHelper.POINTER.withName("pixels"),
-        RuntimeHelper.POINTER.withName("userdata"),
-        JAVA_INT.withName("locked"),
-        MemoryLayout.paddingLayout(4),
-        RuntimeHelper.POINTER.withName("list_blitmap"),
-        MemoryLayout.structLayout(
-            JAVA_INT.withName("x"),
-            JAVA_INT.withName("y"),
-            JAVA_INT.withName("w"),
-            JAVA_INT.withName("h")
-        ).withName("clip_rect"),
-        RuntimeHelper.POINTER.withName("map"),
-        JAVA_INT.withName("refcount"),
-        MemoryLayout.paddingLayout(4)
-    ).withName("SDL_Surface");
-    static final VarHandle const$5 = constants$92.const$4.varHandle(MemoryLayout.PathElement.groupElement("flags"));
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickGetDeviceProduct",
+        constants$92.const$2
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickGetDeviceProductVersion",
+        constants$92.const$2
+    );
 }
 
 

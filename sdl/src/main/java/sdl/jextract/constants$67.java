@@ -12,36 +12,29 @@ final class constants$67 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$67() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickHasRumbleTriggers",
-        constants$18.const$4
+        "SDL_GetSurfaceAlphaMod",
+        constants$6.const$4
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickSetLED",
-        constants$58.const$3
+        "SDL_SetSurfaceBlendMode",
+        constants$34.const$3
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickSendEffect",
-        constants$6.const$2
+        "SDL_GetSurfaceBlendMode",
+        constants$6.const$4
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickClose",
-        constants$1.const$2
+        "SDL_SetClipRect",
+        constants$6.const$4
     );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickCurrentPowerLevel",
-        constants$18.const$4
+    static final FunctionDescriptor const$4 = FunctionDescriptor.ofVoid(
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
     );
-    static final StructLayout const$5 = MemoryLayout.structLayout(
-        JAVA_INT.withName("bindType"),
-        MemoryLayout.unionLayout(
-            JAVA_INT.withName("button"),
-            JAVA_INT.withName("axis"),
-            MemoryLayout.structLayout(
-                JAVA_INT.withName("hat"),
-                JAVA_INT.withName("hat_mask")
-            ).withName("hat")
-        ).withName("value")
-    ).withName("SDL_GameControllerButtonBind");
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_GetClipRect",
+        constants$67.const$4
+    );
 }
 
 

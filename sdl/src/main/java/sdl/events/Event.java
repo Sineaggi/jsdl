@@ -9,17 +9,16 @@ import sdl.events.key.KeyEvent;
 import sdl.events.motion.MouseMotionEvent;
 import sdl.events.quit.Quit;
 import sdl.events.quit.QuitEvent;
-import sdl.jextract.SDL_ControllerButtonEvent;
 import sdl.jextract.SDL_Event;
-import sdl.jextract.SDL_QuitEvent;
 
 import java.lang.foreign.Arena;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import static sdl.Cause.PeepEvents;
-import static sdl.jextract.SDL_subset_h.SDL_PeepEvents;
-import static sdl.jextract.SDL_subset_h.SDL_PumpEvents;
+import static sdl.jextract.sdl_h.SDL_PeepEvents;
+import static sdl.jextract.sdl_h.SDL_PumpEvents;
 
 public sealed interface Event permits MouseButtonEvent, ControllerDeviceEvent, ControllerSensorEvent, ControllerTouchpad, KeyEvent, MouseMotionEvent, QuitEvent {
     static List<Event> peepEvents(int numEvents, int action, int minType, int maxType) {
@@ -32,6 +31,7 @@ public sealed interface Event permits MouseButtonEvent, ControllerDeviceEvent, C
                 return Collections.emptyList();
             } else {
                 // todo: read events
+                List<Event> mappedEvents = new ArrayList<>(peepedEventCount);
                 for (int i = 0; i < peepedEventCount; i++) {
                     var type = SDL_Event.type$get(events, 0);
                     // if (type == SDL_ControllerButtonEvent)
@@ -213,8 +213,10 @@ public sealed interface Event permits MouseButtonEvent, ControllerDeviceEvent, C
                         case LastEvent -> {
                             throw new RuntimeException("todo");
                         }
-                    }
+                    };
+                    mappedEvents.set(i, event);
                 }
+                return mappedEvents;
             }
         }
     }

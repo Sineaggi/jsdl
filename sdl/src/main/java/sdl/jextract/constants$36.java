@@ -11,50 +11,55 @@ final class constants$36 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$36() {}
-    static final UnionLayout const$0 = MemoryLayout.unionLayout(
-        MemoryLayout.structLayout(
-            JAVA_INT.withName("append"),
-            MemoryLayout.paddingLayout(4),
-            RuntimeHelper.POINTER.withName("h"),
-            MemoryLayout.structLayout(
-                RuntimeHelper.POINTER.withName("data"),
-                JAVA_LONG.withName("size"),
-                JAVA_LONG.withName("left")
-            ).withName("buffer")
-        ).withName("windowsio"),
-        MemoryLayout.structLayout(
-            JAVA_INT.withName("autoclose"),
-            MemoryLayout.paddingLayout(4),
-            RuntimeHelper.POINTER.withName("fp")
-        ).withName("stdio"),
-        MemoryLayout.structLayout(
-            RuntimeHelper.POINTER.withName("base"),
-            RuntimeHelper.POINTER.withName("here"),
-            RuntimeHelper.POINTER.withName("stop")
-        ).withName("mem"),
-        MemoryLayout.structLayout(
-            RuntimeHelper.POINTER.withName("data1"),
-            RuntimeHelper.POINTER.withName("data2")
-        ).withName("unknown")
-    ).withName("");
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_CondWaitTimeout",
+        constants$6.const$2
+    );
     static final StructLayout const$1 = MemoryLayout.structLayout(
-        JAVA_INT.withName("append"),
+        RuntimeHelper.POINTER.withName("size"),
+        RuntimeHelper.POINTER.withName("seek"),
+        RuntimeHelper.POINTER.withName("read"),
+        RuntimeHelper.POINTER.withName("write"),
+        RuntimeHelper.POINTER.withName("close"),
+        JAVA_INT.withName("type"),
         MemoryLayout.paddingLayout(4),
-        RuntimeHelper.POINTER.withName("h"),
-        MemoryLayout.structLayout(
-            RuntimeHelper.POINTER.withName("data"),
-            JAVA_LONG.withName("size"),
-            JAVA_LONG.withName("left")
-        ).withName("buffer")
-    ).withName("");
-    static final VarHandle const$2 = constants$36.const$1.varHandle(MemoryLayout.PathElement.groupElement("append"));
-    static final VarHandle const$3 = constants$36.const$1.varHandle(MemoryLayout.PathElement.groupElement("h"));
-    static final StructLayout const$4 = MemoryLayout.structLayout(
-        RuntimeHelper.POINTER.withName("data"),
-        JAVA_LONG.withName("size"),
-        JAVA_LONG.withName("left")
-    ).withName("");
-    static final VarHandle const$5 = constants$36.const$4.varHandle(MemoryLayout.PathElement.groupElement("data"));
+        MemoryLayout.unionLayout(
+            MemoryLayout.structLayout(
+                JAVA_INT.withName("append"),
+                MemoryLayout.paddingLayout(4),
+                RuntimeHelper.POINTER.withName("h"),
+                MemoryLayout.structLayout(
+                    RuntimeHelper.POINTER.withName("data"),
+                    JAVA_LONG.withName("size"),
+                    JAVA_LONG.withName("left")
+                ).withName("buffer")
+            ).withName("windowsio"),
+            MemoryLayout.structLayout(
+                JAVA_INT.withName("autoclose"),
+                MemoryLayout.paddingLayout(4),
+                RuntimeHelper.POINTER.withName("fp")
+            ).withName("stdio"),
+            MemoryLayout.structLayout(
+                RuntimeHelper.POINTER.withName("base"),
+                RuntimeHelper.POINTER.withName("here"),
+                RuntimeHelper.POINTER.withName("stop")
+            ).withName("mem"),
+            MemoryLayout.structLayout(
+                RuntimeHelper.POINTER.withName("data1"),
+                RuntimeHelper.POINTER.withName("data2")
+            ).withName("unknown")
+        ).withName("hidden")
+    ).withName("SDL_RWops");
+    static final MethodHandle const$2 = RuntimeHelper.upcallHandle(SDL_RWops.size.class, "apply", constants$12.const$3);
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        constants$12.const$3
+    );
+    static final VarHandle const$4 = constants$36.const$1.varHandle(MemoryLayout.PathElement.groupElement("size"));
+    static final FunctionDescriptor const$5 = FunctionDescriptor.of(JAVA_LONG,
+        RuntimeHelper.POINTER,
+        JAVA_LONG,
+        JAVA_INT
+    );
 }
 
 

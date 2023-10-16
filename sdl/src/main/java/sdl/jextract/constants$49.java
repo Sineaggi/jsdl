@@ -11,30 +11,33 @@ final class constants$49 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$49() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_DestroySemaphore",
-        constants$1.const$2
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_SemWait",
-        constants$18.const$4
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_SemTryWait",
-        constants$18.const$4
-    );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SemWaitTimeout",
-        constants$49.const$3
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_SemPost",
-        constants$18.const$4
-    );
+    static final VarHandle const$0 = constants$48.const$4.varHandle(MemoryLayout.PathElement.groupElement("colors"));
+    static final VarHandle const$1 = constants$48.const$4.varHandle(MemoryLayout.PathElement.groupElement("version"));
+    static final VarHandle const$2 = constants$48.const$4.varHandle(MemoryLayout.PathElement.groupElement("refcount"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        JAVA_INT.withName("format"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("palette"),
+        JAVA_BYTE.withName("BitsPerPixel"),
+        JAVA_BYTE.withName("BytesPerPixel"),
+        MemoryLayout.sequenceLayout(2, JAVA_BYTE).withName("padding"),
+        JAVA_INT.withName("Rmask"),
+        JAVA_INT.withName("Gmask"),
+        JAVA_INT.withName("Bmask"),
+        JAVA_INT.withName("Amask"),
+        JAVA_BYTE.withName("Rloss"),
+        JAVA_BYTE.withName("Gloss"),
+        JAVA_BYTE.withName("Bloss"),
+        JAVA_BYTE.withName("Aloss"),
+        JAVA_BYTE.withName("Rshift"),
+        JAVA_BYTE.withName("Gshift"),
+        JAVA_BYTE.withName("Bshift"),
+        JAVA_BYTE.withName("Ashift"),
+        JAVA_INT.withName("refcount"),
+        RuntimeHelper.POINTER.withName("next")
+    ).withName("SDL_PixelFormat");
+    static final VarHandle const$4 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("format"));
+    static final VarHandle const$5 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("palette"));
 }
 
 

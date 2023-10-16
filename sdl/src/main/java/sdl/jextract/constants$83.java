@@ -11,12 +11,30 @@ final class constants$83 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$83() {}
-    static final VarHandle const$0 = constants$81.const$2.varHandle(MemoryLayout.PathElement.groupElement("Gloss"));
-    static final VarHandle const$1 = constants$81.const$2.varHandle(MemoryLayout.PathElement.groupElement("Bloss"));
-    static final VarHandle const$2 = constants$81.const$2.varHandle(MemoryLayout.PathElement.groupElement("Aloss"));
-    static final VarHandle const$3 = constants$81.const$2.varHandle(MemoryLayout.PathElement.groupElement("Rshift"));
-    static final VarHandle const$4 = constants$81.const$2.varHandle(MemoryLayout.PathElement.groupElement("Gshift"));
-    static final VarHandle const$5 = constants$81.const$2.varHandle(MemoryLayout.PathElement.groupElement("Bshift"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_SetWindowGrab",
+        constants$80.const$2
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_SetWindowKeyboardGrab",
+        constants$80.const$2
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_SetWindowMouseGrab",
+        constants$80.const$2
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GetWindowGrab",
+        constants$18.const$4
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_GetWindowKeyboardGrab",
+        constants$18.const$4
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_GetWindowMouseGrab",
+        constants$18.const$4
+    );
 }
 
 

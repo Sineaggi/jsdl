@@ -11,21 +11,17 @@ final class constants$142 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$142() {}
-    static final StructLayout const$0 = MemoryLayout.structLayout(
-        JAVA_INT.withName("type"),
-        JAVA_INT.withName("timestamp"),
-        JAVA_INT.withName("which")
-    ).withName("SDL_JoyDeviceEvent");
-    static final VarHandle const$1 = constants$142.const$0.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$2 = constants$142.const$0.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$3 = constants$142.const$0.varHandle(MemoryLayout.PathElement.groupElement("which"));
-    static final StructLayout const$4 = MemoryLayout.structLayout(
+    static final VarHandle const$0 = constants$141.const$5.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$1 = constants$141.const$5.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$2 = constants$141.const$5.varHandle(MemoryLayout.PathElement.groupElement("which"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
         JAVA_INT.withName("which"),
         JAVA_INT.withName("level")
     ).withName("SDL_JoyBatteryEvent");
-    static final VarHandle const$5 = constants$142.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$4 = constants$142.const$3.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$5 = constants$142.const$3.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
 }
 
 

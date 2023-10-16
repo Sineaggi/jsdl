@@ -11,52 +11,33 @@ final class constants$33 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$33() {}
-    static final StructLayout const$0 = MemoryLayout.structLayout(
-        RuntimeHelper.POINTER.withName("size"),
-        RuntimeHelper.POINTER.withName("seek"),
-        RuntimeHelper.POINTER.withName("read"),
-        RuntimeHelper.POINTER.withName("write"),
-        RuntimeHelper.POINTER.withName("close"),
-        JAVA_INT.withName("type"),
-        MemoryLayout.paddingLayout(4),
-        MemoryLayout.unionLayout(
-            MemoryLayout.structLayout(
-                JAVA_INT.withName("append"),
-                MemoryLayout.paddingLayout(4),
-                RuntimeHelper.POINTER.withName("h"),
-                MemoryLayout.structLayout(
-                    RuntimeHelper.POINTER.withName("data"),
-                    JAVA_LONG.withName("size"),
-                    JAVA_LONG.withName("left")
-                ).withName("buffer")
-            ).withName("windowsio"),
-            MemoryLayout.structLayout(
-                JAVA_INT.withName("autoclose"),
-                MemoryLayout.paddingLayout(4),
-                RuntimeHelper.POINTER.withName("fp")
-            ).withName("stdio"),
-            MemoryLayout.structLayout(
-                RuntimeHelper.POINTER.withName("base"),
-                RuntimeHelper.POINTER.withName("here"),
-                RuntimeHelper.POINTER.withName("stop")
-            ).withName("mem"),
-            MemoryLayout.structLayout(
-                RuntimeHelper.POINTER.withName("data1"),
-                RuntimeHelper.POINTER.withName("data2")
-            ).withName("unknown")
-        ).withName("hidden")
-    ).withName("SDL_RWops");
-    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(SDL_RWops.size.class, "apply", constants$12.const$3);
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        constants$12.const$3
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_CreateMutex",
+        constants$0.const$0
     );
-    static final VarHandle const$3 = constants$33.const$0.varHandle(MemoryLayout.PathElement.groupElement("size"));
-    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_LONG,
-        RuntimeHelper.POINTER,
-        JAVA_LONG,
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_LockMutex",
+        constants$18.const$4
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_TryLockMutex",
+        constants$18.const$4
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_UnlockMutex",
+        constants$18.const$4
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_DestroyMutex",
+        constants$1.const$2
+    );
+    static final FunctionDescriptor const$5 = FunctionDescriptor.of(RuntimeHelper.POINTER,
         JAVA_INT
     );
-    static final MethodHandle const$5 = RuntimeHelper.upcallHandle(SDL_RWops.seek.class, "apply", constants$33.const$4);
+    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
+        "SDL_CreateSemaphore",
+        constants$33.const$5
+    );
 }
 
 

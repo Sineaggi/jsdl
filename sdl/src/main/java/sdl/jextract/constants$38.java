@@ -11,15 +11,14 @@ final class constants$38 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$38() {}
-    static final VarHandle const$0 = constants$37.const$5.varHandle(MemoryLayout.PathElement.groupElement("base"));
-    static final VarHandle const$1 = constants$37.const$5.varHandle(MemoryLayout.PathElement.groupElement("here"));
-    static final VarHandle const$2 = constants$37.const$5.varHandle(MemoryLayout.PathElement.groupElement("stop"));
-    static final StructLayout const$3 = MemoryLayout.structLayout(
-        RuntimeHelper.POINTER.withName("data1"),
-        RuntimeHelper.POINTER.withName("data2")
-    ).withName("");
-    static final VarHandle const$4 = constants$38.const$3.varHandle(MemoryLayout.PathElement.groupElement("data1"));
-    static final VarHandle const$5 = constants$38.const$3.varHandle(MemoryLayout.PathElement.groupElement("data2"));
+    static final VarHandle const$0 = constants$36.const$1.varHandle(MemoryLayout.PathElement.groupElement("read"));
+    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(SDL_RWops.write.class, "apply", constants$37.const$3);
+    static final VarHandle const$2 = constants$36.const$1.varHandle(MemoryLayout.PathElement.groupElement("write"));
+    static final MethodHandle const$3 = RuntimeHelper.upcallHandle(SDL_RWops.close.class, "apply", constants$18.const$4);
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        constants$18.const$4
+    );
+    static final VarHandle const$5 = constants$36.const$1.varHandle(MemoryLayout.PathElement.groupElement("close"));
 }
 
 

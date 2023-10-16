@@ -12,28 +12,28 @@ final class constants$115 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$115() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowGrab",
-        constants$18.const$4
+        "SDL_GameControllerGetProductVersion",
+        constants$45.const$0
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowKeyboardGrab",
-        constants$18.const$4
+        "SDL_GameControllerGetFirmwareVersion",
+        constants$45.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowMouseGrab",
-        constants$18.const$4
+        "SDL_GameControllerGetSerial",
+        constants$6.const$0
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GetGrabbedWindow",
-        constants$0.const$0
+        "SDL_GameControllerGetAttached",
+        constants$18.const$4
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowMouseRect",
-        constants$6.const$4
+        "SDL_GameControllerGetJoystick",
+        constants$6.const$0
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowMouseRect",
-        constants$6.const$0
+        "SDL_GameControllerEventState",
+        constants$8.const$0
     );
 }
 

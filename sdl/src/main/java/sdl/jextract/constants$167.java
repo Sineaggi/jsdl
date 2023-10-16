@@ -11,37 +11,19 @@ final class constants$167 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$167() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_CreateSoftwareRenderer",
-        constants$6.const$0
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetRenderer",
-        constants$6.const$0
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_RenderGetWindow",
-        constants$6.const$0
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GetRendererInfo",
-        constants$6.const$4
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GetRendererOutputSize",
-        constants$21.const$2
-    );
-    static final FunctionDescriptor const$5 = FunctionDescriptor.of(RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT
-    );
-    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
-        "SDL_CreateTexture",
-        constants$167.const$5
-    );
+    static final StructLayout const$0 = MemoryLayout.structLayout(
+        RuntimeHelper.POINTER.withName("name"),
+        JAVA_INT.withName("flags"),
+        JAVA_INT.withName("num_texture_formats"),
+        MemoryLayout.sequenceLayout(16, JAVA_INT).withName("texture_formats"),
+        JAVA_INT.withName("max_texture_width"),
+        JAVA_INT.withName("max_texture_height")
+    ).withName("SDL_RendererInfo");
+    static final VarHandle const$1 = constants$167.const$0.varHandle(MemoryLayout.PathElement.groupElement("name"));
+    static final VarHandle const$2 = constants$167.const$0.varHandle(MemoryLayout.PathElement.groupElement("flags"));
+    static final VarHandle const$3 = constants$167.const$0.varHandle(MemoryLayout.PathElement.groupElement("num_texture_formats"));
+    static final VarHandle const$4 = constants$167.const$0.varHandle(MemoryLayout.PathElement.groupElement("max_texture_width"));
+    static final VarHandle const$5 = constants$167.const$0.varHandle(MemoryLayout.PathElement.groupElement("max_texture_height"));
 }
 
 

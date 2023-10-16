@@ -11,26 +11,34 @@ final class constants$118 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$118() {}
-    static final MethodHandle const$0 = RuntimeHelper.upcallHandle(SDL_SetWindowHitTest$callback.class, "apply", constants$21.const$2);
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowHitTest",
-        constants$21.const$2
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerGetNumTouchpads",
+        constants$18.const$4
     );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_FlashWindow",
-        constants$49.const$3
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerGetNumTouchpadFingers",
+        constants$34.const$3
+    );
+    static final FunctionDescriptor const$2 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_DestroyWindow",
-        constants$1.const$2
+        "SDL_GameControllerGetTouchpadFinger",
+        constants$118.const$2
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_IsScreenSaverEnabled",
-        constants$5.const$5
+        "SDL_GameControllerHasSensor",
+        constants$34.const$3
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_EnableScreenSaver",
-        constants$32.const$3
+        "SDL_GameControllerSetSensorEnabled",
+        constants$65.const$4
     );
 }
 

@@ -11,32 +11,29 @@ final class constants$85 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$85() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_SetWindowOpacity",
+        constants$84.const$3
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_MasksToPixelFormatEnum",
-        constants$85.const$0
+        "SDL_GetWindowOpacity",
+        constants$6.const$4
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_AllocFormat",
-        constants$44.const$5
+        "SDL_SetWindowModalFor",
+        constants$6.const$4
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_FreeFormat",
-        constants$1.const$2
+        "SDL_SetWindowInputFocus",
+        constants$18.const$4
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_AllocPalette",
-        constants$44.const$5
+        "SDL_SetWindowGammaRamp",
+        constants$5.const$3
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_SetPixelFormatPalette",
-        constants$6.const$4
+        "SDL_GetWindowGammaRamp",
+        constants$5.const$3
     );
 }
 

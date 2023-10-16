@@ -12,28 +12,28 @@ final class constants$171 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$171() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_LockTextureToSurface",
-        constants$21.const$2
+        "SDL_SetTextureBlendMode",
+        constants$34.const$3
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_UnlockTexture",
-        constants$1.const$2
+        "SDL_GetTextureBlendMode",
+        constants$6.const$4
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_RenderTargetSupported",
-        constants$18.const$4
+        "SDL_SetTextureScaleMode",
+        constants$34.const$3
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_SetRenderTarget",
+        "SDL_GetTextureScaleMode",
         constants$6.const$4
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GetRenderTarget",
-        constants$6.const$0
+        "SDL_SetTextureUserData",
+        constants$6.const$4
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_RenderSetLogicalSize",
-        constants$76.const$3
+        "SDL_GetTextureUserData",
+        constants$6.const$0
     );
 }
 

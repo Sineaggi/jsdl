@@ -12,28 +12,27 @@ final class constants$70 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$70() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerMapping",
-        constants$6.const$0
+        "SDL_SoftStretchLinear",
+        constants$5.const$3
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_IsGameController",
-        constants$8.const$0
+        "SDL_UpperBlitScaled",
+        constants$5.const$3
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerNameForIndex",
-        constants$44.const$5
+        "SDL_LowerBlitScaled",
+        constants$5.const$3
     );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerPathForIndex",
-        constants$44.const$5
+    static final FunctionDescriptor const$3 = FunctionDescriptor.ofVoid(
+        JAVA_INT
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerTypeForIndex",
-        constants$8.const$0
+        "SDL_SetYUVConversionMode",
+        constants$70.const$3
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerMappingForDeviceIndex",
-        constants$44.const$5
+        "SDL_GetYUVConversionMode",
+        constants$5.const$5
     );
 }
 

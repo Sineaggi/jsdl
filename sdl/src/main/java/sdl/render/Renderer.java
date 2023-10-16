@@ -1,13 +1,14 @@
 package sdl.render;
 
 import sdl.*;
+import sdl.surface.Surface;
 import sdl.video.Window;
 
 import java.lang.foreign.Arena;
 import java.lang.foreign.MemorySegment;
 
 import static sdl.Cause.*;
-import static sdl.jextract.SDL_subset_h_1.*;
+import static sdl.jextract.sdl_h_1.*;
 
 public class Renderer {
     private final MemorySegment renderer;
@@ -67,5 +68,17 @@ public class Renderer {
                     dstRect == null ? MemorySegment.NULL : dstRect.allocateAndFill(arena)
             );
         }
+    }
+
+    public void destroy() {
+        SDL_DestroyRenderer(renderer);
+    }
+
+    public Texture createTexture(Surface surface) {
+        MemorySegment texture;
+        if ((texture = SDL_CreateTextureFromSurface(renderer, surface.surface())).equals(MemorySegment.NULL)) {
+            throw new SdlException(CreateTextureFromSurface);
+        }
+        return new Texture(texture);
     }
 }

@@ -12,33 +12,47 @@ final class constants$63 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$63() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetGUIDFromString",
-        constants$47.const$5
+        constants$5.const$3
     );
-    static final FunctionDescriptor const$1 = FunctionDescriptor.ofVoid(
-        MemoryLayout.structLayout(
-            MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
-        ).withName("SDL_GUID"),
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+    static final FunctionDescriptor const$1 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GetJoystickGUIDInfo",
+        "SDL_CreateRGBSurface",
         constants$63.const$1
     );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetAttached",
-        constants$18.const$4
+    static final FunctionDescriptor const$3 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickInstanceID",
-        constants$18.const$4
+        "SDL_CreateRGBSurfaceWithFormat",
+        constants$63.const$3
     );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickNumAxes",
-        constants$18.const$4
+    static final FunctionDescriptor const$5 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT
+    );
+    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
+        "SDL_CreateRGBSurfaceFrom",
+        constants$63.const$5
     );
 }
 

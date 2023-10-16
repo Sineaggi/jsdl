@@ -11,22 +11,37 @@ final class constants$68 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$68() {}
-    static final VarHandle const$0 = constants$67.const$5.varHandle(MemoryLayout.PathElement.groupElement("bindType"));
-    static final UnionLayout const$1 = MemoryLayout.unionLayout(
-        JAVA_INT.withName("button"),
-        JAVA_INT.withName("axis"),
-        MemoryLayout.structLayout(
-            JAVA_INT.withName("hat"),
-            JAVA_INT.withName("hat_mask")
-        ).withName("hat")
-    ).withName("");
-    static final VarHandle const$2 = constants$68.const$1.varHandle(MemoryLayout.PathElement.groupElement("button"));
-    static final VarHandle const$3 = constants$68.const$1.varHandle(MemoryLayout.PathElement.groupElement("axis"));
-    static final StructLayout const$4 = MemoryLayout.structLayout(
-        JAVA_INT.withName("hat"),
-        JAVA_INT.withName("hat_mask")
-    ).withName("");
-    static final VarHandle const$5 = constants$68.const$4.varHandle(MemoryLayout.PathElement.groupElement("hat"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_DuplicateSurface",
+        constants$6.const$0
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_ConvertSurface",
+        constants$44.const$1
+    );
+    static final FunctionDescriptor const$2 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        JAVA_INT
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_ConvertSurfaceFormat",
+        constants$68.const$2
+    );
+    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_INT
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_ConvertPixels",
+        constants$68.const$4
+    );
 }
 
 

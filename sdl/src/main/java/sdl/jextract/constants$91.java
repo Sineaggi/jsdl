@@ -11,33 +11,29 @@ final class constants$91 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$91() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.ofVoid(
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_LockJoysticks",
+        constants$32.const$3
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_UnionRect",
-        constants$91.const$0
+        "SDL_UnlockJoysticks",
+        constants$32.const$3
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_EnclosePoints",
-        constants$65.const$4
+        "SDL_NumJoysticks",
+        constants$5.const$5
     );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickNameForIndex",
+        constants$33.const$5
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_IntersectRectAndLine",
-        constants$91.const$3
+        "SDL_JoystickPathForIndex",
+        constants$33.const$5
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_HasIntersectionF",
-        constants$6.const$4
+        "SDL_JoystickGetDevicePlayerIndex",
+        constants$8.const$0
     );
 }
 

@@ -11,12 +11,37 @@ final class constants$55 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$55() {}
-    static final VarHandle const$0 = constants$54.const$2.varHandle(MemoryLayout.PathElement.groupElement("nbuttons"));
-    static final VarHandle const$1 = constants$54.const$2.varHandle(MemoryLayout.PathElement.groupElement("nhats"));
-    static final VarHandle const$2 = constants$54.const$2.varHandle(MemoryLayout.PathElement.groupElement("vendor_id"));
-    static final VarHandle const$3 = constants$54.const$2.varHandle(MemoryLayout.PathElement.groupElement("product_id"));
-    static final VarHandle const$4 = constants$54.const$2.varHandle(MemoryLayout.PathElement.groupElement("padding"));
-    static final VarHandle const$5 = constants$54.const$2.varHandle(MemoryLayout.PathElement.groupElement("button_mask"));
+    static final FunctionDescriptor const$0 = FunctionDescriptor.ofVoid(
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_GetRGB",
+        constants$55.const$0
+    );
+    static final FunctionDescriptor const$2 = FunctionDescriptor.ofVoid(
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GetRGBA",
+        constants$55.const$2
+    );
+    static final FunctionDescriptor const$4 = FunctionDescriptor.ofVoid(
+        JAVA_FLOAT,
+        RuntimeHelper.POINTER
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_CalculateGammaRamp",
+        constants$55.const$4
+    );
 }
 
 

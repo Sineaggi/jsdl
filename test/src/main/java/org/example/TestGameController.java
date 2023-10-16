@@ -18,6 +18,7 @@ import sdl.gamecontroller.GameController;
 import sdl.gamecontroller.GameControllerType;
 import sdl.gamecontroller.JoystickId;
 import sdl.gamecontroller.SensorType;
+import sdl.hints.Hints;
 import sdl.joystick.Joystick;
 import sdl.render.Renderer;
 import sdl.video.Window;
@@ -32,7 +33,8 @@ import java.util.Set;
 
 import static java.lang.foreign.ValueLayout.JAVA_BYTE;
 import static java.util.FormatProcessor.FMT;
-import static sdl.jextract.SDL_subset_h.*;
+import static org.example.TestUtils.loadTexture;
+import static sdl.jextract.sdl_h.*;
 
 /*
   Copyright (C) 1997-2023 Sam Lantinga <slouken@libsdl.org>
@@ -120,7 +122,7 @@ public class TestGameController {
     private boolean done = false;
     private boolean set_LED = false;
     static int triggerEffect = 0;
-    static Texture background_front, background_back, buttonTexture, axisTexture;
+    static Texture backgroundFront, backgroundBack, buttonTexture, axisTexture;
     private GameController gameController;
     private GameController[] gameControllers;
     private int numControllers = 0;
@@ -351,7 +353,7 @@ public class TestGameController {
                 },
             } ;
 
-            triggerEffect = (triggerEffect + 1) % SDL_arraysize(effects);
+            triggerEffect = (triggerEffect + 1) % effects.length;
 
             VarHandle ucEnableBits1 = ds5EffectsState.varHandle(MemoryLayout.PathElement.groupElement("ucEnableBits1"));
             VarHandle rgucRightTriggerEffect = ds5EffectsState.varHandle(MemoryLayout.PathElement.groupElement("rgucRightTriggerEffect"));
@@ -373,7 +375,7 @@ public class TestGameController {
         if (gameController != null) {
             /* Show the back of the controller if the paddles are being held */
             for (i = GameControllerButton.Paddle1.value(); i <= GameControllerButton.Paddle4.value(); ++i) {
-                if (gameController.getButton(i) == GeneralInputStateDefinitions.Pressed) {
+                if (gameController.getButton(GameControllerButton.valueOf(i)) == GeneralInputStateDefinitions.Pressed) {
                     showingFront = false;
                     break;
                 }
@@ -682,7 +684,7 @@ public class TestGameController {
         /* blank screen, set up for drawing this frame. */
         screen.setDrawColor((byte) 0xFF, (byte) 0xFF, (byte) 0xFF, (byte) SDL_ALPHA_OPAQUE());
         screen.clear();
-        screen.copy(showingFront ? background_front : background_back, null, null);
+        screen.copy(showingFront ? backgroundFront : backgroundBack, null, null);
 
         if (gameController != null) {
             /* Update visual controller state */
@@ -770,39 +772,35 @@ public class TestGameController {
     public static void main(String[] args) {
         new TestGameController().main(args);
     }
-    public void main(String[] args) {
+    public void main(String[] args) throws InterruptedException {
         int i;
-        int controller_count = 0;
-        int controller_index = 0;
+        int controllerCount = 0;
+        int controllerIndex = 0;
         String guid;
 
-        SDL_SetHint(SDL_HINT_ACCELEROMETER_AS_JOYSTICK, "0");
-        SDL_SetHint(SDL_HINT_JOYSTICK_HIDAPI_PS4_RUMBLE, "1");
-        SDL_SetHint(SDL_HINT_JOYSTICK_HIDAPI_PS5_RUMBLE, "1");
-        SDL_SetHint(SDL_HINT_JOYSTICK_HIDAPI_STEAM, "1");
-        SDL_SetHint(SDL_HINT_JOYSTICK_ROG_CHAKRAM, "1");
-        SDL_SetHint(SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS, "1");
-        SDL_SetHint(SDL_HINT_LINUX_JOYSTICK_DEADZONES, "1");
+        Hints.setHint(Hints.HINT_ACCELEROMETER_AS_JOYSTICK, "0");
+        Hints.setHint(Hints.HINT_JOYSTICK_HIDAPI_PS4_RUMBLE, "1");
+        Hints.setHint(Hints.HINT_JOYSTICK_HIDAPI_PS5_RUMBLE, "1");
+        Hints.setHint(Hints.HINT_JOYSTICK_HIDAPI_STEAM, "1");
+        Hints.setHint(Hints.HINT_JOYSTICK_ROG_CHAKRAM, "1");
+        Hints.setHint(Hints.HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS, "1");
+        Hints.setHint(Hints.HINT_LINUX_JOYSTICK_DEADZONES, "1");
 
         /* Enable standard application logging */
         SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO);
 
         /* Initialize SDL (Note: video is required to start event loop) */
-        if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_JOYSTICK | SDL_INIT_GAMECONTROLLER) < 0) {
-            SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "Couldn't initialize SDL: %s\n", SDL_GetError());
-            return 1;
-        }
+        Sdl.init(SDL_INIT_VIDEO() | SDL_INIT_JOYSTICK() | SDL_INIT_GAMECONTROLLER());
 
-        SDL_GameControllerAddMappingsFromFile("gameControllerdb.txt");
+        GameController.addMappingsFromFile("gameControllerdb.txt");
 
         /* Print information about the mappings */
         if (argv[1] && SDL_strcmp(argv[1], "--mappings") == 0) {
             SDL_Log("Supported mappings:\n");
-            for (i = 0; i < SDL_GameControllerNumMappings(); ++i) {
-                char *mapping = SDL_GameControllerMappingForIndex(i);
-                if (mapping) {
+            for (i = 0; i < GameController.numMappings(); ++i) {
+                String mapping = GameController.mappingForIndex(i);
+                if (mapping != null) {
                     SDL_Log("\t%s\n", mapping);
-                    SDL_free(mapping);
                 }
             }
             SDL_Log("\n");
@@ -817,7 +815,7 @@ public class TestGameController {
             guid = Joystick.getDeviceGUIDString(i);
 
             if (GameController.isGameController(i)) {
-                controller_count++;
+                controllerCount++;
                 name = GameController.nameForIndex(i);
                 path = GameController.pathForIndex(i);
                 description = switch (GameController.typeForIndex(i)) {
@@ -844,11 +842,11 @@ public class TestGameController {
                     description, i, name ? name : "Unknown", path ? ", " : "", path ? path : "", guid,
                     SDL_JoystickGetDeviceVendor(i), SDL_JoystickGetDeviceProduct(i), SDL_JoystickGetDevicePlayerIndex(i));
         }
-        SDL_Log("There are %d game controller(s) attached (%d joystick(s))\n", controller_count, SDL_NumJoysticks());
+        SDL_Log("There are %d game controller(s) attached (%d joystick(s))\n", controllerCount, SDL_NumJoysticks());
 
         /* Create a window to display controller state */
-        window = Window.create("Game Controller Test", SDL_WINDOWPOS_CENTERED,
-                SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH,
+        window = Window.create("Game Controller Test", SDL_WINDOWPOS_CENTERED(),
+                SDL_WINDOWPOS_CENTERED(), SCREEN_WIDTH,
                 SCREEN_HEIGHT, 0);
         // if (window == NULL) {
         //     SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "Couldn't create window: %s\n", SDL_GetError());
@@ -856,68 +854,61 @@ public class TestGameController {
         // }
 
         screen = Renderer.create(window, -1, 0);
-        if (screen == NULL) {
-            SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "Couldn't create renderer: %s\n", SDL_GetError());
-            SDL_DestroyWindow(window);
-            return 2;
-        }
 
-        SDL_SetRenderDrawColor(screen, 0x00, 0x00, 0x00, SDL_ALPHA_OPAQUE);
-        screen.setDrawColor(0x00, 0x00, 0x00, SDL_subset_h.SDL_ALPHA_OPAQUE());
+        screen.setDrawColor((byte) 0x00, (byte) 0x00, (byte) 0x00, (byte) SDL_ALPHA_OPAQUE());
         screen.clear();
         screen.present();
-        SDL_RenderClear(screen);
-        SDL_RenderPresent(screen);
 
         /* scale for platforms that don't give you the window size you asked for. */
         screen.setLogicalSize(SCREEN_WIDTH, SCREEN_HEIGHT);
 
-        background_front = LoadTexture(screen, "controllermap.bmp", SDL_FALSE, NULL, NULL);
-        background_back = LoadTexture(screen, "controllermap_back.bmp", SDL_FALSE, NULL, NULL);
-        buttonTexture = LoadTexture(screen, "button.bmp", SDL_TRUE, NULL, NULL);
-        axisTexture = LoadTexture(screen, "axis.bmp", SDL_TRUE, NULL, NULL);
+        backgroundFront = loadTexture(screen, "controllermap.bmp", false).texture();
+        backgroundBack = loadTexture(screen, "controllermap_back.bmp", false).texture();
+        buttonTexture = loadTexture(screen, "button.bmp", true).texture();
+        axisTexture = loadTexture(screen, "axis.bmp", true).texture();
 
-        if (background_front == NULL || background_back == NULL || buttonTexture == NULL || axisTexture == NULL) {
-            SDL_DestroyRenderer(screen);
-            SDL_DestroyWindow(window);
-            return 2;
+        if (backgroundFront == null || backgroundBack == null || buttonTexture == null || axisTexture == null) {
+            screen.destroy();
+            window.destroy();
+            System.exit(2);
         }
-        SDL_SetTextureColorMod(buttonTexture, 10, 255, 21);
-        SDL_SetTextureColorMod(axisTexture, 10, 255, 21);
+        buttonTexture.setColorMod((byte) 10, (byte) 255, (byte) 21);
+        axisTexture.setColorMod((byte) 10, (byte) 255, (byte) 21);
 
         /* !!! FIXME: */
         /*SDL_RenderSetLogicalSize(screen, background->w, background->h);*/
 
-        for (i = 1; i < argc; ++i) {
-            if (SDL_strcmp(argv[i], "--virtual") == 0) {
-                OpenVirtualController();
+        for (i = 1; i < args.length; ++i) {
+            if (args[i].equals("--virtual")) {
+                openVirtualController();
             }
-            if (argv[i] && *argv[i] != '-') {
-                controller_index = SDL_atoi(argv[i]);
-                break;
-            }
+            // todo: this logic would allow follow thru?!?
+            // if (args[i] != "-") {
+            //     controllerIndex = SDL_atoi(argv[i]);
+            //     break;
+            // }
         }
-        if (controller_index < numControllers) {
-            gameController = gameControllers[controller_index];
+        if (controllerIndex < numControllers) {
+            gameController = gameControllers[controllerIndex];
         } else {
-            gameController = NULL;
+            gameController = null;
         }
         updateWindowTitle();
 
         while (!done) {
-            loop(NULL);
+            loop();
         }
 
         /* Reset trigger state */
-        if (trigger_effect != 0) {
-            trigger_effect = -1;
+        if (triggerEffect != 0) {
+            triggerEffect = -1;
             cyclePS5TriggerEffect();
         }
 
-        CloseVirtualController();
-        SDL_DestroyRenderer(screen);
-        SDL_DestroyWindow(window);
-        SDL_QuitSubSystem(SDL_INIT_VIDEO | SDL_INIT_JOYSTICK | SDL_INIT_GAMECONTROLLER);
+        closeVirtualController();
+        screen.destroy();
+        window.destroy();
+        Sdl.quitSubSystem(SDL_INIT_VIDEO() | SDL_INIT_JOYSTICK() | SDL_INIT_GAMECONTROLLER());
     }
 
     private static void SDL_Log(String format, Object... args) {

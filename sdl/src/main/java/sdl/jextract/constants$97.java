@@ -11,30 +11,18 @@ final class constants$97 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$97() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_LoadBMP_RW",
-        constants$15.const$4
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_SHORT,
+        JAVA_SHORT
     );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_SaveBMP_RW",
-        constants$6.const$2
-    );
+    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.Rumble.class, "apply", constants$97.const$0);
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_SetSurfaceRLE",
-        constants$49.const$3
+        constants$97.const$0
     );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_HasSurfaceRLE",
-        constants$18.const$4
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SetColorKey",
-        constants$76.const$3
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_HasColorKey",
-        constants$18.const$4
-    );
+    static final VarHandle const$3 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("Rumble"));
+    static final MethodHandle const$4 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.RumbleTriggers.class, "apply", constants$97.const$0);
+    static final VarHandle const$5 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("RumbleTriggers"));
 }
 
 

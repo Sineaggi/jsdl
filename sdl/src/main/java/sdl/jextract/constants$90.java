@@ -11,17 +11,32 @@ final class constants$90 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$90() {}
-    static final VarHandle const$0 = constants$89.const$5.varHandle(MemoryLayout.PathElement.groupElement("x"));
-    static final VarHandle const$1 = constants$89.const$5.varHandle(MemoryLayout.PathElement.groupElement("y"));
-    static final VarHandle const$2 = constants$89.const$5.varHandle(MemoryLayout.PathElement.groupElement("w"));
-    static final VarHandle const$3 = constants$89.const$5.varHandle(MemoryLayout.PathElement.groupElement("h"));
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_HasIntersection",
-        constants$6.const$4
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_GL_DeleteContext",
+        constants$1.const$2
+    );
+    static final StructLayout const$1 = MemoryLayout.structLayout(
+        MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
+    ).withName("SDL_GUID");
+    static final FunctionDescriptor const$2 = FunctionDescriptor.ofVoid(
+        MemoryLayout.structLayout(
+            MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
+        ).withName("SDL_GUID"),
+        RuntimeHelper.POINTER,
+        JAVA_INT
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GUIDToString",
+        constants$90.const$2
+    );
+    static final FunctionDescriptor const$4 = FunctionDescriptor.of(MemoryLayout.structLayout(
+        MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
+    ).withName("SDL_GUID"),
+        RuntimeHelper.POINTER
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_IntersectRect",
-        constants$21.const$2
+        "SDL_GUIDFromString",
+        constants$90.const$4
     );
 }
 

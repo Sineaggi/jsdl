@@ -11,22 +11,30 @@ final class constants$89 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$89() {}
-    static final StructLayout const$0 = MemoryLayout.structLayout(
-        JAVA_INT.withName("x"),
-        JAVA_INT.withName("y"),
-        JAVA_INT.withName("w"),
-        JAVA_INT.withName("h")
-    ).withName("SDL_Rect");
-    static final VarHandle const$1 = constants$89.const$0.varHandle(MemoryLayout.PathElement.groupElement("x"));
-    static final VarHandle const$2 = constants$89.const$0.varHandle(MemoryLayout.PathElement.groupElement("y"));
-    static final VarHandle const$3 = constants$89.const$0.varHandle(MemoryLayout.PathElement.groupElement("w"));
-    static final VarHandle const$4 = constants$89.const$0.varHandle(MemoryLayout.PathElement.groupElement("h"));
-    static final StructLayout const$5 = MemoryLayout.structLayout(
-        JAVA_FLOAT.withName("x"),
-        JAVA_FLOAT.withName("y"),
-        JAVA_FLOAT.withName("w"),
-        JAVA_FLOAT.withName("h")
-    ).withName("SDL_FRect");
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_GL_GetCurrentWindow",
+        constants$0.const$0
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_GL_GetCurrentContext",
+        constants$0.const$0
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_GL_GetDrawableSize",
+        constants$59.const$0
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GL_SetSwapInterval",
+        constants$8.const$0
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_GL_GetSwapInterval",
+        constants$5.const$5
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_GL_SwapWindow",
+        constants$1.const$2
+    );
 }
 
 

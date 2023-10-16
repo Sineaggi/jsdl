@@ -11,46 +11,12 @@ final class constants$95 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$95() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_CreateRGBSurface",
-        constants$95.const$0
-    );
-    static final FunctionDescriptor const$2 = FunctionDescriptor.of(RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_CreateRGBSurfaceWithFormat",
-        constants$95.const$2
-    );
-    static final FunctionDescriptor const$4 = FunctionDescriptor.of(RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_CreateRGBSurfaceFrom",
-        constants$95.const$4
-    );
+    static final VarHandle const$0 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("vendor_id"));
+    static final VarHandle const$1 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("product_id"));
+    static final VarHandle const$2 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("padding"));
+    static final VarHandle const$3 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("button_mask"));
+    static final VarHandle const$4 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("axis_mask"));
+    static final VarHandle const$5 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("name"));
 }
 
 

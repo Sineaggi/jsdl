@@ -11,29 +11,30 @@ final class constants$112 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$112() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowBordered",
-        constants$56.const$5
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+        MemoryLayout.structLayout(
+            MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
+        ).withName("SDL_GUID")
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowResizable",
-        constants$56.const$5
+        "SDL_GameControllerMappingForGUID",
+        constants$112.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowAlwaysOnTop",
-        constants$56.const$5
+        "SDL_GameControllerMapping",
+        constants$6.const$0
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_ShowWindow",
-        constants$1.const$2
+        "SDL_IsGameController",
+        constants$8.const$0
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_HideWindow",
-        constants$1.const$2
+        "SDL_GameControllerNameForIndex",
+        constants$33.const$5
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_RaiseWindow",
-        constants$1.const$2
+        "SDL_GameControllerPathForIndex",
+        constants$33.const$5
     );
 }
 

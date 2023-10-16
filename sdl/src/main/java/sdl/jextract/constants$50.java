@@ -11,30 +11,12 @@ final class constants$50 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$50() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SemValue",
-        constants$18.const$4
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_CreateCond",
-        constants$0.const$0
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_DestroyCond",
-        constants$1.const$2
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_CondSignal",
-        constants$18.const$4
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_CondBroadcast",
-        constants$18.const$4
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_CondWait",
-        constants$6.const$4
-    );
+    static final VarHandle const$0 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("BitsPerPixel"));
+    static final VarHandle const$1 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("BytesPerPixel"));
+    static final VarHandle const$2 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Rmask"));
+    static final VarHandle const$3 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Gmask"));
+    static final VarHandle const$4 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Bmask"));
+    static final VarHandle const$5 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Amask"));
 }
 
 

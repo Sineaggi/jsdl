@@ -12,20 +12,29 @@ final class constants$34 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$34() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        constants$33.const$4
+        "SDL_DestroySemaphore",
+        constants$1.const$2
     );
-    static final VarHandle const$1 = constants$33.const$0.varHandle(MemoryLayout.PathElement.groupElement("seek"));
-    static final FunctionDescriptor const$2 = FunctionDescriptor.of(JAVA_LONG,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        JAVA_LONG,
-        JAVA_LONG
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_SemWait",
+        constants$18.const$4
     );
-    static final MethodHandle const$3 = RuntimeHelper.upcallHandle(SDL_RWops.read.class, "apply", constants$34.const$2);
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_SemTryWait",
+        constants$18.const$4
+    );
+    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_INT
+    );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        constants$34.const$2
+        "SDL_SemWaitTimeout",
+        constants$34.const$3
     );
-    static final VarHandle const$5 = constants$33.const$0.varHandle(MemoryLayout.PathElement.groupElement("read"));
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_SemPost",
+        constants$18.const$4
+    );
 }
 
 

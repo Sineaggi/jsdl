@@ -11,29 +11,32 @@ final class constants$53 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$53() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetDeviceProductVersion",
-        constants$52.const$3
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetDeviceType",
-        constants$8.const$0
+        "SDL_MasksToPixelFormatEnum",
+        constants$53.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetDeviceInstanceID",
-        constants$8.const$0
+        "SDL_AllocFormat",
+        constants$33.const$5
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickOpen",
-        constants$44.const$5
+        "SDL_FreeFormat",
+        constants$1.const$2
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickFromInstanceID",
-        constants$44.const$5
+        "SDL_AllocPalette",
+        constants$33.const$5
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickFromPlayerIndex",
-        constants$44.const$5
+        "SDL_SetPixelFormatPalette",
+        constants$6.const$4
     );
 }
 

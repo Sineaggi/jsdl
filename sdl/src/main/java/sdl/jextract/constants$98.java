@@ -11,30 +11,16 @@ final class constants$98 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$98() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GetColorKey",
-        constants$6.const$4
-    );
+    static final MethodHandle const$0 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.SetLED.class, "apply", constants$54.const$3);
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_SetSurfaceColorMod",
-        constants$58.const$3
+        constants$54.const$3
     );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GetSurfaceColorMod",
-        constants$5.const$3
-    );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_BYTE
-    );
+    static final VarHandle const$2 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("SetLED"));
+    static final MethodHandle const$3 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.SendEffect.class, "apply", constants$6.const$2);
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SetSurfaceAlphaMod",
-        constants$98.const$3
+        constants$6.const$2
     );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetSurfaceAlphaMod",
-        constants$6.const$4
-    );
+    static final VarHandle const$5 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("SendEffect"));
 }
 
 

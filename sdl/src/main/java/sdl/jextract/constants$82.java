@@ -11,12 +11,30 @@ final class constants$82 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$82() {}
-    static final VarHandle const$0 = constants$81.const$2.varHandle(MemoryLayout.PathElement.groupElement("BytesPerPixel"));
-    static final VarHandle const$1 = constants$81.const$2.varHandle(MemoryLayout.PathElement.groupElement("Rmask"));
-    static final VarHandle const$2 = constants$81.const$2.varHandle(MemoryLayout.PathElement.groupElement("Gmask"));
-    static final VarHandle const$3 = constants$81.const$2.varHandle(MemoryLayout.PathElement.groupElement("Bmask"));
-    static final VarHandle const$4 = constants$81.const$2.varHandle(MemoryLayout.PathElement.groupElement("Amask"));
-    static final VarHandle const$5 = constants$81.const$2.varHandle(MemoryLayout.PathElement.groupElement("Rloss"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_SetWindowFullscreen",
+        constants$34.const$3
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_HasWindowSurface",
+        constants$18.const$4
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_GetWindowSurface",
+        constants$6.const$0
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_UpdateWindowSurface",
+        constants$18.const$4
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_UpdateWindowSurfaceRects",
+        constants$6.const$2
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_DestroyWindowSurface",
+        constants$18.const$4
+    );
 }
 
 

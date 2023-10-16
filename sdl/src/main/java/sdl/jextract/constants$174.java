@@ -11,31 +11,28 @@ final class constants$174 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$174() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.ofVoid(
-        RuntimeHelper.POINTER,
-        JAVA_FLOAT,
-        JAVA_FLOAT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_RenderGetLogicalSize",
+        constants$59.const$0
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_RenderLogicalToWindow",
-        constants$174.const$0
+        "SDL_RenderSetIntegerScale",
+        constants$34.const$3
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_SetRenderDrawColor",
-        constants$86.const$4
+        "SDL_RenderGetIntegerScale",
+        constants$18.const$4
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GetRenderDrawColor",
-        constants$91.const$3
+        "SDL_RenderSetViewport",
+        constants$6.const$4
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SetRenderDrawBlendMode",
-        constants$49.const$3
+        "SDL_RenderGetViewport",
+        constants$67.const$4
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetRenderDrawBlendMode",
+        "SDL_RenderSetClipRect",
         constants$6.const$4
     );
 }

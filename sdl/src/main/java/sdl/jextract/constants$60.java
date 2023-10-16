@@ -12,31 +12,48 @@ final class constants$60 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$60() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickIsVirtual",
-        constants$8.const$0
+        "SDL_HasIntersectionF",
+        constants$6.const$4
     );
-    static final FunctionDescriptor const$1 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_SHORT
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_IntersectFRect",
+        constants$21.const$2
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickSetVirtualAxis",
-        constants$60.const$1
+        "SDL_UnionFRect",
+        constants$59.const$0
     );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_BYTE
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_EncloseFPoints",
+        constants$59.const$2
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickSetVirtualButton",
-        constants$60.const$3
+        "SDL_IntersectFRectAndLine",
+        constants$59.const$4
     );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickSetVirtualHat",
-        constants$60.const$3
-    );
+    static final StructLayout const$5 = MemoryLayout.structLayout(
+        JAVA_INT.withName("flags"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("format"),
+        JAVA_INT.withName("w"),
+        JAVA_INT.withName("h"),
+        JAVA_INT.withName("pitch"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("pixels"),
+        RuntimeHelper.POINTER.withName("userdata"),
+        JAVA_INT.withName("locked"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("list_blitmap"),
+        MemoryLayout.structLayout(
+            JAVA_INT.withName("x"),
+            JAVA_INT.withName("y"),
+            JAVA_INT.withName("w"),
+            JAVA_INT.withName("h")
+        ).withName("clip_rect"),
+        RuntimeHelper.POINTER.withName("map"),
+        JAVA_INT.withName("refcount"),
+        MemoryLayout.paddingLayout(4)
+    ).withName("SDL_Surface");
 }
 
 

@@ -48,7 +48,7 @@ tasks.register<JavaExec>("generate") {
     // standardOutput = System.err
     args(
         // "--help",
-        "SDL_subset.h",
+        "sdl.h",
         "--source",
         "--target-package", "sdl.jextract",
         // "--dump-includes", "${layout.projectDirectory.file("sdl.full.symbols")}",

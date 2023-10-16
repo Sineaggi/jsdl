@@ -11,12 +11,11 @@ final class constants$123 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$123() {}
-    static final VarHandle const$0 = constants$122.const$2.varHandle(MemoryLayout.PathElement.groupElement("event"));
-    static final VarHandle const$1 = constants$122.const$2.varHandle(MemoryLayout.PathElement.groupElement("padding1"));
-    static final VarHandle const$2 = constants$122.const$2.varHandle(MemoryLayout.PathElement.groupElement("padding2"));
-    static final VarHandle const$3 = constants$122.const$2.varHandle(MemoryLayout.PathElement.groupElement("padding3"));
-    static final VarHandle const$4 = constants$122.const$2.varHandle(MemoryLayout.PathElement.groupElement("data1"));
-    static final StructLayout const$5 = MemoryLayout.structLayout(
+    static final VarHandle const$0 = constants$122.const$1.varHandle(MemoryLayout.PathElement.groupElement("padding1"));
+    static final VarHandle const$1 = constants$122.const$1.varHandle(MemoryLayout.PathElement.groupElement("padding2"));
+    static final VarHandle const$2 = constants$122.const$1.varHandle(MemoryLayout.PathElement.groupElement("padding3"));
+    static final VarHandle const$3 = constants$122.const$1.varHandle(MemoryLayout.PathElement.groupElement("data1"));
+    static final StructLayout const$4 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
         JAVA_INT.withName("windowID"),
@@ -27,6 +26,7 @@ final class constants$123 {
         JAVA_INT.withName("data1"),
         JAVA_INT.withName("data2")
     ).withName("SDL_WindowEvent");
+    static final VarHandle const$5 = constants$123.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
 }
 
 

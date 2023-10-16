@@ -11,39 +11,32 @@ final class constants$74 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$74() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetStringForAxis",
-        constants$44.const$5
-    );
-    static final FunctionDescriptor const$1 = FunctionDescriptor.of(MemoryLayout.structLayout(
-        JAVA_INT.withName("bindType"),
-        MemoryLayout.unionLayout(
-            JAVA_INT.withName("button"),
-            JAVA_INT.withName("axis"),
-            MemoryLayout.structLayout(
-                JAVA_INT.withName("hat"),
-                JAVA_INT.withName("hat_mask")
-            ).withName("hat")
-        ).withName("value")
-    ).withName("SDL_GameControllerButtonBind"),
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
+        JAVA_INT,
         RuntimeHelper.POINTER,
-        JAVA_INT
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_GetDisplayDPI",
+        constants$74.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetBindForAxis",
-        constants$74.const$1
+        "SDL_GetDisplayOrientation",
+        constants$8.const$0
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerHasAxis",
-        constants$49.const$3
+        "SDL_GetNumDisplayModes",
+        constants$8.const$0
     );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetAxis",
-        constants$64.const$5
+    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        RuntimeHelper.POINTER
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetButtonFromString",
-        constants$18.const$4
+        "SDL_GetDisplayMode",
+        constants$74.const$4
     );
 }
 

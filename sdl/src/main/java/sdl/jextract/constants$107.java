@@ -11,30 +11,29 @@ final class constants$107 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$107() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(RuntimeHelper.POINTER,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_LockSensors",
+        constants$32.const$3
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetClosestDisplayMode",
-        constants$107.const$0
+        "SDL_UnlockSensors",
+        constants$32.const$3
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GetPointDisplayIndex",
-        constants$18.const$4
+        "SDL_NumSensors",
+        constants$5.const$5
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GetRectDisplayIndex",
-        constants$18.const$4
+        "SDL_SensorGetDeviceName",
+        constants$33.const$5
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowDisplayIndex",
-        constants$18.const$4
+        "SDL_SensorGetDeviceType",
+        constants$8.const$0
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowDisplayMode",
-        constants$6.const$4
+        "SDL_SensorGetDeviceNonPortableType",
+        constants$8.const$0
     );
 }
 

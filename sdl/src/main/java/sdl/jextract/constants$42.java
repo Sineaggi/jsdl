@@ -11,33 +11,26 @@ final class constants$42 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$42() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_ReadBE16",
-        constants$41.const$5
-    );
+    static final VarHandle const$0 = constants$41.const$4.varHandle(MemoryLayout.PathElement.groupElement("data2"));
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_ReadLE32",
-        constants$18.const$4
+        "SDL_RWFromFile",
+        constants$13.const$2
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_ReadBE32",
-        constants$18.const$4
+        "SDL_RWFromFP",
+        constants$15.const$4
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_ReadLE64",
-        constants$12.const$3
+        "SDL_RWFromMem",
+        constants$15.const$4
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_ReadBE64",
-        constants$12.const$3
+        "SDL_RWFromConstMem",
+        constants$15.const$4
     );
-    static final FunctionDescriptor const$5 = FunctionDescriptor.of(JAVA_LONG,
-        RuntimeHelper.POINTER,
-        JAVA_BYTE
-    );
-    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
-        "SDL_WriteU8",
-        constants$42.const$5
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_AllocRW",
+        constants$0.const$0
     );
 }
 

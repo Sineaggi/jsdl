@@ -11,31 +11,29 @@ final class constants$65 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$65() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_LoadBMP_RW",
+        constants$15.const$4
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetAxisInitialState",
-        constants$65.const$0
+        "SDL_SaveBMP_RW",
+        constants$6.const$2
     );
-    static final FunctionDescriptor const$2 = FunctionDescriptor.of(JAVA_BYTE,
-        RuntimeHelper.POINTER,
-        JAVA_INT
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_SetSurfaceRLE",
+        constants$34.const$3
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetHat",
-        constants$65.const$2
+        "SDL_HasSurfaceRLE",
+        constants$18.const$4
     );
     static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_INT,
         RuntimeHelper.POINTER,
         JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+        JAVA_INT
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetBall",
+        "SDL_SetColorKey",
         constants$65.const$4
     );
 }

@@ -11,31 +11,29 @@ final class constants$69 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$69() {}
-    static final VarHandle const$0 = constants$68.const$4.varHandle(MemoryLayout.PathElement.groupElement("hat_mask"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_PremultiplyAlpha",
+        constants$68.const$4
+    );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerAddMappingsFromRW",
-        constants$49.const$3
+        "SDL_FillRect",
+        constants$6.const$2
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerAddMapping",
-        constants$18.const$4
+        "SDL_FillRects",
+        constants$54.const$0
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerNumMappings",
-        constants$5.const$5
+        "SDL_UpperBlit",
+        constants$5.const$3
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerMappingForIndex",
-        constants$44.const$5
+        "SDL_LowerBlit",
+        constants$5.const$3
     );
-    static final FunctionDescriptor const$5 = FunctionDescriptor.of(RuntimeHelper.POINTER,
-        MemoryLayout.structLayout(
-            MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
-        ).withName("SDL_GUID")
-    );
-    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerMappingForGUID",
-        constants$69.const$5
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_SoftStretch",
+        constants$5.const$3
     );
 }
 

@@ -19,7 +19,7 @@ import static java.lang.foreign.ValueLayout.*;
 public class SDL_Vertex {
 
     public static MemoryLayout $LAYOUT() {
-        return constants$166.const$0;
+        return constants$168.const$0;
     }
     public static MemorySegment position$slice(MemorySegment seg) {
         return seg.asSlice(0, 8);

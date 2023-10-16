@@ -12,28 +12,34 @@ final class constants$99 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$99() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SetSurfaceBlendMode",
-        constants$49.const$3
+        "SDL_JoystickAttachVirtualEx",
+        constants$18.const$4
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetSurfaceBlendMode",
-        constants$6.const$4
+        "SDL_JoystickDetachVirtual",
+        constants$8.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_SetClipRect",
-        constants$6.const$4
+        "SDL_JoystickIsVirtual",
+        constants$8.const$0
     );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.ofVoid(
+    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
         RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+        JAVA_INT,
+        JAVA_SHORT
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GetClipRect",
+        "SDL_JoystickSetVirtualAxis",
         constants$99.const$3
     );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_DuplicateSurface",
-        constants$6.const$0
+    static final FunctionDescriptor const$5 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        JAVA_BYTE
+    );
+    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickSetVirtualButton",
+        constants$99.const$5
     );
 }
 

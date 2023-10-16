@@ -12,31 +12,28 @@ final class constants$44 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$44() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_WriteLE64",
-        constants$17.const$0
+        "SDL_RWclose",
+        constants$18.const$4
     );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_WriteBE64",
-        constants$17.const$0
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_LockSensors",
-        constants$32.const$3
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_UnlockSensors",
-        constants$32.const$3
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_NumSensors",
-        constants$5.const$5
-    );
-    static final FunctionDescriptor const$5 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+    static final FunctionDescriptor const$1 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
         JAVA_INT
     );
-    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
-        "SDL_SensorGetDeviceName",
-        constants$44.const$5
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_LoadFile_RW",
+        constants$44.const$1
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_LoadFile",
+        constants$13.const$2
+    );
+    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_BYTE,
+        RuntimeHelper.POINTER
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_ReadU8",
+        constants$44.const$4
     );
 }
 

@@ -11,18 +11,30 @@ final class constants$80 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$80() {}
-    static final VarHandle const$0 = constants$79.const$4.varHandle(MemoryLayout.PathElement.groupElement("g"));
-    static final VarHandle const$1 = constants$79.const$4.varHandle(MemoryLayout.PathElement.groupElement("b"));
-    static final VarHandle const$2 = constants$79.const$4.varHandle(MemoryLayout.PathElement.groupElement("a"));
-    static final StructLayout const$3 = MemoryLayout.structLayout(
-        JAVA_INT.withName("ncolors"),
-        MemoryLayout.paddingLayout(4),
-        RuntimeHelper.POINTER.withName("colors"),
-        JAVA_INT.withName("version"),
-        JAVA_INT.withName("refcount")
-    ).withName("SDL_Palette");
-    static final VarHandle const$4 = constants$80.const$3.varHandle(MemoryLayout.PathElement.groupElement("ncolors"));
-    static final VarHandle const$5 = constants$80.const$3.varHandle(MemoryLayout.PathElement.groupElement("colors"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_SetWindowMaximumSize",
+        constants$78.const$3
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_GetWindowMaximumSize",
+        constants$59.const$0
+    );
+    static final FunctionDescriptor const$2 = FunctionDescriptor.ofVoid(
+        RuntimeHelper.POINTER,
+        JAVA_INT
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_SetWindowBordered",
+        constants$80.const$2
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_SetWindowResizable",
+        constants$80.const$2
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_SetWindowAlwaysOnTop",
+        constants$80.const$2
+    );
 }
 
 

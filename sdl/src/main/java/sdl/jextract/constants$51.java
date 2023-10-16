@@ -11,30 +11,12 @@ final class constants$51 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$51() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_CondWaitTimeout",
-        constants$6.const$2
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_LockJoysticks",
-        constants$32.const$3
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_UnlockJoysticks",
-        constants$32.const$3
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_NumJoysticks",
-        constants$5.const$5
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickNameForIndex",
-        constants$44.const$5
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickPathForIndex",
-        constants$44.const$5
-    );
+    static final VarHandle const$0 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Rloss"));
+    static final VarHandle const$1 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Gloss"));
+    static final VarHandle const$2 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Bloss"));
+    static final VarHandle const$3 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Aloss"));
+    static final VarHandle const$4 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Rshift"));
+    static final VarHandle const$5 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Gshift"));
 }
 
 

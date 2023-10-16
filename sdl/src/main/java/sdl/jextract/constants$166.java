@@ -11,44 +11,22 @@ final class constants$166 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$166() {}
-    static final StructLayout const$0 = MemoryLayout.structLayout(
-        MemoryLayout.structLayout(
-            JAVA_FLOAT.withName("x"),
-            JAVA_FLOAT.withName("y")
-        ).withName("position"),
-        MemoryLayout.structLayout(
-            JAVA_BYTE.withName("r"),
-            JAVA_BYTE.withName("g"),
-            JAVA_BYTE.withName("b"),
-            JAVA_BYTE.withName("a")
-        ).withName("color"),
-        MemoryLayout.structLayout(
-            JAVA_FLOAT.withName("x"),
-            JAVA_FLOAT.withName("y")
-        ).withName("tex_coord")
-    ).withName("SDL_Vertex");
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetNumRenderDrivers",
-        constants$5.const$5
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        constants$3.const$4
     );
+    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(SDL_AddHintCallback$callback.class, "apply", constants$3.const$4);
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GetRenderDriverInfo",
-        constants$105.const$1
+        "SDL_AddHintCallback",
+        constants$59.const$0
     );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
-    );
+    static final MethodHandle const$3 = RuntimeHelper.upcallHandle(SDL_DelHintCallback$callback.class, "apply", constants$3.const$4);
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_CreateWindowAndRenderer",
-        constants$166.const$3
+        "SDL_DelHintCallback",
+        constants$59.const$0
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_CreateRenderer",
-        constants$100.const$1
+        "SDL_ClearHints",
+        constants$32.const$3
     );
 }
 

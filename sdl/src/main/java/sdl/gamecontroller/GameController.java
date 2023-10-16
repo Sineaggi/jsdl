@@ -12,8 +12,9 @@ import java.lang.foreign.MemorySegment;
 import java.lang.foreign.ValueLayout;
 import java.time.Duration;
 
+import static sdl.Cause.GameControllerAddMappingsFromRW;
 import static sdl.internal.Util.stringOrNull;
-import static sdl.jextract.SDL_subset_h.*;
+import static sdl.jextract.sdl_h.*;
 
 public class GameController implements AutoCloseable {
     private final MemorySegment gameController;
@@ -42,6 +43,30 @@ public class GameController implements AutoCloseable {
 
     public static GameControllerType typeForIndex(int joystickIndex) {
         return GameControllerType.valueOf(SDL_GameControllerTypeForIndex(joystickIndex));
+    }
+
+    public static void addMappingsFromFile(String file) {
+        try (var arena = Arena.ofConfined()) {
+            if (SDL_GameControllerAddMappingsFromRW(SDL_RWFromFile(arena.allocateUtf8String(file), arena.allocateUtf8String("rb")), 1) != 0) {
+                throw new SdlException(GameControllerAddMappingsFromRW);
+            }
+        }
+    }
+
+    public static int numMappings() {
+        return SDL_GameControllerNumMappings();
+    }
+
+    public static String mappingForIndex(int mappingIndex) {
+        MemorySegment mapping = SDL_GameControllerMappingForIndex(mappingIndex);
+        if (mapping.equals(MemorySegment.NULL)) {
+            return null;
+        }
+        try {
+            return mapping.getUtf8String(0);
+        } finally {
+            SDL_free(mapping);
+        }
     }
 
     public String name() {

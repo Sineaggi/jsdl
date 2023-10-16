@@ -11,14 +11,30 @@ final class constants$35 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$35() {}
-    static final MethodHandle const$0 = RuntimeHelper.upcallHandle(SDL_RWops.write.class, "apply", constants$34.const$2);
-    static final VarHandle const$1 = constants$33.const$0.varHandle(MemoryLayout.PathElement.groupElement("write"));
-    static final MethodHandle const$2 = RuntimeHelper.upcallHandle(SDL_RWops.close.class, "apply", constants$18.const$4);
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_SemValue",
         constants$18.const$4
     );
-    static final VarHandle const$4 = constants$33.const$0.varHandle(MemoryLayout.PathElement.groupElement("close"));
-    static final VarHandle const$5 = constants$33.const$0.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_CreateCond",
+        constants$0.const$0
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_DestroyCond",
+        constants$1.const$2
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_CondSignal",
+        constants$18.const$4
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_CondBroadcast",
+        constants$18.const$4
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_CondWait",
+        constants$6.const$4
+    );
 }
 
 

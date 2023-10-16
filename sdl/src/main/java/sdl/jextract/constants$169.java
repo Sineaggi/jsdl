@@ -12,28 +12,35 @@ final class constants$169 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$169() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SetTextureBlendMode",
-        constants$49.const$3
+        "SDL_CreateSoftwareRenderer",
+        constants$6.const$0
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetTextureBlendMode",
-        constants$6.const$4
+        "SDL_GetRenderer",
+        constants$6.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_SetTextureScaleMode",
-        constants$49.const$3
+        "SDL_RenderGetWindow",
+        constants$6.const$0
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GetTextureScaleMode",
+        "SDL_GetRendererInfo",
         constants$6.const$4
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SetTextureUserData",
-        constants$6.const$4
+        "SDL_GetRendererOutputSize",
+        constants$21.const$2
     );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetTextureUserData",
-        constants$6.const$0
+    static final FunctionDescriptor const$5 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT
+    );
+    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
+        "SDL_CreateTexture",
+        constants$169.const$5
     );
 }
 

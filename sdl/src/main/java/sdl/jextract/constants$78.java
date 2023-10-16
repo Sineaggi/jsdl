@@ -12,28 +12,29 @@ final class constants$78 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$78() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerRumble",
-        constants$66.const$1
+        "SDL_SetWindowIcon",
+        constants$67.const$4
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerRumbleTriggers",
-        constants$66.const$1
+        "SDL_SetWindowData",
+        constants$16.const$3
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerHasLED",
-        constants$18.const$4
+        "SDL_GetWindowData",
+        constants$13.const$2
     );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerHasRumble",
-        constants$18.const$4
+    static final FunctionDescriptor const$3 = FunctionDescriptor.ofVoid(
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        JAVA_INT
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerHasRumbleTriggers",
-        constants$18.const$4
+        "SDL_SetWindowPosition",
+        constants$78.const$3
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerSetLED",
-        constants$58.const$3
+        "SDL_GetWindowPosition",
+        constants$59.const$0
     );
 }
 

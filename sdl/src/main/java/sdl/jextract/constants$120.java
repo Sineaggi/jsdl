@@ -12,28 +12,28 @@ final class constants$120 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$120() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GL_SetAttribute",
-        constants$102.const$5
+        "SDL_GameControllerRumble",
+        constants$105.const$2
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GL_GetAttribute",
-        constants$105.const$1
+        "SDL_GameControllerRumbleTriggers",
+        constants$105.const$2
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GL_CreateContext",
-        constants$6.const$0
+        "SDL_GameControllerHasLED",
+        constants$18.const$4
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GL_MakeCurrent",
-        constants$6.const$4
+        "SDL_GameControllerHasRumble",
+        constants$18.const$4
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GL_GetCurrentWindow",
-        constants$0.const$0
+        "SDL_GameControllerHasRumbleTriggers",
+        constants$18.const$4
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GL_GetCurrentContext",
-        constants$0.const$0
+        "SDL_GameControllerSetLED",
+        constants$54.const$3
     );
 }
 

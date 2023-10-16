@@ -12,28 +12,29 @@ final class constants$75 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$75() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetStringForButton",
-        constants$44.const$5
+        "SDL_GetDesktopDisplayMode",
+        constants$73.const$3
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetBindForButton",
-        constants$74.const$1
+        "SDL_GetCurrentDisplayMode",
+        constants$73.const$3
     );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerHasButton",
-        constants$49.const$3
+    static final FunctionDescriptor const$2 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetButton",
-        constants$65.const$2
+        "SDL_GetClosestDisplayMode",
+        constants$75.const$2
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetNumTouchpads",
+        "SDL_GetPointDisplayIndex",
         constants$18.const$4
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetNumTouchpadFingers",
-        constants$49.const$3
+        "SDL_GetRectDisplayIndex",
+        constants$18.const$4
     );
 }
 

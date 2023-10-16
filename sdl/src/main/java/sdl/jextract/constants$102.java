@@ -12,31 +12,33 @@ final class constants$102 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$102() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_UpperBlitScaled",
-        constants$5.const$3
+        "SDL_JoystickGetGUIDString",
+        constants$90.const$2
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_LowerBlitScaled",
-        constants$5.const$3
+        "SDL_JoystickGetGUIDFromString",
+        constants$90.const$4
     );
     static final FunctionDescriptor const$2 = FunctionDescriptor.ofVoid(
-        JAVA_INT
+        MemoryLayout.structLayout(
+            MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
+        ).withName("SDL_GUID"),
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_SetYUVConversionMode",
+        "SDL_GetJoystickGUIDInfo",
         constants$102.const$2
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GetYUVConversionMode",
-        constants$5.const$5
+        "SDL_JoystickGetAttached",
+        constants$18.const$4
     );
-    static final FunctionDescriptor const$5 = FunctionDescriptor.of(JAVA_INT,
-        JAVA_INT,
-        JAVA_INT
-    );
-    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
-        "SDL_GetYUVConversionModeForResolution",
-        constants$102.const$5
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickInstanceID",
+        constants$18.const$4
     );
 }
 

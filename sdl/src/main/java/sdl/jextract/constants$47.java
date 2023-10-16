@@ -11,37 +11,32 @@ final class constants$47 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$47() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SensorClose",
-        constants$1.const$2
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_SensorUpdate",
-        constants$32.const$3
-    );
-    static final StructLayout const$2 = MemoryLayout.structLayout(
-        MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
-    ).withName("SDL_GUID");
-    static final FunctionDescriptor const$3 = FunctionDescriptor.ofVoid(
-        MemoryLayout.structLayout(
-            MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
-        ).withName("SDL_GUID"),
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_LONG,
         RuntimeHelper.POINTER,
         JAVA_INT
     );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_WriteLE32",
+        constants$47.const$0
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_WriteBE32",
+        constants$47.const$0
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_WriteLE64",
+        constants$17.const$0
+    );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GUIDToString",
-        constants$47.const$3
+        "SDL_WriteBE64",
+        constants$17.const$0
     );
-    static final FunctionDescriptor const$5 = FunctionDescriptor.of(MemoryLayout.structLayout(
-        MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
-    ).withName("SDL_GUID"),
-        RuntimeHelper.POINTER
-    );
-    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
-        "SDL_GUIDFromString",
-        constants$47.const$5
-    );
+    static final StructLayout const$5 = MemoryLayout.structLayout(
+        JAVA_BYTE.withName("r"),
+        JAVA_BYTE.withName("g"),
+        JAVA_BYTE.withName("b"),
+        JAVA_BYTE.withName("a")
+    ).withName("SDL_Color");
 }
 
 

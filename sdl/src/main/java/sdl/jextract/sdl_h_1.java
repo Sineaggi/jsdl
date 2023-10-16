@@ -7,10 +7,10 @@ import java.lang.invoke.VarHandle;
 import java.nio.ByteOrder;
 import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
-public class SDL_subset_h_1 {
+public class sdl_h_1 {
 
     public static MethodHandle SDL_FlushEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$161.const$4,"SDL_FlushEvent");
+        return RuntimeHelper.requireNonNull(constants$161.const$2,"SDL_FlushEvent");
     }
     /**
      * {@snippet :
@@ -26,7 +26,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_FlushEvents$MH() {
-        return RuntimeHelper.requireNonNull(constants$161.const$6,"SDL_FlushEvents");
+        return RuntimeHelper.requireNonNull(constants$161.const$4,"SDL_FlushEvents");
     }
     /**
      * {@snippet :
@@ -42,7 +42,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_PollEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$162.const$0,"SDL_PollEvent");
+        return RuntimeHelper.requireNonNull(constants$161.const$5,"SDL_PollEvent");
     }
     /**
      * {@snippet :
@@ -58,7 +58,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_WaitEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$162.const$1,"SDL_WaitEvent");
+        return RuntimeHelper.requireNonNull(constants$162.const$0,"SDL_WaitEvent");
     }
     /**
      * {@snippet :
@@ -74,7 +74,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_WaitEventTimeout$MH() {
-        return RuntimeHelper.requireNonNull(constants$162.const$2,"SDL_WaitEventTimeout");
+        return RuntimeHelper.requireNonNull(constants$162.const$1,"SDL_WaitEventTimeout");
     }
     /**
      * {@snippet :
@@ -90,7 +90,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_PushEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$162.const$3,"SDL_PushEvent");
+        return RuntimeHelper.requireNonNull(constants$162.const$2,"SDL_PushEvent");
     }
     /**
      * {@snippet :
@@ -106,7 +106,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_SetEventFilter$MH() {
-        return RuntimeHelper.requireNonNull(constants$163.const$0,"SDL_SetEventFilter");
+        return RuntimeHelper.requireNonNull(constants$162.const$5,"SDL_SetEventFilter");
     }
     /**
      * {@snippet :
@@ -122,7 +122,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_GetEventFilter$MH() {
-        return RuntimeHelper.requireNonNull(constants$163.const$2,"SDL_GetEventFilter");
+        return RuntimeHelper.requireNonNull(constants$163.const$1,"SDL_GetEventFilter");
     }
     /**
      * {@snippet :
@@ -138,7 +138,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_AddEventWatch$MH() {
-        return RuntimeHelper.requireNonNull(constants$163.const$4,"SDL_AddEventWatch");
+        return RuntimeHelper.requireNonNull(constants$163.const$3,"SDL_AddEventWatch");
     }
     /**
      * {@snippet :
@@ -154,7 +154,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_DelEventWatch$MH() {
-        return RuntimeHelper.requireNonNull(constants$164.const$0,"SDL_DelEventWatch");
+        return RuntimeHelper.requireNonNull(constants$163.const$5,"SDL_DelEventWatch");
     }
     /**
      * {@snippet :
@@ -170,7 +170,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_FilterEvents$MH() {
-        return RuntimeHelper.requireNonNull(constants$164.const$2,"SDL_FilterEvents");
+        return RuntimeHelper.requireNonNull(constants$164.const$1,"SDL_FilterEvents");
     }
     /**
      * {@snippet :
@@ -186,7 +186,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_EventState$MH() {
-        return RuntimeHelper.requireNonNull(constants$164.const$4,"SDL_EventState");
+        return RuntimeHelper.requireNonNull(constants$164.const$3,"SDL_EventState");
     }
     /**
      * {@snippet :
@@ -202,7 +202,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RegisterEvents$MH() {
-        return RuntimeHelper.requireNonNull(constants$164.const$5,"SDL_RegisterEvents");
+        return RuntimeHelper.requireNonNull(constants$164.const$4,"SDL_RegisterEvents");
     }
     /**
      * {@snippet :
@@ -213,6 +213,174 @@ public class SDL_subset_h_1 {
         var mh$ = SDL_RegisterEvents$MH();
         try {
             return (int)mh$.invokeExact(numevents);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    /**
+     * {@snippet :
+     * enum SDL_HintPriority.SDL_HINT_DEFAULT = 0;
+     * }
+     */
+    public static int SDL_HINT_DEFAULT() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_HintPriority.SDL_HINT_NORMAL = 1;
+     * }
+     */
+    public static int SDL_HINT_NORMAL() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_HintPriority.SDL_HINT_OVERRIDE = 2;
+     * }
+     */
+    public static int SDL_HINT_OVERRIDE() {
+        return (int)2L;
+    }
+    public static MethodHandle SDL_SetHintWithPriority$MH() {
+        return RuntimeHelper.requireNonNull(constants$164.const$5,"SDL_SetHintWithPriority");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_SetHintWithPriority(char* name, char* value, enum SDL_HintPriority priority);
+     * }
+     */
+    public static int SDL_SetHintWithPriority(MemorySegment name, MemorySegment value, int priority) {
+        var mh$ = SDL_SetHintWithPriority$MH();
+        try {
+            return (int)mh$.invokeExact(name, value, priority);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetHint$MH() {
+        return RuntimeHelper.requireNonNull(constants$165.const$0,"SDL_SetHint");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_SetHint(char* name, char* value);
+     * }
+     */
+    public static int SDL_SetHint(MemorySegment name, MemorySegment value) {
+        var mh$ = SDL_SetHint$MH();
+        try {
+            return (int)mh$.invokeExact(name, value);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_ResetHint$MH() {
+        return RuntimeHelper.requireNonNull(constants$165.const$1,"SDL_ResetHint");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_ResetHint(char* name);
+     * }
+     */
+    public static int SDL_ResetHint(MemorySegment name) {
+        var mh$ = SDL_ResetHint$MH();
+        try {
+            return (int)mh$.invokeExact(name);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_ResetHints$MH() {
+        return RuntimeHelper.requireNonNull(constants$165.const$2,"SDL_ResetHints");
+    }
+    /**
+     * {@snippet :
+     * void SDL_ResetHints();
+     * }
+     */
+    public static void SDL_ResetHints() {
+        var mh$ = SDL_ResetHints$MH();
+        try {
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetHint$MH() {
+        return RuntimeHelper.requireNonNull(constants$165.const$3,"SDL_GetHint");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GetHint(char* name);
+     * }
+     */
+    public static MemorySegment SDL_GetHint(MemorySegment name) {
+        var mh$ = SDL_GetHint$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(name);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetHintBoolean$MH() {
+        return RuntimeHelper.requireNonNull(constants$165.const$4,"SDL_GetHintBoolean");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_GetHintBoolean(char* name, enum SDL_bool default_value);
+     * }
+     */
+    public static int SDL_GetHintBoolean(MemorySegment name, int default_value) {
+        var mh$ = SDL_GetHintBoolean$MH();
+        try {
+            return (int)mh$.invokeExact(name, default_value);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_AddHintCallback$MH() {
+        return RuntimeHelper.requireNonNull(constants$166.const$2,"SDL_AddHintCallback");
+    }
+    /**
+     * {@snippet :
+     * void SDL_AddHintCallback(char* name, void (*callback)(void*,char*,char*,char*), void* userdata);
+     * }
+     */
+    public static void SDL_AddHintCallback(MemorySegment name, MemorySegment callback, MemorySegment userdata) {
+        var mh$ = SDL_AddHintCallback$MH();
+        try {
+            mh$.invokeExact(name, callback, userdata);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_DelHintCallback$MH() {
+        return RuntimeHelper.requireNonNull(constants$166.const$4,"SDL_DelHintCallback");
+    }
+    /**
+     * {@snippet :
+     * void SDL_DelHintCallback(char* name, void (*callback)(void*,char*,char*,char*), void* userdata);
+     * }
+     */
+    public static void SDL_DelHintCallback(MemorySegment name, MemorySegment callback, MemorySegment userdata) {
+        var mh$ = SDL_DelHintCallback$MH();
+        try {
+            mh$.invokeExact(name, callback, userdata);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_ClearHints$MH() {
+        return RuntimeHelper.requireNonNull(constants$166.const$5,"SDL_ClearHints");
+    }
+    /**
+     * {@snippet :
+     * void SDL_ClearHints();
+     * }
+     */
+    public static void SDL_ClearHints() {
+        var mh$ = SDL_ClearHints$MH();
+        try {
+            mh$.invokeExact();
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -346,7 +514,7 @@ public class SDL_subset_h_1 {
         return (int)2L;
     }
     public static MethodHandle SDL_GetNumRenderDrivers$MH() {
-        return RuntimeHelper.requireNonNull(constants$166.const$1,"SDL_GetNumRenderDrivers");
+        return RuntimeHelper.requireNonNull(constants$168.const$1,"SDL_GetNumRenderDrivers");
     }
     /**
      * {@snippet :
@@ -362,7 +530,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_GetRenderDriverInfo$MH() {
-        return RuntimeHelper.requireNonNull(constants$166.const$2,"SDL_GetRenderDriverInfo");
+        return RuntimeHelper.requireNonNull(constants$168.const$2,"SDL_GetRenderDriverInfo");
     }
     /**
      * {@snippet :
@@ -378,7 +546,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_CreateWindowAndRenderer$MH() {
-        return RuntimeHelper.requireNonNull(constants$166.const$4,"SDL_CreateWindowAndRenderer");
+        return RuntimeHelper.requireNonNull(constants$168.const$4,"SDL_CreateWindowAndRenderer");
     }
     /**
      * {@snippet :
@@ -394,7 +562,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_CreateRenderer$MH() {
-        return RuntimeHelper.requireNonNull(constants$166.const$5,"SDL_CreateRenderer");
+        return RuntimeHelper.requireNonNull(constants$168.const$5,"SDL_CreateRenderer");
     }
     /**
      * {@snippet :
@@ -410,7 +578,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_CreateSoftwareRenderer$MH() {
-        return RuntimeHelper.requireNonNull(constants$167.const$0,"SDL_CreateSoftwareRenderer");
+        return RuntimeHelper.requireNonNull(constants$169.const$0,"SDL_CreateSoftwareRenderer");
     }
     /**
      * {@snippet :
@@ -426,7 +594,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_GetRenderer$MH() {
-        return RuntimeHelper.requireNonNull(constants$167.const$1,"SDL_GetRenderer");
+        return RuntimeHelper.requireNonNull(constants$169.const$1,"SDL_GetRenderer");
     }
     /**
      * {@snippet :
@@ -442,7 +610,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGetWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$167.const$2,"SDL_RenderGetWindow");
+        return RuntimeHelper.requireNonNull(constants$169.const$2,"SDL_RenderGetWindow");
     }
     /**
      * {@snippet :
@@ -458,7 +626,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_GetRendererInfo$MH() {
-        return RuntimeHelper.requireNonNull(constants$167.const$3,"SDL_GetRendererInfo");
+        return RuntimeHelper.requireNonNull(constants$169.const$3,"SDL_GetRendererInfo");
     }
     /**
      * {@snippet :
@@ -474,7 +642,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_GetRendererOutputSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$167.const$4,"SDL_GetRendererOutputSize");
+        return RuntimeHelper.requireNonNull(constants$169.const$4,"SDL_GetRendererOutputSize");
     }
     /**
      * {@snippet :
@@ -490,7 +658,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_CreateTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$167.const$6,"SDL_CreateTexture");
+        return RuntimeHelper.requireNonNull(constants$169.const$6,"SDL_CreateTexture");
     }
     /**
      * {@snippet :
@@ -506,7 +674,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_CreateTextureFromSurface$MH() {
-        return RuntimeHelper.requireNonNull(constants$168.const$0,"SDL_CreateTextureFromSurface");
+        return RuntimeHelper.requireNonNull(constants$170.const$0,"SDL_CreateTextureFromSurface");
     }
     /**
      * {@snippet :
@@ -522,7 +690,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_QueryTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$168.const$1,"SDL_QueryTexture");
+        return RuntimeHelper.requireNonNull(constants$170.const$1,"SDL_QueryTexture");
     }
     /**
      * {@snippet :
@@ -538,7 +706,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_SetTextureColorMod$MH() {
-        return RuntimeHelper.requireNonNull(constants$168.const$2,"SDL_SetTextureColorMod");
+        return RuntimeHelper.requireNonNull(constants$170.const$2,"SDL_SetTextureColorMod");
     }
     /**
      * {@snippet :
@@ -554,7 +722,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_GetTextureColorMod$MH() {
-        return RuntimeHelper.requireNonNull(constants$168.const$3,"SDL_GetTextureColorMod");
+        return RuntimeHelper.requireNonNull(constants$170.const$3,"SDL_GetTextureColorMod");
     }
     /**
      * {@snippet :
@@ -570,7 +738,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_SetTextureAlphaMod$MH() {
-        return RuntimeHelper.requireNonNull(constants$168.const$4,"SDL_SetTextureAlphaMod");
+        return RuntimeHelper.requireNonNull(constants$170.const$4,"SDL_SetTextureAlphaMod");
     }
     /**
      * {@snippet :
@@ -586,7 +754,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_GetTextureAlphaMod$MH() {
-        return RuntimeHelper.requireNonNull(constants$168.const$5,"SDL_GetTextureAlphaMod");
+        return RuntimeHelper.requireNonNull(constants$170.const$5,"SDL_GetTextureAlphaMod");
     }
     /**
      * {@snippet :
@@ -602,7 +770,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_SetTextureBlendMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$169.const$0,"SDL_SetTextureBlendMode");
+        return RuntimeHelper.requireNonNull(constants$171.const$0,"SDL_SetTextureBlendMode");
     }
     /**
      * {@snippet :
@@ -618,7 +786,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_GetTextureBlendMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$169.const$1,"SDL_GetTextureBlendMode");
+        return RuntimeHelper.requireNonNull(constants$171.const$1,"SDL_GetTextureBlendMode");
     }
     /**
      * {@snippet :
@@ -634,7 +802,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_SetTextureScaleMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$169.const$2,"SDL_SetTextureScaleMode");
+        return RuntimeHelper.requireNonNull(constants$171.const$2,"SDL_SetTextureScaleMode");
     }
     /**
      * {@snippet :
@@ -650,7 +818,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_GetTextureScaleMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$169.const$3,"SDL_GetTextureScaleMode");
+        return RuntimeHelper.requireNonNull(constants$171.const$3,"SDL_GetTextureScaleMode");
     }
     /**
      * {@snippet :
@@ -666,7 +834,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_SetTextureUserData$MH() {
-        return RuntimeHelper.requireNonNull(constants$169.const$4,"SDL_SetTextureUserData");
+        return RuntimeHelper.requireNonNull(constants$171.const$4,"SDL_SetTextureUserData");
     }
     /**
      * {@snippet :
@@ -682,7 +850,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_GetTextureUserData$MH() {
-        return RuntimeHelper.requireNonNull(constants$169.const$5,"SDL_GetTextureUserData");
+        return RuntimeHelper.requireNonNull(constants$171.const$5,"SDL_GetTextureUserData");
     }
     /**
      * {@snippet :
@@ -698,7 +866,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_UpdateTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$170.const$0,"SDL_UpdateTexture");
+        return RuntimeHelper.requireNonNull(constants$172.const$0,"SDL_UpdateTexture");
     }
     /**
      * {@snippet :
@@ -714,7 +882,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_UpdateYUVTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$170.const$2,"SDL_UpdateYUVTexture");
+        return RuntimeHelper.requireNonNull(constants$172.const$2,"SDL_UpdateYUVTexture");
     }
     /**
      * {@snippet :
@@ -730,7 +898,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_UpdateNVTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$170.const$4,"SDL_UpdateNVTexture");
+        return RuntimeHelper.requireNonNull(constants$172.const$4,"SDL_UpdateNVTexture");
     }
     /**
      * {@snippet :
@@ -746,7 +914,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_LockTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$170.const$5,"SDL_LockTexture");
+        return RuntimeHelper.requireNonNull(constants$172.const$5,"SDL_LockTexture");
     }
     /**
      * {@snippet :
@@ -762,7 +930,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_LockTextureToSurface$MH() {
-        return RuntimeHelper.requireNonNull(constants$171.const$0,"SDL_LockTextureToSurface");
+        return RuntimeHelper.requireNonNull(constants$173.const$0,"SDL_LockTextureToSurface");
     }
     /**
      * {@snippet :
@@ -778,7 +946,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_UnlockTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$171.const$1,"SDL_UnlockTexture");
+        return RuntimeHelper.requireNonNull(constants$173.const$1,"SDL_UnlockTexture");
     }
     /**
      * {@snippet :
@@ -794,7 +962,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderTargetSupported$MH() {
-        return RuntimeHelper.requireNonNull(constants$171.const$2,"SDL_RenderTargetSupported");
+        return RuntimeHelper.requireNonNull(constants$173.const$2,"SDL_RenderTargetSupported");
     }
     /**
      * {@snippet :
@@ -810,7 +978,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_SetRenderTarget$MH() {
-        return RuntimeHelper.requireNonNull(constants$171.const$3,"SDL_SetRenderTarget");
+        return RuntimeHelper.requireNonNull(constants$173.const$3,"SDL_SetRenderTarget");
     }
     /**
      * {@snippet :
@@ -826,7 +994,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_GetRenderTarget$MH() {
-        return RuntimeHelper.requireNonNull(constants$171.const$4,"SDL_GetRenderTarget");
+        return RuntimeHelper.requireNonNull(constants$173.const$4,"SDL_GetRenderTarget");
     }
     /**
      * {@snippet :
@@ -842,7 +1010,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderSetLogicalSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$171.const$5,"SDL_RenderSetLogicalSize");
+        return RuntimeHelper.requireNonNull(constants$173.const$5,"SDL_RenderSetLogicalSize");
     }
     /**
      * {@snippet :
@@ -858,7 +1026,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGetLogicalSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$172.const$0,"SDL_RenderGetLogicalSize");
+        return RuntimeHelper.requireNonNull(constants$174.const$0,"SDL_RenderGetLogicalSize");
     }
     /**
      * {@snippet :
@@ -874,7 +1042,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderSetIntegerScale$MH() {
-        return RuntimeHelper.requireNonNull(constants$172.const$1,"SDL_RenderSetIntegerScale");
+        return RuntimeHelper.requireNonNull(constants$174.const$1,"SDL_RenderSetIntegerScale");
     }
     /**
      * {@snippet :
@@ -890,7 +1058,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGetIntegerScale$MH() {
-        return RuntimeHelper.requireNonNull(constants$172.const$2,"SDL_RenderGetIntegerScale");
+        return RuntimeHelper.requireNonNull(constants$174.const$2,"SDL_RenderGetIntegerScale");
     }
     /**
      * {@snippet :
@@ -906,7 +1074,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderSetViewport$MH() {
-        return RuntimeHelper.requireNonNull(constants$172.const$3,"SDL_RenderSetViewport");
+        return RuntimeHelper.requireNonNull(constants$174.const$3,"SDL_RenderSetViewport");
     }
     /**
      * {@snippet :
@@ -922,7 +1090,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGetViewport$MH() {
-        return RuntimeHelper.requireNonNull(constants$172.const$4,"SDL_RenderGetViewport");
+        return RuntimeHelper.requireNonNull(constants$174.const$4,"SDL_RenderGetViewport");
     }
     /**
      * {@snippet :
@@ -938,7 +1106,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderSetClipRect$MH() {
-        return RuntimeHelper.requireNonNull(constants$172.const$5,"SDL_RenderSetClipRect");
+        return RuntimeHelper.requireNonNull(constants$174.const$5,"SDL_RenderSetClipRect");
     }
     /**
      * {@snippet :
@@ -954,7 +1122,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGetClipRect$MH() {
-        return RuntimeHelper.requireNonNull(constants$173.const$0,"SDL_RenderGetClipRect");
+        return RuntimeHelper.requireNonNull(constants$175.const$0,"SDL_RenderGetClipRect");
     }
     /**
      * {@snippet :
@@ -970,7 +1138,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderIsClipEnabled$MH() {
-        return RuntimeHelper.requireNonNull(constants$173.const$1,"SDL_RenderIsClipEnabled");
+        return RuntimeHelper.requireNonNull(constants$175.const$1,"SDL_RenderIsClipEnabled");
     }
     /**
      * {@snippet :
@@ -986,7 +1154,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderSetScale$MH() {
-        return RuntimeHelper.requireNonNull(constants$173.const$3,"SDL_RenderSetScale");
+        return RuntimeHelper.requireNonNull(constants$175.const$3,"SDL_RenderSetScale");
     }
     /**
      * {@snippet :
@@ -1002,7 +1170,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGetScale$MH() {
-        return RuntimeHelper.requireNonNull(constants$173.const$4,"SDL_RenderGetScale");
+        return RuntimeHelper.requireNonNull(constants$175.const$4,"SDL_RenderGetScale");
     }
     /**
      * {@snippet :
@@ -1018,7 +1186,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderWindowToLogical$MH() {
-        return RuntimeHelper.requireNonNull(constants$173.const$6,"SDL_RenderWindowToLogical");
+        return RuntimeHelper.requireNonNull(constants$175.const$6,"SDL_RenderWindowToLogical");
     }
     /**
      * {@snippet :
@@ -1034,7 +1202,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderLogicalToWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$174.const$1,"SDL_RenderLogicalToWindow");
+        return RuntimeHelper.requireNonNull(constants$176.const$1,"SDL_RenderLogicalToWindow");
     }
     /**
      * {@snippet :
@@ -1050,7 +1218,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_SetRenderDrawColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$174.const$2,"SDL_SetRenderDrawColor");
+        return RuntimeHelper.requireNonNull(constants$176.const$2,"SDL_SetRenderDrawColor");
     }
     /**
      * {@snippet :
@@ -1066,7 +1234,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_GetRenderDrawColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$174.const$3,"SDL_GetRenderDrawColor");
+        return RuntimeHelper.requireNonNull(constants$176.const$3,"SDL_GetRenderDrawColor");
     }
     /**
      * {@snippet :
@@ -1082,7 +1250,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_SetRenderDrawBlendMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$174.const$4,"SDL_SetRenderDrawBlendMode");
+        return RuntimeHelper.requireNonNull(constants$176.const$4,"SDL_SetRenderDrawBlendMode");
     }
     /**
      * {@snippet :
@@ -1098,7 +1266,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_GetRenderDrawBlendMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$174.const$5,"SDL_GetRenderDrawBlendMode");
+        return RuntimeHelper.requireNonNull(constants$176.const$5,"SDL_GetRenderDrawBlendMode");
     }
     /**
      * {@snippet :
@@ -1114,7 +1282,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderClear$MH() {
-        return RuntimeHelper.requireNonNull(constants$175.const$0,"SDL_RenderClear");
+        return RuntimeHelper.requireNonNull(constants$177.const$0,"SDL_RenderClear");
     }
     /**
      * {@snippet :
@@ -1130,7 +1298,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawPoint$MH() {
-        return RuntimeHelper.requireNonNull(constants$175.const$1,"SDL_RenderDrawPoint");
+        return RuntimeHelper.requireNonNull(constants$177.const$1,"SDL_RenderDrawPoint");
     }
     /**
      * {@snippet :
@@ -1146,7 +1314,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawPoints$MH() {
-        return RuntimeHelper.requireNonNull(constants$175.const$2,"SDL_RenderDrawPoints");
+        return RuntimeHelper.requireNonNull(constants$177.const$2,"SDL_RenderDrawPoints");
     }
     /**
      * {@snippet :
@@ -1162,7 +1330,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawLine$MH() {
-        return RuntimeHelper.requireNonNull(constants$175.const$3,"SDL_RenderDrawLine");
+        return RuntimeHelper.requireNonNull(constants$177.const$3,"SDL_RenderDrawLine");
     }
     /**
      * {@snippet :
@@ -1178,7 +1346,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawLines$MH() {
-        return RuntimeHelper.requireNonNull(constants$175.const$4,"SDL_RenderDrawLines");
+        return RuntimeHelper.requireNonNull(constants$177.const$4,"SDL_RenderDrawLines");
     }
     /**
      * {@snippet :
@@ -1194,7 +1362,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawRect$MH() {
-        return RuntimeHelper.requireNonNull(constants$175.const$5,"SDL_RenderDrawRect");
+        return RuntimeHelper.requireNonNull(constants$177.const$5,"SDL_RenderDrawRect");
     }
     /**
      * {@snippet :
@@ -1210,7 +1378,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawRects$MH() {
-        return RuntimeHelper.requireNonNull(constants$176.const$0,"SDL_RenderDrawRects");
+        return RuntimeHelper.requireNonNull(constants$178.const$0,"SDL_RenderDrawRects");
     }
     /**
      * {@snippet :
@@ -1226,7 +1394,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderFillRect$MH() {
-        return RuntimeHelper.requireNonNull(constants$176.const$1,"SDL_RenderFillRect");
+        return RuntimeHelper.requireNonNull(constants$178.const$1,"SDL_RenderFillRect");
     }
     /**
      * {@snippet :
@@ -1242,7 +1410,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderFillRects$MH() {
-        return RuntimeHelper.requireNonNull(constants$176.const$2,"SDL_RenderFillRects");
+        return RuntimeHelper.requireNonNull(constants$178.const$2,"SDL_RenderFillRects");
     }
     /**
      * {@snippet :
@@ -1258,7 +1426,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderCopy$MH() {
-        return RuntimeHelper.requireNonNull(constants$176.const$3,"SDL_RenderCopy");
+        return RuntimeHelper.requireNonNull(constants$178.const$3,"SDL_RenderCopy");
     }
     /**
      * {@snippet :
@@ -1274,7 +1442,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderCopyEx$MH() {
-        return RuntimeHelper.requireNonNull(constants$176.const$5,"SDL_RenderCopyEx");
+        return RuntimeHelper.requireNonNull(constants$178.const$5,"SDL_RenderCopyEx");
     }
     /**
      * {@snippet :
@@ -1290,7 +1458,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawPointF$MH() {
-        return RuntimeHelper.requireNonNull(constants$177.const$0,"SDL_RenderDrawPointF");
+        return RuntimeHelper.requireNonNull(constants$179.const$0,"SDL_RenderDrawPointF");
     }
     /**
      * {@snippet :
@@ -1306,7 +1474,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawPointsF$MH() {
-        return RuntimeHelper.requireNonNull(constants$177.const$1,"SDL_RenderDrawPointsF");
+        return RuntimeHelper.requireNonNull(constants$179.const$1,"SDL_RenderDrawPointsF");
     }
     /**
      * {@snippet :
@@ -1322,7 +1490,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawLineF$MH() {
-        return RuntimeHelper.requireNonNull(constants$177.const$3,"SDL_RenderDrawLineF");
+        return RuntimeHelper.requireNonNull(constants$179.const$3,"SDL_RenderDrawLineF");
     }
     /**
      * {@snippet :
@@ -1338,7 +1506,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawLinesF$MH() {
-        return RuntimeHelper.requireNonNull(constants$177.const$4,"SDL_RenderDrawLinesF");
+        return RuntimeHelper.requireNonNull(constants$179.const$4,"SDL_RenderDrawLinesF");
     }
     /**
      * {@snippet :
@@ -1354,7 +1522,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawRectF$MH() {
-        return RuntimeHelper.requireNonNull(constants$177.const$5,"SDL_RenderDrawRectF");
+        return RuntimeHelper.requireNonNull(constants$179.const$5,"SDL_RenderDrawRectF");
     }
     /**
      * {@snippet :
@@ -1370,7 +1538,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawRectsF$MH() {
-        return RuntimeHelper.requireNonNull(constants$178.const$0,"SDL_RenderDrawRectsF");
+        return RuntimeHelper.requireNonNull(constants$180.const$0,"SDL_RenderDrawRectsF");
     }
     /**
      * {@snippet :
@@ -1386,7 +1554,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderFillRectF$MH() {
-        return RuntimeHelper.requireNonNull(constants$178.const$1,"SDL_RenderFillRectF");
+        return RuntimeHelper.requireNonNull(constants$180.const$1,"SDL_RenderFillRectF");
     }
     /**
      * {@snippet :
@@ -1402,7 +1570,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderFillRectsF$MH() {
-        return RuntimeHelper.requireNonNull(constants$178.const$2,"SDL_RenderFillRectsF");
+        return RuntimeHelper.requireNonNull(constants$180.const$2,"SDL_RenderFillRectsF");
     }
     /**
      * {@snippet :
@@ -1418,7 +1586,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderCopyF$MH() {
-        return RuntimeHelper.requireNonNull(constants$178.const$3,"SDL_RenderCopyF");
+        return RuntimeHelper.requireNonNull(constants$180.const$3,"SDL_RenderCopyF");
     }
     /**
      * {@snippet :
@@ -1434,7 +1602,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderCopyExF$MH() {
-        return RuntimeHelper.requireNonNull(constants$178.const$4,"SDL_RenderCopyExF");
+        return RuntimeHelper.requireNonNull(constants$180.const$4,"SDL_RenderCopyExF");
     }
     /**
      * {@snippet :
@@ -1450,7 +1618,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGeometry$MH() {
-        return RuntimeHelper.requireNonNull(constants$178.const$5,"SDL_RenderGeometry");
+        return RuntimeHelper.requireNonNull(constants$180.const$5,"SDL_RenderGeometry");
     }
     /**
      * {@snippet :
@@ -1466,7 +1634,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGeometryRaw$MH() {
-        return RuntimeHelper.requireNonNull(constants$179.const$1,"SDL_RenderGeometryRaw");
+        return RuntimeHelper.requireNonNull(constants$181.const$1,"SDL_RenderGeometryRaw");
     }
     /**
      * {@snippet :
@@ -1482,7 +1650,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderReadPixels$MH() {
-        return RuntimeHelper.requireNonNull(constants$179.const$3,"SDL_RenderReadPixels");
+        return RuntimeHelper.requireNonNull(constants$181.const$3,"SDL_RenderReadPixels");
     }
     /**
      * {@snippet :
@@ -1498,7 +1666,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderPresent$MH() {
-        return RuntimeHelper.requireNonNull(constants$179.const$4,"SDL_RenderPresent");
+        return RuntimeHelper.requireNonNull(constants$181.const$4,"SDL_RenderPresent");
     }
     /**
      * {@snippet :
@@ -1514,7 +1682,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_DestroyTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$179.const$5,"SDL_DestroyTexture");
+        return RuntimeHelper.requireNonNull(constants$181.const$5,"SDL_DestroyTexture");
     }
     /**
      * {@snippet :
@@ -1530,7 +1698,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_DestroyRenderer$MH() {
-        return RuntimeHelper.requireNonNull(constants$180.const$0,"SDL_DestroyRenderer");
+        return RuntimeHelper.requireNonNull(constants$182.const$0,"SDL_DestroyRenderer");
     }
     /**
      * {@snippet :
@@ -1546,7 +1714,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderFlush$MH() {
-        return RuntimeHelper.requireNonNull(constants$180.const$1,"SDL_RenderFlush");
+        return RuntimeHelper.requireNonNull(constants$182.const$1,"SDL_RenderFlush");
     }
     /**
      * {@snippet :
@@ -1562,7 +1730,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_GL_BindTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$180.const$2,"SDL_GL_BindTexture");
+        return RuntimeHelper.requireNonNull(constants$182.const$2,"SDL_GL_BindTexture");
     }
     /**
      * {@snippet :
@@ -1578,7 +1746,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_GL_UnbindTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$180.const$3,"SDL_GL_UnbindTexture");
+        return RuntimeHelper.requireNonNull(constants$182.const$3,"SDL_GL_UnbindTexture");
     }
     /**
      * {@snippet :
@@ -1594,7 +1762,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGetMetalLayer$MH() {
-        return RuntimeHelper.requireNonNull(constants$180.const$4,"SDL_RenderGetMetalLayer");
+        return RuntimeHelper.requireNonNull(constants$182.const$4,"SDL_RenderGetMetalLayer");
     }
     /**
      * {@snippet :
@@ -1610,7 +1778,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGetMetalCommandEncoder$MH() {
-        return RuntimeHelper.requireNonNull(constants$180.const$5,"SDL_RenderGetMetalCommandEncoder");
+        return RuntimeHelper.requireNonNull(constants$182.const$5,"SDL_RenderGetMetalCommandEncoder");
     }
     /**
      * {@snippet :
@@ -1626,7 +1794,7 @@ public class SDL_subset_h_1 {
         }
     }
     public static MethodHandle SDL_RenderSetVSync$MH() {
-        return RuntimeHelper.requireNonNull(constants$181.const$0,"SDL_RenderSetVSync");
+        return RuntimeHelper.requireNonNull(constants$183.const$0,"SDL_RenderSetVSync");
     }
     /**
      * {@snippet :
@@ -1637,6 +1805,86 @@ public class SDL_subset_h_1 {
         var mh$ = SDL_RenderSetVSync$MH();
         try {
             return (int)mh$.invokeExact(renderer, vsync);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_Init$MH() {
+        return RuntimeHelper.requireNonNull(constants$183.const$1,"SDL_Init");
+    }
+    /**
+     * {@snippet :
+     * int SDL_Init(unsigned int flags);
+     * }
+     */
+    public static int SDL_Init(int flags) {
+        var mh$ = SDL_Init$MH();
+        try {
+            return (int)mh$.invokeExact(flags);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_InitSubSystem$MH() {
+        return RuntimeHelper.requireNonNull(constants$183.const$2,"SDL_InitSubSystem");
+    }
+    /**
+     * {@snippet :
+     * int SDL_InitSubSystem(unsigned int flags);
+     * }
+     */
+    public static int SDL_InitSubSystem(int flags) {
+        var mh$ = SDL_InitSubSystem$MH();
+        try {
+            return (int)mh$.invokeExact(flags);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_QuitSubSystem$MH() {
+        return RuntimeHelper.requireNonNull(constants$183.const$3,"SDL_QuitSubSystem");
+    }
+    /**
+     * {@snippet :
+     * void SDL_QuitSubSystem(unsigned int flags);
+     * }
+     */
+    public static void SDL_QuitSubSystem(int flags) {
+        var mh$ = SDL_QuitSubSystem$MH();
+        try {
+            mh$.invokeExact(flags);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_WasInit$MH() {
+        return RuntimeHelper.requireNonNull(constants$183.const$4,"SDL_WasInit");
+    }
+    /**
+     * {@snippet :
+     * unsigned int SDL_WasInit(unsigned int flags);
+     * }
+     */
+    public static int SDL_WasInit(int flags) {
+        var mh$ = SDL_WasInit$MH();
+        try {
+            return (int)mh$.invokeExact(flags);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_Quit$MH() {
+        return RuntimeHelper.requireNonNull(constants$183.const$5,"SDL_Quit");
+    }
+    /**
+     * {@snippet :
+     * void SDL_Quit();
+     * }
+     */
+    public static void SDL_Quit() {
+        var mh$ = SDL_Quit$MH();
+        try {
+            mh$.invokeExact();
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
@@ -1799,7 +2047,7 @@ public class SDL_subset_h_1 {
      * }
      */
     public static MemorySegment SDL_PRIs64() {
-        return constants$184.const$1;
+        return constants$184.const$0;
     }
     /**
      * {@snippet :
@@ -1807,7 +2055,7 @@ public class SDL_subset_h_1 {
      * }
      */
     public static MemorySegment SDL_PRIu64() {
-        return constants$184.const$2;
+        return constants$184.const$1;
     }
     /**
      * {@snippet :
@@ -1815,7 +2063,7 @@ public class SDL_subset_h_1 {
      * }
      */
     public static MemorySegment SDL_PRIx64() {
-        return constants$184.const$3;
+        return constants$184.const$2;
     }
     /**
      * {@snippet :
@@ -1823,7 +2071,7 @@ public class SDL_subset_h_1 {
      * }
      */
     public static MemorySegment SDL_PRIX64() {
-        return constants$184.const$4;
+        return constants$184.const$3;
     }
     /**
      * {@snippet :
@@ -1831,7 +2079,7 @@ public class SDL_subset_h_1 {
      * }
      */
     public static MemorySegment SDL_PRIs32() {
-        return constants$184.const$5;
+        return constants$184.const$4;
     }
     /**
      * {@snippet :
@@ -1839,7 +2087,7 @@ public class SDL_subset_h_1 {
      * }
      */
     public static MemorySegment SDL_PRIu32() {
-        return constants$185.const$0;
+        return constants$184.const$5;
     }
     /**
      * {@snippet :
@@ -1847,7 +2095,7 @@ public class SDL_subset_h_1 {
      * }
      */
     public static MemorySegment SDL_PRIx32() {
-        return constants$185.const$1;
+        return constants$185.const$0;
     }
     /**
      * {@snippet :
@@ -1855,7 +2103,7 @@ public class SDL_subset_h_1 {
      * }
      */
     public static MemorySegment SDL_PRIX32() {
-        return constants$185.const$2;
+        return constants$185.const$1;
     }
     /**
      * {@snippet :
@@ -1888,6 +2136,14 @@ public class SDL_subset_h_1 {
      */
     public static long SDL_ICONV_EINVAL() {
         return -4L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_MUTEX_MAXWAIT 4294967295
+     * }
+     */
+    public static int SDL_MUTEX_MAXWAIT() {
+        return (int)4294967295L;
     }
     /**
      * {@snippet :
@@ -1939,19 +2195,35 @@ public class SDL_subset_h_1 {
     }
     /**
      * {@snippet :
-     * #define SDL_STANDARD_GRAVITY 9.806650161743164
+     * #define SDL_WINDOWPOS_UNDEFINED_MASK 536805376
      * }
      */
-    public static float SDL_STANDARD_GRAVITY() {
-        return 9.806650161743164f;
+    public static int SDL_WINDOWPOS_UNDEFINED_MASK() {
+        return (int)536805376L;
     }
     /**
      * {@snippet :
-     * #define SDL_MUTEX_MAXWAIT 4294967295
+     * #define SDL_WINDOWPOS_UNDEFINED 536805376
      * }
      */
-    public static int SDL_MUTEX_MAXWAIT() {
-        return (int)4294967295L;
+    public static int SDL_WINDOWPOS_UNDEFINED() {
+        return (int)536805376L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_WINDOWPOS_CENTERED_MASK 805240832
+     * }
+     */
+    public static int SDL_WINDOWPOS_CENTERED_MASK() {
+        return (int)805240832L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_WINDOWPOS_CENTERED 805240832
+     * }
+     */
+    public static int SDL_WINDOWPOS_CENTERED() {
+        return (int)805240832L;
     }
     /**
      * {@snippet :
@@ -2003,35 +2275,11 @@ public class SDL_subset_h_1 {
     }
     /**
      * {@snippet :
-     * #define SDL_WINDOWPOS_UNDEFINED_MASK 536805376
+     * #define SDL_STANDARD_GRAVITY 9.806650161743164
      * }
      */
-    public static int SDL_WINDOWPOS_UNDEFINED_MASK() {
-        return (int)536805376L;
-    }
-    /**
-     * {@snippet :
-     * #define SDL_WINDOWPOS_UNDEFINED 536805376
-     * }
-     */
-    public static int SDL_WINDOWPOS_UNDEFINED() {
-        return (int)536805376L;
-    }
-    /**
-     * {@snippet :
-     * #define SDL_WINDOWPOS_CENTERED_MASK 805240832
-     * }
-     */
-    public static int SDL_WINDOWPOS_CENTERED_MASK() {
-        return (int)805240832L;
-    }
-    /**
-     * {@snippet :
-     * #define SDL_WINDOWPOS_CENTERED 805240832
-     * }
-     */
-    public static int SDL_WINDOWPOS_CENTERED() {
-        return (int)805240832L;
+    public static float SDL_STANDARD_GRAVITY() {
+        return 9.806650161743164f;
     }
     /**
      * {@snippet :
@@ -2056,6 +2304,1494 @@ public class SDL_subset_h_1 {
      */
     public static int SDL_QUERY() {
         return (int)-1L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_ACCELEROMETER_AS_JOYSTICK "SDL_ACCELEROMETER_AS_JOYSTICK"
+     * }
+     */
+    public static MemorySegment SDL_HINT_ACCELEROMETER_AS_JOYSTICK() {
+        return constants$185.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_ALLOW_ALT_TAB_WHILE_GRABBED "SDL_ALLOW_ALT_TAB_WHILE_GRABBED"
+     * }
+     */
+    public static MemorySegment SDL_HINT_ALLOW_ALT_TAB_WHILE_GRABBED() {
+        return constants$185.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_ALLOW_TOPMOST "SDL_ALLOW_TOPMOST"
+     * }
+     */
+    public static MemorySegment SDL_HINT_ALLOW_TOPMOST() {
+        return constants$185.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_ANDROID_APK_EXPANSION_MAIN_FILE_VERSION "SDL_ANDROID_APK_EXPANSION_MAIN_FILE_VERSION"
+     * }
+     */
+    public static MemorySegment SDL_HINT_ANDROID_APK_EXPANSION_MAIN_FILE_VERSION() {
+        return constants$185.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_ANDROID_APK_EXPANSION_PATCH_FILE_VERSION "SDL_ANDROID_APK_EXPANSION_PATCH_FILE_VERSION"
+     * }
+     */
+    public static MemorySegment SDL_HINT_ANDROID_APK_EXPANSION_PATCH_FILE_VERSION() {
+        return constants$186.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_ANDROID_BLOCK_ON_PAUSE "SDL_ANDROID_BLOCK_ON_PAUSE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_ANDROID_BLOCK_ON_PAUSE() {
+        return constants$186.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_ANDROID_BLOCK_ON_PAUSE_PAUSEAUDIO "SDL_ANDROID_BLOCK_ON_PAUSE_PAUSEAUDIO"
+     * }
+     */
+    public static MemorySegment SDL_HINT_ANDROID_BLOCK_ON_PAUSE_PAUSEAUDIO() {
+        return constants$186.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_ANDROID_TRAP_BACK_BUTTON "SDL_ANDROID_TRAP_BACK_BUTTON"
+     * }
+     */
+    public static MemorySegment SDL_HINT_ANDROID_TRAP_BACK_BUTTON() {
+        return constants$186.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_APP_NAME "SDL_APP_NAME"
+     * }
+     */
+    public static MemorySegment SDL_HINT_APP_NAME() {
+        return constants$186.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_APPLE_TV_CONTROLLER_UI_EVENTS "SDL_APPLE_TV_CONTROLLER_UI_EVENTS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_APPLE_TV_CONTROLLER_UI_EVENTS() {
+        return constants$186.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_APPLE_TV_REMOTE_ALLOW_ROTATION "SDL_APPLE_TV_REMOTE_ALLOW_ROTATION"
+     * }
+     */
+    public static MemorySegment SDL_HINT_APPLE_TV_REMOTE_ALLOW_ROTATION() {
+        return constants$187.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_AUDIO_CATEGORY "SDL_AUDIO_CATEGORY"
+     * }
+     */
+    public static MemorySegment SDL_HINT_AUDIO_CATEGORY() {
+        return constants$187.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_AUDIO_DEVICE_APP_NAME "SDL_AUDIO_DEVICE_APP_NAME"
+     * }
+     */
+    public static MemorySegment SDL_HINT_AUDIO_DEVICE_APP_NAME() {
+        return constants$187.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_AUDIO_DEVICE_STREAM_NAME "SDL_AUDIO_DEVICE_STREAM_NAME"
+     * }
+     */
+    public static MemorySegment SDL_HINT_AUDIO_DEVICE_STREAM_NAME() {
+        return constants$187.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_AUDIO_DEVICE_STREAM_ROLE "SDL_AUDIO_DEVICE_STREAM_ROLE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_AUDIO_DEVICE_STREAM_ROLE() {
+        return constants$187.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_AUDIO_RESAMPLING_MODE "SDL_AUDIO_RESAMPLING_MODE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_AUDIO_RESAMPLING_MODE() {
+        return constants$187.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_AUTO_UPDATE_JOYSTICKS "SDL_AUTO_UPDATE_JOYSTICKS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_AUTO_UPDATE_JOYSTICKS() {
+        return constants$188.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_AUTO_UPDATE_SENSORS "SDL_AUTO_UPDATE_SENSORS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_AUTO_UPDATE_SENSORS() {
+        return constants$188.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_BMP_SAVE_LEGACY_FORMAT "SDL_BMP_SAVE_LEGACY_FORMAT"
+     * }
+     */
+    public static MemorySegment SDL_HINT_BMP_SAVE_LEGACY_FORMAT() {
+        return constants$188.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_DISPLAY_USABLE_BOUNDS "SDL_DISPLAY_USABLE_BOUNDS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_DISPLAY_USABLE_BOUNDS() {
+        return constants$188.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_EMSCRIPTEN_ASYNCIFY "SDL_EMSCRIPTEN_ASYNCIFY"
+     * }
+     */
+    public static MemorySegment SDL_HINT_EMSCRIPTEN_ASYNCIFY() {
+        return constants$188.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_EMSCRIPTEN_KEYBOARD_ELEMENT "SDL_EMSCRIPTEN_KEYBOARD_ELEMENT"
+     * }
+     */
+    public static MemorySegment SDL_HINT_EMSCRIPTEN_KEYBOARD_ELEMENT() {
+        return constants$188.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_ENABLE_SCREEN_KEYBOARD "SDL_ENABLE_SCREEN_KEYBOARD"
+     * }
+     */
+    public static MemorySegment SDL_HINT_ENABLE_SCREEN_KEYBOARD() {
+        return constants$189.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_ENABLE_STEAM_CONTROLLERS "SDL_ENABLE_STEAM_CONTROLLERS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_ENABLE_STEAM_CONTROLLERS() {
+        return constants$189.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_EVENT_LOGGING "SDL_EVENT_LOGGING"
+     * }
+     */
+    public static MemorySegment SDL_HINT_EVENT_LOGGING() {
+        return constants$189.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_FORCE_RAISEWINDOW "SDL_HINT_FORCE_RAISEWINDOW"
+     * }
+     */
+    public static MemorySegment SDL_HINT_FORCE_RAISEWINDOW() {
+        return constants$189.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_FRAMEBUFFER_ACCELERATION "SDL_FRAMEBUFFER_ACCELERATION"
+     * }
+     */
+    public static MemorySegment SDL_HINT_FRAMEBUFFER_ACCELERATION() {
+        return constants$189.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_GAMECONTROLLERCONFIG "SDL_GAMECONTROLLERCONFIG"
+     * }
+     */
+    public static MemorySegment SDL_HINT_GAMECONTROLLERCONFIG() {
+        return constants$189.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_GAMECONTROLLERCONFIG_FILE "SDL_GAMECONTROLLERCONFIG_FILE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_GAMECONTROLLERCONFIG_FILE() {
+        return constants$190.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_GAMECONTROLLERTYPE "SDL_GAMECONTROLLERTYPE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_GAMECONTROLLERTYPE() {
+        return constants$190.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_GAMECONTROLLER_IGNORE_DEVICES "SDL_GAMECONTROLLER_IGNORE_DEVICES"
+     * }
+     */
+    public static MemorySegment SDL_HINT_GAMECONTROLLER_IGNORE_DEVICES() {
+        return constants$190.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_GAMECONTROLLER_IGNORE_DEVICES_EXCEPT "SDL_GAMECONTROLLER_IGNORE_DEVICES_EXCEPT"
+     * }
+     */
+    public static MemorySegment SDL_HINT_GAMECONTROLLER_IGNORE_DEVICES_EXCEPT() {
+        return constants$190.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_GAMECONTROLLER_USE_BUTTON_LABELS "SDL_GAMECONTROLLER_USE_BUTTON_LABELS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_GAMECONTROLLER_USE_BUTTON_LABELS() {
+        return constants$190.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_GRAB_KEYBOARD "SDL_GRAB_KEYBOARD"
+     * }
+     */
+    public static MemorySegment SDL_HINT_GRAB_KEYBOARD() {
+        return constants$190.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_HIDAPI_IGNORE_DEVICES "SDL_HIDAPI_IGNORE_DEVICES"
+     * }
+     */
+    public static MemorySegment SDL_HINT_HIDAPI_IGNORE_DEVICES() {
+        return constants$191.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_IDLE_TIMER_DISABLED "SDL_IOS_IDLE_TIMER_DISABLED"
+     * }
+     */
+    public static MemorySegment SDL_HINT_IDLE_TIMER_DISABLED() {
+        return constants$191.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_IME_INTERNAL_EDITING "SDL_IME_INTERNAL_EDITING"
+     * }
+     */
+    public static MemorySegment SDL_HINT_IME_INTERNAL_EDITING() {
+        return constants$191.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_IME_SHOW_UI "SDL_IME_SHOW_UI"
+     * }
+     */
+    public static MemorySegment SDL_HINT_IME_SHOW_UI() {
+        return constants$191.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_IME_SUPPORT_EXTENDED_TEXT "SDL_IME_SUPPORT_EXTENDED_TEXT"
+     * }
+     */
+    public static MemorySegment SDL_HINT_IME_SUPPORT_EXTENDED_TEXT() {
+        return constants$191.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_IOS_HIDE_HOME_INDICATOR "SDL_IOS_HIDE_HOME_INDICATOR"
+     * }
+     */
+    public static MemorySegment SDL_HINT_IOS_HIDE_HOME_INDICATOR() {
+        return constants$191.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS "SDL_JOYSTICK_ALLOW_BACKGROUND_EVENTS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS() {
+        return constants$192.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI "SDL_JOYSTICK_HIDAPI"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI() {
+        return constants$192.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_GAMECUBE "SDL_JOYSTICK_HIDAPI_GAMECUBE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_GAMECUBE() {
+        return constants$192.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_GAMECUBE_RUMBLE_BRAKE "SDL_JOYSTICK_GAMECUBE_RUMBLE_BRAKE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_GAMECUBE_RUMBLE_BRAKE() {
+        return constants$192.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_JOY_CONS "SDL_JOYSTICK_HIDAPI_JOY_CONS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_JOY_CONS() {
+        return constants$192.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_COMBINE_JOY_CONS "SDL_JOYSTICK_HIDAPI_COMBINE_JOY_CONS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_COMBINE_JOY_CONS() {
+        return constants$192.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_VERTICAL_JOY_CONS "SDL_JOYSTICK_HIDAPI_VERTICAL_JOY_CONS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_VERTICAL_JOY_CONS() {
+        return constants$193.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_LUNA "SDL_JOYSTICK_HIDAPI_LUNA"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_LUNA() {
+        return constants$193.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_NINTENDO_CLASSIC "SDL_JOYSTICK_HIDAPI_NINTENDO_CLASSIC"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_NINTENDO_CLASSIC() {
+        return constants$193.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_SHIELD "SDL_JOYSTICK_HIDAPI_SHIELD"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_SHIELD() {
+        return constants$193.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_PS3 "SDL_JOYSTICK_HIDAPI_PS3"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_PS3() {
+        return constants$193.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_PS4 "SDL_JOYSTICK_HIDAPI_PS4"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_PS4() {
+        return constants$193.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_PS4_RUMBLE "SDL_JOYSTICK_HIDAPI_PS4_RUMBLE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_PS4_RUMBLE() {
+        return constants$194.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_PS5 "SDL_JOYSTICK_HIDAPI_PS5"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_PS5() {
+        return constants$194.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_PS5_PLAYER_LED "SDL_JOYSTICK_HIDAPI_PS5_PLAYER_LED"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_PS5_PLAYER_LED() {
+        return constants$194.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_PS5_RUMBLE "SDL_JOYSTICK_HIDAPI_PS5_RUMBLE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_PS5_RUMBLE() {
+        return constants$194.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_STADIA "SDL_JOYSTICK_HIDAPI_STADIA"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_STADIA() {
+        return constants$194.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_STEAM "SDL_JOYSTICK_HIDAPI_STEAM"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_STEAM() {
+        return constants$194.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_SWITCH "SDL_JOYSTICK_HIDAPI_SWITCH"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_SWITCH() {
+        return constants$195.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_SWITCH_HOME_LED "SDL_JOYSTICK_HIDAPI_SWITCH_HOME_LED"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_SWITCH_HOME_LED() {
+        return constants$195.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_JOYCON_HOME_LED "SDL_JOYSTICK_HIDAPI_JOYCON_HOME_LED"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_JOYCON_HOME_LED() {
+        return constants$195.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_SWITCH_PLAYER_LED "SDL_JOYSTICK_HIDAPI_SWITCH_PLAYER_LED"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_SWITCH_PLAYER_LED() {
+        return constants$195.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_WII "SDL_JOYSTICK_HIDAPI_WII"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_WII() {
+        return constants$195.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_WII_PLAYER_LED "SDL_JOYSTICK_HIDAPI_WII_PLAYER_LED"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_WII_PLAYER_LED() {
+        return constants$195.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_XBOX "SDL_JOYSTICK_HIDAPI_XBOX"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_XBOX() {
+        return constants$196.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_XBOX_360 "SDL_JOYSTICK_HIDAPI_XBOX_360"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_XBOX_360() {
+        return constants$196.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_XBOX_360_PLAYER_LED "SDL_JOYSTICK_HIDAPI_XBOX_360_PLAYER_LED"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_XBOX_360_PLAYER_LED() {
+        return constants$196.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_XBOX_360_WIRELESS "SDL_JOYSTICK_HIDAPI_XBOX_360_WIRELESS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_XBOX_360_WIRELESS() {
+        return constants$196.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_XBOX_ONE "SDL_JOYSTICK_HIDAPI_XBOX_ONE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_XBOX_ONE() {
+        return constants$196.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_HIDAPI_XBOX_ONE_HOME_LED "SDL_JOYSTICK_HIDAPI_XBOX_ONE_HOME_LED"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_XBOX_ONE_HOME_LED() {
+        return constants$196.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_RAWINPUT "SDL_JOYSTICK_RAWINPUT"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_RAWINPUT() {
+        return constants$197.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_RAWINPUT_CORRELATE_XINPUT "SDL_JOYSTICK_RAWINPUT_CORRELATE_XINPUT"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_RAWINPUT_CORRELATE_XINPUT() {
+        return constants$197.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_ROG_CHAKRAM "SDL_JOYSTICK_ROG_CHAKRAM"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_ROG_CHAKRAM() {
+        return constants$197.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_THREAD "SDL_JOYSTICK_THREAD"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_THREAD() {
+        return constants$197.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_WGI "SDL_JOYSTICK_WGI"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_WGI() {
+        return constants$197.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_KMSDRM_REQUIRE_DRM_MASTER "SDL_KMSDRM_REQUIRE_DRM_MASTER"
+     * }
+     */
+    public static MemorySegment SDL_HINT_KMSDRM_REQUIRE_DRM_MASTER() {
+        return constants$197.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_JOYSTICK_DEVICE "SDL_JOYSTICK_DEVICE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_JOYSTICK_DEVICE() {
+        return constants$198.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_LINUX_DIGITAL_HATS "SDL_LINUX_DIGITAL_HATS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_LINUX_DIGITAL_HATS() {
+        return constants$198.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_LINUX_HAT_DEADZONES "SDL_LINUX_HAT_DEADZONES"
+     * }
+     */
+    public static MemorySegment SDL_HINT_LINUX_HAT_DEADZONES() {
+        return constants$198.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_LINUX_JOYSTICK_CLASSIC "SDL_LINUX_JOYSTICK_CLASSIC"
+     * }
+     */
+    public static MemorySegment SDL_HINT_LINUX_JOYSTICK_CLASSIC() {
+        return constants$198.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_LINUX_JOYSTICK_DEADZONES "SDL_LINUX_JOYSTICK_DEADZONES"
+     * }
+     */
+    public static MemorySegment SDL_HINT_LINUX_JOYSTICK_DEADZONES() {
+        return constants$198.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_MAC_BACKGROUND_APP "SDL_MAC_BACKGROUND_APP"
+     * }
+     */
+    public static MemorySegment SDL_HINT_MAC_BACKGROUND_APP() {
+        return constants$198.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_MAC_CTRL_CLICK_EMULATE_RIGHT_CLICK "SDL_MAC_CTRL_CLICK_EMULATE_RIGHT_CLICK"
+     * }
+     */
+    public static MemorySegment SDL_HINT_MAC_CTRL_CLICK_EMULATE_RIGHT_CLICK() {
+        return constants$199.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_MAC_OPENGL_ASYNC_DISPATCH "SDL_MAC_OPENGL_ASYNC_DISPATCH"
+     * }
+     */
+    public static MemorySegment SDL_HINT_MAC_OPENGL_ASYNC_DISPATCH() {
+        return constants$199.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_MOUSE_DOUBLE_CLICK_RADIUS "SDL_MOUSE_DOUBLE_CLICK_RADIUS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_MOUSE_DOUBLE_CLICK_RADIUS() {
+        return constants$199.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_MOUSE_DOUBLE_CLICK_TIME "SDL_MOUSE_DOUBLE_CLICK_TIME"
+     * }
+     */
+    public static MemorySegment SDL_HINT_MOUSE_DOUBLE_CLICK_TIME() {
+        return constants$199.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_MOUSE_FOCUS_CLICKTHROUGH "SDL_MOUSE_FOCUS_CLICKTHROUGH"
+     * }
+     */
+    public static MemorySegment SDL_HINT_MOUSE_FOCUS_CLICKTHROUGH() {
+        return constants$199.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_MOUSE_NORMAL_SPEED_SCALE "SDL_MOUSE_NORMAL_SPEED_SCALE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_MOUSE_NORMAL_SPEED_SCALE() {
+        return constants$199.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_MOUSE_RELATIVE_MODE_CENTER "SDL_MOUSE_RELATIVE_MODE_CENTER"
+     * }
+     */
+    public static MemorySegment SDL_HINT_MOUSE_RELATIVE_MODE_CENTER() {
+        return constants$200.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_MOUSE_RELATIVE_MODE_WARP "SDL_MOUSE_RELATIVE_MODE_WARP"
+     * }
+     */
+    public static MemorySegment SDL_HINT_MOUSE_RELATIVE_MODE_WARP() {
+        return constants$200.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_MOUSE_RELATIVE_SCALING "SDL_MOUSE_RELATIVE_SCALING"
+     * }
+     */
+    public static MemorySegment SDL_HINT_MOUSE_RELATIVE_SCALING() {
+        return constants$200.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_MOUSE_RELATIVE_SPEED_SCALE "SDL_MOUSE_RELATIVE_SPEED_SCALE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_MOUSE_RELATIVE_SPEED_SCALE() {
+        return constants$200.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_MOUSE_RELATIVE_SYSTEM_SCALE "SDL_MOUSE_RELATIVE_SYSTEM_SCALE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_MOUSE_RELATIVE_SYSTEM_SCALE() {
+        return constants$200.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_MOUSE_RELATIVE_WARP_MOTION "SDL_MOUSE_RELATIVE_WARP_MOTION"
+     * }
+     */
+    public static MemorySegment SDL_HINT_MOUSE_RELATIVE_WARP_MOTION() {
+        return constants$200.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_MOUSE_TOUCH_EVENTS "SDL_MOUSE_TOUCH_EVENTS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_MOUSE_TOUCH_EVENTS() {
+        return constants$201.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_MOUSE_AUTO_CAPTURE "SDL_MOUSE_AUTO_CAPTURE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_MOUSE_AUTO_CAPTURE() {
+        return constants$201.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_NO_SIGNAL_HANDLERS "SDL_NO_SIGNAL_HANDLERS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_NO_SIGNAL_HANDLERS() {
+        return constants$201.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_OPENGL_ES_DRIVER "SDL_OPENGL_ES_DRIVER"
+     * }
+     */
+    public static MemorySegment SDL_HINT_OPENGL_ES_DRIVER() {
+        return constants$201.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_ORIENTATIONS "SDL_IOS_ORIENTATIONS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_ORIENTATIONS() {
+        return constants$201.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_POLL_SENTINEL "SDL_POLL_SENTINEL"
+     * }
+     */
+    public static MemorySegment SDL_HINT_POLL_SENTINEL() {
+        return constants$201.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_PREFERRED_LOCALES "SDL_PREFERRED_LOCALES"
+     * }
+     */
+    public static MemorySegment SDL_HINT_PREFERRED_LOCALES() {
+        return constants$202.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_QTWAYLAND_CONTENT_ORIENTATION "SDL_QTWAYLAND_CONTENT_ORIENTATION"
+     * }
+     */
+    public static MemorySegment SDL_HINT_QTWAYLAND_CONTENT_ORIENTATION() {
+        return constants$202.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_QTWAYLAND_WINDOW_FLAGS "SDL_QTWAYLAND_WINDOW_FLAGS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_QTWAYLAND_WINDOW_FLAGS() {
+        return constants$202.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_RENDER_BATCHING "SDL_RENDER_BATCHING"
+     * }
+     */
+    public static MemorySegment SDL_HINT_RENDER_BATCHING() {
+        return constants$202.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_RENDER_LINE_METHOD "SDL_RENDER_LINE_METHOD"
+     * }
+     */
+    public static MemorySegment SDL_HINT_RENDER_LINE_METHOD() {
+        return constants$202.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_RENDER_DIRECT3D11_DEBUG "SDL_RENDER_DIRECT3D11_DEBUG"
+     * }
+     */
+    public static MemorySegment SDL_HINT_RENDER_DIRECT3D11_DEBUG() {
+        return constants$202.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_RENDER_DIRECT3D_THREADSAFE "SDL_RENDER_DIRECT3D_THREADSAFE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_RENDER_DIRECT3D_THREADSAFE() {
+        return constants$203.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_RENDER_DRIVER "SDL_RENDER_DRIVER"
+     * }
+     */
+    public static MemorySegment SDL_HINT_RENDER_DRIVER() {
+        return constants$203.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_RENDER_LOGICAL_SIZE_MODE "SDL_RENDER_LOGICAL_SIZE_MODE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_RENDER_LOGICAL_SIZE_MODE() {
+        return constants$203.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_RENDER_OPENGL_SHADERS "SDL_RENDER_OPENGL_SHADERS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_RENDER_OPENGL_SHADERS() {
+        return constants$203.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_RENDER_SCALE_QUALITY "SDL_RENDER_SCALE_QUALITY"
+     * }
+     */
+    public static MemorySegment SDL_HINT_RENDER_SCALE_QUALITY() {
+        return constants$203.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_RENDER_VSYNC "SDL_RENDER_VSYNC"
+     * }
+     */
+    public static MemorySegment SDL_HINT_RENDER_VSYNC() {
+        return constants$203.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_RENDER_METAL_PREFER_LOW_POWER_DEVICE "SDL_RENDER_METAL_PREFER_LOW_POWER_DEVICE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_RENDER_METAL_PREFER_LOW_POWER_DEVICE() {
+        return constants$204.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_PS2_DYNAMIC_VSYNC "SDL_PS2_DYNAMIC_VSYNC"
+     * }
+     */
+    public static MemorySegment SDL_HINT_PS2_DYNAMIC_VSYNC() {
+        return constants$204.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_RETURN_KEY_HIDES_IME "SDL_RETURN_KEY_HIDES_IME"
+     * }
+     */
+    public static MemorySegment SDL_HINT_RETURN_KEY_HIDES_IME() {
+        return constants$204.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_RPI_VIDEO_LAYER "SDL_RPI_VIDEO_LAYER"
+     * }
+     */
+    public static MemorySegment SDL_HINT_RPI_VIDEO_LAYER() {
+        return constants$204.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_SCREENSAVER_INHIBIT_ACTIVITY_NAME "SDL_SCREENSAVER_INHIBIT_ACTIVITY_NAME"
+     * }
+     */
+    public static MemorySegment SDL_HINT_SCREENSAVER_INHIBIT_ACTIVITY_NAME() {
+        return constants$204.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_THREAD_FORCE_REALTIME_TIME_CRITICAL "SDL_THREAD_FORCE_REALTIME_TIME_CRITICAL"
+     * }
+     */
+    public static MemorySegment SDL_HINT_THREAD_FORCE_REALTIME_TIME_CRITICAL() {
+        return constants$204.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_THREAD_PRIORITY_POLICY "SDL_THREAD_PRIORITY_POLICY"
+     * }
+     */
+    public static MemorySegment SDL_HINT_THREAD_PRIORITY_POLICY() {
+        return constants$205.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_THREAD_STACK_SIZE "SDL_THREAD_STACK_SIZE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_THREAD_STACK_SIZE() {
+        return constants$205.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_TIMER_RESOLUTION "SDL_TIMER_RESOLUTION"
+     * }
+     */
+    public static MemorySegment SDL_HINT_TIMER_RESOLUTION() {
+        return constants$205.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_TOUCH_MOUSE_EVENTS "SDL_TOUCH_MOUSE_EVENTS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_TOUCH_MOUSE_EVENTS() {
+        return constants$205.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VITA_TOUCH_MOUSE_DEVICE "SDL_HINT_VITA_TOUCH_MOUSE_DEVICE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VITA_TOUCH_MOUSE_DEVICE() {
+        return constants$205.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_TV_REMOTE_AS_JOYSTICK "SDL_TV_REMOTE_AS_JOYSTICK"
+     * }
+     */
+    public static MemorySegment SDL_HINT_TV_REMOTE_AS_JOYSTICK() {
+        return constants$205.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_ALLOW_SCREENSAVER "SDL_VIDEO_ALLOW_SCREENSAVER"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_ALLOW_SCREENSAVER() {
+        return constants$206.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_DOUBLE_BUFFER "SDL_VIDEO_DOUBLE_BUFFER"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_DOUBLE_BUFFER() {
+        return constants$206.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_EGL_ALLOW_TRANSPARENCY "SDL_VIDEO_EGL_ALLOW_TRANSPARENCY"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_EGL_ALLOW_TRANSPARENCY() {
+        return constants$206.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_EXTERNAL_CONTEXT "SDL_VIDEO_EXTERNAL_CONTEXT"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_EXTERNAL_CONTEXT() {
+        return constants$206.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_HIGHDPI_DISABLED "SDL_VIDEO_HIGHDPI_DISABLED"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_HIGHDPI_DISABLED() {
+        return constants$206.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_MAC_FULLSCREEN_SPACES "SDL_VIDEO_MAC_FULLSCREEN_SPACES"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_MAC_FULLSCREEN_SPACES() {
+        return constants$206.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_MINIMIZE_ON_FOCUS_LOSS "SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_MINIMIZE_ON_FOCUS_LOSS() {
+        return constants$207.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_WAYLAND_ALLOW_LIBDECOR "SDL_VIDEO_WAYLAND_ALLOW_LIBDECOR"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_WAYLAND_ALLOW_LIBDECOR() {
+        return constants$207.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_WAYLAND_PREFER_LIBDECOR "SDL_VIDEO_WAYLAND_PREFER_LIBDECOR"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_WAYLAND_PREFER_LIBDECOR() {
+        return constants$207.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_WAYLAND_MODE_EMULATION "SDL_VIDEO_WAYLAND_MODE_EMULATION"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_WAYLAND_MODE_EMULATION() {
+        return constants$207.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_WAYLAND_EMULATE_MOUSE_WARP "SDL_VIDEO_WAYLAND_EMULATE_MOUSE_WARP"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_WAYLAND_EMULATE_MOUSE_WARP() {
+        return constants$207.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_WINDOW_SHARE_PIXEL_FORMAT "SDL_VIDEO_WINDOW_SHARE_PIXEL_FORMAT"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_WINDOW_SHARE_PIXEL_FORMAT() {
+        return constants$207.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_FOREIGN_WINDOW_OPENGL "SDL_VIDEO_FOREIGN_WINDOW_OPENGL"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_FOREIGN_WINDOW_OPENGL() {
+        return constants$208.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_FOREIGN_WINDOW_VULKAN "SDL_VIDEO_FOREIGN_WINDOW_VULKAN"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_FOREIGN_WINDOW_VULKAN() {
+        return constants$208.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_WIN_D3DCOMPILER "SDL_VIDEO_WIN_D3DCOMPILER"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_WIN_D3DCOMPILER() {
+        return constants$208.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_X11_FORCE_EGL "SDL_VIDEO_X11_FORCE_EGL"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_X11_FORCE_EGL() {
+        return constants$208.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR "SDL_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR() {
+        return constants$208.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_X11_NET_WM_PING "SDL_VIDEO_X11_NET_WM_PING"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_X11_NET_WM_PING() {
+        return constants$208.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_X11_WINDOW_VISUALID "SDL_VIDEO_X11_WINDOW_VISUALID"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_X11_WINDOW_VISUALID() {
+        return constants$209.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_X11_XINERAMA "SDL_VIDEO_X11_XINERAMA"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_X11_XINERAMA() {
+        return constants$209.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_X11_XRANDR "SDL_VIDEO_X11_XRANDR"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_X11_XRANDR() {
+        return constants$209.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEO_X11_XVIDMODE "SDL_VIDEO_X11_XVIDMODE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEO_X11_XVIDMODE() {
+        return constants$209.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_WAVE_FACT_CHUNK "SDL_WAVE_FACT_CHUNK"
+     * }
+     */
+    public static MemorySegment SDL_HINT_WAVE_FACT_CHUNK() {
+        return constants$209.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_WAVE_RIFF_CHUNK_SIZE "SDL_WAVE_RIFF_CHUNK_SIZE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_WAVE_RIFF_CHUNK_SIZE() {
+        return constants$209.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_WAVE_TRUNCATION "SDL_WAVE_TRUNCATION"
+     * }
+     */
+    public static MemorySegment SDL_HINT_WAVE_TRUNCATION() {
+        return constants$210.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_WINDOWS_DISABLE_THREAD_NAMING "SDL_WINDOWS_DISABLE_THREAD_NAMING"
+     * }
+     */
+    public static MemorySegment SDL_HINT_WINDOWS_DISABLE_THREAD_NAMING() {
+        return constants$210.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_WINDOWS_ENABLE_MENU_MNEMONICS "SDL_WINDOWS_ENABLE_MENU_MNEMONICS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_WINDOWS_ENABLE_MENU_MNEMONICS() {
+        return constants$210.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_WINDOWS_ENABLE_MESSAGELOOP "SDL_WINDOWS_ENABLE_MESSAGELOOP"
+     * }
+     */
+    public static MemorySegment SDL_HINT_WINDOWS_ENABLE_MESSAGELOOP() {
+        return constants$210.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_WINDOWS_FORCE_MUTEX_CRITICAL_SECTIONS "SDL_WINDOWS_FORCE_MUTEX_CRITICAL_SECTIONS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_WINDOWS_FORCE_MUTEX_CRITICAL_SECTIONS() {
+        return constants$210.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_WINDOWS_FORCE_SEMAPHORE_KERNEL "SDL_WINDOWS_FORCE_SEMAPHORE_KERNEL"
+     * }
+     */
+    public static MemorySegment SDL_HINT_WINDOWS_FORCE_SEMAPHORE_KERNEL() {
+        return constants$210.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_WINDOWS_INTRESOURCE_ICON "SDL_WINDOWS_INTRESOURCE_ICON"
+     * }
+     */
+    public static MemorySegment SDL_HINT_WINDOWS_INTRESOURCE_ICON() {
+        return constants$211.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_WINDOWS_INTRESOURCE_ICON_SMALL "SDL_WINDOWS_INTRESOURCE_ICON_SMALL"
+     * }
+     */
+    public static MemorySegment SDL_HINT_WINDOWS_INTRESOURCE_ICON_SMALL() {
+        return constants$211.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_WINDOWS_NO_CLOSE_ON_ALT_F4 "SDL_WINDOWS_NO_CLOSE_ON_ALT_F4"
+     * }
+     */
+    public static MemorySegment SDL_HINT_WINDOWS_NO_CLOSE_ON_ALT_F4() {
+        return constants$211.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_WINDOWS_USE_D3D9EX "SDL_WINDOWS_USE_D3D9EX"
+     * }
+     */
+    public static MemorySegment SDL_HINT_WINDOWS_USE_D3D9EX() {
+        return constants$211.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_WINDOWS_DPI_AWARENESS "SDL_WINDOWS_DPI_AWARENESS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_WINDOWS_DPI_AWARENESS() {
+        return constants$211.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_WINDOWS_DPI_SCALING "SDL_WINDOWS_DPI_SCALING"
+     * }
+     */
+    public static MemorySegment SDL_HINT_WINDOWS_DPI_SCALING() {
+        return constants$211.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN "SDL_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN"
+     * }
+     */
+    public static MemorySegment SDL_HINT_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN() {
+        return constants$212.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_WINDOW_NO_ACTIVATION_WHEN_SHOWN "SDL_WINDOW_NO_ACTIVATION_WHEN_SHOWN"
+     * }
+     */
+    public static MemorySegment SDL_HINT_WINDOW_NO_ACTIVATION_WHEN_SHOWN() {
+        return constants$212.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_WINRT_HANDLE_BACK_BUTTON "SDL_WINRT_HANDLE_BACK_BUTTON"
+     * }
+     */
+    public static MemorySegment SDL_HINT_WINRT_HANDLE_BACK_BUTTON() {
+        return constants$212.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_WINRT_PRIVACY_POLICY_LABEL "SDL_WINRT_PRIVACY_POLICY_LABEL"
+     * }
+     */
+    public static MemorySegment SDL_HINT_WINRT_PRIVACY_POLICY_LABEL() {
+        return constants$212.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_WINRT_PRIVACY_POLICY_URL "SDL_WINRT_PRIVACY_POLICY_URL"
+     * }
+     */
+    public static MemorySegment SDL_HINT_WINRT_PRIVACY_POLICY_URL() {
+        return constants$212.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_X11_FORCE_OVERRIDE_REDIRECT "SDL_X11_FORCE_OVERRIDE_REDIRECT"
+     * }
+     */
+    public static MemorySegment SDL_HINT_X11_FORCE_OVERRIDE_REDIRECT() {
+        return constants$212.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_XINPUT_ENABLED "SDL_XINPUT_ENABLED"
+     * }
+     */
+    public static MemorySegment SDL_HINT_XINPUT_ENABLED() {
+        return constants$213.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_DIRECTINPUT_ENABLED "SDL_DIRECTINPUT_ENABLED"
+     * }
+     */
+    public static MemorySegment SDL_HINT_DIRECTINPUT_ENABLED() {
+        return constants$213.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_XINPUT_USE_OLD_JOYSTICK_MAPPING "SDL_XINPUT_USE_OLD_JOYSTICK_MAPPING"
+     * }
+     */
+    public static MemorySegment SDL_HINT_XINPUT_USE_OLD_JOYSTICK_MAPPING() {
+        return constants$213.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_AUDIO_INCLUDE_MONITORS "SDL_AUDIO_INCLUDE_MONITORS"
+     * }
+     */
+    public static MemorySegment SDL_HINT_AUDIO_INCLUDE_MONITORS() {
+        return constants$213.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_X11_WINDOW_TYPE "SDL_X11_WINDOW_TYPE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_X11_WINDOW_TYPE() {
+        return constants$213.const$4;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_QUIT_ON_LAST_WINDOW_CLOSE "SDL_QUIT_ON_LAST_WINDOW_CLOSE"
+     * }
+     */
+    public static MemorySegment SDL_HINT_QUIT_ON_LAST_WINDOW_CLOSE() {
+        return constants$213.const$5;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_VIDEODRIVER "SDL_VIDEODRIVER"
+     * }
+     */
+    public static MemorySegment SDL_HINT_VIDEODRIVER() {
+        return constants$214.const$0;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_AUDIODRIVER "SDL_AUDIODRIVER"
+     * }
+     */
+    public static MemorySegment SDL_HINT_AUDIODRIVER() {
+        return constants$214.const$1;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_KMSDRM_DEVICE_INDEX "SDL_KMSDRM_DEVICE_INDEX"
+     * }
+     */
+    public static MemorySegment SDL_HINT_KMSDRM_DEVICE_INDEX() {
+        return constants$214.const$2;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_HINT_TRACKPAD_IS_TOUCH_ONLY "SDL_TRACKPAD_IS_TOUCH_ONLY"
+     * }
+     */
+    public static MemorySegment SDL_HINT_TRACKPAD_IS_TOUCH_ONLY() {
+        return constants$214.const$3;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_INIT_TIMER 1
+     * }
+     */
+    public static int SDL_INIT_TIMER() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_INIT_AUDIO 16
+     * }
+     */
+    public static int SDL_INIT_AUDIO() {
+        return (int)16L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_INIT_VIDEO 32
+     * }
+     */
+    public static int SDL_INIT_VIDEO() {
+        return (int)32L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_INIT_JOYSTICK 512
+     * }
+     */
+    public static int SDL_INIT_JOYSTICK() {
+        return (int)512L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_INIT_HAPTIC 4096
+     * }
+     */
+    public static int SDL_INIT_HAPTIC() {
+        return (int)4096L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_INIT_GAMECONTROLLER 8192
+     * }
+     */
+    public static int SDL_INIT_GAMECONTROLLER() {
+        return (int)8192L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_INIT_EVENTS 16384
+     * }
+     */
+    public static int SDL_INIT_EVENTS() {
+        return (int)16384L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_INIT_SENSOR 32768
+     * }
+     */
+    public static int SDL_INIT_SENSOR() {
+        return (int)32768L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_INIT_NOPARACHUTE 1048576
+     * }
+     */
+    public static int SDL_INIT_NOPARACHUTE() {
+        return (int)1048576L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_INIT_EVERYTHING 62001
+     * }
+     */
+    public static int SDL_INIT_EVERYTHING() {
+        return (int)62001L;
     }
 }
 

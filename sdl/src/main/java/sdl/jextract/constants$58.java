@@ -11,18 +11,17 @@ final class constants$58 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$58() {}
-    static final VarHandle const$0 = constants$54.const$2.varHandle(MemoryLayout.PathElement.groupElement("Rumble"));
-    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.RumbleTriggers.class, "apply", constants$57.const$3);
-    static final VarHandle const$2 = constants$54.const$2.varHandle(MemoryLayout.PathElement.groupElement("RumbleTriggers"));
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_BYTE,
-        JAVA_BYTE,
-        JAVA_BYTE
+    static final VarHandle const$0 = constants$57.const$5.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$1 = constants$57.const$5.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final VarHandle const$2 = constants$57.const$5.varHandle(MemoryLayout.PathElement.groupElement("w"));
+    static final VarHandle const$3 = constants$57.const$5.varHandle(MemoryLayout.PathElement.groupElement("h"));
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_HasIntersection",
+        constants$6.const$4
     );
-    static final MethodHandle const$4 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.SetLED.class, "apply", constants$58.const$3);
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        constants$58.const$3
+        "SDL_IntersectRect",
+        constants$21.const$2
     );
 }
 

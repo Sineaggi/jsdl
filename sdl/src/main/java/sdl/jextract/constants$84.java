@@ -11,24 +11,32 @@ final class constants$84 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$84() {}
-    static final VarHandle const$0 = constants$81.const$2.varHandle(MemoryLayout.PathElement.groupElement("Ashift"));
-    static final VarHandle const$1 = constants$81.const$2.varHandle(MemoryLayout.PathElement.groupElement("refcount"));
-    static final VarHandle const$2 = constants$81.const$2.varHandle(MemoryLayout.PathElement.groupElement("next"));
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GetPixelFormatName",
-        constants$44.const$5
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_GetGrabbedWindow",
+        constants$0.const$0
     );
-    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_INT,
-        JAVA_INT,
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_SetWindowMouseRect",
+        constants$6.const$4
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_GetWindowMouseRect",
+        constants$6.const$0
+    );
+    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
         RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
+        JAVA_FLOAT
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_SetWindowBrightness",
+        constants$84.const$3
+    );
+    static final FunctionDescriptor const$5 = FunctionDescriptor.of(JAVA_FLOAT,
         RuntimeHelper.POINTER
     );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_PixelFormatEnumToMasks",
-        constants$84.const$4
+    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
+        "SDL_GetWindowBrightness",
+        constants$84.const$5
     );
 }
 

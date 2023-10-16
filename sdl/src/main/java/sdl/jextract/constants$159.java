@@ -11,16 +11,16 @@ final class constants$159 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$159() {}
-    static final VarHandle const$0 = constants$158.const$4.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$1 = constants$158.const$4.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
-    static final VarHandle const$2 = constants$158.const$4.varHandle(MemoryLayout.PathElement.groupElement("code"));
-    static final VarHandle const$3 = constants$158.const$4.varHandle(MemoryLayout.PathElement.groupElement("data1"));
-    static final VarHandle const$4 = constants$158.const$4.varHandle(MemoryLayout.PathElement.groupElement("data2"));
-    static final StructLayout const$5 = MemoryLayout.structLayout(
+    static final VarHandle const$0 = constants$158.const$3.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
+    static final VarHandle const$1 = constants$158.const$3.varHandle(MemoryLayout.PathElement.groupElement("code"));
+    static final VarHandle const$2 = constants$158.const$3.varHandle(MemoryLayout.PathElement.groupElement("data1"));
+    static final VarHandle const$3 = constants$158.const$3.varHandle(MemoryLayout.PathElement.groupElement("data2"));
+    static final StructLayout const$4 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
         RuntimeHelper.POINTER.withName("msg")
     ).withName("SDL_SysWMEvent");
+    static final VarHandle const$5 = constants$159.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
 }
 
 

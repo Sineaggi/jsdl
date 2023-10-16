@@ -11,10 +11,9 @@ final class constants$160 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$160() {}
-    static final VarHandle const$0 = constants$159.const$5.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$1 = constants$159.const$5.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$2 = constants$159.const$5.varHandle(MemoryLayout.PathElement.groupElement("msg"));
-    static final UnionLayout const$3 = MemoryLayout.unionLayout(
+    static final VarHandle const$0 = constants$159.const$4.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$1 = constants$159.const$4.varHandle(MemoryLayout.PathElement.groupElement("msg"));
+    static final UnionLayout const$2 = MemoryLayout.unionLayout(
         JAVA_INT.withName("type"),
         MemoryLayout.structLayout(
             JAVA_INT.withName("type"),
@@ -288,10 +287,21 @@ final class constants$160 {
         ).withName("drop"),
         MemoryLayout.sequenceLayout(56, JAVA_BYTE).withName("padding")
     ).withName("SDL_Event");
-    static final VarHandle const$4 = constants$160.const$3.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+    static final VarHandle const$3 = constants$160.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
         "SDL_PumpEvents",
         constants$32.const$3
+    );
+    static final FunctionDescriptor const$5 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT
+    );
+    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
+        "SDL_PeepEvents",
+        constants$160.const$5
     );
 }
 

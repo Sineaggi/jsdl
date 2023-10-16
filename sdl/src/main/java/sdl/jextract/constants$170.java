@@ -12,38 +12,28 @@ final class constants$170 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$170() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_UpdateTexture",
-        constants$46.const$4
+        "SDL_CreateTextureFromSurface",
+        constants$13.const$2
     );
-    static final FunctionDescriptor const$1 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_QueryTexture",
+        constants$59.const$4
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_UpdateYUVTexture",
-        constants$170.const$1
+        "SDL_SetTextureColorMod",
+        constants$54.const$3
     );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GetTextureColorMod",
+        constants$5.const$3
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_UpdateNVTexture",
-        constants$170.const$3
+        "SDL_SetTextureAlphaMod",
+        constants$66.const$4
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_LockTexture",
-        constants$5.const$3
+        "SDL_GetTextureAlphaMod",
+        constants$6.const$4
     );
 }
 

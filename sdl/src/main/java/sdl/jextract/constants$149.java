@@ -11,11 +11,10 @@ final class constants$149 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$149() {}
-    static final VarHandle const$0 = constants$148.const$4.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$1 = constants$148.const$4.varHandle(MemoryLayout.PathElement.groupElement("which"));
-    static final VarHandle const$2 = constants$148.const$4.varHandle(MemoryLayout.PathElement.groupElement("sensor"));
-    static final VarHandle const$3 = constants$148.const$4.varHandle(MemoryLayout.PathElement.groupElement("timestamp_us"));
-    static final StructLayout const$4 = MemoryLayout.structLayout(
+    static final VarHandle const$0 = constants$148.const$3.varHandle(MemoryLayout.PathElement.groupElement("which"));
+    static final VarHandle const$1 = constants$148.const$3.varHandle(MemoryLayout.PathElement.groupElement("sensor"));
+    static final VarHandle const$2 = constants$148.const$3.varHandle(MemoryLayout.PathElement.groupElement("timestamp_us"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
         JAVA_INT.withName("which"),
@@ -24,7 +23,8 @@ final class constants$149 {
         JAVA_BYTE.withName("padding2"),
         JAVA_BYTE.withName("padding3")
     ).withName("SDL_AudioDeviceEvent");
-    static final VarHandle const$5 = constants$149.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$4 = constants$149.const$3.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$5 = constants$149.const$3.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
 }
 
 

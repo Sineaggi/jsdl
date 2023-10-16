@@ -12,28 +12,29 @@ final class constants$79 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$79() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerSendEffect",
-        constants$6.const$2
+        "SDL_SetWindowSize",
+        constants$78.const$3
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerClose",
-        constants$1.const$2
+        "SDL_GetWindowSize",
+        constants$59.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetAppleSFSymbolsNameForButton",
-        constants$15.const$4
+        "SDL_GetWindowBordersSize",
+        constants$59.const$4
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetAppleSFSymbolsNameForAxis",
-        constants$15.const$4
+        "SDL_GetWindowSizeInPixels",
+        constants$59.const$0
     );
-    static final StructLayout const$4 = MemoryLayout.structLayout(
-        JAVA_BYTE.withName("r"),
-        JAVA_BYTE.withName("g"),
-        JAVA_BYTE.withName("b"),
-        JAVA_BYTE.withName("a")
-    ).withName("SDL_Color");
-    static final VarHandle const$5 = constants$79.const$4.varHandle(MemoryLayout.PathElement.groupElement("r"));
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_SetWindowMinimumSize",
+        constants$78.const$3
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_GetWindowMinimumSize",
+        constants$59.const$0
+    );
 }
 
 

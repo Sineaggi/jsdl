@@ -11,9 +11,7 @@ import java.lang.foreign.Arena;
 import java.lang.foreign.MemorySegment;
 
 import static sdl.Cause.JoystickGetDeviceInstanceID;
-import static sdl.SDL_subset_h.*;
-import static sdl.jextract.SDL_subset_h.*;
-import static sdl.jextract.SDL_subset_h.SDL_JoystickClose;
+import static sdl.jextract.sdl_h.*;
 
 public class Joystick {
     public static final short AXIS_MIN = (short)SDL_JOYSTICK_AXIS_MIN();
@@ -65,7 +63,7 @@ public class Joystick {
      * @return Returns 0 on success, -1 on error.
      */
     public int setVirtualButton(GameControllerButton button, GeneralInputStateDefinitions value) {
-        return SDL_JoystickSetVirtualButton(joystick, button.value(), value.value());
+        return SDL_JoystickSetVirtualButton(joystick, button.value(), (byte) value.value());
     }
 
     public int setVirtualAxis(GameControllerAxis axis, short value) {

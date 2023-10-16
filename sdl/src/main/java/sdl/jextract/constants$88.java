@@ -11,18 +11,30 @@ final class constants$88 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$88() {}
-    static final StructLayout const$0 = MemoryLayout.structLayout(
-        JAVA_INT.withName("x"),
-        JAVA_INT.withName("y")
-    ).withName("SDL_Point");
-    static final VarHandle const$1 = constants$88.const$0.varHandle(MemoryLayout.PathElement.groupElement("x"));
-    static final VarHandle const$2 = constants$88.const$0.varHandle(MemoryLayout.PathElement.groupElement("y"));
-    static final StructLayout const$3 = MemoryLayout.structLayout(
-        JAVA_FLOAT.withName("x"),
-        JAVA_FLOAT.withName("y")
-    ).withName("SDL_FPoint");
-    static final VarHandle const$4 = constants$88.const$3.varHandle(MemoryLayout.PathElement.groupElement("x"));
-    static final VarHandle const$5 = constants$88.const$3.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_GL_ExtensionSupported",
+        constants$18.const$4
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_GL_ResetAttributes",
+        constants$32.const$3
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_GL_SetAttribute",
+        constants$71.const$0
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GL_GetAttribute",
+        constants$73.const$3
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_GL_CreateContext",
+        constants$6.const$0
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_GL_MakeCurrent",
+        constants$6.const$4
+    );
 }
 
 

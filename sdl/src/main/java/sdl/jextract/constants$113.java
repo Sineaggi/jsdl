@@ -12,27 +12,27 @@ final class constants$113 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$113() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_MaximizeWindow",
-        constants$1.const$2
+        "SDL_GameControllerTypeForIndex",
+        constants$8.const$0
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_MinimizeWindow",
-        constants$1.const$2
+        "SDL_GameControllerMappingForDeviceIndex",
+        constants$33.const$5
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_RestoreWindow",
-        constants$1.const$2
+        "SDL_GameControllerOpen",
+        constants$33.const$5
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowFullscreen",
-        constants$49.const$3
+        "SDL_GameControllerFromInstanceID",
+        constants$33.const$5
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_HasWindowSurface",
-        constants$18.const$4
+        "SDL_GameControllerFromPlayerIndex",
+        constants$33.const$5
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowSurface",
+        "SDL_GameControllerName",
         constants$6.const$0
     );
 }

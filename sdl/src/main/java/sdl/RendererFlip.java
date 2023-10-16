@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
-import static sdl.jextract.SDL_subset_h_1.*;
+import static sdl.jextract.sdl_h_1.*;
 
 public enum RendererFlip {
     FlipNone(SDL_FLIP_NONE()),

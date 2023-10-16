@@ -11,30 +11,12 @@ final class constants$62 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$62() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetProduct",
-        constants$41.const$5
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetProductVersion",
-        constants$41.const$5
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetFirmwareVersion",
-        constants$41.const$5
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetSerial",
-        constants$6.const$0
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetType",
-        constants$18.const$4
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetGUIDString",
-        constants$47.const$3
-    );
+    static final VarHandle const$0 = constants$60.const$5.varHandle(MemoryLayout.PathElement.groupElement("userdata"));
+    static final VarHandle const$1 = constants$60.const$5.varHandle(MemoryLayout.PathElement.groupElement("locked"));
+    static final VarHandle const$2 = constants$60.const$5.varHandle(MemoryLayout.PathElement.groupElement("list_blitmap"));
+    static final VarHandle const$3 = constants$60.const$5.varHandle(MemoryLayout.PathElement.groupElement("map"));
+    static final VarHandle const$4 = constants$60.const$5.varHandle(MemoryLayout.PathElement.groupElement("refcount"));
+    static final MethodHandle const$5 = RuntimeHelper.upcallHandle(SDL_blit.class, "apply", constants$5.const$3);
 }
 
 

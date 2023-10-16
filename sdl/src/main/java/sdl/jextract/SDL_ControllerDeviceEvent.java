@@ -19,10 +19,10 @@ import static java.lang.foreign.ValueLayout.*;
 public class SDL_ControllerDeviceEvent {
 
     public static MemoryLayout $LAYOUT() {
-        return constants$146.const$3;
+        return constants$146.const$2;
     }
     public static VarHandle type$VH() {
-        return constants$146.const$4;
+        return constants$146.const$3;
     }
     /**
      * Getter for field:
@@ -31,7 +31,7 @@ public class SDL_ControllerDeviceEvent {
      * }
      */
     public static int type$get(MemorySegment seg) {
-        return (int)constants$146.const$4.get(seg);
+        return (int)constants$146.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -40,16 +40,16 @@ public class SDL_ControllerDeviceEvent {
      * }
      */
     public static void type$set(MemorySegment seg, int x) {
-        constants$146.const$4.set(seg, x);
+        constants$146.const$3.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
-        return (int)constants$146.const$4.get(seg.asSlice(index*sizeof()));
+        return (int)constants$146.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void type$set(MemorySegment seg, long index, int x) {
-        constants$146.const$4.set(seg.asSlice(index*sizeof()), x);
+        constants$146.const$3.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle timestamp$VH() {
-        return constants$146.const$5;
+        return constants$146.const$4;
     }
     /**
      * Getter for field:
@@ -58,7 +58,7 @@ public class SDL_ControllerDeviceEvent {
      * }
      */
     public static int timestamp$get(MemorySegment seg) {
-        return (int)constants$146.const$5.get(seg);
+        return (int)constants$146.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -67,16 +67,16 @@ public class SDL_ControllerDeviceEvent {
      * }
      */
     public static void timestamp$set(MemorySegment seg, int x) {
-        constants$146.const$5.set(seg, x);
+        constants$146.const$4.set(seg, x);
     }
     public static int timestamp$get(MemorySegment seg, long index) {
-        return (int)constants$146.const$5.get(seg.asSlice(index*sizeof()));
+        return (int)constants$146.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void timestamp$set(MemorySegment seg, long index, int x) {
-        constants$146.const$5.set(seg.asSlice(index*sizeof()), x);
+        constants$146.const$4.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle which$VH() {
-        return constants$147.const$0;
+        return constants$146.const$5;
     }
     /**
      * Getter for field:
@@ -85,7 +85,7 @@ public class SDL_ControllerDeviceEvent {
      * }
      */
     public static int which$get(MemorySegment seg) {
-        return (int)constants$147.const$0.get(seg);
+        return (int)constants$146.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -94,13 +94,13 @@ public class SDL_ControllerDeviceEvent {
      * }
      */
     public static void which$set(MemorySegment seg, int x) {
-        constants$147.const$0.set(seg, x);
+        constants$146.const$5.set(seg, x);
     }
     public static int which$get(MemorySegment seg, long index) {
-        return (int)constants$147.const$0.get(seg.asSlice(index*sizeof()));
+        return (int)constants$146.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void which$set(MemorySegment seg, long index, int x) {
-        constants$147.const$0.set(seg.asSlice(index*sizeof()), x);
+        constants$146.const$5.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }

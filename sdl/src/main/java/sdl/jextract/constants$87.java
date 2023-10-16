@@ -11,36 +11,29 @@ final class constants$87 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$87() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.ofVoid(
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_IsScreenSaverEnabled",
+        constants$5.const$5
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetRGB",
-        constants$87.const$0
+        "SDL_EnableScreenSaver",
+        constants$32.const$3
     );
-    static final FunctionDescriptor const$2 = FunctionDescriptor.ofVoid(
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_DisableScreenSaver",
+        constants$32.const$3
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GetRGBA",
-        constants$87.const$2
+        "SDL_GL_LoadLibrary",
+        constants$18.const$4
     );
-    static final FunctionDescriptor const$4 = FunctionDescriptor.ofVoid(
-        JAVA_FLOAT,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_GL_GetProcAddress",
+        constants$6.const$0
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_CalculateGammaRamp",
-        constants$87.const$4
+        "SDL_GL_UnloadLibrary",
+        constants$32.const$3
     );
 }
 

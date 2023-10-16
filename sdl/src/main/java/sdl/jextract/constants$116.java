@@ -11,28 +11,39 @@ final class constants$116 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$116() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_FLOAT
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerUpdate",
+        constants$32.const$3
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowBrightness",
-        constants$116.const$0
+        "SDL_GameControllerGetAxisFromString",
+        constants$18.const$4
     );
-    static final FunctionDescriptor const$2 = FunctionDescriptor.of(JAVA_FLOAT,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerGetStringForAxis",
+        constants$33.const$5
     );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowBrightness",
-        constants$116.const$2
+    static final FunctionDescriptor const$3 = FunctionDescriptor.of(MemoryLayout.structLayout(
+        JAVA_INT.withName("bindType"),
+        MemoryLayout.unionLayout(
+            JAVA_INT.withName("button"),
+            JAVA_INT.withName("axis"),
+            MemoryLayout.structLayout(
+                JAVA_INT.withName("hat"),
+                JAVA_INT.withName("hat_mask")
+            ).withName("hat")
+        ).withName("value")
+    ).withName("SDL_GameControllerButtonBind"),
+        RuntimeHelper.POINTER,
+        JAVA_INT
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowOpacity",
-        constants$116.const$0
+        "SDL_GameControllerGetBindForAxis",
+        constants$116.const$3
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowOpacity",
-        constants$6.const$4
+        "SDL_GameControllerHasAxis",
+        constants$34.const$3
     );
 }
 

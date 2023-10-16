@@ -11,42 +11,32 @@ final class constants$179 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$179() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_INT
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_RenderDrawPointF",
+        constants$175.const$2
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_RenderGeometryRaw",
-        constants$179.const$0
+        "SDL_RenderDrawPointsF",
+        constants$6.const$2
     );
     static final FunctionDescriptor const$2 = FunctionDescriptor.of(JAVA_INT,
         RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT
+        JAVA_FLOAT,
+        JAVA_FLOAT,
+        JAVA_FLOAT,
+        JAVA_FLOAT
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_RenderReadPixels",
+        "SDL_RenderDrawLineF",
         constants$179.const$2
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_RenderPresent",
-        constants$1.const$2
+        "SDL_RenderDrawLinesF",
+        constants$6.const$2
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_DestroyTexture",
-        constants$1.const$2
+        "SDL_RenderDrawRectF",
+        constants$6.const$4
     );
 }
 

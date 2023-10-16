@@ -11,21 +11,21 @@ final class constants$163 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$163() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SetEventFilter",
-        constants$99.const$3
-    );
-    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(SDL_GetEventFilter$filter.class, "apply", constants$6.const$4);
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+    static final MethodHandle const$0 = RuntimeHelper.upcallHandle(SDL_GetEventFilter$filter.class, "apply", constants$6.const$4);
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
         "SDL_GetEventFilter",
         constants$6.const$4
     );
-    static final MethodHandle const$3 = RuntimeHelper.upcallHandle(SDL_AddEventWatch$filter.class, "apply", constants$6.const$4);
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+    static final MethodHandle const$2 = RuntimeHelper.upcallHandle(SDL_AddEventWatch$filter.class, "apply", constants$6.const$4);
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
         "SDL_AddEventWatch",
-        constants$99.const$3
+        constants$67.const$4
     );
-    static final MethodHandle const$5 = RuntimeHelper.upcallHandle(SDL_DelEventWatch$filter.class, "apply", constants$6.const$4);
+    static final MethodHandle const$4 = RuntimeHelper.upcallHandle(SDL_DelEventWatch$filter.class, "apply", constants$6.const$4);
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_DelEventWatch",
+        constants$67.const$4
+    );
 }
 
 

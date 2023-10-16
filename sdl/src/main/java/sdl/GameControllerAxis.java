@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
-import static sdl.jextract.SDL_subset_h.*;
+import static sdl.jextract.sdl_h.*;
 
 public enum GameControllerAxis {
     Invalid(SDL_CONTROLLER_AXIS_INVALID()),

@@ -11,9 +11,8 @@ final class constants$122 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$122() {}
-    static final VarHandle const$0 = constants$121.const$5.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$1 = constants$121.const$5.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final StructLayout const$2 = MemoryLayout.structLayout(
+    static final VarHandle const$0 = constants$121.const$4.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final StructLayout const$1 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
         JAVA_INT.withName("display"),
@@ -23,9 +22,10 @@ final class constants$122 {
         JAVA_BYTE.withName("padding3"),
         JAVA_INT.withName("data1")
     ).withName("SDL_DisplayEvent");
-    static final VarHandle const$3 = constants$122.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$4 = constants$122.const$2.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$5 = constants$122.const$2.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$2 = constants$122.const$1.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$3 = constants$122.const$1.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$4 = constants$122.const$1.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$5 = constants$122.const$1.varHandle(MemoryLayout.PathElement.groupElement("event"));
 }
 
 

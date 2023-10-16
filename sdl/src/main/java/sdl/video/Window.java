@@ -6,7 +6,7 @@ import java.lang.foreign.Arena;
 import java.lang.foreign.MemorySegment;
 
 import static sdl.Cause.CreateWindow;
-import static sdl.jextract.SDL_subset_h.*;
+import static sdl.jextract.sdl_h.*;
 
 public class Window {
     private final MemorySegment window;
@@ -33,5 +33,9 @@ public class Window {
         try (var arena = Arena.ofConfined()) {
             SDL_SetWindowTitle(window, arena.allocateUtf8String(title));
         }
+    }
+
+    public void destroy() {
+        SDL_DestroyWindow(window);
     }
 }

@@ -11,19 +11,35 @@ final class constants$59 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$59() {}
-    static final VarHandle const$0 = constants$54.const$2.varHandle(MemoryLayout.PathElement.groupElement("SetLED"));
-    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.SendEffect.class, "apply", constants$6.const$2);
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        constants$6.const$2
+    static final FunctionDescriptor const$0 = FunctionDescriptor.ofVoid(
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
     );
-    static final VarHandle const$3 = constants$54.const$2.varHandle(MemoryLayout.PathElement.groupElement("SendEffect"));
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickAttachVirtualEx",
-        constants$18.const$4
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_UnionRect",
+        constants$59.const$0
+    );
+    static final FunctionDescriptor const$2 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_EnclosePoints",
+        constants$59.const$2
+    );
+    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickDetachVirtual",
-        constants$8.const$0
+        "SDL_IntersectRectAndLine",
+        constants$59.const$4
     );
 }
 

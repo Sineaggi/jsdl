@@ -11,29 +11,23 @@ final class constants$72 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$72() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetPlayerIndex",
-        constants$18.const$4
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerSetPlayerIndex",
-        constants$56.const$5
-    );
+    static final VarHandle const$0 = constants$71.const$2.varHandle(MemoryLayout.PathElement.groupElement("refresh_rate"));
+    static final VarHandle const$1 = constants$71.const$2.varHandle(MemoryLayout.PathElement.groupElement("driverdata"));
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetVendor",
-        constants$41.const$5
+        "SDL_GetNumVideoDrivers",
+        constants$5.const$5
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetProduct",
-        constants$41.const$5
+        "SDL_GetVideoDriver",
+        constants$33.const$5
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetProductVersion",
-        constants$41.const$5
+        "SDL_VideoInit",
+        constants$18.const$4
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetFirmwareVersion",
-        constants$41.const$5
+        "SDL_VideoQuit",
+        constants$32.const$3
     );
 }
 

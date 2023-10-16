@@ -9,6 +9,11 @@ public enum Cause {
     SetRenderDrawColor("Couldn't set renderer draw color"),
     RenderClear("Couldn't clear renderer"),
     PeepEvents("Couldn't peep events"),
+    SetTextureColorMod("Couldn't set texture color mod"),
+    Init("Couldn't initialize SDL"),
+    LoadBMP_RW("Couldn't load BMP"),
+    CreateTextureFromSurface("Couldn't create texture from surface"),
+    GameControllerAddMappingsFromRW("Couldn't add game controller mappings"),
     ;
 
     private final String cause;

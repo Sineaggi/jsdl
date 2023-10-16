@@ -23,7 +23,7 @@ import static java.lang.foreign.ValueLayout.*;
 public class SDL_RWops {
 
     public static MemoryLayout $LAYOUT() {
-        return constants$33.const$0;
+        return constants$36.const$1;
     }
     /**
      * {@snippet :
@@ -34,13 +34,13 @@ public class SDL_RWops {
 
         long apply(java.lang.foreign.MemorySegment _x0);
         static MemorySegment allocate(size fi, Arena scope) {
-            return RuntimeHelper.upcallStub(constants$33.const$1, fi, constants$12.const$3, scope);
+            return RuntimeHelper.upcallStub(constants$36.const$2, fi, constants$12.const$3, scope);
         }
         static size ofAddress(MemorySegment addr, Arena arena) {
             MemorySegment symbol = addr.reinterpret(arena, null);
             return (java.lang.foreign.MemorySegment __x0) -> {
                 try {
-                    return (long)constants$33.const$2.invokeExact(symbol, __x0);
+                    return (long)constants$36.const$3.invokeExact(symbol, __x0);
                 } catch (Throwable ex$) {
                     throw new AssertionError("should not reach here", ex$);
                 }
@@ -49,7 +49,7 @@ public class SDL_RWops {
     }
 
     public static VarHandle size$VH() {
-        return constants$33.const$3;
+        return constants$36.const$4;
     }
     /**
      * Getter for field:
@@ -58,7 +58,7 @@ public class SDL_RWops {
      * }
      */
     public static MemorySegment size$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$33.const$3.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$36.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -67,13 +67,13 @@ public class SDL_RWops {
      * }
      */
     public static void size$set(MemorySegment seg, MemorySegment x) {
-        constants$33.const$3.set(seg, x);
+        constants$36.const$4.set(seg, x);
     }
     public static MemorySegment size$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$33.const$3.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$36.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void size$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$33.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$36.const$4.set(seg.asSlice(index*sizeof()), x);
     }
     public static size size(MemorySegment segment, Arena scope) {
         return size.ofAddress(size$get(segment), scope);
@@ -87,13 +87,13 @@ public class SDL_RWops {
 
         long apply(java.lang.foreign.MemorySegment _x0, long _x1, int _x2);
         static MemorySegment allocate(seek fi, Arena scope) {
-            return RuntimeHelper.upcallStub(constants$33.const$5, fi, constants$33.const$4, scope);
+            return RuntimeHelper.upcallStub(constants$37.const$0, fi, constants$36.const$5, scope);
         }
         static seek ofAddress(MemorySegment addr, Arena arena) {
             MemorySegment symbol = addr.reinterpret(arena, null);
             return (java.lang.foreign.MemorySegment __x0, long __x1, int __x2) -> {
                 try {
-                    return (long)constants$34.const$0.invokeExact(symbol, __x0, __x1, __x2);
+                    return (long)constants$37.const$1.invokeExact(symbol, __x0, __x1, __x2);
                 } catch (Throwable ex$) {
                     throw new AssertionError("should not reach here", ex$);
                 }
@@ -102,7 +102,7 @@ public class SDL_RWops {
     }
 
     public static VarHandle seek$VH() {
-        return constants$34.const$1;
+        return constants$37.const$2;
     }
     /**
      * Getter for field:
@@ -111,7 +111,7 @@ public class SDL_RWops {
      * }
      */
     public static MemorySegment seek$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$34.const$1.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$37.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -120,13 +120,13 @@ public class SDL_RWops {
      * }
      */
     public static void seek$set(MemorySegment seg, MemorySegment x) {
-        constants$34.const$1.set(seg, x);
+        constants$37.const$2.set(seg, x);
     }
     public static MemorySegment seek$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$34.const$1.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$37.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void seek$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$34.const$1.set(seg.asSlice(index*sizeof()), x);
+        constants$37.const$2.set(seg.asSlice(index*sizeof()), x);
     }
     public static seek seek(MemorySegment segment, Arena scope) {
         return seek.ofAddress(seek$get(segment), scope);
@@ -140,13 +140,13 @@ public class SDL_RWops {
 
         long apply(java.lang.foreign.MemorySegment _x0, java.lang.foreign.MemorySegment _x1, long _x2, long _x3);
         static MemorySegment allocate(read fi, Arena scope) {
-            return RuntimeHelper.upcallStub(constants$34.const$3, fi, constants$34.const$2, scope);
+            return RuntimeHelper.upcallStub(constants$37.const$4, fi, constants$37.const$3, scope);
         }
         static read ofAddress(MemorySegment addr, Arena arena) {
             MemorySegment symbol = addr.reinterpret(arena, null);
             return (java.lang.foreign.MemorySegment __x0, java.lang.foreign.MemorySegment __x1, long __x2, long __x3) -> {
                 try {
-                    return (long)constants$34.const$4.invokeExact(symbol, __x0, __x1, __x2, __x3);
+                    return (long)constants$37.const$5.invokeExact(symbol, __x0, __x1, __x2, __x3);
                 } catch (Throwable ex$) {
                     throw new AssertionError("should not reach here", ex$);
                 }
@@ -155,7 +155,7 @@ public class SDL_RWops {
     }
 
     public static VarHandle read$VH() {
-        return constants$34.const$5;
+        return constants$38.const$0;
     }
     /**
      * Getter for field:
@@ -164,7 +164,7 @@ public class SDL_RWops {
      * }
      */
     public static MemorySegment read$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$34.const$5.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$38.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -173,13 +173,13 @@ public class SDL_RWops {
      * }
      */
     public static void read$set(MemorySegment seg, MemorySegment x) {
-        constants$34.const$5.set(seg, x);
+        constants$38.const$0.set(seg, x);
     }
     public static MemorySegment read$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$34.const$5.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$38.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void read$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$34.const$5.set(seg.asSlice(index*sizeof()), x);
+        constants$38.const$0.set(seg.asSlice(index*sizeof()), x);
     }
     public static read read(MemorySegment segment, Arena scope) {
         return read.ofAddress(read$get(segment), scope);
@@ -193,13 +193,13 @@ public class SDL_RWops {
 
         long apply(java.lang.foreign.MemorySegment _x0, java.lang.foreign.MemorySegment _x1, long _x2, long _x3);
         static MemorySegment allocate(write fi, Arena scope) {
-            return RuntimeHelper.upcallStub(constants$35.const$0, fi, constants$34.const$2, scope);
+            return RuntimeHelper.upcallStub(constants$38.const$1, fi, constants$37.const$3, scope);
         }
         static write ofAddress(MemorySegment addr, Arena arena) {
             MemorySegment symbol = addr.reinterpret(arena, null);
             return (java.lang.foreign.MemorySegment __x0, java.lang.foreign.MemorySegment __x1, long __x2, long __x3) -> {
                 try {
-                    return (long)constants$34.const$4.invokeExact(symbol, __x0, __x1, __x2, __x3);
+                    return (long)constants$37.const$5.invokeExact(symbol, __x0, __x1, __x2, __x3);
                 } catch (Throwable ex$) {
                     throw new AssertionError("should not reach here", ex$);
                 }
@@ -208,7 +208,7 @@ public class SDL_RWops {
     }
 
     public static VarHandle write$VH() {
-        return constants$35.const$1;
+        return constants$38.const$2;
     }
     /**
      * Getter for field:
@@ -217,7 +217,7 @@ public class SDL_RWops {
      * }
      */
     public static MemorySegment write$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$35.const$1.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$38.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -226,13 +226,13 @@ public class SDL_RWops {
      * }
      */
     public static void write$set(MemorySegment seg, MemorySegment x) {
-        constants$35.const$1.set(seg, x);
+        constants$38.const$2.set(seg, x);
     }
     public static MemorySegment write$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$35.const$1.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$38.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void write$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$35.const$1.set(seg.asSlice(index*sizeof()), x);
+        constants$38.const$2.set(seg.asSlice(index*sizeof()), x);
     }
     public static write write(MemorySegment segment, Arena scope) {
         return write.ofAddress(write$get(segment), scope);
@@ -246,13 +246,13 @@ public class SDL_RWops {
 
         int apply(java.lang.foreign.MemorySegment _x0);
         static MemorySegment allocate(close fi, Arena scope) {
-            return RuntimeHelper.upcallStub(constants$35.const$2, fi, constants$18.const$4, scope);
+            return RuntimeHelper.upcallStub(constants$38.const$3, fi, constants$18.const$4, scope);
         }
         static close ofAddress(MemorySegment addr, Arena arena) {
             MemorySegment symbol = addr.reinterpret(arena, null);
             return (java.lang.foreign.MemorySegment __x0) -> {
                 try {
-                    return (int)constants$35.const$3.invokeExact(symbol, __x0);
+                    return (int)constants$38.const$4.invokeExact(symbol, __x0);
                 } catch (Throwable ex$) {
                     throw new AssertionError("should not reach here", ex$);
                 }
@@ -261,7 +261,7 @@ public class SDL_RWops {
     }
 
     public static VarHandle close$VH() {
-        return constants$35.const$4;
+        return constants$38.const$5;
     }
     /**
      * Getter for field:
@@ -270,7 +270,7 @@ public class SDL_RWops {
      * }
      */
     public static MemorySegment close$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$35.const$4.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$38.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -279,19 +279,19 @@ public class SDL_RWops {
      * }
      */
     public static void close$set(MemorySegment seg, MemorySegment x) {
-        constants$35.const$4.set(seg, x);
+        constants$38.const$5.set(seg, x);
     }
     public static MemorySegment close$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$35.const$4.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$38.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void close$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$35.const$4.set(seg.asSlice(index*sizeof()), x);
+        constants$38.const$5.set(seg.asSlice(index*sizeof()), x);
     }
     public static close close(MemorySegment segment, Arena scope) {
         return close.ofAddress(close$get(segment), scope);
     }
     public static VarHandle type$VH() {
-        return constants$35.const$5;
+        return constants$39.const$0;
     }
     /**
      * Getter for field:
@@ -300,7 +300,7 @@ public class SDL_RWops {
      * }
      */
     public static int type$get(MemorySegment seg) {
-        return (int)constants$35.const$5.get(seg);
+        return (int)constants$39.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -309,13 +309,13 @@ public class SDL_RWops {
      * }
      */
     public static void type$set(MemorySegment seg, int x) {
-        constants$35.const$5.set(seg, x);
+        constants$39.const$0.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
-        return (int)constants$35.const$5.get(seg.asSlice(index*sizeof()));
+        return (int)constants$39.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void type$set(MemorySegment seg, long index, int x) {
-        constants$35.const$5.set(seg.asSlice(index*sizeof()), x);
+        constants$39.const$0.set(seg.asSlice(index*sizeof()), x);
     }
     /**
      * {@snippet :
@@ -332,7 +332,7 @@ public class SDL_RWops {
         // Suppresses default constructor, ensuring non-instantiability.
         private hidden() {}
         public static MemoryLayout $LAYOUT() {
-            return constants$36.const$0;
+            return constants$39.const$1;
         }
         /**
          * {@snippet :
@@ -348,10 +348,10 @@ public class SDL_RWops {
             // Suppresses default constructor, ensuring non-instantiability.
             private windowsio() {}
             public static MemoryLayout $LAYOUT() {
-                return constants$36.const$1;
+                return constants$39.const$2;
             }
             public static VarHandle append$VH() {
-                return constants$36.const$2;
+                return constants$39.const$3;
             }
             /**
              * Getter for field:
@@ -360,7 +360,7 @@ public class SDL_RWops {
              * }
              */
             public static int append$get(MemorySegment seg) {
-                return (int)constants$36.const$2.get(seg);
+                return (int)constants$39.const$3.get(seg);
             }
             /**
              * Setter for field:
@@ -369,16 +369,16 @@ public class SDL_RWops {
              * }
              */
             public static void append$set(MemorySegment seg, int x) {
-                constants$36.const$2.set(seg, x);
+                constants$39.const$3.set(seg, x);
             }
             public static int append$get(MemorySegment seg, long index) {
-                return (int)constants$36.const$2.get(seg.asSlice(index*sizeof()));
+                return (int)constants$39.const$3.get(seg.asSlice(index*sizeof()));
             }
             public static void append$set(MemorySegment seg, long index, int x) {
-                constants$36.const$2.set(seg.asSlice(index*sizeof()), x);
+                constants$39.const$3.set(seg.asSlice(index*sizeof()), x);
             }
             public static VarHandle h$VH() {
-                return constants$36.const$3;
+                return constants$39.const$4;
             }
             /**
              * Getter for field:
@@ -387,7 +387,7 @@ public class SDL_RWops {
              * }
              */
             public static MemorySegment h$get(MemorySegment seg) {
-                return (java.lang.foreign.MemorySegment)constants$36.const$3.get(seg);
+                return (java.lang.foreign.MemorySegment)constants$39.const$4.get(seg);
             }
             /**
              * Setter for field:
@@ -396,13 +396,13 @@ public class SDL_RWops {
              * }
              */
             public static void h$set(MemorySegment seg, MemorySegment x) {
-                constants$36.const$3.set(seg, x);
+                constants$39.const$4.set(seg, x);
             }
             public static MemorySegment h$get(MemorySegment seg, long index) {
-                return (java.lang.foreign.MemorySegment)constants$36.const$3.get(seg.asSlice(index*sizeof()));
+                return (java.lang.foreign.MemorySegment)constants$39.const$4.get(seg.asSlice(index*sizeof()));
             }
             public static void h$set(MemorySegment seg, long index, MemorySegment x) {
-                constants$36.const$3.set(seg.asSlice(index*sizeof()), x);
+                constants$39.const$4.set(seg.asSlice(index*sizeof()), x);
             }
             /**
              * {@snippet :
@@ -418,10 +418,10 @@ public class SDL_RWops {
                 // Suppresses default constructor, ensuring non-instantiability.
                 private buffer() {}
                 public static MemoryLayout $LAYOUT() {
-                    return constants$36.const$4;
+                    return constants$39.const$5;
                 }
                 public static VarHandle data$VH() {
-                    return constants$36.const$5;
+                    return constants$40.const$0;
                 }
                 /**
                  * Getter for field:
@@ -430,7 +430,7 @@ public class SDL_RWops {
                  * }
                  */
                 public static MemorySegment data$get(MemorySegment seg) {
-                    return (java.lang.foreign.MemorySegment)constants$36.const$5.get(seg);
+                    return (java.lang.foreign.MemorySegment)constants$40.const$0.get(seg);
                 }
                 /**
                  * Setter for field:
@@ -439,16 +439,16 @@ public class SDL_RWops {
                  * }
                  */
                 public static void data$set(MemorySegment seg, MemorySegment x) {
-                    constants$36.const$5.set(seg, x);
+                    constants$40.const$0.set(seg, x);
                 }
                 public static MemorySegment data$get(MemorySegment seg, long index) {
-                    return (java.lang.foreign.MemorySegment)constants$36.const$5.get(seg.asSlice(index*sizeof()));
+                    return (java.lang.foreign.MemorySegment)constants$40.const$0.get(seg.asSlice(index*sizeof()));
                 }
                 public static void data$set(MemorySegment seg, long index, MemorySegment x) {
-                    constants$36.const$5.set(seg.asSlice(index*sizeof()), x);
+                    constants$40.const$0.set(seg.asSlice(index*sizeof()), x);
                 }
                 public static VarHandle size$VH() {
-                    return constants$37.const$0;
+                    return constants$40.const$1;
                 }
                 /**
                  * Getter for field:
@@ -457,7 +457,7 @@ public class SDL_RWops {
                  * }
                  */
                 public static long size$get(MemorySegment seg) {
-                    return (long)constants$37.const$0.get(seg);
+                    return (long)constants$40.const$1.get(seg);
                 }
                 /**
                  * Setter for field:
@@ -466,16 +466,16 @@ public class SDL_RWops {
                  * }
                  */
                 public static void size$set(MemorySegment seg, long x) {
-                    constants$37.const$0.set(seg, x);
+                    constants$40.const$1.set(seg, x);
                 }
                 public static long size$get(MemorySegment seg, long index) {
-                    return (long)constants$37.const$0.get(seg.asSlice(index*sizeof()));
+                    return (long)constants$40.const$1.get(seg.asSlice(index*sizeof()));
                 }
                 public static void size$set(MemorySegment seg, long index, long x) {
-                    constants$37.const$0.set(seg.asSlice(index*sizeof()), x);
+                    constants$40.const$1.set(seg.asSlice(index*sizeof()), x);
                 }
                 public static VarHandle left$VH() {
-                    return constants$37.const$1;
+                    return constants$40.const$2;
                 }
                 /**
                  * Getter for field:
@@ -484,7 +484,7 @@ public class SDL_RWops {
                  * }
                  */
                 public static long left$get(MemorySegment seg) {
-                    return (long)constants$37.const$1.get(seg);
+                    return (long)constants$40.const$2.get(seg);
                 }
                 /**
                  * Setter for field:
@@ -493,13 +493,13 @@ public class SDL_RWops {
                  * }
                  */
                 public static void left$set(MemorySegment seg, long x) {
-                    constants$37.const$1.set(seg, x);
+                    constants$40.const$2.set(seg, x);
                 }
                 public static long left$get(MemorySegment seg, long index) {
-                    return (long)constants$37.const$1.get(seg.asSlice(index*sizeof()));
+                    return (long)constants$40.const$2.get(seg.asSlice(index*sizeof()));
                 }
                 public static void left$set(MemorySegment seg, long index, long x) {
-                    constants$37.const$1.set(seg.asSlice(index*sizeof()), x);
+                    constants$40.const$2.set(seg.asSlice(index*sizeof()), x);
                 }
                 public static long sizeof() { return $LAYOUT().byteSize(); }
                 public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
@@ -536,10 +536,10 @@ public class SDL_RWops {
             // Suppresses default constructor, ensuring non-instantiability.
             private stdio() {}
             public static MemoryLayout $LAYOUT() {
-                return constants$37.const$2;
+                return constants$40.const$3;
             }
             public static VarHandle autoclose$VH() {
-                return constants$37.const$3;
+                return constants$40.const$4;
             }
             /**
              * Getter for field:
@@ -548,7 +548,7 @@ public class SDL_RWops {
              * }
              */
             public static int autoclose$get(MemorySegment seg) {
-                return (int)constants$37.const$3.get(seg);
+                return (int)constants$40.const$4.get(seg);
             }
             /**
              * Setter for field:
@@ -557,16 +557,16 @@ public class SDL_RWops {
              * }
              */
             public static void autoclose$set(MemorySegment seg, int x) {
-                constants$37.const$3.set(seg, x);
+                constants$40.const$4.set(seg, x);
             }
             public static int autoclose$get(MemorySegment seg, long index) {
-                return (int)constants$37.const$3.get(seg.asSlice(index*sizeof()));
+                return (int)constants$40.const$4.get(seg.asSlice(index*sizeof()));
             }
             public static void autoclose$set(MemorySegment seg, long index, int x) {
-                constants$37.const$3.set(seg.asSlice(index*sizeof()), x);
+                constants$40.const$4.set(seg.asSlice(index*sizeof()), x);
             }
             public static VarHandle fp$VH() {
-                return constants$37.const$4;
+                return constants$40.const$5;
             }
             /**
              * Getter for field:
@@ -575,7 +575,7 @@ public class SDL_RWops {
              * }
              */
             public static MemorySegment fp$get(MemorySegment seg) {
-                return (java.lang.foreign.MemorySegment)constants$37.const$4.get(seg);
+                return (java.lang.foreign.MemorySegment)constants$40.const$5.get(seg);
             }
             /**
              * Setter for field:
@@ -584,13 +584,13 @@ public class SDL_RWops {
              * }
              */
             public static void fp$set(MemorySegment seg, MemorySegment x) {
-                constants$37.const$4.set(seg, x);
+                constants$40.const$5.set(seg, x);
             }
             public static MemorySegment fp$get(MemorySegment seg, long index) {
-                return (java.lang.foreign.MemorySegment)constants$37.const$4.get(seg.asSlice(index*sizeof()));
+                return (java.lang.foreign.MemorySegment)constants$40.const$5.get(seg.asSlice(index*sizeof()));
             }
             public static void fp$set(MemorySegment seg, long index, MemorySegment x) {
-                constants$37.const$4.set(seg.asSlice(index*sizeof()), x);
+                constants$40.const$5.set(seg.asSlice(index*sizeof()), x);
             }
             public static long sizeof() { return $LAYOUT().byteSize(); }
             public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
@@ -617,10 +617,10 @@ public class SDL_RWops {
             // Suppresses default constructor, ensuring non-instantiability.
             private mem() {}
             public static MemoryLayout $LAYOUT() {
-                return constants$37.const$5;
+                return constants$41.const$0;
             }
             public static VarHandle base$VH() {
-                return constants$38.const$0;
+                return constants$41.const$1;
             }
             /**
              * Getter for field:
@@ -629,7 +629,7 @@ public class SDL_RWops {
              * }
              */
             public static MemorySegment base$get(MemorySegment seg) {
-                return (java.lang.foreign.MemorySegment)constants$38.const$0.get(seg);
+                return (java.lang.foreign.MemorySegment)constants$41.const$1.get(seg);
             }
             /**
              * Setter for field:
@@ -638,16 +638,16 @@ public class SDL_RWops {
              * }
              */
             public static void base$set(MemorySegment seg, MemorySegment x) {
-                constants$38.const$0.set(seg, x);
+                constants$41.const$1.set(seg, x);
             }
             public static MemorySegment base$get(MemorySegment seg, long index) {
-                return (java.lang.foreign.MemorySegment)constants$38.const$0.get(seg.asSlice(index*sizeof()));
+                return (java.lang.foreign.MemorySegment)constants$41.const$1.get(seg.asSlice(index*sizeof()));
             }
             public static void base$set(MemorySegment seg, long index, MemorySegment x) {
-                constants$38.const$0.set(seg.asSlice(index*sizeof()), x);
+                constants$41.const$1.set(seg.asSlice(index*sizeof()), x);
             }
             public static VarHandle here$VH() {
-                return constants$38.const$1;
+                return constants$41.const$2;
             }
             /**
              * Getter for field:
@@ -656,7 +656,7 @@ public class SDL_RWops {
              * }
              */
             public static MemorySegment here$get(MemorySegment seg) {
-                return (java.lang.foreign.MemorySegment)constants$38.const$1.get(seg);
+                return (java.lang.foreign.MemorySegment)constants$41.const$2.get(seg);
             }
             /**
              * Setter for field:
@@ -665,16 +665,16 @@ public class SDL_RWops {
              * }
              */
             public static void here$set(MemorySegment seg, MemorySegment x) {
-                constants$38.const$1.set(seg, x);
+                constants$41.const$2.set(seg, x);
             }
             public static MemorySegment here$get(MemorySegment seg, long index) {
-                return (java.lang.foreign.MemorySegment)constants$38.const$1.get(seg.asSlice(index*sizeof()));
+                return (java.lang.foreign.MemorySegment)constants$41.const$2.get(seg.asSlice(index*sizeof()));
             }
             public static void here$set(MemorySegment seg, long index, MemorySegment x) {
-                constants$38.const$1.set(seg.asSlice(index*sizeof()), x);
+                constants$41.const$2.set(seg.asSlice(index*sizeof()), x);
             }
             public static VarHandle stop$VH() {
-                return constants$38.const$2;
+                return constants$41.const$3;
             }
             /**
              * Getter for field:
@@ -683,7 +683,7 @@ public class SDL_RWops {
              * }
              */
             public static MemorySegment stop$get(MemorySegment seg) {
-                return (java.lang.foreign.MemorySegment)constants$38.const$2.get(seg);
+                return (java.lang.foreign.MemorySegment)constants$41.const$3.get(seg);
             }
             /**
              * Setter for field:
@@ -692,13 +692,13 @@ public class SDL_RWops {
              * }
              */
             public static void stop$set(MemorySegment seg, MemorySegment x) {
-                constants$38.const$2.set(seg, x);
+                constants$41.const$3.set(seg, x);
             }
             public static MemorySegment stop$get(MemorySegment seg, long index) {
-                return (java.lang.foreign.MemorySegment)constants$38.const$2.get(seg.asSlice(index*sizeof()));
+                return (java.lang.foreign.MemorySegment)constants$41.const$3.get(seg.asSlice(index*sizeof()));
             }
             public static void stop$set(MemorySegment seg, long index, MemorySegment x) {
-                constants$38.const$2.set(seg.asSlice(index*sizeof()), x);
+                constants$41.const$3.set(seg.asSlice(index*sizeof()), x);
             }
             public static long sizeof() { return $LAYOUT().byteSize(); }
             public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
@@ -724,10 +724,10 @@ public class SDL_RWops {
             // Suppresses default constructor, ensuring non-instantiability.
             private unknown() {}
             public static MemoryLayout $LAYOUT() {
-                return constants$38.const$3;
+                return constants$41.const$4;
             }
             public static VarHandle data1$VH() {
-                return constants$38.const$4;
+                return constants$41.const$5;
             }
             /**
              * Getter for field:
@@ -736,7 +736,7 @@ public class SDL_RWops {
              * }
              */
             public static MemorySegment data1$get(MemorySegment seg) {
-                return (java.lang.foreign.MemorySegment)constants$38.const$4.get(seg);
+                return (java.lang.foreign.MemorySegment)constants$41.const$5.get(seg);
             }
             /**
              * Setter for field:
@@ -745,16 +745,16 @@ public class SDL_RWops {
              * }
              */
             public static void data1$set(MemorySegment seg, MemorySegment x) {
-                constants$38.const$4.set(seg, x);
+                constants$41.const$5.set(seg, x);
             }
             public static MemorySegment data1$get(MemorySegment seg, long index) {
-                return (java.lang.foreign.MemorySegment)constants$38.const$4.get(seg.asSlice(index*sizeof()));
+                return (java.lang.foreign.MemorySegment)constants$41.const$5.get(seg.asSlice(index*sizeof()));
             }
             public static void data1$set(MemorySegment seg, long index, MemorySegment x) {
-                constants$38.const$4.set(seg.asSlice(index*sizeof()), x);
+                constants$41.const$5.set(seg.asSlice(index*sizeof()), x);
             }
             public static VarHandle data2$VH() {
-                return constants$38.const$5;
+                return constants$42.const$0;
             }
             /**
              * Getter for field:
@@ -763,7 +763,7 @@ public class SDL_RWops {
              * }
              */
             public static MemorySegment data2$get(MemorySegment seg) {
-                return (java.lang.foreign.MemorySegment)constants$38.const$5.get(seg);
+                return (java.lang.foreign.MemorySegment)constants$42.const$0.get(seg);
             }
             /**
              * Setter for field:
@@ -772,13 +772,13 @@ public class SDL_RWops {
              * }
              */
             public static void data2$set(MemorySegment seg, MemorySegment x) {
-                constants$38.const$5.set(seg, x);
+                constants$42.const$0.set(seg, x);
             }
             public static MemorySegment data2$get(MemorySegment seg, long index) {
-                return (java.lang.foreign.MemorySegment)constants$38.const$5.get(seg.asSlice(index*sizeof()));
+                return (java.lang.foreign.MemorySegment)constants$42.const$0.get(seg.asSlice(index*sizeof()));
             }
             public static void data2$set(MemorySegment seg, long index, MemorySegment x) {
-                constants$38.const$5.set(seg.asSlice(index*sizeof()), x);
+                constants$42.const$0.set(seg.asSlice(index*sizeof()), x);
             }
             public static long sizeof() { return $LAYOUT().byteSize(); }
             public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }

@@ -11,29 +11,23 @@ final class constants$111 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$111() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowBordersSize",
-        constants$91.const$3
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowSizeInPixels",
-        constants$91.const$0
-    );
+    static final VarHandle const$0 = constants$110.const$5.varHandle(MemoryLayout.PathElement.groupElement("hat"));
+    static final VarHandle const$1 = constants$110.const$5.varHandle(MemoryLayout.PathElement.groupElement("hat_mask"));
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowMinimumSize",
-        constants$110.const$1
+        "SDL_GameControllerAddMappingsFromRW",
+        constants$34.const$3
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowMinimumSize",
-        constants$91.const$0
+        "SDL_GameControllerAddMapping",
+        constants$18.const$4
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowMaximumSize",
-        constants$110.const$1
+        "SDL_GameControllerNumMappings",
+        constants$5.const$5
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowMaximumSize",
-        constants$91.const$0
+        "SDL_GameControllerMappingForIndex",
+        constants$33.const$5
     );
 }
 

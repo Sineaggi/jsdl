@@ -17,7 +17,7 @@ import static java.lang.foreign.ValueLayout.*;
 public class SDL_GUID {
 
     public static MemoryLayout $LAYOUT() {
-        return constants$47.const$2;
+        return constants$90.const$1;
     }
     public static MemorySegment data$slice(MemorySegment seg) {
         return seg.asSlice(0, 16);

@@ -18,10 +18,10 @@ import static java.lang.foreign.ValueLayout.*;
 public class SDL_FPoint {
 
     public static MemoryLayout $LAYOUT() {
-        return constants$88.const$3;
+        return constants$56.const$3;
     }
     public static VarHandle x$VH() {
-        return constants$88.const$4;
+        return constants$56.const$4;
     }
     /**
      * Getter for field:
@@ -30,7 +30,7 @@ public class SDL_FPoint {
      * }
      */
     public static float x$get(MemorySegment seg) {
-        return (float)constants$88.const$4.get(seg);
+        return (float)constants$56.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -39,16 +39,16 @@ public class SDL_FPoint {
      * }
      */
     public static void x$set(MemorySegment seg, float x) {
-        constants$88.const$4.set(seg, x);
+        constants$56.const$4.set(seg, x);
     }
     public static float x$get(MemorySegment seg, long index) {
-        return (float)constants$88.const$4.get(seg.asSlice(index*sizeof()));
+        return (float)constants$56.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void x$set(MemorySegment seg, long index, float x) {
-        constants$88.const$4.set(seg.asSlice(index*sizeof()), x);
+        constants$56.const$4.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle y$VH() {
-        return constants$88.const$5;
+        return constants$56.const$5;
     }
     /**
      * Getter for field:
@@ -57,7 +57,7 @@ public class SDL_FPoint {
      * }
      */
     public static float y$get(MemorySegment seg) {
-        return (float)constants$88.const$5.get(seg);
+        return (float)constants$56.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -66,13 +66,13 @@ public class SDL_FPoint {
      * }
      */
     public static void y$set(MemorySegment seg, float x) {
-        constants$88.const$5.set(seg, x);
+        constants$56.const$5.set(seg, x);
     }
     public static float y$get(MemorySegment seg, long index) {
-        return (float)constants$88.const$5.get(seg.asSlice(index*sizeof()));
+        return (float)constants$56.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void y$set(MemorySegment seg, long index, float x) {
-        constants$88.const$5.set(seg.asSlice(index*sizeof()), x);
+        constants$56.const$5.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }

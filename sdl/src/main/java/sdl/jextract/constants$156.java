@@ -11,18 +11,11 @@ final class constants$156 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$156() {}
-    static final StructLayout const$0 = MemoryLayout.structLayout(
-        JAVA_INT.withName("type"),
-        JAVA_INT.withName("timestamp"),
-        RuntimeHelper.POINTER.withName("file"),
-        JAVA_INT.withName("windowID"),
-        MemoryLayout.paddingLayout(4)
-    ).withName("SDL_DropEvent");
-    static final VarHandle const$1 = constants$156.const$0.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$2 = constants$156.const$0.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$3 = constants$156.const$0.varHandle(MemoryLayout.PathElement.groupElement("file"));
-    static final VarHandle const$4 = constants$156.const$0.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
-    static final StructLayout const$5 = MemoryLayout.structLayout(
+    static final VarHandle const$0 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$1 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$2 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("file"));
+    static final VarHandle const$3 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
+    static final StructLayout const$4 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
         JAVA_INT.withName("which"),
@@ -30,6 +23,7 @@ final class constants$156 {
         MemoryLayout.paddingLayout(4),
         JAVA_LONG.withName("timestamp_us")
     ).withName("SDL_SensorEvent");
+    static final VarHandle const$5 = constants$156.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
 }
 
 

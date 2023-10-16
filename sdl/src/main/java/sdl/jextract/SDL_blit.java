@@ -16,13 +16,13 @@ public interface SDL_blit {
 
     int apply(java.lang.foreign.MemorySegment src, java.lang.foreign.MemorySegment srcrect, java.lang.foreign.MemorySegment dst, java.lang.foreign.MemorySegment dstrect);
     static MemorySegment allocate(SDL_blit fi, Arena scope) {
-        return RuntimeHelper.upcallStub(constants$94.const$4, fi, constants$5.const$3, scope);
+        return RuntimeHelper.upcallStub(constants$62.const$5, fi, constants$5.const$3, scope);
     }
     static SDL_blit ofAddress(MemorySegment addr, Arena arena) {
         MemorySegment symbol = addr.reinterpret(arena, null);
         return (java.lang.foreign.MemorySegment _src, java.lang.foreign.MemorySegment _srcrect, java.lang.foreign.MemorySegment _dst, java.lang.foreign.MemorySegment _dstrect) -> {
             try {
-                return (int)constants$94.const$5.invokeExact(symbol, _src, _srcrect, _dst, _dstrect);
+                return (int)constants$63.const$0.invokeExact(symbol, _src, _srcrect, _dst, _dstrect);
             } catch (Throwable ex$) {
                 throw new AssertionError("should not reach here", ex$);
             }

@@ -11,34 +11,22 @@ final class constants$86 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$86() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_INT
-    );
+    static final MethodHandle const$0 = RuntimeHelper.upcallHandle(SDL_HitTest.class, "apply", constants$21.const$2);
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_SetPaletteColors",
-        constants$86.const$0
+        constants$21.const$2
     );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_FreePalette",
-        constants$1.const$2
-    );
+    static final MethodHandle const$2 = RuntimeHelper.upcallHandle(SDL_SetWindowHitTest$callback.class, "apply", constants$21.const$2);
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_MapRGB",
-        constants$58.const$3
+        "SDL_SetWindowHitTest",
+        constants$21.const$2
     );
-    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_BYTE,
-        JAVA_BYTE,
-        JAVA_BYTE,
-        JAVA_BYTE
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_FlashWindow",
+        constants$34.const$3
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_MapRGBA",
-        constants$86.const$4
+        "SDL_DestroyWindow",
+        constants$1.const$2
     );
 }
 

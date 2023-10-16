@@ -11,12 +11,30 @@ final class constants$182 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$182() {}
-    static final VarHandle const$0 = constants$181.const$1.varHandle(MemoryLayout.PathElement.groupElement("ucHeadphoneVolume"));
-    static final VarHandle const$1 = constants$181.const$1.varHandle(MemoryLayout.PathElement.groupElement("ucSpeakerVolume"));
-    static final VarHandle const$2 = constants$181.const$1.varHandle(MemoryLayout.PathElement.groupElement("ucMicrophoneVolume"));
-    static final VarHandle const$3 = constants$181.const$1.varHandle(MemoryLayout.PathElement.groupElement("ucAudioEnableBits"));
-    static final VarHandle const$4 = constants$181.const$1.varHandle(MemoryLayout.PathElement.groupElement("ucMicLightMode"));
-    static final VarHandle const$5 = constants$181.const$1.varHandle(MemoryLayout.PathElement.groupElement("ucAudioMuteBits"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_DestroyRenderer",
+        constants$1.const$2
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_RenderFlush",
+        constants$18.const$4
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_GL_BindTexture",
+        constants$21.const$2
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GL_UnbindTexture",
+        constants$18.const$4
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_RenderGetMetalLayer",
+        constants$6.const$0
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_RenderGetMetalCommandEncoder",
+        constants$6.const$0
+    );
 }
 
 

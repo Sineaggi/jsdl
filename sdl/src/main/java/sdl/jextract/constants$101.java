@@ -12,28 +12,28 @@ final class constants$101 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$101() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_FillRect",
-        constants$6.const$2
+        "SDL_JoystickGetVendor",
+        constants$45.const$0
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_FillRects",
-        constants$86.const$0
+        "SDL_JoystickGetProduct",
+        constants$45.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_UpperBlit",
-        constants$5.const$3
+        "SDL_JoystickGetProductVersion",
+        constants$45.const$0
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_LowerBlit",
-        constants$5.const$3
+        "SDL_JoystickGetFirmwareVersion",
+        constants$45.const$0
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SoftStretch",
-        constants$5.const$3
+        "SDL_JoystickGetSerial",
+        constants$6.const$0
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_SoftStretchLinear",
-        constants$5.const$3
+        "SDL_JoystickGetType",
+        constants$18.const$4
     );
 }
 

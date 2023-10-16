@@ -11,29 +11,30 @@ final class constants$104 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$104() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GetNumVideoDrivers",
-        constants$5.const$5
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_SHORT,
+        RuntimeHelper.POINTER,
+        JAVA_INT
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetVideoDriver",
-        constants$44.const$5
+        "SDL_JoystickGetAxis",
+        constants$104.const$0
     );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_VideoInit",
-        constants$18.const$4
+    static final FunctionDescriptor const$2 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        RuntimeHelper.POINTER
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_VideoQuit",
-        constants$32.const$3
+        "SDL_JoystickGetAxisInitialState",
+        constants$104.const$2
     );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GetCurrentVideoDriver",
-        constants$0.const$0
+    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_BYTE,
+        RuntimeHelper.POINTER,
+        JAVA_INT
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetNumVideoDisplays",
-        constants$5.const$5
+        "SDL_JoystickGetHat",
+        constants$104.const$4
     );
 }
 

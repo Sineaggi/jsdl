@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
-import static sdl.SDL_subset_h.*;
+import static sdl.sdl_h.*;
 
 public enum SensorType {
     Invalid(SDL_SENSOR_INVALID()),

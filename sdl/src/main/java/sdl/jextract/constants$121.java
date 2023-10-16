@@ -12,29 +12,26 @@ final class constants$121 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$121() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GL_GetDrawableSize",
-        constants$91.const$0
+        "SDL_GameControllerSendEffect",
+        constants$6.const$2
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GL_SetSwapInterval",
-        constants$8.const$0
+        "SDL_GameControllerClose",
+        constants$1.const$2
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GL_GetSwapInterval",
-        constants$5.const$5
+        "SDL_GameControllerGetAppleSFSymbolsNameForButton",
+        constants$15.const$4
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GL_SwapWindow",
-        constants$1.const$2
+        "SDL_GameControllerGetAppleSFSymbolsNameForAxis",
+        constants$15.const$4
     );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GL_DeleteContext",
-        constants$1.const$2
-    );
-    static final StructLayout const$5 = MemoryLayout.structLayout(
+    static final StructLayout const$4 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp")
     ).withName("SDL_CommonEvent");
+    static final VarHandle const$5 = constants$121.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
 }
 
 
