@@ -617,7 +617,7 @@ public class TestGameController {
                     }
                 }
                 case ControllerButtonUp(JoystickId which, GameControllerButton button, GeneralInputStateDefinitions state) -> {
-                    System.out.println(STR."Controller \{which} button \{GameController.getStringForButton(button)} \{state}}");
+                    System.out.println(STR."Controller \{which} button \{GameController.getStringForButton(button)} \{state}");
                 }
                 case JoyBatteryUpdated(JoystickId joystickId, JoystickPowerLevel level) -> {
                     System.out.println(STR."Controller \{joystickId} battery state changed to \{POWER_LEVEL_STRINGS[level.value() + 1]}");

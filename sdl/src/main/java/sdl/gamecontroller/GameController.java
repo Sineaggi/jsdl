@@ -86,11 +86,7 @@ public class GameController implements AutoCloseable {
         if (string.equals(MemorySegment.NULL)) {
             return null;
         }
-        try {
-            return string.getUtf8String(0);
-        } finally {
-            SDL_free(string);
-        }
+        return string.getUtf8String(0);
     }
 
     public String name() {
