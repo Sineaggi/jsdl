@@ -13,8 +13,7 @@ public class JoystickId {
     public boolean equals(Object obj) {
         if (obj instanceof JoystickId other) {
             return other.joystickId == joystickId;
-        } else {
-            return false;
         }
+        return super.equals(obj);
     }
 }

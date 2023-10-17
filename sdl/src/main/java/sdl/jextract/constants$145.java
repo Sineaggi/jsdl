@@ -14,17 +14,18 @@ final class constants$145 {
     static final StructLayout const$0 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
-        JAVA_INT.withName("which"),
-        JAVA_BYTE.withName("button"),
-        JAVA_BYTE.withName("state"),
-        JAVA_BYTE.withName("padding1"),
-        JAVA_BYTE.withName("padding2")
-    ).withName("SDL_ControllerButtonEvent");
+        JAVA_INT.withName("which")
+    ).withName("SDL_JoyDeviceEvent");
     static final VarHandle const$1 = constants$145.const$0.varHandle(MemoryLayout.PathElement.groupElement("type"));
     static final VarHandle const$2 = constants$145.const$0.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
     static final VarHandle const$3 = constants$145.const$0.varHandle(MemoryLayout.PathElement.groupElement("which"));
-    static final VarHandle const$4 = constants$145.const$0.varHandle(MemoryLayout.PathElement.groupElement("button"));
-    static final VarHandle const$5 = constants$145.const$0.varHandle(MemoryLayout.PathElement.groupElement("state"));
+    static final StructLayout const$4 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        JAVA_INT.withName("timestamp"),
+        JAVA_INT.withName("which"),
+        JAVA_INT.withName("level")
+    ).withName("SDL_JoyBatteryEvent");
+    static final VarHandle const$5 = constants$145.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
 }
 
 

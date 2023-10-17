@@ -11,22 +11,39 @@ final class constants$123 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$123() {}
-    static final VarHandle const$0 = constants$122.const$1.varHandle(MemoryLayout.PathElement.groupElement("padding1"));
-    static final VarHandle const$1 = constants$122.const$1.varHandle(MemoryLayout.PathElement.groupElement("padding2"));
-    static final VarHandle const$2 = constants$122.const$1.varHandle(MemoryLayout.PathElement.groupElement("padding3"));
-    static final VarHandle const$3 = constants$122.const$1.varHandle(MemoryLayout.PathElement.groupElement("data1"));
-    static final StructLayout const$4 = MemoryLayout.structLayout(
-        JAVA_INT.withName("type"),
-        JAVA_INT.withName("timestamp"),
-        JAVA_INT.withName("windowID"),
-        JAVA_BYTE.withName("event"),
-        JAVA_BYTE.withName("padding1"),
-        JAVA_BYTE.withName("padding2"),
-        JAVA_BYTE.withName("padding3"),
-        JAVA_INT.withName("data1"),
-        JAVA_INT.withName("data2")
-    ).withName("SDL_WindowEvent");
-    static final VarHandle const$5 = constants$123.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerIsSensorEnabled",
+        constants$34.const$3
+    );
+    static final FunctionDescriptor const$1 = FunctionDescriptor.of(JAVA_FLOAT,
+        RuntimeHelper.POINTER,
+        JAVA_INT
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerGetSensorDataRate",
+        constants$123.const$1
+    );
+    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_INT
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerGetSensorData",
+        constants$123.const$3
+    );
+    static final FunctionDescriptor const$5 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        JAVA_INT
+    );
+    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerGetSensorDataWithTimestamp",
+        constants$123.const$5
+    );
 }
 
 

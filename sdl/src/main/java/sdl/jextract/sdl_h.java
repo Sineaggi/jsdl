@@ -8493,3310 +8493,2312 @@ public class sdl_h extends sdl_h_1 {
             throw new AssertionError("should not reach here", ex$);
         }
     }
-    public static MethodHandle SDL_GUIDToString$MH() {
-        return RuntimeHelper.requireNonNull(constants$90.const$3,"SDL_GUIDToString");
-    }
     /**
      * {@snippet :
-     * void SDL_GUIDToString(struct SDL_GUID guid, char* pszGUID, int cbGUID);
+     * typedef int SDL_Keycode;
      * }
      */
-    public static void SDL_GUIDToString(MemorySegment guid, MemorySegment pszGUID, int cbGUID) {
-        var mh$ = SDL_GUIDToString$MH();
-        try {
-            mh$.invokeExact(guid, pszGUID, cbGUID);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GUIDFromString$MH() {
-        return RuntimeHelper.requireNonNull(constants$90.const$5,"SDL_GUIDFromString");
-    }
+    public static final OfInt SDL_Keycode = JAVA_INT;
     /**
      * {@snippet :
-     * struct SDL_GUID SDL_GUIDFromString(char* pchGUID);
+     * enum SDL_KeyCode.SDLK_UNKNOWN = 0;
      * }
      */
-    public static MemorySegment SDL_GUIDFromString(SegmentAllocator allocator, MemorySegment pchGUID) {
-        var mh$ = SDL_GUIDFromString$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(allocator, pchGUID);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    /**
-     * {@snippet :
-     * typedef int SDL_JoystickID;
-     * }
-     */
-    public static final OfInt SDL_JoystickID = JAVA_INT;
-    /**
-     * {@snippet :
-     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_UNKNOWN = 0;
-     * }
-     */
-    public static int SDL_JOYSTICK_TYPE_UNKNOWN() {
+    public static int SDLK_UNKNOWN() {
         return (int)0L;
     }
     /**
      * {@snippet :
-     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_GAMECONTROLLER = 1;
+     * enum SDL_KeyCode.SDLK_RETURN = 13;
      * }
      */
-    public static int SDL_JOYSTICK_TYPE_GAMECONTROLLER() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_WHEEL = 2;
-     * }
-     */
-    public static int SDL_JOYSTICK_TYPE_WHEEL() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_ARCADE_STICK = 3;
-     * }
-     */
-    public static int SDL_JOYSTICK_TYPE_ARCADE_STICK() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_FLIGHT_STICK = 4;
-     * }
-     */
-    public static int SDL_JOYSTICK_TYPE_FLIGHT_STICK() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_DANCE_PAD = 5;
-     * }
-     */
-    public static int SDL_JOYSTICK_TYPE_DANCE_PAD() {
-        return (int)5L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_GUITAR = 6;
-     * }
-     */
-    public static int SDL_JOYSTICK_TYPE_GUITAR() {
-        return (int)6L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_DRUM_KIT = 7;
-     * }
-     */
-    public static int SDL_JOYSTICK_TYPE_DRUM_KIT() {
-        return (int)7L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_ARCADE_PAD = 8;
-     * }
-     */
-    public static int SDL_JOYSTICK_TYPE_ARCADE_PAD() {
-        return (int)8L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_THROTTLE = 9;
-     * }
-     */
-    public static int SDL_JOYSTICK_TYPE_THROTTLE() {
-        return (int)9L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_JoystickPowerLevel.SDL_JOYSTICK_POWER_UNKNOWN = -1;
-     * }
-     */
-    public static int SDL_JOYSTICK_POWER_UNKNOWN() {
-        return (int)-1L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_JoystickPowerLevel.SDL_JOYSTICK_POWER_EMPTY = 0;
-     * }
-     */
-    public static int SDL_JOYSTICK_POWER_EMPTY() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_JoystickPowerLevel.SDL_JOYSTICK_POWER_LOW = 1;
-     * }
-     */
-    public static int SDL_JOYSTICK_POWER_LOW() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_JoystickPowerLevel.SDL_JOYSTICK_POWER_MEDIUM = 2;
-     * }
-     */
-    public static int SDL_JOYSTICK_POWER_MEDIUM() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_JoystickPowerLevel.SDL_JOYSTICK_POWER_FULL = 3;
-     * }
-     */
-    public static int SDL_JOYSTICK_POWER_FULL() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_JoystickPowerLevel.SDL_JOYSTICK_POWER_WIRED = 4;
-     * }
-     */
-    public static int SDL_JOYSTICK_POWER_WIRED() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_JoystickPowerLevel.SDL_JOYSTICK_POWER_MAX = 5;
-     * }
-     */
-    public static int SDL_JOYSTICK_POWER_MAX() {
-        return (int)5L;
-    }
-    public static MethodHandle SDL_LockJoysticks$MH() {
-        return RuntimeHelper.requireNonNull(constants$91.const$0,"SDL_LockJoysticks");
-    }
-    /**
-     * {@snippet :
-     * void SDL_LockJoysticks();
-     * }
-     */
-    public static void SDL_LockJoysticks() {
-        var mh$ = SDL_LockJoysticks$MH();
-        try {
-            mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_UnlockJoysticks$MH() {
-        return RuntimeHelper.requireNonNull(constants$91.const$1,"SDL_UnlockJoysticks");
-    }
-    /**
-     * {@snippet :
-     * void SDL_UnlockJoysticks();
-     * }
-     */
-    public static void SDL_UnlockJoysticks() {
-        var mh$ = SDL_UnlockJoysticks$MH();
-        try {
-            mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_NumJoysticks$MH() {
-        return RuntimeHelper.requireNonNull(constants$91.const$2,"SDL_NumJoysticks");
-    }
-    /**
-     * {@snippet :
-     * int SDL_NumJoysticks();
-     * }
-     */
-    public static int SDL_NumJoysticks() {
-        var mh$ = SDL_NumJoysticks$MH();
-        try {
-            return (int)mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickNameForIndex$MH() {
-        return RuntimeHelper.requireNonNull(constants$91.const$3,"SDL_JoystickNameForIndex");
-    }
-    /**
-     * {@snippet :
-     * char* SDL_JoystickNameForIndex(int device_index);
-     * }
-     */
-    public static MemorySegment SDL_JoystickNameForIndex(int device_index) {
-        var mh$ = SDL_JoystickNameForIndex$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(device_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickPathForIndex$MH() {
-        return RuntimeHelper.requireNonNull(constants$91.const$4,"SDL_JoystickPathForIndex");
-    }
-    /**
-     * {@snippet :
-     * char* SDL_JoystickPathForIndex(int device_index);
-     * }
-     */
-    public static MemorySegment SDL_JoystickPathForIndex(int device_index) {
-        var mh$ = SDL_JoystickPathForIndex$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(device_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetDevicePlayerIndex$MH() {
-        return RuntimeHelper.requireNonNull(constants$91.const$5,"SDL_JoystickGetDevicePlayerIndex");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickGetDevicePlayerIndex(int device_index);
-     * }
-     */
-    public static int SDL_JoystickGetDevicePlayerIndex(int device_index) {
-        var mh$ = SDL_JoystickGetDevicePlayerIndex$MH();
-        try {
-            return (int)mh$.invokeExact(device_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetDeviceGUID$MH() {
-        return RuntimeHelper.requireNonNull(constants$92.const$1,"SDL_JoystickGetDeviceGUID");
-    }
-    /**
-     * {@snippet :
-     * struct SDL_GUID SDL_JoystickGetDeviceGUID(int device_index);
-     * }
-     */
-    public static MemorySegment SDL_JoystickGetDeviceGUID(SegmentAllocator allocator, int device_index) {
-        var mh$ = SDL_JoystickGetDeviceGUID$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(allocator, device_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetDeviceVendor$MH() {
-        return RuntimeHelper.requireNonNull(constants$92.const$3,"SDL_JoystickGetDeviceVendor");
-    }
-    /**
-     * {@snippet :
-     * unsigned short SDL_JoystickGetDeviceVendor(int device_index);
-     * }
-     */
-    public static short SDL_JoystickGetDeviceVendor(int device_index) {
-        var mh$ = SDL_JoystickGetDeviceVendor$MH();
-        try {
-            return (short)mh$.invokeExact(device_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetDeviceProduct$MH() {
-        return RuntimeHelper.requireNonNull(constants$92.const$4,"SDL_JoystickGetDeviceProduct");
-    }
-    /**
-     * {@snippet :
-     * unsigned short SDL_JoystickGetDeviceProduct(int device_index);
-     * }
-     */
-    public static short SDL_JoystickGetDeviceProduct(int device_index) {
-        var mh$ = SDL_JoystickGetDeviceProduct$MH();
-        try {
-            return (short)mh$.invokeExact(device_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetDeviceProductVersion$MH() {
-        return RuntimeHelper.requireNonNull(constants$92.const$5,"SDL_JoystickGetDeviceProductVersion");
-    }
-    /**
-     * {@snippet :
-     * unsigned short SDL_JoystickGetDeviceProductVersion(int device_index);
-     * }
-     */
-    public static short SDL_JoystickGetDeviceProductVersion(int device_index) {
-        var mh$ = SDL_JoystickGetDeviceProductVersion$MH();
-        try {
-            return (short)mh$.invokeExact(device_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetDeviceType$MH() {
-        return RuntimeHelper.requireNonNull(constants$93.const$0,"SDL_JoystickGetDeviceType");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_JoystickType SDL_JoystickGetDeviceType(int device_index);
-     * }
-     */
-    public static int SDL_JoystickGetDeviceType(int device_index) {
-        var mh$ = SDL_JoystickGetDeviceType$MH();
-        try {
-            return (int)mh$.invokeExact(device_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetDeviceInstanceID$MH() {
-        return RuntimeHelper.requireNonNull(constants$93.const$1,"SDL_JoystickGetDeviceInstanceID");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickGetDeviceInstanceID(int device_index);
-     * }
-     */
-    public static int SDL_JoystickGetDeviceInstanceID(int device_index) {
-        var mh$ = SDL_JoystickGetDeviceInstanceID$MH();
-        try {
-            return (int)mh$.invokeExact(device_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickOpen$MH() {
-        return RuntimeHelper.requireNonNull(constants$93.const$2,"SDL_JoystickOpen");
-    }
-    /**
-     * {@snippet :
-     * struct _SDL_Joystick* SDL_JoystickOpen(int device_index);
-     * }
-     */
-    public static MemorySegment SDL_JoystickOpen(int device_index) {
-        var mh$ = SDL_JoystickOpen$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(device_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickFromInstanceID$MH() {
-        return RuntimeHelper.requireNonNull(constants$93.const$3,"SDL_JoystickFromInstanceID");
-    }
-    /**
-     * {@snippet :
-     * struct _SDL_Joystick* SDL_JoystickFromInstanceID(int instance_id);
-     * }
-     */
-    public static MemorySegment SDL_JoystickFromInstanceID(int instance_id) {
-        var mh$ = SDL_JoystickFromInstanceID$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(instance_id);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickFromPlayerIndex$MH() {
-        return RuntimeHelper.requireNonNull(constants$93.const$4,"SDL_JoystickFromPlayerIndex");
-    }
-    /**
-     * {@snippet :
-     * struct _SDL_Joystick* SDL_JoystickFromPlayerIndex(int player_index);
-     * }
-     */
-    public static MemorySegment SDL_JoystickFromPlayerIndex(int player_index) {
-        var mh$ = SDL_JoystickFromPlayerIndex$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(player_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickAttachVirtual$MH() {
-        return RuntimeHelper.requireNonNull(constants$93.const$6,"SDL_JoystickAttachVirtual");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickAttachVirtual(enum SDL_JoystickType type, int naxes, int nbuttons, int nhats);
-     * }
-     */
-    public static int SDL_JoystickAttachVirtual(int type, int naxes, int nbuttons, int nhats) {
-        var mh$ = SDL_JoystickAttachVirtual$MH();
-        try {
-            return (int)mh$.invokeExact(type, naxes, nbuttons, nhats);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickAttachVirtualEx$MH() {
-        return RuntimeHelper.requireNonNull(constants$99.const$0,"SDL_JoystickAttachVirtualEx");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickAttachVirtualEx(struct SDL_VirtualJoystickDesc* desc);
-     * }
-     */
-    public static int SDL_JoystickAttachVirtualEx(MemorySegment desc) {
-        var mh$ = SDL_JoystickAttachVirtualEx$MH();
-        try {
-            return (int)mh$.invokeExact(desc);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickDetachVirtual$MH() {
-        return RuntimeHelper.requireNonNull(constants$99.const$1,"SDL_JoystickDetachVirtual");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickDetachVirtual(int device_index);
-     * }
-     */
-    public static int SDL_JoystickDetachVirtual(int device_index) {
-        var mh$ = SDL_JoystickDetachVirtual$MH();
-        try {
-            return (int)mh$.invokeExact(device_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickIsVirtual$MH() {
-        return RuntimeHelper.requireNonNull(constants$99.const$2,"SDL_JoystickIsVirtual");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_bool SDL_JoystickIsVirtual(int device_index);
-     * }
-     */
-    public static int SDL_JoystickIsVirtual(int device_index) {
-        var mh$ = SDL_JoystickIsVirtual$MH();
-        try {
-            return (int)mh$.invokeExact(device_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickSetVirtualAxis$MH() {
-        return RuntimeHelper.requireNonNull(constants$99.const$4,"SDL_JoystickSetVirtualAxis");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickSetVirtualAxis(struct _SDL_Joystick* joystick, int axis, short value);
-     * }
-     */
-    public static int SDL_JoystickSetVirtualAxis(MemorySegment joystick, int axis, short value) {
-        var mh$ = SDL_JoystickSetVirtualAxis$MH();
-        try {
-            return (int)mh$.invokeExact(joystick, axis, value);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickSetVirtualButton$MH() {
-        return RuntimeHelper.requireNonNull(constants$99.const$6,"SDL_JoystickSetVirtualButton");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickSetVirtualButton(struct _SDL_Joystick* joystick, int button, unsigned char value);
-     * }
-     */
-    public static int SDL_JoystickSetVirtualButton(MemorySegment joystick, int button, byte value) {
-        var mh$ = SDL_JoystickSetVirtualButton$MH();
-        try {
-            return (int)mh$.invokeExact(joystick, button, value);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickSetVirtualHat$MH() {
-        return RuntimeHelper.requireNonNull(constants$100.const$0,"SDL_JoystickSetVirtualHat");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickSetVirtualHat(struct _SDL_Joystick* joystick, int hat, unsigned char value);
-     * }
-     */
-    public static int SDL_JoystickSetVirtualHat(MemorySegment joystick, int hat, byte value) {
-        var mh$ = SDL_JoystickSetVirtualHat$MH();
-        try {
-            return (int)mh$.invokeExact(joystick, hat, value);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickName$MH() {
-        return RuntimeHelper.requireNonNull(constants$100.const$1,"SDL_JoystickName");
-    }
-    /**
-     * {@snippet :
-     * char* SDL_JoystickName(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static MemorySegment SDL_JoystickName(MemorySegment joystick) {
-        var mh$ = SDL_JoystickName$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickPath$MH() {
-        return RuntimeHelper.requireNonNull(constants$100.const$2,"SDL_JoystickPath");
-    }
-    /**
-     * {@snippet :
-     * char* SDL_JoystickPath(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static MemorySegment SDL_JoystickPath(MemorySegment joystick) {
-        var mh$ = SDL_JoystickPath$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetPlayerIndex$MH() {
-        return RuntimeHelper.requireNonNull(constants$100.const$3,"SDL_JoystickGetPlayerIndex");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickGetPlayerIndex(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static int SDL_JoystickGetPlayerIndex(MemorySegment joystick) {
-        var mh$ = SDL_JoystickGetPlayerIndex$MH();
-        try {
-            return (int)mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickSetPlayerIndex$MH() {
-        return RuntimeHelper.requireNonNull(constants$100.const$4,"SDL_JoystickSetPlayerIndex");
-    }
-    /**
-     * {@snippet :
-     * void SDL_JoystickSetPlayerIndex(struct _SDL_Joystick* joystick, int player_index);
-     * }
-     */
-    public static void SDL_JoystickSetPlayerIndex(MemorySegment joystick, int player_index) {
-        var mh$ = SDL_JoystickSetPlayerIndex$MH();
-        try {
-            mh$.invokeExact(joystick, player_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetGUID$MH() {
-        return RuntimeHelper.requireNonNull(constants$100.const$5,"SDL_JoystickGetGUID");
-    }
-    /**
-     * {@snippet :
-     * struct SDL_GUID SDL_JoystickGetGUID(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static MemorySegment SDL_JoystickGetGUID(SegmentAllocator allocator, MemorySegment joystick) {
-        var mh$ = SDL_JoystickGetGUID$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(allocator, joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetVendor$MH() {
-        return RuntimeHelper.requireNonNull(constants$101.const$0,"SDL_JoystickGetVendor");
-    }
-    /**
-     * {@snippet :
-     * unsigned short SDL_JoystickGetVendor(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static short SDL_JoystickGetVendor(MemorySegment joystick) {
-        var mh$ = SDL_JoystickGetVendor$MH();
-        try {
-            return (short)mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetProduct$MH() {
-        return RuntimeHelper.requireNonNull(constants$101.const$1,"SDL_JoystickGetProduct");
-    }
-    /**
-     * {@snippet :
-     * unsigned short SDL_JoystickGetProduct(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static short SDL_JoystickGetProduct(MemorySegment joystick) {
-        var mh$ = SDL_JoystickGetProduct$MH();
-        try {
-            return (short)mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetProductVersion$MH() {
-        return RuntimeHelper.requireNonNull(constants$101.const$2,"SDL_JoystickGetProductVersion");
-    }
-    /**
-     * {@snippet :
-     * unsigned short SDL_JoystickGetProductVersion(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static short SDL_JoystickGetProductVersion(MemorySegment joystick) {
-        var mh$ = SDL_JoystickGetProductVersion$MH();
-        try {
-            return (short)mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetFirmwareVersion$MH() {
-        return RuntimeHelper.requireNonNull(constants$101.const$3,"SDL_JoystickGetFirmwareVersion");
-    }
-    /**
-     * {@snippet :
-     * unsigned short SDL_JoystickGetFirmwareVersion(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static short SDL_JoystickGetFirmwareVersion(MemorySegment joystick) {
-        var mh$ = SDL_JoystickGetFirmwareVersion$MH();
-        try {
-            return (short)mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetSerial$MH() {
-        return RuntimeHelper.requireNonNull(constants$101.const$4,"SDL_JoystickGetSerial");
-    }
-    /**
-     * {@snippet :
-     * char* SDL_JoystickGetSerial(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static MemorySegment SDL_JoystickGetSerial(MemorySegment joystick) {
-        var mh$ = SDL_JoystickGetSerial$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetType$MH() {
-        return RuntimeHelper.requireNonNull(constants$101.const$5,"SDL_JoystickGetType");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_JoystickType SDL_JoystickGetType(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static int SDL_JoystickGetType(MemorySegment joystick) {
-        var mh$ = SDL_JoystickGetType$MH();
-        try {
-            return (int)mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetGUIDString$MH() {
-        return RuntimeHelper.requireNonNull(constants$102.const$0,"SDL_JoystickGetGUIDString");
-    }
-    /**
-     * {@snippet :
-     * void SDL_JoystickGetGUIDString(struct SDL_GUID guid, char* pszGUID, int cbGUID);
-     * }
-     */
-    public static void SDL_JoystickGetGUIDString(MemorySegment guid, MemorySegment pszGUID, int cbGUID) {
-        var mh$ = SDL_JoystickGetGUIDString$MH();
-        try {
-            mh$.invokeExact(guid, pszGUID, cbGUID);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetGUIDFromString$MH() {
-        return RuntimeHelper.requireNonNull(constants$102.const$1,"SDL_JoystickGetGUIDFromString");
-    }
-    /**
-     * {@snippet :
-     * struct SDL_GUID SDL_JoystickGetGUIDFromString(char* pchGUID);
-     * }
-     */
-    public static MemorySegment SDL_JoystickGetGUIDFromString(SegmentAllocator allocator, MemorySegment pchGUID) {
-        var mh$ = SDL_JoystickGetGUIDFromString$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(allocator, pchGUID);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GetJoystickGUIDInfo$MH() {
-        return RuntimeHelper.requireNonNull(constants$102.const$3,"SDL_GetJoystickGUIDInfo");
-    }
-    /**
-     * {@snippet :
-     * void SDL_GetJoystickGUIDInfo(struct SDL_GUID guid, unsigned short* vendor, unsigned short* product, unsigned short* version, unsigned short* crc16);
-     * }
-     */
-    public static void SDL_GetJoystickGUIDInfo(MemorySegment guid, MemorySegment vendor, MemorySegment product, MemorySegment version, MemorySegment crc16) {
-        var mh$ = SDL_GetJoystickGUIDInfo$MH();
-        try {
-            mh$.invokeExact(guid, vendor, product, version, crc16);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetAttached$MH() {
-        return RuntimeHelper.requireNonNull(constants$102.const$4,"SDL_JoystickGetAttached");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_bool SDL_JoystickGetAttached(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static int SDL_JoystickGetAttached(MemorySegment joystick) {
-        var mh$ = SDL_JoystickGetAttached$MH();
-        try {
-            return (int)mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickInstanceID$MH() {
-        return RuntimeHelper.requireNonNull(constants$102.const$5,"SDL_JoystickInstanceID");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickInstanceID(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static int SDL_JoystickInstanceID(MemorySegment joystick) {
-        var mh$ = SDL_JoystickInstanceID$MH();
-        try {
-            return (int)mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickNumAxes$MH() {
-        return RuntimeHelper.requireNonNull(constants$103.const$0,"SDL_JoystickNumAxes");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickNumAxes(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static int SDL_JoystickNumAxes(MemorySegment joystick) {
-        var mh$ = SDL_JoystickNumAxes$MH();
-        try {
-            return (int)mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickNumBalls$MH() {
-        return RuntimeHelper.requireNonNull(constants$103.const$1,"SDL_JoystickNumBalls");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickNumBalls(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static int SDL_JoystickNumBalls(MemorySegment joystick) {
-        var mh$ = SDL_JoystickNumBalls$MH();
-        try {
-            return (int)mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickNumHats$MH() {
-        return RuntimeHelper.requireNonNull(constants$103.const$2,"SDL_JoystickNumHats");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickNumHats(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static int SDL_JoystickNumHats(MemorySegment joystick) {
-        var mh$ = SDL_JoystickNumHats$MH();
-        try {
-            return (int)mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickNumButtons$MH() {
-        return RuntimeHelper.requireNonNull(constants$103.const$3,"SDL_JoystickNumButtons");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickNumButtons(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static int SDL_JoystickNumButtons(MemorySegment joystick) {
-        var mh$ = SDL_JoystickNumButtons$MH();
-        try {
-            return (int)mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickUpdate$MH() {
-        return RuntimeHelper.requireNonNull(constants$103.const$4,"SDL_JoystickUpdate");
-    }
-    /**
-     * {@snippet :
-     * void SDL_JoystickUpdate();
-     * }
-     */
-    public static void SDL_JoystickUpdate() {
-        var mh$ = SDL_JoystickUpdate$MH();
-        try {
-            mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickEventState$MH() {
-        return RuntimeHelper.requireNonNull(constants$103.const$5,"SDL_JoystickEventState");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickEventState(int state);
-     * }
-     */
-    public static int SDL_JoystickEventState(int state) {
-        var mh$ = SDL_JoystickEventState$MH();
-        try {
-            return (int)mh$.invokeExact(state);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetAxis$MH() {
-        return RuntimeHelper.requireNonNull(constants$104.const$1,"SDL_JoystickGetAxis");
-    }
-    /**
-     * {@snippet :
-     * short SDL_JoystickGetAxis(struct _SDL_Joystick* joystick, int axis);
-     * }
-     */
-    public static short SDL_JoystickGetAxis(MemorySegment joystick, int axis) {
-        var mh$ = SDL_JoystickGetAxis$MH();
-        try {
-            return (short)mh$.invokeExact(joystick, axis);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetAxisInitialState$MH() {
-        return RuntimeHelper.requireNonNull(constants$104.const$3,"SDL_JoystickGetAxisInitialState");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_bool SDL_JoystickGetAxisInitialState(struct _SDL_Joystick* joystick, int axis, short* state);
-     * }
-     */
-    public static int SDL_JoystickGetAxisInitialState(MemorySegment joystick, int axis, MemorySegment state) {
-        var mh$ = SDL_JoystickGetAxisInitialState$MH();
-        try {
-            return (int)mh$.invokeExact(joystick, axis, state);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetHat$MH() {
-        return RuntimeHelper.requireNonNull(constants$104.const$5,"SDL_JoystickGetHat");
-    }
-    /**
-     * {@snippet :
-     * unsigned char SDL_JoystickGetHat(struct _SDL_Joystick* joystick, int hat);
-     * }
-     */
-    public static byte SDL_JoystickGetHat(MemorySegment joystick, int hat) {
-        var mh$ = SDL_JoystickGetHat$MH();
-        try {
-            return (byte)mh$.invokeExact(joystick, hat);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetBall$MH() {
-        return RuntimeHelper.requireNonNull(constants$105.const$0,"SDL_JoystickGetBall");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickGetBall(struct _SDL_Joystick* joystick, int ball, int* dx, int* dy);
-     * }
-     */
-    public static int SDL_JoystickGetBall(MemorySegment joystick, int ball, MemorySegment dx, MemorySegment dy) {
-        var mh$ = SDL_JoystickGetBall$MH();
-        try {
-            return (int)mh$.invokeExact(joystick, ball, dx, dy);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickGetButton$MH() {
-        return RuntimeHelper.requireNonNull(constants$105.const$1,"SDL_JoystickGetButton");
-    }
-    /**
-     * {@snippet :
-     * unsigned char SDL_JoystickGetButton(struct _SDL_Joystick* joystick, int button);
-     * }
-     */
-    public static byte SDL_JoystickGetButton(MemorySegment joystick, int button) {
-        var mh$ = SDL_JoystickGetButton$MH();
-        try {
-            return (byte)mh$.invokeExact(joystick, button);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickRumble$MH() {
-        return RuntimeHelper.requireNonNull(constants$105.const$3,"SDL_JoystickRumble");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickRumble(struct _SDL_Joystick* joystick, unsigned short low_frequency_rumble, unsigned short high_frequency_rumble, unsigned int duration_ms);
-     * }
-     */
-    public static int SDL_JoystickRumble(MemorySegment joystick, short low_frequency_rumble, short high_frequency_rumble, int duration_ms) {
-        var mh$ = SDL_JoystickRumble$MH();
-        try {
-            return (int)mh$.invokeExact(joystick, low_frequency_rumble, high_frequency_rumble, duration_ms);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickRumbleTriggers$MH() {
-        return RuntimeHelper.requireNonNull(constants$105.const$4,"SDL_JoystickRumbleTriggers");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickRumbleTriggers(struct _SDL_Joystick* joystick, unsigned short left_rumble, unsigned short right_rumble, unsigned int duration_ms);
-     * }
-     */
-    public static int SDL_JoystickRumbleTriggers(MemorySegment joystick, short left_rumble, short right_rumble, int duration_ms) {
-        var mh$ = SDL_JoystickRumbleTriggers$MH();
-        try {
-            return (int)mh$.invokeExact(joystick, left_rumble, right_rumble, duration_ms);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickHasLED$MH() {
-        return RuntimeHelper.requireNonNull(constants$105.const$5,"SDL_JoystickHasLED");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_bool SDL_JoystickHasLED(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static int SDL_JoystickHasLED(MemorySegment joystick) {
-        var mh$ = SDL_JoystickHasLED$MH();
-        try {
-            return (int)mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickHasRumble$MH() {
-        return RuntimeHelper.requireNonNull(constants$106.const$0,"SDL_JoystickHasRumble");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_bool SDL_JoystickHasRumble(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static int SDL_JoystickHasRumble(MemorySegment joystick) {
-        var mh$ = SDL_JoystickHasRumble$MH();
-        try {
-            return (int)mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickHasRumbleTriggers$MH() {
-        return RuntimeHelper.requireNonNull(constants$106.const$1,"SDL_JoystickHasRumbleTriggers");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_bool SDL_JoystickHasRumbleTriggers(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static int SDL_JoystickHasRumbleTriggers(MemorySegment joystick) {
-        var mh$ = SDL_JoystickHasRumbleTriggers$MH();
-        try {
-            return (int)mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickSetLED$MH() {
-        return RuntimeHelper.requireNonNull(constants$106.const$2,"SDL_JoystickSetLED");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickSetLED(struct _SDL_Joystick* joystick, unsigned char red, unsigned char green, unsigned char blue);
-     * }
-     */
-    public static int SDL_JoystickSetLED(MemorySegment joystick, byte red, byte green, byte blue) {
-        var mh$ = SDL_JoystickSetLED$MH();
-        try {
-            return (int)mh$.invokeExact(joystick, red, green, blue);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickSendEffect$MH() {
-        return RuntimeHelper.requireNonNull(constants$106.const$3,"SDL_JoystickSendEffect");
-    }
-    /**
-     * {@snippet :
-     * int SDL_JoystickSendEffect(struct _SDL_Joystick* joystick, void* data, int size);
-     * }
-     */
-    public static int SDL_JoystickSendEffect(MemorySegment joystick, MemorySegment data, int size) {
-        var mh$ = SDL_JoystickSendEffect$MH();
-        try {
-            return (int)mh$.invokeExact(joystick, data, size);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickClose$MH() {
-        return RuntimeHelper.requireNonNull(constants$106.const$4,"SDL_JoystickClose");
-    }
-    /**
-     * {@snippet :
-     * void SDL_JoystickClose(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static void SDL_JoystickClose(MemorySegment joystick) {
-        var mh$ = SDL_JoystickClose$MH();
-        try {
-            mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_JoystickCurrentPowerLevel$MH() {
-        return RuntimeHelper.requireNonNull(constants$106.const$5,"SDL_JoystickCurrentPowerLevel");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_JoystickPowerLevel SDL_JoystickCurrentPowerLevel(struct _SDL_Joystick* joystick);
-     * }
-     */
-    public static int SDL_JoystickCurrentPowerLevel(MemorySegment joystick) {
-        var mh$ = SDL_JoystickCurrentPowerLevel$MH();
-        try {
-            return (int)mh$.invokeExact(joystick);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    /**
-     * {@snippet :
-     * typedef int SDL_SensorID;
-     * }
-     */
-    public static final OfInt SDL_SensorID = JAVA_INT;
-    /**
-     * {@snippet :
-     * enum SDL_SensorType.SDL_SENSOR_INVALID = -1;
-     * }
-     */
-    public static int SDL_SENSOR_INVALID() {
-        return (int)-1L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_SensorType.SDL_SENSOR_UNKNOWN = 0;
-     * }
-     */
-    public static int SDL_SENSOR_UNKNOWN() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_SensorType.SDL_SENSOR_ACCEL = 1;
-     * }
-     */
-    public static int SDL_SENSOR_ACCEL() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_SensorType.SDL_SENSOR_GYRO = 2;
-     * }
-     */
-    public static int SDL_SENSOR_GYRO() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_SensorType.SDL_SENSOR_ACCEL_L = 3;
-     * }
-     */
-    public static int SDL_SENSOR_ACCEL_L() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_SensorType.SDL_SENSOR_GYRO_L = 4;
-     * }
-     */
-    public static int SDL_SENSOR_GYRO_L() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_SensorType.SDL_SENSOR_ACCEL_R = 5;
-     * }
-     */
-    public static int SDL_SENSOR_ACCEL_R() {
-        return (int)5L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_SensorType.SDL_SENSOR_GYRO_R = 6;
-     * }
-     */
-    public static int SDL_SENSOR_GYRO_R() {
-        return (int)6L;
-    }
-    public static MethodHandle SDL_LockSensors$MH() {
-        return RuntimeHelper.requireNonNull(constants$107.const$0,"SDL_LockSensors");
-    }
-    /**
-     * {@snippet :
-     * void SDL_LockSensors();
-     * }
-     */
-    public static void SDL_LockSensors() {
-        var mh$ = SDL_LockSensors$MH();
-        try {
-            mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_UnlockSensors$MH() {
-        return RuntimeHelper.requireNonNull(constants$107.const$1,"SDL_UnlockSensors");
-    }
-    /**
-     * {@snippet :
-     * void SDL_UnlockSensors();
-     * }
-     */
-    public static void SDL_UnlockSensors() {
-        var mh$ = SDL_UnlockSensors$MH();
-        try {
-            mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_NumSensors$MH() {
-        return RuntimeHelper.requireNonNull(constants$107.const$2,"SDL_NumSensors");
-    }
-    /**
-     * {@snippet :
-     * int SDL_NumSensors();
-     * }
-     */
-    public static int SDL_NumSensors() {
-        var mh$ = SDL_NumSensors$MH();
-        try {
-            return (int)mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_SensorGetDeviceName$MH() {
-        return RuntimeHelper.requireNonNull(constants$107.const$3,"SDL_SensorGetDeviceName");
-    }
-    /**
-     * {@snippet :
-     * char* SDL_SensorGetDeviceName(int device_index);
-     * }
-     */
-    public static MemorySegment SDL_SensorGetDeviceName(int device_index) {
-        var mh$ = SDL_SensorGetDeviceName$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(device_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_SensorGetDeviceType$MH() {
-        return RuntimeHelper.requireNonNull(constants$107.const$4,"SDL_SensorGetDeviceType");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_SensorType SDL_SensorGetDeviceType(int device_index);
-     * }
-     */
-    public static int SDL_SensorGetDeviceType(int device_index) {
-        var mh$ = SDL_SensorGetDeviceType$MH();
-        try {
-            return (int)mh$.invokeExact(device_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_SensorGetDeviceNonPortableType$MH() {
-        return RuntimeHelper.requireNonNull(constants$107.const$5,"SDL_SensorGetDeviceNonPortableType");
-    }
-    /**
-     * {@snippet :
-     * int SDL_SensorGetDeviceNonPortableType(int device_index);
-     * }
-     */
-    public static int SDL_SensorGetDeviceNonPortableType(int device_index) {
-        var mh$ = SDL_SensorGetDeviceNonPortableType$MH();
-        try {
-            return (int)mh$.invokeExact(device_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_SensorGetDeviceInstanceID$MH() {
-        return RuntimeHelper.requireNonNull(constants$108.const$0,"SDL_SensorGetDeviceInstanceID");
-    }
-    /**
-     * {@snippet :
-     * int SDL_SensorGetDeviceInstanceID(int device_index);
-     * }
-     */
-    public static int SDL_SensorGetDeviceInstanceID(int device_index) {
-        var mh$ = SDL_SensorGetDeviceInstanceID$MH();
-        try {
-            return (int)mh$.invokeExact(device_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_SensorOpen$MH() {
-        return RuntimeHelper.requireNonNull(constants$108.const$1,"SDL_SensorOpen");
-    }
-    /**
-     * {@snippet :
-     * struct _SDL_Sensor* SDL_SensorOpen(int device_index);
-     * }
-     */
-    public static MemorySegment SDL_SensorOpen(int device_index) {
-        var mh$ = SDL_SensorOpen$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(device_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_SensorFromInstanceID$MH() {
-        return RuntimeHelper.requireNonNull(constants$108.const$2,"SDL_SensorFromInstanceID");
-    }
-    /**
-     * {@snippet :
-     * struct _SDL_Sensor* SDL_SensorFromInstanceID(int instance_id);
-     * }
-     */
-    public static MemorySegment SDL_SensorFromInstanceID(int instance_id) {
-        var mh$ = SDL_SensorFromInstanceID$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(instance_id);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_SensorGetName$MH() {
-        return RuntimeHelper.requireNonNull(constants$108.const$3,"SDL_SensorGetName");
-    }
-    /**
-     * {@snippet :
-     * char* SDL_SensorGetName(struct _SDL_Sensor* sensor);
-     * }
-     */
-    public static MemorySegment SDL_SensorGetName(MemorySegment sensor) {
-        var mh$ = SDL_SensorGetName$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(sensor);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_SensorGetType$MH() {
-        return RuntimeHelper.requireNonNull(constants$108.const$4,"SDL_SensorGetType");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_SensorType SDL_SensorGetType(struct _SDL_Sensor* sensor);
-     * }
-     */
-    public static int SDL_SensorGetType(MemorySegment sensor) {
-        var mh$ = SDL_SensorGetType$MH();
-        try {
-            return (int)mh$.invokeExact(sensor);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_SensorGetNonPortableType$MH() {
-        return RuntimeHelper.requireNonNull(constants$108.const$5,"SDL_SensorGetNonPortableType");
-    }
-    /**
-     * {@snippet :
-     * int SDL_SensorGetNonPortableType(struct _SDL_Sensor* sensor);
-     * }
-     */
-    public static int SDL_SensorGetNonPortableType(MemorySegment sensor) {
-        var mh$ = SDL_SensorGetNonPortableType$MH();
-        try {
-            return (int)mh$.invokeExact(sensor);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_SensorGetInstanceID$MH() {
-        return RuntimeHelper.requireNonNull(constants$109.const$0,"SDL_SensorGetInstanceID");
-    }
-    /**
-     * {@snippet :
-     * int SDL_SensorGetInstanceID(struct _SDL_Sensor* sensor);
-     * }
-     */
-    public static int SDL_SensorGetInstanceID(MemorySegment sensor) {
-        var mh$ = SDL_SensorGetInstanceID$MH();
-        try {
-            return (int)mh$.invokeExact(sensor);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_SensorGetData$MH() {
-        return RuntimeHelper.requireNonNull(constants$109.const$1,"SDL_SensorGetData");
-    }
-    /**
-     * {@snippet :
-     * int SDL_SensorGetData(struct _SDL_Sensor* sensor, float* data, int num_values);
-     * }
-     */
-    public static int SDL_SensorGetData(MemorySegment sensor, MemorySegment data, int num_values) {
-        var mh$ = SDL_SensorGetData$MH();
-        try {
-            return (int)mh$.invokeExact(sensor, data, num_values);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_SensorGetDataWithTimestamp$MH() {
-        return RuntimeHelper.requireNonNull(constants$109.const$3,"SDL_SensorGetDataWithTimestamp");
-    }
-    /**
-     * {@snippet :
-     * int SDL_SensorGetDataWithTimestamp(struct _SDL_Sensor* sensor, unsigned long long* timestamp, float* data, int num_values);
-     * }
-     */
-    public static int SDL_SensorGetDataWithTimestamp(MemorySegment sensor, MemorySegment timestamp, MemorySegment data, int num_values) {
-        var mh$ = SDL_SensorGetDataWithTimestamp$MH();
-        try {
-            return (int)mh$.invokeExact(sensor, timestamp, data, num_values);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_SensorClose$MH() {
-        return RuntimeHelper.requireNonNull(constants$109.const$4,"SDL_SensorClose");
-    }
-    /**
-     * {@snippet :
-     * void SDL_SensorClose(struct _SDL_Sensor* sensor);
-     * }
-     */
-    public static void SDL_SensorClose(MemorySegment sensor) {
-        var mh$ = SDL_SensorClose$MH();
-        try {
-            mh$.invokeExact(sensor);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_SensorUpdate$MH() {
-        return RuntimeHelper.requireNonNull(constants$109.const$5,"SDL_SensorUpdate");
-    }
-    /**
-     * {@snippet :
-     * void SDL_SensorUpdate();
-     * }
-     */
-    public static void SDL_SensorUpdate() {
-        var mh$ = SDL_SensorUpdate$MH();
-        try {
-            mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_UNKNOWN = 0;
-     * }
-     */
-    public static int SDL_CONTROLLER_TYPE_UNKNOWN() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_XBOX360 = 1;
-     * }
-     */
-    public static int SDL_CONTROLLER_TYPE_XBOX360() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_XBOXONE = 2;
-     * }
-     */
-    public static int SDL_CONTROLLER_TYPE_XBOXONE() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_PS3 = 3;
-     * }
-     */
-    public static int SDL_CONTROLLER_TYPE_PS3() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_PS4 = 4;
-     * }
-     */
-    public static int SDL_CONTROLLER_TYPE_PS4() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_PRO = 5;
-     * }
-     */
-    public static int SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_PRO() {
-        return (int)5L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_VIRTUAL = 6;
-     * }
-     */
-    public static int SDL_CONTROLLER_TYPE_VIRTUAL() {
-        return (int)6L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_PS5 = 7;
-     * }
-     */
-    public static int SDL_CONTROLLER_TYPE_PS5() {
-        return (int)7L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_AMAZON_LUNA = 8;
-     * }
-     */
-    public static int SDL_CONTROLLER_TYPE_AMAZON_LUNA() {
-        return (int)8L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_GOOGLE_STADIA = 9;
-     * }
-     */
-    public static int SDL_CONTROLLER_TYPE_GOOGLE_STADIA() {
-        return (int)9L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_NVIDIA_SHIELD = 10;
-     * }
-     */
-    public static int SDL_CONTROLLER_TYPE_NVIDIA_SHIELD() {
-        return (int)10L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_LEFT = 11;
-     * }
-     */
-    public static int SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_LEFT() {
-        return (int)11L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_RIGHT = 12;
-     * }
-     */
-    public static int SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_RIGHT() {
-        return (int)12L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_PAIR = 13;
-     * }
-     */
-    public static int SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_PAIR() {
+    public static int SDLK_RETURN() {
         return (int)13L;
     }
     /**
      * {@snippet :
-     * enum SDL_GameControllerBindType.SDL_CONTROLLER_BINDTYPE_NONE = 0;
+     * enum SDL_KeyCode.SDLK_ESCAPE = 27;
      * }
      */
-    public static int SDL_CONTROLLER_BINDTYPE_NONE() {
-        return (int)0L;
+    public static int SDLK_ESCAPE() {
+        return (int)27L;
     }
     /**
      * {@snippet :
-     * enum SDL_GameControllerBindType.SDL_CONTROLLER_BINDTYPE_BUTTON = 1;
+     * enum SDL_KeyCode.SDLK_BACKSPACE = 8;
      * }
      */
-    public static int SDL_CONTROLLER_BINDTYPE_BUTTON() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerBindType.SDL_CONTROLLER_BINDTYPE_AXIS = 2;
-     * }
-     */
-    public static int SDL_CONTROLLER_BINDTYPE_AXIS() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerBindType.SDL_CONTROLLER_BINDTYPE_HAT = 3;
-     * }
-     */
-    public static int SDL_CONTROLLER_BINDTYPE_HAT() {
-        return (int)3L;
-    }
-    public static MethodHandle SDL_GameControllerAddMappingsFromRW$MH() {
-        return RuntimeHelper.requireNonNull(constants$111.const$2,"SDL_GameControllerAddMappingsFromRW");
-    }
-    /**
-     * {@snippet :
-     * int SDL_GameControllerAddMappingsFromRW(struct SDL_RWops* rw, int freerw);
-     * }
-     */
-    public static int SDL_GameControllerAddMappingsFromRW(MemorySegment rw, int freerw) {
-        var mh$ = SDL_GameControllerAddMappingsFromRW$MH();
-        try {
-            return (int)mh$.invokeExact(rw, freerw);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerAddMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$111.const$3,"SDL_GameControllerAddMapping");
-    }
-    /**
-     * {@snippet :
-     * int SDL_GameControllerAddMapping(char* mappingString);
-     * }
-     */
-    public static int SDL_GameControllerAddMapping(MemorySegment mappingString) {
-        var mh$ = SDL_GameControllerAddMapping$MH();
-        try {
-            return (int)mh$.invokeExact(mappingString);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerNumMappings$MH() {
-        return RuntimeHelper.requireNonNull(constants$111.const$4,"SDL_GameControllerNumMappings");
-    }
-    /**
-     * {@snippet :
-     * int SDL_GameControllerNumMappings();
-     * }
-     */
-    public static int SDL_GameControllerNumMappings() {
-        var mh$ = SDL_GameControllerNumMappings$MH();
-        try {
-            return (int)mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerMappingForIndex$MH() {
-        return RuntimeHelper.requireNonNull(constants$111.const$5,"SDL_GameControllerMappingForIndex");
-    }
-    /**
-     * {@snippet :
-     * char* SDL_GameControllerMappingForIndex(int mapping_index);
-     * }
-     */
-    public static MemorySegment SDL_GameControllerMappingForIndex(int mapping_index) {
-        var mh$ = SDL_GameControllerMappingForIndex$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(mapping_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerMappingForGUID$MH() {
-        return RuntimeHelper.requireNonNull(constants$112.const$1,"SDL_GameControllerMappingForGUID");
-    }
-    /**
-     * {@snippet :
-     * char* SDL_GameControllerMappingForGUID(struct SDL_GUID guid);
-     * }
-     */
-    public static MemorySegment SDL_GameControllerMappingForGUID(MemorySegment guid) {
-        var mh$ = SDL_GameControllerMappingForGUID$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(guid);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerMapping$MH() {
-        return RuntimeHelper.requireNonNull(constants$112.const$2,"SDL_GameControllerMapping");
-    }
-    /**
-     * {@snippet :
-     * char* SDL_GameControllerMapping(struct _SDL_GameController* gamecontroller);
-     * }
-     */
-    public static MemorySegment SDL_GameControllerMapping(MemorySegment gamecontroller) {
-        var mh$ = SDL_GameControllerMapping$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(gamecontroller);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_IsGameController$MH() {
-        return RuntimeHelper.requireNonNull(constants$112.const$3,"SDL_IsGameController");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_bool SDL_IsGameController(int joystick_index);
-     * }
-     */
-    public static int SDL_IsGameController(int joystick_index) {
-        var mh$ = SDL_IsGameController$MH();
-        try {
-            return (int)mh$.invokeExact(joystick_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerNameForIndex$MH() {
-        return RuntimeHelper.requireNonNull(constants$112.const$4,"SDL_GameControllerNameForIndex");
-    }
-    /**
-     * {@snippet :
-     * char* SDL_GameControllerNameForIndex(int joystick_index);
-     * }
-     */
-    public static MemorySegment SDL_GameControllerNameForIndex(int joystick_index) {
-        var mh$ = SDL_GameControllerNameForIndex$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(joystick_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerPathForIndex$MH() {
-        return RuntimeHelper.requireNonNull(constants$112.const$5,"SDL_GameControllerPathForIndex");
-    }
-    /**
-     * {@snippet :
-     * char* SDL_GameControllerPathForIndex(int joystick_index);
-     * }
-     */
-    public static MemorySegment SDL_GameControllerPathForIndex(int joystick_index) {
-        var mh$ = SDL_GameControllerPathForIndex$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(joystick_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerTypeForIndex$MH() {
-        return RuntimeHelper.requireNonNull(constants$113.const$0,"SDL_GameControllerTypeForIndex");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerType SDL_GameControllerTypeForIndex(int joystick_index);
-     * }
-     */
-    public static int SDL_GameControllerTypeForIndex(int joystick_index) {
-        var mh$ = SDL_GameControllerTypeForIndex$MH();
-        try {
-            return (int)mh$.invokeExact(joystick_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerMappingForDeviceIndex$MH() {
-        return RuntimeHelper.requireNonNull(constants$113.const$1,"SDL_GameControllerMappingForDeviceIndex");
-    }
-    /**
-     * {@snippet :
-     * char* SDL_GameControllerMappingForDeviceIndex(int joystick_index);
-     * }
-     */
-    public static MemorySegment SDL_GameControllerMappingForDeviceIndex(int joystick_index) {
-        var mh$ = SDL_GameControllerMappingForDeviceIndex$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(joystick_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerOpen$MH() {
-        return RuntimeHelper.requireNonNull(constants$113.const$2,"SDL_GameControllerOpen");
-    }
-    /**
-     * {@snippet :
-     * struct _SDL_GameController* SDL_GameControllerOpen(int joystick_index);
-     * }
-     */
-    public static MemorySegment SDL_GameControllerOpen(int joystick_index) {
-        var mh$ = SDL_GameControllerOpen$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(joystick_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerFromInstanceID$MH() {
-        return RuntimeHelper.requireNonNull(constants$113.const$3,"SDL_GameControllerFromInstanceID");
-    }
-    /**
-     * {@snippet :
-     * struct _SDL_GameController* SDL_GameControllerFromInstanceID(int joyid);
-     * }
-     */
-    public static MemorySegment SDL_GameControllerFromInstanceID(int joyid) {
-        var mh$ = SDL_GameControllerFromInstanceID$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(joyid);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerFromPlayerIndex$MH() {
-        return RuntimeHelper.requireNonNull(constants$113.const$4,"SDL_GameControllerFromPlayerIndex");
-    }
-    /**
-     * {@snippet :
-     * struct _SDL_GameController* SDL_GameControllerFromPlayerIndex(int player_index);
-     * }
-     */
-    public static MemorySegment SDL_GameControllerFromPlayerIndex(int player_index) {
-        var mh$ = SDL_GameControllerFromPlayerIndex$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(player_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerName$MH() {
-        return RuntimeHelper.requireNonNull(constants$113.const$5,"SDL_GameControllerName");
-    }
-    /**
-     * {@snippet :
-     * char* SDL_GameControllerName(struct _SDL_GameController* gamecontroller);
-     * }
-     */
-    public static MemorySegment SDL_GameControllerName(MemorySegment gamecontroller) {
-        var mh$ = SDL_GameControllerName$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(gamecontroller);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerPath$MH() {
-        return RuntimeHelper.requireNonNull(constants$114.const$0,"SDL_GameControllerPath");
-    }
-    /**
-     * {@snippet :
-     * char* SDL_GameControllerPath(struct _SDL_GameController* gamecontroller);
-     * }
-     */
-    public static MemorySegment SDL_GameControllerPath(MemorySegment gamecontroller) {
-        var mh$ = SDL_GameControllerPath$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(gamecontroller);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetType$MH() {
-        return RuntimeHelper.requireNonNull(constants$114.const$1,"SDL_GameControllerGetType");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerType SDL_GameControllerGetType(struct _SDL_GameController* gamecontroller);
-     * }
-     */
-    public static int SDL_GameControllerGetType(MemorySegment gamecontroller) {
-        var mh$ = SDL_GameControllerGetType$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetPlayerIndex$MH() {
-        return RuntimeHelper.requireNonNull(constants$114.const$2,"SDL_GameControllerGetPlayerIndex");
-    }
-    /**
-     * {@snippet :
-     * int SDL_GameControllerGetPlayerIndex(struct _SDL_GameController* gamecontroller);
-     * }
-     */
-    public static int SDL_GameControllerGetPlayerIndex(MemorySegment gamecontroller) {
-        var mh$ = SDL_GameControllerGetPlayerIndex$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerSetPlayerIndex$MH() {
-        return RuntimeHelper.requireNonNull(constants$114.const$3,"SDL_GameControllerSetPlayerIndex");
-    }
-    /**
-     * {@snippet :
-     * void SDL_GameControllerSetPlayerIndex(struct _SDL_GameController* gamecontroller, int player_index);
-     * }
-     */
-    public static void SDL_GameControllerSetPlayerIndex(MemorySegment gamecontroller, int player_index) {
-        var mh$ = SDL_GameControllerSetPlayerIndex$MH();
-        try {
-            mh$.invokeExact(gamecontroller, player_index);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetVendor$MH() {
-        return RuntimeHelper.requireNonNull(constants$114.const$4,"SDL_GameControllerGetVendor");
-    }
-    /**
-     * {@snippet :
-     * unsigned short SDL_GameControllerGetVendor(struct _SDL_GameController* gamecontroller);
-     * }
-     */
-    public static short SDL_GameControllerGetVendor(MemorySegment gamecontroller) {
-        var mh$ = SDL_GameControllerGetVendor$MH();
-        try {
-            return (short)mh$.invokeExact(gamecontroller);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetProduct$MH() {
-        return RuntimeHelper.requireNonNull(constants$114.const$5,"SDL_GameControllerGetProduct");
-    }
-    /**
-     * {@snippet :
-     * unsigned short SDL_GameControllerGetProduct(struct _SDL_GameController* gamecontroller);
-     * }
-     */
-    public static short SDL_GameControllerGetProduct(MemorySegment gamecontroller) {
-        var mh$ = SDL_GameControllerGetProduct$MH();
-        try {
-            return (short)mh$.invokeExact(gamecontroller);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetProductVersion$MH() {
-        return RuntimeHelper.requireNonNull(constants$115.const$0,"SDL_GameControllerGetProductVersion");
-    }
-    /**
-     * {@snippet :
-     * unsigned short SDL_GameControllerGetProductVersion(struct _SDL_GameController* gamecontroller);
-     * }
-     */
-    public static short SDL_GameControllerGetProductVersion(MemorySegment gamecontroller) {
-        var mh$ = SDL_GameControllerGetProductVersion$MH();
-        try {
-            return (short)mh$.invokeExact(gamecontroller);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetFirmwareVersion$MH() {
-        return RuntimeHelper.requireNonNull(constants$115.const$1,"SDL_GameControllerGetFirmwareVersion");
-    }
-    /**
-     * {@snippet :
-     * unsigned short SDL_GameControllerGetFirmwareVersion(struct _SDL_GameController* gamecontroller);
-     * }
-     */
-    public static short SDL_GameControllerGetFirmwareVersion(MemorySegment gamecontroller) {
-        var mh$ = SDL_GameControllerGetFirmwareVersion$MH();
-        try {
-            return (short)mh$.invokeExact(gamecontroller);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetSerial$MH() {
-        return RuntimeHelper.requireNonNull(constants$115.const$2,"SDL_GameControllerGetSerial");
-    }
-    /**
-     * {@snippet :
-     * char* SDL_GameControllerGetSerial(struct _SDL_GameController* gamecontroller);
-     * }
-     */
-    public static MemorySegment SDL_GameControllerGetSerial(MemorySegment gamecontroller) {
-        var mh$ = SDL_GameControllerGetSerial$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(gamecontroller);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetAttached$MH() {
-        return RuntimeHelper.requireNonNull(constants$115.const$3,"SDL_GameControllerGetAttached");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_bool SDL_GameControllerGetAttached(struct _SDL_GameController* gamecontroller);
-     * }
-     */
-    public static int SDL_GameControllerGetAttached(MemorySegment gamecontroller) {
-        var mh$ = SDL_GameControllerGetAttached$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetJoystick$MH() {
-        return RuntimeHelper.requireNonNull(constants$115.const$4,"SDL_GameControllerGetJoystick");
-    }
-    /**
-     * {@snippet :
-     * struct _SDL_Joystick* SDL_GameControllerGetJoystick(struct _SDL_GameController* gamecontroller);
-     * }
-     */
-    public static MemorySegment SDL_GameControllerGetJoystick(MemorySegment gamecontroller) {
-        var mh$ = SDL_GameControllerGetJoystick$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(gamecontroller);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerEventState$MH() {
-        return RuntimeHelper.requireNonNull(constants$115.const$5,"SDL_GameControllerEventState");
-    }
-    /**
-     * {@snippet :
-     * int SDL_GameControllerEventState(int state);
-     * }
-     */
-    public static int SDL_GameControllerEventState(int state) {
-        var mh$ = SDL_GameControllerEventState$MH();
-        try {
-            return (int)mh$.invokeExact(state);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerUpdate$MH() {
-        return RuntimeHelper.requireNonNull(constants$116.const$0,"SDL_GameControllerUpdate");
-    }
-    /**
-     * {@snippet :
-     * void SDL_GameControllerUpdate();
-     * }
-     */
-    public static void SDL_GameControllerUpdate() {
-        var mh$ = SDL_GameControllerUpdate$MH();
-        try {
-            mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerAxis.SDL_CONTROLLER_AXIS_INVALID = -1;
-     * }
-     */
-    public static int SDL_CONTROLLER_AXIS_INVALID() {
-        return (int)-1L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerAxis.SDL_CONTROLLER_AXIS_LEFTX = 0;
-     * }
-     */
-    public static int SDL_CONTROLLER_AXIS_LEFTX() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerAxis.SDL_CONTROLLER_AXIS_LEFTY = 1;
-     * }
-     */
-    public static int SDL_CONTROLLER_AXIS_LEFTY() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerAxis.SDL_CONTROLLER_AXIS_RIGHTX = 2;
-     * }
-     */
-    public static int SDL_CONTROLLER_AXIS_RIGHTX() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerAxis.SDL_CONTROLLER_AXIS_RIGHTY = 3;
-     * }
-     */
-    public static int SDL_CONTROLLER_AXIS_RIGHTY() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerAxis.SDL_CONTROLLER_AXIS_TRIGGERLEFT = 4;
-     * }
-     */
-    public static int SDL_CONTROLLER_AXIS_TRIGGERLEFT() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerAxis.SDL_CONTROLLER_AXIS_TRIGGERRIGHT = 5;
-     * }
-     */
-    public static int SDL_CONTROLLER_AXIS_TRIGGERRIGHT() {
-        return (int)5L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerAxis.SDL_CONTROLLER_AXIS_MAX = 6;
-     * }
-     */
-    public static int SDL_CONTROLLER_AXIS_MAX() {
-        return (int)6L;
-    }
-    public static MethodHandle SDL_GameControllerGetAxisFromString$MH() {
-        return RuntimeHelper.requireNonNull(constants$116.const$1,"SDL_GameControllerGetAxisFromString");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerAxis SDL_GameControllerGetAxisFromString(char* str);
-     * }
-     */
-    public static int SDL_GameControllerGetAxisFromString(MemorySegment str) {
-        var mh$ = SDL_GameControllerGetAxisFromString$MH();
-        try {
-            return (int)mh$.invokeExact(str);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetStringForAxis$MH() {
-        return RuntimeHelper.requireNonNull(constants$116.const$2,"SDL_GameControllerGetStringForAxis");
-    }
-    /**
-     * {@snippet :
-     * char* SDL_GameControllerGetStringForAxis(enum SDL_GameControllerAxis axis);
-     * }
-     */
-    public static MemorySegment SDL_GameControllerGetStringForAxis(int axis) {
-        var mh$ = SDL_GameControllerGetStringForAxis$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(axis);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetBindForAxis$MH() {
-        return RuntimeHelper.requireNonNull(constants$116.const$4,"SDL_GameControllerGetBindForAxis");
-    }
-    /**
-     * {@snippet :
-     * struct SDL_GameControllerButtonBind SDL_GameControllerGetBindForAxis(struct _SDL_GameController* gamecontroller, enum SDL_GameControllerAxis axis);
-     * }
-     */
-    public static MemorySegment SDL_GameControllerGetBindForAxis(SegmentAllocator allocator, MemorySegment gamecontroller, int axis) {
-        var mh$ = SDL_GameControllerGetBindForAxis$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(allocator, gamecontroller, axis);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerHasAxis$MH() {
-        return RuntimeHelper.requireNonNull(constants$116.const$5,"SDL_GameControllerHasAxis");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_bool SDL_GameControllerHasAxis(struct _SDL_GameController* gamecontroller, enum SDL_GameControllerAxis axis);
-     * }
-     */
-    public static int SDL_GameControllerHasAxis(MemorySegment gamecontroller, int axis) {
-        var mh$ = SDL_GameControllerHasAxis$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller, axis);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetAxis$MH() {
-        return RuntimeHelper.requireNonNull(constants$117.const$0,"SDL_GameControllerGetAxis");
-    }
-    /**
-     * {@snippet :
-     * short SDL_GameControllerGetAxis(struct _SDL_GameController* gamecontroller, enum SDL_GameControllerAxis axis);
-     * }
-     */
-    public static short SDL_GameControllerGetAxis(MemorySegment gamecontroller, int axis) {
-        var mh$ = SDL_GameControllerGetAxis$MH();
-        try {
-            return (short)mh$.invokeExact(gamecontroller, axis);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_INVALID = -1;
-     * }
-     */
-    public static int SDL_CONTROLLER_BUTTON_INVALID() {
-        return (int)-1L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_A = 0;
-     * }
-     */
-    public static int SDL_CONTROLLER_BUTTON_A() {
-        return (int)0L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_B = 1;
-     * }
-     */
-    public static int SDL_CONTROLLER_BUTTON_B() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_X = 2;
-     * }
-     */
-    public static int SDL_CONTROLLER_BUTTON_X() {
-        return (int)2L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_Y = 3;
-     * }
-     */
-    public static int SDL_CONTROLLER_BUTTON_Y() {
-        return (int)3L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_BACK = 4;
-     * }
-     */
-    public static int SDL_CONTROLLER_BUTTON_BACK() {
-        return (int)4L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_GUIDE = 5;
-     * }
-     */
-    public static int SDL_CONTROLLER_BUTTON_GUIDE() {
-        return (int)5L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_START = 6;
-     * }
-     */
-    public static int SDL_CONTROLLER_BUTTON_START() {
-        return (int)6L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_LEFTSTICK = 7;
-     * }
-     */
-    public static int SDL_CONTROLLER_BUTTON_LEFTSTICK() {
-        return (int)7L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_RIGHTSTICK = 8;
-     * }
-     */
-    public static int SDL_CONTROLLER_BUTTON_RIGHTSTICK() {
+    public static int SDLK_BACKSPACE() {
         return (int)8L;
     }
     /**
      * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_LEFTSHOULDER = 9;
+     * enum SDL_KeyCode.SDLK_TAB = 9;
      * }
      */
-    public static int SDL_CONTROLLER_BUTTON_LEFTSHOULDER() {
+    public static int SDLK_TAB() {
         return (int)9L;
     }
     /**
      * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_RIGHTSHOULDER = 10;
+     * enum SDL_KeyCode.SDLK_SPACE = 32;
      * }
      */
-    public static int SDL_CONTROLLER_BUTTON_RIGHTSHOULDER() {
-        return (int)10L;
+    public static int SDLK_SPACE() {
+        return (int)32L;
     }
     /**
      * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_DPAD_UP = 11;
+     * enum SDL_KeyCode.SDLK_EXCLAIM = 33;
      * }
      */
-    public static int SDL_CONTROLLER_BUTTON_DPAD_UP() {
-        return (int)11L;
+    public static int SDLK_EXCLAIM() {
+        return (int)33L;
     }
     /**
      * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_DPAD_DOWN = 12;
+     * enum SDL_KeyCode.SDLK_QUOTEDBL = 34;
      * }
      */
-    public static int SDL_CONTROLLER_BUTTON_DPAD_DOWN() {
-        return (int)12L;
+    public static int SDLK_QUOTEDBL() {
+        return (int)34L;
     }
     /**
      * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_DPAD_LEFT = 13;
+     * enum SDL_KeyCode.SDLK_HASH = 35;
      * }
      */
-    public static int SDL_CONTROLLER_BUTTON_DPAD_LEFT() {
-        return (int)13L;
+    public static int SDLK_HASH() {
+        return (int)35L;
     }
     /**
      * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_DPAD_RIGHT = 14;
+     * enum SDL_KeyCode.SDLK_PERCENT = 37;
      * }
      */
-    public static int SDL_CONTROLLER_BUTTON_DPAD_RIGHT() {
-        return (int)14L;
+    public static int SDLK_PERCENT() {
+        return (int)37L;
     }
     /**
      * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_MISC1 = 15;
+     * enum SDL_KeyCode.SDLK_DOLLAR = 36;
      * }
      */
-    public static int SDL_CONTROLLER_BUTTON_MISC1() {
-        return (int)15L;
+    public static int SDLK_DOLLAR() {
+        return (int)36L;
     }
     /**
      * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_PADDLE1 = 16;
+     * enum SDL_KeyCode.SDLK_AMPERSAND = 38;
      * }
      */
-    public static int SDL_CONTROLLER_BUTTON_PADDLE1() {
-        return (int)16L;
+    public static int SDLK_AMPERSAND() {
+        return (int)38L;
     }
     /**
      * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_PADDLE2 = 17;
+     * enum SDL_KeyCode.SDLK_QUOTE = 39;
      * }
      */
-    public static int SDL_CONTROLLER_BUTTON_PADDLE2() {
-        return (int)17L;
+    public static int SDLK_QUOTE() {
+        return (int)39L;
     }
     /**
      * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_PADDLE3 = 18;
+     * enum SDL_KeyCode.SDLK_LEFTPAREN = 40;
      * }
      */
-    public static int SDL_CONTROLLER_BUTTON_PADDLE3() {
-        return (int)18L;
+    public static int SDLK_LEFTPAREN() {
+        return (int)40L;
     }
     /**
      * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_PADDLE4 = 19;
+     * enum SDL_KeyCode.SDLK_RIGHTPAREN = 41;
      * }
      */
-    public static int SDL_CONTROLLER_BUTTON_PADDLE4() {
-        return (int)19L;
+    public static int SDLK_RIGHTPAREN() {
+        return (int)41L;
     }
     /**
      * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_TOUCHPAD = 20;
+     * enum SDL_KeyCode.SDLK_ASTERISK = 42;
      * }
      */
-    public static int SDL_CONTROLLER_BUTTON_TOUCHPAD() {
-        return (int)20L;
+    public static int SDLK_ASTERISK() {
+        return (int)42L;
     }
     /**
      * {@snippet :
-     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_MAX = 21;
+     * enum SDL_KeyCode.SDLK_PLUS = 43;
      * }
      */
-    public static int SDL_CONTROLLER_BUTTON_MAX() {
-        return (int)21L;
-    }
-    public static MethodHandle SDL_GameControllerGetButtonFromString$MH() {
-        return RuntimeHelper.requireNonNull(constants$117.const$1,"SDL_GameControllerGetButtonFromString");
+    public static int SDLK_PLUS() {
+        return (int)43L;
     }
     /**
      * {@snippet :
-     * enum SDL_GameControllerButton SDL_GameControllerGetButtonFromString(char* str);
+     * enum SDL_KeyCode.SDLK_COMMA = 44;
      * }
      */
-    public static int SDL_GameControllerGetButtonFromString(MemorySegment str) {
-        var mh$ = SDL_GameControllerGetButtonFromString$MH();
-        try {
-            return (int)mh$.invokeExact(str);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetStringForButton$MH() {
-        return RuntimeHelper.requireNonNull(constants$117.const$2,"SDL_GameControllerGetStringForButton");
+    public static int SDLK_COMMA() {
+        return (int)44L;
     }
     /**
      * {@snippet :
-     * char* SDL_GameControllerGetStringForButton(enum SDL_GameControllerButton button);
+     * enum SDL_KeyCode.SDLK_MINUS = 45;
      * }
      */
-    public static MemorySegment SDL_GameControllerGetStringForButton(int button) {
-        var mh$ = SDL_GameControllerGetStringForButton$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(button);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetBindForButton$MH() {
-        return RuntimeHelper.requireNonNull(constants$117.const$3,"SDL_GameControllerGetBindForButton");
+    public static int SDLK_MINUS() {
+        return (int)45L;
     }
     /**
      * {@snippet :
-     * struct SDL_GameControllerButtonBind SDL_GameControllerGetBindForButton(struct _SDL_GameController* gamecontroller, enum SDL_GameControllerButton button);
+     * enum SDL_KeyCode.SDLK_PERIOD = 46;
      * }
      */
-    public static MemorySegment SDL_GameControllerGetBindForButton(SegmentAllocator allocator, MemorySegment gamecontroller, int button) {
-        var mh$ = SDL_GameControllerGetBindForButton$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(allocator, gamecontroller, button);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerHasButton$MH() {
-        return RuntimeHelper.requireNonNull(constants$117.const$4,"SDL_GameControllerHasButton");
+    public static int SDLK_PERIOD() {
+        return (int)46L;
     }
     /**
      * {@snippet :
-     * enum SDL_bool SDL_GameControllerHasButton(struct _SDL_GameController* gamecontroller, enum SDL_GameControllerButton button);
+     * enum SDL_KeyCode.SDLK_SLASH = 47;
      * }
      */
-    public static int SDL_GameControllerHasButton(MemorySegment gamecontroller, int button) {
-        var mh$ = SDL_GameControllerHasButton$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller, button);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetButton$MH() {
-        return RuntimeHelper.requireNonNull(constants$117.const$5,"SDL_GameControllerGetButton");
+    public static int SDLK_SLASH() {
+        return (int)47L;
     }
     /**
      * {@snippet :
-     * unsigned char SDL_GameControllerGetButton(struct _SDL_GameController* gamecontroller, enum SDL_GameControllerButton button);
+     * enum SDL_KeyCode.SDLK_0 = 48;
      * }
      */
-    public static byte SDL_GameControllerGetButton(MemorySegment gamecontroller, int button) {
-        var mh$ = SDL_GameControllerGetButton$MH();
-        try {
-            return (byte)mh$.invokeExact(gamecontroller, button);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetNumTouchpads$MH() {
-        return RuntimeHelper.requireNonNull(constants$118.const$0,"SDL_GameControllerGetNumTouchpads");
+    public static int SDLK_0() {
+        return (int)48L;
     }
     /**
      * {@snippet :
-     * int SDL_GameControllerGetNumTouchpads(struct _SDL_GameController* gamecontroller);
+     * enum SDL_KeyCode.SDLK_1 = 49;
      * }
      */
-    public static int SDL_GameControllerGetNumTouchpads(MemorySegment gamecontroller) {
-        var mh$ = SDL_GameControllerGetNumTouchpads$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetNumTouchpadFingers$MH() {
-        return RuntimeHelper.requireNonNull(constants$118.const$1,"SDL_GameControllerGetNumTouchpadFingers");
+    public static int SDLK_1() {
+        return (int)49L;
     }
     /**
      * {@snippet :
-     * int SDL_GameControllerGetNumTouchpadFingers(struct _SDL_GameController* gamecontroller, int touchpad);
+     * enum SDL_KeyCode.SDLK_2 = 50;
      * }
      */
-    public static int SDL_GameControllerGetNumTouchpadFingers(MemorySegment gamecontroller, int touchpad) {
-        var mh$ = SDL_GameControllerGetNumTouchpadFingers$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller, touchpad);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetTouchpadFinger$MH() {
-        return RuntimeHelper.requireNonNull(constants$118.const$3,"SDL_GameControllerGetTouchpadFinger");
+    public static int SDLK_2() {
+        return (int)50L;
     }
     /**
      * {@snippet :
-     * int SDL_GameControllerGetTouchpadFinger(struct _SDL_GameController* gamecontroller, int touchpad, int finger, unsigned char* state, float* x, float* y, float* pressure);
+     * enum SDL_KeyCode.SDLK_3 = 51;
      * }
      */
-    public static int SDL_GameControllerGetTouchpadFinger(MemorySegment gamecontroller, int touchpad, int finger, MemorySegment state, MemorySegment x, MemorySegment y, MemorySegment pressure) {
-        var mh$ = SDL_GameControllerGetTouchpadFinger$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller, touchpad, finger, state, x, y, pressure);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerHasSensor$MH() {
-        return RuntimeHelper.requireNonNull(constants$118.const$4,"SDL_GameControllerHasSensor");
+    public static int SDLK_3() {
+        return (int)51L;
     }
     /**
      * {@snippet :
-     * enum SDL_bool SDL_GameControllerHasSensor(struct _SDL_GameController* gamecontroller, enum SDL_SensorType type);
+     * enum SDL_KeyCode.SDLK_4 = 52;
      * }
      */
-    public static int SDL_GameControllerHasSensor(MemorySegment gamecontroller, int type) {
-        var mh$ = SDL_GameControllerHasSensor$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller, type);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerSetSensorEnabled$MH() {
-        return RuntimeHelper.requireNonNull(constants$118.const$5,"SDL_GameControllerSetSensorEnabled");
+    public static int SDLK_4() {
+        return (int)52L;
     }
     /**
      * {@snippet :
-     * int SDL_GameControllerSetSensorEnabled(struct _SDL_GameController* gamecontroller, enum SDL_SensorType type, enum SDL_bool enabled);
+     * enum SDL_KeyCode.SDLK_5 = 53;
      * }
      */
-    public static int SDL_GameControllerSetSensorEnabled(MemorySegment gamecontroller, int type, int enabled) {
-        var mh$ = SDL_GameControllerSetSensorEnabled$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller, type, enabled);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerIsSensorEnabled$MH() {
-        return RuntimeHelper.requireNonNull(constants$119.const$0,"SDL_GameControllerIsSensorEnabled");
+    public static int SDLK_5() {
+        return (int)53L;
     }
     /**
      * {@snippet :
-     * enum SDL_bool SDL_GameControllerIsSensorEnabled(struct _SDL_GameController* gamecontroller, enum SDL_SensorType type);
+     * enum SDL_KeyCode.SDLK_6 = 54;
      * }
      */
-    public static int SDL_GameControllerIsSensorEnabled(MemorySegment gamecontroller, int type) {
-        var mh$ = SDL_GameControllerIsSensorEnabled$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller, type);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetSensorDataRate$MH() {
-        return RuntimeHelper.requireNonNull(constants$119.const$2,"SDL_GameControllerGetSensorDataRate");
+    public static int SDLK_6() {
+        return (int)54L;
     }
     /**
      * {@snippet :
-     * float SDL_GameControllerGetSensorDataRate(struct _SDL_GameController* gamecontroller, enum SDL_SensorType type);
+     * enum SDL_KeyCode.SDLK_7 = 55;
      * }
      */
-    public static float SDL_GameControllerGetSensorDataRate(MemorySegment gamecontroller, int type) {
-        var mh$ = SDL_GameControllerGetSensorDataRate$MH();
-        try {
-            return (float)mh$.invokeExact(gamecontroller, type);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetSensorData$MH() {
-        return RuntimeHelper.requireNonNull(constants$119.const$4,"SDL_GameControllerGetSensorData");
+    public static int SDLK_7() {
+        return (int)55L;
     }
     /**
      * {@snippet :
-     * int SDL_GameControllerGetSensorData(struct _SDL_GameController* gamecontroller, enum SDL_SensorType type, float* data, int num_values);
+     * enum SDL_KeyCode.SDLK_8 = 56;
      * }
      */
-    public static int SDL_GameControllerGetSensorData(MemorySegment gamecontroller, int type, MemorySegment data, int num_values) {
-        var mh$ = SDL_GameControllerGetSensorData$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller, type, data, num_values);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetSensorDataWithTimestamp$MH() {
-        return RuntimeHelper.requireNonNull(constants$119.const$6,"SDL_GameControllerGetSensorDataWithTimestamp");
+    public static int SDLK_8() {
+        return (int)56L;
     }
     /**
      * {@snippet :
-     * int SDL_GameControllerGetSensorDataWithTimestamp(struct _SDL_GameController* gamecontroller, enum SDL_SensorType type, unsigned long long* timestamp, float* data, int num_values);
+     * enum SDL_KeyCode.SDLK_9 = 57;
      * }
      */
-    public static int SDL_GameControllerGetSensorDataWithTimestamp(MemorySegment gamecontroller, int type, MemorySegment timestamp, MemorySegment data, int num_values) {
-        var mh$ = SDL_GameControllerGetSensorDataWithTimestamp$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller, type, timestamp, data, num_values);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerRumble$MH() {
-        return RuntimeHelper.requireNonNull(constants$120.const$0,"SDL_GameControllerRumble");
+    public static int SDLK_9() {
+        return (int)57L;
     }
     /**
      * {@snippet :
-     * int SDL_GameControllerRumble(struct _SDL_GameController* gamecontroller, unsigned short low_frequency_rumble, unsigned short high_frequency_rumble, unsigned int duration_ms);
+     * enum SDL_KeyCode.SDLK_COLON = 58;
      * }
      */
-    public static int SDL_GameControllerRumble(MemorySegment gamecontroller, short low_frequency_rumble, short high_frequency_rumble, int duration_ms) {
-        var mh$ = SDL_GameControllerRumble$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller, low_frequency_rumble, high_frequency_rumble, duration_ms);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerRumbleTriggers$MH() {
-        return RuntimeHelper.requireNonNull(constants$120.const$1,"SDL_GameControllerRumbleTriggers");
+    public static int SDLK_COLON() {
+        return (int)58L;
     }
     /**
      * {@snippet :
-     * int SDL_GameControllerRumbleTriggers(struct _SDL_GameController* gamecontroller, unsigned short left_rumble, unsigned short right_rumble, unsigned int duration_ms);
+     * enum SDL_KeyCode.SDLK_SEMICOLON = 59;
      * }
      */
-    public static int SDL_GameControllerRumbleTriggers(MemorySegment gamecontroller, short left_rumble, short right_rumble, int duration_ms) {
-        var mh$ = SDL_GameControllerRumbleTriggers$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller, left_rumble, right_rumble, duration_ms);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerHasLED$MH() {
-        return RuntimeHelper.requireNonNull(constants$120.const$2,"SDL_GameControllerHasLED");
+    public static int SDLK_SEMICOLON() {
+        return (int)59L;
     }
     /**
      * {@snippet :
-     * enum SDL_bool SDL_GameControllerHasLED(struct _SDL_GameController* gamecontroller);
+     * enum SDL_KeyCode.SDLK_LESS = 60;
      * }
      */
-    public static int SDL_GameControllerHasLED(MemorySegment gamecontroller) {
-        var mh$ = SDL_GameControllerHasLED$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerHasRumble$MH() {
-        return RuntimeHelper.requireNonNull(constants$120.const$3,"SDL_GameControllerHasRumble");
+    public static int SDLK_LESS() {
+        return (int)60L;
     }
     /**
      * {@snippet :
-     * enum SDL_bool SDL_GameControllerHasRumble(struct _SDL_GameController* gamecontroller);
+     * enum SDL_KeyCode.SDLK_EQUALS = 61;
      * }
      */
-    public static int SDL_GameControllerHasRumble(MemorySegment gamecontroller) {
-        var mh$ = SDL_GameControllerHasRumble$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerHasRumbleTriggers$MH() {
-        return RuntimeHelper.requireNonNull(constants$120.const$4,"SDL_GameControllerHasRumbleTriggers");
+    public static int SDLK_EQUALS() {
+        return (int)61L;
     }
     /**
      * {@snippet :
-     * enum SDL_bool SDL_GameControllerHasRumbleTriggers(struct _SDL_GameController* gamecontroller);
+     * enum SDL_KeyCode.SDLK_GREATER = 62;
      * }
      */
-    public static int SDL_GameControllerHasRumbleTriggers(MemorySegment gamecontroller) {
-        var mh$ = SDL_GameControllerHasRumbleTriggers$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerSetLED$MH() {
-        return RuntimeHelper.requireNonNull(constants$120.const$5,"SDL_GameControllerSetLED");
+    public static int SDLK_GREATER() {
+        return (int)62L;
     }
     /**
      * {@snippet :
-     * int SDL_GameControllerSetLED(struct _SDL_GameController* gamecontroller, unsigned char red, unsigned char green, unsigned char blue);
+     * enum SDL_KeyCode.SDLK_QUESTION = 63;
      * }
      */
-    public static int SDL_GameControllerSetLED(MemorySegment gamecontroller, byte red, byte green, byte blue) {
-        var mh$ = SDL_GameControllerSetLED$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller, red, green, blue);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerSendEffect$MH() {
-        return RuntimeHelper.requireNonNull(constants$121.const$0,"SDL_GameControllerSendEffect");
+    public static int SDLK_QUESTION() {
+        return (int)63L;
     }
     /**
      * {@snippet :
-     * int SDL_GameControllerSendEffect(struct _SDL_GameController* gamecontroller, void* data, int size);
+     * enum SDL_KeyCode.SDLK_AT = 64;
      * }
      */
-    public static int SDL_GameControllerSendEffect(MemorySegment gamecontroller, MemorySegment data, int size) {
-        var mh$ = SDL_GameControllerSendEffect$MH();
-        try {
-            return (int)mh$.invokeExact(gamecontroller, data, size);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerClose$MH() {
-        return RuntimeHelper.requireNonNull(constants$121.const$1,"SDL_GameControllerClose");
+    public static int SDLK_AT() {
+        return (int)64L;
     }
     /**
      * {@snippet :
-     * void SDL_GameControllerClose(struct _SDL_GameController* gamecontroller);
+     * enum SDL_KeyCode.SDLK_LEFTBRACKET = 91;
      * }
      */
-    public static void SDL_GameControllerClose(MemorySegment gamecontroller) {
-        var mh$ = SDL_GameControllerClose$MH();
-        try {
-            mh$.invokeExact(gamecontroller);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetAppleSFSymbolsNameForButton$MH() {
-        return RuntimeHelper.requireNonNull(constants$121.const$2,"SDL_GameControllerGetAppleSFSymbolsNameForButton");
+    public static int SDLK_LEFTBRACKET() {
+        return (int)91L;
     }
     /**
      * {@snippet :
-     * char* SDL_GameControllerGetAppleSFSymbolsNameForButton(struct _SDL_GameController* gamecontroller, enum SDL_GameControllerButton button);
+     * enum SDL_KeyCode.SDLK_BACKSLASH = 92;
      * }
      */
-    public static MemorySegment SDL_GameControllerGetAppleSFSymbolsNameForButton(MemorySegment gamecontroller, int button) {
-        var mh$ = SDL_GameControllerGetAppleSFSymbolsNameForButton$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(gamecontroller, button);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GameControllerGetAppleSFSymbolsNameForAxis$MH() {
-        return RuntimeHelper.requireNonNull(constants$121.const$3,"SDL_GameControllerGetAppleSFSymbolsNameForAxis");
+    public static int SDLK_BACKSLASH() {
+        return (int)92L;
     }
     /**
      * {@snippet :
-     * char* SDL_GameControllerGetAppleSFSymbolsNameForAxis(struct _SDL_GameController* gamecontroller, enum SDL_GameControllerAxis axis);
+     * enum SDL_KeyCode.SDLK_RIGHTBRACKET = 93;
      * }
      */
-    public static MemorySegment SDL_GameControllerGetAppleSFSymbolsNameForAxis(MemorySegment gamecontroller, int axis) {
-        var mh$ = SDL_GameControllerGetAppleSFSymbolsNameForAxis$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(gamecontroller, axis);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
+    public static int SDLK_RIGHTBRACKET() {
+        return (int)93L;
     }
     /**
      * {@snippet :
-     * enum SDL_EventType.SDL_FIRSTEVENT = 0;
+     * enum SDL_KeyCode.SDLK_CARET = 94;
      * }
      */
-    public static int SDL_FIRSTEVENT() {
+    public static int SDLK_CARET() {
+        return (int)94L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_UNDERSCORE = 95;
+     * }
+     */
+    public static int SDLK_UNDERSCORE() {
+        return (int)95L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_BACKQUOTE = 96;
+     * }
+     */
+    public static int SDLK_BACKQUOTE() {
+        return (int)96L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_a = 97;
+     * }
+     */
+    public static int SDLK_a() {
+        return (int)97L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_b = 98;
+     * }
+     */
+    public static int SDLK_b() {
+        return (int)98L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_c = 99;
+     * }
+     */
+    public static int SDLK_c() {
+        return (int)99L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_d = 100;
+     * }
+     */
+    public static int SDLK_d() {
+        return (int)100L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_e = 101;
+     * }
+     */
+    public static int SDLK_e() {
+        return (int)101L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_f = 102;
+     * }
+     */
+    public static int SDLK_f() {
+        return (int)102L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_g = 103;
+     * }
+     */
+    public static int SDLK_g() {
+        return (int)103L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_h = 104;
+     * }
+     */
+    public static int SDLK_h() {
+        return (int)104L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_i = 105;
+     * }
+     */
+    public static int SDLK_i() {
+        return (int)105L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_j = 106;
+     * }
+     */
+    public static int SDLK_j() {
+        return (int)106L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_k = 107;
+     * }
+     */
+    public static int SDLK_k() {
+        return (int)107L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_l = 108;
+     * }
+     */
+    public static int SDLK_l() {
+        return (int)108L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_m = 109;
+     * }
+     */
+    public static int SDLK_m() {
+        return (int)109L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_n = 110;
+     * }
+     */
+    public static int SDLK_n() {
+        return (int)110L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_o = 111;
+     * }
+     */
+    public static int SDLK_o() {
+        return (int)111L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_p = 112;
+     * }
+     */
+    public static int SDLK_p() {
+        return (int)112L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_q = 113;
+     * }
+     */
+    public static int SDLK_q() {
+        return (int)113L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_r = 114;
+     * }
+     */
+    public static int SDLK_r() {
+        return (int)114L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_s = 115;
+     * }
+     */
+    public static int SDLK_s() {
+        return (int)115L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_t = 116;
+     * }
+     */
+    public static int SDLK_t() {
+        return (int)116L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_u = 117;
+     * }
+     */
+    public static int SDLK_u() {
+        return (int)117L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_v = 118;
+     * }
+     */
+    public static int SDLK_v() {
+        return (int)118L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_w = 119;
+     * }
+     */
+    public static int SDLK_w() {
+        return (int)119L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_x = 120;
+     * }
+     */
+    public static int SDLK_x() {
+        return (int)120L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_y = 121;
+     * }
+     */
+    public static int SDLK_y() {
+        return (int)121L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_z = 122;
+     * }
+     */
+    public static int SDLK_z() {
+        return (int)122L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_CAPSLOCK = 1073741881;
+     * }
+     */
+    public static int SDLK_CAPSLOCK() {
+        return (int)1073741881L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F1 = 1073741882;
+     * }
+     */
+    public static int SDLK_F1() {
+        return (int)1073741882L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F2 = 1073741883;
+     * }
+     */
+    public static int SDLK_F2() {
+        return (int)1073741883L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F3 = 1073741884;
+     * }
+     */
+    public static int SDLK_F3() {
+        return (int)1073741884L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F4 = 1073741885;
+     * }
+     */
+    public static int SDLK_F4() {
+        return (int)1073741885L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F5 = 1073741886;
+     * }
+     */
+    public static int SDLK_F5() {
+        return (int)1073741886L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F6 = 1073741887;
+     * }
+     */
+    public static int SDLK_F6() {
+        return (int)1073741887L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F7 = 1073741888;
+     * }
+     */
+    public static int SDLK_F7() {
+        return (int)1073741888L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F8 = 1073741889;
+     * }
+     */
+    public static int SDLK_F8() {
+        return (int)1073741889L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F9 = 1073741890;
+     * }
+     */
+    public static int SDLK_F9() {
+        return (int)1073741890L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F10 = 1073741891;
+     * }
+     */
+    public static int SDLK_F10() {
+        return (int)1073741891L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F11 = 1073741892;
+     * }
+     */
+    public static int SDLK_F11() {
+        return (int)1073741892L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F12 = 1073741893;
+     * }
+     */
+    public static int SDLK_F12() {
+        return (int)1073741893L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_PRINTSCREEN = 1073741894;
+     * }
+     */
+    public static int SDLK_PRINTSCREEN() {
+        return (int)1073741894L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_SCROLLLOCK = 1073741895;
+     * }
+     */
+    public static int SDLK_SCROLLLOCK() {
+        return (int)1073741895L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_PAUSE = 1073741896;
+     * }
+     */
+    public static int SDLK_PAUSE() {
+        return (int)1073741896L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_INSERT = 1073741897;
+     * }
+     */
+    public static int SDLK_INSERT() {
+        return (int)1073741897L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_HOME = 1073741898;
+     * }
+     */
+    public static int SDLK_HOME() {
+        return (int)1073741898L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_PAGEUP = 1073741899;
+     * }
+     */
+    public static int SDLK_PAGEUP() {
+        return (int)1073741899L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_DELETE = 127;
+     * }
+     */
+    public static int SDLK_DELETE() {
+        return (int)127L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_END = 1073741901;
+     * }
+     */
+    public static int SDLK_END() {
+        return (int)1073741901L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_PAGEDOWN = 1073741902;
+     * }
+     */
+    public static int SDLK_PAGEDOWN() {
+        return (int)1073741902L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_RIGHT = 1073741903;
+     * }
+     */
+    public static int SDLK_RIGHT() {
+        return (int)1073741903L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_LEFT = 1073741904;
+     * }
+     */
+    public static int SDLK_LEFT() {
+        return (int)1073741904L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_DOWN = 1073741905;
+     * }
+     */
+    public static int SDLK_DOWN() {
+        return (int)1073741905L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_UP = 1073741906;
+     * }
+     */
+    public static int SDLK_UP() {
+        return (int)1073741906L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_NUMLOCKCLEAR = 1073741907;
+     * }
+     */
+    public static int SDLK_NUMLOCKCLEAR() {
+        return (int)1073741907L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_DIVIDE = 1073741908;
+     * }
+     */
+    public static int SDLK_KP_DIVIDE() {
+        return (int)1073741908L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_MULTIPLY = 1073741909;
+     * }
+     */
+    public static int SDLK_KP_MULTIPLY() {
+        return (int)1073741909L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_MINUS = 1073741910;
+     * }
+     */
+    public static int SDLK_KP_MINUS() {
+        return (int)1073741910L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_PLUS = 1073741911;
+     * }
+     */
+    public static int SDLK_KP_PLUS() {
+        return (int)1073741911L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_ENTER = 1073741912;
+     * }
+     */
+    public static int SDLK_KP_ENTER() {
+        return (int)1073741912L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_1 = 1073741913;
+     * }
+     */
+    public static int SDLK_KP_1() {
+        return (int)1073741913L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_2 = 1073741914;
+     * }
+     */
+    public static int SDLK_KP_2() {
+        return (int)1073741914L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_3 = 1073741915;
+     * }
+     */
+    public static int SDLK_KP_3() {
+        return (int)1073741915L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_4 = 1073741916;
+     * }
+     */
+    public static int SDLK_KP_4() {
+        return (int)1073741916L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_5 = 1073741917;
+     * }
+     */
+    public static int SDLK_KP_5() {
+        return (int)1073741917L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_6 = 1073741918;
+     * }
+     */
+    public static int SDLK_KP_6() {
+        return (int)1073741918L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_7 = 1073741919;
+     * }
+     */
+    public static int SDLK_KP_7() {
+        return (int)1073741919L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_8 = 1073741920;
+     * }
+     */
+    public static int SDLK_KP_8() {
+        return (int)1073741920L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_9 = 1073741921;
+     * }
+     */
+    public static int SDLK_KP_9() {
+        return (int)1073741921L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_0 = 1073741922;
+     * }
+     */
+    public static int SDLK_KP_0() {
+        return (int)1073741922L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_PERIOD = 1073741923;
+     * }
+     */
+    public static int SDLK_KP_PERIOD() {
+        return (int)1073741923L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_APPLICATION = 1073741925;
+     * }
+     */
+    public static int SDLK_APPLICATION() {
+        return (int)1073741925L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_POWER = 1073741926;
+     * }
+     */
+    public static int SDLK_POWER() {
+        return (int)1073741926L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_EQUALS = 1073741927;
+     * }
+     */
+    public static int SDLK_KP_EQUALS() {
+        return (int)1073741927L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F13 = 1073741928;
+     * }
+     */
+    public static int SDLK_F13() {
+        return (int)1073741928L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F14 = 1073741929;
+     * }
+     */
+    public static int SDLK_F14() {
+        return (int)1073741929L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F15 = 1073741930;
+     * }
+     */
+    public static int SDLK_F15() {
+        return (int)1073741930L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F16 = 1073741931;
+     * }
+     */
+    public static int SDLK_F16() {
+        return (int)1073741931L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F17 = 1073741932;
+     * }
+     */
+    public static int SDLK_F17() {
+        return (int)1073741932L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F18 = 1073741933;
+     * }
+     */
+    public static int SDLK_F18() {
+        return (int)1073741933L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F19 = 1073741934;
+     * }
+     */
+    public static int SDLK_F19() {
+        return (int)1073741934L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F20 = 1073741935;
+     * }
+     */
+    public static int SDLK_F20() {
+        return (int)1073741935L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F21 = 1073741936;
+     * }
+     */
+    public static int SDLK_F21() {
+        return (int)1073741936L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F22 = 1073741937;
+     * }
+     */
+    public static int SDLK_F22() {
+        return (int)1073741937L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F23 = 1073741938;
+     * }
+     */
+    public static int SDLK_F23() {
+        return (int)1073741938L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_F24 = 1073741939;
+     * }
+     */
+    public static int SDLK_F24() {
+        return (int)1073741939L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_EXECUTE = 1073741940;
+     * }
+     */
+    public static int SDLK_EXECUTE() {
+        return (int)1073741940L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_HELP = 1073741941;
+     * }
+     */
+    public static int SDLK_HELP() {
+        return (int)1073741941L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_MENU = 1073741942;
+     * }
+     */
+    public static int SDLK_MENU() {
+        return (int)1073741942L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_SELECT = 1073741943;
+     * }
+     */
+    public static int SDLK_SELECT() {
+        return (int)1073741943L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_STOP = 1073741944;
+     * }
+     */
+    public static int SDLK_STOP() {
+        return (int)1073741944L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_AGAIN = 1073741945;
+     * }
+     */
+    public static int SDLK_AGAIN() {
+        return (int)1073741945L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_UNDO = 1073741946;
+     * }
+     */
+    public static int SDLK_UNDO() {
+        return (int)1073741946L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_CUT = 1073741947;
+     * }
+     */
+    public static int SDLK_CUT() {
+        return (int)1073741947L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_COPY = 1073741948;
+     * }
+     */
+    public static int SDLK_COPY() {
+        return (int)1073741948L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_PASTE = 1073741949;
+     * }
+     */
+    public static int SDLK_PASTE() {
+        return (int)1073741949L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_FIND = 1073741950;
+     * }
+     */
+    public static int SDLK_FIND() {
+        return (int)1073741950L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_MUTE = 1073741951;
+     * }
+     */
+    public static int SDLK_MUTE() {
+        return (int)1073741951L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_VOLUMEUP = 1073741952;
+     * }
+     */
+    public static int SDLK_VOLUMEUP() {
+        return (int)1073741952L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_VOLUMEDOWN = 1073741953;
+     * }
+     */
+    public static int SDLK_VOLUMEDOWN() {
+        return (int)1073741953L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_COMMA = 1073741957;
+     * }
+     */
+    public static int SDLK_KP_COMMA() {
+        return (int)1073741957L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_EQUALSAS400 = 1073741958;
+     * }
+     */
+    public static int SDLK_KP_EQUALSAS400() {
+        return (int)1073741958L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_ALTERASE = 1073741977;
+     * }
+     */
+    public static int SDLK_ALTERASE() {
+        return (int)1073741977L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_SYSREQ = 1073741978;
+     * }
+     */
+    public static int SDLK_SYSREQ() {
+        return (int)1073741978L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_CANCEL = 1073741979;
+     * }
+     */
+    public static int SDLK_CANCEL() {
+        return (int)1073741979L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_CLEAR = 1073741980;
+     * }
+     */
+    public static int SDLK_CLEAR() {
+        return (int)1073741980L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_PRIOR = 1073741981;
+     * }
+     */
+    public static int SDLK_PRIOR() {
+        return (int)1073741981L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_RETURN2 = 1073741982;
+     * }
+     */
+    public static int SDLK_RETURN2() {
+        return (int)1073741982L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_SEPARATOR = 1073741983;
+     * }
+     */
+    public static int SDLK_SEPARATOR() {
+        return (int)1073741983L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_OUT = 1073741984;
+     * }
+     */
+    public static int SDLK_OUT() {
+        return (int)1073741984L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_OPER = 1073741985;
+     * }
+     */
+    public static int SDLK_OPER() {
+        return (int)1073741985L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_CLEARAGAIN = 1073741986;
+     * }
+     */
+    public static int SDLK_CLEARAGAIN() {
+        return (int)1073741986L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_CRSEL = 1073741987;
+     * }
+     */
+    public static int SDLK_CRSEL() {
+        return (int)1073741987L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_EXSEL = 1073741988;
+     * }
+     */
+    public static int SDLK_EXSEL() {
+        return (int)1073741988L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_00 = 1073742000;
+     * }
+     */
+    public static int SDLK_KP_00() {
+        return (int)1073742000L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_000 = 1073742001;
+     * }
+     */
+    public static int SDLK_KP_000() {
+        return (int)1073742001L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_THOUSANDSSEPARATOR = 1073742002;
+     * }
+     */
+    public static int SDLK_THOUSANDSSEPARATOR() {
+        return (int)1073742002L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_DECIMALSEPARATOR = 1073742003;
+     * }
+     */
+    public static int SDLK_DECIMALSEPARATOR() {
+        return (int)1073742003L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_CURRENCYUNIT = 1073742004;
+     * }
+     */
+    public static int SDLK_CURRENCYUNIT() {
+        return (int)1073742004L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_CURRENCYSUBUNIT = 1073742005;
+     * }
+     */
+    public static int SDLK_CURRENCYSUBUNIT() {
+        return (int)1073742005L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_LEFTPAREN = 1073742006;
+     * }
+     */
+    public static int SDLK_KP_LEFTPAREN() {
+        return (int)1073742006L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_RIGHTPAREN = 1073742007;
+     * }
+     */
+    public static int SDLK_KP_RIGHTPAREN() {
+        return (int)1073742007L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_LEFTBRACE = 1073742008;
+     * }
+     */
+    public static int SDLK_KP_LEFTBRACE() {
+        return (int)1073742008L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_RIGHTBRACE = 1073742009;
+     * }
+     */
+    public static int SDLK_KP_RIGHTBRACE() {
+        return (int)1073742009L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_TAB = 1073742010;
+     * }
+     */
+    public static int SDLK_KP_TAB() {
+        return (int)1073742010L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_BACKSPACE = 1073742011;
+     * }
+     */
+    public static int SDLK_KP_BACKSPACE() {
+        return (int)1073742011L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_A = 1073742012;
+     * }
+     */
+    public static int SDLK_KP_A() {
+        return (int)1073742012L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_B = 1073742013;
+     * }
+     */
+    public static int SDLK_KP_B() {
+        return (int)1073742013L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_C = 1073742014;
+     * }
+     */
+    public static int SDLK_KP_C() {
+        return (int)1073742014L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_D = 1073742015;
+     * }
+     */
+    public static int SDLK_KP_D() {
+        return (int)1073742015L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_E = 1073742016;
+     * }
+     */
+    public static int SDLK_KP_E() {
+        return (int)1073742016L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_F = 1073742017;
+     * }
+     */
+    public static int SDLK_KP_F() {
+        return (int)1073742017L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_XOR = 1073742018;
+     * }
+     */
+    public static int SDLK_KP_XOR() {
+        return (int)1073742018L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_POWER = 1073742019;
+     * }
+     */
+    public static int SDLK_KP_POWER() {
+        return (int)1073742019L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_PERCENT = 1073742020;
+     * }
+     */
+    public static int SDLK_KP_PERCENT() {
+        return (int)1073742020L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_LESS = 1073742021;
+     * }
+     */
+    public static int SDLK_KP_LESS() {
+        return (int)1073742021L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_GREATER = 1073742022;
+     * }
+     */
+    public static int SDLK_KP_GREATER() {
+        return (int)1073742022L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_AMPERSAND = 1073742023;
+     * }
+     */
+    public static int SDLK_KP_AMPERSAND() {
+        return (int)1073742023L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_DBLAMPERSAND = 1073742024;
+     * }
+     */
+    public static int SDLK_KP_DBLAMPERSAND() {
+        return (int)1073742024L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_VERTICALBAR = 1073742025;
+     * }
+     */
+    public static int SDLK_KP_VERTICALBAR() {
+        return (int)1073742025L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_DBLVERTICALBAR = 1073742026;
+     * }
+     */
+    public static int SDLK_KP_DBLVERTICALBAR() {
+        return (int)1073742026L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_COLON = 1073742027;
+     * }
+     */
+    public static int SDLK_KP_COLON() {
+        return (int)1073742027L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_HASH = 1073742028;
+     * }
+     */
+    public static int SDLK_KP_HASH() {
+        return (int)1073742028L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_SPACE = 1073742029;
+     * }
+     */
+    public static int SDLK_KP_SPACE() {
+        return (int)1073742029L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_AT = 1073742030;
+     * }
+     */
+    public static int SDLK_KP_AT() {
+        return (int)1073742030L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_EXCLAM = 1073742031;
+     * }
+     */
+    public static int SDLK_KP_EXCLAM() {
+        return (int)1073742031L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_MEMSTORE = 1073742032;
+     * }
+     */
+    public static int SDLK_KP_MEMSTORE() {
+        return (int)1073742032L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_MEMRECALL = 1073742033;
+     * }
+     */
+    public static int SDLK_KP_MEMRECALL() {
+        return (int)1073742033L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_MEMCLEAR = 1073742034;
+     * }
+     */
+    public static int SDLK_KP_MEMCLEAR() {
+        return (int)1073742034L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_MEMADD = 1073742035;
+     * }
+     */
+    public static int SDLK_KP_MEMADD() {
+        return (int)1073742035L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_MEMSUBTRACT = 1073742036;
+     * }
+     */
+    public static int SDLK_KP_MEMSUBTRACT() {
+        return (int)1073742036L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_MEMMULTIPLY = 1073742037;
+     * }
+     */
+    public static int SDLK_KP_MEMMULTIPLY() {
+        return (int)1073742037L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_MEMDIVIDE = 1073742038;
+     * }
+     */
+    public static int SDLK_KP_MEMDIVIDE() {
+        return (int)1073742038L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_PLUSMINUS = 1073742039;
+     * }
+     */
+    public static int SDLK_KP_PLUSMINUS() {
+        return (int)1073742039L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_CLEAR = 1073742040;
+     * }
+     */
+    public static int SDLK_KP_CLEAR() {
+        return (int)1073742040L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_CLEARENTRY = 1073742041;
+     * }
+     */
+    public static int SDLK_KP_CLEARENTRY() {
+        return (int)1073742041L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_BINARY = 1073742042;
+     * }
+     */
+    public static int SDLK_KP_BINARY() {
+        return (int)1073742042L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_OCTAL = 1073742043;
+     * }
+     */
+    public static int SDLK_KP_OCTAL() {
+        return (int)1073742043L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_DECIMAL = 1073742044;
+     * }
+     */
+    public static int SDLK_KP_DECIMAL() {
+        return (int)1073742044L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KP_HEXADECIMAL = 1073742045;
+     * }
+     */
+    public static int SDLK_KP_HEXADECIMAL() {
+        return (int)1073742045L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_LCTRL = 1073742048;
+     * }
+     */
+    public static int SDLK_LCTRL() {
+        return (int)1073742048L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_LSHIFT = 1073742049;
+     * }
+     */
+    public static int SDLK_LSHIFT() {
+        return (int)1073742049L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_LALT = 1073742050;
+     * }
+     */
+    public static int SDLK_LALT() {
+        return (int)1073742050L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_LGUI = 1073742051;
+     * }
+     */
+    public static int SDLK_LGUI() {
+        return (int)1073742051L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_RCTRL = 1073742052;
+     * }
+     */
+    public static int SDLK_RCTRL() {
+        return (int)1073742052L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_RSHIFT = 1073742053;
+     * }
+     */
+    public static int SDLK_RSHIFT() {
+        return (int)1073742053L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_RALT = 1073742054;
+     * }
+     */
+    public static int SDLK_RALT() {
+        return (int)1073742054L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_RGUI = 1073742055;
+     * }
+     */
+    public static int SDLK_RGUI() {
+        return (int)1073742055L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_MODE = 1073742081;
+     * }
+     */
+    public static int SDLK_MODE() {
+        return (int)1073742081L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_AUDIONEXT = 1073742082;
+     * }
+     */
+    public static int SDLK_AUDIONEXT() {
+        return (int)1073742082L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_AUDIOPREV = 1073742083;
+     * }
+     */
+    public static int SDLK_AUDIOPREV() {
+        return (int)1073742083L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_AUDIOSTOP = 1073742084;
+     * }
+     */
+    public static int SDLK_AUDIOSTOP() {
+        return (int)1073742084L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_AUDIOPLAY = 1073742085;
+     * }
+     */
+    public static int SDLK_AUDIOPLAY() {
+        return (int)1073742085L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_AUDIOMUTE = 1073742086;
+     * }
+     */
+    public static int SDLK_AUDIOMUTE() {
+        return (int)1073742086L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_MEDIASELECT = 1073742087;
+     * }
+     */
+    public static int SDLK_MEDIASELECT() {
+        return (int)1073742087L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_WWW = 1073742088;
+     * }
+     */
+    public static int SDLK_WWW() {
+        return (int)1073742088L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_MAIL = 1073742089;
+     * }
+     */
+    public static int SDLK_MAIL() {
+        return (int)1073742089L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_CALCULATOR = 1073742090;
+     * }
+     */
+    public static int SDLK_CALCULATOR() {
+        return (int)1073742090L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_COMPUTER = 1073742091;
+     * }
+     */
+    public static int SDLK_COMPUTER() {
+        return (int)1073742091L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_AC_SEARCH = 1073742092;
+     * }
+     */
+    public static int SDLK_AC_SEARCH() {
+        return (int)1073742092L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_AC_HOME = 1073742093;
+     * }
+     */
+    public static int SDLK_AC_HOME() {
+        return (int)1073742093L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_AC_BACK = 1073742094;
+     * }
+     */
+    public static int SDLK_AC_BACK() {
+        return (int)1073742094L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_AC_FORWARD = 1073742095;
+     * }
+     */
+    public static int SDLK_AC_FORWARD() {
+        return (int)1073742095L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_AC_STOP = 1073742096;
+     * }
+     */
+    public static int SDLK_AC_STOP() {
+        return (int)1073742096L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_AC_REFRESH = 1073742097;
+     * }
+     */
+    public static int SDLK_AC_REFRESH() {
+        return (int)1073742097L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_AC_BOOKMARKS = 1073742098;
+     * }
+     */
+    public static int SDLK_AC_BOOKMARKS() {
+        return (int)1073742098L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_BRIGHTNESSDOWN = 1073742099;
+     * }
+     */
+    public static int SDLK_BRIGHTNESSDOWN() {
+        return (int)1073742099L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_BRIGHTNESSUP = 1073742100;
+     * }
+     */
+    public static int SDLK_BRIGHTNESSUP() {
+        return (int)1073742100L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_DISPLAYSWITCH = 1073742101;
+     * }
+     */
+    public static int SDLK_DISPLAYSWITCH() {
+        return (int)1073742101L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KBDILLUMTOGGLE = 1073742102;
+     * }
+     */
+    public static int SDLK_KBDILLUMTOGGLE() {
+        return (int)1073742102L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KBDILLUMDOWN = 1073742103;
+     * }
+     */
+    public static int SDLK_KBDILLUMDOWN() {
+        return (int)1073742103L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_KBDILLUMUP = 1073742104;
+     * }
+     */
+    public static int SDLK_KBDILLUMUP() {
+        return (int)1073742104L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_EJECT = 1073742105;
+     * }
+     */
+    public static int SDLK_EJECT() {
+        return (int)1073742105L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_SLEEP = 1073742106;
+     * }
+     */
+    public static int SDLK_SLEEP() {
+        return (int)1073742106L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_APP1 = 1073742107;
+     * }
+     */
+    public static int SDLK_APP1() {
+        return (int)1073742107L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_APP2 = 1073742108;
+     * }
+     */
+    public static int SDLK_APP2() {
+        return (int)1073742108L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_AUDIOREWIND = 1073742109;
+     * }
+     */
+    public static int SDLK_AUDIOREWIND() {
+        return (int)1073742109L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_AUDIOFASTFORWARD = 1073742110;
+     * }
+     */
+    public static int SDLK_AUDIOFASTFORWARD() {
+        return (int)1073742110L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_SOFTLEFT = 1073742111;
+     * }
+     */
+    public static int SDLK_SOFTLEFT() {
+        return (int)1073742111L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_SOFTRIGHT = 1073742112;
+     * }
+     */
+    public static int SDLK_SOFTRIGHT() {
+        return (int)1073742112L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_CALL = 1073742113;
+     * }
+     */
+    public static int SDLK_CALL() {
+        return (int)1073742113L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_KeyCode.SDLK_ENDCALL = 1073742114;
+     * }
+     */
+    public static int SDLK_ENDCALL() {
+        return (int)1073742114L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_Keymod.KMOD_NONE = 0;
+     * }
+     */
+    public static int KMOD_NONE() {
         return (int)0L;
     }
     /**
      * {@snippet :
-     * enum SDL_EventType.SDL_QUIT = 256;
+     * enum SDL_Keymod.KMOD_LSHIFT = 1;
      * }
      */
-    public static int SDL_QUIT() {
+    public static int KMOD_LSHIFT() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_Keymod.KMOD_RSHIFT = 2;
+     * }
+     */
+    public static int KMOD_RSHIFT() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_Keymod.KMOD_LCTRL = 64;
+     * }
+     */
+    public static int KMOD_LCTRL() {
+        return (int)64L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_Keymod.KMOD_RCTRL = 128;
+     * }
+     */
+    public static int KMOD_RCTRL() {
+        return (int)128L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_Keymod.KMOD_LALT = 256;
+     * }
+     */
+    public static int KMOD_LALT() {
         return (int)256L;
     }
     /**
      * {@snippet :
-     * enum SDL_EventType.SDL_APP_TERMINATING = 257;
+     * enum SDL_Keymod.KMOD_RALT = 512;
      * }
      */
-    public static int SDL_APP_TERMINATING() {
-        return (int)257L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_APP_LOWMEMORY = 258;
-     * }
-     */
-    public static int SDL_APP_LOWMEMORY() {
-        return (int)258L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_APP_WILLENTERBACKGROUND = 259;
-     * }
-     */
-    public static int SDL_APP_WILLENTERBACKGROUND() {
-        return (int)259L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_APP_DIDENTERBACKGROUND = 260;
-     * }
-     */
-    public static int SDL_APP_DIDENTERBACKGROUND() {
-        return (int)260L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_APP_WILLENTERFOREGROUND = 261;
-     * }
-     */
-    public static int SDL_APP_WILLENTERFOREGROUND() {
-        return (int)261L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_APP_DIDENTERFOREGROUND = 262;
-     * }
-     */
-    public static int SDL_APP_DIDENTERFOREGROUND() {
-        return (int)262L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_LOCALECHANGED = 263;
-     * }
-     */
-    public static int SDL_LOCALECHANGED() {
-        return (int)263L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_DISPLAYEVENT = 336;
-     * }
-     */
-    public static int SDL_DISPLAYEVENT() {
-        return (int)336L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_WINDOWEVENT = 512;
-     * }
-     */
-    public static int SDL_WINDOWEVENT() {
+    public static int KMOD_RALT() {
         return (int)512L;
     }
     /**
      * {@snippet :
-     * enum SDL_EventType.SDL_SYSWMEVENT = 513;
+     * enum SDL_Keymod.KMOD_LGUI = 1024;
      * }
      */
-    public static int SDL_SYSWMEVENT() {
-        return (int)513L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_KEYDOWN = 768;
-     * }
-     */
-    public static int SDL_KEYDOWN() {
-        return (int)768L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_KEYUP = 769;
-     * }
-     */
-    public static int SDL_KEYUP() {
-        return (int)769L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_TEXTEDITING = 770;
-     * }
-     */
-    public static int SDL_TEXTEDITING() {
-        return (int)770L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_TEXTINPUT = 771;
-     * }
-     */
-    public static int SDL_TEXTINPUT() {
-        return (int)771L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_KEYMAPCHANGED = 772;
-     * }
-     */
-    public static int SDL_KEYMAPCHANGED() {
-        return (int)772L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_TEXTEDITING_EXT = 773;
-     * }
-     */
-    public static int SDL_TEXTEDITING_EXT() {
-        return (int)773L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_MOUSEMOTION = 1024;
-     * }
-     */
-    public static int SDL_MOUSEMOTION() {
+    public static int KMOD_LGUI() {
         return (int)1024L;
     }
     /**
      * {@snippet :
-     * enum SDL_EventType.SDL_MOUSEBUTTONDOWN = 1025;
+     * enum SDL_Keymod.KMOD_RGUI = 2048;
      * }
      */
-    public static int SDL_MOUSEBUTTONDOWN() {
-        return (int)1025L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_MOUSEBUTTONUP = 1026;
-     * }
-     */
-    public static int SDL_MOUSEBUTTONUP() {
-        return (int)1026L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_MOUSEWHEEL = 1027;
-     * }
-     */
-    public static int SDL_MOUSEWHEEL() {
-        return (int)1027L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_JOYAXISMOTION = 1536;
-     * }
-     */
-    public static int SDL_JOYAXISMOTION() {
-        return (int)1536L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_JOYBALLMOTION = 1537;
-     * }
-     */
-    public static int SDL_JOYBALLMOTION() {
-        return (int)1537L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_JOYHATMOTION = 1538;
-     * }
-     */
-    public static int SDL_JOYHATMOTION() {
-        return (int)1538L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_JOYBUTTONDOWN = 1539;
-     * }
-     */
-    public static int SDL_JOYBUTTONDOWN() {
-        return (int)1539L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_JOYBUTTONUP = 1540;
-     * }
-     */
-    public static int SDL_JOYBUTTONUP() {
-        return (int)1540L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_JOYDEVICEADDED = 1541;
-     * }
-     */
-    public static int SDL_JOYDEVICEADDED() {
-        return (int)1541L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_JOYDEVICEREMOVED = 1542;
-     * }
-     */
-    public static int SDL_JOYDEVICEREMOVED() {
-        return (int)1542L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_JOYBATTERYUPDATED = 1543;
-     * }
-     */
-    public static int SDL_JOYBATTERYUPDATED() {
-        return (int)1543L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_CONTROLLERAXISMOTION = 1616;
-     * }
-     */
-    public static int SDL_CONTROLLERAXISMOTION() {
-        return (int)1616L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_CONTROLLERBUTTONDOWN = 1617;
-     * }
-     */
-    public static int SDL_CONTROLLERBUTTONDOWN() {
-        return (int)1617L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_CONTROLLERBUTTONUP = 1618;
-     * }
-     */
-    public static int SDL_CONTROLLERBUTTONUP() {
-        return (int)1618L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_CONTROLLERDEVICEADDED = 1619;
-     * }
-     */
-    public static int SDL_CONTROLLERDEVICEADDED() {
-        return (int)1619L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_CONTROLLERDEVICEREMOVED = 1620;
-     * }
-     */
-    public static int SDL_CONTROLLERDEVICEREMOVED() {
-        return (int)1620L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_CONTROLLERDEVICEREMAPPED = 1621;
-     * }
-     */
-    public static int SDL_CONTROLLERDEVICEREMAPPED() {
-        return (int)1621L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_CONTROLLERTOUCHPADDOWN = 1622;
-     * }
-     */
-    public static int SDL_CONTROLLERTOUCHPADDOWN() {
-        return (int)1622L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_CONTROLLERTOUCHPADMOTION = 1623;
-     * }
-     */
-    public static int SDL_CONTROLLERTOUCHPADMOTION() {
-        return (int)1623L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_CONTROLLERTOUCHPADUP = 1624;
-     * }
-     */
-    public static int SDL_CONTROLLERTOUCHPADUP() {
-        return (int)1624L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_CONTROLLERSENSORUPDATE = 1625;
-     * }
-     */
-    public static int SDL_CONTROLLERSENSORUPDATE() {
-        return (int)1625L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_FINGERDOWN = 1792;
-     * }
-     */
-    public static int SDL_FINGERDOWN() {
-        return (int)1792L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_FINGERUP = 1793;
-     * }
-     */
-    public static int SDL_FINGERUP() {
-        return (int)1793L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_FINGERMOTION = 1794;
-     * }
-     */
-    public static int SDL_FINGERMOTION() {
-        return (int)1794L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_DOLLARGESTURE = 2048;
-     * }
-     */
-    public static int SDL_DOLLARGESTURE() {
+    public static int KMOD_RGUI() {
         return (int)2048L;
     }
     /**
      * {@snippet :
-     * enum SDL_EventType.SDL_DOLLARRECORD = 2049;
+     * enum SDL_Keymod.KMOD_NUM = 4096;
      * }
      */
-    public static int SDL_DOLLARRECORD() {
-        return (int)2049L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_MULTIGESTURE = 2050;
-     * }
-     */
-    public static int SDL_MULTIGESTURE() {
-        return (int)2050L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_CLIPBOARDUPDATE = 2304;
-     * }
-     */
-    public static int SDL_CLIPBOARDUPDATE() {
-        return (int)2304L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_DROPFILE = 4096;
-     * }
-     */
-    public static int SDL_DROPFILE() {
+    public static int KMOD_NUM() {
         return (int)4096L;
     }
     /**
      * {@snippet :
-     * enum SDL_EventType.SDL_DROPTEXT = 4097;
+     * enum SDL_Keymod.KMOD_CAPS = 8192;
      * }
      */
-    public static int SDL_DROPTEXT() {
-        return (int)4097L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_DROPBEGIN = 4098;
-     * }
-     */
-    public static int SDL_DROPBEGIN() {
-        return (int)4098L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_DROPCOMPLETE = 4099;
-     * }
-     */
-    public static int SDL_DROPCOMPLETE() {
-        return (int)4099L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_AUDIODEVICEADDED = 4352;
-     * }
-     */
-    public static int SDL_AUDIODEVICEADDED() {
-        return (int)4352L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_AUDIODEVICEREMOVED = 4353;
-     * }
-     */
-    public static int SDL_AUDIODEVICEREMOVED() {
-        return (int)4353L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_SENSORUPDATE = 4608;
-     * }
-     */
-    public static int SDL_SENSORUPDATE() {
-        return (int)4608L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_RENDER_TARGETS_RESET = 8192;
-     * }
-     */
-    public static int SDL_RENDER_TARGETS_RESET() {
+    public static int KMOD_CAPS() {
         return (int)8192L;
     }
     /**
      * {@snippet :
-     * enum SDL_EventType.SDL_RENDER_DEVICE_RESET = 8193;
+     * enum SDL_Keymod.KMOD_MODE = 16384;
      * }
      */
-    public static int SDL_RENDER_DEVICE_RESET() {
-        return (int)8193L;
+    public static int KMOD_MODE() {
+        return (int)16384L;
     }
     /**
      * {@snippet :
-     * enum SDL_EventType.SDL_POLLSENTINEL = 32512;
+     * enum SDL_Keymod.KMOD_SCROLL = 32768;
      * }
      */
-    public static int SDL_POLLSENTINEL() {
-        return (int)32512L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_EventType.SDL_USEREVENT = 32768;
-     * }
-     */
-    public static int SDL_USEREVENT() {
+    public static int KMOD_SCROLL() {
         return (int)32768L;
     }
     /**
      * {@snippet :
-     * enum SDL_EventType.SDL_LASTEVENT = 65535;
+     * enum SDL_Keymod.KMOD_CTRL = 192;
      * }
      */
-    public static int SDL_LASTEVENT() {
-        return (int)65535L;
-    }
-    public static MethodHandle SDL_PumpEvents$MH() {
-        return RuntimeHelper.requireNonNull(constants$160.const$4,"SDL_PumpEvents");
+    public static int KMOD_CTRL() {
+        return (int)192L;
     }
     /**
      * {@snippet :
-     * void SDL_PumpEvents();
+     * enum SDL_Keymod.KMOD_SHIFT = 3;
      * }
      */
-    public static void SDL_PumpEvents() {
-        var mh$ = SDL_PumpEvents$MH();
+    public static int KMOD_SHIFT() {
+        return (int)3L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_Keymod.KMOD_ALT = 768;
+     * }
+     */
+    public static int KMOD_ALT() {
+        return (int)768L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_Keymod.KMOD_GUI = 3072;
+     * }
+     */
+    public static int KMOD_GUI() {
+        return (int)3072L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_Keymod.KMOD_RESERVED = 32768;
+     * }
+     */
+    public static int KMOD_RESERVED() {
+        return (int)32768L;
+    }
+    public static MethodHandle SDL_GetKeyboardFocus$MH() {
+        return RuntimeHelper.requireNonNull(constants$91.const$0,"SDL_GetKeyboardFocus");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_Window* SDL_GetKeyboardFocus();
+     * }
+     */
+    public static MemorySegment SDL_GetKeyboardFocus() {
+        var mh$ = SDL_GetKeyboardFocus$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetKeyboardState$MH() {
+        return RuntimeHelper.requireNonNull(constants$91.const$1,"SDL_GetKeyboardState");
+    }
+    /**
+     * {@snippet :
+     * unsigned char* SDL_GetKeyboardState(int* numkeys);
+     * }
+     */
+    public static MemorySegment SDL_GetKeyboardState(MemorySegment numkeys) {
+        var mh$ = SDL_GetKeyboardState$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(numkeys);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_ResetKeyboard$MH() {
+        return RuntimeHelper.requireNonNull(constants$91.const$2,"SDL_ResetKeyboard");
+    }
+    /**
+     * {@snippet :
+     * void SDL_ResetKeyboard();
+     * }
+     */
+    public static void SDL_ResetKeyboard() {
+        var mh$ = SDL_ResetKeyboard$MH();
         try {
             mh$.invokeExact();
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
-    /**
-     * {@snippet :
-     * enum SDL_eventaction.SDL_ADDEVENT = 0;
-     * }
-     */
-    public static int SDL_ADDEVENT() {
-        return (int)0L;
+    public static MethodHandle SDL_GetModState$MH() {
+        return RuntimeHelper.requireNonNull(constants$91.const$3,"SDL_GetModState");
     }
     /**
      * {@snippet :
-     * enum SDL_eventaction.SDL_PEEKEVENT = 1;
+     * enum SDL_Keymod SDL_GetModState();
      * }
      */
-    public static int SDL_PEEKEVENT() {
-        return (int)1L;
-    }
-    /**
-     * {@snippet :
-     * enum SDL_eventaction.SDL_GETEVENT = 2;
-     * }
-     */
-    public static int SDL_GETEVENT() {
-        return (int)2L;
-    }
-    public static MethodHandle SDL_PeepEvents$MH() {
-        return RuntimeHelper.requireNonNull(constants$160.const$6,"SDL_PeepEvents");
-    }
-    /**
-     * {@snippet :
-     * int SDL_PeepEvents(union SDL_Event* events, int numevents, enum SDL_eventaction action, unsigned int minType, unsigned int maxType);
-     * }
-     */
-    public static int SDL_PeepEvents(MemorySegment events, int numevents, int action, int minType, int maxType) {
-        var mh$ = SDL_PeepEvents$MH();
+    public static int SDL_GetModState() {
+        var mh$ = SDL_GetModState$MH();
         try {
-            return (int)mh$.invokeExact(events, numevents, action, minType, maxType);
+            return (int)mh$.invokeExact();
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
-    public static MethodHandle SDL_HasEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$161.const$0,"SDL_HasEvent");
+    public static MethodHandle SDL_SetModState$MH() {
+        return RuntimeHelper.requireNonNull(constants$91.const$4,"SDL_SetModState");
     }
     /**
      * {@snippet :
-     * enum SDL_bool SDL_HasEvent(unsigned int type);
+     * void SDL_SetModState(enum SDL_Keymod modstate);
      * }
      */
-    public static int SDL_HasEvent(int type) {
-        var mh$ = SDL_HasEvent$MH();
+    public static void SDL_SetModState(int modstate) {
+        var mh$ = SDL_SetModState$MH();
         try {
-            return (int)mh$.invokeExact(type);
+            mh$.invokeExact(modstate);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }
     }
-    public static MethodHandle SDL_HasEvents$MH() {
-        return RuntimeHelper.requireNonNull(constants$161.const$1,"SDL_HasEvents");
+    public static MethodHandle SDL_GetKeyFromScancode$MH() {
+        return RuntimeHelper.requireNonNull(constants$91.const$5,"SDL_GetKeyFromScancode");
     }
     /**
      * {@snippet :
-     * enum SDL_bool SDL_HasEvents(unsigned int minType, unsigned int maxType);
+     * int SDL_GetKeyFromScancode(enum SDL_Scancode scancode);
      * }
      */
-    public static int SDL_HasEvents(int minType, int maxType) {
-        var mh$ = SDL_HasEvents$MH();
+    public static int SDL_GetKeyFromScancode(int scancode) {
+        var mh$ = SDL_GetKeyFromScancode$MH();
         try {
-            return (int)mh$.invokeExact(minType, maxType);
+            return (int)mh$.invokeExact(scancode);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetScancodeFromKey$MH() {
+        return RuntimeHelper.requireNonNull(constants$92.const$0,"SDL_GetScancodeFromKey");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_Scancode SDL_GetScancodeFromKey(int key);
+     * }
+     */
+    public static int SDL_GetScancodeFromKey(int key) {
+        var mh$ = SDL_GetScancodeFromKey$MH();
+        try {
+            return (int)mh$.invokeExact(key);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetScancodeName$MH() {
+        return RuntimeHelper.requireNonNull(constants$92.const$1,"SDL_GetScancodeName");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GetScancodeName(enum SDL_Scancode scancode);
+     * }
+     */
+    public static MemorySegment SDL_GetScancodeName(int scancode) {
+        var mh$ = SDL_GetScancodeName$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(scancode);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetScancodeFromName$MH() {
+        return RuntimeHelper.requireNonNull(constants$92.const$2,"SDL_GetScancodeFromName");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_Scancode SDL_GetScancodeFromName(char* name);
+     * }
+     */
+    public static int SDL_GetScancodeFromName(MemorySegment name) {
+        var mh$ = SDL_GetScancodeFromName$MH();
+        try {
+            return (int)mh$.invokeExact(name);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetKeyName$MH() {
+        return RuntimeHelper.requireNonNull(constants$92.const$3,"SDL_GetKeyName");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GetKeyName(int key);
+     * }
+     */
+    public static MemorySegment SDL_GetKeyName(int key) {
+        var mh$ = SDL_GetKeyName$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(key);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetKeyFromName$MH() {
+        return RuntimeHelper.requireNonNull(constants$92.const$4,"SDL_GetKeyFromName");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GetKeyFromName(char* name);
+     * }
+     */
+    public static int SDL_GetKeyFromName(MemorySegment name) {
+        var mh$ = SDL_GetKeyFromName$MH();
+        try {
+            return (int)mh$.invokeExact(name);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_StartTextInput$MH() {
+        return RuntimeHelper.requireNonNull(constants$92.const$5,"SDL_StartTextInput");
+    }
+    /**
+     * {@snippet :
+     * void SDL_StartTextInput();
+     * }
+     */
+    public static void SDL_StartTextInput() {
+        var mh$ = SDL_StartTextInput$MH();
+        try {
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_IsTextInputActive$MH() {
+        return RuntimeHelper.requireNonNull(constants$93.const$0,"SDL_IsTextInputActive");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_IsTextInputActive();
+     * }
+     */
+    public static int SDL_IsTextInputActive() {
+        var mh$ = SDL_IsTextInputActive$MH();
+        try {
+            return (int)mh$.invokeExact();
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }

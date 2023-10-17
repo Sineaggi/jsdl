@@ -11,24 +11,22 @@ final class constants$133 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$133() {}
-    static final VarHandle const$0 = constants$132.const$0.varHandle(MemoryLayout.PathElement.groupElement("state"));
-    static final VarHandle const$1 = constants$132.const$0.varHandle(MemoryLayout.PathElement.groupElement("clicks"));
-    static final VarHandle const$2 = constants$132.const$0.varHandle(MemoryLayout.PathElement.groupElement("padding1"));
-    static final VarHandle const$3 = constants$132.const$0.varHandle(MemoryLayout.PathElement.groupElement("x"));
-    static final VarHandle const$4 = constants$132.const$0.varHandle(MemoryLayout.PathElement.groupElement("y"));
-    static final StructLayout const$5 = MemoryLayout.structLayout(
+    static final VarHandle const$0 = constants$132.const$5.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$1 = constants$132.const$5.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$2 = constants$132.const$5.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
         JAVA_INT.withName("windowID"),
         JAVA_INT.withName("which"),
+        JAVA_INT.withName("state"),
         JAVA_INT.withName("x"),
         JAVA_INT.withName("y"),
-        JAVA_INT.withName("direction"),
-        JAVA_FLOAT.withName("preciseX"),
-        JAVA_FLOAT.withName("preciseY"),
-        JAVA_INT.withName("mouseX"),
-        JAVA_INT.withName("mouseY")
-    ).withName("SDL_MouseWheelEvent");
+        JAVA_INT.withName("xrel"),
+        JAVA_INT.withName("yrel")
+    ).withName("SDL_MouseMotionEvent");
+    static final VarHandle const$4 = constants$133.const$3.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$5 = constants$133.const$3.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
 }
 
 

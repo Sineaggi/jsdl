@@ -12,27 +12,27 @@ final class constants$91 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$91() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_LockJoysticks",
-        constants$32.const$3
+        "SDL_GetKeyboardFocus",
+        constants$0.const$0
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_UnlockJoysticks",
-        constants$32.const$3
+        "SDL_GetKeyboardState",
+        constants$6.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_NumJoysticks",
-        constants$5.const$5
+        "SDL_ResetKeyboard",
+        constants$32.const$3
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickNameForIndex",
-        constants$33.const$5
+        "SDL_GetModState",
+        constants$5.const$5
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickPathForIndex",
-        constants$33.const$5
+        "SDL_SetModState",
+        constants$70.const$3
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetDevicePlayerIndex",
+        "SDL_GetKeyFromScancode",
         constants$8.const$0
     );
 }

@@ -16,13 +16,13 @@ public interface SDL_AddHintCallback$callback {
 
     void apply(java.lang.foreign.MemorySegment userdata, java.lang.foreign.MemorySegment name, java.lang.foreign.MemorySegment oldValue, java.lang.foreign.MemorySegment newValue);
     static MemorySegment allocate(SDL_AddHintCallback$callback fi, Arena scope) {
-        return RuntimeHelper.upcallStub(constants$166.const$1, fi, constants$3.const$4, scope);
+        return RuntimeHelper.upcallStub(constants$169.const$2, fi, constants$3.const$4, scope);
     }
     static SDL_AddHintCallback$callback ofAddress(MemorySegment addr, Arena arena) {
         MemorySegment symbol = addr.reinterpret(arena, null);
         return (java.lang.foreign.MemorySegment _userdata, java.lang.foreign.MemorySegment _name, java.lang.foreign.MemorySegment _oldValue, java.lang.foreign.MemorySegment _newValue) -> {
             try {
-                constants$166.const$0.invokeExact(symbol, _userdata, _name, _oldValue, _newValue);
+                constants$169.const$1.invokeExact(symbol, _userdata, _name, _oldValue, _newValue);
             } catch (Throwable ex$) {
                 throw new AssertionError("should not reach here", ex$);
             }

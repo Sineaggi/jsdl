@@ -20,13 +20,18 @@ import sdl.gamecontroller.JoystickId;
 import sdl.gamecontroller.SensorType;
 import sdl.hints.Hints;
 import sdl.joystick.Joystick;
+import sdl.joystick.VirtualJoystickDesc;
+import sdl.keyboard.Keyboard;
+import sdl.keycode.Keymod;
 import sdl.render.Renderer;
 import sdl.video.Window;
 
 import java.lang.foreign.Arena;
 import java.lang.foreign.MemoryLayout;
+import java.lang.foreign.MemorySegment;
 import java.lang.foreign.StructLayout;
 import java.lang.invoke.VarHandle;
+import java.sql.SQLOutput;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -192,7 +197,7 @@ public class TestGameController {
         JoystickId controllerId = Joystick.getDeviceInstanceId(deviceIndex);
         GameController controller;
         GameController[] controllers;
-        short firmware_version;
+        short firmwareVersion;
         Set<SensorType> sensors = Set.of(
                 SensorType.Accel,
                 SensorType.Gryo,
@@ -219,20 +224,20 @@ public class TestGameController {
         if (verbose) {
             String name = gameController.name();
             String path = gameController.path();
-            SDL_Log("Opened game controller %s%s%s\n", name, path ? ", " : "", path ? path : "");
+            System.out.println(STR."Opened game controller \{name}\{path != null ? ", " : ""}\{path != null ? path : ""}");
         }
 
-        firmware_version = gameController.getFirmwareVersion();
-        if (firmware_version > 0) {
+        firmwareVersion = gameController.getFirmwareVersion();
+        if (firmwareVersion > 0) {
             if (verbose) {
-                SDL_Log("Firmware version: 0x%x (%d)\n", firmware_version, firmware_version);
+                System.out.println(FMT."Firmware version: 0x\{firmwareVersion} (\{firmwareVersion}})");
             }
         }
 
         for (var sensor : sensors) {
             if (gameController.hasSensor(sensor)) {
                 if (verbose) {
-                    SDL_Log("Enabling %s at %.2f Hz\n", getSensorName(sensor), gameController.getSensorDataRate(sensor));
+                    System.out.println(FMT."Enabling %\{getSensorName(sensor)} at %.2\{gameController.getSensorDataRate(sensor)} Hz");
                 }
                 gameController.setSensorEnabled(sensor, true);
             }
@@ -257,8 +262,8 @@ public class TestGameController {
             return;
         }
 
-        if (gameController != gameControllers[i]) {
-            gameController = gameControllers[i];
+        if (!gameController.equals(gameControllers.get(i))) {
+            gameController = gameControllers.get(i);
             updateWindowTitle();
         }
     }
@@ -369,68 +374,64 @@ public class TestGameController {
 
             }
         }
-        if ((SDL_GetModState() & KMOD_SHIFT) != 0) {
+        if (Keyboard.getModState().contains(Keymod.Shift)) {
             showingFront = false;
         }
         return showingFront;
     }
 
-    static void SDLCALL VirtualControllerSetPlayerIndex(void *userdata, int player_index)
+    VirtualJoystickDesc.SetPlayerIndex virtualControllerSetPlayerIndex = (MemorySegment userData, int playerIndex) ->
     {
-        SDL_Log("Virtual Controller: player index set to %d\n", player_index);
-    }
+        System.out.println(STR."Virtual Controller: player index set to \{playerIndex}");
+    };
 
-    static int SDLCALL VirtualControllerRumble(void *userdata, Uint16 low_frequency_rumble, Uint16 high_frequency_rumble)
-    {
-        SDL_Log("Virtual Controller: rumble set to %d/%d\n", low_frequency_rumble, high_frequency_rumble);
+    VirtualJoystickDesc.Rumble virtualControllerRumble = (MemorySegment userData, short lowFrequencyRumble, short highFrequencyRumble) -> {
+        System.out.println(STR."Virtual Controller: rumble set to \{lowFrequencyRumble}/\{highFrequencyRumble}");
         return 0;
-    }
+    };
 
-    static int SDLCALL VirtualControllerRumbleTriggers(void *userdata, Uint16 left_rumble, Uint16 right_rumble)
-    {
-        SDL_Log("Virtual Controller: trigger rumble set to %d/%d\n", left_rumble, right_rumble);
+    VirtualJoystickDesc.RumbleTriggers virtualControllerRumbleTriggers = (MemorySegment userData, short leftRumble, short rightRumble) -> {
+        System.out.println(STR."Virtual Controller: trigger rumble set to \{leftRumble}/\{rightRumble}");
         return 0;
-    }
+    };
 
-    static int SDLCALL VirtualControllerSetLED(void *userdata, Uint8 red, Uint8 green, Uint8 blue)
-    {
-        SDL_Log("Virtual Controller: LED set to RGB %d,%d,%d\n", red, green, blue);
+    VirtualJoystickDesc.SetLED virtualControllerSetLED = (MemorySegment userData, byte red, byte green, byte blue) -> {
+        System.out.println(STR."Virtual Controller: LED set to RGB \{red},\{green},\{blue}");
         return 0;
-    }
+    };
 
     void openVirtualController()
     {
-        SDL_VirtualJoystickDesc desc;
-        int virtual_index;
-
-        SDL_zero(desc);
-        desc.version = SDL_VIRTUAL_JOYSTICK_DESC_VERSION;
-        desc.type = SDL_JOYSTICK_TYPE_GAMECONTROLLER;
-        desc.naxes = SDL_CONTROLLER_AXIS_MAX;
-        desc.nbuttons = SDL_CONTROLLER_BUTTON_MAX;
-        desc.SetPlayerIndex = VirtualControllerSetPlayerIndex;
-        desc.Rumble = VirtualControllerRumble;
-        desc.RumbleTriggers = VirtualControllerRumbleTriggers;
-        desc.SetLED = VirtualControllerSetLED;
-
-        virtual_index = SDL_JoystickAttachVirtualEx(&desc);
-        if (virtual_index < 0) {
-            SDL_Log("Couldn't open virtual device: %s\n", SDL_GetError());
-        } else {
-            virtualJoystick = SDL_JoystickOpen(virtual_index);
-            if (virtualJoystick == NULL) {
-                SDL_Log("Couldn't open virtual device: %s\n", SDL_GetError());
-            }
-        }
+        VirtualJoystickDesc desc = new VirtualJoystickDesc(
+                // auto-set? SDL_VIRTUAL_JOYSTICK_DESC_VERSION(),
+                (short) SDL_JOYSTICK_TYPE_GAMECONTROLLER(),
+                (short) SDL_CONTROLLER_AXIS_MAX(),
+                (short) SDL_CONTROLLER_AXIS_MAX(),
+                (short) 0,
+                (short) 0,
+                (short) 0,
+                0,
+                0,
+                null,
+                MemorySegment.NULL,
+                null,
+                virtualControllerSetPlayerIndex,
+                virtualControllerRumble,
+                virtualControllerRumbleTriggers,
+                virtualControllerSetLED,
+                null
+        );
+        int virtualIndex = Joystick.attachVirtual(desc);
+        virtualJoystick = Joystick.open(virtualIndex);
     }
 
     void closeVirtualController()
     {
         int i;
 
-        for (i = Joystick.numJoysticks(); i--;) {
-            if (SDL_JoystickIsVirtual(i)) {
-                SDL_JoystickDetachVirtual(i);
+        for (i = Joystick.numJoysticks(); i == 0; i--) {
+            if (Joystick.isVirtual(i)) {
+                Joystick.detachVirtual(i);
             }
         }
 

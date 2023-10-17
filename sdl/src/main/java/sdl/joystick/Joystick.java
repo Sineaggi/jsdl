@@ -11,7 +11,10 @@ import java.lang.foreign.Arena;
 import java.lang.foreign.MemorySegment;
 
 import static sdl.Cause.JoystickGetDeviceInstanceID;
+import static sdl.Cause.JoystickOpen;
+import static sdl.Cause.JoystickAttachVirtualEx;
 import static sdl.jextract.sdl_h.*;
+import static sdl.jextract.sdl_h.SDL_JoystickDetachVirtual;
 
 public class Joystick {
     public static final short AXIS_MIN = (short)SDL_JOYSTICK_AXIS_MIN();
@@ -50,6 +53,34 @@ public class Joystick {
 
     public static Joystick wrap(MemorySegment joystick) {
         return new Joystick(joystick);
+    }
+
+    public static Joystick open(int deviceIndex) {
+        MemorySegment joystick = SDL_JoystickOpen(deviceIndex);
+        if (joystick.equals(MemorySegment.NULL)) {
+            throw new SdlException(JoystickOpen);
+        }
+        return new Joystick(joystick);
+    }
+
+    public static int attachVirtual(VirtualJoystickDesc desc) {
+        try (var arena = Arena.ofConfined()) {
+            int joystickIndex = SDL_JoystickAttachVirtualEx(desc.allocateAndFill(arena));
+            if (joystickIndex < 0) {
+                throw new SdlException(JoystickAttachVirtualEx);
+            }
+            return joystickIndex;
+        }
+    }
+
+    public static boolean isVirtual(int deviceIndex) {
+        return SDL_JoystickIsVirtual(deviceIndex) == SDL_TRUE();
+    }
+
+    public static void detachVirtual(int deviceIndex) {
+        if (SDL_JoystickDetachVirtual(deviceIndex) == -1) {
+            throw new RuntimeException(STR."failed to detach virtual joystick \{deviceIndex}");
+        }
     }
 
     public JoystickId instanceId() {

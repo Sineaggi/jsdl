@@ -24,10 +24,10 @@ import static java.lang.foreign.ValueLayout.*;
 public class SDL_DisplayEvent {
 
     public static MemoryLayout $LAYOUT() {
-        return constants$122.const$1;
+        return constants$126.const$1;
     }
     public static VarHandle type$VH() {
-        return constants$122.const$2;
+        return constants$126.const$2;
     }
     /**
      * Getter for field:
@@ -36,7 +36,7 @@ public class SDL_DisplayEvent {
      * }
      */
     public static int type$get(MemorySegment seg) {
-        return (int)constants$122.const$2.get(seg);
+        return (int)constants$126.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -45,16 +45,16 @@ public class SDL_DisplayEvent {
      * }
      */
     public static void type$set(MemorySegment seg, int x) {
-        constants$122.const$2.set(seg, x);
+        constants$126.const$2.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
-        return (int)constants$122.const$2.get(seg.asSlice(index*sizeof()));
+        return (int)constants$126.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void type$set(MemorySegment seg, long index, int x) {
-        constants$122.const$2.set(seg.asSlice(index*sizeof()), x);
+        constants$126.const$2.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle timestamp$VH() {
-        return constants$122.const$3;
+        return constants$126.const$3;
     }
     /**
      * Getter for field:
@@ -63,7 +63,7 @@ public class SDL_DisplayEvent {
      * }
      */
     public static int timestamp$get(MemorySegment seg) {
-        return (int)constants$122.const$3.get(seg);
+        return (int)constants$126.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -72,16 +72,16 @@ public class SDL_DisplayEvent {
      * }
      */
     public static void timestamp$set(MemorySegment seg, int x) {
-        constants$122.const$3.set(seg, x);
+        constants$126.const$3.set(seg, x);
     }
     public static int timestamp$get(MemorySegment seg, long index) {
-        return (int)constants$122.const$3.get(seg.asSlice(index*sizeof()));
+        return (int)constants$126.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void timestamp$set(MemorySegment seg, long index, int x) {
-        constants$122.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$126.const$3.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle display$VH() {
-        return constants$122.const$4;
+        return constants$126.const$4;
     }
     /**
      * Getter for field:
@@ -90,7 +90,7 @@ public class SDL_DisplayEvent {
      * }
      */
     public static int display$get(MemorySegment seg) {
-        return (int)constants$122.const$4.get(seg);
+        return (int)constants$126.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -99,16 +99,16 @@ public class SDL_DisplayEvent {
      * }
      */
     public static void display$set(MemorySegment seg, int x) {
-        constants$122.const$4.set(seg, x);
+        constants$126.const$4.set(seg, x);
     }
     public static int display$get(MemorySegment seg, long index) {
-        return (int)constants$122.const$4.get(seg.asSlice(index*sizeof()));
+        return (int)constants$126.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void display$set(MemorySegment seg, long index, int x) {
-        constants$122.const$4.set(seg.asSlice(index*sizeof()), x);
+        constants$126.const$4.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle event$VH() {
-        return constants$122.const$5;
+        return constants$126.const$5;
     }
     /**
      * Getter for field:
@@ -117,7 +117,7 @@ public class SDL_DisplayEvent {
      * }
      */
     public static byte event$get(MemorySegment seg) {
-        return (byte)constants$122.const$5.get(seg);
+        return (byte)constants$126.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -126,16 +126,16 @@ public class SDL_DisplayEvent {
      * }
      */
     public static void event$set(MemorySegment seg, byte x) {
-        constants$122.const$5.set(seg, x);
+        constants$126.const$5.set(seg, x);
     }
     public static byte event$get(MemorySegment seg, long index) {
-        return (byte)constants$122.const$5.get(seg.asSlice(index*sizeof()));
+        return (byte)constants$126.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void event$set(MemorySegment seg, long index, byte x) {
-        constants$122.const$5.set(seg.asSlice(index*sizeof()), x);
+        constants$126.const$5.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle padding1$VH() {
-        return constants$123.const$0;
+        return constants$127.const$0;
     }
     /**
      * Getter for field:
@@ -144,7 +144,7 @@ public class SDL_DisplayEvent {
      * }
      */
     public static byte padding1$get(MemorySegment seg) {
-        return (byte)constants$123.const$0.get(seg);
+        return (byte)constants$127.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -153,16 +153,16 @@ public class SDL_DisplayEvent {
      * }
      */
     public static void padding1$set(MemorySegment seg, byte x) {
-        constants$123.const$0.set(seg, x);
+        constants$127.const$0.set(seg, x);
     }
     public static byte padding1$get(MemorySegment seg, long index) {
-        return (byte)constants$123.const$0.get(seg.asSlice(index*sizeof()));
+        return (byte)constants$127.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void padding1$set(MemorySegment seg, long index, byte x) {
-        constants$123.const$0.set(seg.asSlice(index*sizeof()), x);
+        constants$127.const$0.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle padding2$VH() {
-        return constants$123.const$1;
+        return constants$127.const$1;
     }
     /**
      * Getter for field:
@@ -171,7 +171,7 @@ public class SDL_DisplayEvent {
      * }
      */
     public static byte padding2$get(MemorySegment seg) {
-        return (byte)constants$123.const$1.get(seg);
+        return (byte)constants$127.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -180,16 +180,16 @@ public class SDL_DisplayEvent {
      * }
      */
     public static void padding2$set(MemorySegment seg, byte x) {
-        constants$123.const$1.set(seg, x);
+        constants$127.const$1.set(seg, x);
     }
     public static byte padding2$get(MemorySegment seg, long index) {
-        return (byte)constants$123.const$1.get(seg.asSlice(index*sizeof()));
+        return (byte)constants$127.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void padding2$set(MemorySegment seg, long index, byte x) {
-        constants$123.const$1.set(seg.asSlice(index*sizeof()), x);
+        constants$127.const$1.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle padding3$VH() {
-        return constants$123.const$2;
+        return constants$127.const$2;
     }
     /**
      * Getter for field:
@@ -198,7 +198,7 @@ public class SDL_DisplayEvent {
      * }
      */
     public static byte padding3$get(MemorySegment seg) {
-        return (byte)constants$123.const$2.get(seg);
+        return (byte)constants$127.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -207,16 +207,16 @@ public class SDL_DisplayEvent {
      * }
      */
     public static void padding3$set(MemorySegment seg, byte x) {
-        constants$123.const$2.set(seg, x);
+        constants$127.const$2.set(seg, x);
     }
     public static byte padding3$get(MemorySegment seg, long index) {
-        return (byte)constants$123.const$2.get(seg.asSlice(index*sizeof()));
+        return (byte)constants$127.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void padding3$set(MemorySegment seg, long index, byte x) {
-        constants$123.const$2.set(seg.asSlice(index*sizeof()), x);
+        constants$127.const$2.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle data1$VH() {
-        return constants$123.const$3;
+        return constants$127.const$3;
     }
     /**
      * Getter for field:
@@ -225,7 +225,7 @@ public class SDL_DisplayEvent {
      * }
      */
     public static int data1$get(MemorySegment seg) {
-        return (int)constants$123.const$3.get(seg);
+        return (int)constants$127.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -234,13 +234,13 @@ public class SDL_DisplayEvent {
      * }
      */
     public static void data1$set(MemorySegment seg, int x) {
-        constants$123.const$3.set(seg, x);
+        constants$127.const$3.set(seg, x);
     }
     public static int data1$get(MemorySegment seg, long index) {
-        return (int)constants$123.const$3.get(seg.asSlice(index*sizeof()));
+        return (int)constants$127.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void data1$set(MemorySegment seg, long index, int x) {
-        constants$123.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$127.const$3.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }

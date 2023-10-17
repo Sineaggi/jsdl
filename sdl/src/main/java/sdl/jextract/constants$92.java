@@ -11,29 +11,29 @@ final class constants$92 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$92() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(MemoryLayout.structLayout(
-        MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
-    ).withName("SDL_GUID"),
-        JAVA_INT
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_GetScancodeFromKey",
+        constants$8.const$0
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetDeviceGUID",
-        constants$92.const$0
+        "SDL_GetScancodeName",
+        constants$33.const$5
     );
-    static final FunctionDescriptor const$2 = FunctionDescriptor.of(JAVA_SHORT,
-        JAVA_INT
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_GetScancodeFromName",
+        constants$18.const$4
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetDeviceVendor",
-        constants$92.const$2
+        "SDL_GetKeyName",
+        constants$33.const$5
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetDeviceProduct",
-        constants$92.const$2
+        "SDL_GetKeyFromName",
+        constants$18.const$4
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetDeviceProductVersion",
-        constants$92.const$2
+        "SDL_StartTextInput",
+        constants$32.const$3
     );
 }
 

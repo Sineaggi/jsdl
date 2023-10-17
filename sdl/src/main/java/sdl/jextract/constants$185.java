@@ -11,12 +11,30 @@ final class constants$185 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$185() {}
-    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("x");
-    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("X");
-    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ACCELEROMETER_AS_JOYSTICK");
-    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ALLOW_ALT_TAB_WHILE_GRABBED");
-    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ALLOW_TOPMOST");
-    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ANDROID_APK_EXPANSION_MAIN_FILE_VERSION");
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_RenderPresent",
+        constants$1.const$2
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_DestroyTexture",
+        constants$1.const$2
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_DestroyRenderer",
+        constants$1.const$2
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_RenderFlush",
+        constants$18.const$4
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_GL_BindTexture",
+        constants$21.const$2
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_GL_UnbindTexture",
+        constants$18.const$4
+    );
 }
 
 

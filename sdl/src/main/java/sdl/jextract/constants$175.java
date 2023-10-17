@@ -12,35 +12,41 @@ final class constants$175 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$175() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_RenderGetClipRect",
-        constants$67.const$4
+        "SDL_SetTextureUserData",
+        constants$6.const$4
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_RenderIsClipEnabled",
-        constants$18.const$4
+        "SDL_GetTextureUserData",
+        constants$6.const$0
     );
-    static final FunctionDescriptor const$2 = FunctionDescriptor.of(JAVA_INT,
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_UpdateTexture",
+        constants$113.const$2
+    );
+    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
         RuntimeHelper.POINTER,
-        JAVA_FLOAT,
-        JAVA_FLOAT
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_RenderSetScale",
-        constants$175.const$2
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_INT
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_RenderGetScale",
-        constants$59.const$0
+        "SDL_UpdateYUVTexture",
+        constants$175.const$3
     );
-    static final FunctionDescriptor const$5 = FunctionDescriptor.ofVoid(
+    static final FunctionDescriptor const$5 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
         RuntimeHelper.POINTER,
         JAVA_INT,
-        JAVA_INT,
         RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+        JAVA_INT
     );
     static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
-        "SDL_RenderWindowToLogical",
+        "SDL_UpdateNVTexture",
         constants$175.const$5
     );
 }

@@ -11,22 +11,24 @@ final class constants$137 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$137() {}
-    static final VarHandle const$0 = constants$135.const$5.varHandle(MemoryLayout.PathElement.groupElement("padding3"));
-    static final VarHandle const$1 = constants$135.const$5.varHandle(MemoryLayout.PathElement.groupElement("value"));
-    static final VarHandle const$2 = constants$135.const$5.varHandle(MemoryLayout.PathElement.groupElement("padding4"));
-    static final StructLayout const$3 = MemoryLayout.structLayout(
+    static final StructLayout const$0 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
+        JAVA_INT.withName("windowID"),
         JAVA_INT.withName("which"),
-        JAVA_BYTE.withName("ball"),
-        JAVA_BYTE.withName("padding1"),
-        JAVA_BYTE.withName("padding2"),
-        JAVA_BYTE.withName("padding3"),
-        JAVA_SHORT.withName("xrel"),
-        JAVA_SHORT.withName("yrel")
-    ).withName("SDL_JoyBallEvent");
-    static final VarHandle const$4 = constants$137.const$3.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$5 = constants$137.const$3.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+        JAVA_INT.withName("x"),
+        JAVA_INT.withName("y"),
+        JAVA_INT.withName("direction"),
+        JAVA_FLOAT.withName("preciseX"),
+        JAVA_FLOAT.withName("preciseY"),
+        JAVA_INT.withName("mouseX"),
+        JAVA_INT.withName("mouseY")
+    ).withName("SDL_MouseWheelEvent");
+    static final VarHandle const$1 = constants$137.const$0.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$2 = constants$137.const$0.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$3 = constants$137.const$0.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
+    static final VarHandle const$4 = constants$137.const$0.varHandle(MemoryLayout.PathElement.groupElement("which"));
+    static final VarHandle const$5 = constants$137.const$0.varHandle(MemoryLayout.PathElement.groupElement("x"));
 }
 
 

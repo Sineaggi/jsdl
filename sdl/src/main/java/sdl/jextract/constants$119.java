@@ -12,37 +12,28 @@ final class constants$119 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$119() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerIsSensorEnabled",
-        constants$34.const$3
+        "SDL_GameControllerGetProductVersion",
+        constants$45.const$0
     );
-    static final FunctionDescriptor const$1 = FunctionDescriptor.of(JAVA_FLOAT,
-        RuntimeHelper.POINTER,
-        JAVA_INT
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerGetFirmwareVersion",
+        constants$45.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetSensorDataRate",
-        constants$119.const$1
+        "SDL_GameControllerGetSerial",
+        constants$6.const$0
     );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerGetAttached",
+        constants$18.const$4
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetSensorData",
-        constants$119.const$3
+        "SDL_GameControllerGetJoystick",
+        constants$6.const$0
     );
-    static final FunctionDescriptor const$5 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        JAVA_INT
-    );
-    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetSensorDataWithTimestamp",
-        constants$119.const$5
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerEventState",
+        constants$8.const$0
     );
 }
 

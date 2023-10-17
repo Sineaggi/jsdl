@@ -11,44 +11,29 @@ final class constants$168 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$168() {}
-    static final StructLayout const$0 = MemoryLayout.structLayout(
-        MemoryLayout.structLayout(
-            JAVA_FLOAT.withName("x"),
-            JAVA_FLOAT.withName("y")
-        ).withName("position"),
-        MemoryLayout.structLayout(
-            JAVA_BYTE.withName("r"),
-            JAVA_BYTE.withName("g"),
-            JAVA_BYTE.withName("b"),
-            JAVA_BYTE.withName("a")
-        ).withName("color"),
-        MemoryLayout.structLayout(
-            JAVA_FLOAT.withName("x"),
-            JAVA_FLOAT.withName("y")
-        ).withName("tex_coord")
-    ).withName("SDL_Vertex");
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_SetHintWithPriority",
+        constants$6.const$2
+    );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetNumRenderDrivers",
-        constants$5.const$5
+        "SDL_SetHint",
+        constants$6.const$4
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GetRenderDriverInfo",
-        constants$73.const$3
+        "SDL_ResetHint",
+        constants$18.const$4
     );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_ResetHints",
+        constants$32.const$3
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_CreateWindowAndRenderer",
-        constants$168.const$3
+        "SDL_GetHint",
+        constants$6.const$0
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_CreateRenderer",
-        constants$68.const$2
+        "SDL_GetHintBoolean",
+        constants$34.const$3
     );
 }
 

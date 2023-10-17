@@ -9,8 +9,3412 @@ import java.lang.foreign.*;
 import static java.lang.foreign.ValueLayout.*;
 public class sdl_h_1 {
 
+    public static MethodHandle SDL_StopTextInput$MH() {
+        return RuntimeHelper.requireNonNull(constants$93.const$1,"SDL_StopTextInput");
+    }
+    /**
+     * {@snippet :
+     * void SDL_StopTextInput();
+     * }
+     */
+    public static void SDL_StopTextInput() {
+        var mh$ = SDL_StopTextInput$MH();
+        try {
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_ClearComposition$MH() {
+        return RuntimeHelper.requireNonNull(constants$93.const$2,"SDL_ClearComposition");
+    }
+    /**
+     * {@snippet :
+     * void SDL_ClearComposition();
+     * }
+     */
+    public static void SDL_ClearComposition() {
+        var mh$ = SDL_ClearComposition$MH();
+        try {
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_IsTextInputShown$MH() {
+        return RuntimeHelper.requireNonNull(constants$93.const$3,"SDL_IsTextInputShown");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_IsTextInputShown();
+     * }
+     */
+    public static int SDL_IsTextInputShown() {
+        var mh$ = SDL_IsTextInputShown$MH();
+        try {
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetTextInputRect$MH() {
+        return RuntimeHelper.requireNonNull(constants$93.const$4,"SDL_SetTextInputRect");
+    }
+    /**
+     * {@snippet :
+     * void SDL_SetTextInputRect(struct SDL_Rect* rect);
+     * }
+     */
+    public static void SDL_SetTextInputRect(MemorySegment rect) {
+        var mh$ = SDL_SetTextInputRect$MH();
+        try {
+            mh$.invokeExact(rect);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_HasScreenKeyboardSupport$MH() {
+        return RuntimeHelper.requireNonNull(constants$93.const$5,"SDL_HasScreenKeyboardSupport");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_HasScreenKeyboardSupport();
+     * }
+     */
+    public static int SDL_HasScreenKeyboardSupport() {
+        var mh$ = SDL_HasScreenKeyboardSupport$MH();
+        try {
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_IsScreenKeyboardShown$MH() {
+        return RuntimeHelper.requireNonNull(constants$94.const$0,"SDL_IsScreenKeyboardShown");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_IsScreenKeyboardShown(struct SDL_Window* window);
+     * }
+     */
+    public static int SDL_IsScreenKeyboardShown(MemorySegment window) {
+        var mh$ = SDL_IsScreenKeyboardShown$MH();
+        try {
+            return (int)mh$.invokeExact(window);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GUIDToString$MH() {
+        return RuntimeHelper.requireNonNull(constants$94.const$3,"SDL_GUIDToString");
+    }
+    /**
+     * {@snippet :
+     * void SDL_GUIDToString(struct SDL_GUID guid, char* pszGUID, int cbGUID);
+     * }
+     */
+    public static void SDL_GUIDToString(MemorySegment guid, MemorySegment pszGUID, int cbGUID) {
+        var mh$ = SDL_GUIDToString$MH();
+        try {
+            mh$.invokeExact(guid, pszGUID, cbGUID);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GUIDFromString$MH() {
+        return RuntimeHelper.requireNonNull(constants$94.const$5,"SDL_GUIDFromString");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_GUID SDL_GUIDFromString(char* pchGUID);
+     * }
+     */
+    public static MemorySegment SDL_GUIDFromString(SegmentAllocator allocator, MemorySegment pchGUID) {
+        var mh$ = SDL_GUIDFromString$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(allocator, pchGUID);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    /**
+     * {@snippet :
+     * typedef int SDL_JoystickID;
+     * }
+     */
+    public static final OfInt SDL_JoystickID = JAVA_INT;
+    /**
+     * {@snippet :
+     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_UNKNOWN = 0;
+     * }
+     */
+    public static int SDL_JOYSTICK_TYPE_UNKNOWN() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_GAMECONTROLLER = 1;
+     * }
+     */
+    public static int SDL_JOYSTICK_TYPE_GAMECONTROLLER() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_WHEEL = 2;
+     * }
+     */
+    public static int SDL_JOYSTICK_TYPE_WHEEL() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_ARCADE_STICK = 3;
+     * }
+     */
+    public static int SDL_JOYSTICK_TYPE_ARCADE_STICK() {
+        return (int)3L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_FLIGHT_STICK = 4;
+     * }
+     */
+    public static int SDL_JOYSTICK_TYPE_FLIGHT_STICK() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_DANCE_PAD = 5;
+     * }
+     */
+    public static int SDL_JOYSTICK_TYPE_DANCE_PAD() {
+        return (int)5L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_GUITAR = 6;
+     * }
+     */
+    public static int SDL_JOYSTICK_TYPE_GUITAR() {
+        return (int)6L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_DRUM_KIT = 7;
+     * }
+     */
+    public static int SDL_JOYSTICK_TYPE_DRUM_KIT() {
+        return (int)7L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_ARCADE_PAD = 8;
+     * }
+     */
+    public static int SDL_JOYSTICK_TYPE_ARCADE_PAD() {
+        return (int)8L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_JoystickType.SDL_JOYSTICK_TYPE_THROTTLE = 9;
+     * }
+     */
+    public static int SDL_JOYSTICK_TYPE_THROTTLE() {
+        return (int)9L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_JoystickPowerLevel.SDL_JOYSTICK_POWER_UNKNOWN = -1;
+     * }
+     */
+    public static int SDL_JOYSTICK_POWER_UNKNOWN() {
+        return (int)-1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_JoystickPowerLevel.SDL_JOYSTICK_POWER_EMPTY = 0;
+     * }
+     */
+    public static int SDL_JOYSTICK_POWER_EMPTY() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_JoystickPowerLevel.SDL_JOYSTICK_POWER_LOW = 1;
+     * }
+     */
+    public static int SDL_JOYSTICK_POWER_LOW() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_JoystickPowerLevel.SDL_JOYSTICK_POWER_MEDIUM = 2;
+     * }
+     */
+    public static int SDL_JOYSTICK_POWER_MEDIUM() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_JoystickPowerLevel.SDL_JOYSTICK_POWER_FULL = 3;
+     * }
+     */
+    public static int SDL_JOYSTICK_POWER_FULL() {
+        return (int)3L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_JoystickPowerLevel.SDL_JOYSTICK_POWER_WIRED = 4;
+     * }
+     */
+    public static int SDL_JOYSTICK_POWER_WIRED() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_JoystickPowerLevel.SDL_JOYSTICK_POWER_MAX = 5;
+     * }
+     */
+    public static int SDL_JOYSTICK_POWER_MAX() {
+        return (int)5L;
+    }
+    public static MethodHandle SDL_LockJoysticks$MH() {
+        return RuntimeHelper.requireNonNull(constants$95.const$0,"SDL_LockJoysticks");
+    }
+    /**
+     * {@snippet :
+     * void SDL_LockJoysticks();
+     * }
+     */
+    public static void SDL_LockJoysticks() {
+        var mh$ = SDL_LockJoysticks$MH();
+        try {
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_UnlockJoysticks$MH() {
+        return RuntimeHelper.requireNonNull(constants$95.const$1,"SDL_UnlockJoysticks");
+    }
+    /**
+     * {@snippet :
+     * void SDL_UnlockJoysticks();
+     * }
+     */
+    public static void SDL_UnlockJoysticks() {
+        var mh$ = SDL_UnlockJoysticks$MH();
+        try {
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_NumJoysticks$MH() {
+        return RuntimeHelper.requireNonNull(constants$95.const$2,"SDL_NumJoysticks");
+    }
+    /**
+     * {@snippet :
+     * int SDL_NumJoysticks();
+     * }
+     */
+    public static int SDL_NumJoysticks() {
+        var mh$ = SDL_NumJoysticks$MH();
+        try {
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickNameForIndex$MH() {
+        return RuntimeHelper.requireNonNull(constants$95.const$3,"SDL_JoystickNameForIndex");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_JoystickNameForIndex(int device_index);
+     * }
+     */
+    public static MemorySegment SDL_JoystickNameForIndex(int device_index) {
+        var mh$ = SDL_JoystickNameForIndex$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(device_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickPathForIndex$MH() {
+        return RuntimeHelper.requireNonNull(constants$95.const$4,"SDL_JoystickPathForIndex");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_JoystickPathForIndex(int device_index);
+     * }
+     */
+    public static MemorySegment SDL_JoystickPathForIndex(int device_index) {
+        var mh$ = SDL_JoystickPathForIndex$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(device_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetDevicePlayerIndex$MH() {
+        return RuntimeHelper.requireNonNull(constants$95.const$5,"SDL_JoystickGetDevicePlayerIndex");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickGetDevicePlayerIndex(int device_index);
+     * }
+     */
+    public static int SDL_JoystickGetDevicePlayerIndex(int device_index) {
+        var mh$ = SDL_JoystickGetDevicePlayerIndex$MH();
+        try {
+            return (int)mh$.invokeExact(device_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetDeviceGUID$MH() {
+        return RuntimeHelper.requireNonNull(constants$96.const$1,"SDL_JoystickGetDeviceGUID");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_GUID SDL_JoystickGetDeviceGUID(int device_index);
+     * }
+     */
+    public static MemorySegment SDL_JoystickGetDeviceGUID(SegmentAllocator allocator, int device_index) {
+        var mh$ = SDL_JoystickGetDeviceGUID$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(allocator, device_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetDeviceVendor$MH() {
+        return RuntimeHelper.requireNonNull(constants$96.const$3,"SDL_JoystickGetDeviceVendor");
+    }
+    /**
+     * {@snippet :
+     * unsigned short SDL_JoystickGetDeviceVendor(int device_index);
+     * }
+     */
+    public static short SDL_JoystickGetDeviceVendor(int device_index) {
+        var mh$ = SDL_JoystickGetDeviceVendor$MH();
+        try {
+            return (short)mh$.invokeExact(device_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetDeviceProduct$MH() {
+        return RuntimeHelper.requireNonNull(constants$96.const$4,"SDL_JoystickGetDeviceProduct");
+    }
+    /**
+     * {@snippet :
+     * unsigned short SDL_JoystickGetDeviceProduct(int device_index);
+     * }
+     */
+    public static short SDL_JoystickGetDeviceProduct(int device_index) {
+        var mh$ = SDL_JoystickGetDeviceProduct$MH();
+        try {
+            return (short)mh$.invokeExact(device_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetDeviceProductVersion$MH() {
+        return RuntimeHelper.requireNonNull(constants$96.const$5,"SDL_JoystickGetDeviceProductVersion");
+    }
+    /**
+     * {@snippet :
+     * unsigned short SDL_JoystickGetDeviceProductVersion(int device_index);
+     * }
+     */
+    public static short SDL_JoystickGetDeviceProductVersion(int device_index) {
+        var mh$ = SDL_JoystickGetDeviceProductVersion$MH();
+        try {
+            return (short)mh$.invokeExact(device_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetDeviceType$MH() {
+        return RuntimeHelper.requireNonNull(constants$97.const$0,"SDL_JoystickGetDeviceType");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_JoystickType SDL_JoystickGetDeviceType(int device_index);
+     * }
+     */
+    public static int SDL_JoystickGetDeviceType(int device_index) {
+        var mh$ = SDL_JoystickGetDeviceType$MH();
+        try {
+            return (int)mh$.invokeExact(device_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetDeviceInstanceID$MH() {
+        return RuntimeHelper.requireNonNull(constants$97.const$1,"SDL_JoystickGetDeviceInstanceID");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickGetDeviceInstanceID(int device_index);
+     * }
+     */
+    public static int SDL_JoystickGetDeviceInstanceID(int device_index) {
+        var mh$ = SDL_JoystickGetDeviceInstanceID$MH();
+        try {
+            return (int)mh$.invokeExact(device_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickOpen$MH() {
+        return RuntimeHelper.requireNonNull(constants$97.const$2,"SDL_JoystickOpen");
+    }
+    /**
+     * {@snippet :
+     * struct _SDL_Joystick* SDL_JoystickOpen(int device_index);
+     * }
+     */
+    public static MemorySegment SDL_JoystickOpen(int device_index) {
+        var mh$ = SDL_JoystickOpen$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(device_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickFromInstanceID$MH() {
+        return RuntimeHelper.requireNonNull(constants$97.const$3,"SDL_JoystickFromInstanceID");
+    }
+    /**
+     * {@snippet :
+     * struct _SDL_Joystick* SDL_JoystickFromInstanceID(int instance_id);
+     * }
+     */
+    public static MemorySegment SDL_JoystickFromInstanceID(int instance_id) {
+        var mh$ = SDL_JoystickFromInstanceID$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(instance_id);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickFromPlayerIndex$MH() {
+        return RuntimeHelper.requireNonNull(constants$97.const$4,"SDL_JoystickFromPlayerIndex");
+    }
+    /**
+     * {@snippet :
+     * struct _SDL_Joystick* SDL_JoystickFromPlayerIndex(int player_index);
+     * }
+     */
+    public static MemorySegment SDL_JoystickFromPlayerIndex(int player_index) {
+        var mh$ = SDL_JoystickFromPlayerIndex$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(player_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickAttachVirtual$MH() {
+        return RuntimeHelper.requireNonNull(constants$97.const$6,"SDL_JoystickAttachVirtual");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickAttachVirtual(enum SDL_JoystickType type, int naxes, int nbuttons, int nhats);
+     * }
+     */
+    public static int SDL_JoystickAttachVirtual(int type, int naxes, int nbuttons, int nhats) {
+        var mh$ = SDL_JoystickAttachVirtual$MH();
+        try {
+            return (int)mh$.invokeExact(type, naxes, nbuttons, nhats);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickAttachVirtualEx$MH() {
+        return RuntimeHelper.requireNonNull(constants$103.const$0,"SDL_JoystickAttachVirtualEx");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickAttachVirtualEx(struct SDL_VirtualJoystickDesc* desc);
+     * }
+     */
+    public static int SDL_JoystickAttachVirtualEx(MemorySegment desc) {
+        var mh$ = SDL_JoystickAttachVirtualEx$MH();
+        try {
+            return (int)mh$.invokeExact(desc);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickDetachVirtual$MH() {
+        return RuntimeHelper.requireNonNull(constants$103.const$1,"SDL_JoystickDetachVirtual");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickDetachVirtual(int device_index);
+     * }
+     */
+    public static int SDL_JoystickDetachVirtual(int device_index) {
+        var mh$ = SDL_JoystickDetachVirtual$MH();
+        try {
+            return (int)mh$.invokeExact(device_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickIsVirtual$MH() {
+        return RuntimeHelper.requireNonNull(constants$103.const$2,"SDL_JoystickIsVirtual");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_JoystickIsVirtual(int device_index);
+     * }
+     */
+    public static int SDL_JoystickIsVirtual(int device_index) {
+        var mh$ = SDL_JoystickIsVirtual$MH();
+        try {
+            return (int)mh$.invokeExact(device_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickSetVirtualAxis$MH() {
+        return RuntimeHelper.requireNonNull(constants$103.const$4,"SDL_JoystickSetVirtualAxis");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickSetVirtualAxis(struct _SDL_Joystick* joystick, int axis, short value);
+     * }
+     */
+    public static int SDL_JoystickSetVirtualAxis(MemorySegment joystick, int axis, short value) {
+        var mh$ = SDL_JoystickSetVirtualAxis$MH();
+        try {
+            return (int)mh$.invokeExact(joystick, axis, value);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickSetVirtualButton$MH() {
+        return RuntimeHelper.requireNonNull(constants$103.const$6,"SDL_JoystickSetVirtualButton");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickSetVirtualButton(struct _SDL_Joystick* joystick, int button, unsigned char value);
+     * }
+     */
+    public static int SDL_JoystickSetVirtualButton(MemorySegment joystick, int button, byte value) {
+        var mh$ = SDL_JoystickSetVirtualButton$MH();
+        try {
+            return (int)mh$.invokeExact(joystick, button, value);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickSetVirtualHat$MH() {
+        return RuntimeHelper.requireNonNull(constants$104.const$0,"SDL_JoystickSetVirtualHat");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickSetVirtualHat(struct _SDL_Joystick* joystick, int hat, unsigned char value);
+     * }
+     */
+    public static int SDL_JoystickSetVirtualHat(MemorySegment joystick, int hat, byte value) {
+        var mh$ = SDL_JoystickSetVirtualHat$MH();
+        try {
+            return (int)mh$.invokeExact(joystick, hat, value);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickName$MH() {
+        return RuntimeHelper.requireNonNull(constants$104.const$1,"SDL_JoystickName");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_JoystickName(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static MemorySegment SDL_JoystickName(MemorySegment joystick) {
+        var mh$ = SDL_JoystickName$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickPath$MH() {
+        return RuntimeHelper.requireNonNull(constants$104.const$2,"SDL_JoystickPath");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_JoystickPath(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static MemorySegment SDL_JoystickPath(MemorySegment joystick) {
+        var mh$ = SDL_JoystickPath$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetPlayerIndex$MH() {
+        return RuntimeHelper.requireNonNull(constants$104.const$3,"SDL_JoystickGetPlayerIndex");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickGetPlayerIndex(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static int SDL_JoystickGetPlayerIndex(MemorySegment joystick) {
+        var mh$ = SDL_JoystickGetPlayerIndex$MH();
+        try {
+            return (int)mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickSetPlayerIndex$MH() {
+        return RuntimeHelper.requireNonNull(constants$104.const$4,"SDL_JoystickSetPlayerIndex");
+    }
+    /**
+     * {@snippet :
+     * void SDL_JoystickSetPlayerIndex(struct _SDL_Joystick* joystick, int player_index);
+     * }
+     */
+    public static void SDL_JoystickSetPlayerIndex(MemorySegment joystick, int player_index) {
+        var mh$ = SDL_JoystickSetPlayerIndex$MH();
+        try {
+            mh$.invokeExact(joystick, player_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetGUID$MH() {
+        return RuntimeHelper.requireNonNull(constants$104.const$5,"SDL_JoystickGetGUID");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_GUID SDL_JoystickGetGUID(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static MemorySegment SDL_JoystickGetGUID(SegmentAllocator allocator, MemorySegment joystick) {
+        var mh$ = SDL_JoystickGetGUID$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(allocator, joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetVendor$MH() {
+        return RuntimeHelper.requireNonNull(constants$105.const$0,"SDL_JoystickGetVendor");
+    }
+    /**
+     * {@snippet :
+     * unsigned short SDL_JoystickGetVendor(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static short SDL_JoystickGetVendor(MemorySegment joystick) {
+        var mh$ = SDL_JoystickGetVendor$MH();
+        try {
+            return (short)mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetProduct$MH() {
+        return RuntimeHelper.requireNonNull(constants$105.const$1,"SDL_JoystickGetProduct");
+    }
+    /**
+     * {@snippet :
+     * unsigned short SDL_JoystickGetProduct(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static short SDL_JoystickGetProduct(MemorySegment joystick) {
+        var mh$ = SDL_JoystickGetProduct$MH();
+        try {
+            return (short)mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetProductVersion$MH() {
+        return RuntimeHelper.requireNonNull(constants$105.const$2,"SDL_JoystickGetProductVersion");
+    }
+    /**
+     * {@snippet :
+     * unsigned short SDL_JoystickGetProductVersion(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static short SDL_JoystickGetProductVersion(MemorySegment joystick) {
+        var mh$ = SDL_JoystickGetProductVersion$MH();
+        try {
+            return (short)mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetFirmwareVersion$MH() {
+        return RuntimeHelper.requireNonNull(constants$105.const$3,"SDL_JoystickGetFirmwareVersion");
+    }
+    /**
+     * {@snippet :
+     * unsigned short SDL_JoystickGetFirmwareVersion(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static short SDL_JoystickGetFirmwareVersion(MemorySegment joystick) {
+        var mh$ = SDL_JoystickGetFirmwareVersion$MH();
+        try {
+            return (short)mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetSerial$MH() {
+        return RuntimeHelper.requireNonNull(constants$105.const$4,"SDL_JoystickGetSerial");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_JoystickGetSerial(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static MemorySegment SDL_JoystickGetSerial(MemorySegment joystick) {
+        var mh$ = SDL_JoystickGetSerial$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetType$MH() {
+        return RuntimeHelper.requireNonNull(constants$105.const$5,"SDL_JoystickGetType");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_JoystickType SDL_JoystickGetType(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static int SDL_JoystickGetType(MemorySegment joystick) {
+        var mh$ = SDL_JoystickGetType$MH();
+        try {
+            return (int)mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetGUIDString$MH() {
+        return RuntimeHelper.requireNonNull(constants$106.const$0,"SDL_JoystickGetGUIDString");
+    }
+    /**
+     * {@snippet :
+     * void SDL_JoystickGetGUIDString(struct SDL_GUID guid, char* pszGUID, int cbGUID);
+     * }
+     */
+    public static void SDL_JoystickGetGUIDString(MemorySegment guid, MemorySegment pszGUID, int cbGUID) {
+        var mh$ = SDL_JoystickGetGUIDString$MH();
+        try {
+            mh$.invokeExact(guid, pszGUID, cbGUID);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetGUIDFromString$MH() {
+        return RuntimeHelper.requireNonNull(constants$106.const$1,"SDL_JoystickGetGUIDFromString");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_GUID SDL_JoystickGetGUIDFromString(char* pchGUID);
+     * }
+     */
+    public static MemorySegment SDL_JoystickGetGUIDFromString(SegmentAllocator allocator, MemorySegment pchGUID) {
+        var mh$ = SDL_JoystickGetGUIDFromString$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(allocator, pchGUID);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GetJoystickGUIDInfo$MH() {
+        return RuntimeHelper.requireNonNull(constants$106.const$3,"SDL_GetJoystickGUIDInfo");
+    }
+    /**
+     * {@snippet :
+     * void SDL_GetJoystickGUIDInfo(struct SDL_GUID guid, unsigned short* vendor, unsigned short* product, unsigned short* version, unsigned short* crc16);
+     * }
+     */
+    public static void SDL_GetJoystickGUIDInfo(MemorySegment guid, MemorySegment vendor, MemorySegment product, MemorySegment version, MemorySegment crc16) {
+        var mh$ = SDL_GetJoystickGUIDInfo$MH();
+        try {
+            mh$.invokeExact(guid, vendor, product, version, crc16);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetAttached$MH() {
+        return RuntimeHelper.requireNonNull(constants$106.const$4,"SDL_JoystickGetAttached");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_JoystickGetAttached(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static int SDL_JoystickGetAttached(MemorySegment joystick) {
+        var mh$ = SDL_JoystickGetAttached$MH();
+        try {
+            return (int)mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickInstanceID$MH() {
+        return RuntimeHelper.requireNonNull(constants$106.const$5,"SDL_JoystickInstanceID");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickInstanceID(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static int SDL_JoystickInstanceID(MemorySegment joystick) {
+        var mh$ = SDL_JoystickInstanceID$MH();
+        try {
+            return (int)mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickNumAxes$MH() {
+        return RuntimeHelper.requireNonNull(constants$107.const$0,"SDL_JoystickNumAxes");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickNumAxes(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static int SDL_JoystickNumAxes(MemorySegment joystick) {
+        var mh$ = SDL_JoystickNumAxes$MH();
+        try {
+            return (int)mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickNumBalls$MH() {
+        return RuntimeHelper.requireNonNull(constants$107.const$1,"SDL_JoystickNumBalls");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickNumBalls(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static int SDL_JoystickNumBalls(MemorySegment joystick) {
+        var mh$ = SDL_JoystickNumBalls$MH();
+        try {
+            return (int)mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickNumHats$MH() {
+        return RuntimeHelper.requireNonNull(constants$107.const$2,"SDL_JoystickNumHats");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickNumHats(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static int SDL_JoystickNumHats(MemorySegment joystick) {
+        var mh$ = SDL_JoystickNumHats$MH();
+        try {
+            return (int)mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickNumButtons$MH() {
+        return RuntimeHelper.requireNonNull(constants$107.const$3,"SDL_JoystickNumButtons");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickNumButtons(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static int SDL_JoystickNumButtons(MemorySegment joystick) {
+        var mh$ = SDL_JoystickNumButtons$MH();
+        try {
+            return (int)mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickUpdate$MH() {
+        return RuntimeHelper.requireNonNull(constants$107.const$4,"SDL_JoystickUpdate");
+    }
+    /**
+     * {@snippet :
+     * void SDL_JoystickUpdate();
+     * }
+     */
+    public static void SDL_JoystickUpdate() {
+        var mh$ = SDL_JoystickUpdate$MH();
+        try {
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickEventState$MH() {
+        return RuntimeHelper.requireNonNull(constants$107.const$5,"SDL_JoystickEventState");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickEventState(int state);
+     * }
+     */
+    public static int SDL_JoystickEventState(int state) {
+        var mh$ = SDL_JoystickEventState$MH();
+        try {
+            return (int)mh$.invokeExact(state);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetAxis$MH() {
+        return RuntimeHelper.requireNonNull(constants$108.const$1,"SDL_JoystickGetAxis");
+    }
+    /**
+     * {@snippet :
+     * short SDL_JoystickGetAxis(struct _SDL_Joystick* joystick, int axis);
+     * }
+     */
+    public static short SDL_JoystickGetAxis(MemorySegment joystick, int axis) {
+        var mh$ = SDL_JoystickGetAxis$MH();
+        try {
+            return (short)mh$.invokeExact(joystick, axis);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetAxisInitialState$MH() {
+        return RuntimeHelper.requireNonNull(constants$108.const$3,"SDL_JoystickGetAxisInitialState");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_JoystickGetAxisInitialState(struct _SDL_Joystick* joystick, int axis, short* state);
+     * }
+     */
+    public static int SDL_JoystickGetAxisInitialState(MemorySegment joystick, int axis, MemorySegment state) {
+        var mh$ = SDL_JoystickGetAxisInitialState$MH();
+        try {
+            return (int)mh$.invokeExact(joystick, axis, state);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetHat$MH() {
+        return RuntimeHelper.requireNonNull(constants$108.const$5,"SDL_JoystickGetHat");
+    }
+    /**
+     * {@snippet :
+     * unsigned char SDL_JoystickGetHat(struct _SDL_Joystick* joystick, int hat);
+     * }
+     */
+    public static byte SDL_JoystickGetHat(MemorySegment joystick, int hat) {
+        var mh$ = SDL_JoystickGetHat$MH();
+        try {
+            return (byte)mh$.invokeExact(joystick, hat);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetBall$MH() {
+        return RuntimeHelper.requireNonNull(constants$109.const$0,"SDL_JoystickGetBall");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickGetBall(struct _SDL_Joystick* joystick, int ball, int* dx, int* dy);
+     * }
+     */
+    public static int SDL_JoystickGetBall(MemorySegment joystick, int ball, MemorySegment dx, MemorySegment dy) {
+        var mh$ = SDL_JoystickGetBall$MH();
+        try {
+            return (int)mh$.invokeExact(joystick, ball, dx, dy);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickGetButton$MH() {
+        return RuntimeHelper.requireNonNull(constants$109.const$1,"SDL_JoystickGetButton");
+    }
+    /**
+     * {@snippet :
+     * unsigned char SDL_JoystickGetButton(struct _SDL_Joystick* joystick, int button);
+     * }
+     */
+    public static byte SDL_JoystickGetButton(MemorySegment joystick, int button) {
+        var mh$ = SDL_JoystickGetButton$MH();
+        try {
+            return (byte)mh$.invokeExact(joystick, button);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickRumble$MH() {
+        return RuntimeHelper.requireNonNull(constants$109.const$3,"SDL_JoystickRumble");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickRumble(struct _SDL_Joystick* joystick, unsigned short low_frequency_rumble, unsigned short high_frequency_rumble, unsigned int duration_ms);
+     * }
+     */
+    public static int SDL_JoystickRumble(MemorySegment joystick, short low_frequency_rumble, short high_frequency_rumble, int duration_ms) {
+        var mh$ = SDL_JoystickRumble$MH();
+        try {
+            return (int)mh$.invokeExact(joystick, low_frequency_rumble, high_frequency_rumble, duration_ms);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickRumbleTriggers$MH() {
+        return RuntimeHelper.requireNonNull(constants$109.const$4,"SDL_JoystickRumbleTriggers");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickRumbleTriggers(struct _SDL_Joystick* joystick, unsigned short left_rumble, unsigned short right_rumble, unsigned int duration_ms);
+     * }
+     */
+    public static int SDL_JoystickRumbleTriggers(MemorySegment joystick, short left_rumble, short right_rumble, int duration_ms) {
+        var mh$ = SDL_JoystickRumbleTriggers$MH();
+        try {
+            return (int)mh$.invokeExact(joystick, left_rumble, right_rumble, duration_ms);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickHasLED$MH() {
+        return RuntimeHelper.requireNonNull(constants$109.const$5,"SDL_JoystickHasLED");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_JoystickHasLED(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static int SDL_JoystickHasLED(MemorySegment joystick) {
+        var mh$ = SDL_JoystickHasLED$MH();
+        try {
+            return (int)mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickHasRumble$MH() {
+        return RuntimeHelper.requireNonNull(constants$110.const$0,"SDL_JoystickHasRumble");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_JoystickHasRumble(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static int SDL_JoystickHasRumble(MemorySegment joystick) {
+        var mh$ = SDL_JoystickHasRumble$MH();
+        try {
+            return (int)mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickHasRumbleTriggers$MH() {
+        return RuntimeHelper.requireNonNull(constants$110.const$1,"SDL_JoystickHasRumbleTriggers");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_JoystickHasRumbleTriggers(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static int SDL_JoystickHasRumbleTriggers(MemorySegment joystick) {
+        var mh$ = SDL_JoystickHasRumbleTriggers$MH();
+        try {
+            return (int)mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickSetLED$MH() {
+        return RuntimeHelper.requireNonNull(constants$110.const$2,"SDL_JoystickSetLED");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickSetLED(struct _SDL_Joystick* joystick, unsigned char red, unsigned char green, unsigned char blue);
+     * }
+     */
+    public static int SDL_JoystickSetLED(MemorySegment joystick, byte red, byte green, byte blue) {
+        var mh$ = SDL_JoystickSetLED$MH();
+        try {
+            return (int)mh$.invokeExact(joystick, red, green, blue);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickSendEffect$MH() {
+        return RuntimeHelper.requireNonNull(constants$110.const$3,"SDL_JoystickSendEffect");
+    }
+    /**
+     * {@snippet :
+     * int SDL_JoystickSendEffect(struct _SDL_Joystick* joystick, void* data, int size);
+     * }
+     */
+    public static int SDL_JoystickSendEffect(MemorySegment joystick, MemorySegment data, int size) {
+        var mh$ = SDL_JoystickSendEffect$MH();
+        try {
+            return (int)mh$.invokeExact(joystick, data, size);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickClose$MH() {
+        return RuntimeHelper.requireNonNull(constants$110.const$4,"SDL_JoystickClose");
+    }
+    /**
+     * {@snippet :
+     * void SDL_JoystickClose(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static void SDL_JoystickClose(MemorySegment joystick) {
+        var mh$ = SDL_JoystickClose$MH();
+        try {
+            mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_JoystickCurrentPowerLevel$MH() {
+        return RuntimeHelper.requireNonNull(constants$110.const$5,"SDL_JoystickCurrentPowerLevel");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_JoystickPowerLevel SDL_JoystickCurrentPowerLevel(struct _SDL_Joystick* joystick);
+     * }
+     */
+    public static int SDL_JoystickCurrentPowerLevel(MemorySegment joystick) {
+        var mh$ = SDL_JoystickCurrentPowerLevel$MH();
+        try {
+            return (int)mh$.invokeExact(joystick);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    /**
+     * {@snippet :
+     * typedef int SDL_SensorID;
+     * }
+     */
+    public static final OfInt SDL_SensorID = JAVA_INT;
+    /**
+     * {@snippet :
+     * enum SDL_SensorType.SDL_SENSOR_INVALID = -1;
+     * }
+     */
+    public static int SDL_SENSOR_INVALID() {
+        return (int)-1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_SensorType.SDL_SENSOR_UNKNOWN = 0;
+     * }
+     */
+    public static int SDL_SENSOR_UNKNOWN() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_SensorType.SDL_SENSOR_ACCEL = 1;
+     * }
+     */
+    public static int SDL_SENSOR_ACCEL() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_SensorType.SDL_SENSOR_GYRO = 2;
+     * }
+     */
+    public static int SDL_SENSOR_GYRO() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_SensorType.SDL_SENSOR_ACCEL_L = 3;
+     * }
+     */
+    public static int SDL_SENSOR_ACCEL_L() {
+        return (int)3L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_SensorType.SDL_SENSOR_GYRO_L = 4;
+     * }
+     */
+    public static int SDL_SENSOR_GYRO_L() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_SensorType.SDL_SENSOR_ACCEL_R = 5;
+     * }
+     */
+    public static int SDL_SENSOR_ACCEL_R() {
+        return (int)5L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_SensorType.SDL_SENSOR_GYRO_R = 6;
+     * }
+     */
+    public static int SDL_SENSOR_GYRO_R() {
+        return (int)6L;
+    }
+    public static MethodHandle SDL_LockSensors$MH() {
+        return RuntimeHelper.requireNonNull(constants$111.const$0,"SDL_LockSensors");
+    }
+    /**
+     * {@snippet :
+     * void SDL_LockSensors();
+     * }
+     */
+    public static void SDL_LockSensors() {
+        var mh$ = SDL_LockSensors$MH();
+        try {
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_UnlockSensors$MH() {
+        return RuntimeHelper.requireNonNull(constants$111.const$1,"SDL_UnlockSensors");
+    }
+    /**
+     * {@snippet :
+     * void SDL_UnlockSensors();
+     * }
+     */
+    public static void SDL_UnlockSensors() {
+        var mh$ = SDL_UnlockSensors$MH();
+        try {
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_NumSensors$MH() {
+        return RuntimeHelper.requireNonNull(constants$111.const$2,"SDL_NumSensors");
+    }
+    /**
+     * {@snippet :
+     * int SDL_NumSensors();
+     * }
+     */
+    public static int SDL_NumSensors() {
+        var mh$ = SDL_NumSensors$MH();
+        try {
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SensorGetDeviceName$MH() {
+        return RuntimeHelper.requireNonNull(constants$111.const$3,"SDL_SensorGetDeviceName");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_SensorGetDeviceName(int device_index);
+     * }
+     */
+    public static MemorySegment SDL_SensorGetDeviceName(int device_index) {
+        var mh$ = SDL_SensorGetDeviceName$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(device_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SensorGetDeviceType$MH() {
+        return RuntimeHelper.requireNonNull(constants$111.const$4,"SDL_SensorGetDeviceType");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_SensorType SDL_SensorGetDeviceType(int device_index);
+     * }
+     */
+    public static int SDL_SensorGetDeviceType(int device_index) {
+        var mh$ = SDL_SensorGetDeviceType$MH();
+        try {
+            return (int)mh$.invokeExact(device_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SensorGetDeviceNonPortableType$MH() {
+        return RuntimeHelper.requireNonNull(constants$111.const$5,"SDL_SensorGetDeviceNonPortableType");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SensorGetDeviceNonPortableType(int device_index);
+     * }
+     */
+    public static int SDL_SensorGetDeviceNonPortableType(int device_index) {
+        var mh$ = SDL_SensorGetDeviceNonPortableType$MH();
+        try {
+            return (int)mh$.invokeExact(device_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SensorGetDeviceInstanceID$MH() {
+        return RuntimeHelper.requireNonNull(constants$112.const$0,"SDL_SensorGetDeviceInstanceID");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SensorGetDeviceInstanceID(int device_index);
+     * }
+     */
+    public static int SDL_SensorGetDeviceInstanceID(int device_index) {
+        var mh$ = SDL_SensorGetDeviceInstanceID$MH();
+        try {
+            return (int)mh$.invokeExact(device_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SensorOpen$MH() {
+        return RuntimeHelper.requireNonNull(constants$112.const$1,"SDL_SensorOpen");
+    }
+    /**
+     * {@snippet :
+     * struct _SDL_Sensor* SDL_SensorOpen(int device_index);
+     * }
+     */
+    public static MemorySegment SDL_SensorOpen(int device_index) {
+        var mh$ = SDL_SensorOpen$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(device_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SensorFromInstanceID$MH() {
+        return RuntimeHelper.requireNonNull(constants$112.const$2,"SDL_SensorFromInstanceID");
+    }
+    /**
+     * {@snippet :
+     * struct _SDL_Sensor* SDL_SensorFromInstanceID(int instance_id);
+     * }
+     */
+    public static MemorySegment SDL_SensorFromInstanceID(int instance_id) {
+        var mh$ = SDL_SensorFromInstanceID$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(instance_id);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SensorGetName$MH() {
+        return RuntimeHelper.requireNonNull(constants$112.const$3,"SDL_SensorGetName");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_SensorGetName(struct _SDL_Sensor* sensor);
+     * }
+     */
+    public static MemorySegment SDL_SensorGetName(MemorySegment sensor) {
+        var mh$ = SDL_SensorGetName$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(sensor);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SensorGetType$MH() {
+        return RuntimeHelper.requireNonNull(constants$112.const$4,"SDL_SensorGetType");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_SensorType SDL_SensorGetType(struct _SDL_Sensor* sensor);
+     * }
+     */
+    public static int SDL_SensorGetType(MemorySegment sensor) {
+        var mh$ = SDL_SensorGetType$MH();
+        try {
+            return (int)mh$.invokeExact(sensor);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SensorGetNonPortableType$MH() {
+        return RuntimeHelper.requireNonNull(constants$112.const$5,"SDL_SensorGetNonPortableType");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SensorGetNonPortableType(struct _SDL_Sensor* sensor);
+     * }
+     */
+    public static int SDL_SensorGetNonPortableType(MemorySegment sensor) {
+        var mh$ = SDL_SensorGetNonPortableType$MH();
+        try {
+            return (int)mh$.invokeExact(sensor);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SensorGetInstanceID$MH() {
+        return RuntimeHelper.requireNonNull(constants$113.const$0,"SDL_SensorGetInstanceID");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SensorGetInstanceID(struct _SDL_Sensor* sensor);
+     * }
+     */
+    public static int SDL_SensorGetInstanceID(MemorySegment sensor) {
+        var mh$ = SDL_SensorGetInstanceID$MH();
+        try {
+            return (int)mh$.invokeExact(sensor);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SensorGetData$MH() {
+        return RuntimeHelper.requireNonNull(constants$113.const$1,"SDL_SensorGetData");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SensorGetData(struct _SDL_Sensor* sensor, float* data, int num_values);
+     * }
+     */
+    public static int SDL_SensorGetData(MemorySegment sensor, MemorySegment data, int num_values) {
+        var mh$ = SDL_SensorGetData$MH();
+        try {
+            return (int)mh$.invokeExact(sensor, data, num_values);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SensorGetDataWithTimestamp$MH() {
+        return RuntimeHelper.requireNonNull(constants$113.const$3,"SDL_SensorGetDataWithTimestamp");
+    }
+    /**
+     * {@snippet :
+     * int SDL_SensorGetDataWithTimestamp(struct _SDL_Sensor* sensor, unsigned long long* timestamp, float* data, int num_values);
+     * }
+     */
+    public static int SDL_SensorGetDataWithTimestamp(MemorySegment sensor, MemorySegment timestamp, MemorySegment data, int num_values) {
+        var mh$ = SDL_SensorGetDataWithTimestamp$MH();
+        try {
+            return (int)mh$.invokeExact(sensor, timestamp, data, num_values);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SensorClose$MH() {
+        return RuntimeHelper.requireNonNull(constants$113.const$4,"SDL_SensorClose");
+    }
+    /**
+     * {@snippet :
+     * void SDL_SensorClose(struct _SDL_Sensor* sensor);
+     * }
+     */
+    public static void SDL_SensorClose(MemorySegment sensor) {
+        var mh$ = SDL_SensorClose$MH();
+        try {
+            mh$.invokeExact(sensor);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SensorUpdate$MH() {
+        return RuntimeHelper.requireNonNull(constants$113.const$5,"SDL_SensorUpdate");
+    }
+    /**
+     * {@snippet :
+     * void SDL_SensorUpdate();
+     * }
+     */
+    public static void SDL_SensorUpdate() {
+        var mh$ = SDL_SensorUpdate$MH();
+        try {
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_UNKNOWN = 0;
+     * }
+     */
+    public static int SDL_CONTROLLER_TYPE_UNKNOWN() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_XBOX360 = 1;
+     * }
+     */
+    public static int SDL_CONTROLLER_TYPE_XBOX360() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_XBOXONE = 2;
+     * }
+     */
+    public static int SDL_CONTROLLER_TYPE_XBOXONE() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_PS3 = 3;
+     * }
+     */
+    public static int SDL_CONTROLLER_TYPE_PS3() {
+        return (int)3L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_PS4 = 4;
+     * }
+     */
+    public static int SDL_CONTROLLER_TYPE_PS4() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_PRO = 5;
+     * }
+     */
+    public static int SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_PRO() {
+        return (int)5L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_VIRTUAL = 6;
+     * }
+     */
+    public static int SDL_CONTROLLER_TYPE_VIRTUAL() {
+        return (int)6L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_PS5 = 7;
+     * }
+     */
+    public static int SDL_CONTROLLER_TYPE_PS5() {
+        return (int)7L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_AMAZON_LUNA = 8;
+     * }
+     */
+    public static int SDL_CONTROLLER_TYPE_AMAZON_LUNA() {
+        return (int)8L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_GOOGLE_STADIA = 9;
+     * }
+     */
+    public static int SDL_CONTROLLER_TYPE_GOOGLE_STADIA() {
+        return (int)9L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_NVIDIA_SHIELD = 10;
+     * }
+     */
+    public static int SDL_CONTROLLER_TYPE_NVIDIA_SHIELD() {
+        return (int)10L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_LEFT = 11;
+     * }
+     */
+    public static int SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_LEFT() {
+        return (int)11L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_RIGHT = 12;
+     * }
+     */
+    public static int SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_RIGHT() {
+        return (int)12L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerType.SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_PAIR = 13;
+     * }
+     */
+    public static int SDL_CONTROLLER_TYPE_NINTENDO_SWITCH_JOYCON_PAIR() {
+        return (int)13L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerBindType.SDL_CONTROLLER_BINDTYPE_NONE = 0;
+     * }
+     */
+    public static int SDL_CONTROLLER_BINDTYPE_NONE() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerBindType.SDL_CONTROLLER_BINDTYPE_BUTTON = 1;
+     * }
+     */
+    public static int SDL_CONTROLLER_BINDTYPE_BUTTON() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerBindType.SDL_CONTROLLER_BINDTYPE_AXIS = 2;
+     * }
+     */
+    public static int SDL_CONTROLLER_BINDTYPE_AXIS() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerBindType.SDL_CONTROLLER_BINDTYPE_HAT = 3;
+     * }
+     */
+    public static int SDL_CONTROLLER_BINDTYPE_HAT() {
+        return (int)3L;
+    }
+    public static MethodHandle SDL_GameControllerAddMappingsFromRW$MH() {
+        return RuntimeHelper.requireNonNull(constants$115.const$2,"SDL_GameControllerAddMappingsFromRW");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GameControllerAddMappingsFromRW(struct SDL_RWops* rw, int freerw);
+     * }
+     */
+    public static int SDL_GameControllerAddMappingsFromRW(MemorySegment rw, int freerw) {
+        var mh$ = SDL_GameControllerAddMappingsFromRW$MH();
+        try {
+            return (int)mh$.invokeExact(rw, freerw);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerAddMapping$MH() {
+        return RuntimeHelper.requireNonNull(constants$115.const$3,"SDL_GameControllerAddMapping");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GameControllerAddMapping(char* mappingString);
+     * }
+     */
+    public static int SDL_GameControllerAddMapping(MemorySegment mappingString) {
+        var mh$ = SDL_GameControllerAddMapping$MH();
+        try {
+            return (int)mh$.invokeExact(mappingString);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerNumMappings$MH() {
+        return RuntimeHelper.requireNonNull(constants$115.const$4,"SDL_GameControllerNumMappings");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GameControllerNumMappings();
+     * }
+     */
+    public static int SDL_GameControllerNumMappings() {
+        var mh$ = SDL_GameControllerNumMappings$MH();
+        try {
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerMappingForIndex$MH() {
+        return RuntimeHelper.requireNonNull(constants$115.const$5,"SDL_GameControllerMappingForIndex");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GameControllerMappingForIndex(int mapping_index);
+     * }
+     */
+    public static MemorySegment SDL_GameControllerMappingForIndex(int mapping_index) {
+        var mh$ = SDL_GameControllerMappingForIndex$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(mapping_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerMappingForGUID$MH() {
+        return RuntimeHelper.requireNonNull(constants$116.const$1,"SDL_GameControllerMappingForGUID");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GameControllerMappingForGUID(struct SDL_GUID guid);
+     * }
+     */
+    public static MemorySegment SDL_GameControllerMappingForGUID(MemorySegment guid) {
+        var mh$ = SDL_GameControllerMappingForGUID$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(guid);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerMapping$MH() {
+        return RuntimeHelper.requireNonNull(constants$116.const$2,"SDL_GameControllerMapping");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GameControllerMapping(struct _SDL_GameController* gamecontroller);
+     * }
+     */
+    public static MemorySegment SDL_GameControllerMapping(MemorySegment gamecontroller) {
+        var mh$ = SDL_GameControllerMapping$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(gamecontroller);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_IsGameController$MH() {
+        return RuntimeHelper.requireNonNull(constants$116.const$3,"SDL_IsGameController");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_IsGameController(int joystick_index);
+     * }
+     */
+    public static int SDL_IsGameController(int joystick_index) {
+        var mh$ = SDL_IsGameController$MH();
+        try {
+            return (int)mh$.invokeExact(joystick_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerNameForIndex$MH() {
+        return RuntimeHelper.requireNonNull(constants$116.const$4,"SDL_GameControllerNameForIndex");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GameControllerNameForIndex(int joystick_index);
+     * }
+     */
+    public static MemorySegment SDL_GameControllerNameForIndex(int joystick_index) {
+        var mh$ = SDL_GameControllerNameForIndex$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(joystick_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerPathForIndex$MH() {
+        return RuntimeHelper.requireNonNull(constants$116.const$5,"SDL_GameControllerPathForIndex");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GameControllerPathForIndex(int joystick_index);
+     * }
+     */
+    public static MemorySegment SDL_GameControllerPathForIndex(int joystick_index) {
+        var mh$ = SDL_GameControllerPathForIndex$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(joystick_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerTypeForIndex$MH() {
+        return RuntimeHelper.requireNonNull(constants$117.const$0,"SDL_GameControllerTypeForIndex");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerType SDL_GameControllerTypeForIndex(int joystick_index);
+     * }
+     */
+    public static int SDL_GameControllerTypeForIndex(int joystick_index) {
+        var mh$ = SDL_GameControllerTypeForIndex$MH();
+        try {
+            return (int)mh$.invokeExact(joystick_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerMappingForDeviceIndex$MH() {
+        return RuntimeHelper.requireNonNull(constants$117.const$1,"SDL_GameControllerMappingForDeviceIndex");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GameControllerMappingForDeviceIndex(int joystick_index);
+     * }
+     */
+    public static MemorySegment SDL_GameControllerMappingForDeviceIndex(int joystick_index) {
+        var mh$ = SDL_GameControllerMappingForDeviceIndex$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(joystick_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerOpen$MH() {
+        return RuntimeHelper.requireNonNull(constants$117.const$2,"SDL_GameControllerOpen");
+    }
+    /**
+     * {@snippet :
+     * struct _SDL_GameController* SDL_GameControllerOpen(int joystick_index);
+     * }
+     */
+    public static MemorySegment SDL_GameControllerOpen(int joystick_index) {
+        var mh$ = SDL_GameControllerOpen$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(joystick_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerFromInstanceID$MH() {
+        return RuntimeHelper.requireNonNull(constants$117.const$3,"SDL_GameControllerFromInstanceID");
+    }
+    /**
+     * {@snippet :
+     * struct _SDL_GameController* SDL_GameControllerFromInstanceID(int joyid);
+     * }
+     */
+    public static MemorySegment SDL_GameControllerFromInstanceID(int joyid) {
+        var mh$ = SDL_GameControllerFromInstanceID$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(joyid);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerFromPlayerIndex$MH() {
+        return RuntimeHelper.requireNonNull(constants$117.const$4,"SDL_GameControllerFromPlayerIndex");
+    }
+    /**
+     * {@snippet :
+     * struct _SDL_GameController* SDL_GameControllerFromPlayerIndex(int player_index);
+     * }
+     */
+    public static MemorySegment SDL_GameControllerFromPlayerIndex(int player_index) {
+        var mh$ = SDL_GameControllerFromPlayerIndex$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(player_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerName$MH() {
+        return RuntimeHelper.requireNonNull(constants$117.const$5,"SDL_GameControllerName");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GameControllerName(struct _SDL_GameController* gamecontroller);
+     * }
+     */
+    public static MemorySegment SDL_GameControllerName(MemorySegment gamecontroller) {
+        var mh$ = SDL_GameControllerName$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(gamecontroller);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerPath$MH() {
+        return RuntimeHelper.requireNonNull(constants$118.const$0,"SDL_GameControllerPath");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GameControllerPath(struct _SDL_GameController* gamecontroller);
+     * }
+     */
+    public static MemorySegment SDL_GameControllerPath(MemorySegment gamecontroller) {
+        var mh$ = SDL_GameControllerPath$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(gamecontroller);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetType$MH() {
+        return RuntimeHelper.requireNonNull(constants$118.const$1,"SDL_GameControllerGetType");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerType SDL_GameControllerGetType(struct _SDL_GameController* gamecontroller);
+     * }
+     */
+    public static int SDL_GameControllerGetType(MemorySegment gamecontroller) {
+        var mh$ = SDL_GameControllerGetType$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetPlayerIndex$MH() {
+        return RuntimeHelper.requireNonNull(constants$118.const$2,"SDL_GameControllerGetPlayerIndex");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GameControllerGetPlayerIndex(struct _SDL_GameController* gamecontroller);
+     * }
+     */
+    public static int SDL_GameControllerGetPlayerIndex(MemorySegment gamecontroller) {
+        var mh$ = SDL_GameControllerGetPlayerIndex$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerSetPlayerIndex$MH() {
+        return RuntimeHelper.requireNonNull(constants$118.const$3,"SDL_GameControllerSetPlayerIndex");
+    }
+    /**
+     * {@snippet :
+     * void SDL_GameControllerSetPlayerIndex(struct _SDL_GameController* gamecontroller, int player_index);
+     * }
+     */
+    public static void SDL_GameControllerSetPlayerIndex(MemorySegment gamecontroller, int player_index) {
+        var mh$ = SDL_GameControllerSetPlayerIndex$MH();
+        try {
+            mh$.invokeExact(gamecontroller, player_index);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetVendor$MH() {
+        return RuntimeHelper.requireNonNull(constants$118.const$4,"SDL_GameControllerGetVendor");
+    }
+    /**
+     * {@snippet :
+     * unsigned short SDL_GameControllerGetVendor(struct _SDL_GameController* gamecontroller);
+     * }
+     */
+    public static short SDL_GameControllerGetVendor(MemorySegment gamecontroller) {
+        var mh$ = SDL_GameControllerGetVendor$MH();
+        try {
+            return (short)mh$.invokeExact(gamecontroller);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetProduct$MH() {
+        return RuntimeHelper.requireNonNull(constants$118.const$5,"SDL_GameControllerGetProduct");
+    }
+    /**
+     * {@snippet :
+     * unsigned short SDL_GameControllerGetProduct(struct _SDL_GameController* gamecontroller);
+     * }
+     */
+    public static short SDL_GameControllerGetProduct(MemorySegment gamecontroller) {
+        var mh$ = SDL_GameControllerGetProduct$MH();
+        try {
+            return (short)mh$.invokeExact(gamecontroller);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetProductVersion$MH() {
+        return RuntimeHelper.requireNonNull(constants$119.const$0,"SDL_GameControllerGetProductVersion");
+    }
+    /**
+     * {@snippet :
+     * unsigned short SDL_GameControllerGetProductVersion(struct _SDL_GameController* gamecontroller);
+     * }
+     */
+    public static short SDL_GameControllerGetProductVersion(MemorySegment gamecontroller) {
+        var mh$ = SDL_GameControllerGetProductVersion$MH();
+        try {
+            return (short)mh$.invokeExact(gamecontroller);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetFirmwareVersion$MH() {
+        return RuntimeHelper.requireNonNull(constants$119.const$1,"SDL_GameControllerGetFirmwareVersion");
+    }
+    /**
+     * {@snippet :
+     * unsigned short SDL_GameControllerGetFirmwareVersion(struct _SDL_GameController* gamecontroller);
+     * }
+     */
+    public static short SDL_GameControllerGetFirmwareVersion(MemorySegment gamecontroller) {
+        var mh$ = SDL_GameControllerGetFirmwareVersion$MH();
+        try {
+            return (short)mh$.invokeExact(gamecontroller);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetSerial$MH() {
+        return RuntimeHelper.requireNonNull(constants$119.const$2,"SDL_GameControllerGetSerial");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GameControllerGetSerial(struct _SDL_GameController* gamecontroller);
+     * }
+     */
+    public static MemorySegment SDL_GameControllerGetSerial(MemorySegment gamecontroller) {
+        var mh$ = SDL_GameControllerGetSerial$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(gamecontroller);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetAttached$MH() {
+        return RuntimeHelper.requireNonNull(constants$119.const$3,"SDL_GameControllerGetAttached");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_GameControllerGetAttached(struct _SDL_GameController* gamecontroller);
+     * }
+     */
+    public static int SDL_GameControllerGetAttached(MemorySegment gamecontroller) {
+        var mh$ = SDL_GameControllerGetAttached$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetJoystick$MH() {
+        return RuntimeHelper.requireNonNull(constants$119.const$4,"SDL_GameControllerGetJoystick");
+    }
+    /**
+     * {@snippet :
+     * struct _SDL_Joystick* SDL_GameControllerGetJoystick(struct _SDL_GameController* gamecontroller);
+     * }
+     */
+    public static MemorySegment SDL_GameControllerGetJoystick(MemorySegment gamecontroller) {
+        var mh$ = SDL_GameControllerGetJoystick$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(gamecontroller);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerEventState$MH() {
+        return RuntimeHelper.requireNonNull(constants$119.const$5,"SDL_GameControllerEventState");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GameControllerEventState(int state);
+     * }
+     */
+    public static int SDL_GameControllerEventState(int state) {
+        var mh$ = SDL_GameControllerEventState$MH();
+        try {
+            return (int)mh$.invokeExact(state);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerUpdate$MH() {
+        return RuntimeHelper.requireNonNull(constants$120.const$0,"SDL_GameControllerUpdate");
+    }
+    /**
+     * {@snippet :
+     * void SDL_GameControllerUpdate();
+     * }
+     */
+    public static void SDL_GameControllerUpdate() {
+        var mh$ = SDL_GameControllerUpdate$MH();
+        try {
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerAxis.SDL_CONTROLLER_AXIS_INVALID = -1;
+     * }
+     */
+    public static int SDL_CONTROLLER_AXIS_INVALID() {
+        return (int)-1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerAxis.SDL_CONTROLLER_AXIS_LEFTX = 0;
+     * }
+     */
+    public static int SDL_CONTROLLER_AXIS_LEFTX() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerAxis.SDL_CONTROLLER_AXIS_LEFTY = 1;
+     * }
+     */
+    public static int SDL_CONTROLLER_AXIS_LEFTY() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerAxis.SDL_CONTROLLER_AXIS_RIGHTX = 2;
+     * }
+     */
+    public static int SDL_CONTROLLER_AXIS_RIGHTX() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerAxis.SDL_CONTROLLER_AXIS_RIGHTY = 3;
+     * }
+     */
+    public static int SDL_CONTROLLER_AXIS_RIGHTY() {
+        return (int)3L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerAxis.SDL_CONTROLLER_AXIS_TRIGGERLEFT = 4;
+     * }
+     */
+    public static int SDL_CONTROLLER_AXIS_TRIGGERLEFT() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerAxis.SDL_CONTROLLER_AXIS_TRIGGERRIGHT = 5;
+     * }
+     */
+    public static int SDL_CONTROLLER_AXIS_TRIGGERRIGHT() {
+        return (int)5L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerAxis.SDL_CONTROLLER_AXIS_MAX = 6;
+     * }
+     */
+    public static int SDL_CONTROLLER_AXIS_MAX() {
+        return (int)6L;
+    }
+    public static MethodHandle SDL_GameControllerGetAxisFromString$MH() {
+        return RuntimeHelper.requireNonNull(constants$120.const$1,"SDL_GameControllerGetAxisFromString");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerAxis SDL_GameControllerGetAxisFromString(char* str);
+     * }
+     */
+    public static int SDL_GameControllerGetAxisFromString(MemorySegment str) {
+        var mh$ = SDL_GameControllerGetAxisFromString$MH();
+        try {
+            return (int)mh$.invokeExact(str);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetStringForAxis$MH() {
+        return RuntimeHelper.requireNonNull(constants$120.const$2,"SDL_GameControllerGetStringForAxis");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GameControllerGetStringForAxis(enum SDL_GameControllerAxis axis);
+     * }
+     */
+    public static MemorySegment SDL_GameControllerGetStringForAxis(int axis) {
+        var mh$ = SDL_GameControllerGetStringForAxis$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(axis);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetBindForAxis$MH() {
+        return RuntimeHelper.requireNonNull(constants$120.const$4,"SDL_GameControllerGetBindForAxis");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_GameControllerButtonBind SDL_GameControllerGetBindForAxis(struct _SDL_GameController* gamecontroller, enum SDL_GameControllerAxis axis);
+     * }
+     */
+    public static MemorySegment SDL_GameControllerGetBindForAxis(SegmentAllocator allocator, MemorySegment gamecontroller, int axis) {
+        var mh$ = SDL_GameControllerGetBindForAxis$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(allocator, gamecontroller, axis);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerHasAxis$MH() {
+        return RuntimeHelper.requireNonNull(constants$120.const$5,"SDL_GameControllerHasAxis");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_GameControllerHasAxis(struct _SDL_GameController* gamecontroller, enum SDL_GameControllerAxis axis);
+     * }
+     */
+    public static int SDL_GameControllerHasAxis(MemorySegment gamecontroller, int axis) {
+        var mh$ = SDL_GameControllerHasAxis$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller, axis);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetAxis$MH() {
+        return RuntimeHelper.requireNonNull(constants$121.const$0,"SDL_GameControllerGetAxis");
+    }
+    /**
+     * {@snippet :
+     * short SDL_GameControllerGetAxis(struct _SDL_GameController* gamecontroller, enum SDL_GameControllerAxis axis);
+     * }
+     */
+    public static short SDL_GameControllerGetAxis(MemorySegment gamecontroller, int axis) {
+        var mh$ = SDL_GameControllerGetAxis$MH();
+        try {
+            return (short)mh$.invokeExact(gamecontroller, axis);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_INVALID = -1;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_INVALID() {
+        return (int)-1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_A = 0;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_A() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_B = 1;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_B() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_X = 2;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_X() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_Y = 3;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_Y() {
+        return (int)3L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_BACK = 4;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_BACK() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_GUIDE = 5;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_GUIDE() {
+        return (int)5L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_START = 6;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_START() {
+        return (int)6L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_LEFTSTICK = 7;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_LEFTSTICK() {
+        return (int)7L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_RIGHTSTICK = 8;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_RIGHTSTICK() {
+        return (int)8L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_LEFTSHOULDER = 9;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_LEFTSHOULDER() {
+        return (int)9L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_RIGHTSHOULDER = 10;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_RIGHTSHOULDER() {
+        return (int)10L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_DPAD_UP = 11;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_DPAD_UP() {
+        return (int)11L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_DPAD_DOWN = 12;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_DPAD_DOWN() {
+        return (int)12L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_DPAD_LEFT = 13;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_DPAD_LEFT() {
+        return (int)13L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_DPAD_RIGHT = 14;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_DPAD_RIGHT() {
+        return (int)14L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_MISC1 = 15;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_MISC1() {
+        return (int)15L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_PADDLE1 = 16;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_PADDLE1() {
+        return (int)16L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_PADDLE2 = 17;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_PADDLE2() {
+        return (int)17L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_PADDLE3 = 18;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_PADDLE3() {
+        return (int)18L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_PADDLE4 = 19;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_PADDLE4() {
+        return (int)19L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_TOUCHPAD = 20;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_TOUCHPAD() {
+        return (int)20L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton.SDL_CONTROLLER_BUTTON_MAX = 21;
+     * }
+     */
+    public static int SDL_CONTROLLER_BUTTON_MAX() {
+        return (int)21L;
+    }
+    public static MethodHandle SDL_GameControllerGetButtonFromString$MH() {
+        return RuntimeHelper.requireNonNull(constants$121.const$1,"SDL_GameControllerGetButtonFromString");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_GameControllerButton SDL_GameControllerGetButtonFromString(char* str);
+     * }
+     */
+    public static int SDL_GameControllerGetButtonFromString(MemorySegment str) {
+        var mh$ = SDL_GameControllerGetButtonFromString$MH();
+        try {
+            return (int)mh$.invokeExact(str);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetStringForButton$MH() {
+        return RuntimeHelper.requireNonNull(constants$121.const$2,"SDL_GameControllerGetStringForButton");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GameControllerGetStringForButton(enum SDL_GameControllerButton button);
+     * }
+     */
+    public static MemorySegment SDL_GameControllerGetStringForButton(int button) {
+        var mh$ = SDL_GameControllerGetStringForButton$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(button);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetBindForButton$MH() {
+        return RuntimeHelper.requireNonNull(constants$121.const$3,"SDL_GameControllerGetBindForButton");
+    }
+    /**
+     * {@snippet :
+     * struct SDL_GameControllerButtonBind SDL_GameControllerGetBindForButton(struct _SDL_GameController* gamecontroller, enum SDL_GameControllerButton button);
+     * }
+     */
+    public static MemorySegment SDL_GameControllerGetBindForButton(SegmentAllocator allocator, MemorySegment gamecontroller, int button) {
+        var mh$ = SDL_GameControllerGetBindForButton$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(allocator, gamecontroller, button);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerHasButton$MH() {
+        return RuntimeHelper.requireNonNull(constants$121.const$4,"SDL_GameControllerHasButton");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_GameControllerHasButton(struct _SDL_GameController* gamecontroller, enum SDL_GameControllerButton button);
+     * }
+     */
+    public static int SDL_GameControllerHasButton(MemorySegment gamecontroller, int button) {
+        var mh$ = SDL_GameControllerHasButton$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller, button);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetButton$MH() {
+        return RuntimeHelper.requireNonNull(constants$121.const$5,"SDL_GameControllerGetButton");
+    }
+    /**
+     * {@snippet :
+     * unsigned char SDL_GameControllerGetButton(struct _SDL_GameController* gamecontroller, enum SDL_GameControllerButton button);
+     * }
+     */
+    public static byte SDL_GameControllerGetButton(MemorySegment gamecontroller, int button) {
+        var mh$ = SDL_GameControllerGetButton$MH();
+        try {
+            return (byte)mh$.invokeExact(gamecontroller, button);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetNumTouchpads$MH() {
+        return RuntimeHelper.requireNonNull(constants$122.const$0,"SDL_GameControllerGetNumTouchpads");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GameControllerGetNumTouchpads(struct _SDL_GameController* gamecontroller);
+     * }
+     */
+    public static int SDL_GameControllerGetNumTouchpads(MemorySegment gamecontroller) {
+        var mh$ = SDL_GameControllerGetNumTouchpads$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetNumTouchpadFingers$MH() {
+        return RuntimeHelper.requireNonNull(constants$122.const$1,"SDL_GameControllerGetNumTouchpadFingers");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GameControllerGetNumTouchpadFingers(struct _SDL_GameController* gamecontroller, int touchpad);
+     * }
+     */
+    public static int SDL_GameControllerGetNumTouchpadFingers(MemorySegment gamecontroller, int touchpad) {
+        var mh$ = SDL_GameControllerGetNumTouchpadFingers$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller, touchpad);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetTouchpadFinger$MH() {
+        return RuntimeHelper.requireNonNull(constants$122.const$3,"SDL_GameControllerGetTouchpadFinger");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GameControllerGetTouchpadFinger(struct _SDL_GameController* gamecontroller, int touchpad, int finger, unsigned char* state, float* x, float* y, float* pressure);
+     * }
+     */
+    public static int SDL_GameControllerGetTouchpadFinger(MemorySegment gamecontroller, int touchpad, int finger, MemorySegment state, MemorySegment x, MemorySegment y, MemorySegment pressure) {
+        var mh$ = SDL_GameControllerGetTouchpadFinger$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller, touchpad, finger, state, x, y, pressure);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerHasSensor$MH() {
+        return RuntimeHelper.requireNonNull(constants$122.const$4,"SDL_GameControllerHasSensor");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_GameControllerHasSensor(struct _SDL_GameController* gamecontroller, enum SDL_SensorType type);
+     * }
+     */
+    public static int SDL_GameControllerHasSensor(MemorySegment gamecontroller, int type) {
+        var mh$ = SDL_GameControllerHasSensor$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller, type);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerSetSensorEnabled$MH() {
+        return RuntimeHelper.requireNonNull(constants$122.const$5,"SDL_GameControllerSetSensorEnabled");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GameControllerSetSensorEnabled(struct _SDL_GameController* gamecontroller, enum SDL_SensorType type, enum SDL_bool enabled);
+     * }
+     */
+    public static int SDL_GameControllerSetSensorEnabled(MemorySegment gamecontroller, int type, int enabled) {
+        var mh$ = SDL_GameControllerSetSensorEnabled$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller, type, enabled);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerIsSensorEnabled$MH() {
+        return RuntimeHelper.requireNonNull(constants$123.const$0,"SDL_GameControllerIsSensorEnabled");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_GameControllerIsSensorEnabled(struct _SDL_GameController* gamecontroller, enum SDL_SensorType type);
+     * }
+     */
+    public static int SDL_GameControllerIsSensorEnabled(MemorySegment gamecontroller, int type) {
+        var mh$ = SDL_GameControllerIsSensorEnabled$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller, type);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetSensorDataRate$MH() {
+        return RuntimeHelper.requireNonNull(constants$123.const$2,"SDL_GameControllerGetSensorDataRate");
+    }
+    /**
+     * {@snippet :
+     * float SDL_GameControllerGetSensorDataRate(struct _SDL_GameController* gamecontroller, enum SDL_SensorType type);
+     * }
+     */
+    public static float SDL_GameControllerGetSensorDataRate(MemorySegment gamecontroller, int type) {
+        var mh$ = SDL_GameControllerGetSensorDataRate$MH();
+        try {
+            return (float)mh$.invokeExact(gamecontroller, type);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetSensorData$MH() {
+        return RuntimeHelper.requireNonNull(constants$123.const$4,"SDL_GameControllerGetSensorData");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GameControllerGetSensorData(struct _SDL_GameController* gamecontroller, enum SDL_SensorType type, float* data, int num_values);
+     * }
+     */
+    public static int SDL_GameControllerGetSensorData(MemorySegment gamecontroller, int type, MemorySegment data, int num_values) {
+        var mh$ = SDL_GameControllerGetSensorData$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller, type, data, num_values);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetSensorDataWithTimestamp$MH() {
+        return RuntimeHelper.requireNonNull(constants$123.const$6,"SDL_GameControllerGetSensorDataWithTimestamp");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GameControllerGetSensorDataWithTimestamp(struct _SDL_GameController* gamecontroller, enum SDL_SensorType type, unsigned long long* timestamp, float* data, int num_values);
+     * }
+     */
+    public static int SDL_GameControllerGetSensorDataWithTimestamp(MemorySegment gamecontroller, int type, MemorySegment timestamp, MemorySegment data, int num_values) {
+        var mh$ = SDL_GameControllerGetSensorDataWithTimestamp$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller, type, timestamp, data, num_values);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerRumble$MH() {
+        return RuntimeHelper.requireNonNull(constants$124.const$0,"SDL_GameControllerRumble");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GameControllerRumble(struct _SDL_GameController* gamecontroller, unsigned short low_frequency_rumble, unsigned short high_frequency_rumble, unsigned int duration_ms);
+     * }
+     */
+    public static int SDL_GameControllerRumble(MemorySegment gamecontroller, short low_frequency_rumble, short high_frequency_rumble, int duration_ms) {
+        var mh$ = SDL_GameControllerRumble$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller, low_frequency_rumble, high_frequency_rumble, duration_ms);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerRumbleTriggers$MH() {
+        return RuntimeHelper.requireNonNull(constants$124.const$1,"SDL_GameControllerRumbleTriggers");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GameControllerRumbleTriggers(struct _SDL_GameController* gamecontroller, unsigned short left_rumble, unsigned short right_rumble, unsigned int duration_ms);
+     * }
+     */
+    public static int SDL_GameControllerRumbleTriggers(MemorySegment gamecontroller, short left_rumble, short right_rumble, int duration_ms) {
+        var mh$ = SDL_GameControllerRumbleTriggers$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller, left_rumble, right_rumble, duration_ms);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerHasLED$MH() {
+        return RuntimeHelper.requireNonNull(constants$124.const$2,"SDL_GameControllerHasLED");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_GameControllerHasLED(struct _SDL_GameController* gamecontroller);
+     * }
+     */
+    public static int SDL_GameControllerHasLED(MemorySegment gamecontroller) {
+        var mh$ = SDL_GameControllerHasLED$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerHasRumble$MH() {
+        return RuntimeHelper.requireNonNull(constants$124.const$3,"SDL_GameControllerHasRumble");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_GameControllerHasRumble(struct _SDL_GameController* gamecontroller);
+     * }
+     */
+    public static int SDL_GameControllerHasRumble(MemorySegment gamecontroller) {
+        var mh$ = SDL_GameControllerHasRumble$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerHasRumbleTriggers$MH() {
+        return RuntimeHelper.requireNonNull(constants$124.const$4,"SDL_GameControllerHasRumbleTriggers");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_GameControllerHasRumbleTriggers(struct _SDL_GameController* gamecontroller);
+     * }
+     */
+    public static int SDL_GameControllerHasRumbleTriggers(MemorySegment gamecontroller) {
+        var mh$ = SDL_GameControllerHasRumbleTriggers$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerSetLED$MH() {
+        return RuntimeHelper.requireNonNull(constants$124.const$5,"SDL_GameControllerSetLED");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GameControllerSetLED(struct _SDL_GameController* gamecontroller, unsigned char red, unsigned char green, unsigned char blue);
+     * }
+     */
+    public static int SDL_GameControllerSetLED(MemorySegment gamecontroller, byte red, byte green, byte blue) {
+        var mh$ = SDL_GameControllerSetLED$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller, red, green, blue);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerSendEffect$MH() {
+        return RuntimeHelper.requireNonNull(constants$125.const$0,"SDL_GameControllerSendEffect");
+    }
+    /**
+     * {@snippet :
+     * int SDL_GameControllerSendEffect(struct _SDL_GameController* gamecontroller, void* data, int size);
+     * }
+     */
+    public static int SDL_GameControllerSendEffect(MemorySegment gamecontroller, MemorySegment data, int size) {
+        var mh$ = SDL_GameControllerSendEffect$MH();
+        try {
+            return (int)mh$.invokeExact(gamecontroller, data, size);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerClose$MH() {
+        return RuntimeHelper.requireNonNull(constants$125.const$1,"SDL_GameControllerClose");
+    }
+    /**
+     * {@snippet :
+     * void SDL_GameControllerClose(struct _SDL_GameController* gamecontroller);
+     * }
+     */
+    public static void SDL_GameControllerClose(MemorySegment gamecontroller) {
+        var mh$ = SDL_GameControllerClose$MH();
+        try {
+            mh$.invokeExact(gamecontroller);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetAppleSFSymbolsNameForButton$MH() {
+        return RuntimeHelper.requireNonNull(constants$125.const$2,"SDL_GameControllerGetAppleSFSymbolsNameForButton");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GameControllerGetAppleSFSymbolsNameForButton(struct _SDL_GameController* gamecontroller, enum SDL_GameControllerButton button);
+     * }
+     */
+    public static MemorySegment SDL_GameControllerGetAppleSFSymbolsNameForButton(MemorySegment gamecontroller, int button) {
+        var mh$ = SDL_GameControllerGetAppleSFSymbolsNameForButton$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(gamecontroller, button);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_GameControllerGetAppleSFSymbolsNameForAxis$MH() {
+        return RuntimeHelper.requireNonNull(constants$125.const$3,"SDL_GameControllerGetAppleSFSymbolsNameForAxis");
+    }
+    /**
+     * {@snippet :
+     * char* SDL_GameControllerGetAppleSFSymbolsNameForAxis(struct _SDL_GameController* gamecontroller, enum SDL_GameControllerAxis axis);
+     * }
+     */
+    public static MemorySegment SDL_GameControllerGetAppleSFSymbolsNameForAxis(MemorySegment gamecontroller, int axis) {
+        var mh$ = SDL_GameControllerGetAppleSFSymbolsNameForAxis$MH();
+        try {
+            return (java.lang.foreign.MemorySegment)mh$.invokeExact(gamecontroller, axis);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_FIRSTEVENT = 0;
+     * }
+     */
+    public static int SDL_FIRSTEVENT() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_QUIT = 256;
+     * }
+     */
+    public static int SDL_QUIT() {
+        return (int)256L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_APP_TERMINATING = 257;
+     * }
+     */
+    public static int SDL_APP_TERMINATING() {
+        return (int)257L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_APP_LOWMEMORY = 258;
+     * }
+     */
+    public static int SDL_APP_LOWMEMORY() {
+        return (int)258L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_APP_WILLENTERBACKGROUND = 259;
+     * }
+     */
+    public static int SDL_APP_WILLENTERBACKGROUND() {
+        return (int)259L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_APP_DIDENTERBACKGROUND = 260;
+     * }
+     */
+    public static int SDL_APP_DIDENTERBACKGROUND() {
+        return (int)260L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_APP_WILLENTERFOREGROUND = 261;
+     * }
+     */
+    public static int SDL_APP_WILLENTERFOREGROUND() {
+        return (int)261L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_APP_DIDENTERFOREGROUND = 262;
+     * }
+     */
+    public static int SDL_APP_DIDENTERFOREGROUND() {
+        return (int)262L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_LOCALECHANGED = 263;
+     * }
+     */
+    public static int SDL_LOCALECHANGED() {
+        return (int)263L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_DISPLAYEVENT = 336;
+     * }
+     */
+    public static int SDL_DISPLAYEVENT() {
+        return (int)336L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_WINDOWEVENT = 512;
+     * }
+     */
+    public static int SDL_WINDOWEVENT() {
+        return (int)512L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_SYSWMEVENT = 513;
+     * }
+     */
+    public static int SDL_SYSWMEVENT() {
+        return (int)513L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_KEYDOWN = 768;
+     * }
+     */
+    public static int SDL_KEYDOWN() {
+        return (int)768L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_KEYUP = 769;
+     * }
+     */
+    public static int SDL_KEYUP() {
+        return (int)769L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_TEXTEDITING = 770;
+     * }
+     */
+    public static int SDL_TEXTEDITING() {
+        return (int)770L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_TEXTINPUT = 771;
+     * }
+     */
+    public static int SDL_TEXTINPUT() {
+        return (int)771L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_KEYMAPCHANGED = 772;
+     * }
+     */
+    public static int SDL_KEYMAPCHANGED() {
+        return (int)772L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_TEXTEDITING_EXT = 773;
+     * }
+     */
+    public static int SDL_TEXTEDITING_EXT() {
+        return (int)773L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_MOUSEMOTION = 1024;
+     * }
+     */
+    public static int SDL_MOUSEMOTION() {
+        return (int)1024L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_MOUSEBUTTONDOWN = 1025;
+     * }
+     */
+    public static int SDL_MOUSEBUTTONDOWN() {
+        return (int)1025L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_MOUSEBUTTONUP = 1026;
+     * }
+     */
+    public static int SDL_MOUSEBUTTONUP() {
+        return (int)1026L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_MOUSEWHEEL = 1027;
+     * }
+     */
+    public static int SDL_MOUSEWHEEL() {
+        return (int)1027L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_JOYAXISMOTION = 1536;
+     * }
+     */
+    public static int SDL_JOYAXISMOTION() {
+        return (int)1536L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_JOYBALLMOTION = 1537;
+     * }
+     */
+    public static int SDL_JOYBALLMOTION() {
+        return (int)1537L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_JOYHATMOTION = 1538;
+     * }
+     */
+    public static int SDL_JOYHATMOTION() {
+        return (int)1538L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_JOYBUTTONDOWN = 1539;
+     * }
+     */
+    public static int SDL_JOYBUTTONDOWN() {
+        return (int)1539L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_JOYBUTTONUP = 1540;
+     * }
+     */
+    public static int SDL_JOYBUTTONUP() {
+        return (int)1540L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_JOYDEVICEADDED = 1541;
+     * }
+     */
+    public static int SDL_JOYDEVICEADDED() {
+        return (int)1541L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_JOYDEVICEREMOVED = 1542;
+     * }
+     */
+    public static int SDL_JOYDEVICEREMOVED() {
+        return (int)1542L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_JOYBATTERYUPDATED = 1543;
+     * }
+     */
+    public static int SDL_JOYBATTERYUPDATED() {
+        return (int)1543L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_CONTROLLERAXISMOTION = 1616;
+     * }
+     */
+    public static int SDL_CONTROLLERAXISMOTION() {
+        return (int)1616L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_CONTROLLERBUTTONDOWN = 1617;
+     * }
+     */
+    public static int SDL_CONTROLLERBUTTONDOWN() {
+        return (int)1617L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_CONTROLLERBUTTONUP = 1618;
+     * }
+     */
+    public static int SDL_CONTROLLERBUTTONUP() {
+        return (int)1618L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_CONTROLLERDEVICEADDED = 1619;
+     * }
+     */
+    public static int SDL_CONTROLLERDEVICEADDED() {
+        return (int)1619L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_CONTROLLERDEVICEREMOVED = 1620;
+     * }
+     */
+    public static int SDL_CONTROLLERDEVICEREMOVED() {
+        return (int)1620L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_CONTROLLERDEVICEREMAPPED = 1621;
+     * }
+     */
+    public static int SDL_CONTROLLERDEVICEREMAPPED() {
+        return (int)1621L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_CONTROLLERTOUCHPADDOWN = 1622;
+     * }
+     */
+    public static int SDL_CONTROLLERTOUCHPADDOWN() {
+        return (int)1622L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_CONTROLLERTOUCHPADMOTION = 1623;
+     * }
+     */
+    public static int SDL_CONTROLLERTOUCHPADMOTION() {
+        return (int)1623L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_CONTROLLERTOUCHPADUP = 1624;
+     * }
+     */
+    public static int SDL_CONTROLLERTOUCHPADUP() {
+        return (int)1624L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_CONTROLLERSENSORUPDATE = 1625;
+     * }
+     */
+    public static int SDL_CONTROLLERSENSORUPDATE() {
+        return (int)1625L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_FINGERDOWN = 1792;
+     * }
+     */
+    public static int SDL_FINGERDOWN() {
+        return (int)1792L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_FINGERUP = 1793;
+     * }
+     */
+    public static int SDL_FINGERUP() {
+        return (int)1793L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_FINGERMOTION = 1794;
+     * }
+     */
+    public static int SDL_FINGERMOTION() {
+        return (int)1794L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_DOLLARGESTURE = 2048;
+     * }
+     */
+    public static int SDL_DOLLARGESTURE() {
+        return (int)2048L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_DOLLARRECORD = 2049;
+     * }
+     */
+    public static int SDL_DOLLARRECORD() {
+        return (int)2049L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_MULTIGESTURE = 2050;
+     * }
+     */
+    public static int SDL_MULTIGESTURE() {
+        return (int)2050L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_CLIPBOARDUPDATE = 2304;
+     * }
+     */
+    public static int SDL_CLIPBOARDUPDATE() {
+        return (int)2304L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_DROPFILE = 4096;
+     * }
+     */
+    public static int SDL_DROPFILE() {
+        return (int)4096L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_DROPTEXT = 4097;
+     * }
+     */
+    public static int SDL_DROPTEXT() {
+        return (int)4097L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_DROPBEGIN = 4098;
+     * }
+     */
+    public static int SDL_DROPBEGIN() {
+        return (int)4098L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_DROPCOMPLETE = 4099;
+     * }
+     */
+    public static int SDL_DROPCOMPLETE() {
+        return (int)4099L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_AUDIODEVICEADDED = 4352;
+     * }
+     */
+    public static int SDL_AUDIODEVICEADDED() {
+        return (int)4352L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_AUDIODEVICEREMOVED = 4353;
+     * }
+     */
+    public static int SDL_AUDIODEVICEREMOVED() {
+        return (int)4353L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_SENSORUPDATE = 4608;
+     * }
+     */
+    public static int SDL_SENSORUPDATE() {
+        return (int)4608L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_RENDER_TARGETS_RESET = 8192;
+     * }
+     */
+    public static int SDL_RENDER_TARGETS_RESET() {
+        return (int)8192L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_RENDER_DEVICE_RESET = 8193;
+     * }
+     */
+    public static int SDL_RENDER_DEVICE_RESET() {
+        return (int)8193L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_POLLSENTINEL = 32512;
+     * }
+     */
+    public static int SDL_POLLSENTINEL() {
+        return (int)32512L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_USEREVENT = 32768;
+     * }
+     */
+    public static int SDL_USEREVENT() {
+        return (int)32768L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_EventType.SDL_LASTEVENT = 65535;
+     * }
+     */
+    public static int SDL_LASTEVENT() {
+        return (int)65535L;
+    }
+    public static MethodHandle SDL_PumpEvents$MH() {
+        return RuntimeHelper.requireNonNull(constants$163.const$5,"SDL_PumpEvents");
+    }
+    /**
+     * {@snippet :
+     * void SDL_PumpEvents();
+     * }
+     */
+    public static void SDL_PumpEvents() {
+        var mh$ = SDL_PumpEvents$MH();
+        try {
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    /**
+     * {@snippet :
+     * enum SDL_eventaction.SDL_ADDEVENT = 0;
+     * }
+     */
+    public static int SDL_ADDEVENT() {
+        return (int)0L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_eventaction.SDL_PEEKEVENT = 1;
+     * }
+     */
+    public static int SDL_PEEKEVENT() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * enum SDL_eventaction.SDL_GETEVENT = 2;
+     * }
+     */
+    public static int SDL_GETEVENT() {
+        return (int)2L;
+    }
+    public static MethodHandle SDL_PeepEvents$MH() {
+        return RuntimeHelper.requireNonNull(constants$164.const$1,"SDL_PeepEvents");
+    }
+    /**
+     * {@snippet :
+     * int SDL_PeepEvents(union SDL_Event* events, int numevents, enum SDL_eventaction action, unsigned int minType, unsigned int maxType);
+     * }
+     */
+    public static int SDL_PeepEvents(MemorySegment events, int numevents, int action, int minType, int maxType) {
+        var mh$ = SDL_PeepEvents$MH();
+        try {
+            return (int)mh$.invokeExact(events, numevents, action, minType, maxType);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_HasEvent$MH() {
+        return RuntimeHelper.requireNonNull(constants$164.const$2,"SDL_HasEvent");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_HasEvent(unsigned int type);
+     * }
+     */
+    public static int SDL_HasEvent(int type) {
+        var mh$ = SDL_HasEvent$MH();
+        try {
+            return (int)mh$.invokeExact(type);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_HasEvents$MH() {
+        return RuntimeHelper.requireNonNull(constants$164.const$3,"SDL_HasEvents");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_HasEvents(unsigned int minType, unsigned int maxType);
+     * }
+     */
+    public static int SDL_HasEvents(int minType, int maxType) {
+        var mh$ = SDL_HasEvents$MH();
+        try {
+            return (int)mh$.invokeExact(minType, maxType);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
     public static MethodHandle SDL_FlushEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$161.const$2,"SDL_FlushEvent");
+        return RuntimeHelper.requireNonNull(constants$164.const$4,"SDL_FlushEvent");
     }
     /**
      * {@snippet :
@@ -26,7 +3430,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_FlushEvents$MH() {
-        return RuntimeHelper.requireNonNull(constants$161.const$4,"SDL_FlushEvents");
+        return RuntimeHelper.requireNonNull(constants$164.const$6,"SDL_FlushEvents");
     }
     /**
      * {@snippet :
@@ -42,7 +3446,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_PollEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$161.const$5,"SDL_PollEvent");
+        return RuntimeHelper.requireNonNull(constants$165.const$0,"SDL_PollEvent");
     }
     /**
      * {@snippet :
@@ -58,7 +3462,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_WaitEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$162.const$0,"SDL_WaitEvent");
+        return RuntimeHelper.requireNonNull(constants$165.const$1,"SDL_WaitEvent");
     }
     /**
      * {@snippet :
@@ -74,7 +3478,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_WaitEventTimeout$MH() {
-        return RuntimeHelper.requireNonNull(constants$162.const$1,"SDL_WaitEventTimeout");
+        return RuntimeHelper.requireNonNull(constants$165.const$2,"SDL_WaitEventTimeout");
     }
     /**
      * {@snippet :
@@ -90,7 +3494,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_PushEvent$MH() {
-        return RuntimeHelper.requireNonNull(constants$162.const$2,"SDL_PushEvent");
+        return RuntimeHelper.requireNonNull(constants$165.const$3,"SDL_PushEvent");
     }
     /**
      * {@snippet :
@@ -106,7 +3510,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetEventFilter$MH() {
-        return RuntimeHelper.requireNonNull(constants$162.const$5,"SDL_SetEventFilter");
+        return RuntimeHelper.requireNonNull(constants$166.const$0,"SDL_SetEventFilter");
     }
     /**
      * {@snippet :
@@ -122,7 +3526,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetEventFilter$MH() {
-        return RuntimeHelper.requireNonNull(constants$163.const$1,"SDL_GetEventFilter");
+        return RuntimeHelper.requireNonNull(constants$166.const$2,"SDL_GetEventFilter");
     }
     /**
      * {@snippet :
@@ -138,7 +3542,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_AddEventWatch$MH() {
-        return RuntimeHelper.requireNonNull(constants$163.const$3,"SDL_AddEventWatch");
+        return RuntimeHelper.requireNonNull(constants$166.const$4,"SDL_AddEventWatch");
     }
     /**
      * {@snippet :
@@ -154,7 +3558,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_DelEventWatch$MH() {
-        return RuntimeHelper.requireNonNull(constants$163.const$5,"SDL_DelEventWatch");
+        return RuntimeHelper.requireNonNull(constants$167.const$0,"SDL_DelEventWatch");
     }
     /**
      * {@snippet :
@@ -170,7 +3574,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_FilterEvents$MH() {
-        return RuntimeHelper.requireNonNull(constants$164.const$1,"SDL_FilterEvents");
+        return RuntimeHelper.requireNonNull(constants$167.const$2,"SDL_FilterEvents");
     }
     /**
      * {@snippet :
@@ -186,7 +3590,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_EventState$MH() {
-        return RuntimeHelper.requireNonNull(constants$164.const$3,"SDL_EventState");
+        return RuntimeHelper.requireNonNull(constants$167.const$4,"SDL_EventState");
     }
     /**
      * {@snippet :
@@ -202,7 +3606,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RegisterEvents$MH() {
-        return RuntimeHelper.requireNonNull(constants$164.const$4,"SDL_RegisterEvents");
+        return RuntimeHelper.requireNonNull(constants$167.const$5,"SDL_RegisterEvents");
     }
     /**
      * {@snippet :
@@ -242,7 +3646,7 @@ public class sdl_h_1 {
         return (int)2L;
     }
     public static MethodHandle SDL_SetHintWithPriority$MH() {
-        return RuntimeHelper.requireNonNull(constants$164.const$5,"SDL_SetHintWithPriority");
+        return RuntimeHelper.requireNonNull(constants$168.const$0,"SDL_SetHintWithPriority");
     }
     /**
      * {@snippet :
@@ -258,7 +3662,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetHint$MH() {
-        return RuntimeHelper.requireNonNull(constants$165.const$0,"SDL_SetHint");
+        return RuntimeHelper.requireNonNull(constants$168.const$1,"SDL_SetHint");
     }
     /**
      * {@snippet :
@@ -274,7 +3678,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ResetHint$MH() {
-        return RuntimeHelper.requireNonNull(constants$165.const$1,"SDL_ResetHint");
+        return RuntimeHelper.requireNonNull(constants$168.const$2,"SDL_ResetHint");
     }
     /**
      * {@snippet :
@@ -290,7 +3694,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ResetHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$165.const$2,"SDL_ResetHints");
+        return RuntimeHelper.requireNonNull(constants$168.const$3,"SDL_ResetHints");
     }
     /**
      * {@snippet :
@@ -306,7 +3710,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetHint$MH() {
-        return RuntimeHelper.requireNonNull(constants$165.const$3,"SDL_GetHint");
+        return RuntimeHelper.requireNonNull(constants$168.const$4,"SDL_GetHint");
     }
     /**
      * {@snippet :
@@ -322,7 +3726,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetHintBoolean$MH() {
-        return RuntimeHelper.requireNonNull(constants$165.const$4,"SDL_GetHintBoolean");
+        return RuntimeHelper.requireNonNull(constants$168.const$5,"SDL_GetHintBoolean");
     }
     /**
      * {@snippet :
@@ -338,7 +3742,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_AddHintCallback$MH() {
-        return RuntimeHelper.requireNonNull(constants$166.const$2,"SDL_AddHintCallback");
+        return RuntimeHelper.requireNonNull(constants$169.const$3,"SDL_AddHintCallback");
     }
     /**
      * {@snippet :
@@ -354,7 +3758,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_DelHintCallback$MH() {
-        return RuntimeHelper.requireNonNull(constants$166.const$4,"SDL_DelHintCallback");
+        return RuntimeHelper.requireNonNull(constants$169.const$5,"SDL_DelHintCallback");
     }
     /**
      * {@snippet :
@@ -370,7 +3774,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ClearHints$MH() {
-        return RuntimeHelper.requireNonNull(constants$166.const$5,"SDL_ClearHints");
+        return RuntimeHelper.requireNonNull(constants$170.const$0,"SDL_ClearHints");
     }
     /**
      * {@snippet :
@@ -514,7 +3918,7 @@ public class sdl_h_1 {
         return (int)2L;
     }
     public static MethodHandle SDL_GetNumRenderDrivers$MH() {
-        return RuntimeHelper.requireNonNull(constants$168.const$1,"SDL_GetNumRenderDrivers");
+        return RuntimeHelper.requireNonNull(constants$171.const$2,"SDL_GetNumRenderDrivers");
     }
     /**
      * {@snippet :
@@ -530,7 +3934,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetRenderDriverInfo$MH() {
-        return RuntimeHelper.requireNonNull(constants$168.const$2,"SDL_GetRenderDriverInfo");
+        return RuntimeHelper.requireNonNull(constants$171.const$3,"SDL_GetRenderDriverInfo");
     }
     /**
      * {@snippet :
@@ -546,7 +3950,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_CreateWindowAndRenderer$MH() {
-        return RuntimeHelper.requireNonNull(constants$168.const$4,"SDL_CreateWindowAndRenderer");
+        return RuntimeHelper.requireNonNull(constants$171.const$5,"SDL_CreateWindowAndRenderer");
     }
     /**
      * {@snippet :
@@ -562,7 +3966,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_CreateRenderer$MH() {
-        return RuntimeHelper.requireNonNull(constants$168.const$5,"SDL_CreateRenderer");
+        return RuntimeHelper.requireNonNull(constants$172.const$0,"SDL_CreateRenderer");
     }
     /**
      * {@snippet :
@@ -578,7 +3982,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_CreateSoftwareRenderer$MH() {
-        return RuntimeHelper.requireNonNull(constants$169.const$0,"SDL_CreateSoftwareRenderer");
+        return RuntimeHelper.requireNonNull(constants$172.const$1,"SDL_CreateSoftwareRenderer");
     }
     /**
      * {@snippet :
@@ -594,7 +3998,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetRenderer$MH() {
-        return RuntimeHelper.requireNonNull(constants$169.const$1,"SDL_GetRenderer");
+        return RuntimeHelper.requireNonNull(constants$172.const$2,"SDL_GetRenderer");
     }
     /**
      * {@snippet :
@@ -610,7 +4014,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGetWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$169.const$2,"SDL_RenderGetWindow");
+        return RuntimeHelper.requireNonNull(constants$172.const$3,"SDL_RenderGetWindow");
     }
     /**
      * {@snippet :
@@ -626,7 +4030,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetRendererInfo$MH() {
-        return RuntimeHelper.requireNonNull(constants$169.const$3,"SDL_GetRendererInfo");
+        return RuntimeHelper.requireNonNull(constants$172.const$4,"SDL_GetRendererInfo");
     }
     /**
      * {@snippet :
@@ -642,7 +4046,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetRendererOutputSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$169.const$4,"SDL_GetRendererOutputSize");
+        return RuntimeHelper.requireNonNull(constants$172.const$5,"SDL_GetRendererOutputSize");
     }
     /**
      * {@snippet :
@@ -658,7 +4062,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_CreateTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$169.const$6,"SDL_CreateTexture");
+        return RuntimeHelper.requireNonNull(constants$173.const$1,"SDL_CreateTexture");
     }
     /**
      * {@snippet :
@@ -674,7 +4078,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_CreateTextureFromSurface$MH() {
-        return RuntimeHelper.requireNonNull(constants$170.const$0,"SDL_CreateTextureFromSurface");
+        return RuntimeHelper.requireNonNull(constants$173.const$2,"SDL_CreateTextureFromSurface");
     }
     /**
      * {@snippet :
@@ -690,7 +4094,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_QueryTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$170.const$1,"SDL_QueryTexture");
+        return RuntimeHelper.requireNonNull(constants$173.const$3,"SDL_QueryTexture");
     }
     /**
      * {@snippet :
@@ -706,7 +4110,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetTextureColorMod$MH() {
-        return RuntimeHelper.requireNonNull(constants$170.const$2,"SDL_SetTextureColorMod");
+        return RuntimeHelper.requireNonNull(constants$173.const$4,"SDL_SetTextureColorMod");
     }
     /**
      * {@snippet :
@@ -722,7 +4126,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetTextureColorMod$MH() {
-        return RuntimeHelper.requireNonNull(constants$170.const$3,"SDL_GetTextureColorMod");
+        return RuntimeHelper.requireNonNull(constants$173.const$5,"SDL_GetTextureColorMod");
     }
     /**
      * {@snippet :
@@ -738,7 +4142,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetTextureAlphaMod$MH() {
-        return RuntimeHelper.requireNonNull(constants$170.const$4,"SDL_SetTextureAlphaMod");
+        return RuntimeHelper.requireNonNull(constants$174.const$0,"SDL_SetTextureAlphaMod");
     }
     /**
      * {@snippet :
@@ -754,7 +4158,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetTextureAlphaMod$MH() {
-        return RuntimeHelper.requireNonNull(constants$170.const$5,"SDL_GetTextureAlphaMod");
+        return RuntimeHelper.requireNonNull(constants$174.const$1,"SDL_GetTextureAlphaMod");
     }
     /**
      * {@snippet :
@@ -770,7 +4174,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetTextureBlendMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$171.const$0,"SDL_SetTextureBlendMode");
+        return RuntimeHelper.requireNonNull(constants$174.const$2,"SDL_SetTextureBlendMode");
     }
     /**
      * {@snippet :
@@ -786,7 +4190,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetTextureBlendMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$171.const$1,"SDL_GetTextureBlendMode");
+        return RuntimeHelper.requireNonNull(constants$174.const$3,"SDL_GetTextureBlendMode");
     }
     /**
      * {@snippet :
@@ -802,7 +4206,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetTextureScaleMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$171.const$2,"SDL_SetTextureScaleMode");
+        return RuntimeHelper.requireNonNull(constants$174.const$4,"SDL_SetTextureScaleMode");
     }
     /**
      * {@snippet :
@@ -818,7 +4222,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetTextureScaleMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$171.const$3,"SDL_GetTextureScaleMode");
+        return RuntimeHelper.requireNonNull(constants$174.const$5,"SDL_GetTextureScaleMode");
     }
     /**
      * {@snippet :
@@ -834,7 +4238,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetTextureUserData$MH() {
-        return RuntimeHelper.requireNonNull(constants$171.const$4,"SDL_SetTextureUserData");
+        return RuntimeHelper.requireNonNull(constants$175.const$0,"SDL_SetTextureUserData");
     }
     /**
      * {@snippet :
@@ -850,7 +4254,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetTextureUserData$MH() {
-        return RuntimeHelper.requireNonNull(constants$171.const$5,"SDL_GetTextureUserData");
+        return RuntimeHelper.requireNonNull(constants$175.const$1,"SDL_GetTextureUserData");
     }
     /**
      * {@snippet :
@@ -866,7 +4270,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_UpdateTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$172.const$0,"SDL_UpdateTexture");
+        return RuntimeHelper.requireNonNull(constants$175.const$2,"SDL_UpdateTexture");
     }
     /**
      * {@snippet :
@@ -882,7 +4286,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_UpdateYUVTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$172.const$2,"SDL_UpdateYUVTexture");
+        return RuntimeHelper.requireNonNull(constants$175.const$4,"SDL_UpdateYUVTexture");
     }
     /**
      * {@snippet :
@@ -898,7 +4302,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_UpdateNVTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$172.const$4,"SDL_UpdateNVTexture");
+        return RuntimeHelper.requireNonNull(constants$175.const$6,"SDL_UpdateNVTexture");
     }
     /**
      * {@snippet :
@@ -914,7 +4318,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_LockTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$172.const$5,"SDL_LockTexture");
+        return RuntimeHelper.requireNonNull(constants$176.const$0,"SDL_LockTexture");
     }
     /**
      * {@snippet :
@@ -930,7 +4334,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_LockTextureToSurface$MH() {
-        return RuntimeHelper.requireNonNull(constants$173.const$0,"SDL_LockTextureToSurface");
+        return RuntimeHelper.requireNonNull(constants$176.const$1,"SDL_LockTextureToSurface");
     }
     /**
      * {@snippet :
@@ -946,7 +4350,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_UnlockTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$173.const$1,"SDL_UnlockTexture");
+        return RuntimeHelper.requireNonNull(constants$176.const$2,"SDL_UnlockTexture");
     }
     /**
      * {@snippet :
@@ -962,7 +4366,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderTargetSupported$MH() {
-        return RuntimeHelper.requireNonNull(constants$173.const$2,"SDL_RenderTargetSupported");
+        return RuntimeHelper.requireNonNull(constants$176.const$3,"SDL_RenderTargetSupported");
     }
     /**
      * {@snippet :
@@ -978,7 +4382,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetRenderTarget$MH() {
-        return RuntimeHelper.requireNonNull(constants$173.const$3,"SDL_SetRenderTarget");
+        return RuntimeHelper.requireNonNull(constants$176.const$4,"SDL_SetRenderTarget");
     }
     /**
      * {@snippet :
@@ -994,7 +4398,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetRenderTarget$MH() {
-        return RuntimeHelper.requireNonNull(constants$173.const$4,"SDL_GetRenderTarget");
+        return RuntimeHelper.requireNonNull(constants$176.const$5,"SDL_GetRenderTarget");
     }
     /**
      * {@snippet :
@@ -1010,7 +4414,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderSetLogicalSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$173.const$5,"SDL_RenderSetLogicalSize");
+        return RuntimeHelper.requireNonNull(constants$177.const$0,"SDL_RenderSetLogicalSize");
     }
     /**
      * {@snippet :
@@ -1026,7 +4430,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGetLogicalSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$174.const$0,"SDL_RenderGetLogicalSize");
+        return RuntimeHelper.requireNonNull(constants$177.const$1,"SDL_RenderGetLogicalSize");
     }
     /**
      * {@snippet :
@@ -1042,7 +4446,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderSetIntegerScale$MH() {
-        return RuntimeHelper.requireNonNull(constants$174.const$1,"SDL_RenderSetIntegerScale");
+        return RuntimeHelper.requireNonNull(constants$177.const$2,"SDL_RenderSetIntegerScale");
     }
     /**
      * {@snippet :
@@ -1058,7 +4462,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGetIntegerScale$MH() {
-        return RuntimeHelper.requireNonNull(constants$174.const$2,"SDL_RenderGetIntegerScale");
+        return RuntimeHelper.requireNonNull(constants$177.const$3,"SDL_RenderGetIntegerScale");
     }
     /**
      * {@snippet :
@@ -1074,7 +4478,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderSetViewport$MH() {
-        return RuntimeHelper.requireNonNull(constants$174.const$3,"SDL_RenderSetViewport");
+        return RuntimeHelper.requireNonNull(constants$177.const$4,"SDL_RenderSetViewport");
     }
     /**
      * {@snippet :
@@ -1090,7 +4494,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGetViewport$MH() {
-        return RuntimeHelper.requireNonNull(constants$174.const$4,"SDL_RenderGetViewport");
+        return RuntimeHelper.requireNonNull(constants$177.const$5,"SDL_RenderGetViewport");
     }
     /**
      * {@snippet :
@@ -1106,7 +4510,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderSetClipRect$MH() {
-        return RuntimeHelper.requireNonNull(constants$174.const$5,"SDL_RenderSetClipRect");
+        return RuntimeHelper.requireNonNull(constants$178.const$0,"SDL_RenderSetClipRect");
     }
     /**
      * {@snippet :
@@ -1122,7 +4526,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGetClipRect$MH() {
-        return RuntimeHelper.requireNonNull(constants$175.const$0,"SDL_RenderGetClipRect");
+        return RuntimeHelper.requireNonNull(constants$178.const$1,"SDL_RenderGetClipRect");
     }
     /**
      * {@snippet :
@@ -1138,7 +4542,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderIsClipEnabled$MH() {
-        return RuntimeHelper.requireNonNull(constants$175.const$1,"SDL_RenderIsClipEnabled");
+        return RuntimeHelper.requireNonNull(constants$178.const$2,"SDL_RenderIsClipEnabled");
     }
     /**
      * {@snippet :
@@ -1154,7 +4558,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderSetScale$MH() {
-        return RuntimeHelper.requireNonNull(constants$175.const$3,"SDL_RenderSetScale");
+        return RuntimeHelper.requireNonNull(constants$178.const$4,"SDL_RenderSetScale");
     }
     /**
      * {@snippet :
@@ -1170,7 +4574,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGetScale$MH() {
-        return RuntimeHelper.requireNonNull(constants$175.const$4,"SDL_RenderGetScale");
+        return RuntimeHelper.requireNonNull(constants$178.const$5,"SDL_RenderGetScale");
     }
     /**
      * {@snippet :
@@ -1186,7 +4590,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderWindowToLogical$MH() {
-        return RuntimeHelper.requireNonNull(constants$175.const$6,"SDL_RenderWindowToLogical");
+        return RuntimeHelper.requireNonNull(constants$179.const$1,"SDL_RenderWindowToLogical");
     }
     /**
      * {@snippet :
@@ -1202,7 +4606,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderLogicalToWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$176.const$1,"SDL_RenderLogicalToWindow");
+        return RuntimeHelper.requireNonNull(constants$179.const$3,"SDL_RenderLogicalToWindow");
     }
     /**
      * {@snippet :
@@ -1218,7 +4622,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetRenderDrawColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$176.const$2,"SDL_SetRenderDrawColor");
+        return RuntimeHelper.requireNonNull(constants$179.const$4,"SDL_SetRenderDrawColor");
     }
     /**
      * {@snippet :
@@ -1234,7 +4638,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetRenderDrawColor$MH() {
-        return RuntimeHelper.requireNonNull(constants$176.const$3,"SDL_GetRenderDrawColor");
+        return RuntimeHelper.requireNonNull(constants$179.const$5,"SDL_GetRenderDrawColor");
     }
     /**
      * {@snippet :
@@ -1250,7 +4654,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetRenderDrawBlendMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$176.const$4,"SDL_SetRenderDrawBlendMode");
+        return RuntimeHelper.requireNonNull(constants$180.const$0,"SDL_SetRenderDrawBlendMode");
     }
     /**
      * {@snippet :
@@ -1266,7 +4670,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetRenderDrawBlendMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$176.const$5,"SDL_GetRenderDrawBlendMode");
+        return RuntimeHelper.requireNonNull(constants$180.const$1,"SDL_GetRenderDrawBlendMode");
     }
     /**
      * {@snippet :
@@ -1282,7 +4686,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderClear$MH() {
-        return RuntimeHelper.requireNonNull(constants$177.const$0,"SDL_RenderClear");
+        return RuntimeHelper.requireNonNull(constants$180.const$2,"SDL_RenderClear");
     }
     /**
      * {@snippet :
@@ -1298,7 +4702,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawPoint$MH() {
-        return RuntimeHelper.requireNonNull(constants$177.const$1,"SDL_RenderDrawPoint");
+        return RuntimeHelper.requireNonNull(constants$180.const$3,"SDL_RenderDrawPoint");
     }
     /**
      * {@snippet :
@@ -1314,7 +4718,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawPoints$MH() {
-        return RuntimeHelper.requireNonNull(constants$177.const$2,"SDL_RenderDrawPoints");
+        return RuntimeHelper.requireNonNull(constants$180.const$4,"SDL_RenderDrawPoints");
     }
     /**
      * {@snippet :
@@ -1330,7 +4734,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawLine$MH() {
-        return RuntimeHelper.requireNonNull(constants$177.const$3,"SDL_RenderDrawLine");
+        return RuntimeHelper.requireNonNull(constants$180.const$5,"SDL_RenderDrawLine");
     }
     /**
      * {@snippet :
@@ -1346,7 +4750,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawLines$MH() {
-        return RuntimeHelper.requireNonNull(constants$177.const$4,"SDL_RenderDrawLines");
+        return RuntimeHelper.requireNonNull(constants$181.const$0,"SDL_RenderDrawLines");
     }
     /**
      * {@snippet :
@@ -1362,7 +4766,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawRect$MH() {
-        return RuntimeHelper.requireNonNull(constants$177.const$5,"SDL_RenderDrawRect");
+        return RuntimeHelper.requireNonNull(constants$181.const$1,"SDL_RenderDrawRect");
     }
     /**
      * {@snippet :
@@ -1378,7 +4782,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawRects$MH() {
-        return RuntimeHelper.requireNonNull(constants$178.const$0,"SDL_RenderDrawRects");
+        return RuntimeHelper.requireNonNull(constants$181.const$2,"SDL_RenderDrawRects");
     }
     /**
      * {@snippet :
@@ -1394,7 +4798,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderFillRect$MH() {
-        return RuntimeHelper.requireNonNull(constants$178.const$1,"SDL_RenderFillRect");
+        return RuntimeHelper.requireNonNull(constants$181.const$3,"SDL_RenderFillRect");
     }
     /**
      * {@snippet :
@@ -1410,7 +4814,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderFillRects$MH() {
-        return RuntimeHelper.requireNonNull(constants$178.const$2,"SDL_RenderFillRects");
+        return RuntimeHelper.requireNonNull(constants$181.const$4,"SDL_RenderFillRects");
     }
     /**
      * {@snippet :
@@ -1426,7 +4830,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderCopy$MH() {
-        return RuntimeHelper.requireNonNull(constants$178.const$3,"SDL_RenderCopy");
+        return RuntimeHelper.requireNonNull(constants$181.const$5,"SDL_RenderCopy");
     }
     /**
      * {@snippet :
@@ -1442,7 +4846,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderCopyEx$MH() {
-        return RuntimeHelper.requireNonNull(constants$178.const$5,"SDL_RenderCopyEx");
+        return RuntimeHelper.requireNonNull(constants$182.const$1,"SDL_RenderCopyEx");
     }
     /**
      * {@snippet :
@@ -1458,7 +4862,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawPointF$MH() {
-        return RuntimeHelper.requireNonNull(constants$179.const$0,"SDL_RenderDrawPointF");
+        return RuntimeHelper.requireNonNull(constants$182.const$2,"SDL_RenderDrawPointF");
     }
     /**
      * {@snippet :
@@ -1474,7 +4878,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawPointsF$MH() {
-        return RuntimeHelper.requireNonNull(constants$179.const$1,"SDL_RenderDrawPointsF");
+        return RuntimeHelper.requireNonNull(constants$182.const$3,"SDL_RenderDrawPointsF");
     }
     /**
      * {@snippet :
@@ -1490,7 +4894,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawLineF$MH() {
-        return RuntimeHelper.requireNonNull(constants$179.const$3,"SDL_RenderDrawLineF");
+        return RuntimeHelper.requireNonNull(constants$182.const$5,"SDL_RenderDrawLineF");
     }
     /**
      * {@snippet :
@@ -1506,7 +4910,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawLinesF$MH() {
-        return RuntimeHelper.requireNonNull(constants$179.const$4,"SDL_RenderDrawLinesF");
+        return RuntimeHelper.requireNonNull(constants$183.const$0,"SDL_RenderDrawLinesF");
     }
     /**
      * {@snippet :
@@ -1522,7 +4926,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawRectF$MH() {
-        return RuntimeHelper.requireNonNull(constants$179.const$5,"SDL_RenderDrawRectF");
+        return RuntimeHelper.requireNonNull(constants$183.const$1,"SDL_RenderDrawRectF");
     }
     /**
      * {@snippet :
@@ -1538,7 +4942,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderDrawRectsF$MH() {
-        return RuntimeHelper.requireNonNull(constants$180.const$0,"SDL_RenderDrawRectsF");
+        return RuntimeHelper.requireNonNull(constants$183.const$2,"SDL_RenderDrawRectsF");
     }
     /**
      * {@snippet :
@@ -1554,7 +4958,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderFillRectF$MH() {
-        return RuntimeHelper.requireNonNull(constants$180.const$1,"SDL_RenderFillRectF");
+        return RuntimeHelper.requireNonNull(constants$183.const$3,"SDL_RenderFillRectF");
     }
     /**
      * {@snippet :
@@ -1570,7 +4974,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderFillRectsF$MH() {
-        return RuntimeHelper.requireNonNull(constants$180.const$2,"SDL_RenderFillRectsF");
+        return RuntimeHelper.requireNonNull(constants$183.const$4,"SDL_RenderFillRectsF");
     }
     /**
      * {@snippet :
@@ -1586,7 +4990,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderCopyF$MH() {
-        return RuntimeHelper.requireNonNull(constants$180.const$3,"SDL_RenderCopyF");
+        return RuntimeHelper.requireNonNull(constants$183.const$5,"SDL_RenderCopyF");
     }
     /**
      * {@snippet :
@@ -1602,7 +5006,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderCopyExF$MH() {
-        return RuntimeHelper.requireNonNull(constants$180.const$4,"SDL_RenderCopyExF");
+        return RuntimeHelper.requireNonNull(constants$184.const$0,"SDL_RenderCopyExF");
     }
     /**
      * {@snippet :
@@ -1618,7 +5022,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGeometry$MH() {
-        return RuntimeHelper.requireNonNull(constants$180.const$5,"SDL_RenderGeometry");
+        return RuntimeHelper.requireNonNull(constants$184.const$1,"SDL_RenderGeometry");
     }
     /**
      * {@snippet :
@@ -1634,7 +5038,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGeometryRaw$MH() {
-        return RuntimeHelper.requireNonNull(constants$181.const$1,"SDL_RenderGeometryRaw");
+        return RuntimeHelper.requireNonNull(constants$184.const$3,"SDL_RenderGeometryRaw");
     }
     /**
      * {@snippet :
@@ -1650,7 +5054,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderReadPixels$MH() {
-        return RuntimeHelper.requireNonNull(constants$181.const$3,"SDL_RenderReadPixels");
+        return RuntimeHelper.requireNonNull(constants$184.const$5,"SDL_RenderReadPixels");
     }
     /**
      * {@snippet :
@@ -1666,7 +5070,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderPresent$MH() {
-        return RuntimeHelper.requireNonNull(constants$181.const$4,"SDL_RenderPresent");
+        return RuntimeHelper.requireNonNull(constants$185.const$0,"SDL_RenderPresent");
     }
     /**
      * {@snippet :
@@ -1682,7 +5086,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_DestroyTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$181.const$5,"SDL_DestroyTexture");
+        return RuntimeHelper.requireNonNull(constants$185.const$1,"SDL_DestroyTexture");
     }
     /**
      * {@snippet :
@@ -1698,7 +5102,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_DestroyRenderer$MH() {
-        return RuntimeHelper.requireNonNull(constants$182.const$0,"SDL_DestroyRenderer");
+        return RuntimeHelper.requireNonNull(constants$185.const$2,"SDL_DestroyRenderer");
     }
     /**
      * {@snippet :
@@ -1714,7 +5118,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderFlush$MH() {
-        return RuntimeHelper.requireNonNull(constants$182.const$1,"SDL_RenderFlush");
+        return RuntimeHelper.requireNonNull(constants$185.const$3,"SDL_RenderFlush");
     }
     /**
      * {@snippet :
@@ -1730,7 +5134,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GL_BindTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$182.const$2,"SDL_GL_BindTexture");
+        return RuntimeHelper.requireNonNull(constants$185.const$4,"SDL_GL_BindTexture");
     }
     /**
      * {@snippet :
@@ -1746,7 +5150,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GL_UnbindTexture$MH() {
-        return RuntimeHelper.requireNonNull(constants$182.const$3,"SDL_GL_UnbindTexture");
+        return RuntimeHelper.requireNonNull(constants$185.const$5,"SDL_GL_UnbindTexture");
     }
     /**
      * {@snippet :
@@ -1762,7 +5166,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGetMetalLayer$MH() {
-        return RuntimeHelper.requireNonNull(constants$182.const$4,"SDL_RenderGetMetalLayer");
+        return RuntimeHelper.requireNonNull(constants$186.const$0,"SDL_RenderGetMetalLayer");
     }
     /**
      * {@snippet :
@@ -1778,7 +5182,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderGetMetalCommandEncoder$MH() {
-        return RuntimeHelper.requireNonNull(constants$182.const$5,"SDL_RenderGetMetalCommandEncoder");
+        return RuntimeHelper.requireNonNull(constants$186.const$1,"SDL_RenderGetMetalCommandEncoder");
     }
     /**
      * {@snippet :
@@ -1794,7 +5198,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RenderSetVSync$MH() {
-        return RuntimeHelper.requireNonNull(constants$183.const$0,"SDL_RenderSetVSync");
+        return RuntimeHelper.requireNonNull(constants$186.const$2,"SDL_RenderSetVSync");
     }
     /**
      * {@snippet :
@@ -1810,7 +5214,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_Init$MH() {
-        return RuntimeHelper.requireNonNull(constants$183.const$1,"SDL_Init");
+        return RuntimeHelper.requireNonNull(constants$186.const$3,"SDL_Init");
     }
     /**
      * {@snippet :
@@ -1826,7 +5230,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_InitSubSystem$MH() {
-        return RuntimeHelper.requireNonNull(constants$183.const$2,"SDL_InitSubSystem");
+        return RuntimeHelper.requireNonNull(constants$186.const$4,"SDL_InitSubSystem");
     }
     /**
      * {@snippet :
@@ -1842,7 +5246,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_QuitSubSystem$MH() {
-        return RuntimeHelper.requireNonNull(constants$183.const$3,"SDL_QuitSubSystem");
+        return RuntimeHelper.requireNonNull(constants$186.const$5,"SDL_QuitSubSystem");
     }
     /**
      * {@snippet :
@@ -1858,7 +5262,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_WasInit$MH() {
-        return RuntimeHelper.requireNonNull(constants$183.const$4,"SDL_WasInit");
+        return RuntimeHelper.requireNonNull(constants$187.const$0,"SDL_WasInit");
     }
     /**
      * {@snippet :
@@ -1874,7 +5278,7 @@ public class sdl_h_1 {
         }
     }
     public static MethodHandle SDL_Quit$MH() {
-        return RuntimeHelper.requireNonNull(constants$183.const$5,"SDL_Quit");
+        return RuntimeHelper.requireNonNull(constants$187.const$1,"SDL_Quit");
     }
     /**
      * {@snippet :
@@ -2047,7 +5451,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_PRIs64() {
-        return constants$184.const$0;
+        return constants$187.const$2;
     }
     /**
      * {@snippet :
@@ -2055,7 +5459,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_PRIu64() {
-        return constants$184.const$1;
+        return constants$187.const$3;
     }
     /**
      * {@snippet :
@@ -2063,7 +5467,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_PRIx64() {
-        return constants$184.const$2;
+        return constants$187.const$4;
     }
     /**
      * {@snippet :
@@ -2071,7 +5475,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_PRIX64() {
-        return constants$184.const$3;
+        return constants$187.const$5;
     }
     /**
      * {@snippet :
@@ -2079,7 +5483,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_PRIs32() {
-        return constants$184.const$4;
+        return constants$188.const$0;
     }
     /**
      * {@snippet :
@@ -2087,7 +5491,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_PRIu32() {
-        return constants$184.const$5;
+        return constants$188.const$1;
     }
     /**
      * {@snippet :
@@ -2095,7 +5499,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_PRIx32() {
-        return constants$185.const$0;
+        return constants$188.const$2;
     }
     /**
      * {@snippet :
@@ -2103,7 +5507,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_PRIX32() {
-        return constants$185.const$1;
+        return constants$188.const$3;
     }
     /**
      * {@snippet :
@@ -2227,6 +5631,14 @@ public class sdl_h_1 {
     }
     /**
      * {@snippet :
+     * #define SDLK_SCANCODE_MASK 1073741824
+     * }
+     */
+    public static int SDLK_SCANCODE_MASK() {
+        return (int)1073741824L;
+    }
+    /**
+     * {@snippet :
      * #define SDL_IPHONE_MAX_GFORCE 5.0
      * }
      */
@@ -2311,7 +5723,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_ACCELEROMETER_AS_JOYSTICK() {
-        return constants$185.const$2;
+        return constants$188.const$4;
     }
     /**
      * {@snippet :
@@ -2319,7 +5731,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_ALLOW_ALT_TAB_WHILE_GRABBED() {
-        return constants$185.const$3;
+        return constants$188.const$5;
     }
     /**
      * {@snippet :
@@ -2327,7 +5739,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_ALLOW_TOPMOST() {
-        return constants$185.const$4;
+        return constants$189.const$0;
     }
     /**
      * {@snippet :
@@ -2335,7 +5747,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_ANDROID_APK_EXPANSION_MAIN_FILE_VERSION() {
-        return constants$185.const$5;
+        return constants$189.const$1;
     }
     /**
      * {@snippet :
@@ -2343,7 +5755,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_ANDROID_APK_EXPANSION_PATCH_FILE_VERSION() {
-        return constants$186.const$0;
+        return constants$189.const$2;
     }
     /**
      * {@snippet :
@@ -2351,7 +5763,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_ANDROID_BLOCK_ON_PAUSE() {
-        return constants$186.const$1;
+        return constants$189.const$3;
     }
     /**
      * {@snippet :
@@ -2359,7 +5771,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_ANDROID_BLOCK_ON_PAUSE_PAUSEAUDIO() {
-        return constants$186.const$2;
+        return constants$189.const$4;
     }
     /**
      * {@snippet :
@@ -2367,7 +5779,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_ANDROID_TRAP_BACK_BUTTON() {
-        return constants$186.const$3;
+        return constants$189.const$5;
     }
     /**
      * {@snippet :
@@ -2375,7 +5787,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_APP_NAME() {
-        return constants$186.const$4;
+        return constants$190.const$0;
     }
     /**
      * {@snippet :
@@ -2383,7 +5795,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_APPLE_TV_CONTROLLER_UI_EVENTS() {
-        return constants$186.const$5;
+        return constants$190.const$1;
     }
     /**
      * {@snippet :
@@ -2391,7 +5803,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_APPLE_TV_REMOTE_ALLOW_ROTATION() {
-        return constants$187.const$0;
+        return constants$190.const$2;
     }
     /**
      * {@snippet :
@@ -2399,7 +5811,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_AUDIO_CATEGORY() {
-        return constants$187.const$1;
+        return constants$190.const$3;
     }
     /**
      * {@snippet :
@@ -2407,7 +5819,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_AUDIO_DEVICE_APP_NAME() {
-        return constants$187.const$2;
+        return constants$190.const$4;
     }
     /**
      * {@snippet :
@@ -2415,7 +5827,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_AUDIO_DEVICE_STREAM_NAME() {
-        return constants$187.const$3;
+        return constants$190.const$5;
     }
     /**
      * {@snippet :
@@ -2423,7 +5835,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_AUDIO_DEVICE_STREAM_ROLE() {
-        return constants$187.const$4;
+        return constants$191.const$0;
     }
     /**
      * {@snippet :
@@ -2431,7 +5843,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_AUDIO_RESAMPLING_MODE() {
-        return constants$187.const$5;
+        return constants$191.const$1;
     }
     /**
      * {@snippet :
@@ -2439,7 +5851,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_AUTO_UPDATE_JOYSTICKS() {
-        return constants$188.const$0;
+        return constants$191.const$2;
     }
     /**
      * {@snippet :
@@ -2447,7 +5859,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_AUTO_UPDATE_SENSORS() {
-        return constants$188.const$1;
+        return constants$191.const$3;
     }
     /**
      * {@snippet :
@@ -2455,7 +5867,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_BMP_SAVE_LEGACY_FORMAT() {
-        return constants$188.const$2;
+        return constants$191.const$4;
     }
     /**
      * {@snippet :
@@ -2463,7 +5875,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_DISPLAY_USABLE_BOUNDS() {
-        return constants$188.const$3;
+        return constants$191.const$5;
     }
     /**
      * {@snippet :
@@ -2471,7 +5883,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_EMSCRIPTEN_ASYNCIFY() {
-        return constants$188.const$4;
+        return constants$192.const$0;
     }
     /**
      * {@snippet :
@@ -2479,7 +5891,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_EMSCRIPTEN_KEYBOARD_ELEMENT() {
-        return constants$188.const$5;
+        return constants$192.const$1;
     }
     /**
      * {@snippet :
@@ -2487,7 +5899,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_ENABLE_SCREEN_KEYBOARD() {
-        return constants$189.const$0;
+        return constants$192.const$2;
     }
     /**
      * {@snippet :
@@ -2495,7 +5907,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_ENABLE_STEAM_CONTROLLERS() {
-        return constants$189.const$1;
+        return constants$192.const$3;
     }
     /**
      * {@snippet :
@@ -2503,7 +5915,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_EVENT_LOGGING() {
-        return constants$189.const$2;
+        return constants$192.const$4;
     }
     /**
      * {@snippet :
@@ -2511,7 +5923,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_FORCE_RAISEWINDOW() {
-        return constants$189.const$3;
+        return constants$192.const$5;
     }
     /**
      * {@snippet :
@@ -2519,7 +5931,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_FRAMEBUFFER_ACCELERATION() {
-        return constants$189.const$4;
+        return constants$193.const$0;
     }
     /**
      * {@snippet :
@@ -2527,7 +5939,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_GAMECONTROLLERCONFIG() {
-        return constants$189.const$5;
+        return constants$193.const$1;
     }
     /**
      * {@snippet :
@@ -2535,7 +5947,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_GAMECONTROLLERCONFIG_FILE() {
-        return constants$190.const$0;
+        return constants$193.const$2;
     }
     /**
      * {@snippet :
@@ -2543,7 +5955,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_GAMECONTROLLERTYPE() {
-        return constants$190.const$1;
+        return constants$193.const$3;
     }
     /**
      * {@snippet :
@@ -2551,7 +5963,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_GAMECONTROLLER_IGNORE_DEVICES() {
-        return constants$190.const$2;
+        return constants$193.const$4;
     }
     /**
      * {@snippet :
@@ -2559,7 +5971,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_GAMECONTROLLER_IGNORE_DEVICES_EXCEPT() {
-        return constants$190.const$3;
+        return constants$193.const$5;
     }
     /**
      * {@snippet :
@@ -2567,7 +5979,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_GAMECONTROLLER_USE_BUTTON_LABELS() {
-        return constants$190.const$4;
+        return constants$194.const$0;
     }
     /**
      * {@snippet :
@@ -2575,7 +5987,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_GRAB_KEYBOARD() {
-        return constants$190.const$5;
+        return constants$194.const$1;
     }
     /**
      * {@snippet :
@@ -2583,7 +5995,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_HIDAPI_IGNORE_DEVICES() {
-        return constants$191.const$0;
+        return constants$194.const$2;
     }
     /**
      * {@snippet :
@@ -2591,7 +6003,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_IDLE_TIMER_DISABLED() {
-        return constants$191.const$1;
+        return constants$194.const$3;
     }
     /**
      * {@snippet :
@@ -2599,7 +6011,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_IME_INTERNAL_EDITING() {
-        return constants$191.const$2;
+        return constants$194.const$4;
     }
     /**
      * {@snippet :
@@ -2607,7 +6019,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_IME_SHOW_UI() {
-        return constants$191.const$3;
+        return constants$194.const$5;
     }
     /**
      * {@snippet :
@@ -2615,7 +6027,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_IME_SUPPORT_EXTENDED_TEXT() {
-        return constants$191.const$4;
+        return constants$195.const$0;
     }
     /**
      * {@snippet :
@@ -2623,7 +6035,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_IOS_HIDE_HOME_INDICATOR() {
-        return constants$191.const$5;
+        return constants$195.const$1;
     }
     /**
      * {@snippet :
@@ -2631,7 +6043,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS() {
-        return constants$192.const$0;
+        return constants$195.const$2;
     }
     /**
      * {@snippet :
@@ -2639,7 +6051,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI() {
-        return constants$192.const$1;
+        return constants$195.const$3;
     }
     /**
      * {@snippet :
@@ -2647,7 +6059,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_GAMECUBE() {
-        return constants$192.const$2;
+        return constants$195.const$4;
     }
     /**
      * {@snippet :
@@ -2655,7 +6067,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_GAMECUBE_RUMBLE_BRAKE() {
-        return constants$192.const$3;
+        return constants$195.const$5;
     }
     /**
      * {@snippet :
@@ -2663,7 +6075,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_JOY_CONS() {
-        return constants$192.const$4;
+        return constants$196.const$0;
     }
     /**
      * {@snippet :
@@ -2671,7 +6083,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_COMBINE_JOY_CONS() {
-        return constants$192.const$5;
+        return constants$196.const$1;
     }
     /**
      * {@snippet :
@@ -2679,7 +6091,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_VERTICAL_JOY_CONS() {
-        return constants$193.const$0;
+        return constants$196.const$2;
     }
     /**
      * {@snippet :
@@ -2687,7 +6099,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_LUNA() {
-        return constants$193.const$1;
+        return constants$196.const$3;
     }
     /**
      * {@snippet :
@@ -2695,7 +6107,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_NINTENDO_CLASSIC() {
-        return constants$193.const$2;
+        return constants$196.const$4;
     }
     /**
      * {@snippet :
@@ -2703,7 +6115,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_SHIELD() {
-        return constants$193.const$3;
+        return constants$196.const$5;
     }
     /**
      * {@snippet :
@@ -2711,7 +6123,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_PS3() {
-        return constants$193.const$4;
+        return constants$197.const$0;
     }
     /**
      * {@snippet :
@@ -2719,7 +6131,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_PS4() {
-        return constants$193.const$5;
+        return constants$197.const$1;
     }
     /**
      * {@snippet :
@@ -2727,7 +6139,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_PS4_RUMBLE() {
-        return constants$194.const$0;
+        return constants$197.const$2;
     }
     /**
      * {@snippet :
@@ -2735,7 +6147,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_PS5() {
-        return constants$194.const$1;
+        return constants$197.const$3;
     }
     /**
      * {@snippet :
@@ -2743,7 +6155,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_PS5_PLAYER_LED() {
-        return constants$194.const$2;
+        return constants$197.const$4;
     }
     /**
      * {@snippet :
@@ -2751,7 +6163,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_PS5_RUMBLE() {
-        return constants$194.const$3;
+        return constants$197.const$5;
     }
     /**
      * {@snippet :
@@ -2759,7 +6171,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_STADIA() {
-        return constants$194.const$4;
+        return constants$198.const$0;
     }
     /**
      * {@snippet :
@@ -2767,7 +6179,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_STEAM() {
-        return constants$194.const$5;
+        return constants$198.const$1;
     }
     /**
      * {@snippet :
@@ -2775,7 +6187,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_SWITCH() {
-        return constants$195.const$0;
+        return constants$198.const$2;
     }
     /**
      * {@snippet :
@@ -2783,7 +6195,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_SWITCH_HOME_LED() {
-        return constants$195.const$1;
+        return constants$198.const$3;
     }
     /**
      * {@snippet :
@@ -2791,7 +6203,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_JOYCON_HOME_LED() {
-        return constants$195.const$2;
+        return constants$198.const$4;
     }
     /**
      * {@snippet :
@@ -2799,7 +6211,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_SWITCH_PLAYER_LED() {
-        return constants$195.const$3;
+        return constants$198.const$5;
     }
     /**
      * {@snippet :
@@ -2807,7 +6219,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_WII() {
-        return constants$195.const$4;
+        return constants$199.const$0;
     }
     /**
      * {@snippet :
@@ -2815,7 +6227,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_WII_PLAYER_LED() {
-        return constants$195.const$5;
+        return constants$199.const$1;
     }
     /**
      * {@snippet :
@@ -2823,7 +6235,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_XBOX() {
-        return constants$196.const$0;
+        return constants$199.const$2;
     }
     /**
      * {@snippet :
@@ -2831,7 +6243,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_XBOX_360() {
-        return constants$196.const$1;
+        return constants$199.const$3;
     }
     /**
      * {@snippet :
@@ -2839,7 +6251,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_XBOX_360_PLAYER_LED() {
-        return constants$196.const$2;
+        return constants$199.const$4;
     }
     /**
      * {@snippet :
@@ -2847,7 +6259,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_XBOX_360_WIRELESS() {
-        return constants$196.const$3;
+        return constants$199.const$5;
     }
     /**
      * {@snippet :
@@ -2855,7 +6267,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_XBOX_ONE() {
-        return constants$196.const$4;
+        return constants$200.const$0;
     }
     /**
      * {@snippet :
@@ -2863,7 +6275,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_HIDAPI_XBOX_ONE_HOME_LED() {
-        return constants$196.const$5;
+        return constants$200.const$1;
     }
     /**
      * {@snippet :
@@ -2871,7 +6283,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_RAWINPUT() {
-        return constants$197.const$0;
+        return constants$200.const$2;
     }
     /**
      * {@snippet :
@@ -2879,7 +6291,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_RAWINPUT_CORRELATE_XINPUT() {
-        return constants$197.const$1;
+        return constants$200.const$3;
     }
     /**
      * {@snippet :
@@ -2887,7 +6299,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_ROG_CHAKRAM() {
-        return constants$197.const$2;
+        return constants$200.const$4;
     }
     /**
      * {@snippet :
@@ -2895,7 +6307,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_THREAD() {
-        return constants$197.const$3;
+        return constants$200.const$5;
     }
     /**
      * {@snippet :
@@ -2903,7 +6315,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_WGI() {
-        return constants$197.const$4;
+        return constants$201.const$0;
     }
     /**
      * {@snippet :
@@ -2911,7 +6323,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_KMSDRM_REQUIRE_DRM_MASTER() {
-        return constants$197.const$5;
+        return constants$201.const$1;
     }
     /**
      * {@snippet :
@@ -2919,7 +6331,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_JOYSTICK_DEVICE() {
-        return constants$198.const$0;
+        return constants$201.const$2;
     }
     /**
      * {@snippet :
@@ -2927,7 +6339,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_LINUX_DIGITAL_HATS() {
-        return constants$198.const$1;
+        return constants$201.const$3;
     }
     /**
      * {@snippet :
@@ -2935,7 +6347,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_LINUX_HAT_DEADZONES() {
-        return constants$198.const$2;
+        return constants$201.const$4;
     }
     /**
      * {@snippet :
@@ -2943,7 +6355,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_LINUX_JOYSTICK_CLASSIC() {
-        return constants$198.const$3;
+        return constants$201.const$5;
     }
     /**
      * {@snippet :
@@ -2951,7 +6363,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_LINUX_JOYSTICK_DEADZONES() {
-        return constants$198.const$4;
+        return constants$202.const$0;
     }
     /**
      * {@snippet :
@@ -2959,7 +6371,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_MAC_BACKGROUND_APP() {
-        return constants$198.const$5;
+        return constants$202.const$1;
     }
     /**
      * {@snippet :
@@ -2967,7 +6379,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_MAC_CTRL_CLICK_EMULATE_RIGHT_CLICK() {
-        return constants$199.const$0;
+        return constants$202.const$2;
     }
     /**
      * {@snippet :
@@ -2975,7 +6387,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_MAC_OPENGL_ASYNC_DISPATCH() {
-        return constants$199.const$1;
+        return constants$202.const$3;
     }
     /**
      * {@snippet :
@@ -2983,7 +6395,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_MOUSE_DOUBLE_CLICK_RADIUS() {
-        return constants$199.const$2;
+        return constants$202.const$4;
     }
     /**
      * {@snippet :
@@ -2991,7 +6403,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_MOUSE_DOUBLE_CLICK_TIME() {
-        return constants$199.const$3;
+        return constants$202.const$5;
     }
     /**
      * {@snippet :
@@ -2999,7 +6411,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_MOUSE_FOCUS_CLICKTHROUGH() {
-        return constants$199.const$4;
+        return constants$203.const$0;
     }
     /**
      * {@snippet :
@@ -3007,7 +6419,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_MOUSE_NORMAL_SPEED_SCALE() {
-        return constants$199.const$5;
+        return constants$203.const$1;
     }
     /**
      * {@snippet :
@@ -3015,7 +6427,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_MOUSE_RELATIVE_MODE_CENTER() {
-        return constants$200.const$0;
+        return constants$203.const$2;
     }
     /**
      * {@snippet :
@@ -3023,7 +6435,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_MOUSE_RELATIVE_MODE_WARP() {
-        return constants$200.const$1;
+        return constants$203.const$3;
     }
     /**
      * {@snippet :
@@ -3031,7 +6443,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_MOUSE_RELATIVE_SCALING() {
-        return constants$200.const$2;
+        return constants$203.const$4;
     }
     /**
      * {@snippet :
@@ -3039,7 +6451,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_MOUSE_RELATIVE_SPEED_SCALE() {
-        return constants$200.const$3;
+        return constants$203.const$5;
     }
     /**
      * {@snippet :
@@ -3047,7 +6459,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_MOUSE_RELATIVE_SYSTEM_SCALE() {
-        return constants$200.const$4;
+        return constants$204.const$0;
     }
     /**
      * {@snippet :
@@ -3055,7 +6467,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_MOUSE_RELATIVE_WARP_MOTION() {
-        return constants$200.const$5;
+        return constants$204.const$1;
     }
     /**
      * {@snippet :
@@ -3063,7 +6475,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_MOUSE_TOUCH_EVENTS() {
-        return constants$201.const$0;
+        return constants$204.const$2;
     }
     /**
      * {@snippet :
@@ -3071,7 +6483,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_MOUSE_AUTO_CAPTURE() {
-        return constants$201.const$1;
+        return constants$204.const$3;
     }
     /**
      * {@snippet :
@@ -3079,7 +6491,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_NO_SIGNAL_HANDLERS() {
-        return constants$201.const$2;
+        return constants$204.const$4;
     }
     /**
      * {@snippet :
@@ -3087,7 +6499,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_OPENGL_ES_DRIVER() {
-        return constants$201.const$3;
+        return constants$204.const$5;
     }
     /**
      * {@snippet :
@@ -3095,7 +6507,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_ORIENTATIONS() {
-        return constants$201.const$4;
+        return constants$205.const$0;
     }
     /**
      * {@snippet :
@@ -3103,7 +6515,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_POLL_SENTINEL() {
-        return constants$201.const$5;
+        return constants$205.const$1;
     }
     /**
      * {@snippet :
@@ -3111,7 +6523,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_PREFERRED_LOCALES() {
-        return constants$202.const$0;
+        return constants$205.const$2;
     }
     /**
      * {@snippet :
@@ -3119,7 +6531,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_QTWAYLAND_CONTENT_ORIENTATION() {
-        return constants$202.const$1;
+        return constants$205.const$3;
     }
     /**
      * {@snippet :
@@ -3127,7 +6539,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_QTWAYLAND_WINDOW_FLAGS() {
-        return constants$202.const$2;
+        return constants$205.const$4;
     }
     /**
      * {@snippet :
@@ -3135,7 +6547,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_RENDER_BATCHING() {
-        return constants$202.const$3;
+        return constants$205.const$5;
     }
     /**
      * {@snippet :
@@ -3143,7 +6555,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_RENDER_LINE_METHOD() {
-        return constants$202.const$4;
+        return constants$206.const$0;
     }
     /**
      * {@snippet :
@@ -3151,7 +6563,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_RENDER_DIRECT3D11_DEBUG() {
-        return constants$202.const$5;
+        return constants$206.const$1;
     }
     /**
      * {@snippet :
@@ -3159,7 +6571,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_RENDER_DIRECT3D_THREADSAFE() {
-        return constants$203.const$0;
+        return constants$206.const$2;
     }
     /**
      * {@snippet :
@@ -3167,7 +6579,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_RENDER_DRIVER() {
-        return constants$203.const$1;
+        return constants$206.const$3;
     }
     /**
      * {@snippet :
@@ -3175,7 +6587,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_RENDER_LOGICAL_SIZE_MODE() {
-        return constants$203.const$2;
+        return constants$206.const$4;
     }
     /**
      * {@snippet :
@@ -3183,7 +6595,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_RENDER_OPENGL_SHADERS() {
-        return constants$203.const$3;
+        return constants$206.const$5;
     }
     /**
      * {@snippet :
@@ -3191,7 +6603,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_RENDER_SCALE_QUALITY() {
-        return constants$203.const$4;
+        return constants$207.const$0;
     }
     /**
      * {@snippet :
@@ -3199,7 +6611,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_RENDER_VSYNC() {
-        return constants$203.const$5;
+        return constants$207.const$1;
     }
     /**
      * {@snippet :
@@ -3207,7 +6619,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_RENDER_METAL_PREFER_LOW_POWER_DEVICE() {
-        return constants$204.const$0;
+        return constants$207.const$2;
     }
     /**
      * {@snippet :
@@ -3215,7 +6627,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_PS2_DYNAMIC_VSYNC() {
-        return constants$204.const$1;
+        return constants$207.const$3;
     }
     /**
      * {@snippet :
@@ -3223,7 +6635,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_RETURN_KEY_HIDES_IME() {
-        return constants$204.const$2;
+        return constants$207.const$4;
     }
     /**
      * {@snippet :
@@ -3231,7 +6643,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_RPI_VIDEO_LAYER() {
-        return constants$204.const$3;
+        return constants$207.const$5;
     }
     /**
      * {@snippet :
@@ -3239,7 +6651,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_SCREENSAVER_INHIBIT_ACTIVITY_NAME() {
-        return constants$204.const$4;
+        return constants$208.const$0;
     }
     /**
      * {@snippet :
@@ -3247,7 +6659,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_THREAD_FORCE_REALTIME_TIME_CRITICAL() {
-        return constants$204.const$5;
+        return constants$208.const$1;
     }
     /**
      * {@snippet :
@@ -3255,7 +6667,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_THREAD_PRIORITY_POLICY() {
-        return constants$205.const$0;
+        return constants$208.const$2;
     }
     /**
      * {@snippet :
@@ -3263,7 +6675,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_THREAD_STACK_SIZE() {
-        return constants$205.const$1;
+        return constants$208.const$3;
     }
     /**
      * {@snippet :
@@ -3271,7 +6683,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_TIMER_RESOLUTION() {
-        return constants$205.const$2;
+        return constants$208.const$4;
     }
     /**
      * {@snippet :
@@ -3279,7 +6691,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_TOUCH_MOUSE_EVENTS() {
-        return constants$205.const$3;
+        return constants$208.const$5;
     }
     /**
      * {@snippet :
@@ -3287,7 +6699,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VITA_TOUCH_MOUSE_DEVICE() {
-        return constants$205.const$4;
+        return constants$209.const$0;
     }
     /**
      * {@snippet :
@@ -3295,7 +6707,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_TV_REMOTE_AS_JOYSTICK() {
-        return constants$205.const$5;
+        return constants$209.const$1;
     }
     /**
      * {@snippet :
@@ -3303,7 +6715,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_ALLOW_SCREENSAVER() {
-        return constants$206.const$0;
+        return constants$209.const$2;
     }
     /**
      * {@snippet :
@@ -3311,7 +6723,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_DOUBLE_BUFFER() {
-        return constants$206.const$1;
+        return constants$209.const$3;
     }
     /**
      * {@snippet :
@@ -3319,7 +6731,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_EGL_ALLOW_TRANSPARENCY() {
-        return constants$206.const$2;
+        return constants$209.const$4;
     }
     /**
      * {@snippet :
@@ -3327,7 +6739,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_EXTERNAL_CONTEXT() {
-        return constants$206.const$3;
+        return constants$209.const$5;
     }
     /**
      * {@snippet :
@@ -3335,7 +6747,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_HIGHDPI_DISABLED() {
-        return constants$206.const$4;
+        return constants$210.const$0;
     }
     /**
      * {@snippet :
@@ -3343,7 +6755,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_MAC_FULLSCREEN_SPACES() {
-        return constants$206.const$5;
+        return constants$210.const$1;
     }
     /**
      * {@snippet :
@@ -3351,7 +6763,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_MINIMIZE_ON_FOCUS_LOSS() {
-        return constants$207.const$0;
+        return constants$210.const$2;
     }
     /**
      * {@snippet :
@@ -3359,7 +6771,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_WAYLAND_ALLOW_LIBDECOR() {
-        return constants$207.const$1;
+        return constants$210.const$3;
     }
     /**
      * {@snippet :
@@ -3367,7 +6779,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_WAYLAND_PREFER_LIBDECOR() {
-        return constants$207.const$2;
+        return constants$210.const$4;
     }
     /**
      * {@snippet :
@@ -3375,7 +6787,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_WAYLAND_MODE_EMULATION() {
-        return constants$207.const$3;
+        return constants$210.const$5;
     }
     /**
      * {@snippet :
@@ -3383,7 +6795,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_WAYLAND_EMULATE_MOUSE_WARP() {
-        return constants$207.const$4;
+        return constants$211.const$0;
     }
     /**
      * {@snippet :
@@ -3391,7 +6803,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_WINDOW_SHARE_PIXEL_FORMAT() {
-        return constants$207.const$5;
+        return constants$211.const$1;
     }
     /**
      * {@snippet :
@@ -3399,7 +6811,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_FOREIGN_WINDOW_OPENGL() {
-        return constants$208.const$0;
+        return constants$211.const$2;
     }
     /**
      * {@snippet :
@@ -3407,7 +6819,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_FOREIGN_WINDOW_VULKAN() {
-        return constants$208.const$1;
+        return constants$211.const$3;
     }
     /**
      * {@snippet :
@@ -3415,7 +6827,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_WIN_D3DCOMPILER() {
-        return constants$208.const$2;
+        return constants$211.const$4;
     }
     /**
      * {@snippet :
@@ -3423,7 +6835,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_X11_FORCE_EGL() {
-        return constants$208.const$3;
+        return constants$211.const$5;
     }
     /**
      * {@snippet :
@@ -3431,7 +6843,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR() {
-        return constants$208.const$4;
+        return constants$212.const$0;
     }
     /**
      * {@snippet :
@@ -3439,7 +6851,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_X11_NET_WM_PING() {
-        return constants$208.const$5;
+        return constants$212.const$1;
     }
     /**
      * {@snippet :
@@ -3447,7 +6859,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_X11_WINDOW_VISUALID() {
-        return constants$209.const$0;
+        return constants$212.const$2;
     }
     /**
      * {@snippet :
@@ -3455,7 +6867,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_X11_XINERAMA() {
-        return constants$209.const$1;
+        return constants$212.const$3;
     }
     /**
      * {@snippet :
@@ -3463,7 +6875,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_X11_XRANDR() {
-        return constants$209.const$2;
+        return constants$212.const$4;
     }
     /**
      * {@snippet :
@@ -3471,7 +6883,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEO_X11_XVIDMODE() {
-        return constants$209.const$3;
+        return constants$212.const$5;
     }
     /**
      * {@snippet :
@@ -3479,7 +6891,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_WAVE_FACT_CHUNK() {
-        return constants$209.const$4;
+        return constants$213.const$0;
     }
     /**
      * {@snippet :
@@ -3487,7 +6899,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_WAVE_RIFF_CHUNK_SIZE() {
-        return constants$209.const$5;
+        return constants$213.const$1;
     }
     /**
      * {@snippet :
@@ -3495,7 +6907,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_WAVE_TRUNCATION() {
-        return constants$210.const$0;
+        return constants$213.const$2;
     }
     /**
      * {@snippet :
@@ -3503,7 +6915,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_WINDOWS_DISABLE_THREAD_NAMING() {
-        return constants$210.const$1;
+        return constants$213.const$3;
     }
     /**
      * {@snippet :
@@ -3511,7 +6923,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_WINDOWS_ENABLE_MENU_MNEMONICS() {
-        return constants$210.const$2;
+        return constants$213.const$4;
     }
     /**
      * {@snippet :
@@ -3519,7 +6931,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_WINDOWS_ENABLE_MESSAGELOOP() {
-        return constants$210.const$3;
+        return constants$213.const$5;
     }
     /**
      * {@snippet :
@@ -3527,7 +6939,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_WINDOWS_FORCE_MUTEX_CRITICAL_SECTIONS() {
-        return constants$210.const$4;
+        return constants$214.const$0;
     }
     /**
      * {@snippet :
@@ -3535,7 +6947,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_WINDOWS_FORCE_SEMAPHORE_KERNEL() {
-        return constants$210.const$5;
+        return constants$214.const$1;
     }
     /**
      * {@snippet :
@@ -3543,7 +6955,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_WINDOWS_INTRESOURCE_ICON() {
-        return constants$211.const$0;
+        return constants$214.const$2;
     }
     /**
      * {@snippet :
@@ -3551,7 +6963,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_WINDOWS_INTRESOURCE_ICON_SMALL() {
-        return constants$211.const$1;
+        return constants$214.const$3;
     }
     /**
      * {@snippet :
@@ -3559,7 +6971,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_WINDOWS_NO_CLOSE_ON_ALT_F4() {
-        return constants$211.const$2;
+        return constants$214.const$4;
     }
     /**
      * {@snippet :
@@ -3567,7 +6979,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_WINDOWS_USE_D3D9EX() {
-        return constants$211.const$3;
+        return constants$214.const$5;
     }
     /**
      * {@snippet :
@@ -3575,7 +6987,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_WINDOWS_DPI_AWARENESS() {
-        return constants$211.const$4;
+        return constants$215.const$0;
     }
     /**
      * {@snippet :
@@ -3583,7 +6995,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_WINDOWS_DPI_SCALING() {
-        return constants$211.const$5;
+        return constants$215.const$1;
     }
     /**
      * {@snippet :
@@ -3591,7 +7003,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN() {
-        return constants$212.const$0;
+        return constants$215.const$2;
     }
     /**
      * {@snippet :
@@ -3599,7 +7011,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_WINDOW_NO_ACTIVATION_WHEN_SHOWN() {
-        return constants$212.const$1;
+        return constants$215.const$3;
     }
     /**
      * {@snippet :
@@ -3607,7 +7019,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_WINRT_HANDLE_BACK_BUTTON() {
-        return constants$212.const$2;
+        return constants$215.const$4;
     }
     /**
      * {@snippet :
@@ -3615,7 +7027,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_WINRT_PRIVACY_POLICY_LABEL() {
-        return constants$212.const$3;
+        return constants$215.const$5;
     }
     /**
      * {@snippet :
@@ -3623,7 +7035,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_WINRT_PRIVACY_POLICY_URL() {
-        return constants$212.const$4;
+        return constants$216.const$0;
     }
     /**
      * {@snippet :
@@ -3631,7 +7043,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_X11_FORCE_OVERRIDE_REDIRECT() {
-        return constants$212.const$5;
+        return constants$216.const$1;
     }
     /**
      * {@snippet :
@@ -3639,7 +7051,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_XINPUT_ENABLED() {
-        return constants$213.const$0;
+        return constants$216.const$2;
     }
     /**
      * {@snippet :
@@ -3647,7 +7059,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_DIRECTINPUT_ENABLED() {
-        return constants$213.const$1;
+        return constants$216.const$3;
     }
     /**
      * {@snippet :
@@ -3655,7 +7067,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_XINPUT_USE_OLD_JOYSTICK_MAPPING() {
-        return constants$213.const$2;
+        return constants$216.const$4;
     }
     /**
      * {@snippet :
@@ -3663,7 +7075,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_AUDIO_INCLUDE_MONITORS() {
-        return constants$213.const$3;
+        return constants$216.const$5;
     }
     /**
      * {@snippet :
@@ -3671,7 +7083,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_X11_WINDOW_TYPE() {
-        return constants$213.const$4;
+        return constants$217.const$0;
     }
     /**
      * {@snippet :
@@ -3679,7 +7091,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_QUIT_ON_LAST_WINDOW_CLOSE() {
-        return constants$213.const$5;
+        return constants$217.const$1;
     }
     /**
      * {@snippet :
@@ -3687,7 +7099,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_VIDEODRIVER() {
-        return constants$214.const$0;
+        return constants$217.const$2;
     }
     /**
      * {@snippet :
@@ -3695,7 +7107,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_AUDIODRIVER() {
-        return constants$214.const$1;
+        return constants$217.const$3;
     }
     /**
      * {@snippet :
@@ -3703,7 +7115,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_KMSDRM_DEVICE_INDEX() {
-        return constants$214.const$2;
+        return constants$217.const$4;
     }
     /**
      * {@snippet :
@@ -3711,7 +7123,7 @@ public class sdl_h_1 {
      * }
      */
     public static MemorySegment SDL_HINT_TRACKPAD_IS_TOUCH_ONLY() {
-        return constants$214.const$3;
+        return constants$217.const$5;
     }
     /**
      * {@snippet :

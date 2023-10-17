@@ -12,26 +12,23 @@ final class constants$165 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$165() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SetHint",
-        constants$6.const$4
+        "SDL_PollEvent",
+        constants$18.const$4
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_ResetHint",
+        "SDL_WaitEvent",
         constants$18.const$4
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_ResetHints",
-        constants$32.const$3
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GetHint",
-        constants$6.const$0
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GetHintBoolean",
+        "SDL_WaitEventTimeout",
         constants$34.const$3
     );
-    static final MethodHandle const$5 = RuntimeHelper.upcallHandle(SDL_HintCallback.class, "apply", constants$3.const$4);
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_PushEvent",
+        constants$18.const$4
+    );
+    static final MethodHandle const$4 = RuntimeHelper.upcallHandle(SDL_EventFilter.class, "apply", constants$6.const$4);
+    static final MethodHandle const$5 = RuntimeHelper.upcallHandle(SDL_SetEventFilter$filter.class, "apply", constants$6.const$4);
 }
 
 

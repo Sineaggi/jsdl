@@ -11,21 +11,23 @@ final class constants$154 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$154() {}
-    static final VarHandle const$0 = constants$152.const$4.varHandle(MemoryLayout.PathElement.groupElement("numFingers"));
-    static final VarHandle const$1 = constants$152.const$4.varHandle(MemoryLayout.PathElement.groupElement("padding"));
-    static final StructLayout const$2 = MemoryLayout.structLayout(
+    static final StructLayout const$0 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
         JAVA_LONG.withName("touchId"),
-        JAVA_LONG.withName("gestureId"),
-        JAVA_INT.withName("numFingers"),
-        JAVA_FLOAT.withName("error"),
+        JAVA_LONG.withName("fingerId"),
         JAVA_FLOAT.withName("x"),
-        JAVA_FLOAT.withName("y")
-    ).withName("SDL_DollarGestureEvent");
-    static final VarHandle const$3 = constants$154.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$4 = constants$154.const$2.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$5 = constants$154.const$2.varHandle(MemoryLayout.PathElement.groupElement("touchId"));
+        JAVA_FLOAT.withName("y"),
+        JAVA_FLOAT.withName("dx"),
+        JAVA_FLOAT.withName("dy"),
+        JAVA_FLOAT.withName("pressure"),
+        JAVA_INT.withName("windowID")
+    ).withName("SDL_TouchFingerEvent");
+    static final VarHandle const$1 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$2 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$3 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("touchId"));
+    static final VarHandle const$4 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("fingerId"));
+    static final VarHandle const$5 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("x"));
 }
 
 

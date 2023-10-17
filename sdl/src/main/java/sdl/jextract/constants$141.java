@@ -11,16 +11,12 @@ final class constants$141 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$141() {}
-    static final VarHandle const$0 = constants$140.const$3.varHandle(MemoryLayout.PathElement.groupElement("which"));
-    static final VarHandle const$1 = constants$140.const$3.varHandle(MemoryLayout.PathElement.groupElement("button"));
-    static final VarHandle const$2 = constants$140.const$3.varHandle(MemoryLayout.PathElement.groupElement("state"));
-    static final VarHandle const$3 = constants$140.const$3.varHandle(MemoryLayout.PathElement.groupElement("padding1"));
-    static final VarHandle const$4 = constants$140.const$3.varHandle(MemoryLayout.PathElement.groupElement("padding2"));
-    static final StructLayout const$5 = MemoryLayout.structLayout(
-        JAVA_INT.withName("type"),
-        JAVA_INT.withName("timestamp"),
-        JAVA_INT.withName("which")
-    ).withName("SDL_JoyDeviceEvent");
+    static final VarHandle const$0 = constants$140.const$4.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$1 = constants$140.const$4.varHandle(MemoryLayout.PathElement.groupElement("which"));
+    static final VarHandle const$2 = constants$140.const$4.varHandle(MemoryLayout.PathElement.groupElement("ball"));
+    static final VarHandle const$3 = constants$140.const$4.varHandle(MemoryLayout.PathElement.groupElement("padding1"));
+    static final VarHandle const$4 = constants$140.const$4.varHandle(MemoryLayout.PathElement.groupElement("padding2"));
+    static final VarHandle const$5 = constants$140.const$4.varHandle(MemoryLayout.PathElement.groupElement("padding3"));
 }
 
 

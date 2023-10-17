@@ -11,18 +11,23 @@ final class constants$155 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$155() {}
-    static final VarHandle const$0 = constants$154.const$2.varHandle(MemoryLayout.PathElement.groupElement("gestureId"));
-    static final VarHandle const$1 = constants$154.const$2.varHandle(MemoryLayout.PathElement.groupElement("numFingers"));
-    static final VarHandle const$2 = constants$154.const$2.varHandle(MemoryLayout.PathElement.groupElement("error"));
-    static final VarHandle const$3 = constants$154.const$2.varHandle(MemoryLayout.PathElement.groupElement("x"));
-    static final VarHandle const$4 = constants$154.const$2.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final VarHandle const$0 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final VarHandle const$1 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("dx"));
+    static final VarHandle const$2 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("dy"));
+    static final VarHandle const$3 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("pressure"));
+    static final VarHandle const$4 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
     static final StructLayout const$5 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
-        RuntimeHelper.POINTER.withName("file"),
-        JAVA_INT.withName("windowID"),
+        JAVA_LONG.withName("touchId"),
+        JAVA_FLOAT.withName("dTheta"),
+        JAVA_FLOAT.withName("dDist"),
+        JAVA_FLOAT.withName("x"),
+        JAVA_FLOAT.withName("y"),
+        JAVA_SHORT.withName("numFingers"),
+        JAVA_SHORT.withName("padding"),
         MemoryLayout.paddingLayout(4)
-    ).withName("SDL_DropEvent");
+    ).withName("SDL_MultiGestureEvent");
 }
 
 

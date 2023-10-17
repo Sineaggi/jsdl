@@ -16,7 +16,7 @@ public interface SDL_FilterEvents$filter {
 
     int apply(java.lang.foreign.MemorySegment userdata, java.lang.foreign.MemorySegment event);
     static MemorySegment allocate(SDL_FilterEvents$filter fi, Arena scope) {
-        return RuntimeHelper.upcallStub(constants$164.const$0, fi, constants$6.const$4, scope);
+        return RuntimeHelper.upcallStub(constants$167.const$1, fi, constants$6.const$4, scope);
     }
     static SDL_FilterEvents$filter ofAddress(MemorySegment addr, Arena arena) {
         MemorySegment symbol = addr.reinterpret(arena, null);

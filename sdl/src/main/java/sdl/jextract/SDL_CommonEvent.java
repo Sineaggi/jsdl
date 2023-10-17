@@ -18,10 +18,10 @@ import static java.lang.foreign.ValueLayout.*;
 public class SDL_CommonEvent {
 
     public static MemoryLayout $LAYOUT() {
-        return constants$121.const$4;
+        return constants$125.const$4;
     }
     public static VarHandle type$VH() {
-        return constants$121.const$5;
+        return constants$125.const$5;
     }
     /**
      * Getter for field:
@@ -30,7 +30,7 @@ public class SDL_CommonEvent {
      * }
      */
     public static int type$get(MemorySegment seg) {
-        return (int)constants$121.const$5.get(seg);
+        return (int)constants$125.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -39,16 +39,16 @@ public class SDL_CommonEvent {
      * }
      */
     public static void type$set(MemorySegment seg, int x) {
-        constants$121.const$5.set(seg, x);
+        constants$125.const$5.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
-        return (int)constants$121.const$5.get(seg.asSlice(index*sizeof()));
+        return (int)constants$125.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void type$set(MemorySegment seg, long index, int x) {
-        constants$121.const$5.set(seg.asSlice(index*sizeof()), x);
+        constants$125.const$5.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle timestamp$VH() {
-        return constants$122.const$0;
+        return constants$126.const$0;
     }
     /**
      * Getter for field:
@@ -57,7 +57,7 @@ public class SDL_CommonEvent {
      * }
      */
     public static int timestamp$get(MemorySegment seg) {
-        return (int)constants$122.const$0.get(seg);
+        return (int)constants$126.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -66,13 +66,13 @@ public class SDL_CommonEvent {
      * }
      */
     public static void timestamp$set(MemorySegment seg, int x) {
-        constants$122.const$0.set(seg, x);
+        constants$126.const$0.set(seg, x);
     }
     public static int timestamp$get(MemorySegment seg, long index) {
-        return (int)constants$122.const$0.get(seg.asSlice(index*sizeof()));
+        return (int)constants$126.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void timestamp$set(MemorySegment seg, long index, int x) {
-        constants$122.const$0.set(seg.asSlice(index*sizeof()), x);
+        constants$126.const$0.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }

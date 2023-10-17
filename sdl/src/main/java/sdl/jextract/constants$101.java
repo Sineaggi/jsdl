@@ -11,30 +11,18 @@ final class constants$101 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$101() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetVendor",
-        constants$45.const$0
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_SHORT,
+        JAVA_SHORT
     );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetProduct",
-        constants$45.const$0
-    );
+    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.Rumble.class, "apply", constants$101.const$0);
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetProductVersion",
-        constants$45.const$0
+        constants$101.const$0
     );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetFirmwareVersion",
-        constants$45.const$0
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetSerial",
-        constants$6.const$0
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetType",
-        constants$18.const$4
-    );
+    static final VarHandle const$3 = constants$98.const$0.varHandle(MemoryLayout.PathElement.groupElement("Rumble"));
+    static final MethodHandle const$4 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.RumbleTriggers.class, "apply", constants$101.const$0);
+    static final VarHandle const$5 = constants$98.const$0.varHandle(MemoryLayout.PathElement.groupElement("RumbleTriggers"));
 }
 
 

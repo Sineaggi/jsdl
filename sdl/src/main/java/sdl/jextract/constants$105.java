@@ -12,29 +12,27 @@ final class constants$105 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$105() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetBall",
-        constants$59.const$2
+        "SDL_JoystickGetVendor",
+        constants$45.const$0
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetButton",
-        constants$104.const$4
+        "SDL_JoystickGetProduct",
+        constants$45.const$0
     );
-    static final FunctionDescriptor const$2 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_SHORT,
-        JAVA_SHORT,
-        JAVA_INT
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickGetProductVersion",
+        constants$45.const$0
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickRumble",
-        constants$105.const$2
+        "SDL_JoystickGetFirmwareVersion",
+        constants$45.const$0
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickRumbleTriggers",
-        constants$105.const$2
+        "SDL_JoystickGetSerial",
+        constants$6.const$0
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickHasLED",
+        "SDL_JoystickGetType",
         constants$18.const$4
     );
 }

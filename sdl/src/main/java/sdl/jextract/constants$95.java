@@ -11,12 +11,30 @@ final class constants$95 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$95() {}
-    static final VarHandle const$0 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("vendor_id"));
-    static final VarHandle const$1 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("product_id"));
-    static final VarHandle const$2 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("padding"));
-    static final VarHandle const$3 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("button_mask"));
-    static final VarHandle const$4 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("axis_mask"));
-    static final VarHandle const$5 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("name"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_LockJoysticks",
+        constants$32.const$3
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_UnlockJoysticks",
+        constants$32.const$3
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_NumJoysticks",
+        constants$5.const$5
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickNameForIndex",
+        constants$33.const$5
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickPathForIndex",
+        constants$33.const$5
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickGetDevicePlayerIndex",
+        constants$8.const$0
+    );
 }
 
 

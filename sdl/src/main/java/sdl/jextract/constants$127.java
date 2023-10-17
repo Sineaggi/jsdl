@@ -11,19 +11,22 @@ final class constants$127 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$127() {}
-    static final VarHandle const$0 = constants$126.const$4.varHandle(MemoryLayout.PathElement.groupElement("sym"));
-    static final VarHandle const$1 = constants$126.const$4.varHandle(MemoryLayout.PathElement.groupElement("mod"));
-    static final VarHandle const$2 = constants$126.const$4.varHandle(MemoryLayout.PathElement.groupElement("unused"));
-    static final StructLayout const$3 = MemoryLayout.structLayout(
+    static final VarHandle const$0 = constants$126.const$1.varHandle(MemoryLayout.PathElement.groupElement("padding1"));
+    static final VarHandle const$1 = constants$126.const$1.varHandle(MemoryLayout.PathElement.groupElement("padding2"));
+    static final VarHandle const$2 = constants$126.const$1.varHandle(MemoryLayout.PathElement.groupElement("padding3"));
+    static final VarHandle const$3 = constants$126.const$1.varHandle(MemoryLayout.PathElement.groupElement("data1"));
+    static final StructLayout const$4 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
         JAVA_INT.withName("windowID"),
-        MemoryLayout.sequenceLayout(32, JAVA_BYTE).withName("text"),
-        JAVA_INT.withName("start"),
-        JAVA_INT.withName("length")
-    ).withName("SDL_TextEditingEvent");
-    static final VarHandle const$4 = constants$127.const$3.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$5 = constants$127.const$3.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+        JAVA_BYTE.withName("event"),
+        JAVA_BYTE.withName("padding1"),
+        JAVA_BYTE.withName("padding2"),
+        JAVA_BYTE.withName("padding3"),
+        JAVA_INT.withName("data1"),
+        JAVA_INT.withName("data2")
+    ).withName("SDL_WindowEvent");
+    static final VarHandle const$5 = constants$127.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
 }
 
 

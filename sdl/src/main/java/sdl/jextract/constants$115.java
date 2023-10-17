@@ -11,29 +11,23 @@ final class constants$115 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$115() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetProductVersion",
-        constants$45.const$0
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetFirmwareVersion",
-        constants$45.const$0
-    );
+    static final VarHandle const$0 = constants$114.const$5.varHandle(MemoryLayout.PathElement.groupElement("hat"));
+    static final VarHandle const$1 = constants$114.const$5.varHandle(MemoryLayout.PathElement.groupElement("hat_mask"));
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetSerial",
-        constants$6.const$0
+        "SDL_GameControllerAddMappingsFromRW",
+        constants$34.const$3
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetAttached",
+        "SDL_GameControllerAddMapping",
         constants$18.const$4
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetJoystick",
-        constants$6.const$0
+        "SDL_GameControllerNumMappings",
+        constants$5.const$5
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerEventState",
-        constants$8.const$0
+        "SDL_GameControllerMappingForIndex",
+        constants$33.const$5
     );
 }
 

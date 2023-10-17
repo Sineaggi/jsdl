@@ -13,17 +13,10 @@ final class constants$156 {
     private constants$156() {}
     static final VarHandle const$0 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("type"));
     static final VarHandle const$1 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$2 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("file"));
-    static final VarHandle const$3 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
-    static final StructLayout const$4 = MemoryLayout.structLayout(
-        JAVA_INT.withName("type"),
-        JAVA_INT.withName("timestamp"),
-        JAVA_INT.withName("which"),
-        MemoryLayout.sequenceLayout(6, JAVA_FLOAT).withName("data"),
-        MemoryLayout.paddingLayout(4),
-        JAVA_LONG.withName("timestamp_us")
-    ).withName("SDL_SensorEvent");
-    static final VarHandle const$5 = constants$156.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$2 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("touchId"));
+    static final VarHandle const$3 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("dTheta"));
+    static final VarHandle const$4 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("dDist"));
+    static final VarHandle const$5 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("x"));
 }
 
 

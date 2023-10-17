@@ -94,6 +94,14 @@ public class GameController implements AutoCloseable {
         SDL_GameControllerClose(gameController);
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof GameController other) {
+            return other.gameController.equals(gameController);
+        }
+        return super.equals(obj);
+    }
+
     /**
      *
      * @return Return the controller firmware version, or zero if unavailable.

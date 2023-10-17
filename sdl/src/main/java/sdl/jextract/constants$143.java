@@ -11,22 +11,20 @@ final class constants$143 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$143() {}
-    static final VarHandle const$0 = constants$142.const$3.varHandle(MemoryLayout.PathElement.groupElement("which"));
-    static final VarHandle const$1 = constants$142.const$3.varHandle(MemoryLayout.PathElement.groupElement("level"));
-    static final StructLayout const$2 = MemoryLayout.structLayout(
+    static final VarHandle const$0 = constants$142.const$2.varHandle(MemoryLayout.PathElement.groupElement("hat"));
+    static final VarHandle const$1 = constants$142.const$2.varHandle(MemoryLayout.PathElement.groupElement("value"));
+    static final VarHandle const$2 = constants$142.const$2.varHandle(MemoryLayout.PathElement.groupElement("padding1"));
+    static final VarHandle const$3 = constants$142.const$2.varHandle(MemoryLayout.PathElement.groupElement("padding2"));
+    static final StructLayout const$4 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
         JAVA_INT.withName("which"),
-        JAVA_BYTE.withName("axis"),
+        JAVA_BYTE.withName("button"),
+        JAVA_BYTE.withName("state"),
         JAVA_BYTE.withName("padding1"),
-        JAVA_BYTE.withName("padding2"),
-        JAVA_BYTE.withName("padding3"),
-        JAVA_SHORT.withName("value"),
-        JAVA_SHORT.withName("padding4")
-    ).withName("SDL_ControllerAxisEvent");
-    static final VarHandle const$3 = constants$143.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$4 = constants$143.const$2.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$5 = constants$143.const$2.varHandle(MemoryLayout.PathElement.groupElement("which"));
+        JAVA_BYTE.withName("padding2")
+    ).withName("SDL_JoyButtonEvent");
+    static final VarHandle const$5 = constants$143.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
 }
 
 

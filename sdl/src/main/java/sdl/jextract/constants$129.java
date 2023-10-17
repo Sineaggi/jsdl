@@ -11,17 +11,27 @@ final class constants$129 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$129() {}
-    static final VarHandle const$0 = constants$128.const$3.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
-    static final VarHandle const$1 = constants$128.const$3.varHandle(MemoryLayout.PathElement.groupElement("text"));
-    static final VarHandle const$2 = constants$128.const$3.varHandle(MemoryLayout.PathElement.groupElement("start"));
-    static final VarHandle const$3 = constants$128.const$3.varHandle(MemoryLayout.PathElement.groupElement("length"));
-    static final StructLayout const$4 = MemoryLayout.structLayout(
+    static final VarHandle const$0 = constants$127.const$4.varHandle(MemoryLayout.PathElement.groupElement("data1"));
+    static final VarHandle const$1 = constants$127.const$4.varHandle(MemoryLayout.PathElement.groupElement("data2"));
+    static final StructLayout const$2 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
         JAVA_INT.withName("windowID"),
-        MemoryLayout.sequenceLayout(32, JAVA_BYTE).withName("text")
-    ).withName("SDL_TextInputEvent");
-    static final VarHandle const$5 = constants$129.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
+        JAVA_BYTE.withName("state"),
+        JAVA_BYTE.withName("repeat"),
+        JAVA_BYTE.withName("padding2"),
+        JAVA_BYTE.withName("padding3"),
+        MemoryLayout.structLayout(
+            JAVA_INT.withName("scancode"),
+            JAVA_INT.withName("sym"),
+            JAVA_SHORT.withName("mod"),
+            MemoryLayout.paddingLayout(2),
+            JAVA_INT.withName("unused")
+        ).withName("keysym")
+    ).withName("SDL_KeyboardEvent");
+    static final VarHandle const$3 = constants$129.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$4 = constants$129.const$2.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$5 = constants$129.const$2.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
 }
 
 

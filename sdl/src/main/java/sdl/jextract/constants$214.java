@@ -11,10 +11,12 @@ final class constants$214 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$214() {}
-    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_VIDEODRIVER");
-    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_AUDIODRIVER");
-    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_KMSDRM_DEVICE_INDEX");
-    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_TRACKPAD_IS_TOUCH_ONLY");
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_WINDOWS_FORCE_MUTEX_CRITICAL_SECTIONS");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_WINDOWS_FORCE_SEMAPHORE_KERNEL");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_WINDOWS_INTRESOURCE_ICON");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_WINDOWS_INTRESOURCE_ICON_SMALL");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_WINDOWS_NO_CLOSE_ON_ALT_F4");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_WINDOWS_USE_D3D9EX");
 }
 
 

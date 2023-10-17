@@ -12,33 +12,28 @@ final class constants$118 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$118() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetNumTouchpads",
-        constants$18.const$4
+        "SDL_GameControllerPath",
+        constants$6.const$0
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetNumTouchpadFingers",
-        constants$34.const$3
+        "SDL_GameControllerGetType",
+        constants$18.const$4
     );
-    static final FunctionDescriptor const$2 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerGetPlayerIndex",
+        constants$18.const$4
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetTouchpadFinger",
-        constants$118.const$2
+        "SDL_GameControllerSetPlayerIndex",
+        constants$80.const$2
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerHasSensor",
-        constants$34.const$3
+        "SDL_GameControllerGetVendor",
+        constants$45.const$0
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerSetSensorEnabled",
-        constants$65.const$4
+        "SDL_GameControllerGetProduct",
+        constants$45.const$0
     );
 }
 

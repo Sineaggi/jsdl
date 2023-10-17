@@ -11,24 +11,16 @@ final class constants$162 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$162() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_WaitEvent",
-        constants$18.const$4
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_WaitEventTimeout",
-        constants$34.const$3
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_PushEvent",
-        constants$18.const$4
-    );
-    static final MethodHandle const$3 = RuntimeHelper.upcallHandle(SDL_EventFilter.class, "apply", constants$6.const$4);
-    static final MethodHandle const$4 = RuntimeHelper.upcallHandle(SDL_SetEventFilter$filter.class, "apply", constants$6.const$4);
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_SetEventFilter",
-        constants$67.const$4
-    );
+    static final VarHandle const$0 = constants$161.const$4.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$1 = constants$161.const$4.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
+    static final VarHandle const$2 = constants$161.const$4.varHandle(MemoryLayout.PathElement.groupElement("code"));
+    static final VarHandle const$3 = constants$161.const$4.varHandle(MemoryLayout.PathElement.groupElement("data1"));
+    static final VarHandle const$4 = constants$161.const$4.varHandle(MemoryLayout.PathElement.groupElement("data2"));
+    static final StructLayout const$5 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        JAVA_INT.withName("timestamp"),
+        RuntimeHelper.POINTER.withName("msg")
+    ).withName("SDL_SysWMEvent");
 }
 
 

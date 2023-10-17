@@ -11,30 +11,32 @@ final class constants$114 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$114() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerPath",
-        constants$6.const$0
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetType",
-        constants$18.const$4
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetPlayerIndex",
-        constants$18.const$4
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerSetPlayerIndex",
-        constants$80.const$2
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetVendor",
-        constants$45.const$0
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetProduct",
-        constants$45.const$0
-    );
+    static final StructLayout const$0 = MemoryLayout.structLayout(
+        JAVA_INT.withName("bindType"),
+        MemoryLayout.unionLayout(
+            JAVA_INT.withName("button"),
+            JAVA_INT.withName("axis"),
+            MemoryLayout.structLayout(
+                JAVA_INT.withName("hat"),
+                JAVA_INT.withName("hat_mask")
+            ).withName("hat")
+        ).withName("value")
+    ).withName("SDL_GameControllerButtonBind");
+    static final VarHandle const$1 = constants$114.const$0.varHandle(MemoryLayout.PathElement.groupElement("bindType"));
+    static final UnionLayout const$2 = MemoryLayout.unionLayout(
+        JAVA_INT.withName("button"),
+        JAVA_INT.withName("axis"),
+        MemoryLayout.structLayout(
+            JAVA_INT.withName("hat"),
+            JAVA_INT.withName("hat_mask")
+        ).withName("hat")
+    ).withName("");
+    static final VarHandle const$3 = constants$114.const$2.varHandle(MemoryLayout.PathElement.groupElement("button"));
+    static final VarHandle const$4 = constants$114.const$2.varHandle(MemoryLayout.PathElement.groupElement("axis"));
+    static final StructLayout const$5 = MemoryLayout.structLayout(
+        JAVA_INT.withName("hat"),
+        JAVA_INT.withName("hat_mask")
+    ).withName("");
 }
 
 

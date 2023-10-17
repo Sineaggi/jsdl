@@ -11,12 +11,30 @@ final class constants$186 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$186() {}
-    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ANDROID_APK_EXPANSION_PATCH_FILE_VERSION");
-    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ANDROID_BLOCK_ON_PAUSE");
-    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ANDROID_BLOCK_ON_PAUSE_PAUSEAUDIO");
-    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ANDROID_TRAP_BACK_BUTTON");
-    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_APP_NAME");
-    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_APPLE_TV_CONTROLLER_UI_EVENTS");
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_RenderGetMetalLayer",
+        constants$6.const$0
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_RenderGetMetalCommandEncoder",
+        constants$6.const$0
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_RenderSetVSync",
+        constants$34.const$3
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_Init",
+        constants$8.const$0
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_InitSubSystem",
+        constants$8.const$0
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_QuitSubSystem",
+        constants$70.const$3
+    );
 }
 
 

@@ -16,28 +16,16 @@ final class constants$90 {
         constants$1.const$2
     );
     static final StructLayout const$1 = MemoryLayout.structLayout(
-        MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
-    ).withName("SDL_GUID");
-    static final FunctionDescriptor const$2 = FunctionDescriptor.ofVoid(
-        MemoryLayout.structLayout(
-            MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
-        ).withName("SDL_GUID"),
-        RuntimeHelper.POINTER,
-        JAVA_INT
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GUIDToString",
-        constants$90.const$2
-    );
-    static final FunctionDescriptor const$4 = FunctionDescriptor.of(MemoryLayout.structLayout(
-        MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
-    ).withName("SDL_GUID"),
-        RuntimeHelper.POINTER
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GUIDFromString",
-        constants$90.const$4
-    );
+        JAVA_INT.withName("scancode"),
+        JAVA_INT.withName("sym"),
+        JAVA_SHORT.withName("mod"),
+        MemoryLayout.paddingLayout(2),
+        JAVA_INT.withName("unused")
+    ).withName("SDL_Keysym");
+    static final VarHandle const$2 = constants$90.const$1.varHandle(MemoryLayout.PathElement.groupElement("scancode"));
+    static final VarHandle const$3 = constants$90.const$1.varHandle(MemoryLayout.PathElement.groupElement("sym"));
+    static final VarHandle const$4 = constants$90.const$1.varHandle(MemoryLayout.PathElement.groupElement("mod"));
+    static final VarHandle const$5 = constants$90.const$1.varHandle(MemoryLayout.PathElement.groupElement("unused"));
 }
 
 

@@ -9,4 +9,11 @@ public class Util {
         }
         return memorySegment.getUtf8String(0);
     }
+
+    public static short toShortExact(int value) {
+        if ((short)value != value) {
+            throw new ArithmeticException("integer overflow");
+        }
+        return (short)value;
+    }
 }

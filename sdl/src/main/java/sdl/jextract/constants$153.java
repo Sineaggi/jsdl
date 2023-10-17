@@ -12,11 +12,11 @@ final class constants$153 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$153() {}
     static final VarHandle const$0 = constants$152.const$4.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$1 = constants$152.const$4.varHandle(MemoryLayout.PathElement.groupElement("touchId"));
-    static final VarHandle const$2 = constants$152.const$4.varHandle(MemoryLayout.PathElement.groupElement("dTheta"));
-    static final VarHandle const$3 = constants$152.const$4.varHandle(MemoryLayout.PathElement.groupElement("dDist"));
-    static final VarHandle const$4 = constants$152.const$4.varHandle(MemoryLayout.PathElement.groupElement("x"));
-    static final VarHandle const$5 = constants$152.const$4.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final VarHandle const$1 = constants$152.const$4.varHandle(MemoryLayout.PathElement.groupElement("which"));
+    static final VarHandle const$2 = constants$152.const$4.varHandle(MemoryLayout.PathElement.groupElement("iscapture"));
+    static final VarHandle const$3 = constants$152.const$4.varHandle(MemoryLayout.PathElement.groupElement("padding1"));
+    static final VarHandle const$4 = constants$152.const$4.varHandle(MemoryLayout.PathElement.groupElement("padding2"));
+    static final VarHandle const$5 = constants$152.const$4.varHandle(MemoryLayout.PathElement.groupElement("padding3"));
 }
 
 

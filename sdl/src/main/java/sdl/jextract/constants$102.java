@@ -11,35 +11,16 @@ final class constants$102 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$102() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetGUIDString",
-        constants$90.const$2
-    );
+    static final MethodHandle const$0 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.SetLED.class, "apply", constants$54.const$3);
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetGUIDFromString",
-        constants$90.const$4
+        constants$54.const$3
     );
-    static final FunctionDescriptor const$2 = FunctionDescriptor.ofVoid(
-        MemoryLayout.structLayout(
-            MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
-        ).withName("SDL_GUID"),
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GetJoystickGUIDInfo",
-        constants$102.const$2
-    );
+    static final VarHandle const$2 = constants$98.const$0.varHandle(MemoryLayout.PathElement.groupElement("SetLED"));
+    static final MethodHandle const$3 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.SendEffect.class, "apply", constants$6.const$2);
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetAttached",
-        constants$18.const$4
+        constants$6.const$2
     );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickInstanceID",
-        constants$18.const$4
-    );
+    static final VarHandle const$5 = constants$98.const$0.varHandle(MemoryLayout.PathElement.groupElement("SendEffect"));
 }
 
 

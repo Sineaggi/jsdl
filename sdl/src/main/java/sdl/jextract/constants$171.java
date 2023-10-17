@@ -11,29 +11,41 @@ final class constants$171 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$171() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SetTextureBlendMode",
-        constants$34.const$3
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetTextureBlendMode",
-        constants$6.const$4
-    );
+    static final VarHandle const$0 = constants$170.const$1.varHandle(MemoryLayout.PathElement.groupElement("max_texture_height"));
+    static final StructLayout const$1 = MemoryLayout.structLayout(
+        MemoryLayout.structLayout(
+            JAVA_FLOAT.withName("x"),
+            JAVA_FLOAT.withName("y")
+        ).withName("position"),
+        MemoryLayout.structLayout(
+            JAVA_BYTE.withName("r"),
+            JAVA_BYTE.withName("g"),
+            JAVA_BYTE.withName("b"),
+            JAVA_BYTE.withName("a")
+        ).withName("color"),
+        MemoryLayout.structLayout(
+            JAVA_FLOAT.withName("x"),
+            JAVA_FLOAT.withName("y")
+        ).withName("tex_coord")
+    ).withName("SDL_Vertex");
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_SetTextureScaleMode",
-        constants$34.const$3
+        "SDL_GetNumRenderDrivers",
+        constants$5.const$5
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GetTextureScaleMode",
-        constants$6.const$4
+        "SDL_GetRenderDriverInfo",
+        constants$73.const$3
     );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SetTextureUserData",
-        constants$6.const$4
+    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetTextureUserData",
-        constants$6.const$0
+        "SDL_CreateWindowAndRenderer",
+        constants$171.const$4
     );
 }
 

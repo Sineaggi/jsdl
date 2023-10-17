@@ -12,26 +12,29 @@ final class constants$121 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$121() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerSendEffect",
-        constants$6.const$2
+        "SDL_GameControllerGetAxis",
+        constants$108.const$0
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerClose",
-        constants$1.const$2
+        "SDL_GameControllerGetButtonFromString",
+        constants$18.const$4
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetAppleSFSymbolsNameForButton",
-        constants$15.const$4
+        "SDL_GameControllerGetStringForButton",
+        constants$33.const$5
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetAppleSFSymbolsNameForAxis",
-        constants$15.const$4
+        "SDL_GameControllerGetBindForButton",
+        constants$120.const$3
     );
-    static final StructLayout const$4 = MemoryLayout.structLayout(
-        JAVA_INT.withName("type"),
-        JAVA_INT.withName("timestamp")
-    ).withName("SDL_CommonEvent");
-    static final VarHandle const$5 = constants$121.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerHasButton",
+        constants$34.const$3
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerGetButton",
+        constants$108.const$4
+    );
 }
 
 

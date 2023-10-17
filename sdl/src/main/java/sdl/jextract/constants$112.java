@@ -11,30 +11,29 @@ final class constants$112 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$112() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(RuntimeHelper.POINTER,
-        MemoryLayout.structLayout(
-            MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
-        ).withName("SDL_GUID")
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerMappingForGUID",
-        constants$112.const$0
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerMapping",
-        constants$6.const$0
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_IsGameController",
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_SensorGetDeviceInstanceID",
         constants$8.const$0
     );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerNameForIndex",
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_SensorOpen",
         constants$33.const$5
     );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerPathForIndex",
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_SensorFromInstanceID",
         constants$33.const$5
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_SensorGetName",
+        constants$6.const$0
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_SensorGetType",
+        constants$18.const$4
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_SensorGetNonPortableType",
+        constants$18.const$4
     );
 }
 

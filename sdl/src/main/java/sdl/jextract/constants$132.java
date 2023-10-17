@@ -11,23 +11,17 @@ final class constants$132 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$132() {}
-    static final StructLayout const$0 = MemoryLayout.structLayout(
+    static final VarHandle const$0 = constants$131.const$4.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$1 = constants$131.const$4.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
+    static final VarHandle const$2 = constants$131.const$4.varHandle(MemoryLayout.PathElement.groupElement("text"));
+    static final VarHandle const$3 = constants$131.const$4.varHandle(MemoryLayout.PathElement.groupElement("start"));
+    static final VarHandle const$4 = constants$131.const$4.varHandle(MemoryLayout.PathElement.groupElement("length"));
+    static final StructLayout const$5 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
         JAVA_INT.withName("windowID"),
-        JAVA_INT.withName("which"),
-        JAVA_BYTE.withName("button"),
-        JAVA_BYTE.withName("state"),
-        JAVA_BYTE.withName("clicks"),
-        JAVA_BYTE.withName("padding1"),
-        JAVA_INT.withName("x"),
-        JAVA_INT.withName("y")
-    ).withName("SDL_MouseButtonEvent");
-    static final VarHandle const$1 = constants$132.const$0.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$2 = constants$132.const$0.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$3 = constants$132.const$0.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
-    static final VarHandle const$4 = constants$132.const$0.varHandle(MemoryLayout.PathElement.groupElement("which"));
-    static final VarHandle const$5 = constants$132.const$0.varHandle(MemoryLayout.PathElement.groupElement("button"));
+        MemoryLayout.sequenceLayout(32, JAVA_BYTE).withName("text")
+    ).withName("SDL_TextInputEvent");
 }
 
 

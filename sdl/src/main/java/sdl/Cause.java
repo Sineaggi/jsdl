@@ -15,6 +15,8 @@ public enum Cause {
     CreateTextureFromSurface("Couldn't create texture from surface"),
     GameControllerAddMappingsFromRW("Couldn't add game controller mappings"),
     SetColorKey("Couldn't set color key"),
+    JoystickAttachVirtualEx("Couldn't open virtual device"),
+    JoystickOpen("Couldn't open virtual device"),
     ;
 
     private final String cause;

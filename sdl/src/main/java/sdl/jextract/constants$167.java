@@ -11,19 +11,27 @@ final class constants$167 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$167() {}
-    static final StructLayout const$0 = MemoryLayout.structLayout(
-        RuntimeHelper.POINTER.withName("name"),
-        JAVA_INT.withName("flags"),
-        JAVA_INT.withName("num_texture_formats"),
-        MemoryLayout.sequenceLayout(16, JAVA_INT).withName("texture_formats"),
-        JAVA_INT.withName("max_texture_width"),
-        JAVA_INT.withName("max_texture_height")
-    ).withName("SDL_RendererInfo");
-    static final VarHandle const$1 = constants$167.const$0.varHandle(MemoryLayout.PathElement.groupElement("name"));
-    static final VarHandle const$2 = constants$167.const$0.varHandle(MemoryLayout.PathElement.groupElement("flags"));
-    static final VarHandle const$3 = constants$167.const$0.varHandle(MemoryLayout.PathElement.groupElement("num_texture_formats"));
-    static final VarHandle const$4 = constants$167.const$0.varHandle(MemoryLayout.PathElement.groupElement("max_texture_width"));
-    static final VarHandle const$5 = constants$167.const$0.varHandle(MemoryLayout.PathElement.groupElement("max_texture_height"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_DelEventWatch",
+        constants$67.const$4
+    );
+    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(SDL_FilterEvents$filter.class, "apply", constants$6.const$4);
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_FilterEvents",
+        constants$67.const$4
+    );
+    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_BYTE,
+        JAVA_INT,
+        JAVA_INT
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_EventState",
+        constants$167.const$3
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_RegisterEvents",
+        constants$8.const$0
+    );
 }
 
 

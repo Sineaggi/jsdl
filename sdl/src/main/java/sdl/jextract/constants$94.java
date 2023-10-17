@@ -11,31 +11,33 @@ final class constants$94 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$94() {}
-    static final StructLayout const$0 = MemoryLayout.structLayout(
-        JAVA_SHORT.withName("version"),
-        JAVA_SHORT.withName("type"),
-        JAVA_SHORT.withName("naxes"),
-        JAVA_SHORT.withName("nbuttons"),
-        JAVA_SHORT.withName("nhats"),
-        JAVA_SHORT.withName("vendor_id"),
-        JAVA_SHORT.withName("product_id"),
-        JAVA_SHORT.withName("padding"),
-        JAVA_INT.withName("button_mask"),
-        JAVA_INT.withName("axis_mask"),
-        RuntimeHelper.POINTER.withName("name"),
-        RuntimeHelper.POINTER.withName("userdata"),
-        RuntimeHelper.POINTER.withName("Update"),
-        RuntimeHelper.POINTER.withName("SetPlayerIndex"),
-        RuntimeHelper.POINTER.withName("Rumble"),
-        RuntimeHelper.POINTER.withName("RumbleTriggers"),
-        RuntimeHelper.POINTER.withName("SetLED"),
-        RuntimeHelper.POINTER.withName("SendEffect")
-    ).withName("SDL_VirtualJoystickDesc");
-    static final VarHandle const$1 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("version"));
-    static final VarHandle const$2 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$3 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("naxes"));
-    static final VarHandle const$4 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("nbuttons"));
-    static final VarHandle const$5 = constants$94.const$0.varHandle(MemoryLayout.PathElement.groupElement("nhats"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_IsScreenKeyboardShown",
+        constants$18.const$4
+    );
+    static final StructLayout const$1 = MemoryLayout.structLayout(
+        MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
+    ).withName("SDL_GUID");
+    static final FunctionDescriptor const$2 = FunctionDescriptor.ofVoid(
+        MemoryLayout.structLayout(
+            MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
+        ).withName("SDL_GUID"),
+        RuntimeHelper.POINTER,
+        JAVA_INT
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GUIDToString",
+        constants$94.const$2
+    );
+    static final FunctionDescriptor const$4 = FunctionDescriptor.of(MemoryLayout.structLayout(
+        MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
+    ).withName("SDL_GUID"),
+        RuntimeHelper.POINTER
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_GUIDFromString",
+        constants$94.const$4
+    );
 }
 
 

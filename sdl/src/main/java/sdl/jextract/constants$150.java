@@ -12,22 +12,20 @@ final class constants$150 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$150() {}
     static final VarHandle const$0 = constants$149.const$3.varHandle(MemoryLayout.PathElement.groupElement("which"));
-    static final VarHandle const$1 = constants$149.const$3.varHandle(MemoryLayout.PathElement.groupElement("iscapture"));
-    static final VarHandle const$2 = constants$149.const$3.varHandle(MemoryLayout.PathElement.groupElement("padding1"));
-    static final VarHandle const$3 = constants$149.const$3.varHandle(MemoryLayout.PathElement.groupElement("padding2"));
-    static final VarHandle const$4 = constants$149.const$3.varHandle(MemoryLayout.PathElement.groupElement("padding3"));
-    static final StructLayout const$5 = MemoryLayout.structLayout(
+    static final StructLayout const$1 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
-        JAVA_LONG.withName("touchId"),
-        JAVA_LONG.withName("fingerId"),
+        JAVA_INT.withName("which"),
+        JAVA_INT.withName("touchpad"),
+        JAVA_INT.withName("finger"),
         JAVA_FLOAT.withName("x"),
         JAVA_FLOAT.withName("y"),
-        JAVA_FLOAT.withName("dx"),
-        JAVA_FLOAT.withName("dy"),
-        JAVA_FLOAT.withName("pressure"),
-        JAVA_INT.withName("windowID")
-    ).withName("SDL_TouchFingerEvent");
+        JAVA_FLOAT.withName("pressure")
+    ).withName("SDL_ControllerTouchpadEvent");
+    static final VarHandle const$2 = constants$150.const$1.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$3 = constants$150.const$1.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$4 = constants$150.const$1.varHandle(MemoryLayout.PathElement.groupElement("which"));
+    static final VarHandle const$5 = constants$150.const$1.varHandle(MemoryLayout.PathElement.groupElement("touchpad"));
 }
 
 
