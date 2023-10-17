@@ -4,6 +4,9 @@ import sdl.*;
 import sdl.events.GeneralInputStateDefinitions;
 import sdl.events.button.MouseButtonDown;
 import sdl.events.button.MouseButtonUp;
+import sdl.events.controlleraxis.ControllerAxisMotion;
+import sdl.events.controllerbutton.ControllerButtonDown;
+import sdl.events.controllerbutton.ControllerButtonUp;
 import sdl.events.controllerdevice.ControllerDeviceAdded;
 import sdl.events.controllerdevice.ControllerDeviceRemoved;
 import sdl.events.Event;
@@ -11,17 +14,22 @@ import sdl.events.controllersensor.ControllerSensorUpdate;
 import sdl.events.controllertouchpad.ControllerTouchpadDown;
 import sdl.events.controllertouchpad.ControllerTouchpadMotion;
 import sdl.events.controllertouchpad.ControllerTouchpadUp;
+import sdl.events.joybattery.JoyBatteryUpdated;
 import sdl.events.key.KeyDown;
+import sdl.events.key.Keysym;
 import sdl.events.motion.MouseMotion;
 import sdl.events.quit.Quit;
 import sdl.gamecontroller.GameController;
+import sdl.gamecontroller.GameControllerButton;
 import sdl.gamecontroller.GameControllerType;
-import sdl.gamecontroller.JoystickId;
+import sdl.joystick.JoystickId;
 import sdl.gamecontroller.SensorType;
 import sdl.hints.Hints;
 import sdl.joystick.Joystick;
+import sdl.joystick.JoystickPowerLevel;
 import sdl.joystick.VirtualJoystickDesc;
 import sdl.keyboard.Keyboard;
+import sdl.keycode.Keycode;
 import sdl.keycode.Keymod;
 import sdl.render.Renderer;
 import sdl.video.Window;
@@ -31,7 +39,6 @@ import java.lang.foreign.MemoryLayout;
 import java.lang.foreign.MemorySegment;
 import java.lang.foreign.StructLayout;
 import java.lang.invoke.VarHandle;
-import java.sql.SQLOutput;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -244,11 +251,11 @@ public class TestGameController {
         }
 
         if (gameController.hasRumble()) {
-            SDL_Log("Rumble supported");
+            System.out.println("Rumble supported");
         }
 
         if (gameController.hasRumbleTriggers()) {
-            SDL_Log("Trigger rumble supported");
+            System.out.println("Trigger rumble supported");
         }
 
         updateWindowTitle();
@@ -330,22 +337,23 @@ public class TestGameController {
             var state = arena.allocate(ds5EffectsState);
             // DS5EffectsState_t state;
 
-            byte effects[ 3][11] ={
-                /* Clear trigger effect */
-                {
-                    0x05, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-                },
-                /* Constant resistance across entire trigger pull */
-                {
-                    0x01, 0, 110, 0, 0, 0, 0, 0, 0, 0, 0
-                },
-                /* Resistance and vibration when trigger is pulled */
-                {
-                    0x06, 15, 63, 128, 0, 0, 0, 0, 0, 0, 0
-                },
-            } ;
+            // todo: fix effects
+            //byte effects[ 3][11] ={
+            //    /* Clear trigger effect */
+            //    {
+            //        0x05, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+            //    },
+            //    /* Constant resistance across entire trigger pull */
+            //    {
+            //        0x01, 0, 110, 0, 0, 0, 0, 0, 0, 0, 0
+            //    },
+            //    /* Resistance and vibration when trigger is pulled */
+            //    {
+            //        0x06, 15, 63, 128, 0, 0, 0, 0, 0, 0, 0
+            //    },
+            //} ;
 
-            triggerEffect = (triggerEffect + 1) % effects.length;
+            // triggerEffect = (triggerEffect + 1) % effects.length;
 
             VarHandle ucEnableBits1 = ds5EffectsState.varHandle(MemoryLayout.PathElement.groupElement("ucEnableBits1"));
             VarHandle rgucRightTriggerEffect = ds5EffectsState.varHandle(MemoryLayout.PathElement.groupElement("rgucRightTriggerEffect"));
@@ -527,7 +535,7 @@ public class TestGameController {
         button = findButtonAtPosition(x, y);
         if (button != GameControllerButton.Invalid) {
             virtualButtonActive = button;
-            virtualJoystick.setVirtualButton(virtualButtonActive, GeneralInputStateDefinitions.Pressed)
+            virtualJoystick.setVirtualButton(virtualButtonActive, GeneralInputStateDefinitions.Pressed);
         }
 
         axis = findAxisAtPosition(x, y);
@@ -581,90 +589,82 @@ public class TestGameController {
                 case ControllerTouchpadDown(int which, int touchpad, int finger, float x, float y, float pressure) -> {
                     System.out.println(STR."Controller \{which} touchpad \{touchpad} finger \{finger} pressed at \{x}, \{y}, \{pressure}");
                 }
-                case ControllerTouchpadMotion(int which, int touchpad, int finger, float x, float y, float pressure) -> {
+                case ControllerTouchpadMotion(
+                        int which, int touchpad, int finger, float x, float y, float pressure
+                ) -> {
                     System.out.println(STR."Controller \{which} touchpad \{touchpad} finger \{finger} moved to \{x}, \{y}, \{pressure}");
                 }
                 case ControllerTouchpadUp(int which, int touchpad, int finger, float x, float y, float pressure) -> {
                     System.out.println(STR."Controller \{which} touchpad \{touchpad} finger \{finger} released at \{x}, \{y}, \{pressure}");
                 }
-                case ControllerSensorUpdate(int which, SensorType sensor, float[] data, long timestampUs) when VERBOSE_SENSORS -> {
+                case ControllerSensorUpdate(
+                        int which, SensorType sensor, float[] data, long timestampUs
+                ) when VERBOSE_SENSORS -> {
                     System.out.println(FMT."Controller \{which} sensor \{getSensorName(sensor)}: %.2\{data[0]}, %.2\{data[1]}, %.2\{data[2]} (\"\{timestampUs}\")");
                 }
-                case ControllerAxisMotion controllerAxisMotion when VERBOSE_AXES -> {
-                    if (event.caxis.value <= (-SDL_JOYSTICK_AXIS_MAX / 2) || event.caxis.value >= (SDL_JOYSTICK_AXIS_MAX / 2)) {
-                        setController(event.caxis.which);
+                case ControllerAxisMotion(JoystickId which, GameControllerAxis axis, short value) when VERBOSE_AXES -> {
+                    if (value <= (-Joystick.AXIS_MAX / 2) || value >= (Joystick.AXIS_MAX / 2)) {
+                        setController(which);
                     }
-                    System.out.printf("Controller %" SDL_PRIs32 " axis %s changed to %d\n", event.caxis.which, SDL_GameControllerGetStringForAxis((SDL_GameControllerAxis)event.caxis.axis), event.caxis.value);
+                    System.out.println(STR."Controller \{which} axis \{GameController.getStringForAxis(axis)} changed to \{value}");
                 }
-                case ControllerButtonDown controllerButtonDown -> {
+                case ControllerButtonDown(JoystickId which, GameControllerButton button, GeneralInputStateDefinitions state) -> {
+                    setController(which);
+                    System.out.println(STR."Controller \{which} button \{GameController.getStringForButton(button)} \{state}");
+                    /* Cycle PS5 trigger effects when the microphone button is pressed */
+                    if (button == GameControllerButton.Misc1 && gameController.getType() == GameControllerType.PS5) {
+                        cyclePS5TriggerEffect();
+                    }
                 }
-                case ControllerButtonUp controllerButtonUp -> {
+                case ControllerButtonUp(JoystickId which, GameControllerButton button, GeneralInputStateDefinitions state) -> {
+                    System.out.println(STR."Controller \{which} button \{GameController.getStringForButton(button)} \{state}}");
+                }
+                case JoyBatteryUpdated(JoystickId joystickId, JoystickPowerLevel level) -> {
+                    System.out.println(STR."Controller \{joystickId} battery state changed to \{POWER_LEVEL_STRINGS[level.value() + 1]}");
+                }
+                case MouseButtonDown(int x, int y) -> {
+                    if (virtualJoystick != null) {
+                        virtualControllerMouseDown(x, y);
+                    }
+                }
+                case MouseButtonUp(int x, int y) -> {
+                    if (virtualJoystick != null) {
+                        virtualControllerMouseUp(x, y);
+                    }
+                }
+                case MouseMotion(int x, int y) -> {
+                    if (virtualJoystick != null) {
+                        virtualControllerMouseMotion(x, y);
+                    }
+                }
+                case KeyDown(_, _, _, Keysym(_, Keycode sym, _)) -> {
+                    if (sym.value() >= Keycode.K_0.value() && sym.value() <= Keycode.K_9.value()) {
+                        if (gameController != null) {
+                            int playerIndex = (sym.value() - Keycode.K_0.value());
+
+                            gameController.setPlayerIndex(playerIndex);
+                        }
+                        break;
+                    }
+                    if (sym == Keycode.a) {
+                        openVirtualController();
+                        break;
+                    }
+                    if (sym == Keycode.d) {
+                        closeVirtualController();
+                        break;
+                    }
+                    if (sym != Keycode.Escape) {
+                        break;
+                    }
+                    done = true;
+                }
+                case Quit() -> {
+                    done = true;
+                }
+                default -> {
                 }
             }
-
-            case SDL_CONTROLLERBUTTONDOWN:
-            case SDL_CONTROLLERBUTTONUP:
-                if (event.type == SDL_CONTROLLERBUTTONDOWN) {
-                    setController(event.cbutton.which);
-                }
-                SDL_Log("Controller %" SDL_PRIs32 " button %s %s\n", event.cbutton.which, SDL_GameControllerGetStringForButton((SDL_GameControllerButton)event.cbutton.button), event.cbutton.state ? "pressed" : "released");
-
-                /* Cycle PS5 trigger effects when the microphone button is pressed */
-                if (event.type == SDL_CONTROLLERBUTTONDOWN &&
-                    event.cbutton.button == SDL_CONTROLLER_BUTTON_MISC1 &&
-                    SDL_GameControllerGetType(gameController) == SDL_CONTROLLER_TYPE_PS5) {
-                    cyclePS5TriggerEffect();
-                }
-                break;
-
-            case SDL_JOYBATTERYUPDATED:
-                SDL_Log("Controller %" SDL_PRIs32 " battery state changed to %s\n", event.jbattery.which, POWER_LEVEL_STRINGS[event.jbattery.level + 1]);
-                break;
-
-            case MouseButtonDown mouseButtonDown:
-                if (virtualJoystick != null) {
-                    virtualControllerMouseDown(mouseButtonDown.x(), mouseButtonDown.y());
-                }
-                break;
-
-            case MouseButtonUp mouseButtonUp:
-                if (virtualJoystick != null) {
-                    virtualControllerMouseUp(mouseButtonUp.x(), mouseButtonUp.y());
-                }
-                break;
-
-            case MouseMotion mouseMotion:
-                if (virtualJoystick != null) {
-                    virtualControllerMouseMotion(mouseMotion.x(), mouseMotion.y());
-                }
-                break;
-
-            case KeyDown keyDown:
-                if (event.key.keysym.sym >= SDLK_0 && event.key.keysym.sym <= SDLK_9) {
-                    if (gameController) {
-                        int player_index = (event.key.keysym.sym - SDLK_0);
-
-                        SDL_GameControllerSetPlayerIndex(gameController, player_index);
-                    }
-                    break;
-                }
-                if (event.key.keysym.sym == SDLK_a) {
-                    openVirtualController();
-                    break;
-                }
-                if (event.key.keysym.sym == SDLK_d) {
-                    closeVirtualController();
-                    break;
-                }
-                if (event.key.keysym.sym != SDLK_ESCAPE) {
-                    break;
-                }
-                SDL_FALLTHROUGH;
-            case Quit quit:
-                done = true;
-                break;
-            default:
-                break;
         }
 
         showingFront = showingFront();
@@ -752,14 +752,9 @@ public class TestGameController {
             }
         }
         Thread.sleep(Duration.ofMillis(16));
-        // SDL_Delay(16);
-        // SDL_RenderPresent(screen);
         screen.present();
     }
 
-    public static void main(String[] args) {
-        new TestGameController().main(args);
-    }
     public void main(String[] args) throws InterruptedException {
         int i;
         int controllerCount = 0;
@@ -774,24 +769,32 @@ public class TestGameController {
         Hints.setHint(Hints.HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS, "1");
         Hints.setHint(Hints.HINT_LINUX_JOYSTICK_DEADZONES, "1");
 
-        /* Enable standard application logging */
-        SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO);
+        // todo: not using sdl logging
+        // /* Enable standard application logging */
+        // SDL_LogSetPriority(SDL_LOG_CATEGORY_APPLICATION, SDL_LOG_PRIORITY_INFO);
 
         /* Initialize SDL (Note: video is required to start event loop) */
+        // todo??? EnumSet.copyOf(Set.of(InitVideo, InitJoystick, InitGameController))
         Sdl.init(SDL_INIT_VIDEO() | SDL_INIT_JOYSTICK() | SDL_INIT_GAMECONTROLLER());
 
-        GameController.addMappingsFromFile("gameControllerdb.txt");
+        try {
+            GameController.addMappingsFromFile("gameControllerdb.txt");
+        } catch (SdlException ignored) {
+
+        }
 
         /* Print information about the mappings */
-        if (argv[1] && SDL_strcmp(argv[1], "--mappings") == 0) {
-            SDL_Log("Supported mappings:\n");
+        // todo: no idea what this code wants
+        //if (argv[1] && SDL_strcmp(argv[1], "--mappings") == 0) {
+        if (false) {
+            System.out.println("Supported mappings:");
             for (i = 0; i < GameController.numMappings(); ++i) {
                 String mapping = GameController.mappingForIndex(i);
                 if (mapping != null) {
-                    SDL_Log("\t%s\n", mapping);
+                    System.out.println(STR."\t\{mapping}");
                 }
             }
-            SDL_Log("\n");
+            System.out.println();
         }
 
         /* Print information about the controller */
@@ -826,11 +829,12 @@ public class TestGameController {
                 path = GameController.pathForIndex(i);
                 description = "Joystick";
             }
-            SDL_Log("%s %d: %s%s%s (guid %s, VID 0x%.4x, PID 0x%.4x, player index = %d)\n",
-                    description, i, name ? name : "Unknown", path ? ", " : "", path ? path : "", guid,
-                    SDL_JoystickGetDeviceVendor(i), SDL_JoystickGetDeviceProduct(i), SDL_JoystickGetDevicePlayerIndex(i));
+            // todo
+            //SDL_Log("%s %d: %s%s%s (guid %s, VID 0x%.4x, PID 0x%.4x, player index = %d)\n",
+            //        description, i, name ? name : "Unknown", path ? ", " : "", path ? path : "", guid,
+            //        SDL_JoystickGetDeviceVendor(i), SDL_JoystickGetDeviceProduct(i), SDL_JoystickGetDevicePlayerIndex(i));
         }
-        SDL_Log("There are %d game controller(s) attached (%d joystick(s))\n", controllerCount, SDL_NumJoysticks());
+        System.out.println(STR."There are \{controllerCount} game controller(s) attached (\{Joystick.numJoysticks()}} joystick(s))");
 
         /* Create a window to display controller state */
         window = Window.create("Game Controller Test", SDL_WINDOWPOS_CENTERED(),
@@ -850,16 +854,11 @@ public class TestGameController {
         /* scale for platforms that don't give you the window size you asked for. */
         screen.setLogicalSize(SCREEN_WIDTH, SCREEN_HEIGHT);
 
-        backgroundFront = loadTexture(screen, "controllermap.bmp", false).texture();
-        backgroundBack = loadTexture(screen, "controllermap_back.bmp", false).texture();
-        buttonTexture = loadTexture(screen, "button.bmp", true).texture();
-        axisTexture = loadTexture(screen, "axis.bmp", true).texture();
+        backgroundFront = loadTexture(screen, "controllermap.bmp", false);
+        backgroundBack = loadTexture(screen, "controllermap_back.bmp", false);
+        buttonTexture = loadTexture(screen, "button.bmp", true);
+        axisTexture = loadTexture(screen, "axis.bmp", true);
 
-        if (backgroundFront == null || backgroundBack == null || buttonTexture == null || axisTexture == null) {
-            screen.destroy();
-            window.destroy();
-            System.exit(2);
-        }
         buttonTexture.setColorMod((byte) 10, (byte) 255, (byte) 21);
         axisTexture.setColorMod((byte) 10, (byte) 255, (byte) 21);
 
@@ -897,9 +896,5 @@ public class TestGameController {
         screen.destroy();
         window.destroy();
         Sdl.quitSubSystem(SDL_INIT_VIDEO() | SDL_INIT_JOYSTICK() | SDL_INIT_GAMECONTROLLER());
-    }
-
-    private static void SDL_Log(String format, Object... args) {
-        System.out.printf(format, args);
     }
 }

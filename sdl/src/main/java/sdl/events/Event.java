@@ -2,10 +2,13 @@ package sdl.events;
 
 import sdl.SdlException;
 import sdl.events.button.MouseButtonEvent;
+import sdl.events.controlleraxis.ControllerAxisEvent;
+import sdl.events.controllerbutton.ControllerButtonEvent;
 import sdl.events.controllerdevice.ControllerDeviceEvent;
 import sdl.events.controllersensor.ControllerSensorEvent;
 import sdl.events.controllertouchpad.ControllerTouchpad;
-import sdl.events.key.KeyEvent;
+import sdl.events.joybattery.JoyBatteryEvent;
+import sdl.events.key.KeyboardEvent;
 import sdl.events.motion.MouseMotionEvent;
 import sdl.events.quit.Quit;
 import sdl.events.quit.QuitEvent;
@@ -20,7 +23,7 @@ import static sdl.Cause.PeepEvents;
 import static sdl.jextract.sdl_h.SDL_PeepEvents;
 import static sdl.jextract.sdl_h.SDL_PumpEvents;
 
-public sealed interface Event permits MouseButtonEvent, ControllerDeviceEvent, ControllerSensorEvent, ControllerTouchpad, KeyEvent, MouseMotionEvent, QuitEvent {
+public sealed interface Event permits MouseButtonEvent, ControllerAxisEvent, ControllerButtonEvent, ControllerDeviceEvent, ControllerSensorEvent, ControllerTouchpad, JoyBatteryEvent, KeyboardEvent, MouseMotionEvent, QuitEvent {
     static List<Event> peepEvents(int numEvents, int action, int minType, int maxType) {
         try (var arena = Arena.ofConfined()) {
             var events = SDL_Event.allocateArray(numEvents, arena);

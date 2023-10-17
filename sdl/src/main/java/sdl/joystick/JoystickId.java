@@ -1,4 +1,4 @@
-package sdl.gamecontroller;
+package sdl.joystick;
 
 public class JoystickId {
     private final int joystickId;

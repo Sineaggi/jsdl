@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("application")
 }
 
 group = "org.example"
@@ -36,4 +37,14 @@ testing {
 tasks.withType<JavaCompile>().configureEach {
     options.release.set(21)
     options.compilerArgs.add("--enable-preview")
+}
+
+application {
+    mainClass = "org.example.TestGameController"
+    mainModule = "org.example"
+    applicationDefaultJvmArgs = listOf(
+        "--enable-preview",
+        "-Djava.library.path=C:\\vcpkg\\installed\\x64-windows\\bin",
+        "--enable-native-access=jsdl.sdl",
+    )
 }

@@ -1,4 +1,4 @@
-package sdl;
+package sdl.gamecontroller;
 
 import java.util.HashMap;
 import java.util.Map;

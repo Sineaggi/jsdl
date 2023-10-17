@@ -22,7 +22,11 @@ public class Surface implements AutoCloseable {
     public static Surface loadBMP(String file) {
         MemorySegment surface;
         try (var arena = Arena.ofConfined()) {
-            surface = SDL_LoadBMP_RW(SDL_RWFromFile(arena.allocateUtf8String(file), arena.allocateUtf8String("rb")), 1);
+            MemorySegment src = SDL_RWFromFile(arena.allocateUtf8String(file), arena.allocateUtf8String("rb"));
+            if (src.equals(MemorySegment.NULL)) {
+                throw new SdlException(STR."Couldn't load \{file}: \{SDL_GetError().getUtf8String(0)}");
+            }
+            surface = SDL_LoadBMP_RW(src, 1);
             if (surface.equals(MemorySegment.NULL)) {
                 throw new SdlException(STR."Couldn't load \{file}: \{SDL_GetError().getUtf8String(0)}");
             }

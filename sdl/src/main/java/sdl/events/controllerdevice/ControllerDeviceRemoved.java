@@ -1,6 +1,6 @@
 package sdl.events.controllerdevice;
 
-import sdl.gamecontroller.JoystickId;
+import sdl.joystick.JoystickId;
 
 public record ControllerDeviceRemoved(
         JoystickId which

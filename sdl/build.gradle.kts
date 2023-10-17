@@ -58,7 +58,7 @@ tasks.register<JavaExec>("generate") {
         "-D", "__INTRIN_H_",
         "-D", "__INTRIN_H",
         "--output", layout.projectDirectory.dir("src/main/java").toString(),
-        "-l", "sdl",
+        "-l", "SDL2",
     )
     dependsOn(deleteGeneratedSources)
 }

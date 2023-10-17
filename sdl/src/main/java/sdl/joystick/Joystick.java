@@ -2,10 +2,9 @@ package sdl.joystick;
 
 import sdl.Cause;
 import sdl.GameControllerAxis;
-import sdl.GameControllerButton;
+import sdl.gamecontroller.GameControllerButton;
 import sdl.SdlException;
 import sdl.events.GeneralInputStateDefinitions;
-import sdl.gamecontroller.JoystickId;
 
 import java.lang.foreign.Arena;
 import java.lang.foreign.MemorySegment;

@@ -2,7 +2,6 @@ package sdl.gamecontroller;
 
 import sdl.Cause;
 import sdl.GameControllerAxis;
-import sdl.GameControllerButton;
 import sdl.SdlException;
 import sdl.events.GeneralInputStateDefinitions;
 import sdl.joystick.Joystick;
@@ -15,6 +14,7 @@ import java.time.Duration;
 import static sdl.Cause.GameControllerAddMappingsFromRW;
 import static sdl.internal.Util.stringOrNull;
 import static sdl.jextract.sdl_h.*;
+import static sdl.jextract.sdl_h_1.*;
 
 public class GameController implements AutoCloseable {
     private final MemorySegment gameController;
@@ -66,6 +66,30 @@ public class GameController implements AutoCloseable {
             return mapping.getUtf8String(0);
         } finally {
             SDL_free(mapping);
+        }
+    }
+
+    public static String getStringForAxis(GameControllerAxis axis) {
+        MemorySegment string = SDL_GameControllerGetStringForAxis(axis.value());
+        if (string.equals(MemorySegment.NULL)) {
+            return null;
+        }
+        try {
+            return string.getUtf8String(0);
+        } finally {
+            SDL_free(string);
+        }
+    }
+
+    public static String getStringForButton(GameControllerButton button) {
+        MemorySegment string = SDL_GameControllerGetStringForButton(button.value());
+        if (string.equals(MemorySegment.NULL)) {
+            return null;
+        }
+        try {
+            return string.getUtf8String(0);
+        } finally {
+            SDL_free(string);
         }
     }
 
@@ -167,5 +191,13 @@ public class GameController implements AutoCloseable {
 
     public int rumble(short lowFrequencyRumble, short highFrequencyRumble, Duration duration) {
         return SDL_GameControllerRumble(gameController, lowFrequencyRumble, highFrequencyRumble, (int) duration.toMillis());
+    }
+
+    public void setPlayerIndex(int playerIndex) {
+        SDL_GameControllerSetPlayerIndex(gameController, playerIndex);
+    }
+
+    public GameControllerType getType() {
+        return GameControllerType.valueOf(SDL_GameControllerGetType(gameController));
     }
 }
