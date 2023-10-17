@@ -12,6 +12,7 @@ import sdl.events.controllerbutton.ControllerButtonEvent;
 import sdl.events.controllerbutton.ControllerButtonUp;
 import sdl.events.controllerdevice.ControllerDeviceAdded;
 import sdl.events.controllerdevice.ControllerDeviceEvent;
+import sdl.events.controllerdevice.ControllerDeviceRemoved;
 import sdl.events.controllersensor.ControllerSensorEvent;
 import sdl.events.controllertouchpad.ControllerTouchpad;
 import sdl.events.joybattery.JoyBatteryEvent;
@@ -135,7 +136,7 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                             yield new TodoEvent(JoyDeviceAdded);
                         }
                         case JoyDeviceRemoved -> {
-                            throw new RuntimeException(STR."\{type}");
+                            yield new TodoEvent(JoyDeviceRemoved);
                         }
                         case JoyBatteryUpdated -> new JoyBatteryUpdated(
                                 JoystickId.wrap(SDL_JoyBatteryEvent.which$get(events, i)),
@@ -159,9 +160,9 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                         case ControllerDeviceAdded -> new ControllerDeviceAdded(
                                 SDL_ControllerDeviceEvent.which$get(events, i)
                         );
-                        case ControllerDeviceRemoved -> {
-                            throw new RuntimeException(STR."\{type}");
-                        }
+                        case ControllerDeviceRemoved -> new ControllerDeviceRemoved(
+                            JoystickId.wrap(SDL_ControllerDeviceEvent.which$get(events, i))
+                        );
                         case ControllerDeviceRemapped -> {
                             throw new RuntimeException(STR."\{type}");
                         }
