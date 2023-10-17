@@ -8,9 +8,11 @@ public class TestUtils {
     public static Texture loadTexture(Renderer renderer, String file, boolean transparent) {
         try (Surface temp = Surface.loadBMP(file)) {
             /* Set transparent pixel as the pixel at (0,0) */
-            if (transparent) {
+            t: if (transparent) {
                 if (true) {
-                    throw new RuntimeException("not yet implemented");
+                    break t;
+                    // todo: impl this
+                    // throw new RuntimeException("not yet implemented");
                 }
                 if (temp.format().palette() != null) {
                     // temp.setColorKey(true, temp.pixels().[0]);

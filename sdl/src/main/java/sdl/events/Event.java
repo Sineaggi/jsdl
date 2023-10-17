@@ -9,10 +9,16 @@ import sdl.events.controllersensor.ControllerSensorEvent;
 import sdl.events.controllertouchpad.ControllerTouchpad;
 import sdl.events.joybattery.JoyBatteryEvent;
 import sdl.events.key.KeyboardEvent;
+import sdl.events.motion.MouseMotion;
 import sdl.events.motion.MouseMotionEvent;
 import sdl.events.quit.Quit;
 import sdl.events.quit.QuitEvent;
+import sdl.jextract.SDL_ControllerDeviceEvent;
 import sdl.jextract.SDL_Event;
+import sdl.jextract.SDL_JoyBatteryEvent;
+import sdl.jextract.SDL_MouseMotionEvent;
+import sdl.joystick.JoystickId;
+import sdl.joystick.JoystickPowerLevel;
 
 import java.lang.foreign.Arena;
 import java.util.ArrayList;
@@ -20,10 +26,11 @@ import java.util.Collections;
 import java.util.List;
 
 import static sdl.Cause.PeepEvents;
+import static sdl.events.EventType.*;
 import static sdl.jextract.sdl_h.SDL_PeepEvents;
 import static sdl.jextract.sdl_h.SDL_PumpEvents;
 
-public sealed interface Event permits MouseButtonEvent, ControllerAxisEvent, ControllerButtonEvent, ControllerDeviceEvent, ControllerSensorEvent, ControllerTouchpad, JoyBatteryEvent, KeyboardEvent, MouseMotionEvent, QuitEvent {
+public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, ControllerAxisEvent, ControllerButtonEvent, ControllerDeviceEvent, ControllerSensorEvent, ControllerTouchpad, JoyBatteryEvent, KeyboardEvent, MouseMotionEvent, QuitEvent {
     static List<Event> peepEvents(int numEvents, int action, int minType, int maxType) {
         try (var arena = Arena.ofConfined()) {
             var events = SDL_Event.allocateArray(numEvents, arena);
@@ -36,188 +43,196 @@ public sealed interface Event permits MouseButtonEvent, ControllerAxisEvent, Con
                 // todo: read events
                 List<Event> mappedEvents = new ArrayList<>(peepedEventCount);
                 for (int i = 0; i < peepedEventCount; i++) {
-                    var type = SDL_Event.type$get(events, 0);
+                    var type = EventType.valueOf(SDL_Event.type$get(events, 0));
                     // if (type == SDL_ControllerButtonEvent)
-                    Event event = switch (EventType.valueOf(type)) {
+                    Event event = switch (type) {
                         case FirstEvent -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case Quit -> {
                             yield new Quit();
                         }
                         case AppTerminating -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case AppLowMemory -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case AppWillEnterBackground -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case AppDidEnterBackground -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case AppWillEnterForeground -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case AppDiDEnterForeground -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case LocaleChanged -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case DisplayEvent -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case WindowEvent -> {
-                            throw new RuntimeException("todo");
+                            yield new TodoEvent(WindowEvent);
                         }
                         case SysWmEvent -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case KeyDown -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case KeyUp -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case TextEditing -> {
-                            throw new RuntimeException("todo");
+                            yield new TodoEvent(TextEditing);
                         }
                         case TextInput -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case KeyMapChanged -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case TextEditingExt -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case MouseMotion -> {
-                            throw new RuntimeException("todo");
+                            yield new MouseMotion(
+                                    SDL_MouseMotionEvent.x$get(events, i),
+                                    SDL_MouseMotionEvent.y$get(events, i)
+                            );
                         }
                         case MouseButtonDown -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case MouseButtonUp -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case MouseWheel -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case JoyAxisMotion -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case JoyBallMotion -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case JoyHatMotion -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case JoyButtonDown -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case JoyButtonUp -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case JoyDeviceAdded -> {
-                            throw new RuntimeException("todo");
+                            yield new TodoEvent(JoyDeviceAdded);
                         }
                         case JoyDeviceRemoved -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case JoyBatteryUpdated -> {
-                            throw new RuntimeException("todo");
+                            yield new sdl.events.joybattery.JoyBatteryUpdated(
+                                    JoystickId.wrap(SDL_JoyBatteryEvent.which$get(events, i)),
+                                    JoystickPowerLevel.valueOf(SDL_JoyBatteryEvent.level$get(events, i))
+                            );
                         }
                         case ControllerAxisMotion -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case ControllerButtonDown -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case ControllerButtonUp -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case ControllerDeviceAdded -> {
-                            throw new RuntimeException("todo");
+                            yield new sdl.events.controllerdevice.ControllerDeviceAdded(
+                                    SDL_ControllerDeviceEvent.which$get(events, i)
+                            );
                         }
                         case ControllerDeviceRemoved -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case ControllerDeviceRemapped -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case ControllerTouchpadDown -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case ControllerTouchpadMotion -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case ControllerTouchpadUp -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case ControllerSensorUpdate -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case FingerDown -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case FingerUp -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case FingerMotion -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case DollarGesture -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case DollarRecord -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case MultiGesture -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case ClipboardUpdate -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case DropFile -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case DropText -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case DropBegin -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case DropComplete -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case AudioDeviceAdded -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case AudioDeviceRemoved -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case SensorUpdate -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case RenderTargetsReset -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case RenderDeviceReset -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case PollSentinel -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case UserEvent -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                         case LastEvent -> {
-                            throw new RuntimeException("todo");
+                            throw new RuntimeException(STR."\{type}");
                         }
                     };
-                    mappedEvents.set(i, event);
+                    mappedEvents.add(i, event);
                 }
                 return mappedEvents;
             }
@@ -226,5 +241,9 @@ public sealed interface Event permits MouseButtonEvent, ControllerAxisEvent, Con
 
     static void pumpEvents() {
         SDL_PumpEvents();
+    }
+
+    record TodoEvent(EventType windowEvent) implements Event {
+
     }
 }

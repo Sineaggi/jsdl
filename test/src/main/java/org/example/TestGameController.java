@@ -830,11 +830,13 @@ public class TestGameController {
                 description = "Joystick";
             }
             // todo
+            System.out.println(STR."\{description} \{i}: \{name != null ? name : "unknown"}\{path != null ? ", " : ""}\{path != null ? path : ""} " +
+                    FMT."(guid \{guid}, VID 0x%04x\{Joystick.getDeviceVendor(i)}, PID 0x%04x\{Joystick.getDeviceProduct(i)}, player index = \{Joystick.getDevicePlayerIndex(i)})");
             //SDL_Log("%s %d: %s%s%s (guid %s, VID 0x%.4x, PID 0x%.4x, player index = %d)\n",
             //        description, i, name ? name : "Unknown", path ? ", " : "", path ? path : "", guid,
             //        SDL_JoystickGetDeviceVendor(i), SDL_JoystickGetDeviceProduct(i), SDL_JoystickGetDevicePlayerIndex(i));
         }
-        System.out.println(STR."There are \{controllerCount} game controller(s) attached (\{Joystick.numJoysticks()}} joystick(s))");
+        System.out.println(STR."There are \{controllerCount} game controller(s) attached (\{Joystick.numJoysticks()} joystick(s))");
 
         /* Create a window to display controller state */
         window = Window.create("Game Controller Test", SDL_WINDOWPOS_CENTERED(),

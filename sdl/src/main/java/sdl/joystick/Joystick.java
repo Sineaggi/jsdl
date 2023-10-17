@@ -14,6 +14,7 @@ import static sdl.Cause.JoystickOpen;
 import static sdl.Cause.JoystickAttachVirtualEx;
 import static sdl.jextract.sdl_h.*;
 import static sdl.jextract.sdl_h.SDL_JoystickDetachVirtual;
+import static sdl.jextract.sdl_h_1.SDL_JoystickGetDeviceProduct;
 
 public class Joystick {
     public static final short AXIS_MIN = (short)SDL_JOYSTICK_AXIS_MIN();
@@ -80,6 +81,18 @@ public class Joystick {
         if (SDL_JoystickDetachVirtual(deviceIndex) == -1) {
             throw new RuntimeException(STR."failed to detach virtual joystick \{deviceIndex}");
         }
+    }
+
+    public static short getDeviceVendor(int deviceIndex) {
+        return SDL_JoystickGetDeviceVendor(deviceIndex);
+    }
+
+    public static short getDeviceProduct(int deviceIndex) {
+        return SDL_JoystickGetDeviceProduct(deviceIndex);
+    }
+
+    public static int getDevicePlayerIndex(int deviceIndex) {
+        return SDL_JoystickGetDevicePlayerIndex(deviceIndex);
     }
 
     public JoystickId instanceId() {
