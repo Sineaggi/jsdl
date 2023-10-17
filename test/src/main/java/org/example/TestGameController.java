@@ -28,6 +28,7 @@ import java.lang.foreign.MemoryLayout;
 import java.lang.foreign.StructLayout;
 import java.lang.invoke.VarHandle;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -124,8 +125,7 @@ public class TestGameController {
     static int triggerEffect = 0;
     static Texture backgroundFront, backgroundBack, buttonTexture, axisTexture;
     private GameController gameController;
-    private GameController[] gameControllers;
-    private int numControllers = 0;
+    private List<GameController> gameControllers = new ArrayList<>();
     private Joystick virtualJoystick = null;
     static GameControllerAxis virtualAxisActive = GameControllerAxis.Invalid;
     private int virtualAxisStartX;
@@ -179,9 +179,8 @@ public class TestGameController {
     {
         int i;
 
-        for (i = 0; i < numControllers; ++i) {
-            gameControllers[i].getJoystick();
-            if (controller_id.equals(gameControllers[i].getJoystick().instanceId())) {
+        for (i = 0; i < gameControllers.size(); ++i) {
+            if (controller_id.equals(gameControllers.get(i).getJoystick().instanceId())) {
                 return i;
             }
         }
@@ -213,14 +212,7 @@ public class TestGameController {
 
         controller = GameController.open(deviceIndex);
 
-        controllers = (SDL_GameController **)SDL_realloc(gameControllers, (numControllers + 1) * sizeof( * controllers));
-        if (controllers == NULL) {
-            controller.close();
-            return;
-        }
-
-        controllers[numControllers++] = controller;
-        gameControllers = controllers;
+        gameControllers.add(controller);
         gameController = controller;
         triggerEffect = 0;
 
@@ -257,7 +249,7 @@ public class TestGameController {
         updateWindowTitle();
     }
 
-    void SetController(JoystickId controller)
+    void setController(JoystickId controller)
     {
         int i = findController(controller);
 
@@ -279,15 +271,10 @@ public class TestGameController {
             return;
         }
 
-        gameControllers[i].close();
+        gameControllers.remove(i).close();
 
-        --numControllers;
-        if (i < numControllers) {
-            SDL_memcpy(&gameControllers[i], &gameControllers[i + 1], (numControllers - i) * sizeof( * gameControllers));
-        }
-
-        if (numControllers > 0) {
-            gameController = gameControllers[0];
+        if (!gameControllers.isEmpty()) {
+            gameController = gameControllers.getFirst();
         } else {
             gameController = null;
         }
@@ -604,7 +591,7 @@ public class TestGameController {
                 }
                 case ControllerAxisMotion controllerAxisMotion when VERBOSE_AXES -> {
                     if (event.caxis.value <= (-SDL_JOYSTICK_AXIS_MAX / 2) || event.caxis.value >= (SDL_JOYSTICK_AXIS_MAX / 2)) {
-                        SetController(event.caxis.which);
+                        setController(event.caxis.which);
                     }
                     System.out.printf("Controller %" SDL_PRIs32 " axis %s changed to %d\n", event.caxis.which, SDL_GameControllerGetStringForAxis((SDL_GameControllerAxis)event.caxis.axis), event.caxis.value);
                 }
@@ -617,7 +604,7 @@ public class TestGameController {
             case SDL_CONTROLLERBUTTONDOWN:
             case SDL_CONTROLLERBUTTONUP:
                 if (event.type == SDL_CONTROLLERBUTTONDOWN) {
-                    SetController(event.cbutton.which);
+                    setController(event.cbutton.which);
                 }
                 SDL_Log("Controller %" SDL_PRIs32 " button %s %s\n", event.cbutton.which, SDL_GameControllerGetStringForButton((SDL_GameControllerButton)event.cbutton.button), event.cbutton.state ? "pressed" : "released");
 
@@ -888,8 +875,8 @@ public class TestGameController {
             //     break;
             // }
         }
-        if (controllerIndex < numControllers) {
-            gameController = gameControllers[controllerIndex];
+        if (controllerIndex < gameControllers.size()) {
+            gameController = gameControllers.get(controllerIndex);
         } else {
             gameController = null;
         }
