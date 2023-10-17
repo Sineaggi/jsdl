@@ -1,8 +1,11 @@
 package sdl.events;
 
+import sdl.GameControllerAxis;
 import sdl.SdlException;
 import sdl.events.button.MouseButtonEvent;
 import sdl.events.controlleraxis.ControllerAxisEvent;
+import sdl.events.controlleraxis.ControllerAxisMotion;
+import sdl.events.controllerbutton.ControllerButtonDown;
 import sdl.events.controllerbutton.ControllerButtonEvent;
 import sdl.events.controllerdevice.ControllerDeviceEvent;
 import sdl.events.controllersensor.ControllerSensorEvent;
@@ -13,10 +16,8 @@ import sdl.events.motion.MouseMotion;
 import sdl.events.motion.MouseMotionEvent;
 import sdl.events.quit.Quit;
 import sdl.events.quit.QuitEvent;
-import sdl.jextract.SDL_ControllerDeviceEvent;
-import sdl.jextract.SDL_Event;
-import sdl.jextract.SDL_JoyBatteryEvent;
-import sdl.jextract.SDL_MouseMotionEvent;
+import sdl.gamecontroller.GameControllerButton;
+import sdl.jextract.*;
 import sdl.joystick.JoystickId;
 import sdl.joystick.JoystickPowerLevel;
 
@@ -116,19 +117,19 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                             throw new RuntimeException(STR."\{type}");
                         }
                         case JoyAxisMotion -> {
-                            throw new RuntimeException(STR."\{type}");
+                            yield new TodoEvent(JoyAxisMotion);
                         }
                         case JoyBallMotion -> {
                             throw new RuntimeException(STR."\{type}");
                         }
                         case JoyHatMotion -> {
-                            throw new RuntimeException(STR."\{type}");
+                            yield new TodoEvent(JoyHatMotion);
                         }
                         case JoyButtonDown -> {
-                            throw new RuntimeException(STR."\{type}");
+                            yield new TodoEvent(JoyButtonDown);
                         }
                         case JoyButtonUp -> {
-                            throw new RuntimeException(STR."\{type}");
+                            yield new TodoEvent(JoyButtonUp);
                         }
                         case JoyDeviceAdded -> {
                             yield new TodoEvent(JoyDeviceAdded);
@@ -143,13 +144,27 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                             );
                         }
                         case ControllerAxisMotion -> {
-                            throw new RuntimeException(STR."\{type}");
+                            yield new ControllerAxisMotion(
+                                    JoystickId.wrap(SDL_ControllerAxisEvent.which$get(events, i)),
+                                    GameControllerAxis.valueOf(SDL_ControllerAxisEvent.axis$get(events, i)),
+                                    SDL_ControllerAxisEvent.value$get(events, i)
+                            );
                         }
                         case ControllerButtonDown -> {
-                            throw new RuntimeException(STR."\{type}");
+                            // yield new ControllerButtonDown(
+                            //         JoystickId.wrap(SDL_ControllerButtonEvent.which$get(events, i)),
+                            //         GameControllerButton.valueOf(SDL_ControllerButtonEvent.button$get(events, i)),
+                            //         GeneralInputStateDefinitions.valueOf(SDL_ControllerButtonEvent.state$get(events, i))
+                            // );
+                            yield new TodoEvent(ControllerButtonDown);
                         }
                         case ControllerButtonUp -> {
-                            throw new RuntimeException(STR."\{type}");
+                            //yield new sdl.events.controllerbutton.ControllerButtonUp(
+                            //        JoystickId.wrap(SDL_ControllerButtonEvent.which$get(events, i)),
+                            //        GameControllerButton.valueOf(SDL_ControllerButtonEvent.button$get(events, i)),
+                            //        GeneralInputStateDefinitions.valueOf(SDL_ControllerButtonEvent.state$get(events, i))
+                            //);
+                            yield new TodoEvent(ControllerButtonDown);
                         }
                         case ControllerDeviceAdded -> {
                             yield new sdl.events.controllerdevice.ControllerDeviceAdded(

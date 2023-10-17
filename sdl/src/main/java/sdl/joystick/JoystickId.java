@@ -16,4 +16,9 @@ public class JoystickId {
         }
         return super.equals(obj);
     }
+
+    @Override
+    public String toString() {
+        return STR."\{joystickId}";
+    }
 }
