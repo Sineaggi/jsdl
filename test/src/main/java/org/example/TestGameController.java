@@ -34,10 +34,7 @@ import sdl.keycode.Keymod;
 import sdl.render.Renderer;
 import sdl.video.Window;
 
-import java.lang.foreign.Arena;
-import java.lang.foreign.MemoryLayout;
-import java.lang.foreign.MemorySegment;
-import java.lang.foreign.StructLayout;
+import java.lang.foreign.*;
 import java.lang.invoke.VarHandle;
 import java.time.Duration;
 import java.util.ArrayList;
@@ -334,35 +331,28 @@ public class TestGameController {
     void cyclePS5TriggerEffect()
     {
         try (var arena = Arena.ofConfined()) {
-            var state = arena.allocate(ds5EffectsState);
-            // DS5EffectsState_t state;
+            MemorySegment state = DS5EffectsState_t.allocate(arena);
 
-            // todo: fix effects
-            //byte effects[ 3][11] ={
-            //    /* Clear trigger effect */
-            //    {
-            //        0x05, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-            //    },
-            //    /* Constant resistance across entire trigger pull */
-            //    {
-            //        0x01, 0, 110, 0, 0, 0, 0, 0, 0, 0, 0
-            //    },
-            //    /* Resistance and vibration when trigger is pulled */
-            //    {
-            //        0x06, 15, 63, 128, 0, 0, 0, 0, 0, 0, 0
-            //    },
-            //} ;
+            byte[][] effects = new byte[][]{
+                    /* Clear trigger effect */
+                    new byte[]{
+                            0x05, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+                    },
+                    /* Constant resistance across entire trigger pull */
+                    new byte[]{
+                            0x01, 0, 110, 0, 0, 0, 0, 0, 0, 0, 0
+                    },
+                    /* Resistance and vibration when trigger is pulled */
+                    new byte[]{
+                            0x06, 15, 63, (byte) 128, 0, 0, 0, 0, 0, 0, 0
+                    }
+            };
 
-            // triggerEffect = (triggerEffect + 1) % effects.length;
+            triggerEffect = (triggerEffect + 1) % effects.length;
 
-            VarHandle ucEnableBits1 = ds5EffectsState.varHandle(MemoryLayout.PathElement.groupElement("ucEnableBits1"));
-            VarHandle rgucRightTriggerEffect = ds5EffectsState.varHandle(MemoryLayout.PathElement.groupElement("rgucRightTriggerEffect"));
-            VarHandle rgucLeftTriggerEffect = ds5EffectsState.varHandle(MemoryLayout.PathElement.groupElement("rgucLeftTriggerEffect"));
-
-            ucEnableBits1.set((byte) (((byte)ucEnableBits1.get(state)) | (byte)(0x04 | 0x08))); /* Modify right and left trigger effect respectively */
-            // state.ucEnableBits1 |= (0x04 | 0x08); /* Modify right and left trigger effect respectively */
-            // SDL_memcpy(state.rgucRightTriggerEffect, effects[triggerEffect], sizeof(effects[triggerEffect]));
-            // SDL_memcpy(state.rgucLeftTriggerEffect, effects[triggerEffect], sizeof(effects[triggerEffect]));
+            DS5EffectsState_t.ucEnableBits1$set(state, (byte) (DS5EffectsState_t.ucEnableBits1$get(state) | (byte)(0x04 | 0x08))); /* Modify right and left trigger effect respectively */
+            MemorySegment.copy(effects[triggerEffect], 0, DS5EffectsState_t.rgucRightTriggerEffect$slice(state), JAVA_BYTE, 0, effects[triggerEffect].length);
+            MemorySegment.copy(effects[triggerEffect], 0, DS5EffectsState_t.rgucLeftTriggerEffect$slice(state), JAVA_BYTE, 0, effects[triggerEffect].length);
             gameController.sendEffect(state);
         }
     }

@@ -14,15 +14,18 @@ import sdl.events.controllerdevice.ControllerDeviceAdded;
 import sdl.events.controllerdevice.ControllerDeviceEvent;
 import sdl.events.controllerdevice.ControllerDeviceRemoved;
 import sdl.events.controllersensor.ControllerSensorEvent;
+import sdl.events.controllersensor.ControllerSensorUpdate;
 import sdl.events.controllertouchpad.ControllerTouchpad;
 import sdl.events.joybattery.JoyBatteryEvent;
 import sdl.events.joybattery.JoyBatteryUpdated;
+import sdl.events.key.KeyDown;
 import sdl.events.key.KeyboardEvent;
 import sdl.events.motion.MouseMotion;
 import sdl.events.motion.MouseMotionEvent;
 import sdl.events.quit.Quit;
 import sdl.events.quit.QuitEvent;
 import sdl.gamecontroller.GameControllerButton;
+import sdl.gamecontroller.SensorType;
 import sdl.jextract.*;
 import sdl.joystick.JoystickId;
 import sdl.joystick.JoystickPowerLevel;
@@ -34,8 +37,7 @@ import java.util.List;
 
 import static sdl.Cause.PeepEvents;
 import static sdl.events.EventType.*;
-import static sdl.jextract.sdl_h.SDL_PeepEvents;
-import static sdl.jextract.sdl_h.SDL_PumpEvents;
+import static sdl.jextract.sdl_h.*;
 
 public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, ControllerAxisEvent, ControllerButtonEvent, ControllerDeviceEvent, ControllerSensorEvent, ControllerTouchpad, JoyBatteryEvent, KeyboardEvent, MouseMotionEvent, QuitEvent {
     static List<Event> peepEvents(int numEvents, int action, int minType, int maxType) {
@@ -86,6 +88,13 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                         }
                         case KeyDown -> {
                             throw new RuntimeException(STR."\{type}");
+                            // var keysym = SDL_KeyboardEvent.keysym$slice();
+                            // yield new KeyDown(
+                            //         SDL_KeyboardEvent.windowID$get(events, i),
+                            //         GeneralInputStateDefinitions.valueOf(SDL_KeyboardEvent.state$get(events, i)),
+                            //         SDL_KeyboardEvent.repeat$get(events, i) == SDL_TRUE(),
+//
+                            // );
                         }
                         case KeyUp -> {
                             throw new RuntimeException(STR."\{type}");
@@ -115,7 +124,7 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                                 SDL_MouseButtonEvent.y$get(events, i)
                         );
                         case MouseWheel -> {
-                            throw new RuntimeException(STR."\{type}");
+                            yield new TodoEvent(MouseWheel);
                         }
                         case JoyAxisMotion -> {
                             yield new TodoEvent(JoyAxisMotion);
@@ -175,9 +184,12 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                         case ControllerTouchpadUp -> {
                             throw new RuntimeException(STR."\{type}");
                         }
-                        case ControllerSensorUpdate -> {
-                            throw new RuntimeException(STR."\{type}");
-                        }
+                        case ControllerSensorUpdate -> new ControllerSensorUpdate(
+                                SDL_ControllerSensorEvent.which$get(events, i),
+                                SensorType.valueOf(SDL_ControllerSensorEvent.sensor$get(events, i)),
+                                new float[]{}, // todo
+                                SDL_ControllerSensorEvent.timestamp_us$get(events, i)
+                        );
                         case FingerDown -> {
                             throw new RuntimeException(STR."\{type}");
                         }
