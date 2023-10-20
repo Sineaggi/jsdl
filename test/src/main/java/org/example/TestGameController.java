@@ -340,11 +340,18 @@ public class TestGameController {
                     },
                     /* Constant resistance across entire trigger pull */
                     new byte[]{
-                            0x01, 0, 110, 0, 0, 0, 0, 0, 0, 0, 0
+                            TriggerMode.Rigid.value(), 0, 110, 0, 0, 0, 0, 0, 0, 0, 0 // [1] startPosition, [2] force
+                    },
+                    /* Section resistance across entire trigger pull */
+                    new byte[]{
+                            TriggerMode.Pulse.value(), (byte) 122, (byte) 125, 0, 0, 0, 0, 0, 0, 0, 0 // [1] startPosition, [2] force
                     },
                     /* Resistance and vibration when trigger is pulled */
                     new byte[]{
-                            0x06, 15, 63, (byte) 128, 0, 0, 0, 0, 0, 0, 0
+                            TriggerMode.Pulse_B.value(), 15, 63, (byte) 128, 0, 0, 0, 0, 0, 0, 0 // [1] startPosition, [2] force
+                    },
+                    new byte[]{
+                            TriggerMode.Pulse_B.value(), 15, 63, (byte) 128, 0, 0, 0, 0, 0, 0, 0 // [1] startPosition, [4] beginForce, [5] middleForce, [6] endForce, [9] = frequency
                     }
             };
 
