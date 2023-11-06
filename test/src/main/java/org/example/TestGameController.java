@@ -22,6 +22,7 @@ import sdl.events.quit.Quit;
 import sdl.gamecontroller.GameController;
 import sdl.gamecontroller.GameControllerButton;
 import sdl.gamecontroller.GameControllerType;
+import sdl.hints.Hint;
 import sdl.joystick.JoystickId;
 import sdl.gamecontroller.SensorType;
 import sdl.hints.Hints;
@@ -37,9 +38,7 @@ import sdl.video.Window;
 import java.lang.foreign.*;
 import java.lang.invoke.VarHandle;
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import static java.lang.foreign.ValueLayout.JAVA_BYTE;
 import static java.util.FormatProcessor.FMT;
@@ -758,13 +757,13 @@ public class TestGameController {
         int controllerIndex = 0;
         String guid;
 
-        Hints.setHint(Hints.HINT_ACCELEROMETER_AS_JOYSTICK, "0");
-        Hints.setHint(Hints.HINT_JOYSTICK_HIDAPI_PS4_RUMBLE, "1");
-        Hints.setHint(Hints.HINT_JOYSTICK_HIDAPI_PS5_RUMBLE, "1");
-        Hints.setHint(Hints.HINT_JOYSTICK_HIDAPI_STEAM, "1");
-        Hints.setHint(Hints.HINT_JOYSTICK_ROG_CHAKRAM, "1");
-        Hints.setHint(Hints.HINT_JOYSTICK_ALLOW_BACKGROUND_EVENTS, "1");
-        Hints.setHint(Hints.HINT_LINUX_JOYSTICK_DEADZONES, "1");
+        Hints.setHint(Hint.ACCELEROMETER_AS_JOYSTICK, "0");
+        Hints.setHint(Hint.JOYSTICK_HIDAPI_PS4_RUMBLE, "1");
+        Hints.setHint(Hint.JOYSTICK_HIDAPI_PS5_RUMBLE, "1");
+        Hints.setHint(Hint.JOYSTICK_HIDAPI_STEAM, "1");
+        Hints.setHint(Hint.JOYSTICK_ROG_CHAKRAM, "1");
+        Hints.setHint(Hint.JOYSTICK_ALLOW_BACKGROUND_EVENTS, "1");
+        Hints.setHint(Hint.LINUX_JOYSTICK_DEADZONES, "1");
 
         // todo: not using sdl logging
         // /* Enable standard application logging */
@@ -772,7 +771,8 @@ public class TestGameController {
 
         /* Initialize SDL (Note: video is required to start event loop) */
         // todo??? EnumSet.copyOf(Set.of(InitVideo, InitJoystick, InitGameController))
-        Sdl.init(SDL_INIT_VIDEO() | SDL_INIT_JOYSTICK() | SDL_INIT_GAMECONTROLLER());
+        // EnumSet.copyOf(Set.of(InitVideo, InitJoystick, InitGameController));
+        Sdl.init(Init.Video, Init.Joystick, Init.GameController);
 
         try {
             GameController.addMappingsFromFile("gameControllerdb.txt");

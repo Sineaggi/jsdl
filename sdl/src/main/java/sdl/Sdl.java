@@ -10,7 +10,23 @@ public class Sdl {
         }
     }
 
+    public static void init(Init... options) {
+        int flags = 0;
+        for (Init option : options) {
+            flags |= option.value();
+        }
+        init(flags);
+    }
+
     public static void quitSubSystem(int flags) {
         SDL_QuitSubSystem(flags);
+    }
+
+    public static void quitSubSystem(Init... options) {
+        int flags = 0;
+        for (Init option : options) {
+            flags |= option.value();
+        }
+        quitSubSystem(flags);
     }
 }
