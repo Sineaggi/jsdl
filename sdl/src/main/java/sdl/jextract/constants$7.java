@@ -11,30 +11,29 @@ final class constants$7 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$7() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        constants$6.const$4
-    );
-    static final FunctionDescriptor const$1 = FunctionDescriptor.ofVoid(
-        RuntimeHelper.POINTER,
-        JAVA_LONG,
-        JAVA_LONG,
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_LONG,
         RuntimeHelper.POINTER
     );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_qsort",
-        constants$7.const$1
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_wcslen",
+        constants$7.const$0
     );
-    static final MethodHandle const$3 = RuntimeHelper.upcallHandle(SDL_bsearch$compare.class, "apply", constants$6.const$4);
-    static final FunctionDescriptor const$4 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+    static final FunctionDescriptor const$2 = FunctionDescriptor.of(JAVA_LONG,
         RuntimeHelper.POINTER,
         RuntimeHelper.POINTER,
-        JAVA_LONG,
-        JAVA_LONG,
-        RuntimeHelper.POINTER
+        JAVA_LONG
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_wcslcpy",
+        constants$7.const$2
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_wcslcat",
+        constants$7.const$2
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_bsearch",
-        constants$7.const$4
+        "SDL_wcsdup",
+        constants$2.const$0
     );
 }
 

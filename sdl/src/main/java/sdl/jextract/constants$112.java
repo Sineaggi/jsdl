@@ -12,28 +12,28 @@ final class constants$112 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$112() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SensorGetDeviceInstanceID",
-        constants$8.const$0
+        "SDL_GameControllerHasLED",
+        constants$13.const$1
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_SensorOpen",
-        constants$33.const$5
+        "SDL_GameControllerHasRumble",
+        constants$13.const$1
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_SensorFromInstanceID",
-        constants$33.const$5
+        "SDL_GameControllerHasRumbleTriggers",
+        constants$13.const$1
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_SensorGetName",
-        constants$6.const$0
+        "SDL_GameControllerSetLED",
+        constants$43.const$1
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SensorGetType",
-        constants$18.const$4
+        "SDL_GameControllerSendEffect",
+        constants$2.const$2
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_SensorGetNonPortableType",
-        constants$18.const$4
+        "SDL_GameControllerClose",
+        constants$1.const$2
     );
 }
 

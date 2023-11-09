@@ -12,29 +12,17 @@ final class constants$174 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$174() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SetTextureAlphaMod",
-        constants$66.const$4
+        "SDL_WasInit",
+        constants$2.const$4
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetTextureAlphaMod",
-        constants$6.const$4
+        "SDL_Quit",
+        constants$26.const$5
     );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_SetTextureBlendMode",
-        constants$34.const$3
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GetTextureBlendMode",
-        constants$6.const$4
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SetTextureScaleMode",
-        constants$34.const$3
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetTextureScaleMode",
-        constants$6.const$4
-    );
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("I64d");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("I64u");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("I64x");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("I64X");
 }
 
 

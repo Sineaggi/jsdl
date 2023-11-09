@@ -11,30 +11,20 @@ final class constants$119 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$119() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetProductVersion",
-        constants$45.const$0
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetFirmwareVersion",
-        constants$45.const$0
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetSerial",
-        constants$6.const$0
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetAttached",
-        constants$18.const$4
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetJoystick",
-        constants$6.const$0
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerEventState",
-        constants$8.const$0
-    );
+    static final VarHandle const$0 = constants$118.const$2.varHandle(MemoryLayout.PathElement.groupElement("start"));
+    static final VarHandle const$1 = constants$118.const$2.varHandle(MemoryLayout.PathElement.groupElement("length"));
+    static final StructLayout const$2 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        JAVA_INT.withName("timestamp"),
+        JAVA_INT.withName("windowID"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("text"),
+        JAVA_INT.withName("start"),
+        JAVA_INT.withName("length")
+    ).withName("SDL_TextEditingExtEvent");
+    static final VarHandle const$3 = constants$119.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$4 = constants$119.const$2.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$5 = constants$119.const$2.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
 }
 
 

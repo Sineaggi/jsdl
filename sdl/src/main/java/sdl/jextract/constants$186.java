@@ -11,30 +11,12 @@ final class constants$186 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$186() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_RenderGetMetalLayer",
-        constants$6.const$0
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_RenderGetMetalCommandEncoder",
-        constants$6.const$0
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_RenderSetVSync",
-        constants$34.const$3
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_Init",
-        constants$8.const$0
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_InitSubSystem",
-        constants$8.const$0
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_QuitSubSystem",
-        constants$70.const$3
-    );
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_WII");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_WII_PLAYER_LED");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_XBOX");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_XBOX_360");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_XBOX_360_PLAYER_LED");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_XBOX_360_WIRELESS");
 }
 
 

@@ -12,28 +12,28 @@ final class constants$80 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$80() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowMaximumSize",
-        constants$78.const$3
+        "SDL_GetKeyFromName",
+        constants$13.const$1
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowMaximumSize",
-        constants$59.const$0
+        "SDL_StartTextInput",
+        constants$26.const$5
     );
-    static final FunctionDescriptor const$2 = FunctionDescriptor.ofVoid(
-        RuntimeHelper.POINTER,
-        JAVA_INT
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_IsTextInputActive",
+        constants$1.const$4
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowBordered",
-        constants$80.const$2
+        "SDL_StopTextInput",
+        constants$26.const$5
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowResizable",
-        constants$80.const$2
+        "SDL_ClearComposition",
+        constants$26.const$5
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowAlwaysOnTop",
-        constants$80.const$2
+        "SDL_IsTextInputShown",
+        constants$1.const$4
     );
 }
 

@@ -12,28 +12,32 @@ final class constants$95 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$95() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_LockJoysticks",
-        constants$32.const$3
+        "SDL_JoystickNumBalls",
+        constants$13.const$1
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_UnlockJoysticks",
-        constants$32.const$3
+        "SDL_JoystickNumHats",
+        constants$13.const$1
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_NumJoysticks",
-        constants$5.const$5
+        "SDL_JoystickNumButtons",
+        constants$13.const$1
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickNameForIndex",
-        constants$33.const$5
+        "SDL_JoystickUpdate",
+        constants$26.const$5
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickPathForIndex",
-        constants$33.const$5
+        "SDL_JoystickEventState",
+        constants$2.const$4
     );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetDevicePlayerIndex",
-        constants$8.const$0
+    static final FunctionDescriptor const$5 = FunctionDescriptor.of(JAVA_SHORT,
+        RuntimeHelper.POINTER,
+        JAVA_INT
+    );
+    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickGetAxis",
+        constants$95.const$5
     );
 }
 

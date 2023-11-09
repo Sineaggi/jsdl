@@ -11,36 +11,29 @@ final class constants$55 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$55() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.ofVoid(
-        JAVA_INT,
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
         RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+        JAVA_BYTE
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetRGB",
+        "SDL_SetSurfaceAlphaMod",
         constants$55.const$0
     );
-    static final FunctionDescriptor const$2 = FunctionDescriptor.ofVoid(
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_GetSurfaceAlphaMod",
+        constants$8.const$2
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GetRGBA",
-        constants$55.const$2
+        "SDL_SetSurfaceBlendMode",
+        constants$28.const$5
     );
-    static final FunctionDescriptor const$4 = FunctionDescriptor.ofVoid(
-        JAVA_FLOAT,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_GetSurfaceBlendMode",
+        constants$8.const$2
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_CalculateGammaRamp",
-        constants$55.const$4
+        "SDL_SetClipRect",
+        constants$8.const$2
     );
 }
 

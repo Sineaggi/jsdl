@@ -11,31 +11,30 @@ final class constants$98 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$98() {}
-    static final StructLayout const$0 = MemoryLayout.structLayout(
-        JAVA_SHORT.withName("version"),
-        JAVA_SHORT.withName("type"),
-        JAVA_SHORT.withName("naxes"),
-        JAVA_SHORT.withName("nbuttons"),
-        JAVA_SHORT.withName("nhats"),
-        JAVA_SHORT.withName("vendor_id"),
-        JAVA_SHORT.withName("product_id"),
-        JAVA_SHORT.withName("padding"),
-        JAVA_INT.withName("button_mask"),
-        JAVA_INT.withName("axis_mask"),
-        RuntimeHelper.POINTER.withName("name"),
-        RuntimeHelper.POINTER.withName("userdata"),
-        RuntimeHelper.POINTER.withName("Update"),
-        RuntimeHelper.POINTER.withName("SetPlayerIndex"),
-        RuntimeHelper.POINTER.withName("Rumble"),
-        RuntimeHelper.POINTER.withName("RumbleTriggers"),
-        RuntimeHelper.POINTER.withName("SetLED"),
-        RuntimeHelper.POINTER.withName("SendEffect")
-    ).withName("SDL_VirtualJoystickDesc");
-    static final VarHandle const$1 = constants$98.const$0.varHandle(MemoryLayout.PathElement.groupElement("version"));
-    static final VarHandle const$2 = constants$98.const$0.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$3 = constants$98.const$0.varHandle(MemoryLayout.PathElement.groupElement("naxes"));
-    static final VarHandle const$4 = constants$98.const$0.varHandle(MemoryLayout.PathElement.groupElement("nbuttons"));
-    static final VarHandle const$5 = constants$98.const$0.varHandle(MemoryLayout.PathElement.groupElement("nhats"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickSetLED",
+        constants$43.const$1
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickSendEffect",
+        constants$2.const$2
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickClose",
+        constants$1.const$2
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickCurrentPowerLevel",
+        constants$13.const$1
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_LockSensors",
+        constants$26.const$5
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_UnlockSensors",
+        constants$26.const$5
+    );
 }
 
 

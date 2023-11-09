@@ -11,30 +11,18 @@ final class constants$88 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$88() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GL_ExtensionSupported",
-        constants$18.const$4
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GL_ResetAttributes",
-        constants$32.const$3
-    );
+    static final VarHandle const$0 = constants$85.const$3.varHandle(MemoryLayout.PathElement.groupElement("Update"));
+    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.SetPlayerIndex.class, "apply", constants$68.const$2);
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GL_SetAttribute",
-        constants$71.const$0
+        constants$68.const$2
     );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GL_GetAttribute",
-        constants$73.const$3
+    static final VarHandle const$3 = constants$85.const$3.varHandle(MemoryLayout.PathElement.groupElement("SetPlayerIndex"));
+    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_SHORT,
+        JAVA_SHORT
     );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GL_CreateContext",
-        constants$6.const$0
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GL_MakeCurrent",
-        constants$6.const$4
-    );
+    static final MethodHandle const$5 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.Rumble.class, "apply", constants$88.const$4);
 }
 
 

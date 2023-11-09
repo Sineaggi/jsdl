@@ -12,31 +12,26 @@ final class constants$33 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$33() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_CreateMutex",
-        constants$0.const$0
+        "SDL_LoadFile",
+        constants$8.const$0
     );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_LockMutex",
-        constants$18.const$4
+    static final FunctionDescriptor const$1 = FunctionDescriptor.of(JAVA_BYTE,
+        RuntimeHelper.POINTER
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_TryLockMutex",
-        constants$18.const$4
+        "SDL_ReadU8",
+        constants$33.const$1
     );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_UnlockMutex",
-        constants$18.const$4
+    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_SHORT,
+        RuntimeHelper.POINTER
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_DestroyMutex",
-        constants$1.const$2
+        "SDL_ReadLE16",
+        constants$33.const$3
     );
-    static final FunctionDescriptor const$5 = FunctionDescriptor.of(RuntimeHelper.POINTER,
-        JAVA_INT
-    );
-    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
-        "SDL_CreateSemaphore",
-        constants$33.const$5
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_ReadBE16",
+        constants$33.const$3
     );
 }
 

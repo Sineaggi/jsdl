@@ -11,15 +11,33 @@ final class constants$160 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$160() {}
-    static final VarHandle const$0 = constants$159.const$5.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$1 = constants$159.const$5.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$2 = constants$159.const$5.varHandle(MemoryLayout.PathElement.groupElement("which"));
-    static final VarHandle const$3 = constants$159.const$5.varHandle(MemoryLayout.PathElement.groupElement("timestamp_us"));
-    static final StructLayout const$4 = MemoryLayout.structLayout(
-        JAVA_INT.withName("type"),
-        JAVA_INT.withName("timestamp")
-    ).withName("SDL_QuitEvent");
-    static final VarHandle const$5 = constants$160.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_CreateTexture",
+        constants$160.const$0
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_CreateTextureFromSurface",
+        constants$8.const$0
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_QueryTexture",
+        constants$48.const$2
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_SetTextureColorMod",
+        constants$43.const$1
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_GetTextureColorMod",
+        constants$54.const$5
+    );
 }
 
 

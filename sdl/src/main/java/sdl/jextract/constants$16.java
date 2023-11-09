@@ -11,30 +11,32 @@ final class constants$16 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$16() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_strrchr",
-        constants$15.const$4
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_strstr",
-        constants$13.const$2
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_strcasestr",
-        constants$13.const$2
-    );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
         RuntimeHelper.POINTER,
+        JAVA_LONG,
+        RuntimeHelper.POINTER
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandleVariadic(
+        "SDL_snprintf",
+        constants$16.const$0
+    );
+    static final FunctionDescriptor const$2 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_LONG,
         RuntimeHelper.POINTER,
         RuntimeHelper.POINTER
     );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_strtokr",
-        constants$16.const$3
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_vsnprintf",
+        constants$16.const$2
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandleVariadic(
+        "SDL_asprintf",
+        constants$8.const$2
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_utf8strlen",
-        constants$12.const$3
+        "SDL_vasprintf",
+        constants$15.const$5
     );
 }
 

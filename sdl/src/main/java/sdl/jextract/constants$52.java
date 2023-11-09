@@ -11,25 +11,40 @@ final class constants$52 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$52() {}
-    static final VarHandle const$0 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Bshift"));
-    static final VarHandle const$1 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Ashift"));
-    static final VarHandle const$2 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("refcount"));
-    static final VarHandle const$3 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("next"));
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GetPixelFormatName",
-        constants$33.const$5
-    );
-    static final FunctionDescriptor const$5 = FunctionDescriptor.of(JAVA_INT,
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
         JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT
     );
-    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
-        "SDL_PixelFormatEnumToMasks",
-        constants$52.const$5
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_CreateRGBSurfaceFrom",
+        constants$52.const$0
+    );
+    static final FunctionDescriptor const$2 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_CreateRGBSurfaceWithFormatFrom",
+        constants$52.const$2
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_FreeSurface",
+        constants$1.const$2
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_SetSurfacePalette",
+        constants$8.const$2
     );
 }
 

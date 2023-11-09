@@ -12,28 +12,28 @@ final class constants$27 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$27() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_fmod",
-        constants$24.const$0
+        "SDL_Error",
+        constants$2.const$4
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_fmodf",
-        constants$24.const$2
+        "SDL_CreateMutex",
+        constants$0.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_log",
-        constants$22.const$4
+        "SDL_LockMutex",
+        constants$13.const$1
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_logf",
-        constants$23.const$0
+        "SDL_TryLockMutex",
+        constants$13.const$1
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_log10",
-        constants$22.const$4
+        "SDL_UnlockMutex",
+        constants$13.const$1
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_log10f",
-        constants$23.const$0
+        "SDL_DestroyMutex",
+        constants$1.const$2
     );
 }
 

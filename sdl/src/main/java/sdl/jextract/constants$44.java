@@ -11,30 +11,31 @@ final class constants$44 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$44() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_RWclose",
-        constants$18.const$4
-    );
-    static final FunctionDescriptor const$1 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+    static final FunctionDescriptor const$0 = FunctionDescriptor.ofVoid(
+        JAVA_INT,
         RuntimeHelper.POINTER,
         RuntimeHelper.POINTER,
-        JAVA_INT
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_LoadFile_RW",
-        constants$44.const$1
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_LoadFile",
-        constants$13.const$2
-    );
-    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_BYTE,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
         RuntimeHelper.POINTER
     );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_ReadU8",
-        constants$44.const$4
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_GetRGBA",
+        constants$44.const$0
     );
+    static final FunctionDescriptor const$2 = FunctionDescriptor.ofVoid(
+        JAVA_FLOAT,
+        RuntimeHelper.POINTER
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_CalculateGammaRamp",
+        constants$44.const$2
+    );
+    static final StructLayout const$4 = MemoryLayout.structLayout(
+        JAVA_INT.withName("x"),
+        JAVA_INT.withName("y")
+    ).withName("SDL_Point");
+    static final VarHandle const$5 = constants$44.const$4.varHandle(MemoryLayout.PathElement.groupElement("x"));
 }
 
 

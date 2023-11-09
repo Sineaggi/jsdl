@@ -11,30 +11,23 @@ final class constants$78 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$78() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowIcon",
-        constants$67.const$4
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowData",
-        constants$16.const$3
-    );
+    static final VarHandle const$0 = constants$77.const$3.varHandle(MemoryLayout.PathElement.groupElement("mod"));
+    static final VarHandle const$1 = constants$77.const$3.varHandle(MemoryLayout.PathElement.groupElement("unused"));
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowData",
-        constants$13.const$2
+        "SDL_GetKeyboardFocus",
+        constants$0.const$0
     );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.ofVoid(
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_INT
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GetKeyboardState",
+        constants$2.const$0
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowPosition",
-        constants$78.const$3
+        "SDL_ResetKeyboard",
+        constants$26.const$5
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowPosition",
-        constants$59.const$0
+        "SDL_GetModState",
+        constants$1.const$4
     );
 }
 

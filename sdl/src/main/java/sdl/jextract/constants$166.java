@@ -11,21 +11,36 @@ final class constants$166 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$166() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SetEventFilter",
-        constants$67.const$4
+    static final FunctionDescriptor const$0 = FunctionDescriptor.ofVoid(
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
     );
-    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(SDL_GetEventFilter$filter.class, "apply", constants$6.const$4);
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GetEventFilter",
-        constants$6.const$4
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_RenderWindowToLogical",
+        constants$166.const$0
     );
-    static final MethodHandle const$3 = RuntimeHelper.upcallHandle(SDL_AddEventWatch$filter.class, "apply", constants$6.const$4);
+    static final FunctionDescriptor const$2 = FunctionDescriptor.ofVoid(
+        RuntimeHelper.POINTER,
+        JAVA_FLOAT,
+        JAVA_FLOAT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_RenderLogicalToWindow",
+        constants$166.const$2
+    );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_AddEventWatch",
-        constants$67.const$4
+        "SDL_SetRenderDrawColor",
+        constants$43.const$3
     );
-    static final MethodHandle const$5 = RuntimeHelper.upcallHandle(SDL_DelEventWatch$filter.class, "apply", constants$6.const$4);
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_GetRenderDrawColor",
+        constants$48.const$2
+    );
 }
 
 

@@ -11,12 +11,30 @@ final class constants$156 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$156() {}
-    static final VarHandle const$0 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$1 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$2 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("touchId"));
-    static final VarHandle const$3 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("dTheta"));
-    static final VarHandle const$4 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("dDist"));
-    static final VarHandle const$5 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_SetHintWithPriority",
+        constants$2.const$2
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_SetHint",
+        constants$8.const$2
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_ResetHint",
+        constants$13.const$1
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_ResetHints",
+        constants$26.const$5
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_GetHint",
+        constants$2.const$0
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_GetHintBoolean",
+        constants$28.const$5
+    );
 }
 
 

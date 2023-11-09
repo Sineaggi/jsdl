@@ -11,16 +11,22 @@ final class constants$102 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$102() {}
-    static final MethodHandle const$0 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.SetLED.class, "apply", constants$54.const$3);
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        constants$54.const$3
-    );
-    static final VarHandle const$2 = constants$98.const$0.varHandle(MemoryLayout.PathElement.groupElement("SetLED"));
-    static final MethodHandle const$3 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.SendEffect.class, "apply", constants$6.const$2);
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        constants$6.const$2
-    );
-    static final VarHandle const$5 = constants$98.const$0.varHandle(MemoryLayout.PathElement.groupElement("SendEffect"));
+    static final UnionLayout const$0 = MemoryLayout.unionLayout(
+        JAVA_INT.withName("button"),
+        JAVA_INT.withName("axis"),
+        MemoryLayout.structLayout(
+            JAVA_INT.withName("hat"),
+            JAVA_INT.withName("hat_mask")
+        ).withName("hat")
+    ).withName("");
+    static final VarHandle const$1 = constants$102.const$0.varHandle(MemoryLayout.PathElement.groupElement("button"));
+    static final VarHandle const$2 = constants$102.const$0.varHandle(MemoryLayout.PathElement.groupElement("axis"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        JAVA_INT.withName("hat"),
+        JAVA_INT.withName("hat_mask")
+    ).withName("");
+    static final VarHandle const$4 = constants$102.const$3.varHandle(MemoryLayout.PathElement.groupElement("hat"));
+    static final VarHandle const$5 = constants$102.const$3.varHandle(MemoryLayout.PathElement.groupElement("hat_mask"));
 }
 
 

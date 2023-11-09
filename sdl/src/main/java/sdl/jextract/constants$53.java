@@ -11,32 +11,29 @@ final class constants$53 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$53() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_LockSurface",
+        constants$13.const$1
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_MasksToPixelFormatEnum",
-        constants$53.const$0
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_AllocFormat",
-        constants$33.const$5
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_FreeFormat",
+        "SDL_UnlockSurface",
         constants$1.const$2
     );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_LoadBMP_RW",
+        constants$10.const$3
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_SaveBMP_RW",
+        constants$2.const$2
+    );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_AllocPalette",
-        constants$33.const$5
+        "SDL_SetSurfaceRLE",
+        constants$28.const$5
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_SetPixelFormatPalette",
-        constants$6.const$4
+        "SDL_HasSurfaceRLE",
+        constants$13.const$1
     );
 }
 

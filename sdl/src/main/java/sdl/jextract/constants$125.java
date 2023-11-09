@@ -11,27 +11,12 @@ final class constants$125 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$125() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerSendEffect",
-        constants$6.const$2
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerClose",
-        constants$1.const$2
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetAppleSFSymbolsNameForButton",
-        constants$15.const$4
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetAppleSFSymbolsNameForAxis",
-        constants$15.const$4
-    );
-    static final StructLayout const$4 = MemoryLayout.structLayout(
-        JAVA_INT.withName("type"),
-        JAVA_INT.withName("timestamp")
-    ).withName("SDL_CommonEvent");
-    static final VarHandle const$5 = constants$125.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$0 = constants$124.const$4.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$1 = constants$124.const$4.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
+    static final VarHandle const$2 = constants$124.const$4.varHandle(MemoryLayout.PathElement.groupElement("which"));
+    static final VarHandle const$3 = constants$124.const$4.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$4 = constants$124.const$4.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final VarHandle const$5 = constants$124.const$4.varHandle(MemoryLayout.PathElement.groupElement("direction"));
 }
 
 

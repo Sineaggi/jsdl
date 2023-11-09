@@ -12,28 +12,28 @@ final class constants$93 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$93() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_IsTextInputActive",
-        constants$5.const$5
+        "SDL_JoystickGetProduct",
+        constants$33.const$3
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_StopTextInput",
-        constants$32.const$3
+        "SDL_JoystickGetProductVersion",
+        constants$33.const$3
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_ClearComposition",
-        constants$32.const$3
+        "SDL_JoystickGetFirmwareVersion",
+        constants$33.const$3
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_IsTextInputShown",
-        constants$5.const$5
+        "SDL_JoystickGetSerial",
+        constants$2.const$0
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SetTextInputRect",
-        constants$1.const$2
+        "SDL_JoystickGetType",
+        constants$13.const$1
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_HasScreenKeyboardSupport",
-        constants$5.const$5
+        "SDL_JoystickGetGUIDString",
+        constants$81.const$4
     );
 }
 

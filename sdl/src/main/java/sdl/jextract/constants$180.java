@@ -11,30 +11,12 @@ final class constants$180 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$180() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SetRenderDrawBlendMode",
-        constants$34.const$3
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetRenderDrawBlendMode",
-        constants$6.const$4
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_RenderClear",
-        constants$18.const$4
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_RenderDrawPoint",
-        constants$65.const$4
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_RenderDrawPoints",
-        constants$6.const$2
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_RenderDrawLine",
-        constants$164.const$0
-    );
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_FRAMEBUFFER_ACCELERATION");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_GAMECONTROLLERCONFIG");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_GAMECONTROLLERCONFIG_FILE");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_GAMECONTROLLERTYPE");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_GAMECONTROLLER_IGNORE_DEVICES");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_GAMECONTROLLER_IGNORE_DEVICES_EXCEPT");
 }
 
 

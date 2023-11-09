@@ -11,19 +11,37 @@ final class constants$169 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$169() {}
-    static final MethodHandle const$0 = RuntimeHelper.upcallHandle(SDL_HintCallback.class, "apply", constants$3.const$4);
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        JAVA_DOUBLE,
+        RuntimeHelper.POINTER,
+        JAVA_INT
+    );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        constants$3.const$4
+        "SDL_RenderCopyEx",
+        constants$169.const$0
     );
-    static final MethodHandle const$2 = RuntimeHelper.upcallHandle(SDL_AddHintCallback$callback.class, "apply", constants$3.const$4);
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_RenderDrawPointF",
+        constants$165.const$3
+    );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_AddHintCallback",
-        constants$59.const$0
+        "SDL_RenderDrawPointsF",
+        constants$2.const$2
     );
-    static final MethodHandle const$4 = RuntimeHelper.upcallHandle(SDL_DelHintCallback$callback.class, "apply", constants$3.const$4);
+    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_FLOAT,
+        JAVA_FLOAT,
+        JAVA_FLOAT,
+        JAVA_FLOAT
+    );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_DelHintCallback",
-        constants$59.const$0
+        "SDL_RenderDrawLineF",
+        constants$169.const$4
     );
 }
 

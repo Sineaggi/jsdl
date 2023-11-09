@@ -12,28 +12,28 @@ final class constants$30 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$30() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_sin",
-        constants$22.const$4
+        "SDL_CondWait",
+        constants$8.const$2
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_sinf",
-        constants$23.const$0
+        "SDL_CondWaitTimeout",
+        constants$2.const$2
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_sqrt",
-        constants$22.const$4
+        "SDL_RWFromFile",
+        constants$8.const$0
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_sqrtf",
-        constants$23.const$0
+        "SDL_RWFromFP",
+        constants$10.const$3
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_tan",
-        constants$22.const$4
+        "SDL_RWFromMem",
+        constants$10.const$3
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_tanf",
-        constants$23.const$0
+        "SDL_RWFromConstMem",
+        constants$10.const$3
     );
 }
 

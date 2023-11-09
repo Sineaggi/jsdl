@@ -11,23 +11,12 @@ final class constants$86 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$86() {}
-    static final MethodHandle const$0 = RuntimeHelper.upcallHandle(SDL_HitTest.class, "apply", constants$21.const$2);
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        constants$21.const$2
-    );
-    static final MethodHandle const$2 = RuntimeHelper.upcallHandle(SDL_SetWindowHitTest$callback.class, "apply", constants$21.const$2);
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowHitTest",
-        constants$21.const$2
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_FlashWindow",
-        constants$34.const$3
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_DestroyWindow",
-        constants$1.const$2
-    );
+    static final VarHandle const$0 = constants$85.const$3.varHandle(MemoryLayout.PathElement.groupElement("naxes"));
+    static final VarHandle const$1 = constants$85.const$3.varHandle(MemoryLayout.PathElement.groupElement("nbuttons"));
+    static final VarHandle const$2 = constants$85.const$3.varHandle(MemoryLayout.PathElement.groupElement("nhats"));
+    static final VarHandle const$3 = constants$85.const$3.varHandle(MemoryLayout.PathElement.groupElement("vendor_id"));
+    static final VarHandle const$4 = constants$85.const$3.varHandle(MemoryLayout.PathElement.groupElement("product_id"));
+    static final VarHandle const$5 = constants$85.const$3.varHandle(MemoryLayout.PathElement.groupElement("padding"));
 }
 
 

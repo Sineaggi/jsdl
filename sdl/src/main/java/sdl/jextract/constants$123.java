@@ -11,39 +11,12 @@ final class constants$123 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$123() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerIsSensorEnabled",
-        constants$34.const$3
-    );
-    static final FunctionDescriptor const$1 = FunctionDescriptor.of(JAVA_FLOAT,
-        RuntimeHelper.POINTER,
-        JAVA_INT
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetSensorDataRate",
-        constants$123.const$1
-    );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetSensorData",
-        constants$123.const$3
-    );
-    static final FunctionDescriptor const$5 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        JAVA_INT
-    );
-    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetSensorDataWithTimestamp",
-        constants$123.const$5
-    );
+    static final VarHandle const$0 = constants$122.const$5.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$1 = constants$122.const$5.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$2 = constants$122.const$5.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
+    static final VarHandle const$3 = constants$122.const$5.varHandle(MemoryLayout.PathElement.groupElement("which"));
+    static final VarHandle const$4 = constants$122.const$5.varHandle(MemoryLayout.PathElement.groupElement("button"));
+    static final VarHandle const$5 = constants$122.const$5.varHandle(MemoryLayout.PathElement.groupElement("state"));
 }
 
 

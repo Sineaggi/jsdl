@@ -11,32 +11,29 @@ final class constants$173 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$173() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_RenderGetMetalLayer",
+        constants$2.const$0
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_CreateTexture",
-        constants$173.const$0
+        "SDL_RenderGetMetalCommandEncoder",
+        constants$2.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_CreateTextureFromSurface",
-        constants$13.const$2
+        "SDL_RenderSetVSync",
+        constants$28.const$5
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_QueryTexture",
-        constants$59.const$4
+        "SDL_Init",
+        constants$2.const$4
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SetTextureColorMod",
-        constants$54.const$3
+        "SDL_InitSubSystem",
+        constants$2.const$4
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetTextureColorMod",
-        constants$5.const$3
+        "SDL_QuitSubSystem",
+        constants$58.const$5
     );
 }
 

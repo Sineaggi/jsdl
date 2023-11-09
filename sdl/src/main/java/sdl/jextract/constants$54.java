@@ -13,37 +13,33 @@ final class constants$54 {
     private constants$54() {}
     static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
         RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
         JAVA_INT,
         JAVA_INT
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_SetPaletteColors",
+        "SDL_SetColorKey",
         constants$54.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_FreePalette",
-        constants$1.const$2
+        "SDL_HasColorKey",
+        constants$13.const$1
     );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_BYTE,
-        JAVA_BYTE,
-        JAVA_BYTE
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GetColorKey",
+        constants$8.const$2
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_MapRGB",
-        constants$54.const$3
+        "SDL_SetSurfaceColorMod",
+        constants$43.const$1
     );
     static final FunctionDescriptor const$5 = FunctionDescriptor.of(JAVA_INT,
         RuntimeHelper.POINTER,
-        JAVA_BYTE,
-        JAVA_BYTE,
-        JAVA_BYTE,
-        JAVA_BYTE
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
     );
     static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
-        "SDL_MapRGBA",
+        "SDL_GetSurfaceColorMod",
         constants$54.const$5
     );
 }

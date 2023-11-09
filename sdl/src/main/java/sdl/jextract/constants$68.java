@@ -12,35 +12,28 @@ final class constants$68 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$68() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_DuplicateSurface",
-        constants$6.const$0
+        "SDL_SetWindowMaximumSize",
+        constants$66.const$3
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_ConvertSurface",
-        constants$44.const$1
+        "SDL_GetWindowMaximumSize",
+        constants$47.const$4
     );
-    static final FunctionDescriptor const$2 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+    static final FunctionDescriptor const$2 = FunctionDescriptor.ofVoid(
         RuntimeHelper.POINTER,
-        JAVA_INT,
         JAVA_INT
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_ConvertSurfaceFormat",
+        "SDL_SetWindowBordered",
         constants$68.const$2
     );
-    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_SetWindowResizable",
+        constants$68.const$2
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_ConvertPixels",
-        constants$68.const$4
+        "SDL_SetWindowAlwaysOnTop",
+        constants$68.const$2
     );
 }
 

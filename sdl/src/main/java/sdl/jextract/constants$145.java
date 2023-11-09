@@ -11,21 +11,21 @@ final class constants$145 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$145() {}
-    static final StructLayout const$0 = MemoryLayout.structLayout(
+    static final VarHandle const$0 = constants$143.const$3.varHandle(MemoryLayout.PathElement.groupElement("padding"));
+    static final StructLayout const$1 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
-        JAVA_INT.withName("which")
-    ).withName("SDL_JoyDeviceEvent");
-    static final VarHandle const$1 = constants$145.const$0.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$2 = constants$145.const$0.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$3 = constants$145.const$0.varHandle(MemoryLayout.PathElement.groupElement("which"));
-    static final StructLayout const$4 = MemoryLayout.structLayout(
-        JAVA_INT.withName("type"),
-        JAVA_INT.withName("timestamp"),
-        JAVA_INT.withName("which"),
-        JAVA_INT.withName("level")
-    ).withName("SDL_JoyBatteryEvent");
-    static final VarHandle const$5 = constants$145.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
+        JAVA_LONG.withName("touchId"),
+        JAVA_LONG.withName("gestureId"),
+        JAVA_INT.withName("numFingers"),
+        JAVA_FLOAT.withName("error"),
+        JAVA_FLOAT.withName("x"),
+        JAVA_FLOAT.withName("y")
+    ).withName("SDL_DollarGestureEvent");
+    static final VarHandle const$2 = constants$145.const$1.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$3 = constants$145.const$1.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$4 = constants$145.const$1.varHandle(MemoryLayout.PathElement.groupElement("touchId"));
+    static final VarHandle const$5 = constants$145.const$1.varHandle(MemoryLayout.PathElement.groupElement("gestureId"));
 }
 
 

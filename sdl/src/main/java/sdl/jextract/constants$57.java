@@ -11,22 +11,36 @@ final class constants$57 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$57() {}
-    static final StructLayout const$0 = MemoryLayout.structLayout(
-        JAVA_INT.withName("x"),
-        JAVA_INT.withName("y"),
-        JAVA_INT.withName("w"),
-        JAVA_INT.withName("h")
-    ).withName("SDL_Rect");
-    static final VarHandle const$1 = constants$57.const$0.varHandle(MemoryLayout.PathElement.groupElement("x"));
-    static final VarHandle const$2 = constants$57.const$0.varHandle(MemoryLayout.PathElement.groupElement("y"));
-    static final VarHandle const$3 = constants$57.const$0.varHandle(MemoryLayout.PathElement.groupElement("w"));
-    static final VarHandle const$4 = constants$57.const$0.varHandle(MemoryLayout.PathElement.groupElement("h"));
-    static final StructLayout const$5 = MemoryLayout.structLayout(
-        JAVA_FLOAT.withName("x"),
-        JAVA_FLOAT.withName("y"),
-        JAVA_FLOAT.withName("w"),
-        JAVA_FLOAT.withName("h")
-    ).withName("SDL_FRect");
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_INT
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_ConvertPixels",
+        constants$57.const$0
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_PremultiplyAlpha",
+        constants$57.const$0
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_FillRect",
+        constants$2.const$2
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_FillRects",
+        constants$42.const$4
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_UpperBlit",
+        constants$54.const$5
+    );
 }
 
 

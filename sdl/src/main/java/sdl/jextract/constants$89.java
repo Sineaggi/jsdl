@@ -12,28 +12,14 @@ final class constants$89 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$89() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GL_GetCurrentWindow",
-        constants$0.const$0
+        constants$88.const$4
     );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GL_GetCurrentContext",
-        constants$0.const$0
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GL_GetDrawableSize",
-        constants$59.const$0
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GL_SetSwapInterval",
-        constants$8.const$0
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GL_GetSwapInterval",
-        constants$5.const$5
-    );
+    static final VarHandle const$1 = constants$85.const$3.varHandle(MemoryLayout.PathElement.groupElement("Rumble"));
+    static final MethodHandle const$2 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.RumbleTriggers.class, "apply", constants$88.const$4);
+    static final VarHandle const$3 = constants$85.const$3.varHandle(MemoryLayout.PathElement.groupElement("RumbleTriggers"));
+    static final MethodHandle const$4 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.SetLED.class, "apply", constants$43.const$1);
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GL_SwapWindow",
-        constants$1.const$2
+        constants$43.const$1
     );
 }
 

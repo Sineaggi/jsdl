@@ -12,28 +12,28 @@ final class constants$20 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$20() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_strtoull",
-        constants$19.const$4
+        "SDL_exp",
+        constants$17.const$0
     );
-    static final FunctionDescriptor const$1 = FunctionDescriptor.of(JAVA_DOUBLE,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_expf",
+        constants$17.const$2
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_strtod",
-        constants$20.const$1
+        "SDL_fabs",
+        constants$17.const$0
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_strcmp",
-        constants$6.const$4
+        "SDL_fabsf",
+        constants$17.const$2
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_strncmp",
-        constants$12.const$1
+        "SDL_floor",
+        constants$17.const$0
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_strcasecmp",
-        constants$6.const$4
+        "SDL_floorf",
+        constants$17.const$2
     );
 }
 

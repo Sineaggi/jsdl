@@ -12,25 +12,28 @@ final class constants$167 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$167() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_DelEventWatch",
-        constants$67.const$4
+        "SDL_SetRenderDrawBlendMode",
+        constants$28.const$5
     );
-    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(SDL_FilterEvents$filter.class, "apply", constants$6.const$4);
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_GetRenderDrawBlendMode",
+        constants$8.const$2
+    );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_FilterEvents",
-        constants$67.const$4
+        "SDL_RenderClear",
+        constants$13.const$1
     );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_BYTE,
-        JAVA_INT,
-        JAVA_INT
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_RenderDrawPoint",
+        constants$54.const$0
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_EventState",
-        constants$167.const$3
+        "SDL_RenderDrawPoints",
+        constants$2.const$2
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_RegisterEvents",
-        constants$8.const$0
+        "SDL_RenderDrawLine",
+        constants$151.const$4
     );
 }
 

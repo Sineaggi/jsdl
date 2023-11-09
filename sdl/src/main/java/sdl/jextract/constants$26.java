@@ -11,29 +11,32 @@ final class constants$26 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$26() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_fabs",
-        constants$22.const$4
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        JAVA_LONG
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_fabsf",
-        constants$23.const$0
+        "SDL_iconv_string",
+        constants$26.const$0
     );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_floor",
-        constants$22.const$4
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandleVariadic(
+        "SDL_SetError",
+        constants$13.const$1
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_floorf",
-        constants$23.const$0
+        "SDL_GetError",
+        constants$0.const$0
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_trunc",
-        constants$22.const$4
+        "SDL_GetErrorMsg",
+        constants$10.const$3
     );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_truncf",
-        constants$23.const$0
+    static final FunctionDescriptor const$5 = FunctionDescriptor.ofVoid();
+    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
+        "SDL_ClearError",
+        constants$26.const$5
     );
 }
 

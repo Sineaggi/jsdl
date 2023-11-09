@@ -11,29 +11,30 @@ final class constants$82 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$82() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowFullscreen",
-        constants$34.const$3
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(MemoryLayout.structLayout(
+        MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
+    ).withName("SDL_GUID"),
+        RuntimeHelper.POINTER
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_HasWindowSurface",
-        constants$18.const$4
+        "SDL_GUIDFromString",
+        constants$82.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowSurface",
-        constants$6.const$0
+        "SDL_LockJoysticks",
+        constants$26.const$5
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_UpdateWindowSurface",
-        constants$18.const$4
+        "SDL_UnlockJoysticks",
+        constants$26.const$5
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_UpdateWindowSurfaceRects",
-        constants$6.const$2
+        "SDL_NumJoysticks",
+        constants$1.const$4
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_DestroyWindowSurface",
-        constants$18.const$4
+        "SDL_JoystickNameForIndex",
+        constants$28.const$0
     );
 }
 

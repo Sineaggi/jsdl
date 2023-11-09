@@ -11,12 +11,42 @@ final class constants$158 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$158() {}
-    static final VarHandle const$0 = constants$157.const$3.varHandle(MemoryLayout.PathElement.groupElement("touchId"));
-    static final VarHandle const$1 = constants$157.const$3.varHandle(MemoryLayout.PathElement.groupElement("gestureId"));
-    static final VarHandle const$2 = constants$157.const$3.varHandle(MemoryLayout.PathElement.groupElement("numFingers"));
-    static final VarHandle const$3 = constants$157.const$3.varHandle(MemoryLayout.PathElement.groupElement("error"));
-    static final VarHandle const$4 = constants$157.const$3.varHandle(MemoryLayout.PathElement.groupElement("x"));
-    static final VarHandle const$5 = constants$157.const$3.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final VarHandle const$0 = constants$157.const$1.varHandle(MemoryLayout.PathElement.groupElement("max_texture_height"));
+    static final StructLayout const$1 = MemoryLayout.structLayout(
+        MemoryLayout.structLayout(
+            JAVA_FLOAT.withName("x"),
+            JAVA_FLOAT.withName("y")
+        ).withName("position"),
+        MemoryLayout.structLayout(
+            JAVA_BYTE.withName("r"),
+            JAVA_BYTE.withName("g"),
+            JAVA_BYTE.withName("b"),
+            JAVA_BYTE.withName("a")
+        ).withName("color"),
+        MemoryLayout.structLayout(
+            JAVA_FLOAT.withName("x"),
+            JAVA_FLOAT.withName("y")
+        ).withName("tex_coord")
+    ).withName("SDL_Vertex");
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_GetNumRenderDrivers",
+        constants$1.const$4
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GetRenderDriverInfo",
+        constants$61.const$4
+    );
+    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_CreateWindowAndRenderer",
+        constants$158.const$4
+    );
 }
 
 

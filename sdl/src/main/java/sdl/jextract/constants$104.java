@@ -12,28 +12,28 @@ final class constants$104 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$104() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickSetVirtualHat",
-        constants$103.const$5
+        "SDL_GameControllerMapping",
+        constants$2.const$0
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickName",
-        constants$6.const$0
+        "SDL_IsGameController",
+        constants$2.const$4
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickPath",
-        constants$6.const$0
+        "SDL_GameControllerNameForIndex",
+        constants$28.const$0
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetPlayerIndex",
-        constants$18.const$4
+        "SDL_GameControllerPathForIndex",
+        constants$28.const$0
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickSetPlayerIndex",
-        constants$80.const$2
+        "SDL_GameControllerTypeForIndex",
+        constants$2.const$4
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetGUID",
-        constants$94.const$4
+        "SDL_GameControllerMappingForDeviceIndex",
+        constants$28.const$0
     );
 }
 

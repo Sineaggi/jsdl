@@ -11,32 +11,12 @@ final class constants$114 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$114() {}
-    static final StructLayout const$0 = MemoryLayout.structLayout(
-        JAVA_INT.withName("bindType"),
-        MemoryLayout.unionLayout(
-            JAVA_INT.withName("button"),
-            JAVA_INT.withName("axis"),
-            MemoryLayout.structLayout(
-                JAVA_INT.withName("hat"),
-                JAVA_INT.withName("hat_mask")
-            ).withName("hat")
-        ).withName("value")
-    ).withName("SDL_GameControllerButtonBind");
-    static final VarHandle const$1 = constants$114.const$0.varHandle(MemoryLayout.PathElement.groupElement("bindType"));
-    static final UnionLayout const$2 = MemoryLayout.unionLayout(
-        JAVA_INT.withName("button"),
-        JAVA_INT.withName("axis"),
-        MemoryLayout.structLayout(
-            JAVA_INT.withName("hat"),
-            JAVA_INT.withName("hat_mask")
-        ).withName("hat")
-    ).withName("");
-    static final VarHandle const$3 = constants$114.const$2.varHandle(MemoryLayout.PathElement.groupElement("button"));
-    static final VarHandle const$4 = constants$114.const$2.varHandle(MemoryLayout.PathElement.groupElement("axis"));
-    static final StructLayout const$5 = MemoryLayout.structLayout(
-        JAVA_INT.withName("hat"),
-        JAVA_INT.withName("hat_mask")
-    ).withName("");
+    static final VarHandle const$0 = constants$113.const$5.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$1 = constants$113.const$5.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$2 = constants$113.const$5.varHandle(MemoryLayout.PathElement.groupElement("display"));
+    static final VarHandle const$3 = constants$113.const$5.varHandle(MemoryLayout.PathElement.groupElement("event"));
+    static final VarHandle const$4 = constants$113.const$5.varHandle(MemoryLayout.PathElement.groupElement("padding1"));
+    static final VarHandle const$5 = constants$113.const$5.varHandle(MemoryLayout.PathElement.groupElement("padding2"));
 }
 
 

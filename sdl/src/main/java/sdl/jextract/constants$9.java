@@ -12,28 +12,28 @@ final class constants$9 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$9() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_isdigit",
-        constants$8.const$0
+        "SDL_wcsncasecmp",
+        constants$6.const$5
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_isxdigit",
-        constants$8.const$0
+        "SDL_strlen",
+        constants$7.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_ispunct",
-        constants$8.const$0
+        "SDL_strlcpy",
+        constants$7.const$2
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_isspace",
-        constants$8.const$0
+        "SDL_utf8strlcpy",
+        constants$7.const$2
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_isupper",
-        constants$8.const$0
+        "SDL_strlcat",
+        constants$7.const$2
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_islower",
-        constants$8.const$0
+        "SDL_strdup",
+        constants$2.const$0
     );
 }
 

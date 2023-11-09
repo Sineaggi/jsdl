@@ -11,12 +11,12 @@ final class constants$194 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$194() {}
-    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_GAMECONTROLLER_USE_BUTTON_LABELS");
-    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_GRAB_KEYBOARD");
-    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_HIDAPI_IGNORE_DEVICES");
-    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_IOS_IDLE_TIMER_DISABLED");
-    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_IME_INTERNAL_EDITING");
-    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_IME_SHOW_UI");
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_RENDER_SCALE_QUALITY");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_RENDER_VSYNC");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_RENDER_METAL_PREFER_LOW_POWER_DEVICE");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_PS2_DYNAMIC_VSYNC");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_RETURN_KEY_HIDES_IME");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_RPI_VIDEO_LAYER");
 }
 
 

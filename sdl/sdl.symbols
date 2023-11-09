@@ -419,10 +419,7 @@
 
 #### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_hints.h
 
---include-typedef SDL_HintCallback                                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_hints.h
---include-function SDL_AddHintCallback                               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_hints.h
 --include-function SDL_ClearHints                                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_hints.h
---include-function SDL_DelHintCallback                               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_hints.h
 --include-function SDL_GetHint                                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_hints.h
 --include-function SDL_GetHintBoolean                                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_hints.h
 --include-function SDL_ResetHint                                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_hints.h
@@ -1302,7 +1299,6 @@
 --include-function SDL_WriteLE32       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
 --include-function SDL_WriteLE64       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
 --include-function SDL_WriteU8         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
---include-struct SDL_RWops             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_rwops.h
 
 #### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_sensor.h
 
@@ -1371,11 +1367,7 @@
 --include-constant SDL_PRIx64                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-constant SDL_SIZE_MAX                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-constant SDL_TRUE                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-typedef SDL_calloc_func                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-typedef SDL_free_func                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-typedef SDL_iconv_t                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-typedef SDL_malloc_func                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-typedef SDL_realloc_func                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-typedef Sint16                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-typedef Sint32                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-typedef Sint64                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
@@ -1384,10 +1376,7 @@
 --include-typedef Uint32                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-typedef Uint64                          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-typedef Uint8                           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-function SDL_GetMemoryFunctions         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-function SDL_GetNumAllocations          # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-function SDL_GetOriginalMemoryFunctions # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-function SDL_SetMemoryFunctions         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-function SDL_abs                        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-function SDL_acos                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-function SDL_acosf                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
@@ -1400,7 +1389,6 @@
 --include-function SDL_atanf                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-function SDL_atof                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-function SDL_atoi                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-function SDL_bsearch                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-function SDL_calloc                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-function SDL_ceil                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-function SDL_ceilf                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
@@ -1452,7 +1440,6 @@
 --include-function SDL_memset                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-function SDL_pow                        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-function SDL_powf                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
---include-function SDL_qsort                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-function SDL_realloc                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-function SDL_round                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
 --include-function SDL_roundf                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_stdinc.h
@@ -1523,7 +1510,6 @@
 --include-constant SDL_YUV_CONVERSION_BT601              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
 --include-constant SDL_YUV_CONVERSION_BT709              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
 --include-constant SDL_YUV_CONVERSION_JPEG               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
---include-typedef SDL_blit                               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
 --include-function SDL_ConvertPixels                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
 --include-function SDL_ConvertSurface                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
 --include-function SDL_ConvertSurfaceFormat              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_surface.h
@@ -1678,7 +1664,6 @@
 --include-constant SDL_WINDOW_UTILITY                     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
 --include-constant SDL_WINDOW_VULKAN                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
 --include-typedef SDL_GLContext                           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
---include-typedef SDL_HitTest                             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
 --include-function SDL_CreateWindow                       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
 --include-function SDL_CreateWindowFrom                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
 --include-function SDL_DestroyWindow                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
@@ -1757,7 +1742,6 @@
 --include-function SDL_SetWindowFullscreen                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
 --include-function SDL_SetWindowGammaRamp                 # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
 --include-function SDL_SetWindowGrab                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
---include-function SDL_SetWindowHitTest                   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
 --include-function SDL_SetWindowIcon                      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
 --include-function SDL_SetWindowInputFocus                # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h
 --include-function SDL_SetWindowKeyboardGrab              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_video.h

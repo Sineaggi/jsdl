@@ -11,38 +11,12 @@ final class constants$182 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$182() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        JAVA_DOUBLE,
-        RuntimeHelper.POINTER,
-        JAVA_INT
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_RenderCopyEx",
-        constants$182.const$0
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_RenderDrawPointF",
-        constants$178.const$3
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_RenderDrawPointsF",
-        constants$6.const$2
-    );
-    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_FLOAT,
-        JAVA_FLOAT,
-        JAVA_FLOAT,
-        JAVA_FLOAT
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_RenderDrawLineF",
-        constants$182.const$4
-    );
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_IME_SUPPORT_EXTENDED_TEXT");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_IOS_HIDE_HOME_INDICATOR");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_ALLOW_BACKGROUND_EVENTS");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_GAMECUBE");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_GAMECUBE_RUMBLE_BRAKE");
 }
 
 

@@ -11,44 +11,12 @@ final class constants$175 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$175() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SetTextureUserData",
-        constants$6.const$4
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetTextureUserData",
-        constants$6.const$0
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_UpdateTexture",
-        constants$113.const$2
-    );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_UpdateYUVTexture",
-        constants$175.const$3
-    );
-    static final FunctionDescriptor const$5 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT
-    );
-    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
-        "SDL_UpdateNVTexture",
-        constants$175.const$5
-    );
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("d");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("u");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("x");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("X");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ACCELEROMETER_AS_JOYSTICK");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ALLOW_ALT_TAB_WHILE_GRABBED");
 }
 
 

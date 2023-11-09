@@ -11,21 +11,22 @@ final class constants$157 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$157() {}
-    static final VarHandle const$0 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("y"));
-    static final VarHandle const$1 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("numFingers"));
-    static final VarHandle const$2 = constants$155.const$5.varHandle(MemoryLayout.PathElement.groupElement("padding"));
-    static final StructLayout const$3 = MemoryLayout.structLayout(
-        JAVA_INT.withName("type"),
-        JAVA_INT.withName("timestamp"),
-        JAVA_LONG.withName("touchId"),
-        JAVA_LONG.withName("gestureId"),
-        JAVA_INT.withName("numFingers"),
-        JAVA_FLOAT.withName("error"),
-        JAVA_FLOAT.withName("x"),
-        JAVA_FLOAT.withName("y")
-    ).withName("SDL_DollarGestureEvent");
-    static final VarHandle const$4 = constants$157.const$3.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$5 = constants$157.const$3.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_ClearHints",
+        constants$26.const$5
+    );
+    static final StructLayout const$1 = MemoryLayout.structLayout(
+        RuntimeHelper.POINTER.withName("name"),
+        JAVA_INT.withName("flags"),
+        JAVA_INT.withName("num_texture_formats"),
+        MemoryLayout.sequenceLayout(16, JAVA_INT).withName("texture_formats"),
+        JAVA_INT.withName("max_texture_width"),
+        JAVA_INT.withName("max_texture_height")
+    ).withName("SDL_RendererInfo");
+    static final VarHandle const$2 = constants$157.const$1.varHandle(MemoryLayout.PathElement.groupElement("name"));
+    static final VarHandle const$3 = constants$157.const$1.varHandle(MemoryLayout.PathElement.groupElement("flags"));
+    static final VarHandle const$4 = constants$157.const$1.varHandle(MemoryLayout.PathElement.groupElement("num_texture_formats"));
+    static final VarHandle const$5 = constants$157.const$1.varHandle(MemoryLayout.PathElement.groupElement("max_texture_width"));
 }
 
 

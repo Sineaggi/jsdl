@@ -11,12 +11,12 @@ final class constants$50 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$50() {}
-    static final VarHandle const$0 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("BitsPerPixel"));
-    static final VarHandle const$1 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("BytesPerPixel"));
-    static final VarHandle const$2 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Rmask"));
-    static final VarHandle const$3 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Gmask"));
-    static final VarHandle const$4 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Bmask"));
-    static final VarHandle const$5 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Amask"));
+    static final VarHandle const$0 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("w"));
+    static final VarHandle const$1 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("h"));
+    static final VarHandle const$2 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("pitch"));
+    static final VarHandle const$3 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("pixels"));
+    static final VarHandle const$4 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("userdata"));
+    static final VarHandle const$5 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("locked"));
 }
 
 

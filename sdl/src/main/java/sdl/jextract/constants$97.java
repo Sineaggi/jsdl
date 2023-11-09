@@ -11,35 +11,31 @@ final class constants$97 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$97() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetDeviceType",
-        constants$8.const$0
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetDeviceInstanceID",
-        constants$8.const$0
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickOpen",
-        constants$33.const$5
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickFromInstanceID",
-        constants$33.const$5
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickFromPlayerIndex",
-        constants$33.const$5
-    );
-    static final FunctionDescriptor const$5 = FunctionDescriptor.of(JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_SHORT,
+        JAVA_SHORT,
         JAVA_INT
     );
-    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickAttachVirtual",
-        constants$97.const$5
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickRumble",
+        constants$97.const$0
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickRumbleTriggers",
+        constants$97.const$0
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickHasLED",
+        constants$13.const$1
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickHasRumble",
+        constants$13.const$1
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickHasRumbleTriggers",
+        constants$13.const$1
     );
 }
 

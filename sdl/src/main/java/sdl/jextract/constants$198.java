@@ -11,12 +11,12 @@ final class constants$198 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$198() {}
-    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_STADIA");
-    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_STEAM");
-    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_SWITCH");
-    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_SWITCH_HOME_LED");
-    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_JOYCON_HOME_LED");
-    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_SWITCH_PLAYER_LED");
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_VIDEO_WAYLAND_EMULATE_MOUSE_WARP");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_VIDEO_WINDOW_SHARE_PIXEL_FORMAT");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_VIDEO_FOREIGN_WINDOW_OPENGL");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_VIDEO_FOREIGN_WINDOW_VULKAN");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_VIDEO_WIN_D3DCOMPILER");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_VIDEO_X11_FORCE_EGL");
 }
 
 

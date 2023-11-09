@@ -11,40 +11,17 @@ final class constants$120 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$120() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerUpdate",
-        constants$32.const$3
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetAxisFromString",
-        constants$18.const$4
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetStringForAxis",
-        constants$33.const$5
-    );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(MemoryLayout.structLayout(
-        JAVA_INT.withName("bindType"),
-        MemoryLayout.unionLayout(
-            JAVA_INT.withName("button"),
-            JAVA_INT.withName("axis"),
-            MemoryLayout.structLayout(
-                JAVA_INT.withName("hat"),
-                JAVA_INT.withName("hat_mask")
-            ).withName("hat")
-        ).withName("value")
-    ).withName("SDL_GameControllerButtonBind"),
-        RuntimeHelper.POINTER,
-        JAVA_INT
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetBindForAxis",
-        constants$120.const$3
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerHasAxis",
-        constants$34.const$3
-    );
+    static final VarHandle const$0 = constants$119.const$2.varHandle(MemoryLayout.PathElement.groupElement("text"));
+    static final VarHandle const$1 = constants$119.const$2.varHandle(MemoryLayout.PathElement.groupElement("start"));
+    static final VarHandle const$2 = constants$119.const$2.varHandle(MemoryLayout.PathElement.groupElement("length"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        JAVA_INT.withName("timestamp"),
+        JAVA_INT.withName("windowID"),
+        MemoryLayout.sequenceLayout(32, JAVA_BYTE).withName("text")
+    ).withName("SDL_TextInputEvent");
+    static final VarHandle const$4 = constants$120.const$3.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$5 = constants$120.const$3.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
 }
 
 

@@ -11,31 +11,12 @@ final class constants$178 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$178() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_RenderSetClipRect",
-        constants$6.const$4
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_RenderGetClipRect",
-        constants$67.const$4
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_RenderIsClipEnabled",
-        constants$18.const$4
-    );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_FLOAT,
-        JAVA_FLOAT
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_RenderSetScale",
-        constants$178.const$3
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_RenderGetScale",
-        constants$59.const$0
-    );
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_AUDIO_DEVICE_STREAM_ROLE");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_AUDIO_RESAMPLING_MODE");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_AUTO_UPDATE_JOYSTICKS");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_AUTO_UPDATE_SENSORS");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_BMP_SAVE_LEGACY_FORMAT");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_DISPLAY_USABLE_BOUNDS");
 }
 
 

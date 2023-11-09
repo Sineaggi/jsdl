@@ -11,30 +11,24 @@ final class constants$124 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$124() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerRumble",
-        constants$109.const$2
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerRumbleTriggers",
-        constants$109.const$2
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerHasLED",
-        constants$18.const$4
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerHasRumble",
-        constants$18.const$4
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerHasRumbleTriggers",
-        constants$18.const$4
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerSetLED",
-        constants$54.const$3
-    );
+    static final VarHandle const$0 = constants$122.const$5.varHandle(MemoryLayout.PathElement.groupElement("clicks"));
+    static final VarHandle const$1 = constants$122.const$5.varHandle(MemoryLayout.PathElement.groupElement("padding1"));
+    static final VarHandle const$2 = constants$122.const$5.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$3 = constants$122.const$5.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final StructLayout const$4 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        JAVA_INT.withName("timestamp"),
+        JAVA_INT.withName("windowID"),
+        JAVA_INT.withName("which"),
+        JAVA_INT.withName("x"),
+        JAVA_INT.withName("y"),
+        JAVA_INT.withName("direction"),
+        JAVA_FLOAT.withName("preciseX"),
+        JAVA_FLOAT.withName("preciseY"),
+        JAVA_INT.withName("mouseX"),
+        JAVA_INT.withName("mouseY")
+    ).withName("SDL_MouseWheelEvent");
+    static final VarHandle const$5 = constants$124.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
 }
 
 

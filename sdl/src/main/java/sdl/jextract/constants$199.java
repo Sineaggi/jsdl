@@ -11,12 +11,12 @@ final class constants$199 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$199() {}
-    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_WII");
-    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_WII_PLAYER_LED");
-    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_XBOX");
-    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_XBOX_360");
-    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_XBOX_360_PLAYER_LED");
-    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_XBOX_360_WIRELESS");
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_VIDEO_X11_NET_WM_PING");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_VIDEO_X11_WINDOW_VISUALID");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_VIDEO_X11_XINERAMA");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_VIDEO_X11_XRANDR");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_VIDEO_X11_XVIDMODE");
 }
 
 

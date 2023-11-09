@@ -12,27 +12,28 @@ final class constants$70 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$70() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SoftStretchLinear",
-        constants$5.const$3
+        "SDL_SetWindowFullscreen",
+        constants$28.const$5
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_UpperBlitScaled",
-        constants$5.const$3
+        "SDL_HasWindowSurface",
+        constants$13.const$1
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_LowerBlitScaled",
-        constants$5.const$3
+        "SDL_GetWindowSurface",
+        constants$2.const$0
     );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.ofVoid(
-        JAVA_INT
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_UpdateWindowSurface",
+        constants$13.const$1
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SetYUVConversionMode",
-        constants$70.const$3
+        "SDL_UpdateWindowSurfaceRects",
+        constants$2.const$2
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetYUVConversionMode",
-        constants$5.const$5
+        "SDL_DestroyWindowSurface",
+        constants$13.const$1
     );
 }
 

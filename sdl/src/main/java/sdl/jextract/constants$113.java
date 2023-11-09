@@ -12,31 +12,29 @@ final class constants$113 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$113() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SensorGetInstanceID",
-        constants$18.const$4
+        "SDL_GameControllerGetAppleSFSymbolsNameForButton",
+        constants$10.const$3
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_SensorGetData",
-        constants$6.const$2
+        "SDL_GameControllerGetAppleSFSymbolsNameForAxis",
+        constants$10.const$3
     );
-    static final FunctionDescriptor const$2 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        JAVA_INT
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_SensorGetDataWithTimestamp",
-        constants$113.const$2
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SensorClose",
-        constants$1.const$2
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_SensorUpdate",
-        constants$32.const$3
-    );
+    static final StructLayout const$2 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        JAVA_INT.withName("timestamp")
+    ).withName("SDL_CommonEvent");
+    static final VarHandle const$3 = constants$113.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$4 = constants$113.const$2.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final StructLayout const$5 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        JAVA_INT.withName("timestamp"),
+        JAVA_INT.withName("display"),
+        JAVA_BYTE.withName("event"),
+        JAVA_BYTE.withName("padding1"),
+        JAVA_BYTE.withName("padding2"),
+        JAVA_BYTE.withName("padding3"),
+        JAVA_INT.withName("data1")
+    ).withName("SDL_DisplayEvent");
 }
 
 

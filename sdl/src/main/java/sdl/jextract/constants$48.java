@@ -11,18 +11,35 @@ final class constants$48 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$48() {}
-    static final VarHandle const$0 = constants$47.const$5.varHandle(MemoryLayout.PathElement.groupElement("r"));
-    static final VarHandle const$1 = constants$47.const$5.varHandle(MemoryLayout.PathElement.groupElement("g"));
-    static final VarHandle const$2 = constants$47.const$5.varHandle(MemoryLayout.PathElement.groupElement("b"));
-    static final VarHandle const$3 = constants$47.const$5.varHandle(MemoryLayout.PathElement.groupElement("a"));
-    static final StructLayout const$4 = MemoryLayout.structLayout(
-        JAVA_INT.withName("ncolors"),
-        MemoryLayout.paddingLayout(4),
-        RuntimeHelper.POINTER.withName("colors"),
-        JAVA_INT.withName("version"),
-        JAVA_INT.withName("refcount")
-    ).withName("SDL_Palette");
-    static final VarHandle const$5 = constants$48.const$4.varHandle(MemoryLayout.PathElement.groupElement("ncolors"));
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_EnclosePoints",
+        constants$48.const$0
+    );
+    static final FunctionDescriptor const$2 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_IntersectRectAndLine",
+        constants$48.const$2
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_HasIntersectionF",
+        constants$8.const$2
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_IntersectFRect",
+        constants$15.const$5
+    );
 }
 
 

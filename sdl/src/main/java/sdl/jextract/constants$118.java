@@ -11,30 +11,19 @@ final class constants$118 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$118() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerPath",
-        constants$6.const$0
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetType",
-        constants$18.const$4
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetPlayerIndex",
-        constants$18.const$4
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerSetPlayerIndex",
-        constants$80.const$2
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetVendor",
-        constants$45.const$0
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetProduct",
-        constants$45.const$0
-    );
+    static final VarHandle const$0 = constants$117.const$0.varHandle(MemoryLayout.PathElement.groupElement("padding2"));
+    static final VarHandle const$1 = constants$117.const$0.varHandle(MemoryLayout.PathElement.groupElement("padding3"));
+    static final StructLayout const$2 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        JAVA_INT.withName("timestamp"),
+        JAVA_INT.withName("windowID"),
+        MemoryLayout.sequenceLayout(32, JAVA_BYTE).withName("text"),
+        JAVA_INT.withName("start"),
+        JAVA_INT.withName("length")
+    ).withName("SDL_TextEditingEvent");
+    static final VarHandle const$3 = constants$118.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$4 = constants$118.const$2.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$5 = constants$118.const$2.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
 }
 
 

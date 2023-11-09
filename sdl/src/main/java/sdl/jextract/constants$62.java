@@ -11,12 +11,37 @@ final class constants$62 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$62() {}
-    static final VarHandle const$0 = constants$60.const$5.varHandle(MemoryLayout.PathElement.groupElement("userdata"));
-    static final VarHandle const$1 = constants$60.const$5.varHandle(MemoryLayout.PathElement.groupElement("locked"));
-    static final VarHandle const$2 = constants$60.const$5.varHandle(MemoryLayout.PathElement.groupElement("list_blitmap"));
-    static final VarHandle const$3 = constants$60.const$5.varHandle(MemoryLayout.PathElement.groupElement("map"));
-    static final VarHandle const$4 = constants$60.const$5.varHandle(MemoryLayout.PathElement.groupElement("refcount"));
-    static final MethodHandle const$5 = RuntimeHelper.upcallHandle(SDL_blit.class, "apply", constants$5.const$3);
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_GetDisplayUsableBounds",
+        constants$61.const$4
+    );
+    static final FunctionDescriptor const$1 = FunctionDescriptor.of(JAVA_INT,
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_GetDisplayDPI",
+        constants$62.const$1
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GetDisplayOrientation",
+        constants$2.const$4
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_GetNumDisplayModes",
+        constants$2.const$4
+    );
+    static final FunctionDescriptor const$5 = FunctionDescriptor.of(JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        RuntimeHelper.POINTER
+    );
+    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
+        "SDL_GetDisplayMode",
+        constants$62.const$5
+    );
 }
 
 

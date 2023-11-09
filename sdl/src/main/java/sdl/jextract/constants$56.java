@@ -11,18 +11,31 @@ final class constants$56 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$56() {}
-    static final StructLayout const$0 = MemoryLayout.structLayout(
-        JAVA_INT.withName("x"),
-        JAVA_INT.withName("y")
-    ).withName("SDL_Point");
-    static final VarHandle const$1 = constants$56.const$0.varHandle(MemoryLayout.PathElement.groupElement("x"));
-    static final VarHandle const$2 = constants$56.const$0.varHandle(MemoryLayout.PathElement.groupElement("y"));
-    static final StructLayout const$3 = MemoryLayout.structLayout(
-        JAVA_FLOAT.withName("x"),
-        JAVA_FLOAT.withName("y")
-    ).withName("SDL_FPoint");
-    static final VarHandle const$4 = constants$56.const$3.varHandle(MemoryLayout.PathElement.groupElement("x"));
-    static final VarHandle const$5 = constants$56.const$3.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final FunctionDescriptor const$0 = FunctionDescriptor.ofVoid(
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_GetClipRect",
+        constants$56.const$0
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_DuplicateSurface",
+        constants$2.const$0
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_ConvertSurface",
+        constants$32.const$4
+    );
+    static final FunctionDescriptor const$4 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        JAVA_INT,
+        JAVA_INT
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_ConvertSurfaceFormat",
+        constants$56.const$4
+    );
 }
 
 

@@ -11,30 +11,12 @@ final class constants$176 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$176() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_LockTexture",
-        constants$5.const$3
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_LockTextureToSurface",
-        constants$21.const$2
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_UnlockTexture",
-        constants$1.const$2
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_RenderTargetSupported",
-        constants$18.const$4
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SetRenderTarget",
-        constants$6.const$4
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetRenderTarget",
-        constants$6.const$0
-    );
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ALLOW_TOPMOST");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ANDROID_APK_EXPANSION_MAIN_FILE_VERSION");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ANDROID_APK_EXPANSION_PATCH_FILE_VERSION");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ANDROID_BLOCK_ON_PAUSE");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ANDROID_BLOCK_ON_PAUSE_PAUSEAUDIO");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ANDROID_TRAP_BACK_BUTTON");
 }
 
 

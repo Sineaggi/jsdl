@@ -26,9 +26,10 @@ final class constants$1 {
         "SDL_free",
         constants$1.const$2
     );
-    static final MethodHandle const$4 = RuntimeHelper.upcallHandle(SDL_malloc_func.class, "apply", constants$0.const$2);
+    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_INT);
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        constants$0.const$2
+        "SDL_GetNumAllocations",
+        constants$1.const$4
     );
 }
 

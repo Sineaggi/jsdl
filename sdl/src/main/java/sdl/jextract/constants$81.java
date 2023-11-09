@@ -12,28 +12,30 @@ final class constants$81 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$81() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_ShowWindow",
+        "SDL_SetTextInputRect",
         constants$1.const$2
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_HideWindow",
-        constants$1.const$2
+        "SDL_HasScreenKeyboardSupport",
+        constants$1.const$4
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_RaiseWindow",
-        constants$1.const$2
+        "SDL_IsScreenKeyboardShown",
+        constants$13.const$1
     );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_MaximizeWindow",
-        constants$1.const$2
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_MinimizeWindow",
-        constants$1.const$2
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
+    ).withName("SDL_GUID");
+    static final FunctionDescriptor const$4 = FunctionDescriptor.ofVoid(
+        MemoryLayout.structLayout(
+            MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
+        ).withName("SDL_GUID"),
+        RuntimeHelper.POINTER,
+        JAVA_INT
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_RestoreWindow",
-        constants$1.const$2
+        "SDL_GUIDToString",
+        constants$81.const$4
     );
 }
 

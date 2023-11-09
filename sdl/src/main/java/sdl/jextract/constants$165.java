@@ -12,23 +12,30 @@ final class constants$165 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$165() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_PollEvent",
-        constants$18.const$4
+        "SDL_RenderSetClipRect",
+        constants$8.const$2
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_WaitEvent",
-        constants$18.const$4
+        "SDL_RenderGetClipRect",
+        constants$56.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_WaitEventTimeout",
-        constants$34.const$3
+        "SDL_RenderIsClipEnabled",
+        constants$13.const$1
     );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_PushEvent",
-        constants$18.const$4
+    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_FLOAT,
+        JAVA_FLOAT
     );
-    static final MethodHandle const$4 = RuntimeHelper.upcallHandle(SDL_EventFilter.class, "apply", constants$6.const$4);
-    static final MethodHandle const$5 = RuntimeHelper.upcallHandle(SDL_SetEventFilter$filter.class, "apply", constants$6.const$4);
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_RenderSetScale",
+        constants$165.const$3
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_RenderGetScale",
+        constants$47.const$4
+    );
 }
 
 

@@ -11,12 +11,12 @@ final class constants$190 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$190() {}
-    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_APP_NAME");
-    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_APPLE_TV_CONTROLLER_UI_EVENTS");
-    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_APPLE_TV_REMOTE_ALLOW_ROTATION");
-    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_AUDIO_CATEGORY");
-    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_AUDIO_DEVICE_APP_NAME");
-    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_AUDIO_DEVICE_STREAM_NAME");
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_MOUSE_FOCUS_CLICKTHROUGH");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_MOUSE_NORMAL_SPEED_SCALE");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_MOUSE_RELATIVE_MODE_CENTER");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_MOUSE_RELATIVE_MODE_WARP");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_MOUSE_RELATIVE_SCALING");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_MOUSE_RELATIVE_SPEED_SCALE");
 }
 
 

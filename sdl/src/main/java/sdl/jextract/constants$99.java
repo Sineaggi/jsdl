@@ -11,12 +11,30 @@ final class constants$99 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$99() {}
-    static final VarHandle const$0 = constants$98.const$0.varHandle(MemoryLayout.PathElement.groupElement("vendor_id"));
-    static final VarHandle const$1 = constants$98.const$0.varHandle(MemoryLayout.PathElement.groupElement("product_id"));
-    static final VarHandle const$2 = constants$98.const$0.varHandle(MemoryLayout.PathElement.groupElement("padding"));
-    static final VarHandle const$3 = constants$98.const$0.varHandle(MemoryLayout.PathElement.groupElement("button_mask"));
-    static final VarHandle const$4 = constants$98.const$0.varHandle(MemoryLayout.PathElement.groupElement("axis_mask"));
-    static final VarHandle const$5 = constants$98.const$0.varHandle(MemoryLayout.PathElement.groupElement("name"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_NumSensors",
+        constants$1.const$4
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_SensorGetDeviceName",
+        constants$28.const$0
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_SensorGetDeviceType",
+        constants$2.const$4
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_SensorGetDeviceNonPortableType",
+        constants$2.const$4
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_SensorGetDeviceInstanceID",
+        constants$2.const$4
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_SensorOpen",
+        constants$28.const$0
+    );
 }
 
 

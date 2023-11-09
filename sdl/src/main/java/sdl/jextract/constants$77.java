@@ -12,29 +12,26 @@ final class constants$77 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$77() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_CreateWindowFrom",
-        constants$6.const$0
+        "SDL_GL_GetSwapInterval",
+        constants$1.const$4
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowID",
-        constants$18.const$4
+        "SDL_GL_SwapWindow",
+        constants$1.const$2
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowFromID",
-        constants$33.const$5
+        "SDL_GL_DeleteContext",
+        constants$1.const$2
     );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowFlags",
-        constants$18.const$4
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowTitle",
-        constants$67.const$4
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowTitle",
-        constants$6.const$0
-    );
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        JAVA_INT.withName("scancode"),
+        JAVA_INT.withName("sym"),
+        JAVA_SHORT.withName("mod"),
+        MemoryLayout.paddingLayout(2),
+        JAVA_INT.withName("unused")
+    ).withName("SDL_Keysym");
+    static final VarHandle const$4 = constants$77.const$3.varHandle(MemoryLayout.PathElement.groupElement("scancode"));
+    static final VarHandle const$5 = constants$77.const$3.varHandle(MemoryLayout.PathElement.groupElement("sym"));
 }
 
 

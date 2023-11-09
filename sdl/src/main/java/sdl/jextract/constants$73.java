@@ -12,28 +12,28 @@ final class constants$73 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$73() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GetCurrentVideoDriver",
-        constants$0.const$0
+        "SDL_SetWindowOpacity",
+        constants$72.const$3
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetNumVideoDisplays",
-        constants$5.const$5
+        "SDL_GetWindowOpacity",
+        constants$8.const$2
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GetDisplayName",
-        constants$33.const$5
+        "SDL_SetWindowModalFor",
+        constants$8.const$2
     );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
-        JAVA_INT,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_SetWindowInputFocus",
+        constants$13.const$1
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GetDisplayBounds",
-        constants$73.const$3
+        "SDL_SetWindowGammaRamp",
+        constants$54.const$5
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetDisplayUsableBounds",
-        constants$73.const$3
+        "SDL_GetWindowGammaRamp",
+        constants$54.const$5
     );
 }
 

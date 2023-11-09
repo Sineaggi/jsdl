@@ -1513,56 +1513,8 @@ public class sdl_h extends sdl_h_1 {
             throw new AssertionError("should not reach here", ex$);
         }
     }
-    public static MethodHandle SDL_GetOriginalMemoryFunctions$MH() {
-        return RuntimeHelper.requireNonNull(constants$3.const$5,"SDL_GetOriginalMemoryFunctions");
-    }
-    /**
-     * {@snippet :
-     * void SDL_GetOriginalMemoryFunctions(void* (**malloc_func)(unsigned long long), void* (**calloc_func)(unsigned long long,unsigned long long), void* (**realloc_func)(void*,unsigned long long), void (**free_func)(void*));
-     * }
-     */
-    public static void SDL_GetOriginalMemoryFunctions(MemorySegment malloc_func, MemorySegment calloc_func, MemorySegment realloc_func, MemorySegment free_func) {
-        var mh$ = SDL_GetOriginalMemoryFunctions$MH();
-        try {
-            mh$.invokeExact(malloc_func, calloc_func, realloc_func, free_func);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_GetMemoryFunctions$MH() {
-        return RuntimeHelper.requireNonNull(constants$4.const$4,"SDL_GetMemoryFunctions");
-    }
-    /**
-     * {@snippet :
-     * void SDL_GetMemoryFunctions(void* (**malloc_func)(unsigned long long), void* (**calloc_func)(unsigned long long,unsigned long long), void* (**realloc_func)(void*,unsigned long long), void (**free_func)(void*));
-     * }
-     */
-    public static void SDL_GetMemoryFunctions(MemorySegment malloc_func, MemorySegment calloc_func, MemorySegment realloc_func, MemorySegment free_func) {
-        var mh$ = SDL_GetMemoryFunctions$MH();
-        try {
-            mh$.invokeExact(malloc_func, calloc_func, realloc_func, free_func);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_SetMemoryFunctions$MH() {
-        return RuntimeHelper.requireNonNull(constants$5.const$4,"SDL_SetMemoryFunctions");
-    }
-    /**
-     * {@snippet :
-     * int SDL_SetMemoryFunctions(void* (*malloc_func)(unsigned long long), void* (*calloc_func)(unsigned long long,unsigned long long), void* (*realloc_func)(void*,unsigned long long), void (*free_func)(void*));
-     * }
-     */
-    public static int SDL_SetMemoryFunctions(MemorySegment malloc_func, MemorySegment calloc_func, MemorySegment realloc_func, MemorySegment free_func) {
-        var mh$ = SDL_SetMemoryFunctions$MH();
-        try {
-            return (int)mh$.invokeExact(malloc_func, calloc_func, realloc_func, free_func);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
     public static MethodHandle SDL_GetNumAllocations$MH() {
-        return RuntimeHelper.requireNonNull(constants$5.const$6,"SDL_GetNumAllocations");
+        return RuntimeHelper.requireNonNull(constants$1.const$5,"SDL_GetNumAllocations");
     }
     /**
      * {@snippet :
@@ -1578,7 +1530,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_getenv$MH() {
-        return RuntimeHelper.requireNonNull(constants$6.const$1,"SDL_getenv");
+        return RuntimeHelper.requireNonNull(constants$2.const$1,"SDL_getenv");
     }
     /**
      * {@snippet :
@@ -1594,7 +1546,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_setenv$MH() {
-        return RuntimeHelper.requireNonNull(constants$6.const$3,"SDL_setenv");
+        return RuntimeHelper.requireNonNull(constants$2.const$3,"SDL_setenv");
     }
     /**
      * {@snippet :
@@ -1609,40 +1561,8 @@ public class sdl_h extends sdl_h_1 {
             throw new AssertionError("should not reach here", ex$);
         }
     }
-    public static MethodHandle SDL_qsort$MH() {
-        return RuntimeHelper.requireNonNull(constants$7.const$2,"SDL_qsort");
-    }
-    /**
-     * {@snippet :
-     * void SDL_qsort(void* base, unsigned long long nmemb, unsigned long long size, int (*compare)(void*,void*));
-     * }
-     */
-    public static void SDL_qsort(MemorySegment base, long nmemb, long size, MemorySegment compare) {
-        var mh$ = SDL_qsort$MH();
-        try {
-            mh$.invokeExact(base, nmemb, size, compare);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_bsearch$MH() {
-        return RuntimeHelper.requireNonNull(constants$7.const$5,"SDL_bsearch");
-    }
-    /**
-     * {@snippet :
-     * void* SDL_bsearch(void* key, void* base, unsigned long long nmemb, unsigned long long size, int (*compare)(void*,void*));
-     * }
-     */
-    public static MemorySegment SDL_bsearch(MemorySegment key, MemorySegment base, long nmemb, long size, MemorySegment compare) {
-        var mh$ = SDL_bsearch$MH();
-        try {
-            return (java.lang.foreign.MemorySegment)mh$.invokeExact(key, base, nmemb, size, compare);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
     public static MethodHandle SDL_abs$MH() {
-        return RuntimeHelper.requireNonNull(constants$8.const$1,"SDL_abs");
+        return RuntimeHelper.requireNonNull(constants$2.const$5,"SDL_abs");
     }
     /**
      * {@snippet :
@@ -1658,7 +1578,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_isalpha$MH() {
-        return RuntimeHelper.requireNonNull(constants$8.const$2,"SDL_isalpha");
+        return RuntimeHelper.requireNonNull(constants$3.const$0,"SDL_isalpha");
     }
     /**
      * {@snippet :
@@ -1674,7 +1594,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_isalnum$MH() {
-        return RuntimeHelper.requireNonNull(constants$8.const$3,"SDL_isalnum");
+        return RuntimeHelper.requireNonNull(constants$3.const$1,"SDL_isalnum");
     }
     /**
      * {@snippet :
@@ -1690,7 +1610,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_isblank$MH() {
-        return RuntimeHelper.requireNonNull(constants$8.const$4,"SDL_isblank");
+        return RuntimeHelper.requireNonNull(constants$3.const$2,"SDL_isblank");
     }
     /**
      * {@snippet :
@@ -1706,7 +1626,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_iscntrl$MH() {
-        return RuntimeHelper.requireNonNull(constants$8.const$5,"SDL_iscntrl");
+        return RuntimeHelper.requireNonNull(constants$3.const$3,"SDL_iscntrl");
     }
     /**
      * {@snippet :
@@ -1722,7 +1642,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_isdigit$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.const$0,"SDL_isdigit");
+        return RuntimeHelper.requireNonNull(constants$3.const$4,"SDL_isdigit");
     }
     /**
      * {@snippet :
@@ -1738,7 +1658,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_isxdigit$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.const$1,"SDL_isxdigit");
+        return RuntimeHelper.requireNonNull(constants$3.const$5,"SDL_isxdigit");
     }
     /**
      * {@snippet :
@@ -1754,7 +1674,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ispunct$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.const$2,"SDL_ispunct");
+        return RuntimeHelper.requireNonNull(constants$4.const$0,"SDL_ispunct");
     }
     /**
      * {@snippet :
@@ -1770,7 +1690,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_isspace$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.const$3,"SDL_isspace");
+        return RuntimeHelper.requireNonNull(constants$4.const$1,"SDL_isspace");
     }
     /**
      * {@snippet :
@@ -1786,7 +1706,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_isupper$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.const$4,"SDL_isupper");
+        return RuntimeHelper.requireNonNull(constants$4.const$2,"SDL_isupper");
     }
     /**
      * {@snippet :
@@ -1802,7 +1722,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_islower$MH() {
-        return RuntimeHelper.requireNonNull(constants$9.const$5,"SDL_islower");
+        return RuntimeHelper.requireNonNull(constants$4.const$3,"SDL_islower");
     }
     /**
      * {@snippet :
@@ -1818,7 +1738,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_isprint$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.const$0,"SDL_isprint");
+        return RuntimeHelper.requireNonNull(constants$4.const$4,"SDL_isprint");
     }
     /**
      * {@snippet :
@@ -1834,7 +1754,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_isgraph$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.const$1,"SDL_isgraph");
+        return RuntimeHelper.requireNonNull(constants$4.const$5,"SDL_isgraph");
     }
     /**
      * {@snippet :
@@ -1850,7 +1770,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_toupper$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.const$2,"SDL_toupper");
+        return RuntimeHelper.requireNonNull(constants$5.const$0,"SDL_toupper");
     }
     /**
      * {@snippet :
@@ -1866,7 +1786,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_tolower$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.const$3,"SDL_tolower");
+        return RuntimeHelper.requireNonNull(constants$5.const$1,"SDL_tolower");
     }
     /**
      * {@snippet :
@@ -1882,7 +1802,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_crc16$MH() {
-        return RuntimeHelper.requireNonNull(constants$10.const$5,"SDL_crc16");
+        return RuntimeHelper.requireNonNull(constants$5.const$3,"SDL_crc16");
     }
     /**
      * {@snippet :
@@ -1898,7 +1818,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_crc32$MH() {
-        return RuntimeHelper.requireNonNull(constants$11.const$1,"SDL_crc32");
+        return RuntimeHelper.requireNonNull(constants$5.const$5,"SDL_crc32");
     }
     /**
      * {@snippet :
@@ -1914,7 +1834,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_memset$MH() {
-        return RuntimeHelper.requireNonNull(constants$11.const$3,"SDL_memset");
+        return RuntimeHelper.requireNonNull(constants$6.const$1,"SDL_memset");
     }
     /**
      * {@snippet :
@@ -1930,7 +1850,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_memcpy$MH() {
-        return RuntimeHelper.requireNonNull(constants$11.const$5,"SDL_memcpy");
+        return RuntimeHelper.requireNonNull(constants$6.const$3,"SDL_memcpy");
     }
     /**
      * {@snippet :
@@ -1946,7 +1866,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_memmove$MH() {
-        return RuntimeHelper.requireNonNull(constants$12.const$0,"SDL_memmove");
+        return RuntimeHelper.requireNonNull(constants$6.const$4,"SDL_memmove");
     }
     /**
      * {@snippet :
@@ -1962,7 +1882,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_memcmp$MH() {
-        return RuntimeHelper.requireNonNull(constants$12.const$2,"SDL_memcmp");
+        return RuntimeHelper.requireNonNull(constants$6.const$6,"SDL_memcmp");
     }
     /**
      * {@snippet :
@@ -1978,7 +1898,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_wcslen$MH() {
-        return RuntimeHelper.requireNonNull(constants$12.const$4,"SDL_wcslen");
+        return RuntimeHelper.requireNonNull(constants$7.const$1,"SDL_wcslen");
     }
     /**
      * {@snippet :
@@ -1994,7 +1914,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_wcslcpy$MH() {
-        return RuntimeHelper.requireNonNull(constants$12.const$6,"SDL_wcslcpy");
+        return RuntimeHelper.requireNonNull(constants$7.const$3,"SDL_wcslcpy");
     }
     /**
      * {@snippet :
@@ -2010,7 +1930,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_wcslcat$MH() {
-        return RuntimeHelper.requireNonNull(constants$13.const$0,"SDL_wcslcat");
+        return RuntimeHelper.requireNonNull(constants$7.const$4,"SDL_wcslcat");
     }
     /**
      * {@snippet :
@@ -2026,7 +1946,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_wcsdup$MH() {
-        return RuntimeHelper.requireNonNull(constants$13.const$1,"SDL_wcsdup");
+        return RuntimeHelper.requireNonNull(constants$7.const$5,"SDL_wcsdup");
     }
     /**
      * {@snippet :
@@ -2042,7 +1962,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_wcsstr$MH() {
-        return RuntimeHelper.requireNonNull(constants$13.const$3,"SDL_wcsstr");
+        return RuntimeHelper.requireNonNull(constants$8.const$1,"SDL_wcsstr");
     }
     /**
      * {@snippet :
@@ -2058,7 +1978,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_wcscmp$MH() {
-        return RuntimeHelper.requireNonNull(constants$13.const$4,"SDL_wcscmp");
+        return RuntimeHelper.requireNonNull(constants$8.const$3,"SDL_wcscmp");
     }
     /**
      * {@snippet :
@@ -2074,7 +1994,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_wcsncmp$MH() {
-        return RuntimeHelper.requireNonNull(constants$13.const$5,"SDL_wcsncmp");
+        return RuntimeHelper.requireNonNull(constants$8.const$4,"SDL_wcsncmp");
     }
     /**
      * {@snippet :
@@ -2090,7 +2010,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_wcscasecmp$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.const$0,"SDL_wcscasecmp");
+        return RuntimeHelper.requireNonNull(constants$8.const$5,"SDL_wcscasecmp");
     }
     /**
      * {@snippet :
@@ -2106,7 +2026,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_wcsncasecmp$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.const$1,"SDL_wcsncasecmp");
+        return RuntimeHelper.requireNonNull(constants$9.const$0,"SDL_wcsncasecmp");
     }
     /**
      * {@snippet :
@@ -2122,7 +2042,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strlen$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.const$2,"SDL_strlen");
+        return RuntimeHelper.requireNonNull(constants$9.const$1,"SDL_strlen");
     }
     /**
      * {@snippet :
@@ -2138,7 +2058,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strlcpy$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.const$3,"SDL_strlcpy");
+        return RuntimeHelper.requireNonNull(constants$9.const$2,"SDL_strlcpy");
     }
     /**
      * {@snippet :
@@ -2154,7 +2074,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_utf8strlcpy$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.const$4,"SDL_utf8strlcpy");
+        return RuntimeHelper.requireNonNull(constants$9.const$3,"SDL_utf8strlcpy");
     }
     /**
      * {@snippet :
@@ -2170,7 +2090,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strlcat$MH() {
-        return RuntimeHelper.requireNonNull(constants$14.const$5,"SDL_strlcat");
+        return RuntimeHelper.requireNonNull(constants$9.const$4,"SDL_strlcat");
     }
     /**
      * {@snippet :
@@ -2186,7 +2106,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strdup$MH() {
-        return RuntimeHelper.requireNonNull(constants$15.const$0,"SDL_strdup");
+        return RuntimeHelper.requireNonNull(constants$9.const$5,"SDL_strdup");
     }
     /**
      * {@snippet :
@@ -2202,7 +2122,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strrev$MH() {
-        return RuntimeHelper.requireNonNull(constants$15.const$1,"SDL_strrev");
+        return RuntimeHelper.requireNonNull(constants$10.const$0,"SDL_strrev");
     }
     /**
      * {@snippet :
@@ -2218,7 +2138,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strupr$MH() {
-        return RuntimeHelper.requireNonNull(constants$15.const$2,"SDL_strupr");
+        return RuntimeHelper.requireNonNull(constants$10.const$1,"SDL_strupr");
     }
     /**
      * {@snippet :
@@ -2234,7 +2154,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strlwr$MH() {
-        return RuntimeHelper.requireNonNull(constants$15.const$3,"SDL_strlwr");
+        return RuntimeHelper.requireNonNull(constants$10.const$2,"SDL_strlwr");
     }
     /**
      * {@snippet :
@@ -2250,7 +2170,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strchr$MH() {
-        return RuntimeHelper.requireNonNull(constants$15.const$5,"SDL_strchr");
+        return RuntimeHelper.requireNonNull(constants$10.const$4,"SDL_strchr");
     }
     /**
      * {@snippet :
@@ -2266,7 +2186,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strrchr$MH() {
-        return RuntimeHelper.requireNonNull(constants$16.const$0,"SDL_strrchr");
+        return RuntimeHelper.requireNonNull(constants$10.const$5,"SDL_strrchr");
     }
     /**
      * {@snippet :
@@ -2282,7 +2202,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strstr$MH() {
-        return RuntimeHelper.requireNonNull(constants$16.const$1,"SDL_strstr");
+        return RuntimeHelper.requireNonNull(constants$11.const$0,"SDL_strstr");
     }
     /**
      * {@snippet :
@@ -2298,7 +2218,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strcasestr$MH() {
-        return RuntimeHelper.requireNonNull(constants$16.const$2,"SDL_strcasestr");
+        return RuntimeHelper.requireNonNull(constants$11.const$1,"SDL_strcasestr");
     }
     /**
      * {@snippet :
@@ -2314,7 +2234,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strtokr$MH() {
-        return RuntimeHelper.requireNonNull(constants$16.const$4,"SDL_strtokr");
+        return RuntimeHelper.requireNonNull(constants$11.const$3,"SDL_strtokr");
     }
     /**
      * {@snippet :
@@ -2330,7 +2250,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_utf8strlen$MH() {
-        return RuntimeHelper.requireNonNull(constants$16.const$5,"SDL_utf8strlen");
+        return RuntimeHelper.requireNonNull(constants$11.const$4,"SDL_utf8strlen");
     }
     /**
      * {@snippet :
@@ -2346,7 +2266,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_utf8strnlen$MH() {
-        return RuntimeHelper.requireNonNull(constants$17.const$1,"SDL_utf8strnlen");
+        return RuntimeHelper.requireNonNull(constants$11.const$6,"SDL_utf8strnlen");
     }
     /**
      * {@snippet :
@@ -2362,7 +2282,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_itoa$MH() {
-        return RuntimeHelper.requireNonNull(constants$17.const$3,"SDL_itoa");
+        return RuntimeHelper.requireNonNull(constants$12.const$1,"SDL_itoa");
     }
     /**
      * {@snippet :
@@ -2378,7 +2298,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_uitoa$MH() {
-        return RuntimeHelper.requireNonNull(constants$17.const$4,"SDL_uitoa");
+        return RuntimeHelper.requireNonNull(constants$12.const$2,"SDL_uitoa");
     }
     /**
      * {@snippet :
@@ -2394,7 +2314,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ltoa$MH() {
-        return RuntimeHelper.requireNonNull(constants$17.const$5,"SDL_ltoa");
+        return RuntimeHelper.requireNonNull(constants$12.const$3,"SDL_ltoa");
     }
     /**
      * {@snippet :
@@ -2410,7 +2330,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ultoa$MH() {
-        return RuntimeHelper.requireNonNull(constants$18.const$0,"SDL_ultoa");
+        return RuntimeHelper.requireNonNull(constants$12.const$4,"SDL_ultoa");
     }
     /**
      * {@snippet :
@@ -2426,7 +2346,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_lltoa$MH() {
-        return RuntimeHelper.requireNonNull(constants$18.const$2,"SDL_lltoa");
+        return RuntimeHelper.requireNonNull(constants$12.const$6,"SDL_lltoa");
     }
     /**
      * {@snippet :
@@ -2442,7 +2362,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ulltoa$MH() {
-        return RuntimeHelper.requireNonNull(constants$18.const$3,"SDL_ulltoa");
+        return RuntimeHelper.requireNonNull(constants$13.const$0,"SDL_ulltoa");
     }
     /**
      * {@snippet :
@@ -2458,7 +2378,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_atoi$MH() {
-        return RuntimeHelper.requireNonNull(constants$18.const$5,"SDL_atoi");
+        return RuntimeHelper.requireNonNull(constants$13.const$2,"SDL_atoi");
     }
     /**
      * {@snippet :
@@ -2474,7 +2394,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_atof$MH() {
-        return RuntimeHelper.requireNonNull(constants$19.const$1,"SDL_atof");
+        return RuntimeHelper.requireNonNull(constants$13.const$4,"SDL_atof");
     }
     /**
      * {@snippet :
@@ -2490,7 +2410,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strtol$MH() {
-        return RuntimeHelper.requireNonNull(constants$19.const$2,"SDL_strtol");
+        return RuntimeHelper.requireNonNull(constants$13.const$5,"SDL_strtol");
     }
     /**
      * {@snippet :
@@ -2506,7 +2426,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strtoul$MH() {
-        return RuntimeHelper.requireNonNull(constants$19.const$3,"SDL_strtoul");
+        return RuntimeHelper.requireNonNull(constants$14.const$0,"SDL_strtoul");
     }
     /**
      * {@snippet :
@@ -2522,7 +2442,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strtoll$MH() {
-        return RuntimeHelper.requireNonNull(constants$19.const$5,"SDL_strtoll");
+        return RuntimeHelper.requireNonNull(constants$14.const$2,"SDL_strtoll");
     }
     /**
      * {@snippet :
@@ -2538,7 +2458,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strtoull$MH() {
-        return RuntimeHelper.requireNonNull(constants$20.const$0,"SDL_strtoull");
+        return RuntimeHelper.requireNonNull(constants$14.const$3,"SDL_strtoull");
     }
     /**
      * {@snippet :
@@ -2554,7 +2474,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strtod$MH() {
-        return RuntimeHelper.requireNonNull(constants$20.const$2,"SDL_strtod");
+        return RuntimeHelper.requireNonNull(constants$14.const$5,"SDL_strtod");
     }
     /**
      * {@snippet :
@@ -2570,7 +2490,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strcmp$MH() {
-        return RuntimeHelper.requireNonNull(constants$20.const$3,"SDL_strcmp");
+        return RuntimeHelper.requireNonNull(constants$15.const$0,"SDL_strcmp");
     }
     /**
      * {@snippet :
@@ -2586,7 +2506,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strncmp$MH() {
-        return RuntimeHelper.requireNonNull(constants$20.const$4,"SDL_strncmp");
+        return RuntimeHelper.requireNonNull(constants$15.const$1,"SDL_strncmp");
     }
     /**
      * {@snippet :
@@ -2602,7 +2522,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strcasecmp$MH() {
-        return RuntimeHelper.requireNonNull(constants$20.const$5,"SDL_strcasecmp");
+        return RuntimeHelper.requireNonNull(constants$15.const$2,"SDL_strcasecmp");
     }
     /**
      * {@snippet :
@@ -2618,7 +2538,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_strncasecmp$MH() {
-        return RuntimeHelper.requireNonNull(constants$21.const$0,"SDL_strncasecmp");
+        return RuntimeHelper.requireNonNull(constants$15.const$3,"SDL_strncasecmp");
     }
     /**
      * {@snippet :
@@ -2634,7 +2554,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_sscanf$MH() {
-        return RuntimeHelper.requireNonNull(constants$21.const$1,"SDL_sscanf");
+        return RuntimeHelper.requireNonNull(constants$15.const$4,"SDL_sscanf");
     }
     /**
      * {@snippet :
@@ -2650,7 +2570,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_vsscanf$MH() {
-        return RuntimeHelper.requireNonNull(constants$21.const$3,"SDL_vsscanf");
+        return RuntimeHelper.requireNonNull(constants$15.const$6,"SDL_vsscanf");
     }
     /**
      * {@snippet :
@@ -2666,7 +2586,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_snprintf$MH() {
-        return RuntimeHelper.requireNonNull(constants$21.const$5,"SDL_snprintf");
+        return RuntimeHelper.requireNonNull(constants$16.const$1,"SDL_snprintf");
     }
     /**
      * {@snippet :
@@ -2682,7 +2602,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_vsnprintf$MH() {
-        return RuntimeHelper.requireNonNull(constants$22.const$1,"SDL_vsnprintf");
+        return RuntimeHelper.requireNonNull(constants$16.const$3,"SDL_vsnprintf");
     }
     /**
      * {@snippet :
@@ -2698,7 +2618,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_asprintf$MH() {
-        return RuntimeHelper.requireNonNull(constants$22.const$2,"SDL_asprintf");
+        return RuntimeHelper.requireNonNull(constants$16.const$4,"SDL_asprintf");
     }
     /**
      * {@snippet :
@@ -2714,7 +2634,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_vasprintf$MH() {
-        return RuntimeHelper.requireNonNull(constants$22.const$3,"SDL_vasprintf");
+        return RuntimeHelper.requireNonNull(constants$16.const$5,"SDL_vasprintf");
     }
     /**
      * {@snippet :
@@ -2730,7 +2650,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_acos$MH() {
-        return RuntimeHelper.requireNonNull(constants$22.const$5,"SDL_acos");
+        return RuntimeHelper.requireNonNull(constants$17.const$1,"SDL_acos");
     }
     /**
      * {@snippet :
@@ -2746,7 +2666,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_acosf$MH() {
-        return RuntimeHelper.requireNonNull(constants$23.const$1,"SDL_acosf");
+        return RuntimeHelper.requireNonNull(constants$17.const$3,"SDL_acosf");
     }
     /**
      * {@snippet :
@@ -2762,7 +2682,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_asin$MH() {
-        return RuntimeHelper.requireNonNull(constants$23.const$2,"SDL_asin");
+        return RuntimeHelper.requireNonNull(constants$17.const$4,"SDL_asin");
     }
     /**
      * {@snippet :
@@ -2778,7 +2698,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_asinf$MH() {
-        return RuntimeHelper.requireNonNull(constants$23.const$3,"SDL_asinf");
+        return RuntimeHelper.requireNonNull(constants$17.const$5,"SDL_asinf");
     }
     /**
      * {@snippet :
@@ -2794,7 +2714,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_atan$MH() {
-        return RuntimeHelper.requireNonNull(constants$23.const$4,"SDL_atan");
+        return RuntimeHelper.requireNonNull(constants$18.const$0,"SDL_atan");
     }
     /**
      * {@snippet :
@@ -2810,7 +2730,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_atanf$MH() {
-        return RuntimeHelper.requireNonNull(constants$23.const$5,"SDL_atanf");
+        return RuntimeHelper.requireNonNull(constants$18.const$1,"SDL_atanf");
     }
     /**
      * {@snippet :
@@ -2826,7 +2746,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_atan2$MH() {
-        return RuntimeHelper.requireNonNull(constants$24.const$1,"SDL_atan2");
+        return RuntimeHelper.requireNonNull(constants$18.const$3,"SDL_atan2");
     }
     /**
      * {@snippet :
@@ -2842,7 +2762,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_atan2f$MH() {
-        return RuntimeHelper.requireNonNull(constants$24.const$3,"SDL_atan2f");
+        return RuntimeHelper.requireNonNull(constants$18.const$5,"SDL_atan2f");
     }
     /**
      * {@snippet :
@@ -2858,7 +2778,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ceil$MH() {
-        return RuntimeHelper.requireNonNull(constants$24.const$4,"SDL_ceil");
+        return RuntimeHelper.requireNonNull(constants$19.const$0,"SDL_ceil");
     }
     /**
      * {@snippet :
@@ -2874,7 +2794,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ceilf$MH() {
-        return RuntimeHelper.requireNonNull(constants$24.const$5,"SDL_ceilf");
+        return RuntimeHelper.requireNonNull(constants$19.const$1,"SDL_ceilf");
     }
     /**
      * {@snippet :
@@ -2890,7 +2810,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_copysign$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.const$0,"SDL_copysign");
+        return RuntimeHelper.requireNonNull(constants$19.const$2,"SDL_copysign");
     }
     /**
      * {@snippet :
@@ -2906,7 +2826,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_copysignf$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.const$1,"SDL_copysignf");
+        return RuntimeHelper.requireNonNull(constants$19.const$3,"SDL_copysignf");
     }
     /**
      * {@snippet :
@@ -2922,7 +2842,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_cos$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.const$2,"SDL_cos");
+        return RuntimeHelper.requireNonNull(constants$19.const$4,"SDL_cos");
     }
     /**
      * {@snippet :
@@ -2938,7 +2858,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_cosf$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.const$3,"SDL_cosf");
+        return RuntimeHelper.requireNonNull(constants$19.const$5,"SDL_cosf");
     }
     /**
      * {@snippet :
@@ -2954,7 +2874,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_exp$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.const$4,"SDL_exp");
+        return RuntimeHelper.requireNonNull(constants$20.const$0,"SDL_exp");
     }
     /**
      * {@snippet :
@@ -2970,7 +2890,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_expf$MH() {
-        return RuntimeHelper.requireNonNull(constants$25.const$5,"SDL_expf");
+        return RuntimeHelper.requireNonNull(constants$20.const$1,"SDL_expf");
     }
     /**
      * {@snippet :
@@ -2986,7 +2906,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_fabs$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.const$0,"SDL_fabs");
+        return RuntimeHelper.requireNonNull(constants$20.const$2,"SDL_fabs");
     }
     /**
      * {@snippet :
@@ -3002,7 +2922,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_fabsf$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.const$1,"SDL_fabsf");
+        return RuntimeHelper.requireNonNull(constants$20.const$3,"SDL_fabsf");
     }
     /**
      * {@snippet :
@@ -3018,7 +2938,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_floor$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.const$2,"SDL_floor");
+        return RuntimeHelper.requireNonNull(constants$20.const$4,"SDL_floor");
     }
     /**
      * {@snippet :
@@ -3034,7 +2954,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_floorf$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.const$3,"SDL_floorf");
+        return RuntimeHelper.requireNonNull(constants$20.const$5,"SDL_floorf");
     }
     /**
      * {@snippet :
@@ -3050,7 +2970,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_trunc$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.const$4,"SDL_trunc");
+        return RuntimeHelper.requireNonNull(constants$21.const$0,"SDL_trunc");
     }
     /**
      * {@snippet :
@@ -3066,7 +2986,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_truncf$MH() {
-        return RuntimeHelper.requireNonNull(constants$26.const$5,"SDL_truncf");
+        return RuntimeHelper.requireNonNull(constants$21.const$1,"SDL_truncf");
     }
     /**
      * {@snippet :
@@ -3082,7 +3002,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_fmod$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.const$0,"SDL_fmod");
+        return RuntimeHelper.requireNonNull(constants$21.const$2,"SDL_fmod");
     }
     /**
      * {@snippet :
@@ -3098,7 +3018,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_fmodf$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.const$1,"SDL_fmodf");
+        return RuntimeHelper.requireNonNull(constants$21.const$3,"SDL_fmodf");
     }
     /**
      * {@snippet :
@@ -3114,7 +3034,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_log$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.const$2,"SDL_log");
+        return RuntimeHelper.requireNonNull(constants$21.const$4,"SDL_log");
     }
     /**
      * {@snippet :
@@ -3130,7 +3050,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_logf$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.const$3,"SDL_logf");
+        return RuntimeHelper.requireNonNull(constants$21.const$5,"SDL_logf");
     }
     /**
      * {@snippet :
@@ -3146,7 +3066,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_log10$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.const$4,"SDL_log10");
+        return RuntimeHelper.requireNonNull(constants$22.const$0,"SDL_log10");
     }
     /**
      * {@snippet :
@@ -3162,7 +3082,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_log10f$MH() {
-        return RuntimeHelper.requireNonNull(constants$27.const$5,"SDL_log10f");
+        return RuntimeHelper.requireNonNull(constants$22.const$1,"SDL_log10f");
     }
     /**
      * {@snippet :
@@ -3178,7 +3098,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_pow$MH() {
-        return RuntimeHelper.requireNonNull(constants$28.const$0,"SDL_pow");
+        return RuntimeHelper.requireNonNull(constants$22.const$2,"SDL_pow");
     }
     /**
      * {@snippet :
@@ -3194,7 +3114,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_powf$MH() {
-        return RuntimeHelper.requireNonNull(constants$28.const$1,"SDL_powf");
+        return RuntimeHelper.requireNonNull(constants$22.const$3,"SDL_powf");
     }
     /**
      * {@snippet :
@@ -3210,7 +3130,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_round$MH() {
-        return RuntimeHelper.requireNonNull(constants$28.const$2,"SDL_round");
+        return RuntimeHelper.requireNonNull(constants$22.const$4,"SDL_round");
     }
     /**
      * {@snippet :
@@ -3226,7 +3146,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_roundf$MH() {
-        return RuntimeHelper.requireNonNull(constants$28.const$3,"SDL_roundf");
+        return RuntimeHelper.requireNonNull(constants$22.const$5,"SDL_roundf");
     }
     /**
      * {@snippet :
@@ -3242,7 +3162,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_lround$MH() {
-        return RuntimeHelper.requireNonNull(constants$28.const$5,"SDL_lround");
+        return RuntimeHelper.requireNonNull(constants$23.const$1,"SDL_lround");
     }
     /**
      * {@snippet :
@@ -3258,7 +3178,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_lroundf$MH() {
-        return RuntimeHelper.requireNonNull(constants$29.const$1,"SDL_lroundf");
+        return RuntimeHelper.requireNonNull(constants$23.const$3,"SDL_lroundf");
     }
     /**
      * {@snippet :
@@ -3274,7 +3194,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_scalbn$MH() {
-        return RuntimeHelper.requireNonNull(constants$29.const$3,"SDL_scalbn");
+        return RuntimeHelper.requireNonNull(constants$23.const$5,"SDL_scalbn");
     }
     /**
      * {@snippet :
@@ -3290,7 +3210,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_scalbnf$MH() {
-        return RuntimeHelper.requireNonNull(constants$29.const$5,"SDL_scalbnf");
+        return RuntimeHelper.requireNonNull(constants$24.const$1,"SDL_scalbnf");
     }
     /**
      * {@snippet :
@@ -3306,7 +3226,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_sin$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.const$0,"SDL_sin");
+        return RuntimeHelper.requireNonNull(constants$24.const$2,"SDL_sin");
     }
     /**
      * {@snippet :
@@ -3322,7 +3242,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_sinf$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.const$1,"SDL_sinf");
+        return RuntimeHelper.requireNonNull(constants$24.const$3,"SDL_sinf");
     }
     /**
      * {@snippet :
@@ -3338,7 +3258,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_sqrt$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.const$2,"SDL_sqrt");
+        return RuntimeHelper.requireNonNull(constants$24.const$4,"SDL_sqrt");
     }
     /**
      * {@snippet :
@@ -3354,7 +3274,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_sqrtf$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.const$3,"SDL_sqrtf");
+        return RuntimeHelper.requireNonNull(constants$24.const$5,"SDL_sqrtf");
     }
     /**
      * {@snippet :
@@ -3370,7 +3290,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_tan$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.const$4,"SDL_tan");
+        return RuntimeHelper.requireNonNull(constants$25.const$0,"SDL_tan");
     }
     /**
      * {@snippet :
@@ -3386,7 +3306,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_tanf$MH() {
-        return RuntimeHelper.requireNonNull(constants$30.const$5,"SDL_tanf");
+        return RuntimeHelper.requireNonNull(constants$25.const$1,"SDL_tanf");
     }
     /**
      * {@snippet :
@@ -3408,7 +3328,7 @@ public class sdl_h extends sdl_h_1 {
      */
     public static final AddressLayout SDL_iconv_t = RuntimeHelper.POINTER;
     public static MethodHandle SDL_iconv_open$MH() {
-        return RuntimeHelper.requireNonNull(constants$31.const$0,"SDL_iconv_open");
+        return RuntimeHelper.requireNonNull(constants$25.const$2,"SDL_iconv_open");
     }
     /**
      * {@snippet :
@@ -3424,7 +3344,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_iconv_close$MH() {
-        return RuntimeHelper.requireNonNull(constants$31.const$1,"SDL_iconv_close");
+        return RuntimeHelper.requireNonNull(constants$25.const$3,"SDL_iconv_close");
     }
     /**
      * {@snippet :
@@ -3440,7 +3360,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_iconv$MH() {
-        return RuntimeHelper.requireNonNull(constants$31.const$3,"SDL_iconv");
+        return RuntimeHelper.requireNonNull(constants$25.const$5,"SDL_iconv");
     }
     /**
      * {@snippet :
@@ -3456,7 +3376,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_iconv_string$MH() {
-        return RuntimeHelper.requireNonNull(constants$31.const$5,"SDL_iconv_string");
+        return RuntimeHelper.requireNonNull(constants$26.const$1,"SDL_iconv_string");
     }
     /**
      * {@snippet :
@@ -3472,7 +3392,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetError$MH() {
-        return RuntimeHelper.requireNonNull(constants$32.const$0,"SDL_SetError");
+        return RuntimeHelper.requireNonNull(constants$26.const$2,"SDL_SetError");
     }
     /**
      * {@snippet :
@@ -3488,7 +3408,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetError$MH() {
-        return RuntimeHelper.requireNonNull(constants$32.const$1,"SDL_GetError");
+        return RuntimeHelper.requireNonNull(constants$26.const$3,"SDL_GetError");
     }
     /**
      * {@snippet :
@@ -3504,7 +3424,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetErrorMsg$MH() {
-        return RuntimeHelper.requireNonNull(constants$32.const$2,"SDL_GetErrorMsg");
+        return RuntimeHelper.requireNonNull(constants$26.const$4,"SDL_GetErrorMsg");
     }
     /**
      * {@snippet :
@@ -3520,7 +3440,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ClearError$MH() {
-        return RuntimeHelper.requireNonNull(constants$32.const$4,"SDL_ClearError");
+        return RuntimeHelper.requireNonNull(constants$26.const$6,"SDL_ClearError");
     }
     /**
      * {@snippet :
@@ -3584,7 +3504,7 @@ public class sdl_h extends sdl_h_1 {
         return (int)5L;
     }
     public static MethodHandle SDL_Error$MH() {
-        return RuntimeHelper.requireNonNull(constants$32.const$5,"SDL_Error");
+        return RuntimeHelper.requireNonNull(constants$27.const$0,"SDL_Error");
     }
     /**
      * {@snippet :
@@ -3600,7 +3520,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_CreateMutex$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.const$0,"SDL_CreateMutex");
+        return RuntimeHelper.requireNonNull(constants$27.const$1,"SDL_CreateMutex");
     }
     /**
      * {@snippet :
@@ -3616,7 +3536,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_LockMutex$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.const$1,"SDL_LockMutex");
+        return RuntimeHelper.requireNonNull(constants$27.const$2,"SDL_LockMutex");
     }
     /**
      * {@snippet :
@@ -3632,7 +3552,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_TryLockMutex$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.const$2,"SDL_TryLockMutex");
+        return RuntimeHelper.requireNonNull(constants$27.const$3,"SDL_TryLockMutex");
     }
     /**
      * {@snippet :
@@ -3648,7 +3568,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_UnlockMutex$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.const$3,"SDL_UnlockMutex");
+        return RuntimeHelper.requireNonNull(constants$27.const$4,"SDL_UnlockMutex");
     }
     /**
      * {@snippet :
@@ -3664,7 +3584,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_DestroyMutex$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.const$4,"SDL_DestroyMutex");
+        return RuntimeHelper.requireNonNull(constants$27.const$5,"SDL_DestroyMutex");
     }
     /**
      * {@snippet :
@@ -3680,7 +3600,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_CreateSemaphore$MH() {
-        return RuntimeHelper.requireNonNull(constants$33.const$6,"SDL_CreateSemaphore");
+        return RuntimeHelper.requireNonNull(constants$28.const$1,"SDL_CreateSemaphore");
     }
     /**
      * {@snippet :
@@ -3696,7 +3616,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_DestroySemaphore$MH() {
-        return RuntimeHelper.requireNonNull(constants$34.const$0,"SDL_DestroySemaphore");
+        return RuntimeHelper.requireNonNull(constants$28.const$2,"SDL_DestroySemaphore");
     }
     /**
      * {@snippet :
@@ -3712,7 +3632,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SemWait$MH() {
-        return RuntimeHelper.requireNonNull(constants$34.const$1,"SDL_SemWait");
+        return RuntimeHelper.requireNonNull(constants$28.const$3,"SDL_SemWait");
     }
     /**
      * {@snippet :
@@ -3728,7 +3648,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SemTryWait$MH() {
-        return RuntimeHelper.requireNonNull(constants$34.const$2,"SDL_SemTryWait");
+        return RuntimeHelper.requireNonNull(constants$28.const$4,"SDL_SemTryWait");
     }
     /**
      * {@snippet :
@@ -3744,7 +3664,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SemWaitTimeout$MH() {
-        return RuntimeHelper.requireNonNull(constants$34.const$4,"SDL_SemWaitTimeout");
+        return RuntimeHelper.requireNonNull(constants$28.const$6,"SDL_SemWaitTimeout");
     }
     /**
      * {@snippet :
@@ -3760,7 +3680,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SemPost$MH() {
-        return RuntimeHelper.requireNonNull(constants$34.const$5,"SDL_SemPost");
+        return RuntimeHelper.requireNonNull(constants$29.const$0,"SDL_SemPost");
     }
     /**
      * {@snippet :
@@ -3776,7 +3696,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SemValue$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.const$0,"SDL_SemValue");
+        return RuntimeHelper.requireNonNull(constants$29.const$1,"SDL_SemValue");
     }
     /**
      * {@snippet :
@@ -3792,7 +3712,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_CreateCond$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.const$1,"SDL_CreateCond");
+        return RuntimeHelper.requireNonNull(constants$29.const$2,"SDL_CreateCond");
     }
     /**
      * {@snippet :
@@ -3808,7 +3728,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_DestroyCond$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.const$2,"SDL_DestroyCond");
+        return RuntimeHelper.requireNonNull(constants$29.const$3,"SDL_DestroyCond");
     }
     /**
      * {@snippet :
@@ -3824,7 +3744,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_CondSignal$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.const$3,"SDL_CondSignal");
+        return RuntimeHelper.requireNonNull(constants$29.const$4,"SDL_CondSignal");
     }
     /**
      * {@snippet :
@@ -3840,7 +3760,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_CondBroadcast$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.const$4,"SDL_CondBroadcast");
+        return RuntimeHelper.requireNonNull(constants$29.const$5,"SDL_CondBroadcast");
     }
     /**
      * {@snippet :
@@ -3856,7 +3776,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_CondWait$MH() {
-        return RuntimeHelper.requireNonNull(constants$35.const$5,"SDL_CondWait");
+        return RuntimeHelper.requireNonNull(constants$30.const$0,"SDL_CondWait");
     }
     /**
      * {@snippet :
@@ -3872,7 +3792,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_CondWaitTimeout$MH() {
-        return RuntimeHelper.requireNonNull(constants$36.const$0,"SDL_CondWaitTimeout");
+        return RuntimeHelper.requireNonNull(constants$30.const$1,"SDL_CondWaitTimeout");
     }
     /**
      * {@snippet :
@@ -3888,7 +3808,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RWFromFile$MH() {
-        return RuntimeHelper.requireNonNull(constants$42.const$1,"SDL_RWFromFile");
+        return RuntimeHelper.requireNonNull(constants$30.const$2,"SDL_RWFromFile");
     }
     /**
      * {@snippet :
@@ -3904,7 +3824,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RWFromFP$MH() {
-        return RuntimeHelper.requireNonNull(constants$42.const$2,"SDL_RWFromFP");
+        return RuntimeHelper.requireNonNull(constants$30.const$3,"SDL_RWFromFP");
     }
     /**
      * {@snippet :
@@ -3920,7 +3840,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RWFromMem$MH() {
-        return RuntimeHelper.requireNonNull(constants$42.const$3,"SDL_RWFromMem");
+        return RuntimeHelper.requireNonNull(constants$30.const$4,"SDL_RWFromMem");
     }
     /**
      * {@snippet :
@@ -3936,7 +3856,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RWFromConstMem$MH() {
-        return RuntimeHelper.requireNonNull(constants$42.const$4,"SDL_RWFromConstMem");
+        return RuntimeHelper.requireNonNull(constants$30.const$5,"SDL_RWFromConstMem");
     }
     /**
      * {@snippet :
@@ -3952,7 +3872,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_AllocRW$MH() {
-        return RuntimeHelper.requireNonNull(constants$42.const$5,"SDL_AllocRW");
+        return RuntimeHelper.requireNonNull(constants$31.const$0,"SDL_AllocRW");
     }
     /**
      * {@snippet :
@@ -3968,7 +3888,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_FreeRW$MH() {
-        return RuntimeHelper.requireNonNull(constants$43.const$0,"SDL_FreeRW");
+        return RuntimeHelper.requireNonNull(constants$31.const$1,"SDL_FreeRW");
     }
     /**
      * {@snippet :
@@ -3984,7 +3904,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RWsize$MH() {
-        return RuntimeHelper.requireNonNull(constants$43.const$1,"SDL_RWsize");
+        return RuntimeHelper.requireNonNull(constants$31.const$2,"SDL_RWsize");
     }
     /**
      * {@snippet :
@@ -4000,7 +3920,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RWseek$MH() {
-        return RuntimeHelper.requireNonNull(constants$43.const$2,"SDL_RWseek");
+        return RuntimeHelper.requireNonNull(constants$31.const$4,"SDL_RWseek");
     }
     /**
      * {@snippet :
@@ -4016,7 +3936,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RWtell$MH() {
-        return RuntimeHelper.requireNonNull(constants$43.const$3,"SDL_RWtell");
+        return RuntimeHelper.requireNonNull(constants$31.const$5,"SDL_RWtell");
     }
     /**
      * {@snippet :
@@ -4032,7 +3952,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RWread$MH() {
-        return RuntimeHelper.requireNonNull(constants$43.const$4,"SDL_RWread");
+        return RuntimeHelper.requireNonNull(constants$32.const$1,"SDL_RWread");
     }
     /**
      * {@snippet :
@@ -4048,7 +3968,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RWwrite$MH() {
-        return RuntimeHelper.requireNonNull(constants$43.const$5,"SDL_RWwrite");
+        return RuntimeHelper.requireNonNull(constants$32.const$2,"SDL_RWwrite");
     }
     /**
      * {@snippet :
@@ -4064,7 +3984,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RWclose$MH() {
-        return RuntimeHelper.requireNonNull(constants$44.const$0,"SDL_RWclose");
+        return RuntimeHelper.requireNonNull(constants$32.const$3,"SDL_RWclose");
     }
     /**
      * {@snippet :
@@ -4080,7 +4000,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_LoadFile_RW$MH() {
-        return RuntimeHelper.requireNonNull(constants$44.const$2,"SDL_LoadFile_RW");
+        return RuntimeHelper.requireNonNull(constants$32.const$5,"SDL_LoadFile_RW");
     }
     /**
      * {@snippet :
@@ -4096,7 +4016,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_LoadFile$MH() {
-        return RuntimeHelper.requireNonNull(constants$44.const$3,"SDL_LoadFile");
+        return RuntimeHelper.requireNonNull(constants$33.const$0,"SDL_LoadFile");
     }
     /**
      * {@snippet :
@@ -4112,7 +4032,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ReadU8$MH() {
-        return RuntimeHelper.requireNonNull(constants$44.const$5,"SDL_ReadU8");
+        return RuntimeHelper.requireNonNull(constants$33.const$2,"SDL_ReadU8");
     }
     /**
      * {@snippet :
@@ -4128,7 +4048,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ReadLE16$MH() {
-        return RuntimeHelper.requireNonNull(constants$45.const$1,"SDL_ReadLE16");
+        return RuntimeHelper.requireNonNull(constants$33.const$4,"SDL_ReadLE16");
     }
     /**
      * {@snippet :
@@ -4144,7 +4064,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ReadBE16$MH() {
-        return RuntimeHelper.requireNonNull(constants$45.const$2,"SDL_ReadBE16");
+        return RuntimeHelper.requireNonNull(constants$33.const$5,"SDL_ReadBE16");
     }
     /**
      * {@snippet :
@@ -4160,7 +4080,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ReadLE32$MH() {
-        return RuntimeHelper.requireNonNull(constants$45.const$3,"SDL_ReadLE32");
+        return RuntimeHelper.requireNonNull(constants$34.const$0,"SDL_ReadLE32");
     }
     /**
      * {@snippet :
@@ -4176,7 +4096,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ReadBE32$MH() {
-        return RuntimeHelper.requireNonNull(constants$45.const$4,"SDL_ReadBE32");
+        return RuntimeHelper.requireNonNull(constants$34.const$1,"SDL_ReadBE32");
     }
     /**
      * {@snippet :
@@ -4192,7 +4112,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ReadLE64$MH() {
-        return RuntimeHelper.requireNonNull(constants$45.const$5,"SDL_ReadLE64");
+        return RuntimeHelper.requireNonNull(constants$34.const$2,"SDL_ReadLE64");
     }
     /**
      * {@snippet :
@@ -4208,7 +4128,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ReadBE64$MH() {
-        return RuntimeHelper.requireNonNull(constants$46.const$0,"SDL_ReadBE64");
+        return RuntimeHelper.requireNonNull(constants$34.const$3,"SDL_ReadBE64");
     }
     /**
      * {@snippet :
@@ -4224,7 +4144,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_WriteU8$MH() {
-        return RuntimeHelper.requireNonNull(constants$46.const$2,"SDL_WriteU8");
+        return RuntimeHelper.requireNonNull(constants$34.const$5,"SDL_WriteU8");
     }
     /**
      * {@snippet :
@@ -4240,7 +4160,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_WriteLE16$MH() {
-        return RuntimeHelper.requireNonNull(constants$46.const$4,"SDL_WriteLE16");
+        return RuntimeHelper.requireNonNull(constants$35.const$1,"SDL_WriteLE16");
     }
     /**
      * {@snippet :
@@ -4256,7 +4176,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_WriteBE16$MH() {
-        return RuntimeHelper.requireNonNull(constants$46.const$5,"SDL_WriteBE16");
+        return RuntimeHelper.requireNonNull(constants$35.const$2,"SDL_WriteBE16");
     }
     /**
      * {@snippet :
@@ -4272,7 +4192,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_WriteLE32$MH() {
-        return RuntimeHelper.requireNonNull(constants$47.const$1,"SDL_WriteLE32");
+        return RuntimeHelper.requireNonNull(constants$35.const$4,"SDL_WriteLE32");
     }
     /**
      * {@snippet :
@@ -4288,7 +4208,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_WriteBE32$MH() {
-        return RuntimeHelper.requireNonNull(constants$47.const$2,"SDL_WriteBE32");
+        return RuntimeHelper.requireNonNull(constants$35.const$5,"SDL_WriteBE32");
     }
     /**
      * {@snippet :
@@ -4304,7 +4224,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_WriteLE64$MH() {
-        return RuntimeHelper.requireNonNull(constants$47.const$3,"SDL_WriteLE64");
+        return RuntimeHelper.requireNonNull(constants$36.const$0,"SDL_WriteLE64");
     }
     /**
      * {@snippet :
@@ -4320,7 +4240,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_WriteBE64$MH() {
-        return RuntimeHelper.requireNonNull(constants$47.const$4,"SDL_WriteBE64");
+        return RuntimeHelper.requireNonNull(constants$36.const$1,"SDL_WriteBE64");
     }
     /**
      * {@snippet :
@@ -5056,7 +4976,7 @@ public class sdl_h extends sdl_h_1 {
         return (int)542328143L;
     }
     public static MethodHandle SDL_GetPixelFormatName$MH() {
-        return RuntimeHelper.requireNonNull(constants$52.const$4,"SDL_GetPixelFormatName");
+        return RuntimeHelper.requireNonNull(constants$41.const$1,"SDL_GetPixelFormatName");
     }
     /**
      * {@snippet :
@@ -5072,7 +4992,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_PixelFormatEnumToMasks$MH() {
-        return RuntimeHelper.requireNonNull(constants$52.const$6,"SDL_PixelFormatEnumToMasks");
+        return RuntimeHelper.requireNonNull(constants$41.const$3,"SDL_PixelFormatEnumToMasks");
     }
     /**
      * {@snippet :
@@ -5088,7 +5008,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_MasksToPixelFormatEnum$MH() {
-        return RuntimeHelper.requireNonNull(constants$53.const$1,"SDL_MasksToPixelFormatEnum");
+        return RuntimeHelper.requireNonNull(constants$41.const$5,"SDL_MasksToPixelFormatEnum");
     }
     /**
      * {@snippet :
@@ -5104,7 +5024,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_AllocFormat$MH() {
-        return RuntimeHelper.requireNonNull(constants$53.const$2,"SDL_AllocFormat");
+        return RuntimeHelper.requireNonNull(constants$42.const$0,"SDL_AllocFormat");
     }
     /**
      * {@snippet :
@@ -5120,7 +5040,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_FreeFormat$MH() {
-        return RuntimeHelper.requireNonNull(constants$53.const$3,"SDL_FreeFormat");
+        return RuntimeHelper.requireNonNull(constants$42.const$1,"SDL_FreeFormat");
     }
     /**
      * {@snippet :
@@ -5136,7 +5056,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_AllocPalette$MH() {
-        return RuntimeHelper.requireNonNull(constants$53.const$4,"SDL_AllocPalette");
+        return RuntimeHelper.requireNonNull(constants$42.const$2,"SDL_AllocPalette");
     }
     /**
      * {@snippet :
@@ -5152,7 +5072,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetPixelFormatPalette$MH() {
-        return RuntimeHelper.requireNonNull(constants$53.const$5,"SDL_SetPixelFormatPalette");
+        return RuntimeHelper.requireNonNull(constants$42.const$3,"SDL_SetPixelFormatPalette");
     }
     /**
      * {@snippet :
@@ -5168,7 +5088,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetPaletteColors$MH() {
-        return RuntimeHelper.requireNonNull(constants$54.const$1,"SDL_SetPaletteColors");
+        return RuntimeHelper.requireNonNull(constants$42.const$5,"SDL_SetPaletteColors");
     }
     /**
      * {@snippet :
@@ -5184,7 +5104,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_FreePalette$MH() {
-        return RuntimeHelper.requireNonNull(constants$54.const$2,"SDL_FreePalette");
+        return RuntimeHelper.requireNonNull(constants$43.const$0,"SDL_FreePalette");
     }
     /**
      * {@snippet :
@@ -5200,7 +5120,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_MapRGB$MH() {
-        return RuntimeHelper.requireNonNull(constants$54.const$4,"SDL_MapRGB");
+        return RuntimeHelper.requireNonNull(constants$43.const$2,"SDL_MapRGB");
     }
     /**
      * {@snippet :
@@ -5216,7 +5136,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_MapRGBA$MH() {
-        return RuntimeHelper.requireNonNull(constants$54.const$6,"SDL_MapRGBA");
+        return RuntimeHelper.requireNonNull(constants$43.const$4,"SDL_MapRGBA");
     }
     /**
      * {@snippet :
@@ -5232,7 +5152,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetRGB$MH() {
-        return RuntimeHelper.requireNonNull(constants$55.const$1,"SDL_GetRGB");
+        return RuntimeHelper.requireNonNull(constants$43.const$6,"SDL_GetRGB");
     }
     /**
      * {@snippet :
@@ -5248,7 +5168,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetRGBA$MH() {
-        return RuntimeHelper.requireNonNull(constants$55.const$3,"SDL_GetRGBA");
+        return RuntimeHelper.requireNonNull(constants$44.const$1,"SDL_GetRGBA");
     }
     /**
      * {@snippet :
@@ -5264,7 +5184,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_CalculateGammaRamp$MH() {
-        return RuntimeHelper.requireNonNull(constants$55.const$5,"SDL_CalculateGammaRamp");
+        return RuntimeHelper.requireNonNull(constants$44.const$3,"SDL_CalculateGammaRamp");
     }
     /**
      * {@snippet :
@@ -5280,7 +5200,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_HasIntersection$MH() {
-        return RuntimeHelper.requireNonNull(constants$58.const$4,"SDL_HasIntersection");
+        return RuntimeHelper.requireNonNull(constants$47.const$2,"SDL_HasIntersection");
     }
     /**
      * {@snippet :
@@ -5296,7 +5216,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_IntersectRect$MH() {
-        return RuntimeHelper.requireNonNull(constants$58.const$5,"SDL_IntersectRect");
+        return RuntimeHelper.requireNonNull(constants$47.const$3,"SDL_IntersectRect");
     }
     /**
      * {@snippet :
@@ -5312,7 +5232,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_UnionRect$MH() {
-        return RuntimeHelper.requireNonNull(constants$59.const$1,"SDL_UnionRect");
+        return RuntimeHelper.requireNonNull(constants$47.const$5,"SDL_UnionRect");
     }
     /**
      * {@snippet :
@@ -5328,7 +5248,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_EnclosePoints$MH() {
-        return RuntimeHelper.requireNonNull(constants$59.const$3,"SDL_EnclosePoints");
+        return RuntimeHelper.requireNonNull(constants$48.const$1,"SDL_EnclosePoints");
     }
     /**
      * {@snippet :
@@ -5344,7 +5264,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_IntersectRectAndLine$MH() {
-        return RuntimeHelper.requireNonNull(constants$59.const$5,"SDL_IntersectRectAndLine");
+        return RuntimeHelper.requireNonNull(constants$48.const$3,"SDL_IntersectRectAndLine");
     }
     /**
      * {@snippet :
@@ -5360,7 +5280,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_HasIntersectionF$MH() {
-        return RuntimeHelper.requireNonNull(constants$60.const$0,"SDL_HasIntersectionF");
+        return RuntimeHelper.requireNonNull(constants$48.const$4,"SDL_HasIntersectionF");
     }
     /**
      * {@snippet :
@@ -5376,7 +5296,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_IntersectFRect$MH() {
-        return RuntimeHelper.requireNonNull(constants$60.const$1,"SDL_IntersectFRect");
+        return RuntimeHelper.requireNonNull(constants$48.const$5,"SDL_IntersectFRect");
     }
     /**
      * {@snippet :
@@ -5392,7 +5312,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_UnionFRect$MH() {
-        return RuntimeHelper.requireNonNull(constants$60.const$2,"SDL_UnionFRect");
+        return RuntimeHelper.requireNonNull(constants$49.const$0,"SDL_UnionFRect");
     }
     /**
      * {@snippet :
@@ -5408,7 +5328,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_EncloseFPoints$MH() {
-        return RuntimeHelper.requireNonNull(constants$60.const$3,"SDL_EncloseFPoints");
+        return RuntimeHelper.requireNonNull(constants$49.const$1,"SDL_EncloseFPoints");
     }
     /**
      * {@snippet :
@@ -5424,7 +5344,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_IntersectFRectAndLine$MH() {
-        return RuntimeHelper.requireNonNull(constants$60.const$4,"SDL_IntersectFRectAndLine");
+        return RuntimeHelper.requireNonNull(constants$49.const$2,"SDL_IntersectFRectAndLine");
     }
     /**
      * {@snippet :
@@ -5472,7 +5392,7 @@ public class sdl_h extends sdl_h_1 {
         return (int)3L;
     }
     public static MethodHandle SDL_CreateRGBSurface$MH() {
-        return RuntimeHelper.requireNonNull(constants$63.const$2,"SDL_CreateRGBSurface");
+        return RuntimeHelper.requireNonNull(constants$51.const$4,"SDL_CreateRGBSurface");
     }
     /**
      * {@snippet :
@@ -5488,7 +5408,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_CreateRGBSurfaceWithFormat$MH() {
-        return RuntimeHelper.requireNonNull(constants$63.const$4,"SDL_CreateRGBSurfaceWithFormat");
+        return RuntimeHelper.requireNonNull(constants$51.const$6,"SDL_CreateRGBSurfaceWithFormat");
     }
     /**
      * {@snippet :
@@ -5504,7 +5424,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_CreateRGBSurfaceFrom$MH() {
-        return RuntimeHelper.requireNonNull(constants$63.const$6,"SDL_CreateRGBSurfaceFrom");
+        return RuntimeHelper.requireNonNull(constants$52.const$1,"SDL_CreateRGBSurfaceFrom");
     }
     /**
      * {@snippet :
@@ -5520,7 +5440,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_CreateRGBSurfaceWithFormatFrom$MH() {
-        return RuntimeHelper.requireNonNull(constants$64.const$1,"SDL_CreateRGBSurfaceWithFormatFrom");
+        return RuntimeHelper.requireNonNull(constants$52.const$3,"SDL_CreateRGBSurfaceWithFormatFrom");
     }
     /**
      * {@snippet :
@@ -5536,7 +5456,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_FreeSurface$MH() {
-        return RuntimeHelper.requireNonNull(constants$64.const$2,"SDL_FreeSurface");
+        return RuntimeHelper.requireNonNull(constants$52.const$4,"SDL_FreeSurface");
     }
     /**
      * {@snippet :
@@ -5552,7 +5472,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetSurfacePalette$MH() {
-        return RuntimeHelper.requireNonNull(constants$64.const$3,"SDL_SetSurfacePalette");
+        return RuntimeHelper.requireNonNull(constants$52.const$5,"SDL_SetSurfacePalette");
     }
     /**
      * {@snippet :
@@ -5568,7 +5488,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_LockSurface$MH() {
-        return RuntimeHelper.requireNonNull(constants$64.const$4,"SDL_LockSurface");
+        return RuntimeHelper.requireNonNull(constants$53.const$0,"SDL_LockSurface");
     }
     /**
      * {@snippet :
@@ -5584,7 +5504,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_UnlockSurface$MH() {
-        return RuntimeHelper.requireNonNull(constants$64.const$5,"SDL_UnlockSurface");
+        return RuntimeHelper.requireNonNull(constants$53.const$1,"SDL_UnlockSurface");
     }
     /**
      * {@snippet :
@@ -5600,7 +5520,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_LoadBMP_RW$MH() {
-        return RuntimeHelper.requireNonNull(constants$65.const$0,"SDL_LoadBMP_RW");
+        return RuntimeHelper.requireNonNull(constants$53.const$2,"SDL_LoadBMP_RW");
     }
     /**
      * {@snippet :
@@ -5616,7 +5536,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SaveBMP_RW$MH() {
-        return RuntimeHelper.requireNonNull(constants$65.const$1,"SDL_SaveBMP_RW");
+        return RuntimeHelper.requireNonNull(constants$53.const$3,"SDL_SaveBMP_RW");
     }
     /**
      * {@snippet :
@@ -5632,7 +5552,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetSurfaceRLE$MH() {
-        return RuntimeHelper.requireNonNull(constants$65.const$2,"SDL_SetSurfaceRLE");
+        return RuntimeHelper.requireNonNull(constants$53.const$4,"SDL_SetSurfaceRLE");
     }
     /**
      * {@snippet :
@@ -5648,7 +5568,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_HasSurfaceRLE$MH() {
-        return RuntimeHelper.requireNonNull(constants$65.const$3,"SDL_HasSurfaceRLE");
+        return RuntimeHelper.requireNonNull(constants$53.const$5,"SDL_HasSurfaceRLE");
     }
     /**
      * {@snippet :
@@ -5664,7 +5584,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetColorKey$MH() {
-        return RuntimeHelper.requireNonNull(constants$65.const$5,"SDL_SetColorKey");
+        return RuntimeHelper.requireNonNull(constants$54.const$1,"SDL_SetColorKey");
     }
     /**
      * {@snippet :
@@ -5680,7 +5600,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_HasColorKey$MH() {
-        return RuntimeHelper.requireNonNull(constants$66.const$0,"SDL_HasColorKey");
+        return RuntimeHelper.requireNonNull(constants$54.const$2,"SDL_HasColorKey");
     }
     /**
      * {@snippet :
@@ -5696,7 +5616,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetColorKey$MH() {
-        return RuntimeHelper.requireNonNull(constants$66.const$1,"SDL_GetColorKey");
+        return RuntimeHelper.requireNonNull(constants$54.const$3,"SDL_GetColorKey");
     }
     /**
      * {@snippet :
@@ -5712,7 +5632,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetSurfaceColorMod$MH() {
-        return RuntimeHelper.requireNonNull(constants$66.const$2,"SDL_SetSurfaceColorMod");
+        return RuntimeHelper.requireNonNull(constants$54.const$4,"SDL_SetSurfaceColorMod");
     }
     /**
      * {@snippet :
@@ -5728,7 +5648,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetSurfaceColorMod$MH() {
-        return RuntimeHelper.requireNonNull(constants$66.const$3,"SDL_GetSurfaceColorMod");
+        return RuntimeHelper.requireNonNull(constants$54.const$6,"SDL_GetSurfaceColorMod");
     }
     /**
      * {@snippet :
@@ -5744,7 +5664,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetSurfaceAlphaMod$MH() {
-        return RuntimeHelper.requireNonNull(constants$66.const$5,"SDL_SetSurfaceAlphaMod");
+        return RuntimeHelper.requireNonNull(constants$55.const$1,"SDL_SetSurfaceAlphaMod");
     }
     /**
      * {@snippet :
@@ -5760,7 +5680,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetSurfaceAlphaMod$MH() {
-        return RuntimeHelper.requireNonNull(constants$67.const$0,"SDL_GetSurfaceAlphaMod");
+        return RuntimeHelper.requireNonNull(constants$55.const$2,"SDL_GetSurfaceAlphaMod");
     }
     /**
      * {@snippet :
@@ -5776,7 +5696,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetSurfaceBlendMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$67.const$1,"SDL_SetSurfaceBlendMode");
+        return RuntimeHelper.requireNonNull(constants$55.const$3,"SDL_SetSurfaceBlendMode");
     }
     /**
      * {@snippet :
@@ -5792,7 +5712,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetSurfaceBlendMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$67.const$2,"SDL_GetSurfaceBlendMode");
+        return RuntimeHelper.requireNonNull(constants$55.const$4,"SDL_GetSurfaceBlendMode");
     }
     /**
      * {@snippet :
@@ -5808,7 +5728,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetClipRect$MH() {
-        return RuntimeHelper.requireNonNull(constants$67.const$3,"SDL_SetClipRect");
+        return RuntimeHelper.requireNonNull(constants$55.const$5,"SDL_SetClipRect");
     }
     /**
      * {@snippet :
@@ -5824,7 +5744,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetClipRect$MH() {
-        return RuntimeHelper.requireNonNull(constants$67.const$5,"SDL_GetClipRect");
+        return RuntimeHelper.requireNonNull(constants$56.const$1,"SDL_GetClipRect");
     }
     /**
      * {@snippet :
@@ -5840,7 +5760,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_DuplicateSurface$MH() {
-        return RuntimeHelper.requireNonNull(constants$68.const$0,"SDL_DuplicateSurface");
+        return RuntimeHelper.requireNonNull(constants$56.const$2,"SDL_DuplicateSurface");
     }
     /**
      * {@snippet :
@@ -5856,7 +5776,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ConvertSurface$MH() {
-        return RuntimeHelper.requireNonNull(constants$68.const$1,"SDL_ConvertSurface");
+        return RuntimeHelper.requireNonNull(constants$56.const$3,"SDL_ConvertSurface");
     }
     /**
      * {@snippet :
@@ -5872,7 +5792,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ConvertSurfaceFormat$MH() {
-        return RuntimeHelper.requireNonNull(constants$68.const$3,"SDL_ConvertSurfaceFormat");
+        return RuntimeHelper.requireNonNull(constants$56.const$5,"SDL_ConvertSurfaceFormat");
     }
     /**
      * {@snippet :
@@ -5888,7 +5808,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ConvertPixels$MH() {
-        return RuntimeHelper.requireNonNull(constants$68.const$5,"SDL_ConvertPixels");
+        return RuntimeHelper.requireNonNull(constants$57.const$1,"SDL_ConvertPixels");
     }
     /**
      * {@snippet :
@@ -5904,7 +5824,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_PremultiplyAlpha$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.const$0,"SDL_PremultiplyAlpha");
+        return RuntimeHelper.requireNonNull(constants$57.const$2,"SDL_PremultiplyAlpha");
     }
     /**
      * {@snippet :
@@ -5920,7 +5840,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_FillRect$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.const$1,"SDL_FillRect");
+        return RuntimeHelper.requireNonNull(constants$57.const$3,"SDL_FillRect");
     }
     /**
      * {@snippet :
@@ -5936,7 +5856,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_FillRects$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.const$2,"SDL_FillRects");
+        return RuntimeHelper.requireNonNull(constants$57.const$4,"SDL_FillRects");
     }
     /**
      * {@snippet :
@@ -5952,7 +5872,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_UpperBlit$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.const$3,"SDL_UpperBlit");
+        return RuntimeHelper.requireNonNull(constants$57.const$5,"SDL_UpperBlit");
     }
     /**
      * {@snippet :
@@ -5968,7 +5888,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_LowerBlit$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.const$4,"SDL_LowerBlit");
+        return RuntimeHelper.requireNonNull(constants$58.const$0,"SDL_LowerBlit");
     }
     /**
      * {@snippet :
@@ -5984,7 +5904,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SoftStretch$MH() {
-        return RuntimeHelper.requireNonNull(constants$69.const$5,"SDL_SoftStretch");
+        return RuntimeHelper.requireNonNull(constants$58.const$1,"SDL_SoftStretch");
     }
     /**
      * {@snippet :
@@ -6000,7 +5920,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SoftStretchLinear$MH() {
-        return RuntimeHelper.requireNonNull(constants$70.const$0,"SDL_SoftStretchLinear");
+        return RuntimeHelper.requireNonNull(constants$58.const$2,"SDL_SoftStretchLinear");
     }
     /**
      * {@snippet :
@@ -6016,7 +5936,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_UpperBlitScaled$MH() {
-        return RuntimeHelper.requireNonNull(constants$70.const$1,"SDL_UpperBlitScaled");
+        return RuntimeHelper.requireNonNull(constants$58.const$3,"SDL_UpperBlitScaled");
     }
     /**
      * {@snippet :
@@ -6032,7 +5952,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_LowerBlitScaled$MH() {
-        return RuntimeHelper.requireNonNull(constants$70.const$2,"SDL_LowerBlitScaled");
+        return RuntimeHelper.requireNonNull(constants$58.const$4,"SDL_LowerBlitScaled");
     }
     /**
      * {@snippet :
@@ -6048,7 +5968,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetYUVConversionMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$70.const$4,"SDL_SetYUVConversionMode");
+        return RuntimeHelper.requireNonNull(constants$58.const$6,"SDL_SetYUVConversionMode");
     }
     /**
      * {@snippet :
@@ -6064,7 +5984,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetYUVConversionMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$70.const$5,"SDL_GetYUVConversionMode");
+        return RuntimeHelper.requireNonNull(constants$59.const$0,"SDL_GetYUVConversionMode");
     }
     /**
      * {@snippet :
@@ -6080,7 +6000,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetYUVConversionModeForResolution$MH() {
-        return RuntimeHelper.requireNonNull(constants$71.const$1,"SDL_GetYUVConversionModeForResolution");
+        return RuntimeHelper.requireNonNull(constants$59.const$2,"SDL_GetYUVConversionModeForResolution");
     }
     /**
      * {@snippet :
@@ -6862,7 +6782,7 @@ public class sdl_h extends sdl_h_1 {
         return (int)1L;
     }
     public static MethodHandle SDL_GetNumVideoDrivers$MH() {
-        return RuntimeHelper.requireNonNull(constants$72.const$2,"SDL_GetNumVideoDrivers");
+        return RuntimeHelper.requireNonNull(constants$60.const$3,"SDL_GetNumVideoDrivers");
     }
     /**
      * {@snippet :
@@ -6878,7 +6798,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetVideoDriver$MH() {
-        return RuntimeHelper.requireNonNull(constants$72.const$3,"SDL_GetVideoDriver");
+        return RuntimeHelper.requireNonNull(constants$60.const$4,"SDL_GetVideoDriver");
     }
     /**
      * {@snippet :
@@ -6894,7 +6814,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_VideoInit$MH() {
-        return RuntimeHelper.requireNonNull(constants$72.const$4,"SDL_VideoInit");
+        return RuntimeHelper.requireNonNull(constants$60.const$5,"SDL_VideoInit");
     }
     /**
      * {@snippet :
@@ -6910,7 +6830,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_VideoQuit$MH() {
-        return RuntimeHelper.requireNonNull(constants$72.const$5,"SDL_VideoQuit");
+        return RuntimeHelper.requireNonNull(constants$61.const$0,"SDL_VideoQuit");
     }
     /**
      * {@snippet :
@@ -6926,7 +6846,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetCurrentVideoDriver$MH() {
-        return RuntimeHelper.requireNonNull(constants$73.const$0,"SDL_GetCurrentVideoDriver");
+        return RuntimeHelper.requireNonNull(constants$61.const$1,"SDL_GetCurrentVideoDriver");
     }
     /**
      * {@snippet :
@@ -6942,7 +6862,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetNumVideoDisplays$MH() {
-        return RuntimeHelper.requireNonNull(constants$73.const$1,"SDL_GetNumVideoDisplays");
+        return RuntimeHelper.requireNonNull(constants$61.const$2,"SDL_GetNumVideoDisplays");
     }
     /**
      * {@snippet :
@@ -6958,7 +6878,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetDisplayName$MH() {
-        return RuntimeHelper.requireNonNull(constants$73.const$2,"SDL_GetDisplayName");
+        return RuntimeHelper.requireNonNull(constants$61.const$3,"SDL_GetDisplayName");
     }
     /**
      * {@snippet :
@@ -6974,7 +6894,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetDisplayBounds$MH() {
-        return RuntimeHelper.requireNonNull(constants$73.const$4,"SDL_GetDisplayBounds");
+        return RuntimeHelper.requireNonNull(constants$61.const$5,"SDL_GetDisplayBounds");
     }
     /**
      * {@snippet :
@@ -6990,7 +6910,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetDisplayUsableBounds$MH() {
-        return RuntimeHelper.requireNonNull(constants$73.const$5,"SDL_GetDisplayUsableBounds");
+        return RuntimeHelper.requireNonNull(constants$62.const$0,"SDL_GetDisplayUsableBounds");
     }
     /**
      * {@snippet :
@@ -7006,7 +6926,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetDisplayDPI$MH() {
-        return RuntimeHelper.requireNonNull(constants$74.const$1,"SDL_GetDisplayDPI");
+        return RuntimeHelper.requireNonNull(constants$62.const$2,"SDL_GetDisplayDPI");
     }
     /**
      * {@snippet :
@@ -7022,7 +6942,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetDisplayOrientation$MH() {
-        return RuntimeHelper.requireNonNull(constants$74.const$2,"SDL_GetDisplayOrientation");
+        return RuntimeHelper.requireNonNull(constants$62.const$3,"SDL_GetDisplayOrientation");
     }
     /**
      * {@snippet :
@@ -7038,7 +6958,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetNumDisplayModes$MH() {
-        return RuntimeHelper.requireNonNull(constants$74.const$3,"SDL_GetNumDisplayModes");
+        return RuntimeHelper.requireNonNull(constants$62.const$4,"SDL_GetNumDisplayModes");
     }
     /**
      * {@snippet :
@@ -7054,7 +6974,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetDisplayMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$74.const$5,"SDL_GetDisplayMode");
+        return RuntimeHelper.requireNonNull(constants$62.const$6,"SDL_GetDisplayMode");
     }
     /**
      * {@snippet :
@@ -7070,7 +6990,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetDesktopDisplayMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$75.const$0,"SDL_GetDesktopDisplayMode");
+        return RuntimeHelper.requireNonNull(constants$63.const$0,"SDL_GetDesktopDisplayMode");
     }
     /**
      * {@snippet :
@@ -7086,7 +7006,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetCurrentDisplayMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$75.const$1,"SDL_GetCurrentDisplayMode");
+        return RuntimeHelper.requireNonNull(constants$63.const$1,"SDL_GetCurrentDisplayMode");
     }
     /**
      * {@snippet :
@@ -7102,7 +7022,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetClosestDisplayMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$75.const$3,"SDL_GetClosestDisplayMode");
+        return RuntimeHelper.requireNonNull(constants$63.const$3,"SDL_GetClosestDisplayMode");
     }
     /**
      * {@snippet :
@@ -7118,7 +7038,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetPointDisplayIndex$MH() {
-        return RuntimeHelper.requireNonNull(constants$75.const$4,"SDL_GetPointDisplayIndex");
+        return RuntimeHelper.requireNonNull(constants$63.const$4,"SDL_GetPointDisplayIndex");
     }
     /**
      * {@snippet :
@@ -7134,7 +7054,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetRectDisplayIndex$MH() {
-        return RuntimeHelper.requireNonNull(constants$75.const$5,"SDL_GetRectDisplayIndex");
+        return RuntimeHelper.requireNonNull(constants$63.const$5,"SDL_GetRectDisplayIndex");
     }
     /**
      * {@snippet :
@@ -7150,7 +7070,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowDisplayIndex$MH() {
-        return RuntimeHelper.requireNonNull(constants$76.const$0,"SDL_GetWindowDisplayIndex");
+        return RuntimeHelper.requireNonNull(constants$64.const$0,"SDL_GetWindowDisplayIndex");
     }
     /**
      * {@snippet :
@@ -7166,7 +7086,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowDisplayMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$76.const$1,"SDL_SetWindowDisplayMode");
+        return RuntimeHelper.requireNonNull(constants$64.const$1,"SDL_SetWindowDisplayMode");
     }
     /**
      * {@snippet :
@@ -7182,7 +7102,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowDisplayMode$MH() {
-        return RuntimeHelper.requireNonNull(constants$76.const$2,"SDL_GetWindowDisplayMode");
+        return RuntimeHelper.requireNonNull(constants$64.const$2,"SDL_GetWindowDisplayMode");
     }
     /**
      * {@snippet :
@@ -7198,7 +7118,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowICCProfile$MH() {
-        return RuntimeHelper.requireNonNull(constants$76.const$3,"SDL_GetWindowICCProfile");
+        return RuntimeHelper.requireNonNull(constants$64.const$3,"SDL_GetWindowICCProfile");
     }
     /**
      * {@snippet :
@@ -7214,7 +7134,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowPixelFormat$MH() {
-        return RuntimeHelper.requireNonNull(constants$76.const$4,"SDL_GetWindowPixelFormat");
+        return RuntimeHelper.requireNonNull(constants$64.const$4,"SDL_GetWindowPixelFormat");
     }
     /**
      * {@snippet :
@@ -7230,7 +7150,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_CreateWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$76.const$5,"SDL_CreateWindow");
+        return RuntimeHelper.requireNonNull(constants$64.const$5,"SDL_CreateWindow");
     }
     /**
      * {@snippet :
@@ -7246,7 +7166,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_CreateWindowFrom$MH() {
-        return RuntimeHelper.requireNonNull(constants$77.const$0,"SDL_CreateWindowFrom");
+        return RuntimeHelper.requireNonNull(constants$65.const$0,"SDL_CreateWindowFrom");
     }
     /**
      * {@snippet :
@@ -7262,7 +7182,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowID$MH() {
-        return RuntimeHelper.requireNonNull(constants$77.const$1,"SDL_GetWindowID");
+        return RuntimeHelper.requireNonNull(constants$65.const$1,"SDL_GetWindowID");
     }
     /**
      * {@snippet :
@@ -7278,7 +7198,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowFromID$MH() {
-        return RuntimeHelper.requireNonNull(constants$77.const$2,"SDL_GetWindowFromID");
+        return RuntimeHelper.requireNonNull(constants$65.const$2,"SDL_GetWindowFromID");
     }
     /**
      * {@snippet :
@@ -7294,7 +7214,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowFlags$MH() {
-        return RuntimeHelper.requireNonNull(constants$77.const$3,"SDL_GetWindowFlags");
+        return RuntimeHelper.requireNonNull(constants$65.const$3,"SDL_GetWindowFlags");
     }
     /**
      * {@snippet :
@@ -7310,7 +7230,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowTitle$MH() {
-        return RuntimeHelper.requireNonNull(constants$77.const$4,"SDL_SetWindowTitle");
+        return RuntimeHelper.requireNonNull(constants$65.const$4,"SDL_SetWindowTitle");
     }
     /**
      * {@snippet :
@@ -7326,7 +7246,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowTitle$MH() {
-        return RuntimeHelper.requireNonNull(constants$77.const$5,"SDL_GetWindowTitle");
+        return RuntimeHelper.requireNonNull(constants$65.const$5,"SDL_GetWindowTitle");
     }
     /**
      * {@snippet :
@@ -7342,7 +7262,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowIcon$MH() {
-        return RuntimeHelper.requireNonNull(constants$78.const$0,"SDL_SetWindowIcon");
+        return RuntimeHelper.requireNonNull(constants$66.const$0,"SDL_SetWindowIcon");
     }
     /**
      * {@snippet :
@@ -7358,7 +7278,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowData$MH() {
-        return RuntimeHelper.requireNonNull(constants$78.const$1,"SDL_SetWindowData");
+        return RuntimeHelper.requireNonNull(constants$66.const$1,"SDL_SetWindowData");
     }
     /**
      * {@snippet :
@@ -7374,7 +7294,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowData$MH() {
-        return RuntimeHelper.requireNonNull(constants$78.const$2,"SDL_GetWindowData");
+        return RuntimeHelper.requireNonNull(constants$66.const$2,"SDL_GetWindowData");
     }
     /**
      * {@snippet :
@@ -7390,7 +7310,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowPosition$MH() {
-        return RuntimeHelper.requireNonNull(constants$78.const$4,"SDL_SetWindowPosition");
+        return RuntimeHelper.requireNonNull(constants$66.const$4,"SDL_SetWindowPosition");
     }
     /**
      * {@snippet :
@@ -7406,7 +7326,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowPosition$MH() {
-        return RuntimeHelper.requireNonNull(constants$78.const$5,"SDL_GetWindowPosition");
+        return RuntimeHelper.requireNonNull(constants$66.const$5,"SDL_GetWindowPosition");
     }
     /**
      * {@snippet :
@@ -7422,7 +7342,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$79.const$0,"SDL_SetWindowSize");
+        return RuntimeHelper.requireNonNull(constants$67.const$0,"SDL_SetWindowSize");
     }
     /**
      * {@snippet :
@@ -7438,7 +7358,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$79.const$1,"SDL_GetWindowSize");
+        return RuntimeHelper.requireNonNull(constants$67.const$1,"SDL_GetWindowSize");
     }
     /**
      * {@snippet :
@@ -7454,7 +7374,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowBordersSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$79.const$2,"SDL_GetWindowBordersSize");
+        return RuntimeHelper.requireNonNull(constants$67.const$2,"SDL_GetWindowBordersSize");
     }
     /**
      * {@snippet :
@@ -7470,7 +7390,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowSizeInPixels$MH() {
-        return RuntimeHelper.requireNonNull(constants$79.const$3,"SDL_GetWindowSizeInPixels");
+        return RuntimeHelper.requireNonNull(constants$67.const$3,"SDL_GetWindowSizeInPixels");
     }
     /**
      * {@snippet :
@@ -7486,7 +7406,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowMinimumSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$79.const$4,"SDL_SetWindowMinimumSize");
+        return RuntimeHelper.requireNonNull(constants$67.const$4,"SDL_SetWindowMinimumSize");
     }
     /**
      * {@snippet :
@@ -7502,7 +7422,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowMinimumSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$79.const$5,"SDL_GetWindowMinimumSize");
+        return RuntimeHelper.requireNonNull(constants$67.const$5,"SDL_GetWindowMinimumSize");
     }
     /**
      * {@snippet :
@@ -7518,7 +7438,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowMaximumSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$80.const$0,"SDL_SetWindowMaximumSize");
+        return RuntimeHelper.requireNonNull(constants$68.const$0,"SDL_SetWindowMaximumSize");
     }
     /**
      * {@snippet :
@@ -7534,7 +7454,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowMaximumSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$80.const$1,"SDL_GetWindowMaximumSize");
+        return RuntimeHelper.requireNonNull(constants$68.const$1,"SDL_GetWindowMaximumSize");
     }
     /**
      * {@snippet :
@@ -7550,7 +7470,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowBordered$MH() {
-        return RuntimeHelper.requireNonNull(constants$80.const$3,"SDL_SetWindowBordered");
+        return RuntimeHelper.requireNonNull(constants$68.const$3,"SDL_SetWindowBordered");
     }
     /**
      * {@snippet :
@@ -7566,7 +7486,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowResizable$MH() {
-        return RuntimeHelper.requireNonNull(constants$80.const$4,"SDL_SetWindowResizable");
+        return RuntimeHelper.requireNonNull(constants$68.const$4,"SDL_SetWindowResizable");
     }
     /**
      * {@snippet :
@@ -7582,7 +7502,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowAlwaysOnTop$MH() {
-        return RuntimeHelper.requireNonNull(constants$80.const$5,"SDL_SetWindowAlwaysOnTop");
+        return RuntimeHelper.requireNonNull(constants$68.const$5,"SDL_SetWindowAlwaysOnTop");
     }
     /**
      * {@snippet :
@@ -7598,7 +7518,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ShowWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$81.const$0,"SDL_ShowWindow");
+        return RuntimeHelper.requireNonNull(constants$69.const$0,"SDL_ShowWindow");
     }
     /**
      * {@snippet :
@@ -7614,7 +7534,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_HideWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$81.const$1,"SDL_HideWindow");
+        return RuntimeHelper.requireNonNull(constants$69.const$1,"SDL_HideWindow");
     }
     /**
      * {@snippet :
@@ -7630,7 +7550,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RaiseWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$81.const$2,"SDL_RaiseWindow");
+        return RuntimeHelper.requireNonNull(constants$69.const$2,"SDL_RaiseWindow");
     }
     /**
      * {@snippet :
@@ -7646,7 +7566,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_MaximizeWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$81.const$3,"SDL_MaximizeWindow");
+        return RuntimeHelper.requireNonNull(constants$69.const$3,"SDL_MaximizeWindow");
     }
     /**
      * {@snippet :
@@ -7662,7 +7582,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_MinimizeWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$81.const$4,"SDL_MinimizeWindow");
+        return RuntimeHelper.requireNonNull(constants$69.const$4,"SDL_MinimizeWindow");
     }
     /**
      * {@snippet :
@@ -7678,7 +7598,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_RestoreWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$81.const$5,"SDL_RestoreWindow");
+        return RuntimeHelper.requireNonNull(constants$69.const$5,"SDL_RestoreWindow");
     }
     /**
      * {@snippet :
@@ -7694,7 +7614,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowFullscreen$MH() {
-        return RuntimeHelper.requireNonNull(constants$82.const$0,"SDL_SetWindowFullscreen");
+        return RuntimeHelper.requireNonNull(constants$70.const$0,"SDL_SetWindowFullscreen");
     }
     /**
      * {@snippet :
@@ -7710,7 +7630,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_HasWindowSurface$MH() {
-        return RuntimeHelper.requireNonNull(constants$82.const$1,"SDL_HasWindowSurface");
+        return RuntimeHelper.requireNonNull(constants$70.const$1,"SDL_HasWindowSurface");
     }
     /**
      * {@snippet :
@@ -7726,7 +7646,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowSurface$MH() {
-        return RuntimeHelper.requireNonNull(constants$82.const$2,"SDL_GetWindowSurface");
+        return RuntimeHelper.requireNonNull(constants$70.const$2,"SDL_GetWindowSurface");
     }
     /**
      * {@snippet :
@@ -7742,7 +7662,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_UpdateWindowSurface$MH() {
-        return RuntimeHelper.requireNonNull(constants$82.const$3,"SDL_UpdateWindowSurface");
+        return RuntimeHelper.requireNonNull(constants$70.const$3,"SDL_UpdateWindowSurface");
     }
     /**
      * {@snippet :
@@ -7758,7 +7678,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_UpdateWindowSurfaceRects$MH() {
-        return RuntimeHelper.requireNonNull(constants$82.const$4,"SDL_UpdateWindowSurfaceRects");
+        return RuntimeHelper.requireNonNull(constants$70.const$4,"SDL_UpdateWindowSurfaceRects");
     }
     /**
      * {@snippet :
@@ -7774,7 +7694,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_DestroyWindowSurface$MH() {
-        return RuntimeHelper.requireNonNull(constants$82.const$5,"SDL_DestroyWindowSurface");
+        return RuntimeHelper.requireNonNull(constants$70.const$5,"SDL_DestroyWindowSurface");
     }
     /**
      * {@snippet :
@@ -7790,7 +7710,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowGrab$MH() {
-        return RuntimeHelper.requireNonNull(constants$83.const$0,"SDL_SetWindowGrab");
+        return RuntimeHelper.requireNonNull(constants$71.const$0,"SDL_SetWindowGrab");
     }
     /**
      * {@snippet :
@@ -7806,7 +7726,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowKeyboardGrab$MH() {
-        return RuntimeHelper.requireNonNull(constants$83.const$1,"SDL_SetWindowKeyboardGrab");
+        return RuntimeHelper.requireNonNull(constants$71.const$1,"SDL_SetWindowKeyboardGrab");
     }
     /**
      * {@snippet :
@@ -7822,7 +7742,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowMouseGrab$MH() {
-        return RuntimeHelper.requireNonNull(constants$83.const$2,"SDL_SetWindowMouseGrab");
+        return RuntimeHelper.requireNonNull(constants$71.const$2,"SDL_SetWindowMouseGrab");
     }
     /**
      * {@snippet :
@@ -7838,7 +7758,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowGrab$MH() {
-        return RuntimeHelper.requireNonNull(constants$83.const$3,"SDL_GetWindowGrab");
+        return RuntimeHelper.requireNonNull(constants$71.const$3,"SDL_GetWindowGrab");
     }
     /**
      * {@snippet :
@@ -7854,7 +7774,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowKeyboardGrab$MH() {
-        return RuntimeHelper.requireNonNull(constants$83.const$4,"SDL_GetWindowKeyboardGrab");
+        return RuntimeHelper.requireNonNull(constants$71.const$4,"SDL_GetWindowKeyboardGrab");
     }
     /**
      * {@snippet :
@@ -7870,7 +7790,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowMouseGrab$MH() {
-        return RuntimeHelper.requireNonNull(constants$83.const$5,"SDL_GetWindowMouseGrab");
+        return RuntimeHelper.requireNonNull(constants$71.const$5,"SDL_GetWindowMouseGrab");
     }
     /**
      * {@snippet :
@@ -7886,7 +7806,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetGrabbedWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$84.const$0,"SDL_GetGrabbedWindow");
+        return RuntimeHelper.requireNonNull(constants$72.const$0,"SDL_GetGrabbedWindow");
     }
     /**
      * {@snippet :
@@ -7902,7 +7822,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowMouseRect$MH() {
-        return RuntimeHelper.requireNonNull(constants$84.const$1,"SDL_SetWindowMouseRect");
+        return RuntimeHelper.requireNonNull(constants$72.const$1,"SDL_SetWindowMouseRect");
     }
     /**
      * {@snippet :
@@ -7918,7 +7838,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowMouseRect$MH() {
-        return RuntimeHelper.requireNonNull(constants$84.const$2,"SDL_GetWindowMouseRect");
+        return RuntimeHelper.requireNonNull(constants$72.const$2,"SDL_GetWindowMouseRect");
     }
     /**
      * {@snippet :
@@ -7934,7 +7854,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowBrightness$MH() {
-        return RuntimeHelper.requireNonNull(constants$84.const$4,"SDL_SetWindowBrightness");
+        return RuntimeHelper.requireNonNull(constants$72.const$4,"SDL_SetWindowBrightness");
     }
     /**
      * {@snippet :
@@ -7950,7 +7870,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowBrightness$MH() {
-        return RuntimeHelper.requireNonNull(constants$84.const$6,"SDL_GetWindowBrightness");
+        return RuntimeHelper.requireNonNull(constants$72.const$6,"SDL_GetWindowBrightness");
     }
     /**
      * {@snippet :
@@ -7966,7 +7886,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowOpacity$MH() {
-        return RuntimeHelper.requireNonNull(constants$85.const$0,"SDL_SetWindowOpacity");
+        return RuntimeHelper.requireNonNull(constants$73.const$0,"SDL_SetWindowOpacity");
     }
     /**
      * {@snippet :
@@ -7982,7 +7902,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowOpacity$MH() {
-        return RuntimeHelper.requireNonNull(constants$85.const$1,"SDL_GetWindowOpacity");
+        return RuntimeHelper.requireNonNull(constants$73.const$1,"SDL_GetWindowOpacity");
     }
     /**
      * {@snippet :
@@ -7998,7 +7918,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowModalFor$MH() {
-        return RuntimeHelper.requireNonNull(constants$85.const$2,"SDL_SetWindowModalFor");
+        return RuntimeHelper.requireNonNull(constants$73.const$2,"SDL_SetWindowModalFor");
     }
     /**
      * {@snippet :
@@ -8014,7 +7934,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowInputFocus$MH() {
-        return RuntimeHelper.requireNonNull(constants$85.const$3,"SDL_SetWindowInputFocus");
+        return RuntimeHelper.requireNonNull(constants$73.const$3,"SDL_SetWindowInputFocus");
     }
     /**
      * {@snippet :
@@ -8030,7 +7950,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetWindowGammaRamp$MH() {
-        return RuntimeHelper.requireNonNull(constants$85.const$4,"SDL_SetWindowGammaRamp");
+        return RuntimeHelper.requireNonNull(constants$73.const$4,"SDL_SetWindowGammaRamp");
     }
     /**
      * {@snippet :
@@ -8046,7 +7966,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetWindowGammaRamp$MH() {
-        return RuntimeHelper.requireNonNull(constants$85.const$5,"SDL_GetWindowGammaRamp");
+        return RuntimeHelper.requireNonNull(constants$73.const$5,"SDL_GetWindowGammaRamp");
     }
     /**
      * {@snippet :
@@ -8141,24 +8061,8 @@ public class sdl_h extends sdl_h_1 {
     public static int SDL_HITTEST_RESIZE_LEFT() {
         return (int)9L;
     }
-    public static MethodHandle SDL_SetWindowHitTest$MH() {
-        return RuntimeHelper.requireNonNull(constants$86.const$3,"SDL_SetWindowHitTest");
-    }
-    /**
-     * {@snippet :
-     * int SDL_SetWindowHitTest(struct SDL_Window* window, enum SDL_HitTestResult (*callback)(struct SDL_Window*,struct SDL_Point*,void*), void* callback_data);
-     * }
-     */
-    public static int SDL_SetWindowHitTest(MemorySegment window, MemorySegment callback, MemorySegment callback_data) {
-        var mh$ = SDL_SetWindowHitTest$MH();
-        try {
-            return (int)mh$.invokeExact(window, callback, callback_data);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
     public static MethodHandle SDL_FlashWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$86.const$4,"SDL_FlashWindow");
+        return RuntimeHelper.requireNonNull(constants$74.const$0,"SDL_FlashWindow");
     }
     /**
      * {@snippet :
@@ -8174,7 +8078,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_DestroyWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$86.const$5,"SDL_DestroyWindow");
+        return RuntimeHelper.requireNonNull(constants$74.const$1,"SDL_DestroyWindow");
     }
     /**
      * {@snippet :
@@ -8190,7 +8094,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_IsScreenSaverEnabled$MH() {
-        return RuntimeHelper.requireNonNull(constants$87.const$0,"SDL_IsScreenSaverEnabled");
+        return RuntimeHelper.requireNonNull(constants$74.const$2,"SDL_IsScreenSaverEnabled");
     }
     /**
      * {@snippet :
@@ -8206,7 +8110,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_EnableScreenSaver$MH() {
-        return RuntimeHelper.requireNonNull(constants$87.const$1,"SDL_EnableScreenSaver");
+        return RuntimeHelper.requireNonNull(constants$74.const$3,"SDL_EnableScreenSaver");
     }
     /**
      * {@snippet :
@@ -8222,7 +8126,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_DisableScreenSaver$MH() {
-        return RuntimeHelper.requireNonNull(constants$87.const$2,"SDL_DisableScreenSaver");
+        return RuntimeHelper.requireNonNull(constants$74.const$4,"SDL_DisableScreenSaver");
     }
     /**
      * {@snippet :
@@ -8238,7 +8142,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GL_LoadLibrary$MH() {
-        return RuntimeHelper.requireNonNull(constants$87.const$3,"SDL_GL_LoadLibrary");
+        return RuntimeHelper.requireNonNull(constants$74.const$5,"SDL_GL_LoadLibrary");
     }
     /**
      * {@snippet :
@@ -8254,7 +8158,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GL_GetProcAddress$MH() {
-        return RuntimeHelper.requireNonNull(constants$87.const$4,"SDL_GL_GetProcAddress");
+        return RuntimeHelper.requireNonNull(constants$75.const$0,"SDL_GL_GetProcAddress");
     }
     /**
      * {@snippet :
@@ -8270,7 +8174,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GL_UnloadLibrary$MH() {
-        return RuntimeHelper.requireNonNull(constants$87.const$5,"SDL_GL_UnloadLibrary");
+        return RuntimeHelper.requireNonNull(constants$75.const$1,"SDL_GL_UnloadLibrary");
     }
     /**
      * {@snippet :
@@ -8286,7 +8190,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GL_ExtensionSupported$MH() {
-        return RuntimeHelper.requireNonNull(constants$88.const$0,"SDL_GL_ExtensionSupported");
+        return RuntimeHelper.requireNonNull(constants$75.const$2,"SDL_GL_ExtensionSupported");
     }
     /**
      * {@snippet :
@@ -8302,7 +8206,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GL_ResetAttributes$MH() {
-        return RuntimeHelper.requireNonNull(constants$88.const$1,"SDL_GL_ResetAttributes");
+        return RuntimeHelper.requireNonNull(constants$75.const$3,"SDL_GL_ResetAttributes");
     }
     /**
      * {@snippet :
@@ -8318,7 +8222,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GL_SetAttribute$MH() {
-        return RuntimeHelper.requireNonNull(constants$88.const$2,"SDL_GL_SetAttribute");
+        return RuntimeHelper.requireNonNull(constants$75.const$4,"SDL_GL_SetAttribute");
     }
     /**
      * {@snippet :
@@ -8334,7 +8238,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GL_GetAttribute$MH() {
-        return RuntimeHelper.requireNonNull(constants$88.const$3,"SDL_GL_GetAttribute");
+        return RuntimeHelper.requireNonNull(constants$75.const$5,"SDL_GL_GetAttribute");
     }
     /**
      * {@snippet :
@@ -8350,7 +8254,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GL_CreateContext$MH() {
-        return RuntimeHelper.requireNonNull(constants$88.const$4,"SDL_GL_CreateContext");
+        return RuntimeHelper.requireNonNull(constants$76.const$0,"SDL_GL_CreateContext");
     }
     /**
      * {@snippet :
@@ -8366,7 +8270,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GL_MakeCurrent$MH() {
-        return RuntimeHelper.requireNonNull(constants$88.const$5,"SDL_GL_MakeCurrent");
+        return RuntimeHelper.requireNonNull(constants$76.const$1,"SDL_GL_MakeCurrent");
     }
     /**
      * {@snippet :
@@ -8382,7 +8286,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GL_GetCurrentWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$89.const$0,"SDL_GL_GetCurrentWindow");
+        return RuntimeHelper.requireNonNull(constants$76.const$2,"SDL_GL_GetCurrentWindow");
     }
     /**
      * {@snippet :
@@ -8398,7 +8302,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GL_GetCurrentContext$MH() {
-        return RuntimeHelper.requireNonNull(constants$89.const$1,"SDL_GL_GetCurrentContext");
+        return RuntimeHelper.requireNonNull(constants$76.const$3,"SDL_GL_GetCurrentContext");
     }
     /**
      * {@snippet :
@@ -8414,7 +8318,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GL_GetDrawableSize$MH() {
-        return RuntimeHelper.requireNonNull(constants$89.const$2,"SDL_GL_GetDrawableSize");
+        return RuntimeHelper.requireNonNull(constants$76.const$4,"SDL_GL_GetDrawableSize");
     }
     /**
      * {@snippet :
@@ -8430,7 +8334,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GL_SetSwapInterval$MH() {
-        return RuntimeHelper.requireNonNull(constants$89.const$3,"SDL_GL_SetSwapInterval");
+        return RuntimeHelper.requireNonNull(constants$76.const$5,"SDL_GL_SetSwapInterval");
     }
     /**
      * {@snippet :
@@ -8446,7 +8350,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GL_GetSwapInterval$MH() {
-        return RuntimeHelper.requireNonNull(constants$89.const$4,"SDL_GL_GetSwapInterval");
+        return RuntimeHelper.requireNonNull(constants$77.const$0,"SDL_GL_GetSwapInterval");
     }
     /**
      * {@snippet :
@@ -8462,7 +8366,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GL_SwapWindow$MH() {
-        return RuntimeHelper.requireNonNull(constants$89.const$5,"SDL_GL_SwapWindow");
+        return RuntimeHelper.requireNonNull(constants$77.const$1,"SDL_GL_SwapWindow");
     }
     /**
      * {@snippet :
@@ -8478,7 +8382,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GL_DeleteContext$MH() {
-        return RuntimeHelper.requireNonNull(constants$90.const$0,"SDL_GL_DeleteContext");
+        return RuntimeHelper.requireNonNull(constants$77.const$2,"SDL_GL_DeleteContext");
     }
     /**
      * {@snippet :
@@ -10596,7 +10500,7 @@ public class sdl_h extends sdl_h_1 {
         return (int)32768L;
     }
     public static MethodHandle SDL_GetKeyboardFocus$MH() {
-        return RuntimeHelper.requireNonNull(constants$91.const$0,"SDL_GetKeyboardFocus");
+        return RuntimeHelper.requireNonNull(constants$78.const$2,"SDL_GetKeyboardFocus");
     }
     /**
      * {@snippet :
@@ -10612,7 +10516,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetKeyboardState$MH() {
-        return RuntimeHelper.requireNonNull(constants$91.const$1,"SDL_GetKeyboardState");
+        return RuntimeHelper.requireNonNull(constants$78.const$3,"SDL_GetKeyboardState");
     }
     /**
      * {@snippet :
@@ -10628,7 +10532,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_ResetKeyboard$MH() {
-        return RuntimeHelper.requireNonNull(constants$91.const$2,"SDL_ResetKeyboard");
+        return RuntimeHelper.requireNonNull(constants$78.const$4,"SDL_ResetKeyboard");
     }
     /**
      * {@snippet :
@@ -10644,7 +10548,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetModState$MH() {
-        return RuntimeHelper.requireNonNull(constants$91.const$3,"SDL_GetModState");
+        return RuntimeHelper.requireNonNull(constants$78.const$5,"SDL_GetModState");
     }
     /**
      * {@snippet :
@@ -10660,7 +10564,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_SetModState$MH() {
-        return RuntimeHelper.requireNonNull(constants$91.const$4,"SDL_SetModState");
+        return RuntimeHelper.requireNonNull(constants$79.const$0,"SDL_SetModState");
     }
     /**
      * {@snippet :
@@ -10676,7 +10580,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetKeyFromScancode$MH() {
-        return RuntimeHelper.requireNonNull(constants$91.const$5,"SDL_GetKeyFromScancode");
+        return RuntimeHelper.requireNonNull(constants$79.const$1,"SDL_GetKeyFromScancode");
     }
     /**
      * {@snippet :
@@ -10692,7 +10596,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetScancodeFromKey$MH() {
-        return RuntimeHelper.requireNonNull(constants$92.const$0,"SDL_GetScancodeFromKey");
+        return RuntimeHelper.requireNonNull(constants$79.const$2,"SDL_GetScancodeFromKey");
     }
     /**
      * {@snippet :
@@ -10708,7 +10612,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetScancodeName$MH() {
-        return RuntimeHelper.requireNonNull(constants$92.const$1,"SDL_GetScancodeName");
+        return RuntimeHelper.requireNonNull(constants$79.const$3,"SDL_GetScancodeName");
     }
     /**
      * {@snippet :
@@ -10724,7 +10628,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetScancodeFromName$MH() {
-        return RuntimeHelper.requireNonNull(constants$92.const$2,"SDL_GetScancodeFromName");
+        return RuntimeHelper.requireNonNull(constants$79.const$4,"SDL_GetScancodeFromName");
     }
     /**
      * {@snippet :
@@ -10740,7 +10644,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetKeyName$MH() {
-        return RuntimeHelper.requireNonNull(constants$92.const$3,"SDL_GetKeyName");
+        return RuntimeHelper.requireNonNull(constants$79.const$5,"SDL_GetKeyName");
     }
     /**
      * {@snippet :
@@ -10756,7 +10660,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_GetKeyFromName$MH() {
-        return RuntimeHelper.requireNonNull(constants$92.const$4,"SDL_GetKeyFromName");
+        return RuntimeHelper.requireNonNull(constants$80.const$0,"SDL_GetKeyFromName");
     }
     /**
      * {@snippet :
@@ -10772,7 +10676,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_StartTextInput$MH() {
-        return RuntimeHelper.requireNonNull(constants$92.const$5,"SDL_StartTextInput");
+        return RuntimeHelper.requireNonNull(constants$80.const$1,"SDL_StartTextInput");
     }
     /**
      * {@snippet :
@@ -10788,7 +10692,7 @@ public class sdl_h extends sdl_h_1 {
         }
     }
     public static MethodHandle SDL_IsTextInputActive$MH() {
-        return RuntimeHelper.requireNonNull(constants$93.const$0,"SDL_IsTextInputActive");
+        return RuntimeHelper.requireNonNull(constants$80.const$2,"SDL_IsTextInputActive");
     }
     /**
      * {@snippet :
@@ -10799,6 +10703,102 @@ public class sdl_h extends sdl_h_1 {
         var mh$ = SDL_IsTextInputActive$MH();
         try {
             return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_StopTextInput$MH() {
+        return RuntimeHelper.requireNonNull(constants$80.const$3,"SDL_StopTextInput");
+    }
+    /**
+     * {@snippet :
+     * void SDL_StopTextInput();
+     * }
+     */
+    public static void SDL_StopTextInput() {
+        var mh$ = SDL_StopTextInput$MH();
+        try {
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_ClearComposition$MH() {
+        return RuntimeHelper.requireNonNull(constants$80.const$4,"SDL_ClearComposition");
+    }
+    /**
+     * {@snippet :
+     * void SDL_ClearComposition();
+     * }
+     */
+    public static void SDL_ClearComposition() {
+        var mh$ = SDL_ClearComposition$MH();
+        try {
+            mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_IsTextInputShown$MH() {
+        return RuntimeHelper.requireNonNull(constants$80.const$5,"SDL_IsTextInputShown");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_IsTextInputShown();
+     * }
+     */
+    public static int SDL_IsTextInputShown() {
+        var mh$ = SDL_IsTextInputShown$MH();
+        try {
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_SetTextInputRect$MH() {
+        return RuntimeHelper.requireNonNull(constants$81.const$0,"SDL_SetTextInputRect");
+    }
+    /**
+     * {@snippet :
+     * void SDL_SetTextInputRect(struct SDL_Rect* rect);
+     * }
+     */
+    public static void SDL_SetTextInputRect(MemorySegment rect) {
+        var mh$ = SDL_SetTextInputRect$MH();
+        try {
+            mh$.invokeExact(rect);
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_HasScreenKeyboardSupport$MH() {
+        return RuntimeHelper.requireNonNull(constants$81.const$1,"SDL_HasScreenKeyboardSupport");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_HasScreenKeyboardSupport();
+     * }
+     */
+    public static int SDL_HasScreenKeyboardSupport() {
+        var mh$ = SDL_HasScreenKeyboardSupport$MH();
+        try {
+            return (int)mh$.invokeExact();
+        } catch (Throwable ex$) {
+            throw new AssertionError("should not reach here", ex$);
+        }
+    }
+    public static MethodHandle SDL_IsScreenKeyboardShown$MH() {
+        return RuntimeHelper.requireNonNull(constants$81.const$2,"SDL_IsScreenKeyboardShown");
+    }
+    /**
+     * {@snippet :
+     * enum SDL_bool SDL_IsScreenKeyboardShown(struct SDL_Window* window);
+     * }
+     */
+    public static int SDL_IsScreenKeyboardShown(MemorySegment window) {
+        var mh$ = SDL_IsScreenKeyboardShown$MH();
+        try {
+            return (int)mh$.invokeExact(window);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }

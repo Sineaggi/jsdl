@@ -12,28 +12,28 @@ final class constants$67 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$67() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GetSurfaceAlphaMod",
-        constants$6.const$4
+        "SDL_SetWindowSize",
+        constants$66.const$3
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_SetSurfaceBlendMode",
-        constants$34.const$3
+        "SDL_GetWindowSize",
+        constants$47.const$4
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GetSurfaceBlendMode",
-        constants$6.const$4
+        "SDL_GetWindowBordersSize",
+        constants$48.const$2
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_SetClipRect",
-        constants$6.const$4
+        "SDL_GetWindowSizeInPixels",
+        constants$47.const$4
     );
-    static final FunctionDescriptor const$4 = FunctionDescriptor.ofVoid(
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_SetWindowMinimumSize",
+        constants$66.const$3
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetClipRect",
-        constants$67.const$4
+        "SDL_GetWindowMinimumSize",
+        constants$47.const$4
     );
 }
 

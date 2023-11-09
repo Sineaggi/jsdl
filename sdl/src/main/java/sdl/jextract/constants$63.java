@@ -12,47 +12,29 @@ final class constants$63 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$63() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        constants$5.const$3
+        "SDL_GetDesktopDisplayMode",
+        constants$61.const$4
     );
-    static final FunctionDescriptor const$1 = FunctionDescriptor.of(RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_GetCurrentDisplayMode",
+        constants$61.const$4
     );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_CreateRGBSurface",
-        constants$63.const$1
+    static final FunctionDescriptor const$2 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
     );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GetClosestDisplayMode",
+        constants$63.const$2
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_CreateRGBSurfaceWithFormat",
-        constants$63.const$3
+        "SDL_GetPointDisplayIndex",
+        constants$13.const$1
     );
-    static final FunctionDescriptor const$5 = FunctionDescriptor.of(RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT
-    );
-    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
-        "SDL_CreateRGBSurfaceFrom",
-        constants$63.const$5
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_GetRectDisplayIndex",
+        constants$13.const$1
     );
 }
 

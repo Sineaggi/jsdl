@@ -11,12 +11,12 @@ final class constants$189 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$189() {}
-    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ALLOW_TOPMOST");
-    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ANDROID_APK_EXPANSION_MAIN_FILE_VERSION");
-    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ANDROID_APK_EXPANSION_PATCH_FILE_VERSION");
-    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ANDROID_BLOCK_ON_PAUSE");
-    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ANDROID_BLOCK_ON_PAUSE_PAUSEAUDIO");
-    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_ANDROID_TRAP_BACK_BUTTON");
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_LINUX_JOYSTICK_DEADZONES");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_MAC_BACKGROUND_APP");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_MAC_CTRL_CLICK_EMULATE_RIGHT_CLICK");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_MAC_OPENGL_ASYNC_DISPATCH");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_MOUSE_DOUBLE_CLICK_RADIUS");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_MOUSE_DOUBLE_CLICK_TIME");
 }
 
 

@@ -11,29 +11,20 @@ final class constants$45 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$45() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_SHORT,
-        RuntimeHelper.POINTER
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_ReadLE16",
-        constants$45.const$0
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_ReadBE16",
-        constants$45.const$0
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_ReadLE32",
-        constants$18.const$4
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_ReadBE32",
-        constants$18.const$4
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_ReadLE64",
-        constants$12.const$3
-    );
+    static final VarHandle const$0 = constants$44.const$4.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final StructLayout const$1 = MemoryLayout.structLayout(
+        JAVA_FLOAT.withName("x"),
+        JAVA_FLOAT.withName("y")
+    ).withName("SDL_FPoint");
+    static final VarHandle const$2 = constants$45.const$1.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$3 = constants$45.const$1.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final StructLayout const$4 = MemoryLayout.structLayout(
+        JAVA_INT.withName("x"),
+        JAVA_INT.withName("y"),
+        JAVA_INT.withName("w"),
+        JAVA_INT.withName("h")
+    ).withName("SDL_Rect");
+    static final VarHandle const$5 = constants$45.const$4.varHandle(MemoryLayout.PathElement.groupElement("x"));
 }
 
 

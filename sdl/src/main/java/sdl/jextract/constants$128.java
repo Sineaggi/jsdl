@@ -11,12 +11,22 @@ final class constants$128 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$128() {}
-    static final VarHandle const$0 = constants$127.const$4.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$1 = constants$127.const$4.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
-    static final VarHandle const$2 = constants$127.const$4.varHandle(MemoryLayout.PathElement.groupElement("event"));
-    static final VarHandle const$3 = constants$127.const$4.varHandle(MemoryLayout.PathElement.groupElement("padding1"));
-    static final VarHandle const$4 = constants$127.const$4.varHandle(MemoryLayout.PathElement.groupElement("padding2"));
-    static final VarHandle const$5 = constants$127.const$4.varHandle(MemoryLayout.PathElement.groupElement("padding3"));
+    static final VarHandle const$0 = constants$126.const$4.varHandle(MemoryLayout.PathElement.groupElement("value"));
+    static final VarHandle const$1 = constants$126.const$4.varHandle(MemoryLayout.PathElement.groupElement("padding4"));
+    static final StructLayout const$2 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        JAVA_INT.withName("timestamp"),
+        JAVA_INT.withName("which"),
+        JAVA_BYTE.withName("ball"),
+        JAVA_BYTE.withName("padding1"),
+        JAVA_BYTE.withName("padding2"),
+        JAVA_BYTE.withName("padding3"),
+        JAVA_SHORT.withName("xrel"),
+        JAVA_SHORT.withName("yrel")
+    ).withName("SDL_JoyBallEvent");
+    static final VarHandle const$3 = constants$128.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$4 = constants$128.const$2.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$5 = constants$128.const$2.varHandle(MemoryLayout.PathElement.groupElement("which"));
 }
 
 

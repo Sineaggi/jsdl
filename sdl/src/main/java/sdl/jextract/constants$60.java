@@ -11,49 +11,21 @@ final class constants$60 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$60() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_HasIntersectionF",
-        constants$6.const$4
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_IntersectFRect",
-        constants$21.const$2
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_UnionFRect",
-        constants$59.const$0
-    );
+    static final VarHandle const$0 = constants$59.const$3.varHandle(MemoryLayout.PathElement.groupElement("h"));
+    static final VarHandle const$1 = constants$59.const$3.varHandle(MemoryLayout.PathElement.groupElement("refresh_rate"));
+    static final VarHandle const$2 = constants$59.const$3.varHandle(MemoryLayout.PathElement.groupElement("driverdata"));
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_EncloseFPoints",
-        constants$59.const$2
+        "SDL_GetNumVideoDrivers",
+        constants$1.const$4
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_IntersectFRectAndLine",
-        constants$59.const$4
+        "SDL_GetVideoDriver",
+        constants$28.const$0
     );
-    static final StructLayout const$5 = MemoryLayout.structLayout(
-        JAVA_INT.withName("flags"),
-        MemoryLayout.paddingLayout(4),
-        RuntimeHelper.POINTER.withName("format"),
-        JAVA_INT.withName("w"),
-        JAVA_INT.withName("h"),
-        JAVA_INT.withName("pitch"),
-        MemoryLayout.paddingLayout(4),
-        RuntimeHelper.POINTER.withName("pixels"),
-        RuntimeHelper.POINTER.withName("userdata"),
-        JAVA_INT.withName("locked"),
-        MemoryLayout.paddingLayout(4),
-        RuntimeHelper.POINTER.withName("list_blitmap"),
-        MemoryLayout.structLayout(
-            JAVA_INT.withName("x"),
-            JAVA_INT.withName("y"),
-            JAVA_INT.withName("w"),
-            JAVA_INT.withName("h")
-        ).withName("clip_rect"),
-        RuntimeHelper.POINTER.withName("map"),
-        JAVA_INT.withName("refcount"),
-        MemoryLayout.paddingLayout(4)
-    ).withName("SDL_Surface");
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_VideoInit",
+        constants$13.const$1
+    );
 }
 
 

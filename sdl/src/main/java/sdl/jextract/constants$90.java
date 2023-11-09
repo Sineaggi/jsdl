@@ -11,21 +11,20 @@ final class constants$90 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$90() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GL_DeleteContext",
-        constants$1.const$2
+    static final VarHandle const$0 = constants$85.const$3.varHandle(MemoryLayout.PathElement.groupElement("SetLED"));
+    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.SendEffect.class, "apply", constants$2.const$2);
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        constants$2.const$2
     );
-    static final StructLayout const$1 = MemoryLayout.structLayout(
-        JAVA_INT.withName("scancode"),
-        JAVA_INT.withName("sym"),
-        JAVA_SHORT.withName("mod"),
-        MemoryLayout.paddingLayout(2),
-        JAVA_INT.withName("unused")
-    ).withName("SDL_Keysym");
-    static final VarHandle const$2 = constants$90.const$1.varHandle(MemoryLayout.PathElement.groupElement("scancode"));
-    static final VarHandle const$3 = constants$90.const$1.varHandle(MemoryLayout.PathElement.groupElement("sym"));
-    static final VarHandle const$4 = constants$90.const$1.varHandle(MemoryLayout.PathElement.groupElement("mod"));
-    static final VarHandle const$5 = constants$90.const$1.varHandle(MemoryLayout.PathElement.groupElement("unused"));
+    static final VarHandle const$3 = constants$85.const$3.varHandle(MemoryLayout.PathElement.groupElement("SendEffect"));
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickAttachVirtualEx",
+        constants$13.const$1
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickDetachVirtual",
+        constants$2.const$4
+    );
 }
 
 

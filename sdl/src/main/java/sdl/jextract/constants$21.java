@@ -12,30 +12,28 @@ final class constants$21 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$21() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_strncasecmp",
-        constants$12.const$1
+        "SDL_trunc",
+        constants$17.const$0
     );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandleVariadic(
-        "SDL_sscanf",
-        constants$6.const$4
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_truncf",
+        constants$17.const$2
     );
-    static final FunctionDescriptor const$2 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_fmod",
+        constants$18.const$2
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_vsscanf",
-        constants$21.const$2
+        "SDL_fmodf",
+        constants$18.const$4
     );
-    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_LONG,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_log",
+        constants$17.const$0
     );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandleVariadic(
-        "SDL_snprintf",
-        constants$21.const$4
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_logf",
+        constants$17.const$2
     );
 }
 

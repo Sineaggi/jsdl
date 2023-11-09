@@ -12,28 +12,40 @@ final class constants$43 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$43() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_FreeRW",
+        "SDL_FreePalette",
         constants$1.const$2
     );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_RWsize",
-        constants$12.const$3
+    static final FunctionDescriptor const$1 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_BYTE,
+        JAVA_BYTE,
+        JAVA_BYTE
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_RWseek",
-        constants$36.const$5
+        "SDL_MapRGB",
+        constants$43.const$1
     );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_RWtell",
-        constants$12.const$3
+    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_BYTE,
+        JAVA_BYTE,
+        JAVA_BYTE,
+        JAVA_BYTE
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_RWread",
-        constants$37.const$3
+        "SDL_MapRGBA",
+        constants$43.const$3
     );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_RWwrite",
-        constants$37.const$3
+    static final FunctionDescriptor const$5 = FunctionDescriptor.ofVoid(
+        JAVA_INT,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
+    );
+    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
+        "SDL_GetRGB",
+        constants$43.const$5
     );
 }
 

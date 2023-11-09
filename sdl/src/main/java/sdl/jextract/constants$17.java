@@ -11,29 +11,26 @@ final class constants$17 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$17() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_LONG,
-        RuntimeHelper.POINTER,
-        JAVA_LONG
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_DOUBLE,
+        JAVA_DOUBLE
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_utf8strnlen",
+        "SDL_acos",
         constants$17.const$0
     );
-    static final FunctionDescriptor const$2 = FunctionDescriptor.of(RuntimeHelper.POINTER,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT
+    static final FunctionDescriptor const$2 = FunctionDescriptor.of(JAVA_FLOAT,
+        JAVA_FLOAT
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_itoa",
+        "SDL_acosf",
         constants$17.const$2
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_uitoa",
-        constants$17.const$2
+        "SDL_asin",
+        constants$17.const$0
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_ltoa",
+        "SDL_asinf",
         constants$17.const$2
     );
 }

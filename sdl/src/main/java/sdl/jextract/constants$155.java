@@ -11,23 +11,27 @@ final class constants$155 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$155() {}
-    static final VarHandle const$0 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("y"));
-    static final VarHandle const$1 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("dx"));
-    static final VarHandle const$2 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("dy"));
-    static final VarHandle const$3 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("pressure"));
-    static final VarHandle const$4 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
-    static final StructLayout const$5 = MemoryLayout.structLayout(
-        JAVA_INT.withName("type"),
-        JAVA_INT.withName("timestamp"),
-        JAVA_LONG.withName("touchId"),
-        JAVA_FLOAT.withName("dTheta"),
-        JAVA_FLOAT.withName("dDist"),
-        JAVA_FLOAT.withName("x"),
-        JAVA_FLOAT.withName("y"),
-        JAVA_SHORT.withName("numFingers"),
-        JAVA_SHORT.withName("padding"),
-        MemoryLayout.paddingLayout(4)
-    ).withName("SDL_MultiGestureEvent");
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_DelEventWatch",
+        constants$56.const$0
+    );
+    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(SDL_FilterEvents$filter.class, "apply", constants$8.const$2);
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_FilterEvents",
+        constants$56.const$0
+    );
+    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_BYTE,
+        JAVA_INT,
+        JAVA_INT
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_EventState",
+        constants$155.const$3
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_RegisterEvents",
+        constants$2.const$4
+    );
 }
 
 

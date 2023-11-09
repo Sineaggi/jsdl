@@ -12,28 +12,29 @@ final class constants$66 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$66() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_HasColorKey",
-        constants$18.const$4
+        "SDL_SetWindowIcon",
+        constants$56.const$0
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetColorKey",
-        constants$6.const$4
+        "SDL_SetWindowData",
+        constants$11.const$2
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_SetSurfaceColorMod",
-        constants$54.const$3
+        "SDL_GetWindowData",
+        constants$8.const$0
     );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GetSurfaceColorMod",
-        constants$5.const$3
-    );
-    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_INT,
+    static final FunctionDescriptor const$3 = FunctionDescriptor.ofVoid(
         RuntimeHelper.POINTER,
-        JAVA_BYTE
+        JAVA_INT,
+        JAVA_INT
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_SetWindowPosition",
+        constants$66.const$3
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_SetSurfaceAlphaMod",
-        constants$66.const$4
+        "SDL_GetWindowPosition",
+        constants$47.const$4
     );
 }
 

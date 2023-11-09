@@ -11,50 +11,12 @@ final class constants$39 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$39() {}
-    static final VarHandle const$0 = constants$36.const$1.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final UnionLayout const$1 = MemoryLayout.unionLayout(
-        MemoryLayout.structLayout(
-            JAVA_INT.withName("append"),
-            MemoryLayout.paddingLayout(4),
-            RuntimeHelper.POINTER.withName("h"),
-            MemoryLayout.structLayout(
-                RuntimeHelper.POINTER.withName("data"),
-                JAVA_LONG.withName("size"),
-                JAVA_LONG.withName("left")
-            ).withName("buffer")
-        ).withName("windowsio"),
-        MemoryLayout.structLayout(
-            JAVA_INT.withName("autoclose"),
-            MemoryLayout.paddingLayout(4),
-            RuntimeHelper.POINTER.withName("fp")
-        ).withName("stdio"),
-        MemoryLayout.structLayout(
-            RuntimeHelper.POINTER.withName("base"),
-            RuntimeHelper.POINTER.withName("here"),
-            RuntimeHelper.POINTER.withName("stop")
-        ).withName("mem"),
-        MemoryLayout.structLayout(
-            RuntimeHelper.POINTER.withName("data1"),
-            RuntimeHelper.POINTER.withName("data2")
-        ).withName("unknown")
-    ).withName("");
-    static final StructLayout const$2 = MemoryLayout.structLayout(
-        JAVA_INT.withName("append"),
-        MemoryLayout.paddingLayout(4),
-        RuntimeHelper.POINTER.withName("h"),
-        MemoryLayout.structLayout(
-            RuntimeHelper.POINTER.withName("data"),
-            JAVA_LONG.withName("size"),
-            JAVA_LONG.withName("left")
-        ).withName("buffer")
-    ).withName("");
-    static final VarHandle const$3 = constants$39.const$2.varHandle(MemoryLayout.PathElement.groupElement("append"));
-    static final VarHandle const$4 = constants$39.const$2.varHandle(MemoryLayout.PathElement.groupElement("h"));
-    static final StructLayout const$5 = MemoryLayout.structLayout(
-        RuntimeHelper.POINTER.withName("data"),
-        JAVA_LONG.withName("size"),
-        JAVA_LONG.withName("left")
-    ).withName("");
+    static final VarHandle const$0 = constants$38.const$0.varHandle(MemoryLayout.PathElement.groupElement("Gmask"));
+    static final VarHandle const$1 = constants$38.const$0.varHandle(MemoryLayout.PathElement.groupElement("Bmask"));
+    static final VarHandle const$2 = constants$38.const$0.varHandle(MemoryLayout.PathElement.groupElement("Amask"));
+    static final VarHandle const$3 = constants$38.const$0.varHandle(MemoryLayout.PathElement.groupElement("Rloss"));
+    static final VarHandle const$4 = constants$38.const$0.varHandle(MemoryLayout.PathElement.groupElement("Gloss"));
+    static final VarHandle const$5 = constants$38.const$0.varHandle(MemoryLayout.PathElement.groupElement("Bloss"));
 }
 
 

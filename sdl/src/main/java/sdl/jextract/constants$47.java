@@ -11,32 +11,25 @@ final class constants$47 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$47() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_LONG,
-        RuntimeHelper.POINTER,
-        JAVA_INT
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_WriteLE32",
-        constants$47.const$0
-    );
+    static final VarHandle const$0 = constants$46.const$3.varHandle(MemoryLayout.PathElement.groupElement("w"));
+    static final VarHandle const$1 = constants$46.const$3.varHandle(MemoryLayout.PathElement.groupElement("h"));
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_WriteBE32",
-        constants$47.const$0
+        "SDL_HasIntersection",
+        constants$8.const$2
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_WriteLE64",
-        constants$17.const$0
+        "SDL_IntersectRect",
+        constants$15.const$5
     );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_WriteBE64",
-        constants$17.const$0
+    static final FunctionDescriptor const$4 = FunctionDescriptor.ofVoid(
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
     );
-    static final StructLayout const$5 = MemoryLayout.structLayout(
-        JAVA_BYTE.withName("r"),
-        JAVA_BYTE.withName("g"),
-        JAVA_BYTE.withName("b"),
-        JAVA_BYTE.withName("a")
-    ).withName("SDL_Color");
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_UnionRect",
+        constants$47.const$4
+    );
 }
 
 

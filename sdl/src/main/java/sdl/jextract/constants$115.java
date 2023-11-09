@@ -11,24 +11,22 @@ final class constants$115 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$115() {}
-    static final VarHandle const$0 = constants$114.const$5.varHandle(MemoryLayout.PathElement.groupElement("hat"));
-    static final VarHandle const$1 = constants$114.const$5.varHandle(MemoryLayout.PathElement.groupElement("hat_mask"));
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerAddMappingsFromRW",
-        constants$34.const$3
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerAddMapping",
-        constants$18.const$4
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerNumMappings",
-        constants$5.const$5
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerMappingForIndex",
-        constants$33.const$5
-    );
+    static final VarHandle const$0 = constants$113.const$5.varHandle(MemoryLayout.PathElement.groupElement("padding3"));
+    static final VarHandle const$1 = constants$113.const$5.varHandle(MemoryLayout.PathElement.groupElement("data1"));
+    static final StructLayout const$2 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        JAVA_INT.withName("timestamp"),
+        JAVA_INT.withName("windowID"),
+        JAVA_BYTE.withName("event"),
+        JAVA_BYTE.withName("padding1"),
+        JAVA_BYTE.withName("padding2"),
+        JAVA_BYTE.withName("padding3"),
+        JAVA_INT.withName("data1"),
+        JAVA_INT.withName("data2")
+    ).withName("SDL_WindowEvent");
+    static final VarHandle const$3 = constants$115.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$4 = constants$115.const$2.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$5 = constants$115.const$2.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
 }
 
 

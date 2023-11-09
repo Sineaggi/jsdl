@@ -11,23 +11,21 @@ final class constants$154 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$154() {}
-    static final StructLayout const$0 = MemoryLayout.structLayout(
-        JAVA_INT.withName("type"),
-        JAVA_INT.withName("timestamp"),
-        JAVA_LONG.withName("touchId"),
-        JAVA_LONG.withName("fingerId"),
-        JAVA_FLOAT.withName("x"),
-        JAVA_FLOAT.withName("y"),
-        JAVA_FLOAT.withName("dx"),
-        JAVA_FLOAT.withName("dy"),
-        JAVA_FLOAT.withName("pressure"),
-        JAVA_INT.withName("windowID")
-    ).withName("SDL_TouchFingerEvent");
-    static final VarHandle const$1 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$2 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$3 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("touchId"));
-    static final VarHandle const$4 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("fingerId"));
-    static final VarHandle const$5 = constants$154.const$0.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_SetEventFilter",
+        constants$56.const$0
+    );
+    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(SDL_GetEventFilter$filter.class, "apply", constants$8.const$2);
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_GetEventFilter",
+        constants$8.const$2
+    );
+    static final MethodHandle const$3 = RuntimeHelper.upcallHandle(SDL_AddEventWatch$filter.class, "apply", constants$8.const$2);
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_AddEventWatch",
+        constants$56.const$0
+    );
+    static final MethodHandle const$5 = RuntimeHelper.upcallHandle(SDL_DelEventWatch$filter.class, "apply", constants$8.const$2);
 }
 
 

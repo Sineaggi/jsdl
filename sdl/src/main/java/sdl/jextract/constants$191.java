@@ -11,12 +11,12 @@ final class constants$191 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$191() {}
-    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_AUDIO_DEVICE_STREAM_ROLE");
-    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_AUDIO_RESAMPLING_MODE");
-    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_AUTO_UPDATE_JOYSTICKS");
-    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_AUTO_UPDATE_SENSORS");
-    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_BMP_SAVE_LEGACY_FORMAT");
-    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_DISPLAY_USABLE_BOUNDS");
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_MOUSE_RELATIVE_SYSTEM_SCALE");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_MOUSE_RELATIVE_WARP_MOTION");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_MOUSE_TOUCH_EVENTS");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_MOUSE_AUTO_CAPTURE");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_NO_SIGNAL_HANDLERS");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_OPENGL_ES_DRIVER");
 }
 
 

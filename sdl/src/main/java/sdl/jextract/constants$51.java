@@ -11,12 +11,34 @@ final class constants$51 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$51() {}
-    static final VarHandle const$0 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Rloss"));
-    static final VarHandle const$1 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Gloss"));
-    static final VarHandle const$2 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Bloss"));
-    static final VarHandle const$3 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Aloss"));
-    static final VarHandle const$4 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Rshift"));
-    static final VarHandle const$5 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("Gshift"));
+    static final VarHandle const$0 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("list_blitmap"));
+    static final VarHandle const$1 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("map"));
+    static final VarHandle const$2 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("refcount"));
+    static final FunctionDescriptor const$3 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_CreateRGBSurface",
+        constants$51.const$3
+    );
+    static final FunctionDescriptor const$5 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT
+    );
+    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
+        "SDL_CreateRGBSurfaceWithFormat",
+        constants$51.const$5
+    );
 }
 
 

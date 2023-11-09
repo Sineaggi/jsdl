@@ -11,12 +11,22 @@ final class constants$134 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$134() {}
-    static final VarHandle const$0 = constants$133.const$3.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
-    static final VarHandle const$1 = constants$133.const$3.varHandle(MemoryLayout.PathElement.groupElement("which"));
-    static final VarHandle const$2 = constants$133.const$3.varHandle(MemoryLayout.PathElement.groupElement("state"));
-    static final VarHandle const$3 = constants$133.const$3.varHandle(MemoryLayout.PathElement.groupElement("x"));
-    static final VarHandle const$4 = constants$133.const$3.varHandle(MemoryLayout.PathElement.groupElement("y"));
-    static final VarHandle const$5 = constants$133.const$3.varHandle(MemoryLayout.PathElement.groupElement("xrel"));
+    static final VarHandle const$0 = constants$133.const$2.varHandle(MemoryLayout.PathElement.groupElement("level"));
+    static final StructLayout const$1 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        JAVA_INT.withName("timestamp"),
+        JAVA_INT.withName("which"),
+        JAVA_BYTE.withName("axis"),
+        JAVA_BYTE.withName("padding1"),
+        JAVA_BYTE.withName("padding2"),
+        JAVA_BYTE.withName("padding3"),
+        JAVA_SHORT.withName("value"),
+        JAVA_SHORT.withName("padding4")
+    ).withName("SDL_ControllerAxisEvent");
+    static final VarHandle const$2 = constants$134.const$1.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$3 = constants$134.const$1.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$4 = constants$134.const$1.varHandle(MemoryLayout.PathElement.groupElement("which"));
+    static final VarHandle const$5 = constants$134.const$1.varHandle(MemoryLayout.PathElement.groupElement("axis"));
 }
 
 

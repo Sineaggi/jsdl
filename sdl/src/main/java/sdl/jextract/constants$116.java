@@ -11,31 +11,12 @@ final class constants$116 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$116() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(RuntimeHelper.POINTER,
-        MemoryLayout.structLayout(
-            MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
-        ).withName("SDL_GUID")
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerMappingForGUID",
-        constants$116.const$0
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerMapping",
-        constants$6.const$0
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_IsGameController",
-        constants$8.const$0
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerNameForIndex",
-        constants$33.const$5
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerPathForIndex",
-        constants$33.const$5
-    );
+    static final VarHandle const$0 = constants$115.const$2.varHandle(MemoryLayout.PathElement.groupElement("event"));
+    static final VarHandle const$1 = constants$115.const$2.varHandle(MemoryLayout.PathElement.groupElement("padding1"));
+    static final VarHandle const$2 = constants$115.const$2.varHandle(MemoryLayout.PathElement.groupElement("padding2"));
+    static final VarHandle const$3 = constants$115.const$2.varHandle(MemoryLayout.PathElement.groupElement("padding3"));
+    static final VarHandle const$4 = constants$115.const$2.varHandle(MemoryLayout.PathElement.groupElement("data1"));
+    static final VarHandle const$5 = constants$115.const$2.varHandle(MemoryLayout.PathElement.groupElement("data2"));
 }
 
 

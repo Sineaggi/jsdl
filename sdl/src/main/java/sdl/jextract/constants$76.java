@@ -12,28 +12,28 @@ final class constants$76 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$76() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowDisplayIndex",
-        constants$18.const$4
+        "SDL_GL_CreateContext",
+        constants$2.const$0
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowDisplayMode",
-        constants$6.const$4
+        "SDL_GL_MakeCurrent",
+        constants$8.const$2
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowDisplayMode",
-        constants$6.const$4
+        "SDL_GL_GetCurrentWindow",
+        constants$0.const$0
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowICCProfile",
-        constants$13.const$2
+        "SDL_GL_GetCurrentContext",
+        constants$0.const$0
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowPixelFormat",
-        constants$18.const$4
+        "SDL_GL_GetDrawableSize",
+        constants$47.const$4
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_CreateWindow",
-        constants$64.const$0
+        "SDL_GL_SetSwapInterval",
+        constants$2.const$4
     );
 }
 

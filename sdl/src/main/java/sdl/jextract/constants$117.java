@@ -11,30 +11,27 @@ final class constants$117 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$117() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerTypeForIndex",
-        constants$8.const$0
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerMappingForDeviceIndex",
-        constants$33.const$5
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerOpen",
-        constants$33.const$5
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerFromInstanceID",
-        constants$33.const$5
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerFromPlayerIndex",
-        constants$33.const$5
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerName",
-        constants$6.const$0
-    );
+    static final StructLayout const$0 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        JAVA_INT.withName("timestamp"),
+        JAVA_INT.withName("windowID"),
+        JAVA_BYTE.withName("state"),
+        JAVA_BYTE.withName("repeat"),
+        JAVA_BYTE.withName("padding2"),
+        JAVA_BYTE.withName("padding3"),
+        MemoryLayout.structLayout(
+            JAVA_INT.withName("scancode"),
+            JAVA_INT.withName("sym"),
+            JAVA_SHORT.withName("mod"),
+            MemoryLayout.paddingLayout(2),
+            JAVA_INT.withName("unused")
+        ).withName("keysym")
+    ).withName("SDL_KeyboardEvent");
+    static final VarHandle const$1 = constants$117.const$0.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$2 = constants$117.const$0.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$3 = constants$117.const$0.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
+    static final VarHandle const$4 = constants$117.const$0.varHandle(MemoryLayout.PathElement.groupElement("state"));
+    static final VarHandle const$5 = constants$117.const$0.varHandle(MemoryLayout.PathElement.groupElement("repeat"));
 }
 
 

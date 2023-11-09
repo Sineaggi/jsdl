@@ -11,35 +11,23 @@ final class constants$122 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$122() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetNumTouchpads",
-        constants$18.const$4
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetNumTouchpadFingers",
-        constants$34.const$3
-    );
-    static final FunctionDescriptor const$2 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetTouchpadFinger",
-        constants$122.const$2
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerHasSensor",
-        constants$34.const$3
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerSetSensorEnabled",
-        constants$65.const$4
-    );
+    static final VarHandle const$0 = constants$121.const$1.varHandle(MemoryLayout.PathElement.groupElement("state"));
+    static final VarHandle const$1 = constants$121.const$1.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$2 = constants$121.const$1.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final VarHandle const$3 = constants$121.const$1.varHandle(MemoryLayout.PathElement.groupElement("xrel"));
+    static final VarHandle const$4 = constants$121.const$1.varHandle(MemoryLayout.PathElement.groupElement("yrel"));
+    static final StructLayout const$5 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        JAVA_INT.withName("timestamp"),
+        JAVA_INT.withName("windowID"),
+        JAVA_INT.withName("which"),
+        JAVA_BYTE.withName("button"),
+        JAVA_BYTE.withName("state"),
+        JAVA_BYTE.withName("clicks"),
+        JAVA_BYTE.withName("padding1"),
+        JAVA_INT.withName("x"),
+        JAVA_INT.withName("y")
+    ).withName("SDL_MouseButtonEvent");
 }
 
 

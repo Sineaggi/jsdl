@@ -11,24 +11,30 @@ final class constants$71 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$71() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
-        JAVA_INT,
-        JAVA_INT
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_SetWindowGrab",
+        constants$68.const$2
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetYUVConversionModeForResolution",
-        constants$71.const$0
+        "SDL_SetWindowKeyboardGrab",
+        constants$68.const$2
     );
-    static final StructLayout const$2 = MemoryLayout.structLayout(
-        JAVA_INT.withName("format"),
-        JAVA_INT.withName("w"),
-        JAVA_INT.withName("h"),
-        JAVA_INT.withName("refresh_rate"),
-        RuntimeHelper.POINTER.withName("driverdata")
-    ).withName("SDL_DisplayMode");
-    static final VarHandle const$3 = constants$71.const$2.varHandle(MemoryLayout.PathElement.groupElement("format"));
-    static final VarHandle const$4 = constants$71.const$2.varHandle(MemoryLayout.PathElement.groupElement("w"));
-    static final VarHandle const$5 = constants$71.const$2.varHandle(MemoryLayout.PathElement.groupElement("h"));
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_SetWindowMouseGrab",
+        constants$68.const$2
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GetWindowGrab",
+        constants$13.const$1
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_GetWindowKeyboardGrab",
+        constants$13.const$1
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_GetWindowMouseGrab",
+        constants$13.const$1
+    );
 }
 
 

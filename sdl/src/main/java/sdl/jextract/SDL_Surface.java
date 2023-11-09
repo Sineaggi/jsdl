@@ -28,10 +28,10 @@ import static java.lang.foreign.ValueLayout.*;
 public class SDL_Surface {
 
     public static MemoryLayout $LAYOUT() {
-        return constants$60.const$5;
+        return constants$49.const$3;
     }
     public static VarHandle flags$VH() {
-        return constants$61.const$0;
+        return constants$49.const$4;
     }
     /**
      * Getter for field:
@@ -40,7 +40,7 @@ public class SDL_Surface {
      * }
      */
     public static int flags$get(MemorySegment seg) {
-        return (int)constants$61.const$0.get(seg);
+        return (int)constants$49.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -49,16 +49,16 @@ public class SDL_Surface {
      * }
      */
     public static void flags$set(MemorySegment seg, int x) {
-        constants$61.const$0.set(seg, x);
+        constants$49.const$4.set(seg, x);
     }
     public static int flags$get(MemorySegment seg, long index) {
-        return (int)constants$61.const$0.get(seg.asSlice(index*sizeof()));
+        return (int)constants$49.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void flags$set(MemorySegment seg, long index, int x) {
-        constants$61.const$0.set(seg.asSlice(index*sizeof()), x);
+        constants$49.const$4.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle format$VH() {
-        return constants$61.const$1;
+        return constants$49.const$5;
     }
     /**
      * Getter for field:
@@ -67,7 +67,7 @@ public class SDL_Surface {
      * }
      */
     public static MemorySegment format$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$61.const$1.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$49.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -76,16 +76,16 @@ public class SDL_Surface {
      * }
      */
     public static void format$set(MemorySegment seg, MemorySegment x) {
-        constants$61.const$1.set(seg, x);
+        constants$49.const$5.set(seg, x);
     }
     public static MemorySegment format$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$61.const$1.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$49.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void format$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$61.const$1.set(seg.asSlice(index*sizeof()), x);
+        constants$49.const$5.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle w$VH() {
-        return constants$61.const$2;
+        return constants$50.const$0;
     }
     /**
      * Getter for field:
@@ -94,7 +94,7 @@ public class SDL_Surface {
      * }
      */
     public static int w$get(MemorySegment seg) {
-        return (int)constants$61.const$2.get(seg);
+        return (int)constants$50.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -103,16 +103,16 @@ public class SDL_Surface {
      * }
      */
     public static void w$set(MemorySegment seg, int x) {
-        constants$61.const$2.set(seg, x);
+        constants$50.const$0.set(seg, x);
     }
     public static int w$get(MemorySegment seg, long index) {
-        return (int)constants$61.const$2.get(seg.asSlice(index*sizeof()));
+        return (int)constants$50.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void w$set(MemorySegment seg, long index, int x) {
-        constants$61.const$2.set(seg.asSlice(index*sizeof()), x);
+        constants$50.const$0.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle h$VH() {
-        return constants$61.const$3;
+        return constants$50.const$1;
     }
     /**
      * Getter for field:
@@ -121,7 +121,7 @@ public class SDL_Surface {
      * }
      */
     public static int h$get(MemorySegment seg) {
-        return (int)constants$61.const$3.get(seg);
+        return (int)constants$50.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -130,16 +130,16 @@ public class SDL_Surface {
      * }
      */
     public static void h$set(MemorySegment seg, int x) {
-        constants$61.const$3.set(seg, x);
+        constants$50.const$1.set(seg, x);
     }
     public static int h$get(MemorySegment seg, long index) {
-        return (int)constants$61.const$3.get(seg.asSlice(index*sizeof()));
+        return (int)constants$50.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void h$set(MemorySegment seg, long index, int x) {
-        constants$61.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$50.const$1.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle pitch$VH() {
-        return constants$61.const$4;
+        return constants$50.const$2;
     }
     /**
      * Getter for field:
@@ -148,7 +148,7 @@ public class SDL_Surface {
      * }
      */
     public static int pitch$get(MemorySegment seg) {
-        return (int)constants$61.const$4.get(seg);
+        return (int)constants$50.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -157,16 +157,16 @@ public class SDL_Surface {
      * }
      */
     public static void pitch$set(MemorySegment seg, int x) {
-        constants$61.const$4.set(seg, x);
+        constants$50.const$2.set(seg, x);
     }
     public static int pitch$get(MemorySegment seg, long index) {
-        return (int)constants$61.const$4.get(seg.asSlice(index*sizeof()));
+        return (int)constants$50.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void pitch$set(MemorySegment seg, long index, int x) {
-        constants$61.const$4.set(seg.asSlice(index*sizeof()), x);
+        constants$50.const$2.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle pixels$VH() {
-        return constants$61.const$5;
+        return constants$50.const$3;
     }
     /**
      * Getter for field:
@@ -175,7 +175,7 @@ public class SDL_Surface {
      * }
      */
     public static MemorySegment pixels$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$61.const$5.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$50.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -184,16 +184,16 @@ public class SDL_Surface {
      * }
      */
     public static void pixels$set(MemorySegment seg, MemorySegment x) {
-        constants$61.const$5.set(seg, x);
+        constants$50.const$3.set(seg, x);
     }
     public static MemorySegment pixels$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$61.const$5.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$50.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void pixels$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$61.const$5.set(seg.asSlice(index*sizeof()), x);
+        constants$50.const$3.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle userdata$VH() {
-        return constants$62.const$0;
+        return constants$50.const$4;
     }
     /**
      * Getter for field:
@@ -202,7 +202,7 @@ public class SDL_Surface {
      * }
      */
     public static MemorySegment userdata$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$62.const$0.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$50.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -211,16 +211,16 @@ public class SDL_Surface {
      * }
      */
     public static void userdata$set(MemorySegment seg, MemorySegment x) {
-        constants$62.const$0.set(seg, x);
+        constants$50.const$4.set(seg, x);
     }
     public static MemorySegment userdata$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$62.const$0.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$50.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void userdata$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$62.const$0.set(seg.asSlice(index*sizeof()), x);
+        constants$50.const$4.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle locked$VH() {
-        return constants$62.const$1;
+        return constants$50.const$5;
     }
     /**
      * Getter for field:
@@ -229,7 +229,7 @@ public class SDL_Surface {
      * }
      */
     public static int locked$get(MemorySegment seg) {
-        return (int)constants$62.const$1.get(seg);
+        return (int)constants$50.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -238,16 +238,16 @@ public class SDL_Surface {
      * }
      */
     public static void locked$set(MemorySegment seg, int x) {
-        constants$62.const$1.set(seg, x);
+        constants$50.const$5.set(seg, x);
     }
     public static int locked$get(MemorySegment seg, long index) {
-        return (int)constants$62.const$1.get(seg.asSlice(index*sizeof()));
+        return (int)constants$50.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void locked$set(MemorySegment seg, long index, int x) {
-        constants$62.const$1.set(seg.asSlice(index*sizeof()), x);
+        constants$50.const$5.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle list_blitmap$VH() {
-        return constants$62.const$2;
+        return constants$51.const$0;
     }
     /**
      * Getter for field:
@@ -256,7 +256,7 @@ public class SDL_Surface {
      * }
      */
     public static MemorySegment list_blitmap$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$62.const$2.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$51.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -265,19 +265,19 @@ public class SDL_Surface {
      * }
      */
     public static void list_blitmap$set(MemorySegment seg, MemorySegment x) {
-        constants$62.const$2.set(seg, x);
+        constants$51.const$0.set(seg, x);
     }
     public static MemorySegment list_blitmap$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$62.const$2.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$51.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void list_blitmap$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$62.const$2.set(seg.asSlice(index*sizeof()), x);
+        constants$51.const$0.set(seg.asSlice(index*sizeof()), x);
     }
     public static MemorySegment clip_rect$slice(MemorySegment seg) {
         return seg.asSlice(64, 16);
     }
     public static VarHandle map$VH() {
-        return constants$62.const$3;
+        return constants$51.const$1;
     }
     /**
      * Getter for field:
@@ -286,7 +286,7 @@ public class SDL_Surface {
      * }
      */
     public static MemorySegment map$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$62.const$3.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$51.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -295,16 +295,16 @@ public class SDL_Surface {
      * }
      */
     public static void map$set(MemorySegment seg, MemorySegment x) {
-        constants$62.const$3.set(seg, x);
+        constants$51.const$1.set(seg, x);
     }
     public static MemorySegment map$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$62.const$3.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$51.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void map$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$62.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$51.const$1.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle refcount$VH() {
-        return constants$62.const$4;
+        return constants$51.const$2;
     }
     /**
      * Getter for field:
@@ -313,7 +313,7 @@ public class SDL_Surface {
      * }
      */
     public static int refcount$get(MemorySegment seg) {
-        return (int)constants$62.const$4.get(seg);
+        return (int)constants$51.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -322,13 +322,13 @@ public class SDL_Surface {
      * }
      */
     public static void refcount$set(MemorySegment seg, int x) {
-        constants$62.const$4.set(seg, x);
+        constants$51.const$2.set(seg, x);
     }
     public static int refcount$get(MemorySegment seg, long index) {
-        return (int)constants$62.const$4.get(seg.asSlice(index*sizeof()));
+        return (int)constants$51.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void refcount$set(MemorySegment seg, long index, int x) {
-        constants$62.const$4.set(seg.asSlice(index*sizeof()), x);
+        constants$51.const$2.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }

@@ -12,28 +12,28 @@ final class constants$172 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$172() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_CreateRenderer",
-        constants$68.const$2
+        "SDL_RenderPresent",
+        constants$1.const$2
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_CreateSoftwareRenderer",
-        constants$6.const$0
+        "SDL_DestroyTexture",
+        constants$1.const$2
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GetRenderer",
-        constants$6.const$0
+        "SDL_DestroyRenderer",
+        constants$1.const$2
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_RenderGetWindow",
-        constants$6.const$0
+        "SDL_RenderFlush",
+        constants$13.const$1
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GetRendererInfo",
-        constants$6.const$4
+        "SDL_GL_BindTexture",
+        constants$15.const$5
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetRendererOutputSize",
-        constants$21.const$2
+        "SDL_GL_UnbindTexture",
+        constants$13.const$1
     );
 }
 

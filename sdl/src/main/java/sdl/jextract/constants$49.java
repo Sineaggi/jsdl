@@ -11,33 +11,43 @@ final class constants$49 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$49() {}
-    static final VarHandle const$0 = constants$48.const$4.varHandle(MemoryLayout.PathElement.groupElement("colors"));
-    static final VarHandle const$1 = constants$48.const$4.varHandle(MemoryLayout.PathElement.groupElement("version"));
-    static final VarHandle const$2 = constants$48.const$4.varHandle(MemoryLayout.PathElement.groupElement("refcount"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_UnionFRect",
+        constants$47.const$4
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_EncloseFPoints",
+        constants$48.const$0
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_IntersectFRectAndLine",
+        constants$48.const$2
+    );
     static final StructLayout const$3 = MemoryLayout.structLayout(
-        JAVA_INT.withName("format"),
+        JAVA_INT.withName("flags"),
         MemoryLayout.paddingLayout(4),
-        RuntimeHelper.POINTER.withName("palette"),
-        JAVA_BYTE.withName("BitsPerPixel"),
-        JAVA_BYTE.withName("BytesPerPixel"),
-        MemoryLayout.sequenceLayout(2, JAVA_BYTE).withName("padding"),
-        JAVA_INT.withName("Rmask"),
-        JAVA_INT.withName("Gmask"),
-        JAVA_INT.withName("Bmask"),
-        JAVA_INT.withName("Amask"),
-        JAVA_BYTE.withName("Rloss"),
-        JAVA_BYTE.withName("Gloss"),
-        JAVA_BYTE.withName("Bloss"),
-        JAVA_BYTE.withName("Aloss"),
-        JAVA_BYTE.withName("Rshift"),
-        JAVA_BYTE.withName("Gshift"),
-        JAVA_BYTE.withName("Bshift"),
-        JAVA_BYTE.withName("Ashift"),
+        RuntimeHelper.POINTER.withName("format"),
+        JAVA_INT.withName("w"),
+        JAVA_INT.withName("h"),
+        JAVA_INT.withName("pitch"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("pixels"),
+        RuntimeHelper.POINTER.withName("userdata"),
+        JAVA_INT.withName("locked"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("list_blitmap"),
+        MemoryLayout.structLayout(
+            JAVA_INT.withName("x"),
+            JAVA_INT.withName("y"),
+            JAVA_INT.withName("w"),
+            JAVA_INT.withName("h")
+        ).withName("clip_rect"),
+        RuntimeHelper.POINTER.withName("map"),
         JAVA_INT.withName("refcount"),
-        RuntimeHelper.POINTER.withName("next")
-    ).withName("SDL_PixelFormat");
-    static final VarHandle const$4 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("format"));
-    static final VarHandle const$5 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("palette"));
+        MemoryLayout.paddingLayout(4)
+    ).withName("SDL_Surface");
+    static final VarHandle const$4 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("flags"));
+    static final VarHandle const$5 = constants$49.const$3.varHandle(MemoryLayout.PathElement.groupElement("format"));
 }
 
 

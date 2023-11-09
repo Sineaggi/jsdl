@@ -11,30 +11,12 @@ final class constants$183 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$183() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_RenderDrawLinesF",
-        constants$6.const$2
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_RenderDrawRectF",
-        constants$6.const$4
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_RenderDrawRectsF",
-        constants$6.const$2
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_RenderFillRectF",
-        constants$6.const$4
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_RenderFillRectsF",
-        constants$6.const$2
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_RenderCopyF",
-        constants$5.const$3
-    );
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_JOY_CONS");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_COMBINE_JOY_CONS");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_VERTICAL_JOY_CONS");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_LUNA");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_NINTENDO_CLASSIC");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_SHIELD");
 }
 
 

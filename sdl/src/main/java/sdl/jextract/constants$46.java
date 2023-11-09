@@ -11,30 +11,17 @@ final class constants$46 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$46() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_ReadBE64",
-        constants$12.const$3
-    );
-    static final FunctionDescriptor const$1 = FunctionDescriptor.of(JAVA_LONG,
-        RuntimeHelper.POINTER,
-        JAVA_BYTE
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_WriteU8",
-        constants$46.const$1
-    );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_LONG,
-        RuntimeHelper.POINTER,
-        JAVA_SHORT
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_WriteLE16",
-        constants$46.const$3
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_WriteBE16",
-        constants$46.const$3
-    );
+    static final VarHandle const$0 = constants$45.const$4.varHandle(MemoryLayout.PathElement.groupElement("y"));
+    static final VarHandle const$1 = constants$45.const$4.varHandle(MemoryLayout.PathElement.groupElement("w"));
+    static final VarHandle const$2 = constants$45.const$4.varHandle(MemoryLayout.PathElement.groupElement("h"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        JAVA_FLOAT.withName("x"),
+        JAVA_FLOAT.withName("y"),
+        JAVA_FLOAT.withName("w"),
+        JAVA_FLOAT.withName("h")
+    ).withName("SDL_FRect");
+    static final VarHandle const$4 = constants$46.const$3.varHandle(MemoryLayout.PathElement.groupElement("x"));
+    static final VarHandle const$5 = constants$46.const$3.varHandle(MemoryLayout.PathElement.groupElement("y"));
 }
 
 

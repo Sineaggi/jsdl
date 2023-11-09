@@ -12,31 +12,33 @@ final class constants$94 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$94() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_IsScreenKeyboardShown",
-        constants$18.const$4
+        "SDL_JoystickGetGUIDFromString",
+        constants$82.const$0
     );
-    static final StructLayout const$1 = MemoryLayout.structLayout(
-        MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
-    ).withName("SDL_GUID");
-    static final FunctionDescriptor const$2 = FunctionDescriptor.ofVoid(
+    static final FunctionDescriptor const$1 = FunctionDescriptor.ofVoid(
         MemoryLayout.structLayout(
             MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
         ).withName("SDL_GUID"),
         RuntimeHelper.POINTER,
-        JAVA_INT
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GUIDToString",
-        constants$94.const$2
-    );
-    static final FunctionDescriptor const$4 = FunctionDescriptor.of(MemoryLayout.structLayout(
-        MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
-    ).withName("SDL_GUID"),
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
         RuntimeHelper.POINTER
     );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_GetJoystickGUIDInfo",
+        constants$94.const$1
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickGetAttached",
+        constants$13.const$1
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickInstanceID",
+        constants$13.const$1
+    );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GUIDFromString",
-        constants$94.const$4
+        "SDL_JoystickNumAxes",
+        constants$13.const$1
     );
 }
 

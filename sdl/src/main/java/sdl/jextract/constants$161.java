@@ -11,22 +11,30 @@ final class constants$161 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$161() {}
-    static final VarHandle const$0 = constants$160.const$4.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final StructLayout const$1 = MemoryLayout.structLayout(
-        JAVA_INT.withName("type"),
-        JAVA_INT.withName("timestamp")
-    ).withName("SDL_OSEvent");
-    static final VarHandle const$2 = constants$161.const$1.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$3 = constants$161.const$1.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final StructLayout const$4 = MemoryLayout.structLayout(
-        JAVA_INT.withName("type"),
-        JAVA_INT.withName("timestamp"),
-        JAVA_INT.withName("windowID"),
-        JAVA_INT.withName("code"),
-        RuntimeHelper.POINTER.withName("data1"),
-        RuntimeHelper.POINTER.withName("data2")
-    ).withName("SDL_UserEvent");
-    static final VarHandle const$5 = constants$161.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_SetTextureAlphaMod",
+        constants$55.const$0
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_GetTextureAlphaMod",
+        constants$8.const$2
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_SetTextureBlendMode",
+        constants$28.const$5
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GetTextureBlendMode",
+        constants$8.const$2
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_SetTextureScaleMode",
+        constants$28.const$5
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_GetTextureScaleMode",
+        constants$8.const$2
+    );
 }
 
 

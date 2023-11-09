@@ -11,21 +11,18 @@ final class constants$37 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$37() {}
-    static final MethodHandle const$0 = RuntimeHelper.upcallHandle(SDL_RWops.seek.class, "apply", constants$36.const$5);
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        constants$36.const$5
-    );
-    static final VarHandle const$2 = constants$36.const$1.varHandle(MemoryLayout.PathElement.groupElement("seek"));
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_LONG,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        JAVA_LONG,
-        JAVA_LONG
-    );
-    static final MethodHandle const$4 = RuntimeHelper.upcallHandle(SDL_RWops.read.class, "apply", constants$37.const$3);
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        constants$37.const$3
-    );
+    static final VarHandle const$0 = constants$36.const$2.varHandle(MemoryLayout.PathElement.groupElement("a"));
+    static final StructLayout const$1 = MemoryLayout.structLayout(
+        JAVA_INT.withName("ncolors"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("colors"),
+        JAVA_INT.withName("version"),
+        JAVA_INT.withName("refcount")
+    ).withName("SDL_Palette");
+    static final VarHandle const$2 = constants$37.const$1.varHandle(MemoryLayout.PathElement.groupElement("ncolors"));
+    static final VarHandle const$3 = constants$37.const$1.varHandle(MemoryLayout.PathElement.groupElement("colors"));
+    static final VarHandle const$4 = constants$37.const$1.varHandle(MemoryLayout.PathElement.groupElement("version"));
+    static final VarHandle const$5 = constants$37.const$1.varHandle(MemoryLayout.PathElement.groupElement("refcount"));
 }
 
 

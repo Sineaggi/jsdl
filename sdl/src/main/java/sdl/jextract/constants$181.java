@@ -11,30 +11,12 @@ final class constants$181 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$181() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_RenderDrawLines",
-        constants$6.const$2
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_RenderDrawRect",
-        constants$6.const$4
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_RenderDrawRects",
-        constants$6.const$2
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_RenderFillRect",
-        constants$6.const$4
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_RenderFillRects",
-        constants$6.const$2
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_RenderCopy",
-        constants$5.const$3
-    );
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_GAMECONTROLLER_USE_BUTTON_LABELS");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_GRAB_KEYBOARD");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_HIDAPI_IGNORE_DEVICES");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_IOS_IDLE_TIMER_DISABLED");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_IME_INTERNAL_EDITING");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_IME_SHOW_UI");
 }
 
 

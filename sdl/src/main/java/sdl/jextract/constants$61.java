@@ -11,12 +11,30 @@ final class constants$61 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$61() {}
-    static final VarHandle const$0 = constants$60.const$5.varHandle(MemoryLayout.PathElement.groupElement("flags"));
-    static final VarHandle const$1 = constants$60.const$5.varHandle(MemoryLayout.PathElement.groupElement("format"));
-    static final VarHandle const$2 = constants$60.const$5.varHandle(MemoryLayout.PathElement.groupElement("w"));
-    static final VarHandle const$3 = constants$60.const$5.varHandle(MemoryLayout.PathElement.groupElement("h"));
-    static final VarHandle const$4 = constants$60.const$5.varHandle(MemoryLayout.PathElement.groupElement("pitch"));
-    static final VarHandle const$5 = constants$60.const$5.varHandle(MemoryLayout.PathElement.groupElement("pixels"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_VideoQuit",
+        constants$26.const$5
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_GetCurrentVideoDriver",
+        constants$0.const$0
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_GetNumVideoDisplays",
+        constants$1.const$4
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GetDisplayName",
+        constants$28.const$0
+    );
+    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_INT,
+        JAVA_INT,
+        RuntimeHelper.POINTER
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_GetDisplayBounds",
+        constants$61.const$4
+    );
 }
 
 

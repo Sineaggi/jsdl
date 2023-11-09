@@ -11,30 +11,22 @@ final class constants$121 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$121() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetAxis",
-        constants$108.const$0
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetButtonFromString",
-        constants$18.const$4
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetStringForButton",
-        constants$33.const$5
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetBindForButton",
-        constants$120.const$3
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerHasButton",
-        constants$34.const$3
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetButton",
-        constants$108.const$4
-    );
+    static final VarHandle const$0 = constants$120.const$3.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
+    static final StructLayout const$1 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        JAVA_INT.withName("timestamp"),
+        JAVA_INT.withName("windowID"),
+        JAVA_INT.withName("which"),
+        JAVA_INT.withName("state"),
+        JAVA_INT.withName("x"),
+        JAVA_INT.withName("y"),
+        JAVA_INT.withName("xrel"),
+        JAVA_INT.withName("yrel")
+    ).withName("SDL_MouseMotionEvent");
+    static final VarHandle const$2 = constants$121.const$1.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$3 = constants$121.const$1.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$4 = constants$121.const$1.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
+    static final VarHandle const$5 = constants$121.const$1.varHandle(MemoryLayout.PathElement.groupElement("which"));
 }
 
 

@@ -11,14 +11,33 @@ final class constants$38 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$38() {}
-    static final VarHandle const$0 = constants$36.const$1.varHandle(MemoryLayout.PathElement.groupElement("read"));
-    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(SDL_RWops.write.class, "apply", constants$37.const$3);
-    static final VarHandle const$2 = constants$36.const$1.varHandle(MemoryLayout.PathElement.groupElement("write"));
-    static final MethodHandle const$3 = RuntimeHelper.upcallHandle(SDL_RWops.close.class, "apply", constants$18.const$4);
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        constants$18.const$4
-    );
-    static final VarHandle const$5 = constants$36.const$1.varHandle(MemoryLayout.PathElement.groupElement("close"));
+    static final StructLayout const$0 = MemoryLayout.structLayout(
+        JAVA_INT.withName("format"),
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("palette"),
+        JAVA_BYTE.withName("BitsPerPixel"),
+        JAVA_BYTE.withName("BytesPerPixel"),
+        MemoryLayout.sequenceLayout(2, JAVA_BYTE).withName("padding"),
+        JAVA_INT.withName("Rmask"),
+        JAVA_INT.withName("Gmask"),
+        JAVA_INT.withName("Bmask"),
+        JAVA_INT.withName("Amask"),
+        JAVA_BYTE.withName("Rloss"),
+        JAVA_BYTE.withName("Gloss"),
+        JAVA_BYTE.withName("Bloss"),
+        JAVA_BYTE.withName("Aloss"),
+        JAVA_BYTE.withName("Rshift"),
+        JAVA_BYTE.withName("Gshift"),
+        JAVA_BYTE.withName("Bshift"),
+        JAVA_BYTE.withName("Ashift"),
+        JAVA_INT.withName("refcount"),
+        RuntimeHelper.POINTER.withName("next")
+    ).withName("SDL_PixelFormat");
+    static final VarHandle const$1 = constants$38.const$0.varHandle(MemoryLayout.PathElement.groupElement("format"));
+    static final VarHandle const$2 = constants$38.const$0.varHandle(MemoryLayout.PathElement.groupElement("palette"));
+    static final VarHandle const$3 = constants$38.const$0.varHandle(MemoryLayout.PathElement.groupElement("BitsPerPixel"));
+    static final VarHandle const$4 = constants$38.const$0.varHandle(MemoryLayout.PathElement.groupElement("BytesPerPixel"));
+    static final VarHandle const$5 = constants$38.const$0.varHandle(MemoryLayout.PathElement.groupElement("Rmask"));
 }
 
 

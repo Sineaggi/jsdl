@@ -11,36 +11,29 @@ final class constants$164 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$164() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_RenderSetLogicalSize",
+        constants$54.const$0
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_PeepEvents",
-        constants$164.const$0
+        "SDL_RenderGetLogicalSize",
+        constants$47.const$4
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_HasEvent",
-        constants$8.const$0
+        "SDL_RenderSetIntegerScale",
+        constants$28.const$5
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_HasEvents",
-        constants$71.const$0
+        "SDL_RenderGetIntegerScale",
+        constants$13.const$1
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_FlushEvent",
-        constants$70.const$3
+        "SDL_RenderSetViewport",
+        constants$8.const$2
     );
-    static final FunctionDescriptor const$5 = FunctionDescriptor.ofVoid(
-        JAVA_INT,
-        JAVA_INT
-    );
-    static final MethodHandle const$6 = RuntimeHelper.downcallHandle(
-        "SDL_FlushEvents",
-        constants$164.const$5
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_RenderGetViewport",
+        constants$56.const$0
     );
 }
 

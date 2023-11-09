@@ -12,29 +12,28 @@ final class constants$75 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$75() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GetDesktopDisplayMode",
-        constants$73.const$3
+        "SDL_GL_GetProcAddress",
+        constants$2.const$0
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetCurrentDisplayMode",
-        constants$73.const$3
+        "SDL_GL_UnloadLibrary",
+        constants$26.const$5
     );
-    static final FunctionDescriptor const$2 = FunctionDescriptor.of(RuntimeHelper.POINTER,
-        JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_GL_ExtensionSupported",
+        constants$13.const$1
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GetClosestDisplayMode",
-        constants$75.const$2
+        "SDL_GL_ResetAttributes",
+        constants$26.const$5
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GetPointDisplayIndex",
-        constants$18.const$4
+        "SDL_GL_SetAttribute",
+        constants$59.const$1
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetRectDisplayIndex",
-        constants$18.const$4
+        "SDL_GL_GetAttribute",
+        constants$61.const$4
     );
 }
 

@@ -11,19 +11,29 @@ final class constants$3 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$3() {}
-    static final MethodHandle const$0 = RuntimeHelper.upcallHandle(SDL_GetOriginalMemoryFunctions$malloc_func.class, "apply", constants$0.const$2);
-    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(SDL_GetOriginalMemoryFunctions$calloc_func.class, "apply", constants$0.const$4);
-    static final MethodHandle const$2 = RuntimeHelper.upcallHandle(SDL_GetOriginalMemoryFunctions$realloc_func.class, "apply", constants$1.const$0);
-    static final MethodHandle const$3 = RuntimeHelper.upcallHandle(SDL_GetOriginalMemoryFunctions$free_func.class, "apply", constants$1.const$2);
-    static final FunctionDescriptor const$4 = FunctionDescriptor.ofVoid(
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_isalpha",
+        constants$2.const$4
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_isalnum",
+        constants$2.const$4
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_isblank",
+        constants$2.const$4
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_iscntrl",
+        constants$2.const$4
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_isdigit",
+        constants$2.const$4
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetOriginalMemoryFunctions",
-        constants$3.const$4
+        "SDL_isxdigit",
+        constants$2.const$4
     );
 }
 

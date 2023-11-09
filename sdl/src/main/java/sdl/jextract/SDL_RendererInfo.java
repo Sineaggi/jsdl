@@ -22,10 +22,10 @@ import static java.lang.foreign.ValueLayout.*;
 public class SDL_RendererInfo {
 
     public static MemoryLayout $LAYOUT() {
-        return constants$170.const$1;
+        return constants$157.const$1;
     }
     public static VarHandle name$VH() {
-        return constants$170.const$2;
+        return constants$157.const$2;
     }
     /**
      * Getter for field:
@@ -34,7 +34,7 @@ public class SDL_RendererInfo {
      * }
      */
     public static MemorySegment name$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$170.const$2.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$157.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -43,16 +43,16 @@ public class SDL_RendererInfo {
      * }
      */
     public static void name$set(MemorySegment seg, MemorySegment x) {
-        constants$170.const$2.set(seg, x);
+        constants$157.const$2.set(seg, x);
     }
     public static MemorySegment name$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$170.const$2.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$157.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void name$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$170.const$2.set(seg.asSlice(index*sizeof()), x);
+        constants$157.const$2.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle flags$VH() {
-        return constants$170.const$3;
+        return constants$157.const$3;
     }
     /**
      * Getter for field:
@@ -61,7 +61,7 @@ public class SDL_RendererInfo {
      * }
      */
     public static int flags$get(MemorySegment seg) {
-        return (int)constants$170.const$3.get(seg);
+        return (int)constants$157.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -70,16 +70,16 @@ public class SDL_RendererInfo {
      * }
      */
     public static void flags$set(MemorySegment seg, int x) {
-        constants$170.const$3.set(seg, x);
+        constants$157.const$3.set(seg, x);
     }
     public static int flags$get(MemorySegment seg, long index) {
-        return (int)constants$170.const$3.get(seg.asSlice(index*sizeof()));
+        return (int)constants$157.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void flags$set(MemorySegment seg, long index, int x) {
-        constants$170.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$157.const$3.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle num_texture_formats$VH() {
-        return constants$170.const$4;
+        return constants$157.const$4;
     }
     /**
      * Getter for field:
@@ -88,7 +88,7 @@ public class SDL_RendererInfo {
      * }
      */
     public static int num_texture_formats$get(MemorySegment seg) {
-        return (int)constants$170.const$4.get(seg);
+        return (int)constants$157.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -97,19 +97,19 @@ public class SDL_RendererInfo {
      * }
      */
     public static void num_texture_formats$set(MemorySegment seg, int x) {
-        constants$170.const$4.set(seg, x);
+        constants$157.const$4.set(seg, x);
     }
     public static int num_texture_formats$get(MemorySegment seg, long index) {
-        return (int)constants$170.const$4.get(seg.asSlice(index*sizeof()));
+        return (int)constants$157.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void num_texture_formats$set(MemorySegment seg, long index, int x) {
-        constants$170.const$4.set(seg.asSlice(index*sizeof()), x);
+        constants$157.const$4.set(seg.asSlice(index*sizeof()), x);
     }
     public static MemorySegment texture_formats$slice(MemorySegment seg) {
         return seg.asSlice(16, 64);
     }
     public static VarHandle max_texture_width$VH() {
-        return constants$170.const$5;
+        return constants$157.const$5;
     }
     /**
      * Getter for field:
@@ -118,7 +118,7 @@ public class SDL_RendererInfo {
      * }
      */
     public static int max_texture_width$get(MemorySegment seg) {
-        return (int)constants$170.const$5.get(seg);
+        return (int)constants$157.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -127,16 +127,16 @@ public class SDL_RendererInfo {
      * }
      */
     public static void max_texture_width$set(MemorySegment seg, int x) {
-        constants$170.const$5.set(seg, x);
+        constants$157.const$5.set(seg, x);
     }
     public static int max_texture_width$get(MemorySegment seg, long index) {
-        return (int)constants$170.const$5.get(seg.asSlice(index*sizeof()));
+        return (int)constants$157.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void max_texture_width$set(MemorySegment seg, long index, int x) {
-        constants$170.const$5.set(seg.asSlice(index*sizeof()), x);
+        constants$157.const$5.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle max_texture_height$VH() {
-        return constants$171.const$0;
+        return constants$158.const$0;
     }
     /**
      * Getter for field:
@@ -145,7 +145,7 @@ public class SDL_RendererInfo {
      * }
      */
     public static int max_texture_height$get(MemorySegment seg) {
-        return (int)constants$171.const$0.get(seg);
+        return (int)constants$158.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -154,13 +154,13 @@ public class SDL_RendererInfo {
      * }
      */
     public static void max_texture_height$set(MemorySegment seg, int x) {
-        constants$171.const$0.set(seg, x);
+        constants$158.const$0.set(seg, x);
     }
     public static int max_texture_height$get(MemorySegment seg, long index) {
-        return (int)constants$171.const$0.get(seg.asSlice(index*sizeof()));
+        return (int)constants$158.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void max_texture_height$set(MemorySegment seg, long index, int x) {
-        constants$171.const$0.set(seg.asSlice(index*sizeof()), x);
+        constants$158.const$0.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }

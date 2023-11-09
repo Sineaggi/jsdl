@@ -12,28 +12,28 @@ final class constants$79 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$79() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowSize",
-        constants$78.const$3
+        "SDL_SetModState",
+        constants$58.const$5
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowSize",
-        constants$59.const$0
+        "SDL_GetKeyFromScancode",
+        constants$2.const$4
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowBordersSize",
-        constants$59.const$4
+        "SDL_GetScancodeFromKey",
+        constants$2.const$4
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowSizeInPixels",
-        constants$59.const$0
+        "SDL_GetScancodeName",
+        constants$28.const$0
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SetWindowMinimumSize",
-        constants$78.const$3
+        "SDL_GetScancodeFromName",
+        constants$13.const$1
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GetWindowMinimumSize",
-        constants$59.const$0
+        "SDL_GetKeyName",
+        constants$28.const$0
     );
 }
 

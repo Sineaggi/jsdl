@@ -12,28 +12,28 @@ final class constants$69 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$69() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_PremultiplyAlpha",
-        constants$68.const$4
+        "SDL_ShowWindow",
+        constants$1.const$2
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_FillRect",
-        constants$6.const$2
+        "SDL_HideWindow",
+        constants$1.const$2
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_FillRects",
-        constants$54.const$0
+        "SDL_RaiseWindow",
+        constants$1.const$2
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_UpperBlit",
-        constants$5.const$3
+        "SDL_MaximizeWindow",
+        constants$1.const$2
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_LowerBlit",
-        constants$5.const$3
+        "SDL_MinimizeWindow",
+        constants$1.const$2
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_SoftStretch",
-        constants$5.const$3
+        "SDL_RestoreWindow",
+        constants$1.const$2
     );
 }
 
