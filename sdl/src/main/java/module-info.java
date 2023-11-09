@@ -20,5 +20,4 @@ module jsdl.sdl {
     exports sdl.events.controllersensor;
     exports sdl.events.controllerbutton;
     exports sdl.surface;
-    // todo: un-open this module and fill out exported packages
 }
