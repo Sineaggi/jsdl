@@ -320,5 +320,10 @@ class ForeignRegistrationFeature implements Feature {
                 JAVA_FLOAT,
                 JAVA_FLOAT
         ));
+        RuntimeForeignAccess.registerForDowncall(FunctionDescriptor.of(MemoryLayout.structLayout(
+                        MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
+                ).withName("SDL_GUID"),
+                POINTER
+        ));
     }
 }
