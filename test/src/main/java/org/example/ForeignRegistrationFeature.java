@@ -9,6 +9,7 @@ import static java.lang.foreign.ValueLayout.*;
 
 class ForeignRegistrationFeature implements Feature {
     private static final AddressLayout POINTER = ValueLayout.ADDRESS.withTargetLayout(MemoryLayout.sequenceLayout(JAVA_BYTE));
+
     public void duringSetup(DuringSetupAccess access) {
         RuntimeForeignAccess.registerForDowncall(FunctionDescriptor.of(POINTER,
                 POINTER
@@ -319,6 +320,5 @@ class ForeignRegistrationFeature implements Feature {
                 JAVA_FLOAT,
                 JAVA_FLOAT
         ));
-        RuntimeForeignAccess.registerForDowncall(FunctionDescriptor.of(POINTER));
     }
 }
