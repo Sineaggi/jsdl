@@ -1,6 +1,6 @@
 plugins {
     java
-    id("org.graalvm.buildtools.native") version "0.9.28" apply false
+    alias(libs.plugins.buildtools.native) apply false
 }
 
 group = "org.example"

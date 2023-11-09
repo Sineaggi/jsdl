@@ -1,7 +1,7 @@
 plugins {
     java
     application
-    id("org.graalvm.buildtools.native")
+    alias(libs.plugins.buildtools.native)
 }
 
 group = "org.example"
