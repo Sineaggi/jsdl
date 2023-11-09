@@ -19,14 +19,8 @@ java {
 
 dependencies {
     implementation(projects.sdl)
-    compileOnly("org.graalvm.sdk:nativeimage:23.1.1")
-//     testImplementation(platform("org.junit:junit-bom:5.10.0"))
-//     testImplementation("org.junit.jupiter:junit-jupiter")
+    compileOnly(libs.nativeimage)
 }
-
-// tasks.test {
-//     useJUnitPlatform()
-// }
 
 testing {
     suites {
