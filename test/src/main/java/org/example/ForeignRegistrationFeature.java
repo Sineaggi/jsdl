@@ -294,6 +294,31 @@ class ForeignRegistrationFeature implements Feature {
                 JAVA_INT,
                 POINTER
         ));
+        RuntimeForeignAccess.registerForDowncall(FunctionDescriptor.of(JAVA_INT,
+                POINTER,
+                JAVA_INT,
+                POINTER,
+                JAVA_INT
+        ));
+        RuntimeForeignAccess.registerForDowncall(FunctionDescriptor.of(JAVA_INT,
+                POINTER,
+                JAVA_INT,
+                POINTER,
+                POINTER,
+                JAVA_INT
+        ));
+        RuntimeForeignAccess.registerForDowncall(FunctionDescriptor.of(JAVA_INT,
+                POINTER,
+                JAVA_FLOAT,
+                JAVA_FLOAT
+        ));
+        RuntimeForeignAccess.registerForDowncall(FunctionDescriptor.of(JAVA_INT,
+                POINTER,
+                JAVA_FLOAT,
+                JAVA_FLOAT,
+                JAVA_FLOAT,
+                JAVA_FLOAT
+        ));
         RuntimeForeignAccess.registerForDowncall(FunctionDescriptor.of(POINTER));
     }
 }
