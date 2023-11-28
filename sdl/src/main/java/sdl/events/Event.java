@@ -27,6 +27,8 @@ import sdl.events.key.KeyboardEvent;
 import sdl.events.key.Keysym;
 import sdl.events.motion.MouseMotion;
 import sdl.events.motion.MouseMotionEvent;
+import sdl.events.mousewheel.MouseWheel;
+import sdl.events.mousewheel.MouseWheelEvent;
 import sdl.events.quit.Quit;
 import sdl.events.quit.QuitEvent;
 import sdl.gamecontroller.GameControllerButton;
@@ -42,9 +44,11 @@ import sdl.jextract.SDL_KeyboardEvent;
 import sdl.jextract.SDL_Keysym;
 import sdl.jextract.SDL_MouseButtonEvent;
 import sdl.jextract.SDL_MouseMotionEvent;
+import sdl.jextract.SDL_MouseWheelEvent;
 import sdl.joystick.JoystickId;
 import sdl.joystick.JoystickPowerLevel;
 import sdl.keycode.Keycode;
+import sdl.mouse.MouseWheelDirection;
 import sdl.scancode.Scancode;
 
 import java.lang.foreign.Arena;
@@ -67,7 +71,7 @@ import static sdl.jextract.sdl_h.SDL_PeepEvents;
 import static sdl.jextract.sdl_h.SDL_PumpEvents;
 import static sdl.jextract.sdl_h.SDL_TRUE;
 
-public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, ControllerAxisEvent, ControllerButtonEvent, ControllerDeviceEvent, ControllerSensorEvent, ControllerTouchpad, JoyBatteryEvent, KeyboardEvent, MouseMotionEvent, QuitEvent {
+public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, ControllerAxisEvent, ControllerButtonEvent, ControllerDeviceEvent, ControllerSensorEvent, ControllerTouchpad, JoyBatteryEvent, KeyboardEvent, MouseMotionEvent, MouseWheelEvent, QuitEvent {
     static List<Event> peepEvents(int numEvents, int action, int minType, int maxType) {
         try (var arena = Arena.ofConfined()) {
             var events = SDL_Event.allocateArray(numEvents, arena);
@@ -77,7 +81,6 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
             } else if (peepedEventCount == 0) {
                 return Collections.emptyList();
             } else {
-                // todo: read events
                 List<Event> mappedEvents = new ArrayList<>(peepedEventCount);
                 for (int i = 0; i < peepedEventCount; i++) {
                     var eventSlice = events.asSlice(i, SDL_Event.$LAYOUT());
@@ -165,9 +168,14 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                                 SDL_MouseButtonEvent.x$get(eventSlice),
                                 SDL_MouseButtonEvent.y$get(eventSlice)
                         );
-                        case MouseWheel -> {
-                            yield new TodoEvent(MouseWheel);
-                        }
+                        case MouseWheel -> new MouseWheel(
+                                SDL_MouseWheelEvent.which$get(eventSlice),
+                                SDL_MouseWheelEvent.x$get(eventSlice),
+                                SDL_MouseWheelEvent.y$get(eventSlice),
+                                MouseWheelDirection.valueOf(SDL_MouseWheelEvent.direction$get(eventSlice)),
+                                SDL_MouseWheelEvent.preciseX$get(eventSlice),
+                                SDL_MouseWheelEvent.preciseY$get(eventSlice)
+                        );
                         case JoyAxisMotion -> {
                             yield new TodoEvent(JoyAxisMotion);
                         }
@@ -311,7 +319,7 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                     };
                     mappedEvents.add(i, event);
                 }
-                return mappedEvents;
+                return Collections.unmodifiableList(mappedEvents);
             }
         }
     }
