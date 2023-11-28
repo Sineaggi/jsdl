@@ -16,6 +16,9 @@ import sdl.events.controllerdevice.ControllerDeviceRemoved;
 import sdl.events.controllersensor.ControllerSensorEvent;
 import sdl.events.controllersensor.ControllerSensorUpdate;
 import sdl.events.controllertouchpad.ControllerTouchpad;
+import sdl.events.controllertouchpad.ControllerTouchpadDown;
+import sdl.events.controllertouchpad.ControllerTouchpadMotion;
+import sdl.events.controllertouchpad.ControllerTouchpadUp;
 import sdl.events.joybattery.JoyBatteryEvent;
 import sdl.events.joybattery.JoyBatteryUpdated;
 import sdl.events.key.KeyDown;
@@ -32,6 +35,7 @@ import sdl.jextract.SDL_ControllerAxisEvent;
 import sdl.jextract.SDL_ControllerButtonEvent;
 import sdl.jextract.SDL_ControllerDeviceEvent;
 import sdl.jextract.SDL_ControllerSensorEvent;
+import sdl.jextract.SDL_ControllerTouchpadEvent;
 import sdl.jextract.SDL_Event;
 import sdl.jextract.SDL_JoyBatteryEvent;
 import sdl.jextract.SDL_KeyboardEvent;
@@ -213,15 +217,30 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                         case ControllerDeviceRemapped -> {
                             throw new RuntimeException(STR."\{type}");
                         }
-                        case ControllerTouchpadDown -> {
-                            throw new RuntimeException(STR."\{type}");
-                        }
-                        case ControllerTouchpadMotion -> {
-                            throw new RuntimeException(STR."\{type}");
-                        }
-                        case ControllerTouchpadUp -> {
-                            throw new RuntimeException(STR."\{type}");
-                        }
+                        case ControllerTouchpadDown -> new ControllerTouchpadDown(
+                                SDL_ControllerTouchpadEvent.which$get(slicedEvent),
+                                SDL_ControllerTouchpadEvent.touchpad$get(slicedEvent),
+                                SDL_ControllerTouchpadEvent.finger$get(slicedEvent),
+                                SDL_ControllerTouchpadEvent.x$get(slicedEvent),
+                                SDL_ControllerTouchpadEvent.y$get(slicedEvent),
+                                SDL_ControllerTouchpadEvent.pressure$get(slicedEvent)
+                        );
+                        case ControllerTouchpadMotion -> new ControllerTouchpadMotion(
+                                SDL_ControllerTouchpadEvent.which$get(slicedEvent),
+                                SDL_ControllerTouchpadEvent.touchpad$get(slicedEvent),
+                                SDL_ControllerTouchpadEvent.finger$get(slicedEvent),
+                                SDL_ControllerTouchpadEvent.x$get(slicedEvent),
+                                SDL_ControllerTouchpadEvent.y$get(slicedEvent),
+                                SDL_ControllerTouchpadEvent.pressure$get(slicedEvent)
+                        );
+                        case ControllerTouchpadUp -> new ControllerTouchpadUp(
+                                SDL_ControllerTouchpadEvent.which$get(slicedEvent),
+                                SDL_ControllerTouchpadEvent.touchpad$get(slicedEvent),
+                                SDL_ControllerTouchpadEvent.finger$get(slicedEvent),
+                                SDL_ControllerTouchpadEvent.x$get(slicedEvent),
+                                SDL_ControllerTouchpadEvent.y$get(slicedEvent),
+                                SDL_ControllerTouchpadEvent.pressure$get(slicedEvent)
+                        );
                         case ControllerSensorUpdate -> {
                             var data = SDL_ControllerSensorEvent.data$slice(slicedEvent)
                                     .toArray(ValueLayout.OfFloat.JAVA_FLOAT);
