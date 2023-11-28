@@ -118,9 +118,9 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                         case KeyDown -> {
                             var keysym = SDL_KeyboardEvent.keysym$slice(slicedEvent);
                             yield new KeyDown(
-                                    SDL_KeyboardEvent.windowID$get(events, i),
-                                    GeneralInputStateDefinitions.valueOf(SDL_KeyboardEvent.state$get(events, i)),
-                                    SDL_KeyboardEvent.repeat$get(events, i) == SDL_TRUE(),
+                                    SDL_KeyboardEvent.windowID$get(slicedEvent),
+                                    GeneralInputStateDefinitions.valueOf(SDL_KeyboardEvent.state$get(slicedEvent)),
+                                    SDL_KeyboardEvent.repeat$get(slicedEvent) == SDL_TRUE(),
                                     new Keysym(
                                             Scancode.valueOf(SDL_Keysym.scancode$get(keysym)),
                                             Keycode.valueOf(SDL_Keysym.sym$get(keysym)),
@@ -131,9 +131,9 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                         case KeyUp -> {
                             var keysym = SDL_KeyboardEvent.keysym$slice(slicedEvent);
                             yield new KeyUp(
-                                    SDL_KeyboardEvent.windowID$get(events, i),
-                                    GeneralInputStateDefinitions.valueOf(SDL_KeyboardEvent.state$get(events, i)),
-                                    SDL_KeyboardEvent.repeat$get(events, i) == SDL_TRUE(),
+                                    SDL_KeyboardEvent.windowID$get(slicedEvent),
+                                    GeneralInputStateDefinitions.valueOf(SDL_KeyboardEvent.state$get(slicedEvent)),
+                                    SDL_KeyboardEvent.repeat$get(slicedEvent) == SDL_TRUE(),
                                     new Keysym(
                                             Scancode.valueOf(SDL_Keysym.scancode$get(keysym)),
                                             Keycode.valueOf(SDL_Keysym.sym$get(keysym)),
@@ -154,16 +154,16 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                             throw new RuntimeException(STR."\{type}");
                         }
                         case MouseMotion -> new MouseMotion(
-                                SDL_MouseMotionEvent.x$get(events, i),
-                                SDL_MouseMotionEvent.y$get(events, i)
+                                SDL_MouseMotionEvent.x$get(slicedEvent),
+                                SDL_MouseMotionEvent.y$get(slicedEvent)
                         );
                         case MouseButtonDown -> new MouseButtonDown(
-                                SDL_MouseButtonEvent.x$get(events, i),
-                                SDL_MouseButtonEvent.y$get(events, i)
+                                SDL_MouseButtonEvent.x$get(slicedEvent),
+                                SDL_MouseButtonEvent.y$get(slicedEvent)
                         );
                         case MouseButtonUp -> new MouseButtonUp(
-                                SDL_MouseButtonEvent.x$get(events, i),
-                                SDL_MouseButtonEvent.y$get(events, i)
+                                SDL_MouseButtonEvent.x$get(slicedEvent),
+                                SDL_MouseButtonEvent.y$get(slicedEvent)
                         );
                         case MouseWheel -> {
                             yield new TodoEvent(MouseWheel);
@@ -190,29 +190,29 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                             yield new TodoEvent(JoyDeviceRemoved);
                         }
                         case JoyBatteryUpdated -> new JoyBatteryUpdated(
-                                JoystickId.wrap(SDL_JoyBatteryEvent.which$get(events, i)),
-                                JoystickPowerLevel.valueOf(SDL_JoyBatteryEvent.level$get(events, i))
+                                JoystickId.wrap(SDL_JoyBatteryEvent.which$get(slicedEvent)),
+                                JoystickPowerLevel.valueOf(SDL_JoyBatteryEvent.level$get(slicedEvent))
                         );
                         case ControllerAxisMotion -> new ControllerAxisMotion(
-                                JoystickId.wrap(SDL_ControllerAxisEvent.which$get(events, i)),
-                                GameControllerAxis.valueOf(SDL_ControllerAxisEvent.axis$get(events, i)),
-                                SDL_ControllerAxisEvent.value$get(events, i)
+                                JoystickId.wrap(SDL_ControllerAxisEvent.which$get(slicedEvent)),
+                                GameControllerAxis.valueOf(SDL_ControllerAxisEvent.axis$get(slicedEvent)),
+                                SDL_ControllerAxisEvent.value$get(slicedEvent)
                         );
                         case ControllerButtonDown -> new ControllerButtonDown(
-                                JoystickId.wrap(SDL_ControllerButtonEvent.which$get(events, i)),
-                                GameControllerButton.valueOf(SDL_ControllerButtonEvent.button$get(events, i)),
-                                GeneralInputStateDefinitions.valueOf(SDL_ControllerButtonEvent.state$get(events, i))
+                                JoystickId.wrap(SDL_ControllerButtonEvent.which$get(slicedEvent)),
+                                GameControllerButton.valueOf(SDL_ControllerButtonEvent.button$get(slicedEvent)),
+                                GeneralInputStateDefinitions.valueOf(SDL_ControllerButtonEvent.state$get(slicedEvent))
                         );
                         case ControllerButtonUp -> new ControllerButtonUp(
-                                JoystickId.wrap(SDL_ControllerButtonEvent.which$get(events, i)),
-                                GameControllerButton.valueOf(SDL_ControllerButtonEvent.button$get(events, i)),
-                                GeneralInputStateDefinitions.valueOf(SDL_ControllerButtonEvent.state$get(events, i))
+                                JoystickId.wrap(SDL_ControllerButtonEvent.which$get(slicedEvent)),
+                                GameControllerButton.valueOf(SDL_ControllerButtonEvent.button$get(slicedEvent)),
+                                GeneralInputStateDefinitions.valueOf(SDL_ControllerButtonEvent.state$get(slicedEvent))
                         );
                         case ControllerDeviceAdded -> new ControllerDeviceAdded(
-                                SDL_ControllerDeviceEvent.which$get(events, i)
+                                SDL_ControllerDeviceEvent.which$get(slicedEvent)
                         );
                         case ControllerDeviceRemoved -> new ControllerDeviceRemoved(
-                            JoystickId.wrap(SDL_ControllerDeviceEvent.which$get(events, i))
+                            JoystickId.wrap(SDL_ControllerDeviceEvent.which$get(slicedEvent))
                         );
                         case ControllerDeviceRemapped -> {
                             throw new RuntimeException(STR."\{type}");
@@ -245,10 +245,10 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                             var data = SDL_ControllerSensorEvent.data$slice(slicedEvent)
                                     .toArray(ValueLayout.OfFloat.JAVA_FLOAT);
                             yield new ControllerSensorUpdate(
-                                    SDL_ControllerSensorEvent.which$get(events, i),
-                                    SensorType.valueOf(SDL_ControllerSensorEvent.sensor$get(events, i)),
+                                    SDL_ControllerSensorEvent.which$get(slicedEvent),
+                                    SensorType.valueOf(SDL_ControllerSensorEvent.sensor$get(slicedEvent)),
                                     data,
-                                    SDL_ControllerSensorEvent.timestamp_us$get(events, i)
+                                    SDL_ControllerSensorEvent.timestamp_us$get(slicedEvent)
                             );
                         }
                         case FingerDown -> {
