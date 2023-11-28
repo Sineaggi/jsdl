@@ -56,6 +56,10 @@ graalvmNative {
     }
 }
 
+tasks.`run`.configure {
+    outputs.upToDateWhen { false }
+}
+
 tasks.withType<JavaCompile>().configureEach {
     options.javaModuleMainClass = "org.example.TestGameController"
     options.release = 21
