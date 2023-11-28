@@ -11,30 +11,33 @@ final class constants$97 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$97() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_SHORT,
-        JAVA_SHORT,
-        JAVA_INT
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickGetGUIDFromString",
+        constants$85.const$0
     );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickRumble",
-        constants$97.const$0
+    static final FunctionDescriptor const$1 = FunctionDescriptor.ofVoid(
+        MemoryLayout.structLayout(
+            MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
+        ).withName("SDL_GUID"),
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER,
+        RuntimeHelper.POINTER
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickRumbleTriggers",
-        constants$97.const$0
+        "SDL_GetJoystickGUIDInfo",
+        constants$97.const$1
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickHasLED",
+        "SDL_JoystickGetAttached",
         constants$13.const$1
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickHasRumble",
+        "SDL_JoystickInstanceID",
         constants$13.const$1
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickHasRumbleTriggers",
+        "SDL_JoystickNumAxes",
         constants$13.const$1
     );
 }

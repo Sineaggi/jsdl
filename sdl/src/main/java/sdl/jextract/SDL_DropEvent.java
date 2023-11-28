@@ -20,10 +20,10 @@ import static java.lang.foreign.ValueLayout.*;
 public class SDL_DropEvent {
 
     public static MemoryLayout $LAYOUT() {
-        return constants$146.const$4;
+        return constants$149.const$4;
     }
     public static VarHandle type$VH() {
-        return constants$146.const$5;
+        return constants$149.const$5;
     }
     /**
      * Getter for field:
@@ -32,7 +32,7 @@ public class SDL_DropEvent {
      * }
      */
     public static int type$get(MemorySegment seg) {
-        return (int)constants$146.const$5.get(seg);
+        return (int)constants$149.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -41,16 +41,16 @@ public class SDL_DropEvent {
      * }
      */
     public static void type$set(MemorySegment seg, int x) {
-        constants$146.const$5.set(seg, x);
+        constants$149.const$5.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
-        return (int)constants$146.const$5.get(seg.asSlice(index*sizeof()));
+        return (int)constants$149.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void type$set(MemorySegment seg, long index, int x) {
-        constants$146.const$5.set(seg.asSlice(index*sizeof()), x);
+        constants$149.const$5.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle timestamp$VH() {
-        return constants$147.const$0;
+        return constants$150.const$0;
     }
     /**
      * Getter for field:
@@ -59,7 +59,7 @@ public class SDL_DropEvent {
      * }
      */
     public static int timestamp$get(MemorySegment seg) {
-        return (int)constants$147.const$0.get(seg);
+        return (int)constants$150.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -68,16 +68,16 @@ public class SDL_DropEvent {
      * }
      */
     public static void timestamp$set(MemorySegment seg, int x) {
-        constants$147.const$0.set(seg, x);
+        constants$150.const$0.set(seg, x);
     }
     public static int timestamp$get(MemorySegment seg, long index) {
-        return (int)constants$147.const$0.get(seg.asSlice(index*sizeof()));
+        return (int)constants$150.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void timestamp$set(MemorySegment seg, long index, int x) {
-        constants$147.const$0.set(seg.asSlice(index*sizeof()), x);
+        constants$150.const$0.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle file$VH() {
-        return constants$147.const$1;
+        return constants$150.const$1;
     }
     /**
      * Getter for field:
@@ -86,7 +86,7 @@ public class SDL_DropEvent {
      * }
      */
     public static MemorySegment file$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$147.const$1.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$150.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -95,16 +95,16 @@ public class SDL_DropEvent {
      * }
      */
     public static void file$set(MemorySegment seg, MemorySegment x) {
-        constants$147.const$1.set(seg, x);
+        constants$150.const$1.set(seg, x);
     }
     public static MemorySegment file$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$147.const$1.get(seg.asSlice(index*sizeof()));
+        return (java.lang.foreign.MemorySegment)constants$150.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void file$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$147.const$1.set(seg.asSlice(index*sizeof()), x);
+        constants$150.const$1.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle windowID$VH() {
-        return constants$147.const$2;
+        return constants$150.const$2;
     }
     /**
      * Getter for field:
@@ -113,7 +113,7 @@ public class SDL_DropEvent {
      * }
      */
     public static int windowID$get(MemorySegment seg) {
-        return (int)constants$147.const$2.get(seg);
+        return (int)constants$150.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -122,13 +122,13 @@ public class SDL_DropEvent {
      * }
      */
     public static void windowID$set(MemorySegment seg, int x) {
-        constants$147.const$2.set(seg, x);
+        constants$150.const$2.set(seg, x);
     }
     public static int windowID$get(MemorySegment seg, long index) {
-        return (int)constants$147.const$2.get(seg.asSlice(index*sizeof()));
+        return (int)constants$150.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void windowID$set(MemorySegment seg, long index, int x) {
-        constants$147.const$2.set(seg.asSlice(index*sizeof()), x);
+        constants$150.const$2.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }

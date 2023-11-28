@@ -11,29 +11,31 @@ final class constants$100 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$100() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_SensorFromInstanceID",
-        constants$28.const$0
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_SHORT,
+        JAVA_SHORT,
+        JAVA_INT
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_SensorGetName",
-        constants$2.const$0
+        "SDL_JoystickRumble",
+        constants$100.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_SensorGetType",
-        constants$13.const$1
+        "SDL_JoystickRumbleTriggers",
+        constants$100.const$0
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_SensorGetNonPortableType",
+        "SDL_JoystickHasLED",
         constants$13.const$1
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_SensorGetInstanceID",
+        "SDL_JoystickHasRumble",
         constants$13.const$1
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_SensorGetData",
-        constants$2.const$2
+        "SDL_JoystickHasRumbleTriggers",
+        constants$13.const$1
     );
 }
 

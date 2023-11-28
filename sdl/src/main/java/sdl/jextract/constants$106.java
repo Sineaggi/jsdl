@@ -12,28 +12,29 @@ final class constants$106 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$106() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetPlayerIndex",
-        constants$13.const$1
+        "SDL_GameControllerAddMappingsFromRW",
+        constants$28.const$5
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerSetPlayerIndex",
-        constants$68.const$2
+        "SDL_GameControllerAddMapping",
+        constants$13.const$1
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetVendor",
-        constants$33.const$3
+        "SDL_GameControllerNumMappings",
+        constants$1.const$4
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetProduct",
-        constants$33.const$3
+        "SDL_GameControllerMappingForIndex",
+        constants$28.const$0
     );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetProductVersion",
-        constants$33.const$3
+    static final FunctionDescriptor const$4 = FunctionDescriptor.of(RuntimeHelper.POINTER,
+        MemoryLayout.structLayout(
+            MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
+        ).withName("SDL_GUID")
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetFirmwareVersion",
-        constants$33.const$3
+        "SDL_GameControllerMappingForGUID",
+        constants$106.const$4
     );
 }
 

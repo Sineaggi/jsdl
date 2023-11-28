@@ -11,22 +11,30 @@ final class constants$115 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$115() {}
-    static final VarHandle const$0 = constants$113.const$5.varHandle(MemoryLayout.PathElement.groupElement("padding3"));
-    static final VarHandle const$1 = constants$113.const$5.varHandle(MemoryLayout.PathElement.groupElement("data1"));
-    static final StructLayout const$2 = MemoryLayout.structLayout(
-        JAVA_INT.withName("type"),
-        JAVA_INT.withName("timestamp"),
-        JAVA_INT.withName("windowID"),
-        JAVA_BYTE.withName("event"),
-        JAVA_BYTE.withName("padding1"),
-        JAVA_BYTE.withName("padding2"),
-        JAVA_BYTE.withName("padding3"),
-        JAVA_INT.withName("data1"),
-        JAVA_INT.withName("data2")
-    ).withName("SDL_WindowEvent");
-    static final VarHandle const$3 = constants$115.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$4 = constants$115.const$2.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$5 = constants$115.const$2.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerHasLED",
+        constants$13.const$1
+    );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerHasRumble",
+        constants$13.const$1
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerHasRumbleTriggers",
+        constants$13.const$1
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerSetLED",
+        constants$43.const$1
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerSendEffect",
+        constants$2.const$2
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerClose",
+        constants$1.const$2
+    );
 }
 
 

@@ -1267,6 +1267,46 @@ public class sdl_h extends sdl_h_1 {
     }
     /**
      * {@snippet :
+     * #define SDL_BUTTON_LEFT 1
+     * }
+     */
+    public static int SDL_BUTTON_LEFT() {
+        return (int)1L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_BUTTON_MIDDLE 2
+     * }
+     */
+    public static int SDL_BUTTON_MIDDLE() {
+        return (int)2L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_BUTTON_RIGHT 3
+     * }
+     */
+    public static int SDL_BUTTON_RIGHT() {
+        return (int)3L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_BUTTON_X1 4
+     * }
+     */
+    public static int SDL_BUTTON_X1() {
+        return (int)4L;
+    }
+    /**
+     * {@snippet :
+     * #define SDL_BUTTON_X2 5
+     * }
+     */
+    public static int SDL_BUTTON_X2() {
+        return (int)5L;
+    }
+    /**
+     * {@snippet :
      * #define SDL_VIRTUAL_JOYSTICK_DESC_VERSION 1
      * }
      */
@@ -10719,86 +10759,6 @@ public class sdl_h extends sdl_h_1 {
         var mh$ = SDL_StopTextInput$MH();
         try {
             mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_ClearComposition$MH() {
-        return RuntimeHelper.requireNonNull(constants$80.const$4,"SDL_ClearComposition");
-    }
-    /**
-     * {@snippet :
-     * void SDL_ClearComposition();
-     * }
-     */
-    public static void SDL_ClearComposition() {
-        var mh$ = SDL_ClearComposition$MH();
-        try {
-            mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_IsTextInputShown$MH() {
-        return RuntimeHelper.requireNonNull(constants$80.const$5,"SDL_IsTextInputShown");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_bool SDL_IsTextInputShown();
-     * }
-     */
-    public static int SDL_IsTextInputShown() {
-        var mh$ = SDL_IsTextInputShown$MH();
-        try {
-            return (int)mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_SetTextInputRect$MH() {
-        return RuntimeHelper.requireNonNull(constants$81.const$0,"SDL_SetTextInputRect");
-    }
-    /**
-     * {@snippet :
-     * void SDL_SetTextInputRect(struct SDL_Rect* rect);
-     * }
-     */
-    public static void SDL_SetTextInputRect(MemorySegment rect) {
-        var mh$ = SDL_SetTextInputRect$MH();
-        try {
-            mh$.invokeExact(rect);
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_HasScreenKeyboardSupport$MH() {
-        return RuntimeHelper.requireNonNull(constants$81.const$1,"SDL_HasScreenKeyboardSupport");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_bool SDL_HasScreenKeyboardSupport();
-     * }
-     */
-    public static int SDL_HasScreenKeyboardSupport() {
-        var mh$ = SDL_HasScreenKeyboardSupport$MH();
-        try {
-            return (int)mh$.invokeExact();
-        } catch (Throwable ex$) {
-            throw new AssertionError("should not reach here", ex$);
-        }
-    }
-    public static MethodHandle SDL_IsScreenKeyboardShown$MH() {
-        return RuntimeHelper.requireNonNull(constants$81.const$2,"SDL_IsScreenKeyboardShown");
-    }
-    /**
-     * {@snippet :
-     * enum SDL_bool SDL_IsScreenKeyboardShown(struct SDL_Window* window);
-     * }
-     */
-    public static int SDL_IsScreenKeyboardShown(MemorySegment window) {
-        var mh$ = SDL_IsScreenKeyboardShown$MH();
-        try {
-            return (int)mh$.invokeExact(window);
         } catch (Throwable ex$) {
             throw new AssertionError("should not reach here", ex$);
         }

@@ -18,10 +18,10 @@ import static java.lang.foreign.ValueLayout.*;
 public class SDL_GameControllerButtonBind {
 
     public static MemoryLayout $LAYOUT() {
-        return constants$101.const$4;
+        return constants$104.const$4;
     }
     public static VarHandle bindType$VH() {
-        return constants$101.const$5;
+        return constants$104.const$5;
     }
     /**
      * Getter for field:
@@ -30,7 +30,7 @@ public class SDL_GameControllerButtonBind {
      * }
      */
     public static int bindType$get(MemorySegment seg) {
-        return (int)constants$101.const$5.get(seg);
+        return (int)constants$104.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -39,13 +39,13 @@ public class SDL_GameControllerButtonBind {
      * }
      */
     public static void bindType$set(MemorySegment seg, int x) {
-        constants$101.const$5.set(seg, x);
+        constants$104.const$5.set(seg, x);
     }
     public static int bindType$get(MemorySegment seg, long index) {
-        return (int)constants$101.const$5.get(seg.asSlice(index*sizeof()));
+        return (int)constants$104.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void bindType$set(MemorySegment seg, long index, int x) {
-        constants$101.const$5.set(seg.asSlice(index*sizeof()), x);
+        constants$104.const$5.set(seg.asSlice(index*sizeof()), x);
     }
     /**
      * {@snippet :
@@ -61,10 +61,10 @@ public class SDL_GameControllerButtonBind {
         // Suppresses default constructor, ensuring non-instantiability.
         private value() {}
         public static MemoryLayout $LAYOUT() {
-            return constants$102.const$0;
+            return constants$105.const$0;
         }
         public static VarHandle button$VH() {
-            return constants$102.const$1;
+            return constants$105.const$1;
         }
         /**
          * Getter for field:
@@ -73,7 +73,7 @@ public class SDL_GameControllerButtonBind {
          * }
          */
         public static int button$get(MemorySegment seg) {
-            return (int)constants$102.const$1.get(seg);
+            return (int)constants$105.const$1.get(seg);
         }
         /**
          * Setter for field:
@@ -82,16 +82,16 @@ public class SDL_GameControllerButtonBind {
          * }
          */
         public static void button$set(MemorySegment seg, int x) {
-            constants$102.const$1.set(seg, x);
+            constants$105.const$1.set(seg, x);
         }
         public static int button$get(MemorySegment seg, long index) {
-            return (int)constants$102.const$1.get(seg.asSlice(index*sizeof()));
+            return (int)constants$105.const$1.get(seg.asSlice(index*sizeof()));
         }
         public static void button$set(MemorySegment seg, long index, int x) {
-            constants$102.const$1.set(seg.asSlice(index*sizeof()), x);
+            constants$105.const$1.set(seg.asSlice(index*sizeof()), x);
         }
         public static VarHandle axis$VH() {
-            return constants$102.const$2;
+            return constants$105.const$2;
         }
         /**
          * Getter for field:
@@ -100,7 +100,7 @@ public class SDL_GameControllerButtonBind {
          * }
          */
         public static int axis$get(MemorySegment seg) {
-            return (int)constants$102.const$2.get(seg);
+            return (int)constants$105.const$2.get(seg);
         }
         /**
          * Setter for field:
@@ -109,13 +109,13 @@ public class SDL_GameControllerButtonBind {
          * }
          */
         public static void axis$set(MemorySegment seg, int x) {
-            constants$102.const$2.set(seg, x);
+            constants$105.const$2.set(seg, x);
         }
         public static int axis$get(MemorySegment seg, long index) {
-            return (int)constants$102.const$2.get(seg.asSlice(index*sizeof()));
+            return (int)constants$105.const$2.get(seg.asSlice(index*sizeof()));
         }
         public static void axis$set(MemorySegment seg, long index, int x) {
-            constants$102.const$2.set(seg.asSlice(index*sizeof()), x);
+            constants$105.const$2.set(seg.asSlice(index*sizeof()), x);
         }
         /**
          * {@snippet :
@@ -130,10 +130,10 @@ public class SDL_GameControllerButtonBind {
             // Suppresses default constructor, ensuring non-instantiability.
             private hat() {}
             public static MemoryLayout $LAYOUT() {
-                return constants$102.const$3;
+                return constants$105.const$3;
             }
             public static VarHandle hat$VH() {
-                return constants$102.const$4;
+                return constants$105.const$4;
             }
             /**
              * Getter for field:
@@ -142,7 +142,7 @@ public class SDL_GameControllerButtonBind {
              * }
              */
             public static int hat$get(MemorySegment seg) {
-                return (int)constants$102.const$4.get(seg);
+                return (int)constants$105.const$4.get(seg);
             }
             /**
              * Setter for field:
@@ -151,16 +151,16 @@ public class SDL_GameControllerButtonBind {
              * }
              */
             public static void hat$set(MemorySegment seg, int x) {
-                constants$102.const$4.set(seg, x);
+                constants$105.const$4.set(seg, x);
             }
             public static int hat$get(MemorySegment seg, long index) {
-                return (int)constants$102.const$4.get(seg.asSlice(index*sizeof()));
+                return (int)constants$105.const$4.get(seg.asSlice(index*sizeof()));
             }
             public static void hat$set(MemorySegment seg, long index, int x) {
-                constants$102.const$4.set(seg.asSlice(index*sizeof()), x);
+                constants$105.const$4.set(seg.asSlice(index*sizeof()), x);
             }
             public static VarHandle hat_mask$VH() {
-                return constants$102.const$5;
+                return constants$105.const$5;
             }
             /**
              * Getter for field:
@@ -169,7 +169,7 @@ public class SDL_GameControllerButtonBind {
              * }
              */
             public static int hat_mask$get(MemorySegment seg) {
-                return (int)constants$102.const$5.get(seg);
+                return (int)constants$105.const$5.get(seg);
             }
             /**
              * Setter for field:
@@ -178,13 +178,13 @@ public class SDL_GameControllerButtonBind {
              * }
              */
             public static void hat_mask$set(MemorySegment seg, int x) {
-                constants$102.const$5.set(seg, x);
+                constants$105.const$5.set(seg, x);
             }
             public static int hat_mask$get(MemorySegment seg, long index) {
-                return (int)constants$102.const$5.get(seg.asSlice(index*sizeof()));
+                return (int)constants$105.const$5.get(seg.asSlice(index*sizeof()));
             }
             public static void hat_mask$set(MemorySegment seg, long index, int x) {
-                constants$102.const$5.set(seg.asSlice(index*sizeof()), x);
+                constants$105.const$5.set(seg.asSlice(index*sizeof()), x);
             }
             public static long sizeof() { return $LAYOUT().byteSize(); }
             public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }

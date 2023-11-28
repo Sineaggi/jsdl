@@ -16,13 +16,13 @@ public interface SDL_DelEventWatch$filter {
 
     int apply(java.lang.foreign.MemorySegment userdata, java.lang.foreign.MemorySegment event);
     static MemorySegment allocate(SDL_DelEventWatch$filter fi, Arena scope) {
-        return RuntimeHelper.upcallStub(constants$154.const$5, fi, constants$8.const$2, scope);
+        return RuntimeHelper.upcallStub(constants$157.const$5, fi, constants$8.const$2, scope);
     }
     static SDL_DelEventWatch$filter ofAddress(MemorySegment addr, Arena arena) {
         MemorySegment symbol = addr.reinterpret(arena, null);
         return (java.lang.foreign.MemorySegment _userdata, java.lang.foreign.MemorySegment _event) -> {
             try {
-                return (int)constants$153.const$4.invokeExact(symbol, _userdata, _event);
+                return (int)constants$156.const$4.invokeExact(symbol, _userdata, _event);
             } catch (Throwable ex$) {
                 throw new AssertionError("should not reach here", ex$);
             }

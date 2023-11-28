@@ -11,12 +11,17 @@ final class constants$123 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$123() {}
-    static final VarHandle const$0 = constants$122.const$5.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$1 = constants$122.const$5.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$2 = constants$122.const$5.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
-    static final VarHandle const$3 = constants$122.const$5.varHandle(MemoryLayout.PathElement.groupElement("which"));
-    static final VarHandle const$4 = constants$122.const$5.varHandle(MemoryLayout.PathElement.groupElement("button"));
-    static final VarHandle const$5 = constants$122.const$5.varHandle(MemoryLayout.PathElement.groupElement("state"));
+    static final VarHandle const$0 = constants$122.const$2.varHandle(MemoryLayout.PathElement.groupElement("text"));
+    static final VarHandle const$1 = constants$122.const$2.varHandle(MemoryLayout.PathElement.groupElement("start"));
+    static final VarHandle const$2 = constants$122.const$2.varHandle(MemoryLayout.PathElement.groupElement("length"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        JAVA_INT.withName("timestamp"),
+        JAVA_INT.withName("windowID"),
+        MemoryLayout.sequenceLayout(32, JAVA_BYTE).withName("text")
+    ).withName("SDL_TextInputEvent");
+    static final VarHandle const$4 = constants$123.const$3.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$5 = constants$123.const$3.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
 }
 
 

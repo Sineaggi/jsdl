@@ -12,28 +12,28 @@ final class constants$173 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$173() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_RenderGetMetalLayer",
-        constants$2.const$0
+        "SDL_RenderDrawLinesF",
+        constants$2.const$2
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_RenderGetMetalCommandEncoder",
-        constants$2.const$0
+        "SDL_RenderDrawRectF",
+        constants$8.const$2
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_RenderSetVSync",
-        constants$28.const$5
+        "SDL_RenderDrawRectsF",
+        constants$2.const$2
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_Init",
-        constants$2.const$4
+        "SDL_RenderFillRectF",
+        constants$8.const$2
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_InitSubSystem",
-        constants$2.const$4
+        "SDL_RenderFillRectsF",
+        constants$2.const$2
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_QuitSubSystem",
-        constants$58.const$5
+        "SDL_RenderCopyF",
+        constants$54.const$5
     );
 }
 

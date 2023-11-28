@@ -992,6 +992,52 @@
 --include-constant SDLK_z                  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_keycode.h
 --include-typedef SDL_Keycode              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_keycode.h
 
+#### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+
+--include-function SDL_CaptureMouse            # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-function SDL_CreateColorCursor       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-function SDL_CreateCursor            # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-function SDL_CreateSystemCursor      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-function SDL_FreeCursor              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-function SDL_GetCursor               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-function SDL_GetDefaultCursor        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-function SDL_GetGlobalMouseState     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-function SDL_GetMouseFocus           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-function SDL_GetMouseState           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-function SDL_GetRelativeMouseMode    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-function SDL_GetRelativeMouseState   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-function SDL_SetCursor               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-function SDL_SetRelativeMouseMode    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-function SDL_ShowCursor              # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-function SDL_WarpMouseGlobal         # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-function SDL_WarpMouseInWindow       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-struct SDL_Cursor                    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_BUTTON_LEFT             # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_BUTTON_LMASK            # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_BUTTON_MIDDLE           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_BUTTON_MMASK            # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_BUTTON_RIGHT            # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_BUTTON_RMASK            # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_BUTTON_X1               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_BUTTON_X1MASK           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_BUTTON_X2               # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_BUTTON_X2MASK           # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_MOUSEWHEEL_FLIPPED      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_MOUSEWHEEL_NORMAL       # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_NUM_SYSTEM_CURSORS      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_SYSTEM_CURSOR_ARROW     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_SYSTEM_CURSOR_CROSSHAIR # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_SYSTEM_CURSOR_HAND      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_SYSTEM_CURSOR_IBEAM     # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_SYSTEM_CURSOR_NO        # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_SYSTEM_CURSOR_SIZEALL   # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_SYSTEM_CURSOR_SIZENESW  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_SYSTEM_CURSOR_SIZENS    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_SYSTEM_CURSOR_SIZENWSE  # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_SYSTEM_CURSOR_SIZEWE    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_SYSTEM_CURSOR_WAIT      # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+--include-constant SDL_SYSTEM_CURSOR_WAITARROW # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mouse.h
+
 #### Extracted from: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mutex.h
 
 --include-constant SDL_MUTEX_MAXWAIT    # header: C:\vcpkg\installed\x64-windows\include\SDL2\SDL_mutex.h

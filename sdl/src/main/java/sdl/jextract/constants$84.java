@@ -12,28 +12,30 @@ final class constants$84 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$84() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetDeviceProduct",
-        constants$83.const$4
+        "SDL_GetDefaultCursor",
+        constants$0.const$0
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetDeviceProductVersion",
-        constants$83.const$4
+        "SDL_FreeCursor",
+        constants$1.const$2
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetDeviceType",
+        "SDL_ShowCursor",
         constants$2.const$4
     );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickGetDeviceInstanceID",
-        constants$2.const$4
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickOpen",
-        constants$28.const$0
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
+    ).withName("SDL_GUID");
+    static final FunctionDescriptor const$4 = FunctionDescriptor.ofVoid(
+        MemoryLayout.structLayout(
+            MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
+        ).withName("SDL_GUID"),
+        RuntimeHelper.POINTER,
+        JAVA_INT
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickFromInstanceID",
-        constants$28.const$0
+        "SDL_GUIDToString",
+        constants$84.const$4
     );
 }
 

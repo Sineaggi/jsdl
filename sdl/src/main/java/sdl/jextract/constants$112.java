@@ -12,28 +12,28 @@ final class constants$112 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$112() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerHasLED",
-        constants$13.const$1
+        "SDL_GameControllerGetStringForButton",
+        constants$28.const$0
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerHasRumble",
-        constants$13.const$1
+        "SDL_GameControllerGetBindForButton",
+        constants$111.const$1
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerHasRumbleTriggers",
-        constants$13.const$1
+        "SDL_GameControllerHasButton",
+        constants$28.const$5
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerSetLED",
-        constants$43.const$1
+        "SDL_GameControllerGetButton",
+        constants$99.const$2
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerSendEffect",
-        constants$2.const$2
+        "SDL_GameControllerGetNumTouchpads",
+        constants$13.const$1
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerClose",
-        constants$1.const$2
+        "SDL_GameControllerGetNumTouchpadFingers",
+        constants$28.const$5
     );
 }
 

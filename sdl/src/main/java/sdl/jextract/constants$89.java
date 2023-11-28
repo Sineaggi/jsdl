@@ -11,16 +11,12 @@ final class constants$89 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$89() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        constants$88.const$4
-    );
-    static final VarHandle const$1 = constants$85.const$3.varHandle(MemoryLayout.PathElement.groupElement("Rumble"));
-    static final MethodHandle const$2 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.RumbleTriggers.class, "apply", constants$88.const$4);
-    static final VarHandle const$3 = constants$85.const$3.varHandle(MemoryLayout.PathElement.groupElement("RumbleTriggers"));
-    static final MethodHandle const$4 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.SetLED.class, "apply", constants$43.const$1);
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        constants$43.const$1
-    );
+    static final VarHandle const$0 = constants$88.const$3.varHandle(MemoryLayout.PathElement.groupElement("naxes"));
+    static final VarHandle const$1 = constants$88.const$3.varHandle(MemoryLayout.PathElement.groupElement("nbuttons"));
+    static final VarHandle const$2 = constants$88.const$3.varHandle(MemoryLayout.PathElement.groupElement("nhats"));
+    static final VarHandle const$3 = constants$88.const$3.varHandle(MemoryLayout.PathElement.groupElement("vendor_id"));
+    static final VarHandle const$4 = constants$88.const$3.varHandle(MemoryLayout.PathElement.groupElement("product_id"));
+    static final VarHandle const$5 = constants$88.const$3.varHandle(MemoryLayout.PathElement.groupElement("padding"));
 }
 
 

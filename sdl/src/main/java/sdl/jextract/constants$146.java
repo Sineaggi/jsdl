@@ -11,18 +11,23 @@ final class constants$146 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$146() {}
-    static final VarHandle const$0 = constants$145.const$1.varHandle(MemoryLayout.PathElement.groupElement("numFingers"));
-    static final VarHandle const$1 = constants$145.const$1.varHandle(MemoryLayout.PathElement.groupElement("error"));
-    static final VarHandle const$2 = constants$145.const$1.varHandle(MemoryLayout.PathElement.groupElement("x"));
-    static final VarHandle const$3 = constants$145.const$1.varHandle(MemoryLayout.PathElement.groupElement("y"));
-    static final StructLayout const$4 = MemoryLayout.structLayout(
+    static final VarHandle const$0 = constants$144.const$4.varHandle(MemoryLayout.PathElement.groupElement("dy"));
+    static final VarHandle const$1 = constants$144.const$4.varHandle(MemoryLayout.PathElement.groupElement("pressure"));
+    static final VarHandle const$2 = constants$144.const$4.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
-        RuntimeHelper.POINTER.withName("file"),
-        JAVA_INT.withName("windowID"),
+        JAVA_LONG.withName("touchId"),
+        JAVA_FLOAT.withName("dTheta"),
+        JAVA_FLOAT.withName("dDist"),
+        JAVA_FLOAT.withName("x"),
+        JAVA_FLOAT.withName("y"),
+        JAVA_SHORT.withName("numFingers"),
+        JAVA_SHORT.withName("padding"),
         MemoryLayout.paddingLayout(4)
-    ).withName("SDL_DropEvent");
-    static final VarHandle const$5 = constants$146.const$4.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    ).withName("SDL_MultiGestureEvent");
+    static final VarHandle const$4 = constants$146.const$3.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$5 = constants$146.const$3.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
 }
 
 

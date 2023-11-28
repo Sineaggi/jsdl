@@ -11,42 +11,31 @@ final class constants$85 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$85() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickFromPlayerIndex",
-        constants$28.const$0
+    static final FunctionDescriptor const$0 = FunctionDescriptor.of(MemoryLayout.structLayout(
+        MemoryLayout.sequenceLayout(16, JAVA_BYTE).withName("data")
+    ).withName("SDL_GUID"),
+        RuntimeHelper.POINTER
     );
-    static final FunctionDescriptor const$1 = FunctionDescriptor.of(JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT,
-        JAVA_INT
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_GUIDFromString",
+        constants$85.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickAttachVirtual",
-        constants$85.const$1
+        "SDL_LockJoysticks",
+        constants$26.const$5
     );
-    static final StructLayout const$3 = MemoryLayout.structLayout(
-        JAVA_SHORT.withName("version"),
-        JAVA_SHORT.withName("type"),
-        JAVA_SHORT.withName("naxes"),
-        JAVA_SHORT.withName("nbuttons"),
-        JAVA_SHORT.withName("nhats"),
-        JAVA_SHORT.withName("vendor_id"),
-        JAVA_SHORT.withName("product_id"),
-        JAVA_SHORT.withName("padding"),
-        JAVA_INT.withName("button_mask"),
-        JAVA_INT.withName("axis_mask"),
-        RuntimeHelper.POINTER.withName("name"),
-        RuntimeHelper.POINTER.withName("userdata"),
-        RuntimeHelper.POINTER.withName("Update"),
-        RuntimeHelper.POINTER.withName("SetPlayerIndex"),
-        RuntimeHelper.POINTER.withName("Rumble"),
-        RuntimeHelper.POINTER.withName("RumbleTriggers"),
-        RuntimeHelper.POINTER.withName("SetLED"),
-        RuntimeHelper.POINTER.withName("SendEffect")
-    ).withName("SDL_VirtualJoystickDesc");
-    static final VarHandle const$4 = constants$85.const$3.varHandle(MemoryLayout.PathElement.groupElement("version"));
-    static final VarHandle const$5 = constants$85.const$3.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_UnlockJoysticks",
+        constants$26.const$5
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_NumJoysticks",
+        constants$1.const$4
+    );
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickNameForIndex",
+        constants$28.const$0
+    );
 }
 
 

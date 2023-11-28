@@ -12,37 +12,27 @@ final class constants$108 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$108() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetStringForAxis",
+        "SDL_GameControllerOpen",
         constants$28.const$0
     );
-    static final FunctionDescriptor const$1 = FunctionDescriptor.of(MemoryLayout.structLayout(
-        JAVA_INT.withName("bindType"),
-        MemoryLayout.unionLayout(
-            JAVA_INT.withName("button"),
-            JAVA_INT.withName("axis"),
-            MemoryLayout.structLayout(
-                JAVA_INT.withName("hat"),
-                JAVA_INT.withName("hat_mask")
-            ).withName("hat")
-        ).withName("value")
-    ).withName("SDL_GameControllerButtonBind"),
-        RuntimeHelper.POINTER,
-        JAVA_INT
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerFromInstanceID",
+        constants$28.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetBindForAxis",
-        constants$108.const$1
+        "SDL_GameControllerFromPlayerIndex",
+        constants$28.const$0
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerHasAxis",
-        constants$28.const$5
+        "SDL_GameControllerName",
+        constants$2.const$0
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetAxis",
-        constants$95.const$5
+        "SDL_GameControllerPath",
+        constants$2.const$0
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetButtonFromString",
+        "SDL_GameControllerGetType",
         constants$13.const$1
     );
 }

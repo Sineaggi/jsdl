@@ -11,18 +11,42 @@ final class constants$88 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$88() {}
-    static final VarHandle const$0 = constants$85.const$3.varHandle(MemoryLayout.PathElement.groupElement("Update"));
-    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.SetPlayerIndex.class, "apply", constants$68.const$2);
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickFromPlayerIndex",
+        constants$28.const$0
+    );
+    static final FunctionDescriptor const$1 = FunctionDescriptor.of(JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT,
+        JAVA_INT
+    );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        constants$68.const$2
+        "SDL_JoystickAttachVirtual",
+        constants$88.const$1
     );
-    static final VarHandle const$3 = constants$85.const$3.varHandle(MemoryLayout.PathElement.groupElement("SetPlayerIndex"));
-    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_SHORT,
-        JAVA_SHORT
-    );
-    static final MethodHandle const$5 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.Rumble.class, "apply", constants$88.const$4);
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        JAVA_SHORT.withName("version"),
+        JAVA_SHORT.withName("type"),
+        JAVA_SHORT.withName("naxes"),
+        JAVA_SHORT.withName("nbuttons"),
+        JAVA_SHORT.withName("nhats"),
+        JAVA_SHORT.withName("vendor_id"),
+        JAVA_SHORT.withName("product_id"),
+        JAVA_SHORT.withName("padding"),
+        JAVA_INT.withName("button_mask"),
+        JAVA_INT.withName("axis_mask"),
+        RuntimeHelper.POINTER.withName("name"),
+        RuntimeHelper.POINTER.withName("userdata"),
+        RuntimeHelper.POINTER.withName("Update"),
+        RuntimeHelper.POINTER.withName("SetPlayerIndex"),
+        RuntimeHelper.POINTER.withName("Rumble"),
+        RuntimeHelper.POINTER.withName("RumbleTriggers"),
+        RuntimeHelper.POINTER.withName("SetLED"),
+        RuntimeHelper.POINTER.withName("SendEffect")
+    ).withName("SDL_VirtualJoystickDesc");
+    static final VarHandle const$4 = constants$88.const$3.varHandle(MemoryLayout.PathElement.groupElement("version"));
+    static final VarHandle const$5 = constants$88.const$3.varHandle(MemoryLayout.PathElement.groupElement("type"));
 }
 
 

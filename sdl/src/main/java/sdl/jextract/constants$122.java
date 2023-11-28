@@ -11,23 +11,20 @@ final class constants$122 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$122() {}
-    static final VarHandle const$0 = constants$121.const$1.varHandle(MemoryLayout.PathElement.groupElement("state"));
-    static final VarHandle const$1 = constants$121.const$1.varHandle(MemoryLayout.PathElement.groupElement("x"));
-    static final VarHandle const$2 = constants$121.const$1.varHandle(MemoryLayout.PathElement.groupElement("y"));
-    static final VarHandle const$3 = constants$121.const$1.varHandle(MemoryLayout.PathElement.groupElement("xrel"));
-    static final VarHandle const$4 = constants$121.const$1.varHandle(MemoryLayout.PathElement.groupElement("yrel"));
-    static final StructLayout const$5 = MemoryLayout.structLayout(
+    static final VarHandle const$0 = constants$121.const$2.varHandle(MemoryLayout.PathElement.groupElement("start"));
+    static final VarHandle const$1 = constants$121.const$2.varHandle(MemoryLayout.PathElement.groupElement("length"));
+    static final StructLayout const$2 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
         JAVA_INT.withName("windowID"),
-        JAVA_INT.withName("which"),
-        JAVA_BYTE.withName("button"),
-        JAVA_BYTE.withName("state"),
-        JAVA_BYTE.withName("clicks"),
-        JAVA_BYTE.withName("padding1"),
-        JAVA_INT.withName("x"),
-        JAVA_INT.withName("y")
-    ).withName("SDL_MouseButtonEvent");
+        MemoryLayout.paddingLayout(4),
+        RuntimeHelper.POINTER.withName("text"),
+        JAVA_INT.withName("start"),
+        JAVA_INT.withName("length")
+    ).withName("SDL_TextEditingExtEvent");
+    static final VarHandle const$3 = constants$122.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$4 = constants$122.const$2.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$5 = constants$122.const$2.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
 }
 
 

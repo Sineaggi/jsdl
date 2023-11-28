@@ -11,20 +11,25 @@ final class constants$140 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$140() {}
-    static final VarHandle const$0 = constants$139.const$2.varHandle(MemoryLayout.PathElement.groupElement("sensor"));
-    static final VarHandle const$1 = constants$139.const$2.varHandle(MemoryLayout.PathElement.groupElement("timestamp_us"));
-    static final StructLayout const$2 = MemoryLayout.structLayout(
+    static final VarHandle const$0 = constants$138.const$5.varHandle(MemoryLayout.PathElement.groupElement("padding2"));
+    static final StructLayout const$1 = MemoryLayout.structLayout(
+        JAVA_INT.withName("type"),
+        JAVA_INT.withName("timestamp"),
+        JAVA_INT.withName("which")
+    ).withName("SDL_ControllerDeviceEvent");
+    static final VarHandle const$2 = constants$140.const$1.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$3 = constants$140.const$1.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$4 = constants$140.const$1.varHandle(MemoryLayout.PathElement.groupElement("which"));
+    static final StructLayout const$5 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
         JAVA_INT.withName("which"),
-        JAVA_BYTE.withName("iscapture"),
-        JAVA_BYTE.withName("padding1"),
-        JAVA_BYTE.withName("padding2"),
-        JAVA_BYTE.withName("padding3")
-    ).withName("SDL_AudioDeviceEvent");
-    static final VarHandle const$3 = constants$140.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$4 = constants$140.const$2.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$5 = constants$140.const$2.varHandle(MemoryLayout.PathElement.groupElement("which"));
+        JAVA_INT.withName("touchpad"),
+        JAVA_INT.withName("finger"),
+        JAVA_FLOAT.withName("x"),
+        JAVA_FLOAT.withName("y"),
+        JAVA_FLOAT.withName("pressure")
+    ).withName("SDL_ControllerTouchpadEvent");
 }
 
 

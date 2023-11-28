@@ -11,17 +11,27 @@ final class constants$120 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$120() {}
-    static final VarHandle const$0 = constants$119.const$2.varHandle(MemoryLayout.PathElement.groupElement("text"));
-    static final VarHandle const$1 = constants$119.const$2.varHandle(MemoryLayout.PathElement.groupElement("start"));
-    static final VarHandle const$2 = constants$119.const$2.varHandle(MemoryLayout.PathElement.groupElement("length"));
-    static final StructLayout const$3 = MemoryLayout.structLayout(
+    static final StructLayout const$0 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
         JAVA_INT.withName("windowID"),
-        MemoryLayout.sequenceLayout(32, JAVA_BYTE).withName("text")
-    ).withName("SDL_TextInputEvent");
-    static final VarHandle const$4 = constants$120.const$3.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$5 = constants$120.const$3.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+        JAVA_BYTE.withName("state"),
+        JAVA_BYTE.withName("repeat"),
+        JAVA_BYTE.withName("padding2"),
+        JAVA_BYTE.withName("padding3"),
+        MemoryLayout.structLayout(
+            JAVA_INT.withName("scancode"),
+            JAVA_INT.withName("sym"),
+            JAVA_SHORT.withName("mod"),
+            MemoryLayout.paddingLayout(2),
+            JAVA_INT.withName("unused")
+        ).withName("keysym")
+    ).withName("SDL_KeyboardEvent");
+    static final VarHandle const$1 = constants$120.const$0.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$2 = constants$120.const$0.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$3 = constants$120.const$0.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
+    static final VarHandle const$4 = constants$120.const$0.varHandle(MemoryLayout.PathElement.groupElement("state"));
+    static final VarHandle const$5 = constants$120.const$0.varHandle(MemoryLayout.PathElement.groupElement("repeat"));
 }
 
 

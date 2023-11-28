@@ -11,22 +11,19 @@ final class constants$121 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$121() {}
-    static final VarHandle const$0 = constants$120.const$3.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
-    static final StructLayout const$1 = MemoryLayout.structLayout(
+    static final VarHandle const$0 = constants$120.const$0.varHandle(MemoryLayout.PathElement.groupElement("padding2"));
+    static final VarHandle const$1 = constants$120.const$0.varHandle(MemoryLayout.PathElement.groupElement("padding3"));
+    static final StructLayout const$2 = MemoryLayout.structLayout(
         JAVA_INT.withName("type"),
         JAVA_INT.withName("timestamp"),
         JAVA_INT.withName("windowID"),
-        JAVA_INT.withName("which"),
-        JAVA_INT.withName("state"),
-        JAVA_INT.withName("x"),
-        JAVA_INT.withName("y"),
-        JAVA_INT.withName("xrel"),
-        JAVA_INT.withName("yrel")
-    ).withName("SDL_MouseMotionEvent");
-    static final VarHandle const$2 = constants$121.const$1.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$3 = constants$121.const$1.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$4 = constants$121.const$1.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
-    static final VarHandle const$5 = constants$121.const$1.varHandle(MemoryLayout.PathElement.groupElement("which"));
+        MemoryLayout.sequenceLayout(32, JAVA_BYTE).withName("text"),
+        JAVA_INT.withName("start"),
+        JAVA_INT.withName("length")
+    ).withName("SDL_TextEditingEvent");
+    static final VarHandle const$3 = constants$121.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
+    static final VarHandle const$4 = constants$121.const$2.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
+    static final VarHandle const$5 = constants$121.const$2.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
 }
 
 

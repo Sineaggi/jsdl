@@ -12,28 +12,28 @@ final class constants$109 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$109() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetStringForButton",
-        constants$28.const$0
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetBindForButton",
-        constants$108.const$1
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerHasButton",
-        constants$28.const$5
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetButton",
-        constants$96.const$2
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetNumTouchpads",
+        "SDL_GameControllerGetPlayerIndex",
         constants$13.const$1
     );
+    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerSetPlayerIndex",
+        constants$68.const$2
+    );
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerGetVendor",
+        constants$33.const$3
+    );
+    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerGetProduct",
+        constants$33.const$3
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_GameControllerGetProductVersion",
+        constants$33.const$3
+    );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetNumTouchpadFingers",
-        constants$28.const$5
+        "SDL_GameControllerGetFirmwareVersion",
+        constants$33.const$3
     );
 }
 

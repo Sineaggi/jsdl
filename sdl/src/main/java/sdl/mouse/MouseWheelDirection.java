@@ -4,9 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
+import static sdl.jextract.sdl_h_1.SDL_MOUSEWHEEL_FLIPPED;
+import static sdl.jextract.sdl_h_1.SDL_MOUSEWHEEL_NORMAL;
+
 public enum MouseWheelDirection {
-    Normal(-1),
-    Flipped(-1),
+    Normal(SDL_MOUSEWHEEL_NORMAL()),
+    Flipped(SDL_MOUSEWHEEL_FLIPPED()),
     ;
 
     private final int value;

@@ -11,20 +11,12 @@ final class constants$119 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$119() {}
-    static final VarHandle const$0 = constants$118.const$2.varHandle(MemoryLayout.PathElement.groupElement("start"));
-    static final VarHandle const$1 = constants$118.const$2.varHandle(MemoryLayout.PathElement.groupElement("length"));
-    static final StructLayout const$2 = MemoryLayout.structLayout(
-        JAVA_INT.withName("type"),
-        JAVA_INT.withName("timestamp"),
-        JAVA_INT.withName("windowID"),
-        MemoryLayout.paddingLayout(4),
-        RuntimeHelper.POINTER.withName("text"),
-        JAVA_INT.withName("start"),
-        JAVA_INT.withName("length")
-    ).withName("SDL_TextEditingExtEvent");
-    static final VarHandle const$3 = constants$119.const$2.varHandle(MemoryLayout.PathElement.groupElement("type"));
-    static final VarHandle const$4 = constants$119.const$2.varHandle(MemoryLayout.PathElement.groupElement("timestamp"));
-    static final VarHandle const$5 = constants$119.const$2.varHandle(MemoryLayout.PathElement.groupElement("windowID"));
+    static final VarHandle const$0 = constants$118.const$2.varHandle(MemoryLayout.PathElement.groupElement("event"));
+    static final VarHandle const$1 = constants$118.const$2.varHandle(MemoryLayout.PathElement.groupElement("padding1"));
+    static final VarHandle const$2 = constants$118.const$2.varHandle(MemoryLayout.PathElement.groupElement("padding2"));
+    static final VarHandle const$3 = constants$118.const$2.varHandle(MemoryLayout.PathElement.groupElement("padding3"));
+    static final VarHandle const$4 = constants$118.const$2.varHandle(MemoryLayout.PathElement.groupElement("data1"));
+    static final VarHandle const$5 = constants$118.const$2.varHandle(MemoryLayout.PathElement.groupElement("data2"));
 }
 
 

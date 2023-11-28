@@ -11,32 +11,18 @@ final class constants$91 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$91() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickIsVirtual",
-        constants$2.const$4
+    static final VarHandle const$0 = constants$88.const$3.varHandle(MemoryLayout.PathElement.groupElement("Update"));
+    static final MethodHandle const$1 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.SetPlayerIndex.class, "apply", constants$68.const$2);
+    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
+        constants$68.const$2
     );
-    static final FunctionDescriptor const$1 = FunctionDescriptor.of(JAVA_INT,
+    static final VarHandle const$3 = constants$88.const$3.varHandle(MemoryLayout.PathElement.groupElement("SetPlayerIndex"));
+    static final FunctionDescriptor const$4 = FunctionDescriptor.of(JAVA_INT,
         RuntimeHelper.POINTER,
-        JAVA_INT,
+        JAVA_SHORT,
         JAVA_SHORT
     );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickSetVirtualAxis",
-        constants$91.const$1
-    );
-    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        JAVA_INT,
-        JAVA_BYTE
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickSetVirtualButton",
-        constants$91.const$3
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_JoystickSetVirtualHat",
-        constants$91.const$3
-    );
+    static final MethodHandle const$5 = RuntimeHelper.upcallHandle(SDL_VirtualJoystickDesc.Rumble.class, "apply", constants$91.const$4);
 }
 
 

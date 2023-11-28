@@ -11,36 +11,30 @@ final class constants$101 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$101() {}
-    static final FunctionDescriptor const$0 = FunctionDescriptor.of(JAVA_INT,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        RuntimeHelper.POINTER,
-        JAVA_INT
+    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
+        "SDL_JoystickSetLED",
+        constants$43.const$1
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_SensorGetDataWithTimestamp",
-        constants$101.const$0
+        "SDL_JoystickSendEffect",
+        constants$2.const$2
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_SensorClose",
+        "SDL_JoystickClose",
         constants$1.const$2
     );
     static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_SensorUpdate",
+        "SDL_JoystickCurrentPowerLevel",
+        constants$13.const$1
+    );
+    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
+        "SDL_LockSensors",
         constants$26.const$5
     );
-    static final StructLayout const$4 = MemoryLayout.structLayout(
-        JAVA_INT.withName("bindType"),
-        MemoryLayout.unionLayout(
-            JAVA_INT.withName("button"),
-            JAVA_INT.withName("axis"),
-            MemoryLayout.structLayout(
-                JAVA_INT.withName("hat"),
-                JAVA_INT.withName("hat_mask")
-            ).withName("hat")
-        ).withName("value")
-    ).withName("SDL_GameControllerButtonBind");
-    static final VarHandle const$5 = constants$101.const$4.varHandle(MemoryLayout.PathElement.groupElement("bindType"));
+    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
+        "SDL_UnlockSensors",
+        constants$26.const$5
+    );
 }
 
 

@@ -11,30 +11,22 @@ final class constants$105 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$105() {}
-    static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerOpen",
-        constants$28.const$0
-    );
-    static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerFromInstanceID",
-        constants$28.const$0
-    );
-    static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerFromPlayerIndex",
-        constants$28.const$0
-    );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerName",
-        constants$2.const$0
-    );
-    static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerPath",
-        constants$2.const$0
-    );
-    static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_GameControllerGetType",
-        constants$13.const$1
-    );
+    static final UnionLayout const$0 = MemoryLayout.unionLayout(
+        JAVA_INT.withName("button"),
+        JAVA_INT.withName("axis"),
+        MemoryLayout.structLayout(
+            JAVA_INT.withName("hat"),
+            JAVA_INT.withName("hat_mask")
+        ).withName("hat")
+    ).withName("");
+    static final VarHandle const$1 = constants$105.const$0.varHandle(MemoryLayout.PathElement.groupElement("button"));
+    static final VarHandle const$2 = constants$105.const$0.varHandle(MemoryLayout.PathElement.groupElement("axis"));
+    static final StructLayout const$3 = MemoryLayout.structLayout(
+        JAVA_INT.withName("hat"),
+        JAVA_INT.withName("hat_mask")
+    ).withName("");
+    static final VarHandle const$4 = constants$105.const$3.varHandle(MemoryLayout.PathElement.groupElement("hat"));
+    static final VarHandle const$5 = constants$105.const$3.varHandle(MemoryLayout.PathElement.groupElement("hat_mask"));
 }
 
 

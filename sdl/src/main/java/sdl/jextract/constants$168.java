@@ -12,28 +12,29 @@ final class constants$168 {
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$168() {}
     static final MethodHandle const$0 = RuntimeHelper.downcallHandle(
-        "SDL_RenderDrawLines",
-        constants$2.const$2
+        "SDL_RenderSetClipRect",
+        constants$8.const$2
     );
     static final MethodHandle const$1 = RuntimeHelper.downcallHandle(
-        "SDL_RenderDrawRect",
-        constants$8.const$2
+        "SDL_RenderGetClipRect",
+        constants$56.const$0
     );
     static final MethodHandle const$2 = RuntimeHelper.downcallHandle(
-        "SDL_RenderDrawRects",
-        constants$2.const$2
+        "SDL_RenderIsClipEnabled",
+        constants$13.const$1
     );
-    static final MethodHandle const$3 = RuntimeHelper.downcallHandle(
-        "SDL_RenderFillRect",
-        constants$8.const$2
+    static final FunctionDescriptor const$3 = FunctionDescriptor.of(JAVA_INT,
+        RuntimeHelper.POINTER,
+        JAVA_FLOAT,
+        JAVA_FLOAT
     );
     static final MethodHandle const$4 = RuntimeHelper.downcallHandle(
-        "SDL_RenderFillRects",
-        constants$2.const$2
+        "SDL_RenderSetScale",
+        constants$168.const$3
     );
     static final MethodHandle const$5 = RuntimeHelper.downcallHandle(
-        "SDL_RenderCopy",
-        constants$54.const$5
+        "SDL_RenderGetScale",
+        constants$47.const$4
     );
 }
 

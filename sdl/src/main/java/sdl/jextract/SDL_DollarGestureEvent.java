@@ -24,10 +24,10 @@ import static java.lang.foreign.ValueLayout.*;
 public class SDL_DollarGestureEvent {
 
     public static MemoryLayout $LAYOUT() {
-        return constants$145.const$1;
+        return constants$148.const$1;
     }
     public static VarHandle type$VH() {
-        return constants$145.const$2;
+        return constants$148.const$2;
     }
     /**
      * Getter for field:
@@ -36,7 +36,7 @@ public class SDL_DollarGestureEvent {
      * }
      */
     public static int type$get(MemorySegment seg) {
-        return (int)constants$145.const$2.get(seg);
+        return (int)constants$148.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -45,16 +45,16 @@ public class SDL_DollarGestureEvent {
      * }
      */
     public static void type$set(MemorySegment seg, int x) {
-        constants$145.const$2.set(seg, x);
+        constants$148.const$2.set(seg, x);
     }
     public static int type$get(MemorySegment seg, long index) {
-        return (int)constants$145.const$2.get(seg.asSlice(index*sizeof()));
+        return (int)constants$148.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void type$set(MemorySegment seg, long index, int x) {
-        constants$145.const$2.set(seg.asSlice(index*sizeof()), x);
+        constants$148.const$2.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle timestamp$VH() {
-        return constants$145.const$3;
+        return constants$148.const$3;
     }
     /**
      * Getter for field:
@@ -63,7 +63,7 @@ public class SDL_DollarGestureEvent {
      * }
      */
     public static int timestamp$get(MemorySegment seg) {
-        return (int)constants$145.const$3.get(seg);
+        return (int)constants$148.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -72,16 +72,16 @@ public class SDL_DollarGestureEvent {
      * }
      */
     public static void timestamp$set(MemorySegment seg, int x) {
-        constants$145.const$3.set(seg, x);
+        constants$148.const$3.set(seg, x);
     }
     public static int timestamp$get(MemorySegment seg, long index) {
-        return (int)constants$145.const$3.get(seg.asSlice(index*sizeof()));
+        return (int)constants$148.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void timestamp$set(MemorySegment seg, long index, int x) {
-        constants$145.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$148.const$3.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle touchId$VH() {
-        return constants$145.const$4;
+        return constants$148.const$4;
     }
     /**
      * Getter for field:
@@ -90,7 +90,7 @@ public class SDL_DollarGestureEvent {
      * }
      */
     public static long touchId$get(MemorySegment seg) {
-        return (long)constants$145.const$4.get(seg);
+        return (long)constants$148.const$4.get(seg);
     }
     /**
      * Setter for field:
@@ -99,16 +99,16 @@ public class SDL_DollarGestureEvent {
      * }
      */
     public static void touchId$set(MemorySegment seg, long x) {
-        constants$145.const$4.set(seg, x);
+        constants$148.const$4.set(seg, x);
     }
     public static long touchId$get(MemorySegment seg, long index) {
-        return (long)constants$145.const$4.get(seg.asSlice(index*sizeof()));
+        return (long)constants$148.const$4.get(seg.asSlice(index*sizeof()));
     }
     public static void touchId$set(MemorySegment seg, long index, long x) {
-        constants$145.const$4.set(seg.asSlice(index*sizeof()), x);
+        constants$148.const$4.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle gestureId$VH() {
-        return constants$145.const$5;
+        return constants$148.const$5;
     }
     /**
      * Getter for field:
@@ -117,7 +117,7 @@ public class SDL_DollarGestureEvent {
      * }
      */
     public static long gestureId$get(MemorySegment seg) {
-        return (long)constants$145.const$5.get(seg);
+        return (long)constants$148.const$5.get(seg);
     }
     /**
      * Setter for field:
@@ -126,16 +126,16 @@ public class SDL_DollarGestureEvent {
      * }
      */
     public static void gestureId$set(MemorySegment seg, long x) {
-        constants$145.const$5.set(seg, x);
+        constants$148.const$5.set(seg, x);
     }
     public static long gestureId$get(MemorySegment seg, long index) {
-        return (long)constants$145.const$5.get(seg.asSlice(index*sizeof()));
+        return (long)constants$148.const$5.get(seg.asSlice(index*sizeof()));
     }
     public static void gestureId$set(MemorySegment seg, long index, long x) {
-        constants$145.const$5.set(seg.asSlice(index*sizeof()), x);
+        constants$148.const$5.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle numFingers$VH() {
-        return constants$146.const$0;
+        return constants$149.const$0;
     }
     /**
      * Getter for field:
@@ -144,7 +144,7 @@ public class SDL_DollarGestureEvent {
      * }
      */
     public static int numFingers$get(MemorySegment seg) {
-        return (int)constants$146.const$0.get(seg);
+        return (int)constants$149.const$0.get(seg);
     }
     /**
      * Setter for field:
@@ -153,16 +153,16 @@ public class SDL_DollarGestureEvent {
      * }
      */
     public static void numFingers$set(MemorySegment seg, int x) {
-        constants$146.const$0.set(seg, x);
+        constants$149.const$0.set(seg, x);
     }
     public static int numFingers$get(MemorySegment seg, long index) {
-        return (int)constants$146.const$0.get(seg.asSlice(index*sizeof()));
+        return (int)constants$149.const$0.get(seg.asSlice(index*sizeof()));
     }
     public static void numFingers$set(MemorySegment seg, long index, int x) {
-        constants$146.const$0.set(seg.asSlice(index*sizeof()), x);
+        constants$149.const$0.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle error$VH() {
-        return constants$146.const$1;
+        return constants$149.const$1;
     }
     /**
      * Getter for field:
@@ -171,7 +171,7 @@ public class SDL_DollarGestureEvent {
      * }
      */
     public static float error$get(MemorySegment seg) {
-        return (float)constants$146.const$1.get(seg);
+        return (float)constants$149.const$1.get(seg);
     }
     /**
      * Setter for field:
@@ -180,16 +180,16 @@ public class SDL_DollarGestureEvent {
      * }
      */
     public static void error$set(MemorySegment seg, float x) {
-        constants$146.const$1.set(seg, x);
+        constants$149.const$1.set(seg, x);
     }
     public static float error$get(MemorySegment seg, long index) {
-        return (float)constants$146.const$1.get(seg.asSlice(index*sizeof()));
+        return (float)constants$149.const$1.get(seg.asSlice(index*sizeof()));
     }
     public static void error$set(MemorySegment seg, long index, float x) {
-        constants$146.const$1.set(seg.asSlice(index*sizeof()), x);
+        constants$149.const$1.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle x$VH() {
-        return constants$146.const$2;
+        return constants$149.const$2;
     }
     /**
      * Getter for field:
@@ -198,7 +198,7 @@ public class SDL_DollarGestureEvent {
      * }
      */
     public static float x$get(MemorySegment seg) {
-        return (float)constants$146.const$2.get(seg);
+        return (float)constants$149.const$2.get(seg);
     }
     /**
      * Setter for field:
@@ -207,16 +207,16 @@ public class SDL_DollarGestureEvent {
      * }
      */
     public static void x$set(MemorySegment seg, float x) {
-        constants$146.const$2.set(seg, x);
+        constants$149.const$2.set(seg, x);
     }
     public static float x$get(MemorySegment seg, long index) {
-        return (float)constants$146.const$2.get(seg.asSlice(index*sizeof()));
+        return (float)constants$149.const$2.get(seg.asSlice(index*sizeof()));
     }
     public static void x$set(MemorySegment seg, long index, float x) {
-        constants$146.const$2.set(seg.asSlice(index*sizeof()), x);
+        constants$149.const$2.set(seg.asSlice(index*sizeof()), x);
     }
     public static VarHandle y$VH() {
-        return constants$146.const$3;
+        return constants$149.const$3;
     }
     /**
      * Getter for field:
@@ -225,7 +225,7 @@ public class SDL_DollarGestureEvent {
      * }
      */
     public static float y$get(MemorySegment seg) {
-        return (float)constants$146.const$3.get(seg);
+        return (float)constants$149.const$3.get(seg);
     }
     /**
      * Setter for field:
@@ -234,13 +234,13 @@ public class SDL_DollarGestureEvent {
      * }
      */
     public static void y$set(MemorySegment seg, float x) {
-        constants$146.const$3.set(seg, x);
+        constants$149.const$3.set(seg, x);
     }
     public static float y$get(MemorySegment seg, long index) {
-        return (float)constants$146.const$3.get(seg.asSlice(index*sizeof()));
+        return (float)constants$149.const$3.get(seg.asSlice(index*sizeof()));
     }
     public static void y$set(MemorySegment seg, long index, float x) {
-        constants$146.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$149.const$3.set(seg.asSlice(index*sizeof()), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }
