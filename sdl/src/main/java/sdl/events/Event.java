@@ -28,20 +28,40 @@ import sdl.events.quit.Quit;
 import sdl.events.quit.QuitEvent;
 import sdl.gamecontroller.GameControllerButton;
 import sdl.gamecontroller.SensorType;
-import sdl.jextract.*;
+import sdl.jextract.SDL_ControllerAxisEvent;
+import sdl.jextract.SDL_ControllerButtonEvent;
+import sdl.jextract.SDL_ControllerDeviceEvent;
+import sdl.jextract.SDL_ControllerSensorEvent;
+import sdl.jextract.SDL_Event;
+import sdl.jextract.SDL_JoyBatteryEvent;
+import sdl.jextract.SDL_KeyboardEvent;
+import sdl.jextract.SDL_Keysym;
+import sdl.jextract.SDL_MouseButtonEvent;
+import sdl.jextract.SDL_MouseMotionEvent;
 import sdl.joystick.JoystickId;
 import sdl.joystick.JoystickPowerLevel;
 import sdl.keycode.Keycode;
 import sdl.scancode.Scancode;
 
 import java.lang.foreign.Arena;
+import java.lang.foreign.ValueLayout;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import static sdl.Cause.PeepEvents;
-import static sdl.events.EventType.*;
-import static sdl.jextract.sdl_h.*;
+import static sdl.events.EventType.JoyAxisMotion;
+import static sdl.events.EventType.JoyButtonDown;
+import static sdl.events.EventType.JoyButtonUp;
+import static sdl.events.EventType.JoyDeviceAdded;
+import static sdl.events.EventType.JoyDeviceRemoved;
+import static sdl.events.EventType.JoyHatMotion;
+import static sdl.events.EventType.MouseWheel;
+import static sdl.events.EventType.TextEditing;
+import static sdl.events.EventType.WindowEvent;
+import static sdl.jextract.sdl_h.SDL_PeepEvents;
+import static sdl.jextract.sdl_h.SDL_PumpEvents;
+import static sdl.jextract.sdl_h.SDL_TRUE;
 
 public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, ControllerAxisEvent, ControllerButtonEvent, ControllerDeviceEvent, ControllerSensorEvent, ControllerTouchpad, JoyBatteryEvent, KeyboardEvent, MouseMotionEvent, QuitEvent {
     static List<Event> peepEvents(int numEvents, int action, int minType, int maxType) {
@@ -202,12 +222,16 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                         case ControllerTouchpadUp -> {
                             throw new RuntimeException(STR."\{type}");
                         }
-                        case ControllerSensorUpdate -> new ControllerSensorUpdate(
-                                SDL_ControllerSensorEvent.which$get(events, i),
-                                SensorType.valueOf(SDL_ControllerSensorEvent.sensor$get(events, i)),
-                                new float[]{}, // todo
-                                SDL_ControllerSensorEvent.timestamp_us$get(events, i)
-                        );
+                        case ControllerSensorUpdate -> {
+                            var data = SDL_ControllerSensorEvent.data$slice(slicedEvent)
+                                    .toArray(ValueLayout.OfFloat.JAVA_FLOAT);
+                            yield new ControllerSensorUpdate(
+                                    SDL_ControllerSensorEvent.which$get(events, i),
+                                    SensorType.valueOf(SDL_ControllerSensorEvent.sensor$get(events, i)),
+                                    data,
+                                    SDL_ControllerSensorEvent.timestamp_us$get(events, i)
+                            );
+                        }
                         case FingerDown -> {
                             throw new RuntimeException(STR."\{type}");
                         }
