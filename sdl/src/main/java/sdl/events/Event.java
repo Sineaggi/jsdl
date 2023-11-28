@@ -19,7 +19,9 @@ import sdl.events.controllertouchpad.ControllerTouchpad;
 import sdl.events.joybattery.JoyBatteryEvent;
 import sdl.events.joybattery.JoyBatteryUpdated;
 import sdl.events.key.KeyDown;
+import sdl.events.key.KeyUp;
 import sdl.events.key.KeyboardEvent;
+import sdl.events.key.Keysym;
 import sdl.events.motion.MouseMotion;
 import sdl.events.motion.MouseMotionEvent;
 import sdl.events.quit.Quit;
@@ -29,6 +31,8 @@ import sdl.gamecontroller.SensorType;
 import sdl.jextract.*;
 import sdl.joystick.JoystickId;
 import sdl.joystick.JoystickPowerLevel;
+import sdl.keycode.Keycode;
+import sdl.scancode.Scancode;
 
 import java.lang.foreign.Arena;
 import java.util.ArrayList;
@@ -52,7 +56,8 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                 // todo: read events
                 List<Event> mappedEvents = new ArrayList<>(peepedEventCount);
                 for (int i = 0; i < peepedEventCount; i++) {
-                    var type = EventType.valueOf(SDL_Event.type$get(events, 0));
+                    var slicedEvent = events.asSlice(i, SDL_Event.$LAYOUT());
+                    var type = EventType.valueOf(SDL_Event.type$get(slicedEvent));
                     Event event = switch (type) {
                         case FirstEvent -> {
                             throw new RuntimeException(STR."\{type}");
@@ -87,17 +92,30 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                             throw new RuntimeException(STR."\{type}");
                         }
                         case KeyDown -> {
-                            throw new RuntimeException(STR."\{type}");
-                            // var keysym = SDL_KeyboardEvent.keysym$slice();
-                            // yield new KeyDown(
-                            //         SDL_KeyboardEvent.windowID$get(events, i),
-                            //         GeneralInputStateDefinitions.valueOf(SDL_KeyboardEvent.state$get(events, i)),
-                            //         SDL_KeyboardEvent.repeat$get(events, i) == SDL_TRUE(),
-//
-                            // );
+                            var keysym = SDL_KeyboardEvent.keysym$slice(slicedEvent);
+                            yield new KeyDown(
+                                    SDL_KeyboardEvent.windowID$get(events, i),
+                                    GeneralInputStateDefinitions.valueOf(SDL_KeyboardEvent.state$get(events, i)),
+                                    SDL_KeyboardEvent.repeat$get(events, i) == SDL_TRUE(),
+                                    new Keysym(
+                                            Scancode.valueOf(SDL_Keysym.scancode$get(keysym)),
+                                            Keycode.valueOf(SDL_Keysym.sym$get(keysym)),
+                                            SDL_Keysym.mod$get(keysym)
+                                    )
+                            );
                         }
                         case KeyUp -> {
-                            throw new RuntimeException(STR."\{type}");
+                            var keysym = SDL_KeyboardEvent.keysym$slice(slicedEvent);
+                            yield new KeyUp(
+                                    SDL_KeyboardEvent.windowID$get(events, i),
+                                    GeneralInputStateDefinitions.valueOf(SDL_KeyboardEvent.state$get(events, i)),
+                                    SDL_KeyboardEvent.repeat$get(events, i) == SDL_TRUE(),
+                                    new Keysym(
+                                            Scancode.valueOf(SDL_Keysym.scancode$get(keysym)),
+                                            Keycode.valueOf(SDL_Keysym.sym$get(keysym)),
+                                            SDL_Keysym.mod$get(keysym)
+                                    )
+                            );
                         }
                         case TextEditing -> {
                             yield new TodoEvent(TextEditing);
