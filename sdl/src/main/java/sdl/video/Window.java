@@ -20,7 +20,7 @@ public class Window {
     public static Window create(String title, int x, int y, int w, int h, int flags) {
         MemorySegment window;
         try (var arena = Arena.ofConfined()) {
-            window = SDL_CreateWindow(arena.allocateUtf8String(title), x,
+            window = SDL_CreateWindow(arena.allocateFrom(title), x,
                     y, w,
                     h, flags);
         }
@@ -31,7 +31,7 @@ public class Window {
     }
     public void setWindowTitle(String title) {
         try (var arena = Arena.ofConfined()) {
-            SDL_SetWindowTitle(window, arena.allocateUtf8String(title));
+            SDL_SetWindowTitle(window, arena.allocateFrom(title));
         }
     }
 
