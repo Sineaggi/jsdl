@@ -5,10 +5,11 @@ import org.graalvm.nativeimage.hosted.RuntimeForeignAccess;
 
 import java.lang.foreign.*;
 
+import static java.lang.Long.MAX_VALUE;
 import static java.lang.foreign.ValueLayout.*;
 
 class ForeignRegistrationFeature implements Feature {
-    private static final AddressLayout POINTER = ValueLayout.ADDRESS.withTargetLayout(MemoryLayout.sequenceLayout(JAVA_BYTE));
+    private static final AddressLayout POINTER = ValueLayout.ADDRESS.withTargetLayout(MemoryLayout.sequenceLayout(MAX_VALUE, JAVA_BYTE));
 
     public void duringSetup(DuringSetupAccess access) {
         RuntimeForeignAccess.registerForDowncall(FunctionDescriptor.of(POINTER,
