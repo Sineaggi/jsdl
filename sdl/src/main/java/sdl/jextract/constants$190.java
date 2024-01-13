@@ -11,12 +11,12 @@ final class constants$190 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$190() {}
-    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_XBOX_ONE");
-    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_HIDAPI_XBOX_ONE_HOME_LED");
-    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_RAWINPUT");
-    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_RAWINPUT_CORRELATE_XINPUT");
-    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_ROG_CHAKRAM");
-    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_JOYSTICK_THREAD");
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_JOYSTICK_HIDAPI_XBOX_ONE");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_JOYSTICK_HIDAPI_XBOX_ONE_HOME_LED");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_JOYSTICK_RAWINPUT");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_JOYSTICK_RAWINPUT_CORRELATE_XINPUT");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_JOYSTICK_ROG_CHAKRAM");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_JOYSTICK_THREAD");
 }
 
 

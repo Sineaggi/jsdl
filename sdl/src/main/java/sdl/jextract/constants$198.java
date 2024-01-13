@@ -11,12 +11,12 @@ final class constants$198 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$198() {}
-    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_SCREENSAVER_INHIBIT_ACTIVITY_NAME");
-    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_THREAD_FORCE_REALTIME_TIME_CRITICAL");
-    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_THREAD_PRIORITY_POLICY");
-    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_THREAD_STACK_SIZE");
-    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_TIMER_RESOLUTION");
-    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_TOUCH_MOUSE_EVENTS");
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_SCREENSAVER_INHIBIT_ACTIVITY_NAME");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_THREAD_FORCE_REALTIME_TIME_CRITICAL");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_THREAD_PRIORITY_POLICY");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_THREAD_STACK_SIZE");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_TIMER_RESOLUTION");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_TOUCH_MOUSE_EVENTS");
 }
 
 

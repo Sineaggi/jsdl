@@ -11,12 +11,12 @@ final class constants$205 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$205() {}
-    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_WINDOWS_DPI_AWARENESS");
-    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_WINDOWS_DPI_SCALING");
-    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN");
-    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_WINDOW_NO_ACTIVATION_WHEN_SHOWN");
-    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_WINRT_HANDLE_BACK_BUTTON");
-    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_WINRT_PRIVACY_POLICY_LABEL");
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_WINDOWS_DPI_AWARENESS");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_WINDOWS_DPI_SCALING");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_WINDOW_FRAME_USABLE_WHILE_CURSOR_HIDDEN");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_WINDOW_NO_ACTIVATION_WHEN_SHOWN");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_WINRT_HANDLE_BACK_BUTTON");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_WINRT_PRIVACY_POLICY_LABEL");
 }
 
 

@@ -30,7 +30,7 @@ public class SDL_OSEvent {
      * }
      */
     public static int type$get(MemorySegment seg) {
-        return (int)constants$152.const$0.get(seg);
+        return (int)constants$152.const$0.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -39,13 +39,12 @@ public class SDL_OSEvent {
      * }
      */
     public static void type$set(MemorySegment seg, int x) {
-        constants$152.const$0.set(seg, x);
+        constants$152.const$0.set(seg, 0L, x);
     }
     public static int type$get(MemorySegment seg, long index) {
-        return (int)constants$152.const$0.get(seg.asSlice(index*sizeof()));
-    }
+        return (int)constants$152.const$0.get(seg, index * sizeof());    }
     public static void type$set(MemorySegment seg, long index, int x) {
-        constants$152.const$0.set(seg.asSlice(index*sizeof()), x);
+        constants$152.const$0.set(seg, index * sizeof(), x);
     }
     public static VarHandle timestamp$VH() {
         return constants$152.const$1;
@@ -57,7 +56,7 @@ public class SDL_OSEvent {
      * }
      */
     public static int timestamp$get(MemorySegment seg) {
-        return (int)constants$152.const$1.get(seg);
+        return (int)constants$152.const$1.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -66,13 +65,12 @@ public class SDL_OSEvent {
      * }
      */
     public static void timestamp$set(MemorySegment seg, int x) {
-        constants$152.const$1.set(seg, x);
+        constants$152.const$1.set(seg, 0L, x);
     }
     public static int timestamp$get(MemorySegment seg, long index) {
-        return (int)constants$152.const$1.get(seg.asSlice(index*sizeof()));
-    }
+        return (int)constants$152.const$1.get(seg, index * sizeof());    }
     public static void timestamp$set(MemorySegment seg, long index, int x) {
-        constants$152.const$1.set(seg.asSlice(index*sizeof()), x);
+        constants$152.const$1.set(seg, index * sizeof(), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }

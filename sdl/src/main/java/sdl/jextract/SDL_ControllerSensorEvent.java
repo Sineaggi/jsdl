@@ -34,7 +34,7 @@ public class SDL_ControllerSensorEvent {
      * }
      */
     public static int type$get(MemorySegment seg) {
-        return (int)constants$142.const$3.get(seg);
+        return (int)constants$142.const$3.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -43,13 +43,12 @@ public class SDL_ControllerSensorEvent {
      * }
      */
     public static void type$set(MemorySegment seg, int x) {
-        constants$142.const$3.set(seg, x);
+        constants$142.const$3.set(seg, 0L, x);
     }
     public static int type$get(MemorySegment seg, long index) {
-        return (int)constants$142.const$3.get(seg.asSlice(index*sizeof()));
-    }
+        return (int)constants$142.const$3.get(seg, index * sizeof());    }
     public static void type$set(MemorySegment seg, long index, int x) {
-        constants$142.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$142.const$3.set(seg, index * sizeof(), x);
     }
     public static VarHandle timestamp$VH() {
         return constants$142.const$4;
@@ -61,7 +60,7 @@ public class SDL_ControllerSensorEvent {
      * }
      */
     public static int timestamp$get(MemorySegment seg) {
-        return (int)constants$142.const$4.get(seg);
+        return (int)constants$142.const$4.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -70,13 +69,12 @@ public class SDL_ControllerSensorEvent {
      * }
      */
     public static void timestamp$set(MemorySegment seg, int x) {
-        constants$142.const$4.set(seg, x);
+        constants$142.const$4.set(seg, 0L, x);
     }
     public static int timestamp$get(MemorySegment seg, long index) {
-        return (int)constants$142.const$4.get(seg.asSlice(index*sizeof()));
-    }
+        return (int)constants$142.const$4.get(seg, index * sizeof());    }
     public static void timestamp$set(MemorySegment seg, long index, int x) {
-        constants$142.const$4.set(seg.asSlice(index*sizeof()), x);
+        constants$142.const$4.set(seg, index * sizeof(), x);
     }
     public static VarHandle which$VH() {
         return constants$142.const$5;
@@ -88,7 +86,7 @@ public class SDL_ControllerSensorEvent {
      * }
      */
     public static int which$get(MemorySegment seg) {
-        return (int)constants$142.const$5.get(seg);
+        return (int)constants$142.const$5.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -97,13 +95,12 @@ public class SDL_ControllerSensorEvent {
      * }
      */
     public static void which$set(MemorySegment seg, int x) {
-        constants$142.const$5.set(seg, x);
+        constants$142.const$5.set(seg, 0L, x);
     }
     public static int which$get(MemorySegment seg, long index) {
-        return (int)constants$142.const$5.get(seg.asSlice(index*sizeof()));
-    }
+        return (int)constants$142.const$5.get(seg, index * sizeof());    }
     public static void which$set(MemorySegment seg, long index, int x) {
-        constants$142.const$5.set(seg.asSlice(index*sizeof()), x);
+        constants$142.const$5.set(seg, index * sizeof(), x);
     }
     public static VarHandle sensor$VH() {
         return constants$143.const$0;
@@ -115,7 +112,7 @@ public class SDL_ControllerSensorEvent {
      * }
      */
     public static int sensor$get(MemorySegment seg) {
-        return (int)constants$143.const$0.get(seg);
+        return (int)constants$143.const$0.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -124,13 +121,12 @@ public class SDL_ControllerSensorEvent {
      * }
      */
     public static void sensor$set(MemorySegment seg, int x) {
-        constants$143.const$0.set(seg, x);
+        constants$143.const$0.set(seg, 0L, x);
     }
     public static int sensor$get(MemorySegment seg, long index) {
-        return (int)constants$143.const$0.get(seg.asSlice(index*sizeof()));
-    }
+        return (int)constants$143.const$0.get(seg, index * sizeof());    }
     public static void sensor$set(MemorySegment seg, long index, int x) {
-        constants$143.const$0.set(seg.asSlice(index*sizeof()), x);
+        constants$143.const$0.set(seg, index * sizeof(), x);
     }
     public static MemorySegment data$slice(MemorySegment seg) {
         return seg.asSlice(16, 12);
@@ -145,7 +141,7 @@ public class SDL_ControllerSensorEvent {
      * }
      */
     public static long timestamp_us$get(MemorySegment seg) {
-        return (long)constants$143.const$1.get(seg);
+        return (long)constants$143.const$1.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -154,13 +150,12 @@ public class SDL_ControllerSensorEvent {
      * }
      */
     public static void timestamp_us$set(MemorySegment seg, long x) {
-        constants$143.const$1.set(seg, x);
+        constants$143.const$1.set(seg, 0L, x);
     }
     public static long timestamp_us$get(MemorySegment seg, long index) {
-        return (long)constants$143.const$1.get(seg.asSlice(index*sizeof()));
-    }
+        return (long)constants$143.const$1.get(seg, index * sizeof());    }
     public static void timestamp_us$set(MemorySegment seg, long index, long x) {
-        constants$143.const$1.set(seg.asSlice(index*sizeof()), x);
+        constants$143.const$1.set(seg, index * sizeof(), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }

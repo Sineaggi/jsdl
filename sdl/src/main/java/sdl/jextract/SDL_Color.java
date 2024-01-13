@@ -32,7 +32,7 @@ public class SDL_Color {
      * }
      */
     public static byte r$get(MemorySegment seg) {
-        return (byte)constants$36.const$3.get(seg);
+        return (byte)constants$36.const$3.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -41,13 +41,12 @@ public class SDL_Color {
      * }
      */
     public static void r$set(MemorySegment seg, byte x) {
-        constants$36.const$3.set(seg, x);
+        constants$36.const$3.set(seg, 0L, x);
     }
     public static byte r$get(MemorySegment seg, long index) {
-        return (byte)constants$36.const$3.get(seg.asSlice(index*sizeof()));
-    }
+        return (byte)constants$36.const$3.get(seg, index * sizeof());    }
     public static void r$set(MemorySegment seg, long index, byte x) {
-        constants$36.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$36.const$3.set(seg, index * sizeof(), x);
     }
     public static VarHandle g$VH() {
         return constants$36.const$4;
@@ -59,7 +58,7 @@ public class SDL_Color {
      * }
      */
     public static byte g$get(MemorySegment seg) {
-        return (byte)constants$36.const$4.get(seg);
+        return (byte)constants$36.const$4.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -68,13 +67,12 @@ public class SDL_Color {
      * }
      */
     public static void g$set(MemorySegment seg, byte x) {
-        constants$36.const$4.set(seg, x);
+        constants$36.const$4.set(seg, 0L, x);
     }
     public static byte g$get(MemorySegment seg, long index) {
-        return (byte)constants$36.const$4.get(seg.asSlice(index*sizeof()));
-    }
+        return (byte)constants$36.const$4.get(seg, index * sizeof());    }
     public static void g$set(MemorySegment seg, long index, byte x) {
-        constants$36.const$4.set(seg.asSlice(index*sizeof()), x);
+        constants$36.const$4.set(seg, index * sizeof(), x);
     }
     public static VarHandle b$VH() {
         return constants$36.const$5;
@@ -86,7 +84,7 @@ public class SDL_Color {
      * }
      */
     public static byte b$get(MemorySegment seg) {
-        return (byte)constants$36.const$5.get(seg);
+        return (byte)constants$36.const$5.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -95,13 +93,12 @@ public class SDL_Color {
      * }
      */
     public static void b$set(MemorySegment seg, byte x) {
-        constants$36.const$5.set(seg, x);
+        constants$36.const$5.set(seg, 0L, x);
     }
     public static byte b$get(MemorySegment seg, long index) {
-        return (byte)constants$36.const$5.get(seg.asSlice(index*sizeof()));
-    }
+        return (byte)constants$36.const$5.get(seg, index * sizeof());    }
     public static void b$set(MemorySegment seg, long index, byte x) {
-        constants$36.const$5.set(seg.asSlice(index*sizeof()), x);
+        constants$36.const$5.set(seg, index * sizeof(), x);
     }
     public static VarHandle a$VH() {
         return constants$37.const$0;
@@ -113,7 +110,7 @@ public class SDL_Color {
      * }
      */
     public static byte a$get(MemorySegment seg) {
-        return (byte)constants$37.const$0.get(seg);
+        return (byte)constants$37.const$0.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -122,13 +119,12 @@ public class SDL_Color {
      * }
      */
     public static void a$set(MemorySegment seg, byte x) {
-        constants$37.const$0.set(seg, x);
+        constants$37.const$0.set(seg, 0L, x);
     }
     public static byte a$get(MemorySegment seg, long index) {
-        return (byte)constants$37.const$0.get(seg.asSlice(index*sizeof()));
-    }
+        return (byte)constants$37.const$0.get(seg, index * sizeof());    }
     public static void a$set(MemorySegment seg, long index, byte x) {
-        constants$37.const$0.set(seg.asSlice(index*sizeof()), x);
+        constants$37.const$0.set(seg, index * sizeof(), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }

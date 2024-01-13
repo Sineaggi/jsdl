@@ -11,12 +11,12 @@ final class constants$206 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$206() {}
-    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_WINRT_PRIVACY_POLICY_URL");
-    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_X11_FORCE_OVERRIDE_REDIRECT");
-    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_XINPUT_ENABLED");
-    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_DIRECTINPUT_ENABLED");
-    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_XINPUT_USE_OLD_JOYSTICK_MAPPING");
-    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_AUDIO_INCLUDE_MONITORS");
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_WINRT_PRIVACY_POLICY_URL");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_X11_FORCE_OVERRIDE_REDIRECT");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_XINPUT_ENABLED");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_DIRECTINPUT_ENABLED");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_XINPUT_USE_OLD_JOYSTICK_MAPPING");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_AUDIO_INCLUDE_MONITORS");
 }
 
 

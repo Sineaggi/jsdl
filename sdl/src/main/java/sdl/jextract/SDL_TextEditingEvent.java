@@ -34,7 +34,7 @@ public class SDL_TextEditingEvent {
      * }
      */
     public static int type$get(MemorySegment seg) {
-        return (int)constants$121.const$3.get(seg);
+        return (int)constants$121.const$3.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -43,13 +43,12 @@ public class SDL_TextEditingEvent {
      * }
      */
     public static void type$set(MemorySegment seg, int x) {
-        constants$121.const$3.set(seg, x);
+        constants$121.const$3.set(seg, 0L, x);
     }
     public static int type$get(MemorySegment seg, long index) {
-        return (int)constants$121.const$3.get(seg.asSlice(index*sizeof()));
-    }
+        return (int)constants$121.const$3.get(seg, index * sizeof());    }
     public static void type$set(MemorySegment seg, long index, int x) {
-        constants$121.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$121.const$3.set(seg, index * sizeof(), x);
     }
     public static VarHandle timestamp$VH() {
         return constants$121.const$4;
@@ -61,7 +60,7 @@ public class SDL_TextEditingEvent {
      * }
      */
     public static int timestamp$get(MemorySegment seg) {
-        return (int)constants$121.const$4.get(seg);
+        return (int)constants$121.const$4.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -70,13 +69,12 @@ public class SDL_TextEditingEvent {
      * }
      */
     public static void timestamp$set(MemorySegment seg, int x) {
-        constants$121.const$4.set(seg, x);
+        constants$121.const$4.set(seg, 0L, x);
     }
     public static int timestamp$get(MemorySegment seg, long index) {
-        return (int)constants$121.const$4.get(seg.asSlice(index*sizeof()));
-    }
+        return (int)constants$121.const$4.get(seg, index * sizeof());    }
     public static void timestamp$set(MemorySegment seg, long index, int x) {
-        constants$121.const$4.set(seg.asSlice(index*sizeof()), x);
+        constants$121.const$4.set(seg, index * sizeof(), x);
     }
     public static VarHandle windowID$VH() {
         return constants$121.const$5;
@@ -88,7 +86,7 @@ public class SDL_TextEditingEvent {
      * }
      */
     public static int windowID$get(MemorySegment seg) {
-        return (int)constants$121.const$5.get(seg);
+        return (int)constants$121.const$5.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -97,13 +95,12 @@ public class SDL_TextEditingEvent {
      * }
      */
     public static void windowID$set(MemorySegment seg, int x) {
-        constants$121.const$5.set(seg, x);
+        constants$121.const$5.set(seg, 0L, x);
     }
     public static int windowID$get(MemorySegment seg, long index) {
-        return (int)constants$121.const$5.get(seg.asSlice(index*sizeof()));
-    }
+        return (int)constants$121.const$5.get(seg, index * sizeof());    }
     public static void windowID$set(MemorySegment seg, long index, int x) {
-        constants$121.const$5.set(seg.asSlice(index*sizeof()), x);
+        constants$121.const$5.set(seg, index * sizeof(), x);
     }
     public static MemorySegment text$slice(MemorySegment seg) {
         return seg.asSlice(12, 32);
@@ -118,7 +115,7 @@ public class SDL_TextEditingEvent {
      * }
      */
     public static int start$get(MemorySegment seg) {
-        return (int)constants$122.const$0.get(seg);
+        return (int)constants$122.const$0.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -127,13 +124,12 @@ public class SDL_TextEditingEvent {
      * }
      */
     public static void start$set(MemorySegment seg, int x) {
-        constants$122.const$0.set(seg, x);
+        constants$122.const$0.set(seg, 0L, x);
     }
     public static int start$get(MemorySegment seg, long index) {
-        return (int)constants$122.const$0.get(seg.asSlice(index*sizeof()));
-    }
+        return (int)constants$122.const$0.get(seg, index * sizeof());    }
     public static void start$set(MemorySegment seg, long index, int x) {
-        constants$122.const$0.set(seg.asSlice(index*sizeof()), x);
+        constants$122.const$0.set(seg, index * sizeof(), x);
     }
     public static VarHandle length$VH() {
         return constants$122.const$1;
@@ -145,7 +141,7 @@ public class SDL_TextEditingEvent {
      * }
      */
     public static int length$get(MemorySegment seg) {
-        return (int)constants$122.const$1.get(seg);
+        return (int)constants$122.const$1.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -154,13 +150,12 @@ public class SDL_TextEditingEvent {
      * }
      */
     public static void length$set(MemorySegment seg, int x) {
-        constants$122.const$1.set(seg, x);
+        constants$122.const$1.set(seg, 0L, x);
     }
     public static int length$get(MemorySegment seg, long index) {
-        return (int)constants$122.const$1.get(seg.asSlice(index*sizeof()));
-    }
+        return (int)constants$122.const$1.get(seg, index * sizeof());    }
     public static void length$set(MemorySegment seg, long index, int x) {
-        constants$122.const$1.set(seg.asSlice(index*sizeof()), x);
+        constants$122.const$1.set(seg, index * sizeof(), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }

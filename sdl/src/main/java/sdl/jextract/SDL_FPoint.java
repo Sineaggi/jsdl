@@ -30,7 +30,7 @@ public class SDL_FPoint {
      * }
      */
     public static float x$get(MemorySegment seg) {
-        return (float)constants$45.const$2.get(seg);
+        return (float)constants$45.const$2.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -39,13 +39,12 @@ public class SDL_FPoint {
      * }
      */
     public static void x$set(MemorySegment seg, float x) {
-        constants$45.const$2.set(seg, x);
+        constants$45.const$2.set(seg, 0L, x);
     }
     public static float x$get(MemorySegment seg, long index) {
-        return (float)constants$45.const$2.get(seg.asSlice(index*sizeof()));
-    }
+        return (float)constants$45.const$2.get(seg, index * sizeof());    }
     public static void x$set(MemorySegment seg, long index, float x) {
-        constants$45.const$2.set(seg.asSlice(index*sizeof()), x);
+        constants$45.const$2.set(seg, index * sizeof(), x);
     }
     public static VarHandle y$VH() {
         return constants$45.const$3;
@@ -57,7 +56,7 @@ public class SDL_FPoint {
      * }
      */
     public static float y$get(MemorySegment seg) {
-        return (float)constants$45.const$3.get(seg);
+        return (float)constants$45.const$3.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -66,13 +65,12 @@ public class SDL_FPoint {
      * }
      */
     public static void y$set(MemorySegment seg, float x) {
-        constants$45.const$3.set(seg, x);
+        constants$45.const$3.set(seg, 0L, x);
     }
     public static float y$get(MemorySegment seg, long index) {
-        return (float)constants$45.const$3.get(seg.asSlice(index*sizeof()));
-    }
+        return (float)constants$45.const$3.get(seg, index * sizeof());    }
     public static void y$set(MemorySegment seg, long index, float x) {
-        constants$45.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$45.const$3.set(seg, index * sizeof(), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }

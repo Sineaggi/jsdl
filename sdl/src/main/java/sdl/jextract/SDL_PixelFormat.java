@@ -47,7 +47,7 @@ public class SDL_PixelFormat {
      * }
      */
     public static int format$get(MemorySegment seg) {
-        return (int)constants$38.const$1.get(seg);
+        return (int)constants$38.const$1.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -56,13 +56,12 @@ public class SDL_PixelFormat {
      * }
      */
     public static void format$set(MemorySegment seg, int x) {
-        constants$38.const$1.set(seg, x);
+        constants$38.const$1.set(seg, 0L, x);
     }
     public static int format$get(MemorySegment seg, long index) {
-        return (int)constants$38.const$1.get(seg.asSlice(index*sizeof()));
-    }
+        return (int)constants$38.const$1.get(seg, index * sizeof());    }
     public static void format$set(MemorySegment seg, long index, int x) {
-        constants$38.const$1.set(seg.asSlice(index*sizeof()), x);
+        constants$38.const$1.set(seg, index * sizeof(), x);
     }
     public static VarHandle palette$VH() {
         return constants$38.const$2;
@@ -74,7 +73,7 @@ public class SDL_PixelFormat {
      * }
      */
     public static MemorySegment palette$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$38.const$2.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$38.const$2.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -83,13 +82,12 @@ public class SDL_PixelFormat {
      * }
      */
     public static void palette$set(MemorySegment seg, MemorySegment x) {
-        constants$38.const$2.set(seg, x);
+        constants$38.const$2.set(seg, 0L, x);
     }
     public static MemorySegment palette$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$38.const$2.get(seg.asSlice(index*sizeof()));
-    }
+        return (java.lang.foreign.MemorySegment)constants$38.const$2.get(seg, index * sizeof());    }
     public static void palette$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$38.const$2.set(seg.asSlice(index*sizeof()), x);
+        constants$38.const$2.set(seg, index * sizeof(), x);
     }
     public static VarHandle BitsPerPixel$VH() {
         return constants$38.const$3;
@@ -101,7 +99,7 @@ public class SDL_PixelFormat {
      * }
      */
     public static byte BitsPerPixel$get(MemorySegment seg) {
-        return (byte)constants$38.const$3.get(seg);
+        return (byte)constants$38.const$3.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -110,13 +108,12 @@ public class SDL_PixelFormat {
      * }
      */
     public static void BitsPerPixel$set(MemorySegment seg, byte x) {
-        constants$38.const$3.set(seg, x);
+        constants$38.const$3.set(seg, 0L, x);
     }
     public static byte BitsPerPixel$get(MemorySegment seg, long index) {
-        return (byte)constants$38.const$3.get(seg.asSlice(index*sizeof()));
-    }
+        return (byte)constants$38.const$3.get(seg, index * sizeof());    }
     public static void BitsPerPixel$set(MemorySegment seg, long index, byte x) {
-        constants$38.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$38.const$3.set(seg, index * sizeof(), x);
     }
     public static VarHandle BytesPerPixel$VH() {
         return constants$38.const$4;
@@ -128,7 +125,7 @@ public class SDL_PixelFormat {
      * }
      */
     public static byte BytesPerPixel$get(MemorySegment seg) {
-        return (byte)constants$38.const$4.get(seg);
+        return (byte)constants$38.const$4.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -137,13 +134,12 @@ public class SDL_PixelFormat {
      * }
      */
     public static void BytesPerPixel$set(MemorySegment seg, byte x) {
-        constants$38.const$4.set(seg, x);
+        constants$38.const$4.set(seg, 0L, x);
     }
     public static byte BytesPerPixel$get(MemorySegment seg, long index) {
-        return (byte)constants$38.const$4.get(seg.asSlice(index*sizeof()));
-    }
+        return (byte)constants$38.const$4.get(seg, index * sizeof());    }
     public static void BytesPerPixel$set(MemorySegment seg, long index, byte x) {
-        constants$38.const$4.set(seg.asSlice(index*sizeof()), x);
+        constants$38.const$4.set(seg, index * sizeof(), x);
     }
     public static MemorySegment padding$slice(MemorySegment seg) {
         return seg.asSlice(18, 2);
@@ -158,7 +154,7 @@ public class SDL_PixelFormat {
      * }
      */
     public static int Rmask$get(MemorySegment seg) {
-        return (int)constants$38.const$5.get(seg);
+        return (int)constants$38.const$5.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -167,13 +163,12 @@ public class SDL_PixelFormat {
      * }
      */
     public static void Rmask$set(MemorySegment seg, int x) {
-        constants$38.const$5.set(seg, x);
+        constants$38.const$5.set(seg, 0L, x);
     }
     public static int Rmask$get(MemorySegment seg, long index) {
-        return (int)constants$38.const$5.get(seg.asSlice(index*sizeof()));
-    }
+        return (int)constants$38.const$5.get(seg, index * sizeof());    }
     public static void Rmask$set(MemorySegment seg, long index, int x) {
-        constants$38.const$5.set(seg.asSlice(index*sizeof()), x);
+        constants$38.const$5.set(seg, index * sizeof(), x);
     }
     public static VarHandle Gmask$VH() {
         return constants$39.const$0;
@@ -185,7 +180,7 @@ public class SDL_PixelFormat {
      * }
      */
     public static int Gmask$get(MemorySegment seg) {
-        return (int)constants$39.const$0.get(seg);
+        return (int)constants$39.const$0.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -194,13 +189,12 @@ public class SDL_PixelFormat {
      * }
      */
     public static void Gmask$set(MemorySegment seg, int x) {
-        constants$39.const$0.set(seg, x);
+        constants$39.const$0.set(seg, 0L, x);
     }
     public static int Gmask$get(MemorySegment seg, long index) {
-        return (int)constants$39.const$0.get(seg.asSlice(index*sizeof()));
-    }
+        return (int)constants$39.const$0.get(seg, index * sizeof());    }
     public static void Gmask$set(MemorySegment seg, long index, int x) {
-        constants$39.const$0.set(seg.asSlice(index*sizeof()), x);
+        constants$39.const$0.set(seg, index * sizeof(), x);
     }
     public static VarHandle Bmask$VH() {
         return constants$39.const$1;
@@ -212,7 +206,7 @@ public class SDL_PixelFormat {
      * }
      */
     public static int Bmask$get(MemorySegment seg) {
-        return (int)constants$39.const$1.get(seg);
+        return (int)constants$39.const$1.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -221,13 +215,12 @@ public class SDL_PixelFormat {
      * }
      */
     public static void Bmask$set(MemorySegment seg, int x) {
-        constants$39.const$1.set(seg, x);
+        constants$39.const$1.set(seg, 0L, x);
     }
     public static int Bmask$get(MemorySegment seg, long index) {
-        return (int)constants$39.const$1.get(seg.asSlice(index*sizeof()));
-    }
+        return (int)constants$39.const$1.get(seg, index * sizeof());    }
     public static void Bmask$set(MemorySegment seg, long index, int x) {
-        constants$39.const$1.set(seg.asSlice(index*sizeof()), x);
+        constants$39.const$1.set(seg, index * sizeof(), x);
     }
     public static VarHandle Amask$VH() {
         return constants$39.const$2;
@@ -239,7 +232,7 @@ public class SDL_PixelFormat {
      * }
      */
     public static int Amask$get(MemorySegment seg) {
-        return (int)constants$39.const$2.get(seg);
+        return (int)constants$39.const$2.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -248,13 +241,12 @@ public class SDL_PixelFormat {
      * }
      */
     public static void Amask$set(MemorySegment seg, int x) {
-        constants$39.const$2.set(seg, x);
+        constants$39.const$2.set(seg, 0L, x);
     }
     public static int Amask$get(MemorySegment seg, long index) {
-        return (int)constants$39.const$2.get(seg.asSlice(index*sizeof()));
-    }
+        return (int)constants$39.const$2.get(seg, index * sizeof());    }
     public static void Amask$set(MemorySegment seg, long index, int x) {
-        constants$39.const$2.set(seg.asSlice(index*sizeof()), x);
+        constants$39.const$2.set(seg, index * sizeof(), x);
     }
     public static VarHandle Rloss$VH() {
         return constants$39.const$3;
@@ -266,7 +258,7 @@ public class SDL_PixelFormat {
      * }
      */
     public static byte Rloss$get(MemorySegment seg) {
-        return (byte)constants$39.const$3.get(seg);
+        return (byte)constants$39.const$3.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -275,13 +267,12 @@ public class SDL_PixelFormat {
      * }
      */
     public static void Rloss$set(MemorySegment seg, byte x) {
-        constants$39.const$3.set(seg, x);
+        constants$39.const$3.set(seg, 0L, x);
     }
     public static byte Rloss$get(MemorySegment seg, long index) {
-        return (byte)constants$39.const$3.get(seg.asSlice(index*sizeof()));
-    }
+        return (byte)constants$39.const$3.get(seg, index * sizeof());    }
     public static void Rloss$set(MemorySegment seg, long index, byte x) {
-        constants$39.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$39.const$3.set(seg, index * sizeof(), x);
     }
     public static VarHandle Gloss$VH() {
         return constants$39.const$4;
@@ -293,7 +284,7 @@ public class SDL_PixelFormat {
      * }
      */
     public static byte Gloss$get(MemorySegment seg) {
-        return (byte)constants$39.const$4.get(seg);
+        return (byte)constants$39.const$4.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -302,13 +293,12 @@ public class SDL_PixelFormat {
      * }
      */
     public static void Gloss$set(MemorySegment seg, byte x) {
-        constants$39.const$4.set(seg, x);
+        constants$39.const$4.set(seg, 0L, x);
     }
     public static byte Gloss$get(MemorySegment seg, long index) {
-        return (byte)constants$39.const$4.get(seg.asSlice(index*sizeof()));
-    }
+        return (byte)constants$39.const$4.get(seg, index * sizeof());    }
     public static void Gloss$set(MemorySegment seg, long index, byte x) {
-        constants$39.const$4.set(seg.asSlice(index*sizeof()), x);
+        constants$39.const$4.set(seg, index * sizeof(), x);
     }
     public static VarHandle Bloss$VH() {
         return constants$39.const$5;
@@ -320,7 +310,7 @@ public class SDL_PixelFormat {
      * }
      */
     public static byte Bloss$get(MemorySegment seg) {
-        return (byte)constants$39.const$5.get(seg);
+        return (byte)constants$39.const$5.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -329,13 +319,12 @@ public class SDL_PixelFormat {
      * }
      */
     public static void Bloss$set(MemorySegment seg, byte x) {
-        constants$39.const$5.set(seg, x);
+        constants$39.const$5.set(seg, 0L, x);
     }
     public static byte Bloss$get(MemorySegment seg, long index) {
-        return (byte)constants$39.const$5.get(seg.asSlice(index*sizeof()));
-    }
+        return (byte)constants$39.const$5.get(seg, index * sizeof());    }
     public static void Bloss$set(MemorySegment seg, long index, byte x) {
-        constants$39.const$5.set(seg.asSlice(index*sizeof()), x);
+        constants$39.const$5.set(seg, index * sizeof(), x);
     }
     public static VarHandle Aloss$VH() {
         return constants$40.const$0;
@@ -347,7 +336,7 @@ public class SDL_PixelFormat {
      * }
      */
     public static byte Aloss$get(MemorySegment seg) {
-        return (byte)constants$40.const$0.get(seg);
+        return (byte)constants$40.const$0.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -356,13 +345,12 @@ public class SDL_PixelFormat {
      * }
      */
     public static void Aloss$set(MemorySegment seg, byte x) {
-        constants$40.const$0.set(seg, x);
+        constants$40.const$0.set(seg, 0L, x);
     }
     public static byte Aloss$get(MemorySegment seg, long index) {
-        return (byte)constants$40.const$0.get(seg.asSlice(index*sizeof()));
-    }
+        return (byte)constants$40.const$0.get(seg, index * sizeof());    }
     public static void Aloss$set(MemorySegment seg, long index, byte x) {
-        constants$40.const$0.set(seg.asSlice(index*sizeof()), x);
+        constants$40.const$0.set(seg, index * sizeof(), x);
     }
     public static VarHandle Rshift$VH() {
         return constants$40.const$1;
@@ -374,7 +362,7 @@ public class SDL_PixelFormat {
      * }
      */
     public static byte Rshift$get(MemorySegment seg) {
-        return (byte)constants$40.const$1.get(seg);
+        return (byte)constants$40.const$1.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -383,13 +371,12 @@ public class SDL_PixelFormat {
      * }
      */
     public static void Rshift$set(MemorySegment seg, byte x) {
-        constants$40.const$1.set(seg, x);
+        constants$40.const$1.set(seg, 0L, x);
     }
     public static byte Rshift$get(MemorySegment seg, long index) {
-        return (byte)constants$40.const$1.get(seg.asSlice(index*sizeof()));
-    }
+        return (byte)constants$40.const$1.get(seg, index * sizeof());    }
     public static void Rshift$set(MemorySegment seg, long index, byte x) {
-        constants$40.const$1.set(seg.asSlice(index*sizeof()), x);
+        constants$40.const$1.set(seg, index * sizeof(), x);
     }
     public static VarHandle Gshift$VH() {
         return constants$40.const$2;
@@ -401,7 +388,7 @@ public class SDL_PixelFormat {
      * }
      */
     public static byte Gshift$get(MemorySegment seg) {
-        return (byte)constants$40.const$2.get(seg);
+        return (byte)constants$40.const$2.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -410,13 +397,12 @@ public class SDL_PixelFormat {
      * }
      */
     public static void Gshift$set(MemorySegment seg, byte x) {
-        constants$40.const$2.set(seg, x);
+        constants$40.const$2.set(seg, 0L, x);
     }
     public static byte Gshift$get(MemorySegment seg, long index) {
-        return (byte)constants$40.const$2.get(seg.asSlice(index*sizeof()));
-    }
+        return (byte)constants$40.const$2.get(seg, index * sizeof());    }
     public static void Gshift$set(MemorySegment seg, long index, byte x) {
-        constants$40.const$2.set(seg.asSlice(index*sizeof()), x);
+        constants$40.const$2.set(seg, index * sizeof(), x);
     }
     public static VarHandle Bshift$VH() {
         return constants$40.const$3;
@@ -428,7 +414,7 @@ public class SDL_PixelFormat {
      * }
      */
     public static byte Bshift$get(MemorySegment seg) {
-        return (byte)constants$40.const$3.get(seg);
+        return (byte)constants$40.const$3.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -437,13 +423,12 @@ public class SDL_PixelFormat {
      * }
      */
     public static void Bshift$set(MemorySegment seg, byte x) {
-        constants$40.const$3.set(seg, x);
+        constants$40.const$3.set(seg, 0L, x);
     }
     public static byte Bshift$get(MemorySegment seg, long index) {
-        return (byte)constants$40.const$3.get(seg.asSlice(index*sizeof()));
-    }
+        return (byte)constants$40.const$3.get(seg, index * sizeof());    }
     public static void Bshift$set(MemorySegment seg, long index, byte x) {
-        constants$40.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$40.const$3.set(seg, index * sizeof(), x);
     }
     public static VarHandle Ashift$VH() {
         return constants$40.const$4;
@@ -455,7 +440,7 @@ public class SDL_PixelFormat {
      * }
      */
     public static byte Ashift$get(MemorySegment seg) {
-        return (byte)constants$40.const$4.get(seg);
+        return (byte)constants$40.const$4.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -464,13 +449,12 @@ public class SDL_PixelFormat {
      * }
      */
     public static void Ashift$set(MemorySegment seg, byte x) {
-        constants$40.const$4.set(seg, x);
+        constants$40.const$4.set(seg, 0L, x);
     }
     public static byte Ashift$get(MemorySegment seg, long index) {
-        return (byte)constants$40.const$4.get(seg.asSlice(index*sizeof()));
-    }
+        return (byte)constants$40.const$4.get(seg, index * sizeof());    }
     public static void Ashift$set(MemorySegment seg, long index, byte x) {
-        constants$40.const$4.set(seg.asSlice(index*sizeof()), x);
+        constants$40.const$4.set(seg, index * sizeof(), x);
     }
     public static VarHandle refcount$VH() {
         return constants$40.const$5;
@@ -482,7 +466,7 @@ public class SDL_PixelFormat {
      * }
      */
     public static int refcount$get(MemorySegment seg) {
-        return (int)constants$40.const$5.get(seg);
+        return (int)constants$40.const$5.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -491,13 +475,12 @@ public class SDL_PixelFormat {
      * }
      */
     public static void refcount$set(MemorySegment seg, int x) {
-        constants$40.const$5.set(seg, x);
+        constants$40.const$5.set(seg, 0L, x);
     }
     public static int refcount$get(MemorySegment seg, long index) {
-        return (int)constants$40.const$5.get(seg.asSlice(index*sizeof()));
-    }
+        return (int)constants$40.const$5.get(seg, index * sizeof());    }
     public static void refcount$set(MemorySegment seg, long index, int x) {
-        constants$40.const$5.set(seg.asSlice(index*sizeof()), x);
+        constants$40.const$5.set(seg, index * sizeof(), x);
     }
     public static VarHandle next$VH() {
         return constants$41.const$0;
@@ -509,7 +492,7 @@ public class SDL_PixelFormat {
      * }
      */
     public static MemorySegment next$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$41.const$0.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$41.const$0.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -518,13 +501,12 @@ public class SDL_PixelFormat {
      * }
      */
     public static void next$set(MemorySegment seg, MemorySegment x) {
-        constants$41.const$0.set(seg, x);
+        constants$41.const$0.set(seg, 0L, x);
     }
     public static MemorySegment next$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$41.const$0.get(seg.asSlice(index*sizeof()));
-    }
+        return (java.lang.foreign.MemorySegment)constants$41.const$0.get(seg, index * sizeof());    }
     public static void next$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$41.const$0.set(seg.asSlice(index*sizeof()), x);
+        constants$41.const$0.set(seg, index * sizeof(), x);
     }
     public static long sizeof() { return $LAYOUT().byteSize(); }
     public static MemorySegment allocate(SegmentAllocator allocator) { return allocator.allocate($LAYOUT()); }

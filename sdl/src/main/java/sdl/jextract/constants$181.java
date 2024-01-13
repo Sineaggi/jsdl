@@ -11,12 +11,12 @@ final class constants$181 {
 
     // Suppresses default constructor, ensuring non-instantiability.
     private constants$181() {}
-    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_AUDIO_DEVICE_STREAM_ROLE");
-    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_AUDIO_RESAMPLING_MODE");
-    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_AUTO_UPDATE_JOYSTICKS");
-    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_AUTO_UPDATE_SENSORS");
-    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_BMP_SAVE_LEGACY_FORMAT");
-    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateUtf8String("SDL_DISPLAY_USABLE_BOUNDS");
+    static final MemorySegment const$0 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_AUDIO_DEVICE_STREAM_ROLE");
+    static final MemorySegment const$1 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_AUDIO_RESAMPLING_MODE");
+    static final MemorySegment const$2 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_AUTO_UPDATE_JOYSTICKS");
+    static final MemorySegment const$3 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_AUTO_UPDATE_SENSORS");
+    static final MemorySegment const$4 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_BMP_SAVE_LEGACY_FORMAT");
+    static final MemorySegment const$5 = RuntimeHelper.CONSTANT_ALLOCATOR.allocateFrom("SDL_DISPLAY_USABLE_BOUNDS");
 }
 
 

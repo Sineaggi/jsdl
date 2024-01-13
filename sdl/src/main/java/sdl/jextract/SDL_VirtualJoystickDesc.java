@@ -46,7 +46,7 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static short version$get(MemorySegment seg) {
-        return (short)constants$88.const$4.get(seg);
+        return (short)constants$88.const$4.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -55,13 +55,12 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static void version$set(MemorySegment seg, short x) {
-        constants$88.const$4.set(seg, x);
+        constants$88.const$4.set(seg, 0L, x);
     }
     public static short version$get(MemorySegment seg, long index) {
-        return (short)constants$88.const$4.get(seg.asSlice(index*sizeof()));
-    }
+        return (short)constants$88.const$4.get(seg, index * sizeof());    }
     public static void version$set(MemorySegment seg, long index, short x) {
-        constants$88.const$4.set(seg.asSlice(index*sizeof()), x);
+        constants$88.const$4.set(seg, index * sizeof(), x);
     }
     public static VarHandle type$VH() {
         return constants$88.const$5;
@@ -73,7 +72,7 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static short type$get(MemorySegment seg) {
-        return (short)constants$88.const$5.get(seg);
+        return (short)constants$88.const$5.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -82,13 +81,12 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static void type$set(MemorySegment seg, short x) {
-        constants$88.const$5.set(seg, x);
+        constants$88.const$5.set(seg, 0L, x);
     }
     public static short type$get(MemorySegment seg, long index) {
-        return (short)constants$88.const$5.get(seg.asSlice(index*sizeof()));
-    }
+        return (short)constants$88.const$5.get(seg, index * sizeof());    }
     public static void type$set(MemorySegment seg, long index, short x) {
-        constants$88.const$5.set(seg.asSlice(index*sizeof()), x);
+        constants$88.const$5.set(seg, index * sizeof(), x);
     }
     public static VarHandle naxes$VH() {
         return constants$89.const$0;
@@ -100,7 +98,7 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static short naxes$get(MemorySegment seg) {
-        return (short)constants$89.const$0.get(seg);
+        return (short)constants$89.const$0.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -109,13 +107,12 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static void naxes$set(MemorySegment seg, short x) {
-        constants$89.const$0.set(seg, x);
+        constants$89.const$0.set(seg, 0L, x);
     }
     public static short naxes$get(MemorySegment seg, long index) {
-        return (short)constants$89.const$0.get(seg.asSlice(index*sizeof()));
-    }
+        return (short)constants$89.const$0.get(seg, index * sizeof());    }
     public static void naxes$set(MemorySegment seg, long index, short x) {
-        constants$89.const$0.set(seg.asSlice(index*sizeof()), x);
+        constants$89.const$0.set(seg, index * sizeof(), x);
     }
     public static VarHandle nbuttons$VH() {
         return constants$89.const$1;
@@ -127,7 +124,7 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static short nbuttons$get(MemorySegment seg) {
-        return (short)constants$89.const$1.get(seg);
+        return (short)constants$89.const$1.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -136,13 +133,12 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static void nbuttons$set(MemorySegment seg, short x) {
-        constants$89.const$1.set(seg, x);
+        constants$89.const$1.set(seg, 0L, x);
     }
     public static short nbuttons$get(MemorySegment seg, long index) {
-        return (short)constants$89.const$1.get(seg.asSlice(index*sizeof()));
-    }
+        return (short)constants$89.const$1.get(seg, index * sizeof());    }
     public static void nbuttons$set(MemorySegment seg, long index, short x) {
-        constants$89.const$1.set(seg.asSlice(index*sizeof()), x);
+        constants$89.const$1.set(seg, index * sizeof(), x);
     }
     public static VarHandle nhats$VH() {
         return constants$89.const$2;
@@ -154,7 +150,7 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static short nhats$get(MemorySegment seg) {
-        return (short)constants$89.const$2.get(seg);
+        return (short)constants$89.const$2.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -163,13 +159,12 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static void nhats$set(MemorySegment seg, short x) {
-        constants$89.const$2.set(seg, x);
+        constants$89.const$2.set(seg, 0L, x);
     }
     public static short nhats$get(MemorySegment seg, long index) {
-        return (short)constants$89.const$2.get(seg.asSlice(index*sizeof()));
-    }
+        return (short)constants$89.const$2.get(seg, index * sizeof());    }
     public static void nhats$set(MemorySegment seg, long index, short x) {
-        constants$89.const$2.set(seg.asSlice(index*sizeof()), x);
+        constants$89.const$2.set(seg, index * sizeof(), x);
     }
     public static VarHandle vendor_id$VH() {
         return constants$89.const$3;
@@ -181,7 +176,7 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static short vendor_id$get(MemorySegment seg) {
-        return (short)constants$89.const$3.get(seg);
+        return (short)constants$89.const$3.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -190,13 +185,12 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static void vendor_id$set(MemorySegment seg, short x) {
-        constants$89.const$3.set(seg, x);
+        constants$89.const$3.set(seg, 0L, x);
     }
     public static short vendor_id$get(MemorySegment seg, long index) {
-        return (short)constants$89.const$3.get(seg.asSlice(index*sizeof()));
-    }
+        return (short)constants$89.const$3.get(seg, index * sizeof());    }
     public static void vendor_id$set(MemorySegment seg, long index, short x) {
-        constants$89.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$89.const$3.set(seg, index * sizeof(), x);
     }
     public static VarHandle product_id$VH() {
         return constants$89.const$4;
@@ -208,7 +202,7 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static short product_id$get(MemorySegment seg) {
-        return (short)constants$89.const$4.get(seg);
+        return (short)constants$89.const$4.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -217,13 +211,12 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static void product_id$set(MemorySegment seg, short x) {
-        constants$89.const$4.set(seg, x);
+        constants$89.const$4.set(seg, 0L, x);
     }
     public static short product_id$get(MemorySegment seg, long index) {
-        return (short)constants$89.const$4.get(seg.asSlice(index*sizeof()));
-    }
+        return (short)constants$89.const$4.get(seg, index * sizeof());    }
     public static void product_id$set(MemorySegment seg, long index, short x) {
-        constants$89.const$4.set(seg.asSlice(index*sizeof()), x);
+        constants$89.const$4.set(seg, index * sizeof(), x);
     }
     public static VarHandle padding$VH() {
         return constants$89.const$5;
@@ -235,7 +228,7 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static short padding$get(MemorySegment seg) {
-        return (short)constants$89.const$5.get(seg);
+        return (short)constants$89.const$5.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -244,13 +237,12 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static void padding$set(MemorySegment seg, short x) {
-        constants$89.const$5.set(seg, x);
+        constants$89.const$5.set(seg, 0L, x);
     }
     public static short padding$get(MemorySegment seg, long index) {
-        return (short)constants$89.const$5.get(seg.asSlice(index*sizeof()));
-    }
+        return (short)constants$89.const$5.get(seg, index * sizeof());    }
     public static void padding$set(MemorySegment seg, long index, short x) {
-        constants$89.const$5.set(seg.asSlice(index*sizeof()), x);
+        constants$89.const$5.set(seg, index * sizeof(), x);
     }
     public static VarHandle button_mask$VH() {
         return constants$90.const$0;
@@ -262,7 +254,7 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static int button_mask$get(MemorySegment seg) {
-        return (int)constants$90.const$0.get(seg);
+        return (int)constants$90.const$0.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -271,13 +263,12 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static void button_mask$set(MemorySegment seg, int x) {
-        constants$90.const$0.set(seg, x);
+        constants$90.const$0.set(seg, 0L, x);
     }
     public static int button_mask$get(MemorySegment seg, long index) {
-        return (int)constants$90.const$0.get(seg.asSlice(index*sizeof()));
-    }
+        return (int)constants$90.const$0.get(seg, index * sizeof());    }
     public static void button_mask$set(MemorySegment seg, long index, int x) {
-        constants$90.const$0.set(seg.asSlice(index*sizeof()), x);
+        constants$90.const$0.set(seg, index * sizeof(), x);
     }
     public static VarHandle axis_mask$VH() {
         return constants$90.const$1;
@@ -289,7 +280,7 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static int axis_mask$get(MemorySegment seg) {
-        return (int)constants$90.const$1.get(seg);
+        return (int)constants$90.const$1.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -298,13 +289,12 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static void axis_mask$set(MemorySegment seg, int x) {
-        constants$90.const$1.set(seg, x);
+        constants$90.const$1.set(seg, 0L, x);
     }
     public static int axis_mask$get(MemorySegment seg, long index) {
-        return (int)constants$90.const$1.get(seg.asSlice(index*sizeof()));
-    }
+        return (int)constants$90.const$1.get(seg, index * sizeof());    }
     public static void axis_mask$set(MemorySegment seg, long index, int x) {
-        constants$90.const$1.set(seg.asSlice(index*sizeof()), x);
+        constants$90.const$1.set(seg, index * sizeof(), x);
     }
     public static VarHandle name$VH() {
         return constants$90.const$2;
@@ -316,7 +306,7 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static MemorySegment name$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$90.const$2.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$90.const$2.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -325,13 +315,12 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static void name$set(MemorySegment seg, MemorySegment x) {
-        constants$90.const$2.set(seg, x);
+        constants$90.const$2.set(seg, 0L, x);
     }
     public static MemorySegment name$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$90.const$2.get(seg.asSlice(index*sizeof()));
-    }
+        return (java.lang.foreign.MemorySegment)constants$90.const$2.get(seg, index * sizeof());    }
     public static void name$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$90.const$2.set(seg.asSlice(index*sizeof()), x);
+        constants$90.const$2.set(seg, index * sizeof(), x);
     }
     public static VarHandle userdata$VH() {
         return constants$90.const$3;
@@ -343,7 +332,7 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static MemorySegment userdata$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$90.const$3.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$90.const$3.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -352,13 +341,12 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static void userdata$set(MemorySegment seg, MemorySegment x) {
-        constants$90.const$3.set(seg, x);
+        constants$90.const$3.set(seg, 0L, x);
     }
     public static MemorySegment userdata$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$90.const$3.get(seg.asSlice(index*sizeof()));
-    }
+        return (java.lang.foreign.MemorySegment)constants$90.const$3.get(seg, index * sizeof());    }
     public static void userdata$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$90.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$90.const$3.set(seg, index * sizeof(), x);
     }
     /**
      * {@snippet :
@@ -393,7 +381,7 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static MemorySegment Update$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$91.const$0.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$91.const$0.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -402,13 +390,12 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static void Update$set(MemorySegment seg, MemorySegment x) {
-        constants$91.const$0.set(seg, x);
+        constants$91.const$0.set(seg, 0L, x);
     }
     public static MemorySegment Update$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$91.const$0.get(seg.asSlice(index*sizeof()));
-    }
+        return (java.lang.foreign.MemorySegment)constants$91.const$0.get(seg, index * sizeof());    }
     public static void Update$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$91.const$0.set(seg.asSlice(index*sizeof()), x);
+        constants$91.const$0.set(seg, index * sizeof(), x);
     }
     public static Update Update(MemorySegment segment, Arena scope) {
         return Update.ofAddress(Update$get(segment), scope);
@@ -446,7 +433,7 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static MemorySegment SetPlayerIndex$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$91.const$3.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$91.const$3.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -455,13 +442,12 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static void SetPlayerIndex$set(MemorySegment seg, MemorySegment x) {
-        constants$91.const$3.set(seg, x);
+        constants$91.const$3.set(seg, 0L, x);
     }
     public static MemorySegment SetPlayerIndex$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$91.const$3.get(seg.asSlice(index*sizeof()));
-    }
+        return (java.lang.foreign.MemorySegment)constants$91.const$3.get(seg, index * sizeof());    }
     public static void SetPlayerIndex$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$91.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$91.const$3.set(seg, index * sizeof(), x);
     }
     public static SetPlayerIndex SetPlayerIndex(MemorySegment segment, Arena scope) {
         return SetPlayerIndex.ofAddress(SetPlayerIndex$get(segment), scope);
@@ -499,7 +485,7 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static MemorySegment Rumble$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$92.const$1.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$92.const$1.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -508,13 +494,12 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static void Rumble$set(MemorySegment seg, MemorySegment x) {
-        constants$92.const$1.set(seg, x);
+        constants$92.const$1.set(seg, 0L, x);
     }
     public static MemorySegment Rumble$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$92.const$1.get(seg.asSlice(index*sizeof()));
-    }
+        return (java.lang.foreign.MemorySegment)constants$92.const$1.get(seg, index * sizeof());    }
     public static void Rumble$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$92.const$1.set(seg.asSlice(index*sizeof()), x);
+        constants$92.const$1.set(seg, index * sizeof(), x);
     }
     public static Rumble Rumble(MemorySegment segment, Arena scope) {
         return Rumble.ofAddress(Rumble$get(segment), scope);
@@ -552,7 +537,7 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static MemorySegment RumbleTriggers$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$92.const$3.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$92.const$3.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -561,13 +546,12 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static void RumbleTriggers$set(MemorySegment seg, MemorySegment x) {
-        constants$92.const$3.set(seg, x);
+        constants$92.const$3.set(seg, 0L, x);
     }
     public static MemorySegment RumbleTriggers$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$92.const$3.get(seg.asSlice(index*sizeof()));
-    }
+        return (java.lang.foreign.MemorySegment)constants$92.const$3.get(seg, index * sizeof());    }
     public static void RumbleTriggers$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$92.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$92.const$3.set(seg, index * sizeof(), x);
     }
     public static RumbleTriggers RumbleTriggers(MemorySegment segment, Arena scope) {
         return RumbleTriggers.ofAddress(RumbleTriggers$get(segment), scope);
@@ -605,7 +589,7 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static MemorySegment SetLED$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$93.const$0.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$93.const$0.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -614,13 +598,12 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static void SetLED$set(MemorySegment seg, MemorySegment x) {
-        constants$93.const$0.set(seg, x);
+        constants$93.const$0.set(seg, 0L, x);
     }
     public static MemorySegment SetLED$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$93.const$0.get(seg.asSlice(index*sizeof()));
-    }
+        return (java.lang.foreign.MemorySegment)constants$93.const$0.get(seg, index * sizeof());    }
     public static void SetLED$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$93.const$0.set(seg.asSlice(index*sizeof()), x);
+        constants$93.const$0.set(seg, index * sizeof(), x);
     }
     public static SetLED SetLED(MemorySegment segment, Arena scope) {
         return SetLED.ofAddress(SetLED$get(segment), scope);
@@ -658,7 +641,7 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static MemorySegment SendEffect$get(MemorySegment seg) {
-        return (java.lang.foreign.MemorySegment)constants$93.const$3.get(seg);
+        return (java.lang.foreign.MemorySegment)constants$93.const$3.get(seg, 0L);
     }
     /**
      * Setter for field:
@@ -667,13 +650,12 @@ public class SDL_VirtualJoystickDesc {
      * }
      */
     public static void SendEffect$set(MemorySegment seg, MemorySegment x) {
-        constants$93.const$3.set(seg, x);
+        constants$93.const$3.set(seg, 0L, x);
     }
     public static MemorySegment SendEffect$get(MemorySegment seg, long index) {
-        return (java.lang.foreign.MemorySegment)constants$93.const$3.get(seg.asSlice(index*sizeof()));
-    }
+        return (java.lang.foreign.MemorySegment)constants$93.const$3.get(seg, index * sizeof());    }
     public static void SendEffect$set(MemorySegment seg, long index, MemorySegment x) {
-        constants$93.const$3.set(seg.asSlice(index*sizeof()), x);
+        constants$93.const$3.set(seg, index * sizeof(), x);
     }
     public static SendEffect SendEffect(MemorySegment segment, Arena scope) {
         return SendEffect.ofAddress(SendEffect$get(segment), scope);
