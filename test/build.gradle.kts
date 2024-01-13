@@ -9,7 +9,7 @@ version = "1.0-SNAPSHOT"
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = JavaLanguageVersion.of(22)
     }
 }
 
@@ -62,7 +62,7 @@ tasks.`run`.configure {
 
 tasks.withType<JavaCompile>().configureEach {
     options.javaModuleMainClass = "org.example.TestGameController"
-    options.release = 21
+    options.release = 22
     options.compilerArgs = listOf("--enable-preview")
 }
 

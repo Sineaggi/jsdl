@@ -7,7 +7,7 @@ version = "1.0-SNAPSHOT"
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(21)
+        languageVersion = JavaLanguageVersion.of(22)
     }
 }
 
@@ -23,8 +23,8 @@ testing {
 }
 
 tasks.withType<JavaCompile>().configureEach {
-    options.release.set(21)
-    options.compilerArgs.add("--enable-preview")
+    options.release.set(22)
+    // options.compilerArgs.add("--enable-preview")
 }
 
 val deleteGeneratedSources = tasks.register<Delete>("delete") {
