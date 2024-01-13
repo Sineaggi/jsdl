@@ -5,6 +5,8 @@ import sdl.jextract.SDL_Surface;
 
 import java.lang.foreign.Arena;
 import java.lang.foreign.MemorySegment;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 import static sdl.Cause.SetColorKey;
 import static sdl.jextract.sdl_h.*;
@@ -22,13 +24,14 @@ public class Surface implements AutoCloseable {
     public static Surface loadBMP(String file) {
         MemorySegment surface;
         try (var arena = Arena.ofConfined()) {
-            MemorySegment src = SDL_RWFromFile(arena.allocateUtf8String(file), arena.allocateUtf8String("rb"));
+            // SDL_GetError().getString(0);
+            MemorySegment src = SDL_RWFromFile(arena.allocateFrom(file), arena.allocateFrom("rb"));
             if (src.equals(MemorySegment.NULL)) {
-                throw new SdlException(STR."Couldn't load \{file}: \{SDL_GetError().getUtf8String(0)}");
+                throw new SdlException("Couldn't load " + file + ": " + SDL_GetError().getString(0));
             }
             surface = SDL_LoadBMP_RW(src, 1);
             if (surface.equals(MemorySegment.NULL)) {
-                throw new SdlException(STR."Couldn't load \{file}: \{SDL_GetError().getUtf8String(0)}");
+                throw new SdlException("Couldn't load " + file + ": " + SDL_GetError().getString(0));
             }
             return new Surface(surface);
         }

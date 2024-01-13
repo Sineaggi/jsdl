@@ -7,7 +7,7 @@ public class Util {
         if (memorySegment.equals(MemorySegment.NULL)) {
             return null;
         }
-        return memorySegment.getUtf8String(0);
+        return memorySegment.getString(0);
     }
 
     public static short toShortExact(int value) {

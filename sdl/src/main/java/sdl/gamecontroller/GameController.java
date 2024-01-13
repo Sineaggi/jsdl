@@ -7,6 +7,7 @@ import sdl.events.GeneralInputStateDefinitions;
 import sdl.joystick.Joystick;
 
 import java.lang.foreign.Arena;
+import java.lang.foreign.MemoryLayout;
 import java.lang.foreign.MemorySegment;
 import java.lang.foreign.ValueLayout;
 import java.time.Duration;
@@ -47,7 +48,7 @@ public class GameController implements AutoCloseable {
 
     public static void addMappingsFromFile(String file) {
         try (var arena = Arena.ofConfined()) {
-            if (SDL_GameControllerAddMappingsFromRW(SDL_RWFromFile(arena.allocateUtf8String(file), arena.allocateUtf8String("rb")), 1) != 0) {
+            if (SDL_GameControllerAddMappingsFromRW(SDL_RWFromFile(arena.allocateFrom(file), arena.allocateFrom("rb")), 1) != 0) {
                 throw new SdlException(GameControllerAddMappingsFromRW);
             }
         }
@@ -63,7 +64,7 @@ public class GameController implements AutoCloseable {
             return null;
         }
         try {
-            return mapping.getUtf8String(0);
+            return mapping.getString(0);
         } finally {
             SDL_free(mapping);
         }
@@ -75,7 +76,7 @@ public class GameController implements AutoCloseable {
             return null;
         }
         try {
-            return string.getUtf8String(0);
+            return string.getString(0);
         } finally {
             SDL_free(string);
         }
@@ -86,7 +87,7 @@ public class GameController implements AutoCloseable {
         if (string.equals(MemorySegment.NULL)) {
             return null;
         }
-        return string.getUtf8String(0);
+        return string.getString(0);
     }
 
     public String name() {
@@ -153,7 +154,7 @@ public class GameController implements AutoCloseable {
 
     public int sendEffect(byte[] data) {
         try (var arena = Arena.ofConfined()) {
-            return sendEffect(arena.allocateArray(ValueLayout.JAVA_BYTE, data));
+            return sendEffect(arena.allocateFrom(ValueLayout.JAVA_BYTE, data));
         }
     }
 

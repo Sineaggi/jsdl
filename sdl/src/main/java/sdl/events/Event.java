@@ -87,36 +87,36 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                     var type = EventType.valueOf(SDL_Event.type$get(eventSlice));
                     Event event = switch (type) {
                         case FirstEvent -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case Quit -> new Quit();
                         case AppTerminating -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case AppLowMemory -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case AppWillEnterBackground -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case AppDidEnterBackground -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case AppWillEnterForeground -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case AppDiDEnterForeground -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case LocaleChanged -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case DisplayEvent -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case WindowEvent -> new TodoEvent(WindowEvent);
                         case SysWmEvent -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case KeyDown -> {
                             var keysym = SDL_KeyboardEvent.keysym$slice(eventSlice);
@@ -148,13 +148,13 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                             yield new TodoEvent(TextEditing);
                         }
                         case TextInput -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case KeyMapChanged -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case TextEditingExt -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case MouseMotion -> new MouseMotion(
                                 SDL_MouseMotionEvent.x$get(eventSlice),
@@ -180,7 +180,7 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                             yield new TodoEvent(JoyAxisMotion);
                         }
                         case JoyBallMotion -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case JoyHatMotion -> {
                             yield new TodoEvent(JoyHatMotion);
@@ -223,7 +223,7 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                             JoystickId.wrap(SDL_ControllerDeviceEvent.which$get(eventSlice))
                         );
                         case ControllerDeviceRemapped -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case ControllerTouchpadDown -> new ControllerTouchpadDown(
                                 SDL_ControllerTouchpadEvent.which$get(eventSlice),
@@ -260,61 +260,61 @@ public sealed interface Event permits Event.TodoEvent, MouseButtonEvent, Control
                             );
                         }
                         case FingerDown -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case FingerUp -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case FingerMotion -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case DollarGesture -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case DollarRecord -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case MultiGesture -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case ClipboardUpdate -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case DropFile -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case DropText -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case DropBegin -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case DropComplete -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case AudioDeviceAdded -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case AudioDeviceRemoved -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case SensorUpdate -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case RenderTargetsReset -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case RenderDeviceReset -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case PollSentinel -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case UserEvent -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                         case LastEvent -> {
-                            throw new RuntimeException(STR."\{type}");
+                            throw new RuntimeException(type.toString());
                         }
                     };
                     mappedEvents.add(i, event);

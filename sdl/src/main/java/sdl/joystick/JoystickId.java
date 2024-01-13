@@ -19,6 +19,6 @@ public class JoystickId {
 
     @Override
     public String toString() {
-        return STR."\{joystickId}";
+        return Integer.toString(joystickId);
     }
 }

@@ -42,7 +42,7 @@ public record VirtualJoystickDesc(
         SDL_VirtualJoystickDesc.button_mask$set(desc, button_mask);
         SDL_VirtualJoystickDesc.axis_mask$set(desc, axis_mask);
         if (name != null) {
-            SDL_VirtualJoystickDesc.name$set(desc, allocator.allocateUtf8String(name));
+            SDL_VirtualJoystickDesc.name$set(desc, allocator.allocateFrom(name));
         }
         if (userData != null) {
             SDL_VirtualJoystickDesc.userdata$set(desc, userData);

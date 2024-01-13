@@ -7,6 +7,6 @@ public class SdlException extends RuntimeException {
         super(message);
     }
     public SdlException(Cause cause) {
-        this(STR."\{cause.cause()}: \{SDL_GetError().getUtf8String(0)}");
+        this(cause.cause().toString() + ": " + SDL_GetError().getString(0));
     }
 }

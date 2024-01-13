@@ -39,7 +39,7 @@ public class Joystick {
             // todo: handle case where SDL_JoystickGetDeviceGUID can fail
             SDL_JoystickGetGUIDString(SDL_JoystickGetDeviceGUID(arena, deviceIndex), guid, (int) guid.byteSize());
             // todo: validate this is correct
-            return guid.getUtf8String(0);
+            return guid.getString(0);
         }
     }
 
@@ -79,7 +79,7 @@ public class Joystick {
 
     public static void detachVirtual(int deviceIndex) {
         if (SDL_JoystickDetachVirtual(deviceIndex) == -1) {
-            throw new RuntimeException(STR."failed to detach virtual joystick \{deviceIndex}");
+            throw new RuntimeException("failed to detach virtual joystick " + deviceIndex);
         }
     }
 
