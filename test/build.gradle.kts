@@ -42,7 +42,6 @@ graalvmNative {
                 "--features=org.example.ForeignRegistrationFeature",
             )
             runtimeArgs(
-                "--enable-preview",
                 "-Djava.library.path=C:\\vcpkg\\installed\\x64-windows\\bin",
                 "--enable-native-access=jsdl.sdl",
             )
@@ -52,7 +51,7 @@ graalvmNative {
         // }
     }
     binaries.all {
-        buildArgs.addAll("--verbose", "--enable-preview")
+        buildArgs.addAll("--verbose")
     }
 }
 
@@ -63,14 +62,12 @@ tasks.`run`.configure {
 tasks.withType<JavaCompile>().configureEach {
     options.javaModuleMainClass = "org.example.TestGameController"
     options.release = 22
-    options.compilerArgs = listOf("--enable-preview")
 }
 
 application {
     mainClass = "org.example.TestGameController"
     mainModule = "org.example"
     applicationDefaultJvmArgs = listOf(
-        "--enable-preview",
         "-Djava.library.path=C:\\vcpkg\\installed\\x64-windows\\bin",
         "--enable-native-access=jsdl.sdl",
     )
