@@ -227,20 +227,20 @@ public class TestGameController {
         if (verbose) {
             String name = gameController.name();
             String path = gameController.path();
-            System.out.println(STR."Opened game controller \{name}\{path != null ? ", " : ""}\{path != null ? path : ""}");
+            System.out.println("Opened game controller " + name + (path != null ? ", " : "") + (path != null ? path : ""));
         }
 
         firmwareVersion = gameController.getFirmwareVersion();
         if (firmwareVersion > 0) {
             if (verbose) {
-                System.out.println(FMT."Firmware version: 0x\{firmwareVersion} (\{firmwareVersion}})");
+                System.out.printf("Firmware version: 0x%d (%d)\n", firmwareVersion, firmwareVersion);
             }
         }
 
         for (var sensor : sensors) {
             if (gameController.hasSensor(sensor)) {
                 if (verbose) {
-                    System.out.println(FMT."Enabling %\{getSensorName(sensor)} at %.2\{gameController.getSensorDataRate(sensor)} Hz");
+                    System.out.printf("Enabling %s at %.2f Hz", getSensorName(sensor), gameController.getSensorDataRate(sensor));
                 }
                 gameController.setSensorEnabled(sensor, true);
             }
@@ -386,21 +386,21 @@ public class TestGameController {
 
     VirtualJoystickDesc.SetPlayerIndex virtualControllerSetPlayerIndex = (MemorySegment userData, int playerIndex) ->
     {
-        System.out.println(STR."Virtual Controller: player index set to \{playerIndex}");
+        System.out.println("Virtual Controller: player index set to " + playerIndex);
     };
 
     VirtualJoystickDesc.Rumble virtualControllerRumble = (MemorySegment userData, short lowFrequencyRumble, short highFrequencyRumble) -> {
-        System.out.println(STR."Virtual Controller: rumble set to \{lowFrequencyRumble}/\{highFrequencyRumble}");
+        System.out.println("Virtual Controller: rumble set to " + lowFrequencyRumble + "/" + highFrequencyRumble);
         return 0;
     };
 
     VirtualJoystickDesc.RumbleTriggers virtualControllerRumbleTriggers = (MemorySegment userData, short leftRumble, short rightRumble) -> {
-        System.out.println(STR."Virtual Controller: trigger rumble set to \{leftRumble}/\{rightRumble}");
+        System.out.println("Virtual Controller: trigger rumble set to " + leftRumble + "/" + rightRumble);
         return 0;
     };
 
     VirtualJoystickDesc.SetLED virtualControllerSetLED = (MemorySegment userData, byte red, byte green, byte blue) -> {
-        System.out.println(STR."Virtual Controller: LED set to RGB \{red},\{green},\{blue}");
+        System.out.println("Virtual Controller: LED set to RGB " + red + "," + green + "," + blue);
         return 0;
     };
 
@@ -575,23 +575,23 @@ public class TestGameController {
             event = events.getFirst();
             switch (event) {
                 case ControllerDeviceAdded(int which) -> {
-                    System.out.println(STR."Game controller device \{Joystick.getDeviceInstanceId(which)} added.");
+                    System.out.println("Game controller device " + Joystick.getDeviceInstanceId(which) + " added.");
                     addController(which, true);
                 }
                 case ControllerDeviceRemoved(JoystickId which) -> {
-                    System.out.println(STR."Game controller device \{which} removed.");
+                    System.out.println("Game controller device " + which + " removed.");
                     delController(which);
                 }
                 case ControllerTouchpadDown(int which, int touchpad, int finger, float x, float y, float pressure) -> {
-                    System.out.println(STR."Controller \{which} touchpad \{touchpad} finger \{finger} pressed at \{x}, \{y}, \{pressure}");
+                    System.out.println("Controller " + which + " touchpad " + touchpad + " finger " + finger + " pressed at " + x + ", " + y + ", " + pressure);
                 }
                 case ControllerTouchpadMotion(
                         int which, int touchpad, int finger, float x, float y, float pressure
                 ) -> {
-                    System.out.println(STR."Controller \{which} touchpad \{touchpad} finger \{finger} moved to \{x}, \{y}, \{pressure}");
+                    System.out.println("Controller " + which + " touchpad " + touchpad + " finger " + finger + " moved to " + x + ", " + y + ", " + pressure);
                 }
                 case ControllerTouchpadUp(int which, int touchpad, int finger, float x, float y, float pressure) -> {
-                    System.out.println(STR."Controller \{which} touchpad \{touchpad} finger \{finger} released at \{x}, \{y}, \{pressure}");
+                    System.out.println("Controller " + which + " touchpad " + touchpad + " finger " + finger + " released at " + x + ", " + y + ", " + pressure);
                 }
                 case ControllerSensorUpdate(
                         int which, SensorType sensor, float[] data, long timestampUs
@@ -602,21 +602,21 @@ public class TestGameController {
                     if (value <= (-Joystick.AXIS_MAX / 2) || value >= (Joystick.AXIS_MAX / 2)) {
                         setController(which);
                     }
-                    System.out.println(STR."Controller \{which} axis \{GameController.getStringForAxis(axis)} changed to \{value}");
+                    System.out.println("Controller " + which + " axis " + GameController.getStringForAxis(axis) + " changed to " + value);
                 }
                 case ControllerButtonDown(JoystickId which, GameControllerButton button, GeneralInputStateDefinitions state) -> {
                     setController(which);
-                    System.out.println(STR."Controller \{which} button \{GameController.getStringForButton(button)} \{state}");
+                    System.out.println("Controller " + which + " button " + GameController.getStringForButton(button) + " " + state);
                     /* Cycle PS5 trigger effects when the microphone button is pressed */
                     if (button == GameControllerButton.Misc1 && gameController.getType() == GameControllerType.PS5) {
                         cyclePS5TriggerEffect();
                     }
                 }
                 case ControllerButtonUp(JoystickId which, GameControllerButton button, GeneralInputStateDefinitions state) -> {
-                    System.out.println(STR."Controller \{which} button \{GameController.getStringForButton(button)} \{state}");
+                    System.out.println("Controller " + which + " button " + GameController.getStringForButton(button) + " " + state);
                 }
                 case JoyBatteryUpdated(JoystickId joystickId, JoystickPowerLevel level) -> {
-                    System.out.println(STR."Controller \{joystickId} battery state changed to \{POWER_LEVEL_STRINGS[level.value() + 1]}");
+                    System.out.println("Controller " + joystickId + " battery state changed to " + POWER_LEVEL_STRINGS[level.value() + 1]);
                 }
                 case MouseButtonDown(int x, int y) -> {
                     if (virtualJoystick != null) {
@@ -788,7 +788,7 @@ public class TestGameController {
             for (i = 0; i < GameController.numMappings(); ++i) {
                 String mapping = GameController.mappingForIndex(i);
                 if (mapping != null) {
-                    System.out.println(STR."\t\{mapping}");
+                    System.out.println("\t" + mapping);
                 }
             }
             System.out.println();
